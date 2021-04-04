@@ -1,3 +1,6 @@
+2.5.02 - 5th April 2021
+- Added Burning Crusade zones, dungeons, titles, credits and narration tracks to 'Media'.
+
 2.5.01 - 4th April 2021
 - Added 'Manage focus' ('Frames').
 - Added focus frame to 'Class colored frames' ('Frames').
