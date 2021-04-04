@@ -1,0 +1,2 @@
+2.5.00.alpha.3 - 4th April 2021
+- Initial alpha for The Burning Crusade Beta.
