@@ -1,10 +1,7 @@
-2.5.02 - 5th April 2021
-- Added Burning Crusade zones, dungeons, titles, credits and narration tracks to 'Media'.
-
-2.5.01 - 4th April 2021
+2.5.03 - 14th April 2021
+- Initial release for Burning Crusade Beta.
+- Added 'Mute game sounds' ('System').
 - Added 'Manage focus' ('Frames').
 - Added focus frame to 'Class colored frames' ('Frames').
+- Added Burning Crusade zones, dungeons, titles, credits and narration tracks to 'Media'.
 - Added translations.
-
-2.5.00 - 4th April 2021
-- Initial release for Burning Crusade Beta.
