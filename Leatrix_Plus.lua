@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.06 (18th April 2021)
+-- 	Leatrix Plus 2.5.07 (18th April 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.06"
+	LeaPlusLC["AddonVer"] = "2.5.07"
 	LeaPlusLC["RestartReq"] = nil
 
 	-- Get locale table
@@ -5287,6 +5287,7 @@
 							chatMessage = colorCode .. chatMessage
 						end
 
+						chatMessage = gsub(chatMessage, "|T.-|t", "") -- Remove textures
 						editBox:Insert(chatMessage .. "|r|n")
 
 					end
