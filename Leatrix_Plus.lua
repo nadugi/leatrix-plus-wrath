@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.04 (18th April 2021)
+-- 	Leatrix Plus 2.5.05 (18th April 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.04"
+	LeaPlusLC["AddonVer"] = "2.5.05"
 	LeaPlusLC["RestartReq"] = nil
 
 	-- Get locale table
@@ -8811,7 +8811,7 @@
 		PageF.v:SetPoint('TOPLEFT', PageF.mt, 'BOTTOMLEFT', 0, -8); 
 		PageF.v:SetPoint('RIGHT', PageF, -32, 0)
 		PageF.v:SetJustifyH('LEFT'); PageF.v:SetJustifyV('TOP');
-		PageF.v:SetNonSpaceWrap(true); PageF.v:SetText(L["BC"] .. " " .. LeaPlusLC["AddonVer"])
+		PageF.v:SetNonSpaceWrap(true); PageF.v:SetText(L["BCC"] .. " " .. LeaPlusLC["AddonVer"])
 
 		-- Add reload UI Button
 		local reloadb = LeaPlusLC:CreateButton("ReloadUIButton", PageF, "Reload", "BOTTOMRIGHT", -16, 10, 0, 25, true, "Your UI needs to be reloaded for some of the changes to take effect.|n|nYou don't have to click the reload button immediately but you do need to click it when you are done making changes and you want the changes to take effect.")
@@ -9866,7 +9866,7 @@
 	LeaPlusLC:MakeWD(LeaPlusLC[pg], "To begin, choose an options page.", 146, -92);
 
 	LeaPlusLC:MakeTx(LeaPlusLC[pg], "Support", 146, -132);
-	LeaPlusLC:MakeWD(LeaPlusLC[pg], "curseforge.com/wow/addons/leatrix-plus-bc", 146, -152);
+	LeaPlusLC:MakeWD(LeaPlusLC[pg], "curseforge.com/wow/addons/leatrix-plus-bcc", 146, -152);
 
 ----------------------------------------------------------------------
 -- 	LC1: Automation
