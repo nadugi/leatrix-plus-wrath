@@ -1,4 +1,4 @@
-2.5.09 - 19th April 2021
+2.5.10 - 19th April 2021
 - Initial release for Burning Crusade Classic.
 - Leatrix Plus for Burning Crusade Classic is based on Leatrix Plus for World of Warcraft Classic with the changes listed below.
 - Added 'Mute game sounds' ('System').
