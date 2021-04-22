@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.13 (22nd April 2021)
+-- 	Leatrix Plus 2.5.14 (22nd April 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.13"
+	LeaPlusLC["AddonVer"] = "2.5.14"
 	LeaPlusLC["RestartReq"] = nil
 
 	-- Get locale table
@@ -1209,6 +1209,7 @@
 						or npcID == "3430" 	-- Mangletooth (Blood Shard quests, Barrens)
 						or npcID == "14828" -- Gelvas Grimegate (Darkmoon Faire Ticket Redemption, Elwynn Forest and Mulgore)
 						or npcID == "14921" -- Rin'wosho the Trader (Zul'Gurub Isle, Stranglethorn Vale)
+						or npcID == "18166" -- Khadgar (Allegiance to Aldor/Scryer, Shattrath)
 						then
 							return true
 						end
@@ -1279,6 +1280,7 @@
 							if npcID == "12944" -- Lokhtos Darkbargainer (Thorium Brotherhood, Blackrock Depths)
 							or npcID == "19401" -- Wing Commander Brack (Return to the Abyssal Shelf) (Horde)
 							or npcID == "20235" -- Gryphoneer Windbellow (Return to the Abyssal Shelf) (Alliance)
+							or npcID == "10307" -- Witch Doctor Mau'ari (E'Ko quests, Winterspring)
 							-- Ahn'Qiraj War Effort (Alliance, Ironforge)
 							or npcID == "15446" -- Bonnie Stoneflayer (Light Leather Collector)
 							or npcID == "15458" -- Commander Stronghammer (Alliance Ambassador)
