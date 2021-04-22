@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.12 (21st April 2021)
+-- 	Leatrix Plus 2.5.13 (22nd April 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.12"
+	LeaPlusLC["AddonVer"] = "2.5.13"
 	LeaPlusLC["RestartReq"] = nil
 
 	-- Get locale table
@@ -1268,6 +1268,8 @@
 							or npcID == "12858" -- Torek (Torek's Assault)
 							or npcID == "12717" -- Muglash (Vorsha the Lasher)
 							or npcID == "13716" -- Celebras the Redeemed (The Scepter of Celebras)
+							or npcID == "19401" -- Wing Commander Brack (Return to the Abyssal Shelf) (Horde)
+							or npcID == "20235" -- Gryphoneer Windbellow (Return to the Abyssal Shelf) (Alliance)
 							then
 								return true
 							end
@@ -1275,6 +1277,8 @@
 						-- Ignore specific NPCs for selecting quests only (only used for items that have no other purpose)
 						if actionType == "Select" then
 							if npcID == "12944" -- Lokhtos Darkbargainer (Thorium Brotherhood, Blackrock Depths)
+							or npcID == "19401" -- Wing Commander Brack (Return to the Abyssal Shelf) (Horde)
+							or npcID == "20235" -- Gryphoneer Windbellow (Return to the Abyssal Shelf) (Alliance)
 							-- Ahn'Qiraj War Effort (Alliance, Ironforge)
 							or npcID == "15446" -- Bonnie Stoneflayer (Light Leather Collector)
 							or npcID == "15458" -- Commander Stronghammer (Alliance Ambassador)
