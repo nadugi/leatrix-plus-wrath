@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.14 (22nd April 2021)
+-- 	Leatrix Plus 2.5.15 (25th April 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.14"
+	LeaPlusLC["AddonVer"] = "2.5.15"
 	LeaPlusLC["RestartReq"] = nil
 
 	-- Get locale table
@@ -991,14 +991,116 @@
 			SideDressUpModelControlFrame:HookScript("OnShow", SideDressUpModelControlFrame.Hide)
 
 			----------------------------------------------------------------------
+			-- Enable zooming and panning
+			----------------------------------------------------------------------
+
+			-- Enable zooming for character frame and dressup frame
+			CharacterModelFrame:HookScript("OnMouseWheel", Model_OnMouseWheel)
+			DressUpModelFrame:HookScript("OnMouseWheel", Model_OnMouseWheel)
+
+			-- Enable panning for character frame
+			CharacterModelFrame:HookScript("OnMouseDown", function(self, btn)
+				if btn == "RightButton" then
+					Model_StartPanning(self)
+				end
+			end)
+
+			CharacterModelFrame:HookScript("OnMouseUp", function(self, btn)
+				Model_StopPanning(self)
+			end)
+
+			CharacterModelFrame:ClearAllPoints()
+			CharacterModelFrame:SetPoint("TOPLEFT", PaperDollFrame, 66, -76)
+			CharacterModelFrame:SetPoint("BOTTOMRIGHT", PaperDollFrame, -86, 243)
+
+			-- Enable panning for dressup frame
+			DressUpModelFrame:HookScript("OnMouseDown", function(self, btn)
+				if btn == "RightButton" then
+					Model_StartPanning(self)
+				end
+			end)
+
+			DressUpModelFrame:HookScript("OnMouseUp", function(self, btn)
+				Model_StopPanning(self)
+			end)
+
+			DressUpModelFrame:ClearAllPoints()
+			DressUpModelFrame:SetPoint("TOPLEFT", DressUpFrame, 22, -76)
+			DressUpModelFrame:SetPoint("BOTTOMRIGHT", DressUpFrame, -46, 106)
+
+			-- Reset character frame when shown
+			hooksecurefunc(CharacterFrame, "Show", function()
+				CharacterModelFrame.rotation = 0
+				CharacterModelFrame:SetRotation(0)
+				CharacterModelFrame:SetPosition(0, 0, 0)
+				CharacterModelFrame.zoomLevel = 0
+				CharacterModelFrame:SetPortraitZoom(0)
+				CharacterModelFrame:Hide(); CharacterModelFrame:Show()
+			end)
+
+			-- Reset side dressup when shown and reset button clicked
+			local function ResetSideLayout()
+				SideDressUpModel.rotation = 0
+				SideDressUpModel:SetRotation(0)
+				SideDressUpModel:SetPosition(0, 0, -0.1)
+				SideDressUpModel.zoomLevel = 0
+				SideDressUpModel:SetPortraitZoom(0)
+				SideDressUpModel:Hide(); SideDressUpModel:Show()
+			end
+
+			SideDressUpModelResetButton:HookScript("OnClick", ResetSideLayout)
+			SideDressUpModelResetButton:HookScript("OnShow", ResetSideLayout)
+
+			-- Reset dressup and remove special model animations when shown and reset button clicked
+			local function ResetModelLayout()
+				DressUpModelFrame.rotation = 0
+				DressUpModelFrame:SetRotation(0)
+				DressUpModelFrame:SetPosition(0, 0, 0)
+				DressUpModelFrame:SetPosition(0, 0, 0)
+				DressUpModelFrame.zoomLevel = 0
+				DressUpModelFrame:SetPortraitZoom(0)
+				DressUpModelFrame:SetAnimation(0, 15)
+				DressUpModelFrame:Hide(); DressUpModelFrame:Show()
+			end
+
+			DressUpFrameResetButton:HookScript("OnShow", ResetModelLayout)
+			DressUpFrameResetButton:HookScript("OnClick", ResetModelLayout)
+
+			----------------------------------------------------------------------
 			-- Inspect system
 			----------------------------------------------------------------------
 
 			-- Inspect System
 			local function DoInspectSystemFunc()
+
 				-- Hide model rotation controls
 				InspectModelFrameRotateLeftButton:Hide()
 				InspectModelFrameRotateRightButton:Hide()
+
+				-- Enable zooming
+				InspectModelFrame:HookScript("OnMouseWheel", Model_OnMouseWheel)
+
+				-- Enable panning
+				InspectModelFrame:HookScript("OnMouseDown", function(self, btn)
+					if btn == "RightButton" then
+						Model_StartPanning(self)
+					end
+				end)
+
+				InspectModelFrame:HookScript("OnMouseUp", function(self, btn)
+					Model_StopPanning(self)
+				end)
+
+				-- Reset layout when inspect frame is shown
+				hooksecurefunc(InspectFrame, "Show", function()
+					InspectModelFrame.rotation = 0
+					InspectModelFrame:SetRotation(0)
+					InspectModelFrame:SetPosition(0, 0, 0)
+					InspectModelFrame.zoomLevel = 0
+					InspectModelFrame:SetPortraitZoom(0)
+					InspectModelFrame:Hide(); InspectModelFrame:Show()
+				end)
+
 			end
 
 			if IsAddOnLoaded("Blizzard_InspectUI") then
@@ -3728,8 +3830,8 @@
 		if LeaPlusLC["ShowVanityControls"] == "On" then
 
 			-- Create checkboxes
-			LeaPlusLC:MakeCB(CharacterModelFrame, "ShowHelm", L["Helm"], 2, -192, false, "")
-			LeaPlusLC:MakeCB(CharacterModelFrame, "ShowCloak", L["Cloak"], 281, -192, false, "")
+			LeaPlusLC:MakeCB(CharacterFrame, "ShowHelm", L["Helm"], 2, -192, false, "")
+			LeaPlusLC:MakeCB(CharacterFrame, "ShowCloak", L["Cloak"], 281, -192, false, "")
 			LeaPlusCB["ShowHelm"]:SetFrameStrata("HIGH")
 			LeaPlusCB["ShowCloak"]:SetFrameStrata("HIGH")
 
@@ -3739,7 +3841,7 @@
 					-- Alternative layout
 					LeaPlusCB["ShowHelm"].f:SetText(L["H"])
 					LeaPlusCB["ShowHelm"]:ClearAllPoints()
-					LeaPlusCB["ShowHelm"]:SetPoint("BOTTOMRIGHT", 0, 54)
+					LeaPlusCB["ShowHelm"]:SetPoint("TOPLEFT", 275, -224)
 					LeaPlusCB["ShowHelm"]:SetHitRectInsets(-LeaPlusCB["ShowHelm"].f:GetStringWidth() + 4, 3, 0, 0)
 					LeaPlusCB["ShowHelm"].f:ClearAllPoints()
 					LeaPlusCB["ShowHelm"].f:SetPoint("RIGHT", LeaPlusCB["ShowHelm"], "LEFT", 4, 0)
@@ -3754,14 +3856,14 @@
 					-- Default layout
 					LeaPlusCB["ShowHelm"].f:SetText(L["Helm"])
 					LeaPlusCB["ShowHelm"]:ClearAllPoints()
-					LeaPlusCB["ShowHelm"]:SetPoint("TOPLEFT", 2, -168)
+					LeaPlusCB["ShowHelm"]:SetPoint("TOPLEFT", 65, -246)
 					LeaPlusCB["ShowHelm"]:SetHitRectInsets(3, -LeaPlusCB["ShowHelm"].f:GetStringWidth(), 0, 0)
 					LeaPlusCB["ShowHelm"].f:ClearAllPoints()
 					LeaPlusCB["ShowHelm"].f:SetPoint("LEFT", LeaPlusCB["ShowHelm"], "RIGHT", 0, 0)
 
 					LeaPlusCB["ShowCloak"].f:SetText(L["Cloak"])
 					LeaPlusCB["ShowCloak"]:ClearAllPoints()
-					LeaPlusCB["ShowCloak"]:SetPoint("BOTTOMRIGHT", 0, 32)
+					LeaPlusCB["ShowCloak"]:SetPoint("TOPLEFT", 275, -246)
 					LeaPlusCB["ShowCloak"]:SetHitRectInsets(-LeaPlusCB["ShowCloak"].f:GetStringWidth(), 3, 0, 0)
 					LeaPlusCB["ShowCloak"].f:ClearAllPoints()
 					LeaPlusCB["ShowCloak"].f:SetPoint("RIGHT", LeaPlusCB["ShowCloak"], "LEFT", 0, 0)
@@ -10073,7 +10175,7 @@
 	LeaPlusLC:MakeTx(LeaPlusLC[pg], "Enhancements"				, 	146, -72);
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "MinimapMod"				,	"Enhance minimap"				, 	146, -92, 	true,	"If checked, you will be able to customise the minimap.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "TipModEnable"				,	"Enhance tooltip"				,	146, -112, 	true,	"If checked, the tooltip will be color coded and you will be able to modify the tooltip layout and scale.")
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "EnhanceDressup"			, 	"Enhance dressup"				,	146, -132, 	true,	"If checked, nude and tabard toggle buttons will be added to the dressup frame and model rotation controls will be removed.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "EnhanceDressup"			, 	"Enhance dressup"				,	146, -132, 	true,	"If checked, you will be able to pan (right-button) and zoom (mousewheel) in the character frame, dressup frame and inspect frame.  Model rotation controls will be hidden.  Buttons to toggle gear will be added to the dressup frame.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "EnhanceQuestLog"			, 	"Enhance quest log"				,	146, -152, 	true,	"If checked, the quest log frame will be larger and feature a world map button and quest levels.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "EnhanceProfessions"		, 	"Enhance professions"			,	146, -172, 	true,	"If checked, the professions frame will be larger.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "EnhanceTrainers"			, 	"Enhance trainers"				,	146, -192, 	true,	"If checked, the skill trainer frame will be larger.")
