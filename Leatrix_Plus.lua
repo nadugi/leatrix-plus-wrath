@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.15 (25th April 2021)
+-- 	Leatrix Plus 2.5.16 (25th April 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.15"
+	LeaPlusLC["AddonVer"] = "2.5.16"
 	LeaPlusLC["RestartReq"] = nil
 
 	-- Get locale table
@@ -1035,7 +1035,7 @@
 				CharacterModelFrame:SetPosition(0, 0, 0)
 				CharacterModelFrame.zoomLevel = 0
 				CharacterModelFrame:SetPortraitZoom(0)
-				CharacterModelFrame:Hide(); CharacterModelFrame:Show()
+				CharacterModelFrame:RefreshCamera()
 			end)
 
 			-- Reset side dressup when shown and reset button clicked
@@ -1045,7 +1045,7 @@
 				SideDressUpModel:SetPosition(0, 0, -0.1)
 				SideDressUpModel.zoomLevel = 0
 				SideDressUpModel:SetPortraitZoom(0)
-				SideDressUpModel:Hide(); SideDressUpModel:Show()
+				SideDressUpModel:RefreshCamera()
 			end
 
 			SideDressUpModelResetButton:HookScript("OnClick", ResetSideLayout)
@@ -1060,7 +1060,7 @@
 				DressUpModelFrame.zoomLevel = 0
 				DressUpModelFrame:SetPortraitZoom(0)
 				DressUpModelFrame:SetAnimation(0, 15)
-				DressUpModelFrame:Hide(); DressUpModelFrame:Show()
+				DressUpModelFrame:RefreshCamera()
 			end
 
 			DressUpFrameResetButton:HookScript("OnShow", ResetModelLayout)
@@ -1098,7 +1098,7 @@
 					InspectModelFrame:SetPosition(0, 0, 0)
 					InspectModelFrame.zoomLevel = 0
 					InspectModelFrame:SetPortraitZoom(0)
-					InspectModelFrame:Hide(); InspectModelFrame:Show()
+					InspectModelFrame:RefreshCamera()
 				end)
 
 			end
