@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.16 (25th April 2021)
+-- 	Leatrix Plus 2.5.17 (25th April 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.16"
+	LeaPlusLC["AddonVer"] = "2.5.17"
 	LeaPlusLC["RestartReq"] = nil
 
 	-- Get locale table
@@ -1028,15 +1028,15 @@
 			DressUpModelFrame:SetPoint("TOPLEFT", DressUpFrame, 22, -76)
 			DressUpModelFrame:SetPoint("BOTTOMRIGHT", DressUpFrame, -46, 106)
 
-			-- Reset character frame when shown
-			hooksecurefunc(CharacterFrame, "Show", function()
+			-- Reset character frame when shown (not used to match retail)
+			--[[hooksecurefunc(CharacterFrame, "Show", function()
 				CharacterModelFrame.rotation = 0
 				CharacterModelFrame:SetRotation(0)
 				CharacterModelFrame:SetPosition(0, 0, 0)
 				CharacterModelFrame.zoomLevel = 0
 				CharacterModelFrame:SetPortraitZoom(0)
 				CharacterModelFrame:RefreshCamera()
-			end)
+			end)--]]
 
 			-- Reset side dressup when shown and reset button clicked
 			local function ResetSideLayout()
@@ -1049,9 +1049,9 @@
 			end
 
 			SideDressUpModelResetButton:HookScript("OnClick", ResetSideLayout)
-			SideDressUpModelResetButton:HookScript("OnShow", ResetSideLayout)
+			-- SideDressUpModelResetButton:HookScript("OnShow", ResetSideLayout)
 
-			-- Reset dressup and remove special model animations when shown and reset button clicked
+			-- Reset dressup frame when shown and reset button clicked
 			local function ResetModelLayout()
 				DressUpModelFrame.rotation = 0
 				DressUpModelFrame:SetRotation(0)
@@ -1063,7 +1063,7 @@
 				DressUpModelFrame:RefreshCamera()
 			end
 
-			DressUpFrameResetButton:HookScript("OnShow", ResetModelLayout)
+			-- DressUpFrameResetButton:HookScript("OnShow", ResetModelLayout)
 			DressUpFrameResetButton:HookScript("OnClick", ResetModelLayout)
 
 			----------------------------------------------------------------------
@@ -1091,15 +1091,15 @@
 					Model_StopPanning(self)
 				end)
 
-				-- Reset layout when inspect frame is shown
-				hooksecurefunc(InspectFrame, "Show", function()
+				-- Reset layout when inspect frame is shown (not used to match retail)
+				--[[hooksecurefunc(InspectFrame, "Show", function()
 					InspectModelFrame.rotation = 0
 					InspectModelFrame:SetRotation(0)
 					InspectModelFrame:SetPosition(0, 0, 0)
 					InspectModelFrame.zoomLevel = 0
 					InspectModelFrame:SetPortraitZoom(0)
 					InspectModelFrame:RefreshCamera()
-				end)
+				end)--]]
 
 			end
 
