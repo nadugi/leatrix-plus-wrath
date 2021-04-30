@@ -1,11 +1,11 @@
-2.5.21 - 29th April 2021
+2.5.22 - 1st May 2021
 - Initial release for Burning Crusade Classic.
 - Leatrix Plus for Burning Crusade Classic is based on Leatrix Plus for World of Warcraft Classic with the changes listed below.
 - Added 'Mute game sounds' ('System').
 - Added 'Remove raid restrictions ('System').
 - Added 'Manage focus' ('Frames').
 - Added focus frame to 'Class colored frames' ('Frames').
-- Added Burning Crusade zones, dungeons, titles, credits and narration tracks to 'Media'.
+- Added Burning Crusade zones, dungeons, titles, credits, narration tracks and movie to 'Media'.
 - Added translations.
 - The 'Enhance dressup' option ('Interface') now adds pan (right-button) and zoom (mousewheel) functionality to the character frame, dressup frame and inspect frame (in addition to adding gear toggle buttons and hiding the model rotation controls).
 - Known Beta issue: Turning in quests automatically causes a harmless error to be shown in chat.

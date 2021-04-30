@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.21 (29th April 2021)
+-- 	Leatrix Plus 2.5.22 (1st May 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.21"
+	LeaPlusLC["AddonVer"] = "2.5.22"
 	LeaPlusLC["RestartReq"] = nil
 
 	-- Get locale table
@@ -7000,7 +7000,8 @@
 
 			-- Movies
 			Zn(L["Movies"], L["Movies"], "|cffffd800" .. L["Movies"], {""})
-			Zn(L["Movies"], L["Movies"], L["World of Warcraft"]							, {	"|cffffd800" .. L["Movies"] .. ": " .. L["World of Warcraft"], prefol, L["Ten Years of Warcraft"] .. " |r(1)", L["World of Warcraft"] .. " |r(2)"})
+			Zn(L["Movies"], L["Movies"], L["World of Warcraft"]							, {	"|cffffd800" .. L["Movies"] .. ": " .. L["World of Warcraft"], prefol, L["Ten Years of Warcraft"] .. " |r(1)", L["World of Warcraft"] .. " |r(2)",})
+			Zn(L["Movies"], L["Movies"], L["The Burning Crusade"]						, {	"|cffffd800" .. L["Movies"] .. ": " .. L["The Burning Crusade"], prefol, L["The Burning Crusade"] .. " |r(27)",})
 
 			-- Give zone table a file level scope (its used in search)
 			LeaPlusLC["ZoneList"] = ZoneList
