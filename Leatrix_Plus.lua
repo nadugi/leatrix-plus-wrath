@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.22 (1st May 2021)
+-- 	Leatrix Plus 2.5.23 (1st May 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.22"
+	LeaPlusLC["AddonVer"] = "2.5.23"
 	LeaPlusLC["RestartReq"] = nil
 
 	-- Get locale table
@@ -906,183 +906,6 @@
 				mEB:ClearFocus()
 				GameTooltip:Hide()
 			end)
-
-		end
-
-		----------------------------------------------------------------------
-		-- Enhance dressup
-		----------------------------------------------------------------------
-
-		if LeaPlusLC["EnhanceDressup"] == "On" then
-
-			----------------------------------------------------------------------
-			-- Nude and tabard buttons
-			----------------------------------------------------------------------
-
-			-- Add buttons to main dressup frames
-			LeaPlusLC:CreateButton("DressUpNudeBtn", DressUpFrame, "Nude", "BOTTOMLEFT", 106, 79, 80, 22, false, "")
-			LeaPlusCB["DressUpNudeBtn"]:SetFrameLevel(3)
-			LeaPlusCB["DressUpNudeBtn"]:ClearAllPoints()
-			LeaPlusCB["DressUpNudeBtn"]:SetPoint("RIGHT", DressUpFrameResetButton, "LEFT", 0, 0)
-			LeaPlusCB["DressUpNudeBtn"]:SetScript("OnClick", function()
-				DressUpFrame.DressUpModel:Undress()
-			end)
-
-			LeaPlusLC:CreateButton("DressUpTabBtn", DressUpFrame, "Tabard", "BOTTOMLEFT", 26, 79, 80, 22, false, "")
-			LeaPlusCB["DressUpTabBtn"]:SetFrameLevel(3)
-			LeaPlusCB["DressUpTabBtn"]:ClearAllPoints()
-			LeaPlusCB["DressUpTabBtn"]:SetPoint("RIGHT", LeaPlusCB["DressUpNudeBtn"], "LEFT", 0, 0)
-			LeaPlusCB["DressUpTabBtn"]:SetScript("OnClick", function()
-				DressUpFrame.DressUpModel:UndressSlot(19)
-			end)
-
-			-- Only show dressup buttons if its a player (reset button will show too)
-			hooksecurefunc(DressUpFrameResetButton, "Show", function()
-				LeaPlusCB["DressUpNudeBtn"]:Show()
-				LeaPlusCB["DressUpTabBtn"]:Show()
-			end)
-
-			hooksecurefunc(DressUpFrameResetButton, "Hide", function()
-				LeaPlusCB["DressUpNudeBtn"]:Hide()
-				LeaPlusCB["DressUpTabBtn"]:Hide()
-			end)
-
-			local BtnStrata, BtnLevel = SideDressUpModelResetButton:GetFrameStrata(), SideDressUpModelResetButton:GetFrameLevel()
-
-			-- Add buttons to auction house dressup frame
-			LeaPlusLC:CreateButton("DressUpSideBtn", SideDressUpFrame, "Tabard", "BOTTOMLEFT", 14, 20, 60, 22, false, "")
-			LeaPlusCB["DressUpSideBtn"]:SetFrameStrata(BtnStrata)
-			LeaPlusCB["DressUpSideBtn"]:SetFrameLevel(BtnLevel)
-			LeaPlusCB["DressUpSideBtn"]:SetScript("OnClick", function()
-				SideDressUpModel:UndressSlot(19)
-			end)
-
-			LeaPlusLC:CreateButton("DressUpSideNudeBtn", SideDressUpFrame, "Nude", "BOTTOMRIGHT", -18, 20, 60, 22, false, "")
-			LeaPlusCB["DressUpSideNudeBtn"]:SetFrameStrata(BtnStrata)
-			LeaPlusCB["DressUpSideNudeBtn"]:SetFrameLevel(BtnLevel)
-			LeaPlusCB["DressUpSideNudeBtn"]:SetScript("OnClick", function()
-				SideDressUpModel:Undress()
-			end)
-
-			-- Only show side dressup buttons if its a player (reset button will show too)
-			hooksecurefunc(SideDressUpModelResetButton, "Show", function()
-				LeaPlusCB["DressUpSideBtn"]:Show()
-				LeaPlusCB["DressUpSideNudeBtn"]:Show()
-			end)
-
-			hooksecurefunc(SideDressUpModelResetButton, "Hide", function()
-				LeaPlusCB["DressUpSideBtn"]:Hide()
-				LeaPlusCB["DressUpSideNudeBtn"]:Hide()
-			end)
-
-			----------------------------------------------------------------------
-			-- Controls
-			----------------------------------------------------------------------
-
-			-- Hide model rotation controls
-			CharacterModelFrameRotateLeftButton:HookScript("OnShow", CharacterModelFrameRotateLeftButton.Hide)
-			CharacterModelFrameRotateRightButton:HookScript("OnShow", CharacterModelFrameRotateRightButton.Hide)
-			DressUpModelFrameRotateLeftButton:HookScript("OnShow", DressUpModelFrameRotateLeftButton.Hide)
-			DressUpModelFrameRotateRightButton:HookScript("OnShow", DressUpModelFrameRotateRightButton.Hide)
-			SideDressUpModelControlFrame:HookScript("OnShow", SideDressUpModelControlFrame.Hide)
-
-			----------------------------------------------------------------------
-			-- Enable zooming and panning
-			----------------------------------------------------------------------
-
-			-- Enable zooming for character frame and dressup frame
-			CharacterModelFrame:HookScript("OnMouseWheel", Model_OnMouseWheel)
-			DressUpModelFrame:HookScript("OnMouseWheel", Model_OnMouseWheel)
-
-			-- Enable panning for character frame
-			CharacterModelFrame:HookScript("OnMouseDown", function(self, btn)
-				if btn == "RightButton" then
-					Model_StartPanning(self)
-				end
-			end)
-
-			CharacterModelFrame:HookScript("OnMouseUp", function(self, btn)
-				Model_StopPanning(self)
-			end)
-
-			CharacterModelFrame:ClearAllPoints()
-			CharacterModelFrame:SetPoint("TOPLEFT", PaperDollFrame, 66, -76)
-			CharacterModelFrame:SetPoint("BOTTOMRIGHT", PaperDollFrame, -86, 243)
-
-			-- Enable panning for dressup frame
-			DressUpModelFrame:HookScript("OnMouseDown", function(self, btn)
-				if btn == "RightButton" then
-					Model_StartPanning(self)
-				end
-			end)
-
-			DressUpModelFrame:HookScript("OnMouseUp", function(self, btn)
-				Model_StopPanning(self)
-			end)
-
-			DressUpModelFrame:ClearAllPoints()
-			DressUpModelFrame:SetPoint("TOPLEFT", DressUpFrame, 22, -76)
-			DressUpModelFrame:SetPoint("BOTTOMRIGHT", DressUpFrame, -46, 106)
-
-			-- Reset dressup frame when reset button clicked
-			DressUpFrameResetButton:HookScript("OnClick", function()
-				DressUpModelFrame.rotation = 0
-				DressUpModelFrame:SetRotation(0)
-				DressUpModelFrame:SetPosition(0, 0, 0)
-				DressUpModelFrame.zoomLevel = 0
-				DressUpModelFrame:SetPortraitZoom(0)
-				DressUpModelFrame:RefreshCamera()
-			end)
-
-			-- Reset side dressup when reset button clicked
-			SideDressUpModelResetButton:HookScript("OnClick", function()
-				SideDressUpModel.rotation = 0
-				SideDressUpModel:SetRotation(0)
-				SideDressUpModel:SetPosition(0, 0, -0.1)
-				SideDressUpModel.zoomLevel = 0
-				SideDressUpModel:SetPortraitZoom(0)
-				SideDressUpModel:RefreshCamera()
-			end)
-
-			----------------------------------------------------------------------
-			-- Inspect system
-			----------------------------------------------------------------------
-
-			-- Inspect System
-			local function DoInspectSystemFunc()
-
-				-- Hide model rotation controls
-				InspectModelFrameRotateLeftButton:Hide()
-				InspectModelFrameRotateRightButton:Hide()
-
-				-- Enable zooming
-				InspectModelFrame:HookScript("OnMouseWheel", Model_OnMouseWheel)
-
-				-- Enable panning
-				InspectModelFrame:HookScript("OnMouseDown", function(self, btn)
-					if btn == "RightButton" then
-						Model_StartPanning(self)
-					end
-				end)
-
-				InspectModelFrame:HookScript("OnMouseUp", function(self, btn)
-					Model_StopPanning(self)
-				end)
-
-			end
-
-			if IsAddOnLoaded("Blizzard_InspectUI") then
-				DoInspectSystemFunc()
-			else
-				local waitFrame = CreateFrame("FRAME")
-				waitFrame:RegisterEvent("ADDON_LOADED")
-				waitFrame:SetScript("OnEvent", function(self, event, arg1)
-					if arg1 == "Blizzard_InspectUI" then
-						DoInspectSystemFunc()
-						waitFrame:UnregisterAllEvents()
-					end
-				end)
-			end
 
 		end
 
@@ -2823,6 +2646,339 @@
 	function LeaPlusLC:Player()
 
 		----------------------------------------------------------------------
+		--	Show vanity controls (must be before Enhance dressup)
+		----------------------------------------------------------------------
+
+		if LeaPlusLC["ShowVanityControls"] == "On" then
+
+			-- Create checkboxes
+			LeaPlusLC:MakeCB(PaperDollFrame, "ShowHelm", L["Helm"], 2, -192, false, "")
+			LeaPlusLC:MakeCB(PaperDollFrame, "ShowCloak", L["Cloak"], 281, -192, false, "")
+			LeaPlusCB["ShowHelm"]:SetFrameStrata("HIGH")
+			LeaPlusCB["ShowCloak"]:SetFrameStrata("HIGH")
+
+			-- Function to set vanity controls layout
+			local function SetVanityControlsLayout()
+				if LeaPlusLC["VanityAltLayout"] == "On" then
+					-- Alternative layout
+					LeaPlusCB["ShowHelm"].f:SetText(L["H"])
+					LeaPlusCB["ShowHelm"]:ClearAllPoints()
+					LeaPlusCB["ShowHelm"]:SetPoint("TOPLEFT", 275, -224)
+					LeaPlusCB["ShowHelm"]:SetHitRectInsets(-LeaPlusCB["ShowHelm"].f:GetStringWidth() + 4, 3, 0, 0)
+					LeaPlusCB["ShowHelm"].f:ClearAllPoints()
+					LeaPlusCB["ShowHelm"].f:SetPoint("RIGHT", LeaPlusCB["ShowHelm"], "LEFT", 4, 0)
+
+					LeaPlusCB["ShowCloak"].f:SetText(L["C"])
+					LeaPlusCB["ShowCloak"]:ClearAllPoints()
+					LeaPlusCB["ShowCloak"]:SetPoint("TOP", LeaPlusCB["ShowHelm"], "BOTTOM", 0, 6)
+					LeaPlusCB["ShowCloak"].f:ClearAllPoints()
+					LeaPlusCB["ShowCloak"].f:SetPoint("RIGHT", LeaPlusCB["ShowCloak"], "LEFT", 4, 0)
+					LeaPlusCB["ShowCloak"]:SetHitRectInsets(-LeaPlusCB["ShowCloak"].f:GetStringWidth() + 4, 3, 0, 0)
+				else
+					-- Default layout
+					LeaPlusCB["ShowHelm"].f:SetText(L["Helm"])
+					LeaPlusCB["ShowHelm"]:ClearAllPoints()
+					LeaPlusCB["ShowHelm"]:SetPoint("TOPLEFT", 65, -246)
+					LeaPlusCB["ShowHelm"]:SetHitRectInsets(3, -LeaPlusCB["ShowHelm"].f:GetStringWidth(), 0, 0)
+					LeaPlusCB["ShowHelm"].f:ClearAllPoints()
+					LeaPlusCB["ShowHelm"].f:SetPoint("LEFT", LeaPlusCB["ShowHelm"], "RIGHT", 0, 0)
+
+					LeaPlusCB["ShowCloak"].f:SetText(L["Cloak"])
+					LeaPlusCB["ShowCloak"]:ClearAllPoints()
+					LeaPlusCB["ShowCloak"]:SetPoint("TOPLEFT", 275, -246)
+					LeaPlusCB["ShowCloak"]:SetHitRectInsets(-LeaPlusCB["ShowCloak"].f:GetStringWidth(), 3, 0, 0)
+					LeaPlusCB["ShowCloak"].f:ClearAllPoints()
+					LeaPlusCB["ShowCloak"].f:SetPoint("RIGHT", LeaPlusCB["ShowCloak"], "LEFT", 0, 0)
+				end
+			end
+
+			-- Set position when controls are shift/right-clicked
+			LeaPlusCB["ShowHelm"]:SetScript('OnMouseDown', function(self, btn)
+				if btn == "RightButton" and IsShiftKeyDown() then
+					if LeaPlusLC["VanityAltLayout"] == "On" then LeaPlusLC["VanityAltLayout"] = "Off" else LeaPlusLC["VanityAltLayout"] = "On" end
+					SetVanityControlsLayout()
+				end
+			end)
+
+			LeaPlusCB["ShowCloak"]:SetScript('OnMouseDown', function(self, btn)
+				if btn == "RightButton" and IsShiftKeyDown() then
+					if LeaPlusLC["VanityAltLayout"] == "On" then LeaPlusLC["VanityAltLayout"] = "Off" else LeaPlusLC["VanityAltLayout"] = "On" end
+					SetVanityControlsLayout()
+				end
+			end)
+
+			-- Set controls on startup
+			SetVanityControlsLayout()
+
+			-- Manage alpha
+			LeaPlusCB["ShowHelm"]:SetAlpha(0.3)
+			LeaPlusCB["ShowCloak"]:SetAlpha(0.3)
+			LeaPlusCB["ShowHelm"]:HookScript("OnEnter", function() LeaPlusCB["ShowHelm"]:SetAlpha(1.0) end)
+			LeaPlusCB["ShowHelm"]:HookScript("OnLeave", function() LeaPlusCB["ShowHelm"]:SetAlpha(0.3) end)
+			LeaPlusCB["ShowCloak"]:HookScript("OnEnter", function()	LeaPlusCB["ShowCloak"]:SetAlpha(1.0) end)
+			LeaPlusCB["ShowCloak"]:HookScript("OnLeave", function()	LeaPlusCB["ShowCloak"]:SetAlpha(0.3) end)
+
+			-- Toggle helm with click
+			LeaPlusCB["ShowHelm"]:HookScript("OnClick", function()
+				LeaPlusCB["ShowHelm"]:Disable()
+				LeaPlusCB["ShowHelm"]:SetAlpha(1.0)
+				C_Timer.After(0.5, function()
+					if ShowingHelm() then
+						ShowHelm(false)
+					else
+						ShowHelm(true)
+					end
+					LeaPlusCB["ShowHelm"]:Enable()
+					if not LeaPlusCB["ShowHelm"]:IsMouseOver() then
+						LeaPlusCB["ShowHelm"]:SetAlpha(0.3)
+					end
+				end)
+			end)
+
+			-- Toggle cloak with click
+			LeaPlusCB["ShowCloak"]:HookScript("OnClick", function()
+				LeaPlusCB["ShowCloak"]:Disable()
+				LeaPlusCB["ShowCloak"]:SetAlpha(1.0)
+				C_Timer.After(0.5, function()
+					if ShowingCloak() then
+						ShowCloak(false)
+					else
+						ShowCloak(true)
+					end
+					LeaPlusCB["ShowCloak"]:Enable()
+					if not LeaPlusCB["ShowCloak"]:IsMouseOver() then
+						LeaPlusCB["ShowCloak"]:SetAlpha(0.3)
+					end
+				end)
+			end)
+
+			-- Set checkbox state when checkboxes are shown
+			LeaPlusCB["ShowCloak"]:HookScript("OnShow", function()
+				if ShowingHelm() then
+					LeaPlusCB["ShowHelm"]:SetChecked(true)
+				else
+					LeaPlusCB["ShowHelm"]:SetChecked(false)
+				end
+				if ShowingCloak() then
+					LeaPlusCB["ShowCloak"]:SetChecked(true)
+				else
+					LeaPlusCB["ShowCloak"]:SetChecked(false)
+				end
+			end)
+
+		end
+
+		----------------------------------------------------------------------
+		-- Enhance dressup
+		----------------------------------------------------------------------
+
+		if LeaPlusLC["EnhanceDressup"] == "On" then
+
+			----------------------------------------------------------------------
+			-- Nude and tabard buttons
+			----------------------------------------------------------------------
+
+			-- Add buttons to main dressup frames
+			LeaPlusLC:CreateButton("DressUpNudeBtn", DressUpFrame, "Nude", "BOTTOMLEFT", 106, 79, 80, 22, false, "")
+			LeaPlusCB["DressUpNudeBtn"]:SetFrameLevel(3)
+			LeaPlusCB["DressUpNudeBtn"]:ClearAllPoints()
+			LeaPlusCB["DressUpNudeBtn"]:SetPoint("RIGHT", DressUpFrameResetButton, "LEFT", 0, 0)
+			LeaPlusCB["DressUpNudeBtn"]:SetScript("OnClick", function()
+				DressUpFrame.DressUpModel:Undress()
+			end)
+
+			LeaPlusLC:CreateButton("DressUpTabBtn", DressUpFrame, "Tabard", "BOTTOMLEFT", 26, 79, 80, 22, false, "")
+			LeaPlusCB["DressUpTabBtn"]:SetFrameLevel(3)
+			LeaPlusCB["DressUpTabBtn"]:ClearAllPoints()
+			LeaPlusCB["DressUpTabBtn"]:SetPoint("RIGHT", LeaPlusCB["DressUpNudeBtn"], "LEFT", 0, 0)
+			LeaPlusCB["DressUpTabBtn"]:SetScript("OnClick", function()
+				DressUpFrame.DressUpModel:UndressSlot(19)
+			end)
+
+			-- Only show dressup buttons if its a player (reset button will show too)
+			hooksecurefunc(DressUpFrameResetButton, "Show", function()
+				LeaPlusCB["DressUpNudeBtn"]:Show()
+				LeaPlusCB["DressUpTabBtn"]:Show()
+			end)
+
+			hooksecurefunc(DressUpFrameResetButton, "Hide", function()
+				LeaPlusCB["DressUpNudeBtn"]:Hide()
+				LeaPlusCB["DressUpTabBtn"]:Hide()
+			end)
+
+			local BtnStrata, BtnLevel = SideDressUpModelResetButton:GetFrameStrata(), SideDressUpModelResetButton:GetFrameLevel()
+
+			-- Add buttons to auction house dressup frame
+			LeaPlusLC:CreateButton("DressUpSideBtn", SideDressUpFrame, "Tabard", "BOTTOMLEFT", 14, 20, 60, 22, false, "")
+			LeaPlusCB["DressUpSideBtn"]:SetFrameStrata(BtnStrata)
+			LeaPlusCB["DressUpSideBtn"]:SetFrameLevel(BtnLevel)
+			LeaPlusCB["DressUpSideBtn"]:SetScript("OnClick", function()
+				SideDressUpModel:UndressSlot(19)
+			end)
+
+			LeaPlusLC:CreateButton("DressUpSideNudeBtn", SideDressUpFrame, "Nude", "BOTTOMRIGHT", -18, 20, 60, 22, false, "")
+			LeaPlusCB["DressUpSideNudeBtn"]:SetFrameStrata(BtnStrata)
+			LeaPlusCB["DressUpSideNudeBtn"]:SetFrameLevel(BtnLevel)
+			LeaPlusCB["DressUpSideNudeBtn"]:SetScript("OnClick", function()
+				SideDressUpModel:Undress()
+			end)
+
+			-- Only show side dressup buttons if its a player (reset button will show too)
+			hooksecurefunc(SideDressUpModelResetButton, "Show", function()
+				LeaPlusCB["DressUpSideBtn"]:Show()
+				LeaPlusCB["DressUpSideNudeBtn"]:Show()
+			end)
+
+			hooksecurefunc(SideDressUpModelResetButton, "Hide", function()
+				LeaPlusCB["DressUpSideBtn"]:Hide()
+				LeaPlusCB["DressUpSideNudeBtn"]:Hide()
+			end)
+
+			----------------------------------------------------------------------
+			-- Controls
+			----------------------------------------------------------------------
+
+			-- Hide model rotation controls
+			CharacterModelFrameRotateLeftButton:HookScript("OnShow", CharacterModelFrameRotateLeftButton.Hide)
+			CharacterModelFrameRotateRightButton:HookScript("OnShow", CharacterModelFrameRotateRightButton.Hide)
+			DressUpModelFrameRotateLeftButton:HookScript("OnShow", DressUpModelFrameRotateLeftButton.Hide)
+			DressUpModelFrameRotateRightButton:HookScript("OnShow", DressUpModelFrameRotateRightButton.Hide)
+			SideDressUpModelControlFrame:HookScript("OnShow", SideDressUpModelControlFrame.Hide)
+
+			----------------------------------------------------------------------
+			-- Hide dressup stats button
+			----------------------------------------------------------------------
+
+			local function ToggleStats()
+				if LeaPlusLC["HideDressupStats"] == "On" then
+					CharacterResistanceFrame:Hide() 
+					CharacterAttributesFrame:Hide()
+					CharacterModelFrame:ClearAllPoints()
+					CharacterModelFrame:SetPoint("TOPLEFT", PaperDollFrame, 66, -76)
+					CharacterModelFrame:SetPoint("BOTTOMRIGHT", PaperDollFrame, -86, 116)
+					if LeaPlusLC["ShowVanityControls"] == "On" then
+						LeaPlusCB["ShowHelm"]:Hide()
+						LeaPlusCB["ShowCloak"]:Hide()
+					end
+				else
+					CharacterResistanceFrame:Show() 
+					CharacterAttributesFrame:Show()
+					CharacterModelFrame:ClearAllPoints()
+					CharacterModelFrame:SetPoint("TOPLEFT", PaperDollFrame, 66, -76)
+					CharacterModelFrame:SetPoint("BOTTOMRIGHT", PaperDollFrame, -86, 243)
+					if LeaPlusLC["ShowVanityControls"] == "On" then
+						LeaPlusCB["ShowHelm"]:Show()
+						LeaPlusCB["ShowCloak"]:Show()
+					end
+				end
+			end
+
+			-- Toggle stats with middle mouse button
+			CharacterModelFrame:HookScript("OnMouseDown", function(self, btn)
+				if btn == "MiddleButton" then
+					if LeaPlusLC["HideDressupStats"] == "On" then LeaPlusLC["HideDressupStats"] = "Off" else LeaPlusLC["HideDressupStats"] = "On" end
+					ToggleStats()
+				end
+			end)
+			ToggleStats()
+
+			----------------------------------------------------------------------
+			-- Enable zooming and panning
+			----------------------------------------------------------------------
+
+			-- Enable zooming for character frame and dressup frame
+			CharacterModelFrame:HookScript("OnMouseWheel", Model_OnMouseWheel)
+			DressUpModelFrame:HookScript("OnMouseWheel", Model_OnMouseWheel)
+
+			-- Enable panning for character frame
+			CharacterModelFrame:HookScript("OnMouseDown", function(self, btn)
+				if btn == "RightButton" then
+					Model_StartPanning(self)
+				end
+			end)
+
+			CharacterModelFrame:HookScript("OnMouseUp", function(self, btn)
+				Model_StopPanning(self)
+			end)
+
+			-- Enable panning for dressup frame
+			DressUpModelFrame:HookScript("OnMouseDown", function(self, btn)
+				if btn == "RightButton" then
+					Model_StartPanning(self)
+				end
+			end)
+
+			DressUpModelFrame:HookScript("OnMouseUp", function(self, btn)
+				Model_StopPanning(self)
+			end)
+
+			DressUpModelFrame:ClearAllPoints()
+			DressUpModelFrame:SetPoint("TOPLEFT", DressUpFrame, 22, -76)
+			DressUpModelFrame:SetPoint("BOTTOMRIGHT", DressUpFrame, -46, 106)
+
+			-- Reset dressup frame when reset button clicked
+			DressUpFrameResetButton:HookScript("OnClick", function()
+				DressUpModelFrame.rotation = 0
+				DressUpModelFrame:SetRotation(0)
+				DressUpModelFrame:SetPosition(0, 0, 0)
+				DressUpModelFrame.zoomLevel = 0
+				DressUpModelFrame:SetPortraitZoom(0)
+				DressUpModelFrame:RefreshCamera()
+			end)
+
+			-- Reset side dressup when reset button clicked
+			SideDressUpModelResetButton:HookScript("OnClick", function()
+				SideDressUpModel.rotation = 0
+				SideDressUpModel:SetRotation(0)
+				SideDressUpModel:SetPosition(0, 0, -0.1)
+				SideDressUpModel.zoomLevel = 0
+				SideDressUpModel:SetPortraitZoom(0)
+				SideDressUpModel:RefreshCamera()
+			end)
+
+			----------------------------------------------------------------------
+			-- Inspect system
+			----------------------------------------------------------------------
+
+			-- Inspect System
+			local function DoInspectSystemFunc()
+
+				-- Hide model rotation controls
+				InspectModelFrameRotateLeftButton:Hide()
+				InspectModelFrameRotateRightButton:Hide()
+
+				-- Enable zooming
+				InspectModelFrame:HookScript("OnMouseWheel", Model_OnMouseWheel)
+
+				-- Enable panning
+				InspectModelFrame:HookScript("OnMouseDown", function(self, btn)
+					if btn == "RightButton" then
+						Model_StartPanning(self)
+					end
+				end)
+
+				InspectModelFrame:HookScript("OnMouseUp", function(self, btn)
+					Model_StopPanning(self)
+				end)
+
+			end
+
+			if IsAddOnLoaded("Blizzard_InspectUI") then
+				DoInspectSystemFunc()
+			else
+				local waitFrame = CreateFrame("FRAME")
+				waitFrame:RegisterEvent("ADDON_LOADED")
+				waitFrame:SetScript("OnEvent", function(self, event, arg1)
+					if arg1 == "Blizzard_InspectUI" then
+						DoInspectSystemFunc()
+						waitFrame:UnregisterAllEvents()
+					end
+				end)
+			end
+
+		end
+
+		----------------------------------------------------------------------
 		-- Automatically release in battlegrounds
 		----------------------------------------------------------------------
 
@@ -3786,129 +3942,6 @@
 						Dismount()
 						UIErrorsFrame:Clear()
 					end
-				end
-			end)
-
-		end
-
-		----------------------------------------------------------------------
-		--	Show vanity controls
-		----------------------------------------------------------------------
-
-		if LeaPlusLC["ShowVanityControls"] == "On" then
-
-			-- Create checkboxes
-			LeaPlusLC:MakeCB(PaperDollFrame, "ShowHelm", L["Helm"], 2, -192, false, "")
-			LeaPlusLC:MakeCB(PaperDollFrame, "ShowCloak", L["Cloak"], 281, -192, false, "")
-			LeaPlusCB["ShowHelm"]:SetFrameStrata("HIGH")
-			LeaPlusCB["ShowCloak"]:SetFrameStrata("HIGH")
-
-			-- Function to set vanity controls layout
-			local function SetVanityControlsLayout()
-				if LeaPlusLC["VanityAltLayout"] == "On" then
-					-- Alternative layout
-					LeaPlusCB["ShowHelm"].f:SetText(L["H"])
-					LeaPlusCB["ShowHelm"]:ClearAllPoints()
-					LeaPlusCB["ShowHelm"]:SetPoint("TOPLEFT", 275, -224)
-					LeaPlusCB["ShowHelm"]:SetHitRectInsets(-LeaPlusCB["ShowHelm"].f:GetStringWidth() + 4, 3, 0, 0)
-					LeaPlusCB["ShowHelm"].f:ClearAllPoints()
-					LeaPlusCB["ShowHelm"].f:SetPoint("RIGHT", LeaPlusCB["ShowHelm"], "LEFT", 4, 0)
-
-					LeaPlusCB["ShowCloak"].f:SetText(L["C"])
-					LeaPlusCB["ShowCloak"]:ClearAllPoints()
-					LeaPlusCB["ShowCloak"]:SetPoint("TOP", LeaPlusCB["ShowHelm"], "BOTTOM", 0, 6)
-					LeaPlusCB["ShowCloak"].f:ClearAllPoints()
-					LeaPlusCB["ShowCloak"].f:SetPoint("RIGHT", LeaPlusCB["ShowCloak"], "LEFT", 4, 0)
-					LeaPlusCB["ShowCloak"]:SetHitRectInsets(-LeaPlusCB["ShowCloak"].f:GetStringWidth() + 4, 3, 0, 0)
-				else
-					-- Default layout
-					LeaPlusCB["ShowHelm"].f:SetText(L["Helm"])
-					LeaPlusCB["ShowHelm"]:ClearAllPoints()
-					LeaPlusCB["ShowHelm"]:SetPoint("TOPLEFT", 65, -246)
-					LeaPlusCB["ShowHelm"]:SetHitRectInsets(3, -LeaPlusCB["ShowHelm"].f:GetStringWidth(), 0, 0)
-					LeaPlusCB["ShowHelm"].f:ClearAllPoints()
-					LeaPlusCB["ShowHelm"].f:SetPoint("LEFT", LeaPlusCB["ShowHelm"], "RIGHT", 0, 0)
-
-					LeaPlusCB["ShowCloak"].f:SetText(L["Cloak"])
-					LeaPlusCB["ShowCloak"]:ClearAllPoints()
-					LeaPlusCB["ShowCloak"]:SetPoint("TOPLEFT", 275, -246)
-					LeaPlusCB["ShowCloak"]:SetHitRectInsets(-LeaPlusCB["ShowCloak"].f:GetStringWidth(), 3, 0, 0)
-					LeaPlusCB["ShowCloak"].f:ClearAllPoints()
-					LeaPlusCB["ShowCloak"].f:SetPoint("RIGHT", LeaPlusCB["ShowCloak"], "LEFT", 0, 0)
-				end
-			end
-
-			-- Set position when controls are shift/right-clicked
-			LeaPlusCB["ShowHelm"]:SetScript('OnMouseDown', function(self, btn)
-				if btn == "RightButton" and IsShiftKeyDown() then
-					if LeaPlusLC["VanityAltLayout"] == "On" then LeaPlusLC["VanityAltLayout"] = "Off" else LeaPlusLC["VanityAltLayout"] = "On" end
-					SetVanityControlsLayout()
-				end
-			end)
-
-			LeaPlusCB["ShowCloak"]:SetScript('OnMouseDown', function(self, btn)
-				if btn == "RightButton" and IsShiftKeyDown() then
-					if LeaPlusLC["VanityAltLayout"] == "On" then LeaPlusLC["VanityAltLayout"] = "Off" else LeaPlusLC["VanityAltLayout"] = "On" end
-					SetVanityControlsLayout()
-				end
-			end)
-
-			-- Set controls on startup
-			SetVanityControlsLayout()
-
-			-- Manage alpha
-			LeaPlusCB["ShowHelm"]:SetAlpha(0.3)
-			LeaPlusCB["ShowCloak"]:SetAlpha(0.3)
-			LeaPlusCB["ShowHelm"]:HookScript("OnEnter", function() LeaPlusCB["ShowHelm"]:SetAlpha(1.0) end)
-			LeaPlusCB["ShowHelm"]:HookScript("OnLeave", function() LeaPlusCB["ShowHelm"]:SetAlpha(0.3) end)
-			LeaPlusCB["ShowCloak"]:HookScript("OnEnter", function()	LeaPlusCB["ShowCloak"]:SetAlpha(1.0) end)
-			LeaPlusCB["ShowCloak"]:HookScript("OnLeave", function()	LeaPlusCB["ShowCloak"]:SetAlpha(0.3) end)
-
-			-- Toggle helm with click
-			LeaPlusCB["ShowHelm"]:HookScript("OnClick", function()
-				LeaPlusCB["ShowHelm"]:Disable()
-				LeaPlusCB["ShowHelm"]:SetAlpha(1.0)
-				C_Timer.After(0.5, function()
-					if ShowingHelm() then
-						ShowHelm(false)
-					else
-						ShowHelm(true)
-					end
-					LeaPlusCB["ShowHelm"]:Enable()
-					if not LeaPlusCB["ShowHelm"]:IsMouseOver() then
-						LeaPlusCB["ShowHelm"]:SetAlpha(0.3)
-					end
-				end)
-			end)
-
-			-- Toggle cloak with click
-			LeaPlusCB["ShowCloak"]:HookScript("OnClick", function()
-				LeaPlusCB["ShowCloak"]:Disable()
-				LeaPlusCB["ShowCloak"]:SetAlpha(1.0)
-				C_Timer.After(0.5, function()
-					if ShowingCloak() then
-						ShowCloak(false)
-					else
-						ShowCloak(true)
-					end
-					LeaPlusCB["ShowCloak"]:Enable()
-					if not LeaPlusCB["ShowCloak"]:IsMouseOver() then
-						LeaPlusCB["ShowCloak"]:SetAlpha(0.3)
-					end
-				end)
-			end)
-
-			-- Set checkbox state when checkboxes are shown
-			LeaPlusCB["ShowCloak"]:HookScript("OnShow", function()
-				if ShowingHelm() then
-					LeaPlusCB["ShowHelm"]:SetChecked(true)
-				else
-					LeaPlusCB["ShowHelm"]:SetChecked(false)
-				end
-				if ShowingCloak() then
-					LeaPlusCB["ShowCloak"]:SetChecked(true)
-				else
-					LeaPlusCB["ShowCloak"]:SetChecked(false)
 				end
 			end)
 
@@ -8090,6 +8123,7 @@
 				LeaPlusLC:LoadVarNum("TipCursorY", 0, -128, 128)			-- Tooltip cursor Y offset
 
 				LeaPlusLC:LoadVarChk("EnhanceDressup", "Off")				-- Enhance dressup
+				LeaPlusLC:LoadVarChk("HideDressupStats", "Off")				-- Hide dressup stats
 				LeaPlusLC:LoadVarChk("EnhanceQuestLog", "Off")				-- Enhance quest log
 				LeaPlusLC:LoadVarChk("EnhanceProfessions", "Off")			-- Enhance professions
 				LeaPlusLC:LoadVarChk("EnhanceTrainers", "Off")				-- Enhance trainers
@@ -8288,6 +8322,7 @@
 			LeaPlusDB["TipCursorY"]				= LeaPlusLC["TipCursorY"]
 
 			LeaPlusDB["EnhanceDressup"]			= LeaPlusLC["EnhanceDressup"]
+			LeaPlusDB["HideDressupStats"]		= LeaPlusLC["HideDressupStats"]
 			LeaPlusDB["EnhanceQuestLog"]		= LeaPlusLC["EnhanceQuestLog"]
 			LeaPlusDB["EnhanceProfessions"]		= LeaPlusLC["EnhanceProfessions"]
 			LeaPlusDB["EnhanceTrainers"]		= LeaPlusLC["EnhanceTrainers"]
@@ -9781,6 +9816,7 @@
 				LeaPlusDB["TipCursorX"] = 0						-- X offset
 				LeaPlusDB["TipCursorY"] = 0						-- Y offset
 				LeaPlusDB["EnhanceDressup"] = "On"				-- Enhance dressup
+				LeaPlusDB["HideDressupStats"] = "On"			-- Hide dressup stats
 				LeaPlusDB["EnhanceQuestLog"] = "On"				-- Enhance quest log
 				LeaPlusDB["EnhanceProfessions"] = "On"			-- Enhance professions
 				LeaPlusDB["EnhanceTrainers"] = "On"				-- Enhance trainers
@@ -10143,7 +10179,7 @@
 	LeaPlusLC:MakeTx(LeaPlusLC[pg], "Enhancements"				, 	146, -72);
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "MinimapMod"				,	"Enhance minimap"				, 	146, -92, 	true,	"If checked, you will be able to customise the minimap.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "TipModEnable"				,	"Enhance tooltip"				,	146, -112, 	true,	"If checked, the tooltip will be color coded and you will be able to modify the tooltip layout and scale.")
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "EnhanceDressup"			, 	"Enhance dressup"				,	146, -132, 	true,	"If checked, you will be able to pan (right-button) and zoom (mousewheel) in the character frame, dressup frame and inspect frame.  Model rotation controls will be hidden.  Buttons to toggle gear will be added to the dressup frame.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "EnhanceDressup"			, 	"Enhance dressup"				,	146, -132, 	true,	"If checked, you will be able to pan (right-button) and zoom (mousewheel) in the character frame, dressup frame and inspect frame.  You will be able to middle-click the character model in the character frame to toggle character attributes.  Model rotation controls will be hidden.  Buttons to toggle gear will be added to the dressup frame.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "EnhanceQuestLog"			, 	"Enhance quest log"				,	146, -152, 	true,	"If checked, the quest log frame will be larger and feature a world map button and quest levels.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "EnhanceProfessions"		, 	"Enhance professions"			,	146, -172, 	true,	"If checked, the professions frame will be larger.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "EnhanceTrainers"			, 	"Enhance trainers"				,	146, -192, 	true,	"If checked, the skill trainer frame will be larger.")

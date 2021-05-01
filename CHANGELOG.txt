@@ -1,3 +1,6 @@
+2.5.23 - 1st May 2021
+- If 'Enhance dressup' is enabled, you can now middle-click the character model in the character frame to toggle character attributes and make the model fill the character frame.  The model setting is saved between login sessions.
+
 2.5.22 - 1st May 2021
 - Initial release for Burning Crusade Classic.
 - Leatrix Plus for Burning Crusade Classic is based on Leatrix Plus for World of Warcraft Classic with the changes listed below.
