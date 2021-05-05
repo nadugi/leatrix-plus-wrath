@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.24 (4th May 2021)
+-- 	Leatrix Plus 2.5.25 (5th May 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.24"
+	LeaPlusLC["AddonVer"] = "2.5.25"
 	LeaPlusLC["RestartReq"] = nil
 
 	-- Get locale table
@@ -2849,38 +2849,42 @@
 			-- Hide dressup stats button
 			----------------------------------------------------------------------
 
-			local function ToggleStats()
-				if LeaPlusLC["HideDressupStats"] == "On" then
-					CharacterResistanceFrame:Hide() 
-					CharacterAttributesFrame:Hide()
-					CharacterModelFrame:ClearAllPoints()
-					CharacterModelFrame:SetPoint("TOPLEFT", PaperDollFrame, 66, -76)
-					CharacterModelFrame:SetPoint("BOTTOMRIGHT", PaperDollFrame, -86, 134)
-					if LeaPlusLC["ShowVanityControls"] == "On" then
-						LeaPlusCB["ShowHelm"]:Hide()
-						LeaPlusCB["ShowCloak"]:Hide()
-					end
-				else
-					CharacterResistanceFrame:Show() 
-					CharacterAttributesFrame:Show()
-					CharacterModelFrame:ClearAllPoints()
-					CharacterModelFrame:SetPoint("TOPLEFT", PaperDollFrame, 66, -76)
-					CharacterModelFrame:SetPoint("BOTTOMRIGHT", PaperDollFrame, -86, 243)
-					if LeaPlusLC["ShowVanityControls"] == "On" then
-						LeaPlusCB["ShowHelm"]:Show()
-						LeaPlusCB["ShowCloak"]:Show()
-					end
-				end
-			end
+			if not IsAddOnLoaded("CharacterStatsTBC") then
 
-			-- Toggle stats with middle mouse button
-			CharacterModelFrame:HookScript("OnMouseDown", function(self, btn)
-				if btn == "MiddleButton" then
-					if LeaPlusLC["HideDressupStats"] == "On" then LeaPlusLC["HideDressupStats"] = "Off" else LeaPlusLC["HideDressupStats"] = "On" end
-					ToggleStats()
+				local function ToggleStats()
+					if LeaPlusLC["HideDressupStats"] == "On" then
+						CharacterResistanceFrame:Hide() 
+						CharacterAttributesFrame:Hide()
+						CharacterModelFrame:ClearAllPoints()
+						CharacterModelFrame:SetPoint("TOPLEFT", PaperDollFrame, 66, -76)
+						CharacterModelFrame:SetPoint("BOTTOMRIGHT", PaperDollFrame, -86, 134)
+						if LeaPlusLC["ShowVanityControls"] == "On" then
+							LeaPlusCB["ShowHelm"]:Hide()
+							LeaPlusCB["ShowCloak"]:Hide()
+						end
+					else
+						CharacterResistanceFrame:Show() 
+						CharacterAttributesFrame:Show()
+						CharacterModelFrame:ClearAllPoints()
+						CharacterModelFrame:SetPoint("TOPLEFT", PaperDollFrame, 66, -76)
+						CharacterModelFrame:SetPoint("BOTTOMRIGHT", PaperDollFrame, -86, 243)
+						if LeaPlusLC["ShowVanityControls"] == "On" then
+							LeaPlusCB["ShowHelm"]:Show()
+							LeaPlusCB["ShowCloak"]:Show()
+						end
+					end
 				end
-			end)
-			ToggleStats()
+
+				-- Toggle stats with middle mouse button
+				CharacterModelFrame:HookScript("OnMouseDown", function(self, btn)
+					if btn == "MiddleButton" then
+						if LeaPlusLC["HideDressupStats"] == "On" then LeaPlusLC["HideDressupStats"] = "Off" else LeaPlusLC["HideDressupStats"] = "On" end
+						ToggleStats()
+					end
+				end)
+				ToggleStats()
+
+			end
 
 			----------------------------------------------------------------------
 			-- Enable zooming and panning
@@ -2889,6 +2893,13 @@
 			-- Enable zooming for character frame and dressup frame
 			CharacterModelFrame:HookScript("OnMouseWheel", Model_OnMouseWheel)
 			DressUpModelFrame:HookScript("OnMouseWheel", Model_OnMouseWheel)
+
+			-- Slightly shorter character model frame for CharacterStatsTBC
+			if IsAddOnLoaded("CharacterStatsTBC") then
+				CharacterModelFrame:ClearAllPoints()
+				CharacterModelFrame:SetPoint("TOPLEFT", PaperDollFrame, 66, -76)
+				CharacterModelFrame:SetPoint("BOTTOMRIGHT", PaperDollFrame, -86, 220)
+			end
 
 			-- Enable panning for character frame
 			CharacterModelFrame:HookScript("OnMouseDown", function(self, btn)
