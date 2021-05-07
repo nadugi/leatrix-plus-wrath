@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.26 (7th May 2021)
+-- 	Leatrix Plus 2.5.27 (7th May 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.26"
+	LeaPlusLC["AddonVer"] = "2.5.27"
 	LeaPlusLC["RestartReq"] = nil
 
 	-- Get locale table
@@ -2909,7 +2909,7 @@
 			end)
 			ToggleStats(true)
 
-			-- Delay setting stats if ClasscCharacterStats is installed but hasn't loaded yet
+			-- Delay setting stats if CharacterStatsTBC is installed but hasn't loaded yet
 			if not CSC_HideStatsPanel and select(2, GetAddOnInfo("CharacterStatsTBC")) then
 				local waitFrame = CreateFrame("FRAME")
 				waitFrame:RegisterEvent("ADDON_LOADED")
