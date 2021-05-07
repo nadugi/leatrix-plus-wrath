@@ -1,5 +1,5 @@
-2.5.25 - 5th May 2021
-- Fixed a compatibility issue with 'Enhance dressup' ('Interface') and 'CharacterStatsTBC'.  As a result of this fix, middle-clicking the character model will do nothing if 'CharacterStatsTBC' is installed.
+2.5.26 - 7th May 2021
+- The 'Enhance dressup' middle-click to toggle stats option now works with CharacterStatsTBC.
 
 2.5.24 - 4th May 2021
 - If 'Enhance dressup' is enabled, you can now middle-click the character model in the character frame to toggle character attributes and make the model fill the character frame.  The model setting is saved between login sessions.

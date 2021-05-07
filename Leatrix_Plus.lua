@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.25 (5th May 2021)
+-- 	Leatrix Plus 2.5.26 (7th May 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.25"
+	LeaPlusLC["AddonVer"] = "2.5.26"
 	LeaPlusLC["RestartReq"] = nil
 
 	-- Get locale table
@@ -2849,41 +2849,76 @@
 			-- Hide dressup stats button
 			----------------------------------------------------------------------
 
-			if not IsAddOnLoaded("CharacterStatsTBC") then
+			local function ToggleStats(startup)
 
-				local function ToggleStats()
-					if LeaPlusLC["HideDressupStats"] == "On" then
-						CharacterResistanceFrame:Hide() 
-						CharacterAttributesFrame:Hide()
-						CharacterModelFrame:ClearAllPoints()
-						CharacterModelFrame:SetPoint("TOPLEFT", PaperDollFrame, 66, -76)
-						CharacterModelFrame:SetPoint("BOTTOMRIGHT", PaperDollFrame, -86, 134)
-						if LeaPlusLC["ShowVanityControls"] == "On" then
-							LeaPlusCB["ShowHelm"]:Hide()
-							LeaPlusCB["ShowCloak"]:Hide()
+				if LeaPlusLC["HideDressupStats"] == "On" then
+					CharacterResistanceFrame:Hide() 
+					if CSC_HideStatsPanel then
+						-- CharacterStatsTBC is installed
+						RunScript('CSC_HideStatsPanel()')
+						if startup then
+							C_Timer.After(0.1, function()
+								CharacterModelFrame:ClearAllPoints()
+								CharacterModelFrame:SetPoint("TOPLEFT", PaperDollFrame, 66, -76)
+								CharacterModelFrame:SetPoint("BOTTOMRIGHT", PaperDollFrame, -86, 134)
+							end)
 						end
 					else
-						CharacterResistanceFrame:Show() 
-						CharacterAttributesFrame:Show()
-						CharacterModelFrame:ClearAllPoints()
-						CharacterModelFrame:SetPoint("TOPLEFT", PaperDollFrame, 66, -76)
-						CharacterModelFrame:SetPoint("BOTTOMRIGHT", PaperDollFrame, -86, 243)
-						if LeaPlusLC["ShowVanityControls"] == "On" then
-							LeaPlusCB["ShowHelm"]:Show()
-							LeaPlusCB["ShowCloak"]:Show()
+						-- CharacterStatsTBC is not installed
+						CharacterAttributesFrame:Hide()
+					end
+					CharacterModelFrame:ClearAllPoints()
+					CharacterModelFrame:SetPoint("TOPLEFT", PaperDollFrame, 66, -76)
+					CharacterModelFrame:SetPoint("BOTTOMRIGHT", PaperDollFrame, -86, 134)
+					if LeaPlusLC["ShowVanityControls"] == "On" then
+						LeaPlusCB["ShowHelm"]:Hide()
+						LeaPlusCB["ShowCloak"]:Hide()
+					end
+				else
+					CharacterResistanceFrame:Show() 
+					if CSC_ShowStatsPanel then
+						-- CharacterStatsTBC is installed
+						RunScript('CSC_ShowStatsPanel()')
+						if startup then
+							C_Timer.After(0.1, function()
+								CharacterModelFrame:ClearAllPoints()
+								CharacterModelFrame:SetPoint("TOPLEFT", PaperDollFrame, 66, -76)
+								CharacterModelFrame:SetPoint("BOTTOMRIGHT", PaperDollFrame, -86, 243)
+							end)
 						end
+					else
+						-- CharacterStatsTBC is not installed
+						CharacterAttributesFrame:Show()
+					end
+					CharacterModelFrame:ClearAllPoints()
+					CharacterModelFrame:SetPoint("TOPLEFT", PaperDollFrame, 66, -76)
+					CharacterModelFrame:SetPoint("BOTTOMRIGHT", PaperDollFrame, -86, 243)
+					if LeaPlusLC["ShowVanityControls"] == "On" then
+						LeaPlusCB["ShowHelm"]:Show()
+						LeaPlusCB["ShowCloak"]:Show()
 					end
 				end
+			end
 
-				-- Toggle stats with middle mouse button
-				CharacterModelFrame:HookScript("OnMouseDown", function(self, btn)
-					if btn == "MiddleButton" then
-						if LeaPlusLC["HideDressupStats"] == "On" then LeaPlusLC["HideDressupStats"] = "Off" else LeaPlusLC["HideDressupStats"] = "On" end
-						ToggleStats()
+			-- Toggle stats with middle mouse button
+			CharacterModelFrame:HookScript("OnMouseDown", function(self, btn)
+				if btn == "MiddleButton" then
+					if LeaPlusLC["HideDressupStats"] == "On" then LeaPlusLC["HideDressupStats"] = "Off" else LeaPlusLC["HideDressupStats"] = "On" end
+					ToggleStats()
+				end
+			end)
+			ToggleStats(true)
+
+			-- Delay setting stats if ClasscCharacterStats is installed but hasn't loaded yet
+			if not CSC_HideStatsPanel and select(2, GetAddOnInfo("CharacterStatsTBC")) then
+				local waitFrame = CreateFrame("FRAME")
+				waitFrame:RegisterEvent("ADDON_LOADED")
+				waitFrame:SetScript("OnEvent", function(self, event, arg1)
+					if arg1 == "CharacterStatsTBC" then
+						ToggleStats(true)
+						waitFrame:UnregisterAllEvents()
 					end
 				end)
-				ToggleStats()
-
 			end
 
 			----------------------------------------------------------------------
