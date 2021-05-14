@@ -1,3 +1,6 @@
+2.5.28 - 14th May 2021
+- Added TBC cinematic audio ('Various' > 'Cinematics').
+
 2.5.27 - 7th May 2021
 - The 'Enhance dressup' middle-click to toggle stats option now works with CharacterStatsTBC.
 
