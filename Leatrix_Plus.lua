@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.29 (16th May 2021)
+-- 	Leatrix Plus 2.5.30 (16th May 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.29"
+	LeaPlusLC["AddonVer"] = "2.5.30"
 	LeaPlusLC["RestartReq"] = nil
 
 	-- Get locale table
@@ -7078,7 +7078,18 @@
 				"|cffffd800", "|cffffd800" .. L["World of Warcraft"], "cinematics/logo.mp3#27", "cinematics/wow_intro.mp3#170",
 				"|cffffd800", "|cffffd800" .. L["The Burning Crusade"], "cinematics/wow_intro_bc.mp3#167",
 			})
-			Zn(L["Various"], L["Various"], L["Credits"]									, {	"|cffffd800" .. L["Various"] .. ": " .. L["Credits"], prefol, "citymusic/stormwind/stormwind_intro-moment.mp3#67", "citymusic/orgrimmar/orgrimmar_intro-moment.mp3#40",})
+			Zn(L["Various"], L["Various"], L["Credits"]									, {	"|cffffd800" .. L["Various"] .. ": " .. L["Credits"], prefol, 
+				"citymusic/darnassus/darnassus intro.mp3#40",
+				"citymusic/ironforge/ironforge intro.mp3#86",
+				"citymusic/ironforge/tinkertownintro_moment.mp3#52",
+				"citymusic/stormwind/stormwind_intro-moment.mp3#67",
+				"citymusic/orgrimmar/orgrimmar_intro-moment.mp3#40",
+				"citymusic/thunderbluff/thunderbluff intro.mp3#46",
+				"citymusic/undercity/undercityintro-moment.mp3#29",
+				"gluescreenmusic/bccredits_lament_of_the_highborne.mp3#171",
+				"zonemusic/azuremyst/ai_exodarintro01.mp3#83",
+				"zonemusic/eversong/es_silvermoonintro01.mp3#133",
+			})
 			Zn(L["Various"], L["Various"], L["Events"]									, {	"|cffffd800" .. L["Various"] .. ": " .. L["Events"], prefol, 
 				"|cffffd800", "|cffffd800" .. L["Darkmoon Faire"], "worldevents/darkmoonfaire_1.mp3#29", "worldevents/darkmoonfaire_2.mp3#74", "worldevents/darkmoonfaire_3.mp3#59", "worldevents/darkmoonfaire_4.mp3#38",
 			})

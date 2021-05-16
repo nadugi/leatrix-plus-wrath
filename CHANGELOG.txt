@@ -1,25 +1,10 @@
-2.5.29 - 16th May 2021
-- Fixed 'Enhance tooltip' ('Interface') for guilded characters.
-
-2.5.28 - 14th May 2021
-- Added TBC cinematic audio ('Various' > 'Cinematics').
-
-2.5.27 - 7th May 2021
-- The 'Enhance dressup' middle-click to toggle stats option now works with CharacterStatsTBC.
-
-2.5.24 - 4th May 2021
-- If 'Enhance dressup' is enabled, you can now middle-click the character model in the character frame to toggle character attributes and make the model fill the character frame.  The model setting is saved between login sessions.
-
-2.5.22 - 1st May 2021
-- Initial release for Burning Crusade Classic.
+2.5.30 - 16th May 2021
+- Welcome to Burning Crusade Classic.
 - Leatrix Plus for Burning Crusade Classic is based on Leatrix Plus for World of Warcraft Classic with the changes listed below.
-- Added 'Mute game sounds' ('System').
-- Added 'Remove raid restrictions ('System').
-- Added 'Manage focus' ('Frames').
-- Added focus frame to 'Class colored frames' ('Frames').
-- Added Burning Crusade zones, dungeons, titles, credits, narration tracks and movie to 'Media'.
-- Added translations.
-- The 'Enhance dressup' option ('Interface') now adds pan (right-button) and zoom (mousewheel) functionality to the character frame, dressup frame and inspect frame (in addition to adding gear toggle buttons and hiding the model rotation controls).
-- Known Beta issue: Turning in quests automatically causes a harmless error to be shown in chat.
-- Known Beta issue: Disabe screen glow and disable special effects cannot be added yet as ffxGlow, ffxDeath and ffxNetherWorld are not currently in the game.
+- Added 'Manage focus' ('Frames'), 'Mute game sounds' ('System') and 'Remove raid restrictions' ('System').
+- Added Burning Crusade zones, dungeons, titles, credits, narration tracks and movies to 'Media'.
+- The 'Enhance dressup' option ('Interface') now adds pan (right-button), zoom (mousewheel) and toggle attributes (middle-click) functionality to the character frame, dressup frame and inspect frame.
+- The 'Class colored frames' option ('Frames') now colors the focus frame too.
+- Known issue: Turning in quests automatically causes a harmless error to be shown in chat.
+- Known issue: Disabe screen glow and disable special effects cannot be added yet as ffxGlow, ffxDeath and ffxNetherWorld are not currently in the game.
 - Thanks to Blizzard for the day one beta access allowing me to bring Leatrix addons to the BCC community.
