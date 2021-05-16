@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.28 (14th May 2021)
+-- 	Leatrix Plus 2.5.29 (16th May 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.28"
+	LeaPlusLC["AddonVer"] = "2.5.29"
 	LeaPlusLC["RestartReq"] = nil
 
 	-- Get locale table
@@ -6004,7 +6004,7 @@
 
 			-- Add controls
 			LeaPlusLC:MakeTx(SideTip, "Settings", 16, -72)
-			LeaPlusLC:MakeCB(SideTip, "TipShowGuild", "Show guild names", 16, -92, false, "If checked, guild names will be shown.  Guild ranks will also be shown for players in your guild.")
+			LeaPlusLC:MakeCB(SideTip, "TipShowRank", "Show guild ranks for your guild", 16, -92, false, "If checked, guild ranks will be shown for players in your guild.")
 			LeaPlusLC:MakeCB(SideTip, "TipShowTarget", "Show unit targets", 16, -112, false, "If checked, unit targets will be shown.")
 			LeaPlusLC:MakeCB(SideTip, "TipBackSimple", "Color the backdrops based on faction", 16, -132, false, "If checked, backdrops will be tinted blue (friendly) or red (hostile).")
 			LeaPlusLC:MakeCB(SideTip, "TipHideInCombat", "Hide tooltips for world units during combat", 16, -152, false, "If checked, tooltips for world units will be hidden during combat.|n|nYou can hold the shift key down to override this setting.")
@@ -6068,7 +6068,7 @@
 
 			-- Reset button handler
 			SideTip.r:SetScript("OnClick", function()
-				LeaPlusLC["TipShowGuild"] = "On"
+				LeaPlusLC["TipShowRank"] = "On"
 				LeaPlusLC["TipShowTarget"] = "On"
 				LeaPlusLC["TipBackSimple"] = "Off"
 				LeaPlusLC["TipHideInCombat"] = "Off"
@@ -6117,7 +6117,7 @@
 			LeaPlusCB["MoveTooltipButton"]:SetScript("OnClick", function()
 				if IsShiftKeyDown() and IsControlKeyDown() then
 					-- Preset profile
-					LeaPlusLC["TipShowGuild"] = "On"
+					LeaPlusLC["TipShowRank"] = "On"
 					LeaPlusLC["TipShowTarget"] = "On"
 					LeaPlusLC["TipBackSimple"] = "On"
 					LeaPlusLC["TipHideInCombat"] = "Off"
@@ -6273,12 +6273,25 @@
 				LT["PlayerControl"] = UnitPlayerControlled(LT["Unit"])
 				LT["PlayerRace"] = UnitRace(LT["Unit"])
 
-				-- Get colorblind information
+				-- Get guild information
 				if LT["TipIsPlayer"] then
-					if LT["ColorBlind"] == "1" then
-						LT["InfoLine"] = 3
+					local unitGuild, unitRank = GetGuildInfo(LT["Unit"])
+					if unitGuild and unitRank then
+						-- Unit is guilded
+						if LT["ColorBlind"] == "1" then
+							LT["GuildLine"], LT["InfoLine"] = 2, 4
+						else
+							LT["GuildLine"], LT["InfoLine"] = 2, 3
+						end
+						LT["GuildName"], LT["GuildRank"] = unitGuild, unitRank
 					else
-						LT["InfoLine"] = 2
+						-- Unit is not guilded
+						LT["GuildName"] = nil
+						if LT["ColorBlind"] == "1" then
+							LT["GuildLine"], LT["InfoLine"] = 0, 3
+						else
+							LT["GuildLine"], LT["InfoLine"] = 0, 2
+						end
 					end
 					-- Lower information line if unit is charmed
 					if UnitIsCharmed(LT["Unit"]) then
@@ -6339,6 +6352,25 @@
 					-- Show grey name for other dead units
 					_G["GameTooltipTextLeft1"]:SetText("|c88888888" .. (_G["GameTooltipTextLeft1"]:GetText() or "") .. "|cffffffff|r")
 					return
+
+				end
+
+				----------------------------------------------------------------------
+				-- Guild line
+				----------------------------------------------------------------------
+
+				if LT["TipIsPlayer"] and LT["GuildName"] then
+					
+					-- Show guild line
+					if LeaPlusLC["TipShowRank"] == "On" then
+						if UnitIsInMyGuild(LT["Unit"]) then
+							_G["GameTooltipTextLeft" .. LT["GuildLine"]]:SetText("|c00aaaaff" .. LT["GuildName"] .. " - " .. LT["GuildRank"] .. "|r")
+						else
+							_G["GameTooltipTextLeft" .. LT["GuildLine"]]:SetText("|c00aaaaff" .. LT["GuildName"] .. "|cffffffff|r")
+						end
+					else
+						_G["GameTooltipTextLeft" .. LT["GuildLine"]]:SetText("|c00aaaaff" .. LT["GuildName"] .. "|cffffffff|r")
+					end
 
 				end
 
@@ -6484,21 +6516,6 @@
 						GameTooltip:SetBackdropColor(0.0, 0.0, 0.5);
 					else
 						GameTooltip:SetBackdropColor(0.0, 0.0, 0.0);
-					end
-				end
-
-				----------------------------------------------------------------------
-				-- Show guild
-				----------------------------------------------------------------------
-
-				if LeaPlusLC["TipShowGuild"] == "On" and LT["TipIsPlayer"] then
-					local unitGuild, unitRank = GetGuildInfo(LT["Unit"])
-					if unitGuild and unitRank then
-						if UnitIsInMyGuild(LT["Unit"]) then
-							GameTooltip:AddLine("|c00aaaaff" .. unitGuild .. " - " .. unitRank .. "|r")
-						else
-							GameTooltip:AddLine("|c00aaaaff" .. unitGuild .. "|cffffffff|r")
-						end
 					end
 				end
 
@@ -8160,7 +8177,7 @@
 				LeaPlusLC:LoadVarNum("MinimapScale", 1, 1, 2)				-- Minimap scale slider
 
 				LeaPlusLC:LoadVarChk("TipModEnable", "Off")					-- Enhance tooltip
-				LeaPlusLC:LoadVarChk("TipShowGuild", "On")					-- Show guild
+				LeaPlusLC:LoadVarChk("TipShowRank", "On")					-- Show rank
 				LeaPlusLC:LoadVarChk("TipShowTarget", "On")					-- Show target
 				LeaPlusLC:LoadVarChk("TipBackSimple", "Off")				-- Color backdrops
 				LeaPlusLC:LoadVarChk("TipHideInCombat", "Off")				-- Hide tooltips during combat
@@ -8359,7 +8376,7 @@
 			LeaPlusDB["MinimapScale"]			= LeaPlusLC["MinimapScale"]
 
 			LeaPlusDB["TipModEnable"]			= LeaPlusLC["TipModEnable"]
-			LeaPlusDB["TipShowGuild"]			= LeaPlusLC["TipShowGuild"]
+			LeaPlusDB["TipShowRank"]			= LeaPlusLC["TipShowRank"]
 			LeaPlusDB["TipShowTarget"]			= LeaPlusLC["TipShowTarget"]
 			LeaPlusDB["TipBackSimple"]			= LeaPlusLC["TipBackSimple"]
 			LeaPlusDB["TipHideInCombat"]		= LeaPlusLC["TipHideInCombat"]

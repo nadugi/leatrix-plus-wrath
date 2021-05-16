@@ -1,3 +1,6 @@
+2.5.29 - 16th May 2021
+- Fixed 'Enhance tooltip' ('Interface') for guilded characters.
+
 2.5.28 - 14th May 2021
 - Added TBC cinematic audio ('Various' > 'Cinematics').
 
