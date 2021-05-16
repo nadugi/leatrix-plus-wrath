@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.30 (16th May 2021)
+-- 	Leatrix Plus 2.5.31 (16th May 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.30"
+	LeaPlusLC["AddonVer"] = "2.5.31"
 	LeaPlusLC["RestartReq"] = nil
 
 	-- Get locale table
@@ -4011,6 +4011,50 @@
 			-- Set class colors on startup and when option is clicked (if enabled)
 			LeaPlusCB["ClassColorsInChat"]:HookScript("OnClick", SetClassCol)
 			if LeaPlusLC["ClassColorsInChat"] == "On" then SetClassCol() end
+
+		end
+
+		----------------------------------------------------------------------
+		-- Disable screen glow (no reload required)
+		----------------------------------------------------------------------
+
+		do
+
+			-- Function to set screen glow
+			local function SetGlow()
+				if LeaPlusLC["NoScreenGlow"] == "On" then
+					SetCVar("ffxGlow", "0")
+				else
+					SetCVar("ffxGlow", "1")
+				end
+			end
+
+			-- Set screen glow on startup and when option is clicked (if enabled)
+			LeaPlusCB["NoScreenGlow"]:HookScript("OnClick", SetGlow)
+			if LeaPlusLC["NoScreenGlow"] == "On" then SetGlow() end
+
+		end
+
+		----------------------------------------------------------------------
+		-- Disable screen effects (no reload required)
+		----------------------------------------------------------------------
+
+		do
+
+			-- Function to set screen effects
+			local function SetEffects()
+				if LeaPlusLC["NoScreenEffects"] == "On" then
+					SetCVar("ffxDeath", "0")
+					SetCVar("ffxNether", "0")
+				else
+					SetCVar("ffxDeath", "1")
+					SetCVar("ffxNether", "1")
+				end
+			end
+
+			-- Set screen effects when option is clicked and on startup (if enabled)
+			LeaPlusCB["NoScreenEffects"]:HookScript("OnClick", SetEffects)
+			if LeaPlusLC["NoScreenEffects"] == "On" then SetEffects() end
 
 		end
 
@@ -8257,6 +8301,8 @@
 				LeaPlusLC:LoadVarChk("NoClassBar", "Off")					-- Hide stance bar
 
 				-- System
+				LeaPlusLC:LoadVarChk("NoScreenGlow", "Off")					-- Disable screen glow
+				LeaPlusLC:LoadVarChk("NoScreenEffects", "Off")				-- Disable screen effects
 				LeaPlusLC:LoadVarChk("SetWeatherDensity", "Off")			-- Set weather density
 				LeaPlusLC:LoadVarNum("WeatherLevel", 3, 0, 3)				-- Weather density level
 				LeaPlusLC:LoadVarChk("MaxCameraZoom", "Off")				-- Max camera zoom
@@ -8456,6 +8502,8 @@
 			LeaPlusDB["NoClassBar"]				= LeaPlusLC["NoClassBar"]
 
 			-- System
+			LeaPlusDB["NoScreenGlow"] 			= LeaPlusLC["NoScreenGlow"]
+			LeaPlusDB["NoScreenEffects"] 		= LeaPlusLC["NoScreenEffects"]
 			LeaPlusDB["SetWeatherDensity"] 		= LeaPlusLC["SetWeatherDensity"]
 			LeaPlusDB["WeatherLevel"] 			= LeaPlusLC["WeatherLevel"]
 			LeaPlusDB["MaxCameraZoom"] 			= LeaPlusLC["MaxCameraZoom"]
@@ -8522,6 +8570,13 @@
 		----------------------------------------------------------------------
 
 		if wipe then
+
+			-- Disable screen glow (LeaPlusLC["NoScreenGlow"])
+			SetCVar("ffxGlow", "1")
+
+			-- Disable screen effects (LeaPlusLC["NoScreenEffects"])
+			SetCVar("ffxDeath", "1")
+			SetCVar("ffxNether", "1")
 
 			-- Set weather density (LeaPlusLC["SetWeatherDensity"])
 			SetCVar("WeatherDensity", "3")
@@ -9961,6 +10016,8 @@
 				LeaPlusDB["NoClassBar"] = "On"					-- Hide stance bar
 
 				-- System
+				LeaPlusDB["NoScreenGlow"] = "On"				-- Disable screen glow
+				LeaPlusDB["NoScreenEffects"] = "On"				-- Disable screen effects
 				LeaPlusDB["SetWeatherDensity"] = "On"			-- Set weather density
 				LeaPlusDB["WeatherLevel"] = 0					-- Weather density level
 				LeaPlusDB["MaxCameraZoom"] = "On"				-- Max camera zoom
@@ -10309,11 +10366,13 @@
 	pg = "Page7";
 
 	LeaPlusLC:MakeTx(LeaPlusLC[pg], "Graphics and Sound"		, 	146, -72);
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "SetWeatherDensity"			, 	"Set weather density"			, 	146, -92, 	false,	"If checked, you will be able to set the density of weather effects.")
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "MaxCameraZoom"				, 	"Max camera zoom"				, 	146, -112, 	false,	"If checked, you will be able to zoom out to a greater distance.")
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ViewPortEnable"			,	"Enable viewport"				,	146, -132, 	true,	"If checked, you will be able to create a viewport.  A viewport adds adjustable black borders around the game world.|n|nThe borders are placed on top of the game world but under the UI so you can place UI elements over them.")
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "NoRestedEmotes"			, 	"Silence rested emotes"			,	146, -152, 	true,	"If checked, emote sounds will be silenced while your character is resting or at the Grim Guzzler.|n|nEmote sounds will be enabled at all other times.")
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "MuteGameSounds"			, 	"Mute game sounds"				,	146, -172, 	false,	"If checked, you will be able to mute a selection of game sounds.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "NoScreenGlow"				, 	"Disable screen glow"			, 	146, -92, 	false,	"If checked, the screen glow will be disabled.|n|nEnabling this option will also disable the drunken haze effect.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "NoScreenEffects"			, 	"Disable screen effects"		, 	146, -112, 	false,	"If checked, the grey screen of death and the netherworld effect will be disabled.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "SetWeatherDensity"			, 	"Set weather density"			, 	146, -132, 	false,	"If checked, you will be able to set the density of weather effects.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "MaxCameraZoom"				, 	"Max camera zoom"				, 	146, -152, 	false,	"If checked, you will be able to zoom out to a greater distance.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ViewPortEnable"			,	"Enable viewport"				,	146, -172, 	true,	"If checked, you will be able to create a viewport.  A viewport adds adjustable black borders around the game world.|n|nThe borders are placed on top of the game world but under the UI so you can place UI elements over them.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "NoRestedEmotes"			, 	"Silence rested emotes"			,	146, -192, 	true,	"If checked, emote sounds will be silenced while your character is resting or at the Grim Guzzler.|n|nEmote sounds will be enabled at all other times.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "MuteGameSounds"			, 	"Mute game sounds"				,	146, -212, 	false,	"If checked, you will be able to mute a selection of game sounds.")
 
 	LeaPlusLC:MakeTx(LeaPlusLC[pg], "Game Options"				, 	340, -72);
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "NoBagAutomation"			, 	"Disable bag automation"		, 	340, -92, 	true,	"If checked, your bags will not be opened or closed automatically when you interact with a merchant, bank or mailbox.")
