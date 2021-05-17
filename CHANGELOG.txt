@@ -1,7 +1,4 @@
-2.5.31 - 16th May 2021
-- Added 'Disable screen glow' and 'Disable special effects' ('System').
-
-2.5.30 - 16th May 2021
+2.5.32 - 17th May 2021
 - Welcome to Burning Crusade Classic.
 - Leatrix Plus for Burning Crusade Classic is based on Leatrix Plus for World of Warcraft Classic with the changes listed below.
 - Added 'Manage focus' ('Frames'), 'Mute game sounds' ('System') and 'Remove raid restrictions' ('System').
