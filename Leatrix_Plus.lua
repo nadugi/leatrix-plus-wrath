@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.33.alpha.1 (20th May 2021)
+-- 	Leatrix Plus 2.5.33.alpha.2 (20th May 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.33.alpha.1"
+	LeaPlusLC["AddonVer"] = "2.5.33.alpha.2"
 	LeaPlusLC["RestartReq"] = nil
 
 	-- Get locale table
@@ -3961,7 +3961,7 @@
 		end
 
 		----------------------------------------------------------------------
-		--	Stand and dismount
+		--	Stand and dismount (actually, it's just dismount now)
 		----------------------------------------------------------------------
 
 		if LeaPlusLC["StandAndDismount"] == "On" then
@@ -3969,20 +3969,13 @@
 			local eFrame = CreateFrame("FRAME")
 			eFrame:RegisterEvent("UI_ERROR_MESSAGE")
 			eFrame:SetScript("OnEvent", function(self, event, messageType, msg)
-				-- Auto stand
-				if msg == SPELL_FAILED_NOT_STANDING
-				or msg == ERR_CANTATTACK_NOTSTANDING
-				or msg == ERR_LOOT_NOTSTANDING
-				or msg == ERR_TAXINOTSTANDING
-				then
-					DoEmote("stand")
-					UIErrorsFrame:Clear()
 				-- Auto dismount
-				elseif msg == ERR_ATTACK_MOUNTED
-				or msg == ERR_MOUNT_ALREADYMOUNTED
-				or msg == ERR_NOT_WHILE_MOUNTED
+				if msg == ERR_OUT_OF_RAGE
+				or msg == ERR_OUT_OF_MANA
+				or msg == ERR_OUT_OF_ENERGY
+				or msg == ERR_SPELL_OUT_OF_RANGE
+				or msg == SPELL_FAILED_MOVING
 				or msg == ERR_TAXIPLAYERALREADYMOUNTED
-				or msg == SPELL_FAILED_NOT_MOUNTED
 				then
 					if IsMounted() then
 						Dismount()
@@ -10419,7 +10412,7 @@
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "NoConfirmLoot"				, 	"Disable loot warnings"			,	340, -152, 	false,	"If checked, confirmations will no longer appear when you choose a loot roll option or attempt to sell or mail a tradable item.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "FasterLooting"				, 	"Faster auto loot"				,	340, -172, 	true,	"If checked, the amount of time it takes to auto loot creatures will be significantly reduced.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "FasterMovieSkip"			, 	"Faster movie skip"				,	340, -192, 	true,	"If checked, you will be able to cancel cinematics without being prompted for confirmation.")
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "StandAndDismount"			, 	"Stand and dismount"			,	340, -212, 	true,	"If checked, your character will automatically stand or dismount when an action is prevented because you are either seated or mounted.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "StandAndDismount"			, 	"Dismount automatically"		,	340, -212, 	true,	"If checked, your character will dismount when you select a flight location or attempt to cast a spell regardless of whether you have enough resource to cast or whether the target is in range.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowVendorPrice"			, 	"Show vendor price"				,	340, -232, 	true,	"If checked, the vendor price will be shown in item tooltips.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "CombatPlates"				, 	"Combat plates"					,	340, -252, 	true,	"If checked, enemy nameplates will be shown during combat and hidden when combat ends.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "EasyItemDestroy"			, 	"Easy item destroy"				,	340, -272, 	true,	"If checked, you will no longer need to type delete when destroying a superior quality item.|n|nIn addition, item links will be shown in all item destroy confirmation windows.")
