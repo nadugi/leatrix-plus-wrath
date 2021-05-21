@@ -1,6 +1,7 @@
-2.5.33.alpha.3 - 20th May 2021
+2.5.33 - 21st May 2021
 - The 'Stand and dismount' option is now called 'Dismount automatically'.  Most of what it did before is now included in the game.  So now, the option will dismount you when you select a flight location or when you attempt to cast a spell regardless of whether you have enough resource to cast or whether the target is in range.
 - Fixed an issue with 'Recent chat window' which caused a Lua error when attempting to show Battle.net messages.
+- The 'Remove raid restrictions' option has been removed since it's not needed for Burning Crusade Classic.
 
 2.5.32 - 17th May 2021
 - Welcome to Burning Crusade Classic.
