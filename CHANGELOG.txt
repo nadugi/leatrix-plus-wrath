@@ -1,5 +1,5 @@
-2.5.34 - 23rd May 2021
-- Maintenance update.
+2.5.35.alpha.1 - 23rd May 2021
+- The 'Dismount automatically' option ('System') will no longer dismount you if you are out of range of your target.
 
 2.5.33 - 21st May 2021
 - The 'Stand and dismount' option is now called 'Dismount automatically'.  Most of what it did before is now included in the game.  So now, the option will dismount you when you select a flight location or when you attempt to cast a spell regardless of whether you have enough resource to cast or whether the target is in range.
