@@ -1,3 +1,6 @@
+2.5.38.alpha.1 - 26th May 2021
+- The 'Manage widget' configuration panel will now show a warning if Titan Panel is preventing the widget frame position from saving correctly.. 
+
 2.5.37 - 26th May 2021
 - The 'Dismount automatically' option ('System') will no longer dismount you if you are out of range of your target.
 
