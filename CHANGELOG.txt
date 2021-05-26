@@ -1,4 +1,4 @@
-2.5.35.alpha.1 - 23rd May 2021
+2.5.37 - 26th May 2021
 - The 'Dismount automatically' option ('System') will no longer dismount you if you are out of range of your target.
 
 2.5.33 - 21st May 2021
