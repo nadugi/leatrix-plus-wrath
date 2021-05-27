@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.38.alpha.1 (26th May 2021)
+-- 	Leatrix Plus 2.5.38.alpha.2 (27th May 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.38.alpha.1"
+	LeaPlusLC["AddonVer"] = "2.5.38.alpha.2"
 	LeaPlusLC["RestartReq"] = nil
 
 	-- Get locale table
@@ -1108,7 +1108,7 @@
 						end
 						-- Ignore specific NPCs for accepting quests only
 						if actionType == "Accept" then
-							-- Escort quests
+							-- Classic escort quests
 							if npcID == "467" -- The Defias Traitor (The Defias Brotherhood)
 							or npcID == "349" -- Corporal Keeshan (Missing In Action)
 							or npcID == "1379" -- Miran (Protecting the Shipment)
@@ -1164,6 +1164,25 @@
 							or npcID == "13716" -- Celebras the Redeemed (The Scepter of Celebras)
 							or npcID == "19401" -- Wing Commander Brack (Return to the Abyssal Shelf) (Horde)
 							or npcID == "20235" -- Gryphoneer Windbellow (Return to the Abyssal Shelf) (Alliance)
+							-- BCC escort quests
+							or npcID == "16295" -- Ranger Lilatha (Escape from the Catacombs)
+							or npcID == "17238" -- Anchorite Truuen (Tomb of the Lightbringer)
+							or npcID == "17312" -- Magwin (A Cry For Help)
+							or npcID == "17877" -- Fhwoor (Fhwoor Smash!)
+							or npcID == "17969" -- Kayra Longmane (Escape from Umbrafen)
+							or npcID == "18210" -- Mag'har Captive (The Totem of Kar'dash, Horde)
+							or npcID == "18209" -- Kurenai Captive (The Totem of Kar'dash, Alliance)
+							or npcID == "18760" -- Isla Starmane (Escape from Firewing Point!)
+							or npcID == "19589" -- Maxx A. Million Mk. V (Mark V is Alive!)
+							or npcID == "19671" -- Cryo-Engineer Sha'heen (Someone Else's Hard Work Pays Off)
+							or npcID == "20281" -- Drijya (Sabotage the Warp-Gate!)
+							or npcID == "20415" -- Bessy (When the Cows Come Home)
+							or npcID == "20482" -- Image of Commander Ameer (Delivering the Message)
+							or npcID == "20763" -- Captured Protectorate Vanguard (Escape from the Staging Grounds)
+							or npcID == "21027" -- Earthmender Wilda (Escape from Coilskar Cistern)
+							or npcID == "22424" -- Skywing (Skywing)
+							or npcID == "22458" -- Chief Archaeologist Letoll (Digging Through Bones)
+							or npcID == "23383" -- Skyguard Prisoner (Escape from Skettis)
 							then
 								return true
 							end
