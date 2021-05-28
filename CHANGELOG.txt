@@ -1,7 +1,7 @@
-2.5.38.alpha.3 - 27th May 2021
+2.5.38.alpha.4 - 28th May 2021
 - For 'Automate quests' ('Automation'), quests from BCC escort quest givers will not be accepted automatically.  This applies to Ranger Lilatha (Escape from the Catacombs), Anchorite Truuen (Tomb of the Lightbringer), Magwin (A Cry For Help), Fhwoor (Fhwoor Smash!), Kayra Longmane (Escape from Umbrafen), Mag'har Captive (The Totem of Kar'dash, Horde), Kurenai Captive (The Totem of Kar'dash, Alliance), Isla Starmane (Escape from Firewing Point!), Maxx A. Million Mk. V (Mark V is Alive!), Cryo-Engineer Sha'heen (Someone Else's Hard Work Pays Off), Drijya (Sabotage the Warp-Gate!), Bessy (When the Cows Come Home), Image of Commander Ameer (Delivering the Message), Captured Protectorate Vanguard (Escape from the Staging Grounds), Earthmender Wilda (Escape from Coilskar Cistern), Skywing (Skywing), Chief Archaeologist Letoll (Digging Through Bones) and Skyguard Prisoner (Escape from Skettis).  Many thanks to drejjmit for supplying the list.
 - The 'Manage widget' configuration panel will now show a warning if Titan Panel is preventing the widget frame position from saving correctly.. 
-- The 'Dismount automatically' option ('System') will now dismount you when you talk to a flight master so that you are already dismounted and ready to go the moment you select a flight destination.
+- The 'Dismount automatically' option ('System') is now called 'Dismount me'.  It now has a configuration panel so you can set which dismount rules you want to use including a new setting that dismounts you when you instruct a flight master to open the flight map.
 
 2.5.37 - 26th May 2021
 - The 'Dismount automatically' option ('System') will no longer dismount you if you are out of range of your target.
