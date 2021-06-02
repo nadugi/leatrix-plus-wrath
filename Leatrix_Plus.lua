@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.38.alpha.4 (28th May 2021)
+-- 	Leatrix Plus 2.5.38 (2nd June 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.38.alpha.4"
+	LeaPlusLC["AddonVer"] = "2.5.38"
 	LeaPlusLC["RestartReq"] = nil
 
 	-- Get locale table
@@ -3990,13 +3990,11 @@
 			-- Create configuration panel
 			local DismountFrame = LeaPlusLC:CreatePanel("Dismount me", "DismountFrame")
 
-			LeaPlusLC:MakeTx(DismountFrame, "Dismount on error", 16, -72)
+			LeaPlusLC:MakeTx(DismountFrame, "Settings", 16, -72)
 			LeaPlusLC:MakeCB(DismountFrame, "DismountNoResource", "Dismount when not enough rage, mana or energy", 16, -92, false, "If checked, you will be dismounted when you attempt to cast a spell but don't have the rage, mana or energy to cast it.")
 			LeaPlusLC:MakeCB(DismountFrame, "DismountNoMoving", "Dismount when casting a spell while moving", 16, -112, false, "If checked, you will be dismounted when you attempt to cast a non-instant cast spell while moving.")
-		
-			LeaPlusLC:MakeTx(DismountFrame, "Dismount on flight points", 16, -152)
-			LeaPlusLC:MakeCB(DismountFrame, "DismountNoTaxi", "Dismount when the flight map opens", 16, -172, false, "If checked, you will be dismounted when you instruct a flight master to open the flight map.")
-			LeaPlusLC:MakeCB(DismountFrame, "DismountFlightDest", "Dismount when clicking a flight destination", 16, -192, false, "If checked, you will be dismounted when you click a flight destination.")
+			LeaPlusLC:MakeCB(DismountFrame, "DismountNoTaxi", "Dismount when the flight map opens", 16, -132, false, "If checked, you will be dismounted when you instruct a flight master to open the flight map.")
+			LeaPlusLC:MakeCB(DismountFrame, "DismountFlightDest", "Dismount when clicking a flight destination", 16, -152, false, "If checked, you will be dismounted when you click a flight destination.")
 
 			-- Help button hidden
 			DismountFrame.h.tiptext = L["The game will dismount you if you successfully cast a spell without addons.  These settings let you set some additional dismount rules."]
