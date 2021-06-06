@@ -1,4 +1,5 @@
-2.5.39.alpha.1 - 3rd June 2021
+2.5.39.alpha.2 - 6th June 2021
+- For 'Automate quests' ('Automation'), quests from Archmage Leryda (The Violet Eye) will no longer be selected, accepted or turned-in automatically.
 - Updated translations.
 
 2.5.38 - 2nd June 2021
