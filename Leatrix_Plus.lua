@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.39 (6th June 2021)
+-- 	Leatrix Plus 2.5.40.alpha.1 (9th June 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.39"
+	LeaPlusLC["AddonVer"] = "2.5.40.alpha.1"
 	LeaPlusLC["RestartReq"] = nil
 
 	-- Get locale table
@@ -3080,10 +3080,9 @@
 				end
 				if self.portrait then
 					if UnitIsPlayer(self.unit) then
-						local t = CLASS_ICON_TCOORDS[select(2, UnitClass(self.unit))]
-						if t then
-							self.portrait:SetTexture(x)
-							self.portrait:SetTexCoord(unpack(t))
+						local void, class = UnitClass(self.unit)
+						if class then
+							self.portrait:SetTexture("Interface\\AddOns\\Leatrix_Plus\\Leatrix_Plus_Class_" .. (class))
 						end
 					else
 						self.portrait:SetTexCoord(0, 1, 0, 1)
