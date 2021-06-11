@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.42.alpha.1 (10th June 2021)
+-- 	Leatrix Plus 2.5.42.alpha.2 (11th June 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.42.alpha.1"
+	LeaPlusLC["AddonVer"] = "2.5.42.alpha.2"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -8004,20 +8004,18 @@
 
 		if event == "CHAT_MSG_WHISPER" or event == "CHAT_MSG_BN_WHISPER" then
 			if (not UnitExists("party1") or UnitIsGroupLeader("player") or UnitIsGroupAssistant("player")) and strlower(strtrim(arg1)) == strlower(LeaPlusLC["InvKey"]) then
-				if not LeaPlusLC:IsInLFGQueue() then
-					if event == "CHAT_MSG_WHISPER" then
-						if LeaPlusLC:FriendCheck(strsplit("-", arg2, 2)) or LeaPlusLC["InviteFriendsOnly"] == "Off" then
-							InviteUnit(arg2)
-						end
-					elseif event == "CHAT_MSG_BN_WHISPER" then
-						local presenceID = select(11, ...)
-						if presenceID and BNIsFriend(presenceID) then
-							local index = BNGetFriendIndex(presenceID);
-							if index then
-								local presenceID, presenceName, battleTag, isBattleTagPresence, toonName, toonID = BNGetFriendInfo(index);
-								if toonID then
-									BNInviteFriend(toonID);
-								end
+				if event == "CHAT_MSG_WHISPER" then
+					if LeaPlusLC:FriendCheck(strsplit("-", arg2, 2)) or LeaPlusLC["InviteFriendsOnly"] == "Off" then
+						InviteUnit(arg2)
+					end
+				elseif event == "CHAT_MSG_BN_WHISPER" then
+					local presenceID = select(11, ...)
+					if presenceID and BNIsFriend(presenceID) then
+						local index = BNGetFriendIndex(presenceID);
+						if index then
+							local presenceID, presenceName, battleTag, isBattleTagPresence, toonName, toonID = BNGetFriendInfo(index);
+							if toonID then
+								BNInviteFriend(toonID);
 							end
 						end
 					end

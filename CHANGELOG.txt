@@ -1,4 +1,5 @@
-2.5.42.alpha.1 - 10th June 2021
+2.5.42.alpha.2 - 11th June 2021
+- The 'Invite from whispers' option will now work even if you are queued for a battleground.
 - Removed the 'Class icon portraits' option ('Frames').  There are standalone addons available for this feature if you need it.
 
 2.5.41 - 9th June 2021
