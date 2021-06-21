@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.43.alpha.1 (21st June 2021)
+-- 	Leatrix Plus 2.5.43.alpha.2 (21st June 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.43.alpha.1"
+	LeaPlusLC["AddonVer"] = "2.5.43.alpha.2"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -995,16 +995,14 @@
 				if GetTime() - tDelay >= 0.3 then
 					tDelay = GetTime()
  					if GetCVarBool("autoLootDefault") ~= IsModifiedClick("AUTOLOOTTOGGLE") then
-						if GetLootMethod() == "master" then
+						local lootMethod = GetLootMethod()
+						if lootMethod == "master" then
 							-- Master loot is enabled so fast loot if item should be auto looted
 							local lootThreshold = GetLootThreshold()
 							for i = GetNumLootItems(), 1, -1 do
-								local lootIcon, lootName, lootQuantity, currencyID, lootQuality, locked = GetLootSlotInfo(i)
-								local slotType = GetLootSlotType(i)
-								if not grouped or slotType == LOOT_SLOT_ITEM then
-									if lootQuality and lootThreshold and lootQuality < lootThreshold and not locked then
-										LootSlot(i)
-									end
+								local lootIcon, lootName, lootQuantity, currencyID, lootQuality = GetLootSlotInfo(i)
+								if lootQuality and lootThreshold and lootQuality < lootThreshold then
+									LootSlot(i)
 								end
 							end
 						else
@@ -1013,10 +1011,18 @@
 							for i = GetNumLootItems(), 1, -1 do
 								local lootIcon, lootName, lootQuantity, currencyID, lootQuality, locked = GetLootSlotInfo(i)
 								local slotType = GetLootSlotType(i)
-								if not grouped or slotType == LOOT_SLOT_ITEM then
-									if lootName and not locked then
+								if lootName and not locked then
+									if not grouped then 
 										LootSlot(i)
-									end
+									else
+										if lootMethod == "freeforall" then
+											if slotType == LOOT_SLOT_ITEM then
+												LootSlot(i)
+											end
+										else
+											LootSlot(i)
+										end
+									end					
 								end
 							end
 						end

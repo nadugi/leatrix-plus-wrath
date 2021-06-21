@@ -1,4 +1,4 @@
-2.5.43.alpha.1 - 21st June 2021
+2.5.43.alpha.2 - 21st June 2021
 - Updated code for 'Faster auto loot' ('System').
 
 2.5.42 - 16th June 2021
