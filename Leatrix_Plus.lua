@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.42 (16th June 2021)
+-- 	Leatrix Plus 2.5.43.alpha.1 (21st June 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.42"
+	LeaPlusLC["AddonVer"] = "2.5.43.alpha.1"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -999,15 +999,25 @@
 							-- Master loot is enabled so fast loot if item should be auto looted
 							local lootThreshold = GetLootThreshold()
 							for i = GetNumLootItems(), 1, -1 do
-								local lootIcon, lootName, lootQuantity, currencyID, lootQuality = GetLootSlotInfo(i)
-								if lootQuality and lootThreshold and lootQuality < lootThreshold then
-									LootSlot(i)
+								local lootIcon, lootName, lootQuantity, currencyID, lootQuality, locked = GetLootSlotInfo(i)
+								local slotType = GetLootSlotType(i)
+								if not grouped or slotType == LOOT_SLOT_ITEM then
+									if lootQuality and lootThreshold and lootQuality < lootThreshold and not locked then
+										LootSlot(i)
+									end
 								end
 							end
 						else
 							-- Master loot is disabled so fast loot regardless
+							local grouped = IsInGroup()
 							for i = GetNumLootItems(), 1, -1 do
-								LootSlot(i)
+								local lootIcon, lootName, lootQuantity, currencyID, lootQuality, locked = GetLootSlotInfo(i)
+								local slotType = GetLootSlotType(i)
+								if not grouped or slotType == LOOT_SLOT_ITEM then
+									if lootName and not locked then
+										LootSlot(i)
+									end
+								end
 							end
 						end
 						tDelay = GetTime()
