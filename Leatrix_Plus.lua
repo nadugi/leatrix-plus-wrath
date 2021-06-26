@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.43 (24th June 2021)
+-- 	Leatrix Plus 2.5.44.alpha.1 (26th June 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.43"
+	LeaPlusLC["AddonVer"] = "2.5.44.alpha.1"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -3481,13 +3481,32 @@
 				end
 
 				-- Classic Profession Filter addon fixes
-				if IsAddOnLoaded("ClassicProfessionFilter") and TradeSkillFrame.SearchBox and TradeSkillFrame.HaveMats and TradeSkillFrame.HaveMats.text then
+				if IsAddOnLoaded("ClassicProfessionFilter") and TradeSkillFrame.SearchBox and TradeSkillFrame.HaveMats and TradeSkillFrame.HaveMats.text and TradeSkillFrame.SearchMats and TradeSkillFrame.SearchMats.text then
 					TradeSkillFrame.SearchBox:ClearAllPoints()
-					TradeSkillFrame.SearchBox:SetPoint("LEFT", TradeSkillRankFrame, "RIGHT", 20, -12)
+					TradeSkillFrame.SearchBox:SetPoint("LEFT", TradeSkillRankFrame, "RIGHT", 20, -10)
+
 					TradeSkillFrame.HaveMats:ClearAllPoints()
-					TradeSkillFrame.HaveMats:SetPoint("LEFT", TradeSkillFrame.SearchBox, "RIGHT", 10, 0)
+					TradeSkillFrame.HaveMats:SetPoint("LEFT", TradeSkillFrame.SearchBox, "RIGHT", 10, 8)
 					TradeSkillFrame.HaveMats.text:SetText("Have Mats?")
 					TradeSkillFrame.HaveMats:SetHitRectInsets(0, -TradeSkillFrame.HaveMats.text:GetStringWidth() + 4, 0, 0)
+					TradeSkillFrame.HaveMats.text:SetJustifyH("LEFT")
+					TradeSkillFrame.HaveMats.text:SetWordWrap(false)
+					if TradeSkillFrame.HaveMats.text:GetWidth() > 80 then
+						TradeSkillFrame.HaveMats.text:SetWidth(80)
+						TradeSkillFrame.HaveMats:SetHitRectInsets(0, -80 + 4, 0, 0)
+					end
+
+					TradeSkillFrame.SearchMats:ClearAllPoints()
+					TradeSkillFrame.SearchMats:SetPoint("BOTTOMLEFT", TradeSkillFrame.HaveMats, "BOTTOMLEFT", 0, -16)
+					TradeSkillFrame.SearchMats.text:SetText(L["Search Mats?"])
+					TradeSkillFrame.SearchMats:SetHitRectInsets(0, -TradeSkillFrame.SearchMats.text:GetStringWidth() + 2, 0, 0)
+					TradeSkillFrame.SearchMats.text:SetJustifyH("LEFT")
+					TradeSkillFrame.SearchMats.text:SetWordWrap(false)
+					if TradeSkillFrame.SearchMats.text:GetWidth() > 80 then
+						TradeSkillFrame.SearchMats.text:SetWidth(80)
+						TradeSkillFrame.SearchMats:SetHitRectInsets(0, -80 + 4, 0, 0)
+					end
+
 				end
 
 			end

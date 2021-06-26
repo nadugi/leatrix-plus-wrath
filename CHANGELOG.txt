@@ -1,3 +1,6 @@
+2.5.44.alpha.1 - 26th June 2021
+- Updated Classic Profession Filter addon compatibility fixes for 'Enhance professions' ('Interface') to support the latest version.  If you use Classic Profession Filter addon, you need to update it.
+
 2.5.43 - 24th June 2021
 - Fixed a situational issue with 'Faster auto loot' ('System') which caused the loot window to sometimes remain open if you are in a group using free for all loot with multiple group members looting the same corpse at the same time.
 - Updated the tooltip for 'Invite from whispers' ('Social') to highlight that an invite will not sent in response a Battle.net message if the invite recipient is showing offline.
