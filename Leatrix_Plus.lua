@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.44.alpha.1 (26th June 2021)
+-- 	Leatrix Plus 2.5.44.alpha.2 (26th June 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.44.alpha.1"
+	LeaPlusLC["AddonVer"] = "2.5.44.alpha.2"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -3487,7 +3487,7 @@
 
 					TradeSkillFrame.HaveMats:ClearAllPoints()
 					TradeSkillFrame.HaveMats:SetPoint("LEFT", TradeSkillFrame.SearchBox, "RIGHT", 10, 8)
-					TradeSkillFrame.HaveMats.text:SetText("Have Mats?")
+					TradeSkillFrame.HaveMats.text:SetText(L["Have Mats?"])
 					TradeSkillFrame.HaveMats:SetHitRectInsets(0, -TradeSkillFrame.HaveMats.text:GetStringWidth() + 4, 0, 0)
 					TradeSkillFrame.HaveMats.text:SetJustifyH("LEFT")
 					TradeSkillFrame.HaveMats.text:SetWordWrap(false)
