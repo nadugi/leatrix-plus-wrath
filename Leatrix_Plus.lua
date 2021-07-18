@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.46 (13th July 2021)
+-- 	Leatrix Plus 2.5.47.alpha.1 (18th July 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.46"
+	LeaPlusLC["AddonVer"] = "2.5.47.alpha.1"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -1352,6 +1352,24 @@
 					elseif title == L["Frostmaul E'ko"] then
 						-- Requires 3 Ice Thistle E'ko
 						if GetItemCount(12436) >= 3 then return true end
+					elseif title == L["Marks of Kil'jaeden"] or title == L["More Marks of Kil'jaeden"] then
+						-- Requires 10 More Marks of Kil'jaeden
+						if GetItemCount(29425) >= 10 then return true end
+					elseif title == L["Single Mark of Sargeras"] then
+						-- Requires 1 Marks of Sargeras (if more than 10, leave for More Marks of Sargeras)
+						if GetItemCount(30809) > 1 and GetItemCount(30809) < 10 then return true end
+					elseif title == L["More Marks of Sargeras"] then
+						-- Requires 10 Marks of Sargeras
+						if GetItemCount(30809) >= 10 then return true end
+					elseif title == L["Firewing Signets"] or title == L["More Firewing Signets"] then
+						-- Requires 10 Firewing Signets
+						if GetItemCount(29426) >= 10 then return true end
+					elseif title == L["Single Sunfury Signet"] then
+						-- Requires 1 Sunfury Signet (if more than 10, leave for More Sunfury Signets)
+						if GetItemCount(30810) > 1 and GetItemCount(30810) < 10 then return true end
+					elseif title == L["More Sunfury Signets"] then
+						-- Requires 10 Sunfury Signets
+						if GetItemCount(30810) >= 10 then return true end
 
 					else return true
 					end
