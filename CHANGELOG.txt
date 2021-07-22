@@ -1,4 +1,4 @@
-2.5.47.alpha.2 - 18th July 2021
+2.5.47 - 22nd July 2021
 - Improved quest automation for Aldor/Scryer repeatable reputation quests in Shattrath.
 
 2.5.44 - 30th June 2021
