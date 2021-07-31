@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.47 (22nd July 2021)
+-- 	Leatrix Plus 2.5.48.alpha.1 (31st July 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.47"
+	LeaPlusLC["AddonVer"] = "2.5.48.alpha.1"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -636,6 +636,34 @@
 
 				},
 
+				-- Gyrocopters
+				["MuteGyrocopters"] = {
+
+					-- sound/creature/gyrocopter/
+					"gyrocopterfly.ogg#551390", 
+					"gyrocopterflyidle.ogg#551398", 
+					"gyrocopterflyup.ogg#551389", 
+					"gyrocoptergearshift1.ogg#551384", 
+					"gyrocoptergearshift2.ogg#551391", 
+					"gyrocoptergearshift3.ogg#551387", 
+					"gyrocopterjumpend.ogg#551396", 
+					"gyrocopterjumpstart.ogg#551399", 
+					"gyrocopterrun.ogg#551386", 
+					"gyrocoptershuffleleftorright1.ogg#551385", 
+					"gyrocoptershuffleleftorright2.ogg#551382", 
+					"gyrocoptershuffleleftorright3.ogg#551392", 
+					"gyrocopterstallinair.ogg#551395", 
+					"gyrocopterstand.ogg#551383", 
+					"gyrocopterstandvar1_a.ogg#551388", 
+					"gyrocopterstandvar1_b.ogg#551397", 
+					"gyrocopterstandvar1_bnew.ogg#551400", 
+					"gyrocopterwalk.ogg#551401", 
+
+					-- sound/spells/
+					"summongyrocopter.ogg#568252", 
+
+				},
+
 			}
 
 			-- Give table file level scope (its used during logout and for wipe and admin commands)
@@ -661,6 +689,9 @@
 			LeaPlusLC:MakeCB(SoundPanel, "MuteTrains", "Trains", 16, -132, false, "If checked, train sounds will be muted.")
 			LeaPlusLC:MakeCB(SoundPanel, "MuteEvents", "Events", 16, -152, false, "If checked, holiday event sounds will be muted.|n|nThis applies to Headless Horseman.")
 			LeaPlusLC:MakeCB(SoundPanel, "MuteReady", "Ready", 16, -172, false, "If checked, the ready check sound will be muted.")
+
+			LeaPlusLC:MakeTx(SoundPanel, "Mounts", 140, -72)
+			LeaPlusLC:MakeCB(SoundPanel, "MuteGyrocopters", "Gyrocopters", 140, -92, false, "If checked, gyrocopters will be muted.|n|nThis applies to the engineering flying machine mounts.")
 
 			-- Set click width for sounds checkboxes
 			for k, v in pairs(muteTable) do
