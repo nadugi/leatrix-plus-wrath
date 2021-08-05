@@ -1,5 +1,5 @@
-2.5.48.alpha.1 - 31st July 2021
-- Added 'Gyrocopters' to 'Mute game sounds' ('System').
+2.5.48 - 5th August 2021
+- Added 'Gyrocopters' to 'Mute game sounds' ('System').  This includes the engineering flying machine mounts.
 
 2.5.47 - 22nd July 2021
 - Improved quest automation for Aldor/Scryer repeatable reputation quests in Shattrath.
