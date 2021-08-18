@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.48 (5th August 2021)
+-- 	Leatrix Plus 2.5.49 (18th August 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.48"
+	LeaPlusLC["AddonVer"] = "2.5.49"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
