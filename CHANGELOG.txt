@@ -1,5 +1,5 @@
-2.5.51.alpha.2 - 19th August 2021
-- Maintenance update.
+2.5.51 - 19th August 2021
+- Fixed issue caused by malformed translations.
 
 2.5.48 - 5th August 2021
 - Added 'Gyrocopters' to 'Mute game sounds' ('System').  This includes the engineering flying machine mounts.
