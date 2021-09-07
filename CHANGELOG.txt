@@ -1,5 +1,5 @@
-2.5.54 - 27th August 2021
-- Maintenance update.
+2.5.55.alpha.1 - 7th September 2021
+- Added guild bank support for 'Repair automatically ('Automation').
 
 2.5.53 - 19th August 2021
 - Fixed issue caused by malformed translations.

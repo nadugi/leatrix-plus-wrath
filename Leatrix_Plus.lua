@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.54 (27th August 2021)
+-- 	Leatrix Plus 2.5.55.alpha.1 (7 September 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.54"
+	LeaPlusLC["AddonVer"] = "2.5.55.alpha.1"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -355,6 +355,7 @@
 --	Set lock state for configuration buttons
 	function LeaPlusLC:SetDim()
 		LeaPlusLC:LockOption("AutomateQuests", "AutomateQuestsBtn", false)			-- Automate quests
+		LeaPlusLC:LockOption("AutoRepairGear", "AutoRepairBtn", false)				-- Repair automatically
 		LeaPlusLC:LockOption("InviteFromWhisper", "InvWhisperBtn", false)			-- Invite from whispers
 		LeaPlusLC:LockOption("MailFontChange", "MailTextBtn", true)					-- Resize mail text
 		LeaPlusLC:LockOption("QuestFontChange", "QuestTextBtn", true)				-- Resize quest text
@@ -1732,11 +1733,22 @@
 					-- Process repair
 					local RepairCost, CanRepair = GetRepairAllCost()
 					if CanRepair then -- If merchant is offering repair
-						if GetMoney() >= RepairCost then
+						if LeaPlusLC["AutoRepairGuildFunds"] == "On" and IsInGuild() then
+							-- Guilded character and guild repair option is enabled
+							if CanGuildBankRepair() then
+								-- Character has permission to repair so try guild funds but fallback on character funds (if daily gold limit is reached)
+								RepairAllItems(1)
+								RepairAllItems()
+							else
+								-- Character does not have permission to repair so use character funds
+								RepairAllItems()
+							end
+						else
+							-- Unguilded character or guild repair option is disabled
 							RepairAllItems()
-							-- Show cost summary
-							LeaPlusLC:Print(L["Repaired for"] .. " " .. GetCoinText(RepairCost) .. ".")
 						end
+						-- Show cost summary
+						LeaPlusLC:Print(L["Repaired for"] .. " " .. GetCoinText(RepairCost) .. ".")
 					end
 				end
 			end
@@ -1759,6 +1771,43 @@
 
 			-- Event handler
 			RepairFrame:SetScript("OnEvent", RepairFunc)
+
+			-- Create configuration panel
+			local RepairPanel = LeaPlusLC:CreatePanel("Repair automatically", "RepairPanel")
+
+			LeaPlusLC:MakeTx(RepairPanel, "Settings", 16, -72)
+			LeaPlusLC:MakeCB(RepairPanel, "AutoRepairGuildFunds", "Repair using guild funds if available", 16, -92, false, "If checked, repair costs will be taken from guild funds for characters that are guilded and have permission to repair.")
+
+			-- Help button hidden
+			RepairPanel.h:Hide()
+
+			-- Back button handler
+			RepairPanel.b:SetScript("OnClick", function() 
+				RepairPanel:Hide(); LeaPlusLC["PageF"]:Show(); LeaPlusLC["Page1"]:Show();
+				return
+			end)
+
+			-- Reset button handler
+			RepairPanel.r:SetScript("OnClick", function()
+
+				-- Reset checkboxes
+				LeaPlusLC["AutoRepairGuildFunds"] = "On"
+
+				-- Refresh panel
+				RepairPanel:Hide(); RepairPanel:Show()
+
+			end)
+
+			-- Show panal when options panel button is clicked
+			LeaPlusCB["AutoRepairBtn"]:SetScript("OnClick", function()
+				if IsShiftKeyDown() and IsControlKeyDown() then
+					-- Preset profile
+					LeaPlusLC["AutoRepairGuildFunds"] = "On"
+				else
+					RepairPanel:Show()
+					LeaPlusLC:HideFrames()
+				end
+			end)
 
 		end
 
@@ -8331,6 +8380,7 @@
 
 				LeaPlusLC:LoadVarChk("AutoSellJunk", "Off")					-- Sell junk automatically
 				LeaPlusLC:LoadVarChk("AutoRepairGear", "Off")				-- Repair automatically
+				LeaPlusLC:LoadVarChk("AutoRepairGuildFunds", "On")			-- Repair using guild funds
 
 				-- Social
 				LeaPlusLC:LoadVarChk("NoDuelRequests", "Off")				-- Block duels
@@ -8535,6 +8585,7 @@
 
 			LeaPlusDB["AutoSellJunk"] 			= LeaPlusLC["AutoSellJunk"]
 			LeaPlusDB["AutoRepairGear"] 		= LeaPlusLC["AutoRepairGear"]
+			LeaPlusDB["AutoRepairGuildFunds"] 	= LeaPlusLC["AutoRepairGuildFunds"]
 
 			-- Social
 			LeaPlusDB["NoDuelRequests"] 		= LeaPlusLC["NoDuelRequests"]
@@ -10430,6 +10481,7 @@
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "AutoRepairGear"			, 	"Repair automatically"			,	340, -112, 	false,	"If checked, your gear will be repaired automatically when you visit a suitable merchant.|n|nYou can hold the shift key down when you talk to a merchant to override this setting.")
 
  	LeaPlusLC:CfgBtn("AutomateQuestsBtn", LeaPlusCB["AutomateQuests"])
+ 	LeaPlusLC:CfgBtn("AutoRepairBtn", LeaPlusCB["AutoRepairGear"])
 
 ----------------------------------------------------------------------
 -- 	LC2: Social
