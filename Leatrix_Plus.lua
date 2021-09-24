@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.57 (23rd September 2021)
+-- 	Leatrix Plus 2.5.58.alpha.1 (23rd September 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.57"
+	LeaPlusLC["AddonVer"] = "2.5.58.alpha.1"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -1135,6 +1135,8 @@
 					if npcID then
 						-- Ignore specific NPCs for selecting, accepting and turning-in quests (required if automation has consequences)
 						if npcID == "15192"	-- Anachronos (Caverns of Time)
+						or npcID == "19935" -- Soridormi (The Scale of Sands, Caverns of Time)
+						or npcID == "19936" -- Arazmodu (The Scale of Sands, Caverns of Time)
 						or npcID == "3430" 	-- Mangletooth (Blood Shard quests, Barrens)
 						or npcID == "14828" -- Gelvas Grimegate (Darkmoon Faire Ticket Redemption, Elwynn Forest and Mulgore)
 						or npcID == "14921" -- Rin'wosho the Trader (Zul'Gurub Isle, Stranglethorn Vale)

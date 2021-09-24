@@ -1,5 +1,5 @@
-2.5.57 - 23rd September 2021
-- Maintenance update.
+2.5.58.alpha.1 - 24th September 2021
+- Quests from Soridormi and Arazmodu (The Scale of the Sands, Caverns of Time) will no longer be selected, accepted or turned-in automatically.
 
 2.5.55 - 16th September 2021
 - Updated for World of Warcraft patch 2.5.2.
