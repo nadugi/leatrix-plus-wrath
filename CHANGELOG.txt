@@ -1,4 +1,4 @@
-2.5.58.alpha.1 - 24th September 2021
+2.5.58 - 29th September 2021
 - Quests from Soridormi and Arazmodu (The Scale of the Sands, Caverns of Time) will no longer be selected, accepted or turned-in automatically.
 
 2.5.55 - 16th September 2021
