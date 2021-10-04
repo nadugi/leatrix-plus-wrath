@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.58 (29th September 2021)
+-- 	Leatrix Plus 2.5.59.alpha.1 (4th October 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.58"
+	LeaPlusLC["AddonVer"] = "2.5.59.alpha.1"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -4110,7 +4110,13 @@
 				or msg == ERR_OUT_OF_ENERGY and LeaPlusLC["DismountNoResource"] == "On"
 				or msg == SPELL_FAILED_MOVING and LeaPlusLC["DismountNoMoving"] == "On"
 				or msg == ERR_TAXIPLAYERALREADYMOUNTED and LeaPlusLC["DismountFlightDest"] == "On"
+				or msg == ERR_TAXIPLAYERSHAPESHIFTED and LeaPlusLC["DismountFlightDest"] == "On"
 				then
+					local void, class = UnitClass("player")
+					if class == "SHAMAN" and GetShapeshiftFormID() then
+						-- Cancel Ghost Wolf
+						RunScript('CancelShapeshiftForm()')
+					end
 					if IsMounted() then
 						Dismount()
 						UIErrorsFrame:Clear()
@@ -4121,7 +4127,14 @@
 			-- Dismount when flight point map is opened
 			local taxiFrame = CreateFrame("FRAME")
 			taxiFrame:RegisterEvent("TAXIMAP_OPENED")
-			taxiFrame:SetScript("OnEvent", function() if IsMounted() then Dismount() end end)
+			taxiFrame:SetScript("OnEvent", function()
+				local void, class = UnitClass("player")
+				if class == "SHAMAN" and GetShapeshiftFormID() then
+					-- Cancel Ghost Wolf
+					RunScript('CancelShapeshiftForm()')
+				end
+				if IsMounted() then Dismount() end
+			end)
 
 			-- Create configuration panel
 			local DismountFrame = LeaPlusLC:CreatePanel("Dismount me", "DismountFrame")

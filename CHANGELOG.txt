@@ -1,3 +1,6 @@
+2.5.59.alpha.1 - 4th October 2021
+- The 'Dismount me' option ('System') will now work with Shaman Ghost Form.
+
 2.5.58 - 29th September 2021
 - Quests from Soridormi and Arazmodu (The Scale of the Sands, Caverns of Time) will no longer be selected, accepted or turned-in automatically.
 
