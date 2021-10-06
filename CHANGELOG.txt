@@ -1,4 +1,4 @@
-2.5.59.alpha.3 - 6th October 2021
+2.5.59.alpha.4 - 6th October 2021
 - The 'Dismount me' option ('System') will now work with Shaman Ghost Form.  The setting to dismount when selecting a flight destination has been removed as that functionality is now built into the game.
 - The 'Release in PvP' option ('Automation') now has a configuration panel that lets you exclude Alterac Valley.
 
