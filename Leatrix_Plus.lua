@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.59.alpha.5 (7th October 2021)
+-- 	Leatrix Plus 2.5.59.alpha.6 (7th October 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.59.alpha.5"
+	LeaPlusLC["AddonVer"] = "2.5.59.alpha.6"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -3162,7 +3162,7 @@
 			LeaPlusLC:MakeCB(ReleasePanel, "AutoReleaseNoAV", "Exclude Alterac Valley", 16, -92, false, "If checked, you will not release automatically in Alterac Valley.")
 
 			LeaPlusLC:MakeTx(ReleasePanel, "Delay", 356, -72)
-			LeaPlusLC:MakeSL(ReleasePanel, "AutoReleaseDelay", "Drag to set the number of milliseconds before you are automatically released.", 200, 3000, 100, 356, -92, "%.0f")
+			LeaPlusLC:MakeSL(ReleasePanel, "AutoReleaseDelay", "Drag to set the number of milliseconds before you are automatically released.|n|nYou can hold down shift as the timer is ending to cancel the automatic release.", 200, 3000, 100, 356, -92, "%.0f")
 
 			-- Help button hidden
 			ReleasePanel.h:Hide()
@@ -3213,7 +3213,11 @@
 						C_Timer.After(delay, function()
 							local dialog = StaticPopup_Visible("DEATH")
 							if dialog then
-								StaticPopup_OnClick(_G[dialog], 1)
+								if IsShiftKeyDown() then
+									ActionStatus_DisplayMessage(L["Automatic Release Cancelled"], true)
+								else
+									StaticPopup_OnClick(_G[dialog], 1)
+								end
 							end
 						end)
 					end
