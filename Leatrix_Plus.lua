@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.59.alpha.6 (7th October 2021)
+-- 	Leatrix Plus 2.5.59.alpha.7 (7th October 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.59.alpha.6"
+	LeaPlusLC["AddonVer"] = "2.5.59.alpha.7"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -3204,7 +3204,7 @@
 					local InstStat, InstType = IsInInstance()
 					if InstStat and InstType == "pvp" then
 						-- Exclude specific maps
-						local mapID = WorldMapFrame.mapID or nil
+						local mapID = C_Map.GetBestMapForUnit("player") or nil
 						if mapID then
 							if mapID == 1459 and LeaPlusLC["AutoReleaseNoAV"] == "On" then return end -- Alterac Valley
 						end
