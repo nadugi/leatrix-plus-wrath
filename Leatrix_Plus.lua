@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.59.alpha.11 (10th October 2021)
+-- 	Leatrix Plus 2.5.59.alpha.12 (10th October 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.59.alpha.11"
+	LeaPlusLC["AddonVer"] = "2.5.59.alpha.12"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -4392,7 +4392,7 @@
 				end
 			end)
 
-			-- Druid cancel form button
+			-- Cancel form button
 			local void, class = UnitClass("player")
 			if class == "DRUID" or class == "SHAMAN" then
 
