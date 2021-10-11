@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.59.alpha.13 (11th October 2021)
+-- 	Leatrix Plus 2.5.59.alpha.14 (11th October 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.59.alpha.13"
+	LeaPlusLC["AddonVer"] = "2.5.59.alpha.14"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -4338,6 +4338,7 @@
 			LeaPlusLC:MakeCB(DismountFrame, "DismountNoResource", "Dismount when not enough rage, mana or energy", 16, -92, false, "If checked, you will be dismounted when you attempt to cast a spell but don't have the rage, mana or energy to cast it.")
 			LeaPlusLC:MakeCB(DismountFrame, "DismountNoMoving", "Dismount when casting a spell while moving", 16, -112, false, "If checked, you will be dismounted when you attempt to cast a non-instant cast spell while moving.")
 			LeaPlusLC:MakeCB(DismountFrame, "DismountNoTaxi", "Dismount when the flight map opens", 16, -132, false, "If checked, you will be dismounted when you instruct a flight master to open the flight map.")
+			LeaPlusLC:MakeCB(DismountFrame, "DismountShowFormBtn", "Show cancel form button on flight map", 16, -152, false, "If checked, a cancel form button will be shown on the flight map while you are playing as a shapeshifted druid or shaman.")
 
 			-- Help button hidden
 			DismountFrame.h.tiptext = L["The game will dismount you if you successfully cast a spell without addons.  These settings let you set some additional dismount rules."]
@@ -4368,6 +4369,7 @@
 				LeaPlusLC["DismountNoResource"] = "On"
 				LeaPlusLC["DismountNoMoving"] = "On"
 				LeaPlusLC["DismountNoTaxi"] = "On"
+				LeaPlusLC["DismountShowFormBtn"] = "On"
 
 				-- Update settings and configuration panel
 				SetDismount()
@@ -4382,6 +4384,7 @@
 					LeaPlusLC["DismountNoResource"] = "On"
 					LeaPlusLC["DismountNoMoving"] = "On"
 					LeaPlusLC["DismountNoTaxi"] = "On"
+					LeaPlusLC["DismountShowFormBtn"] = "On"
 					SetDismount()
 				else
 					DismountFrame:Show()
@@ -4389,12 +4392,12 @@
 				end
 			end)
 
-			-- Cancel form button
+			-- Druid cancel form button
 			local void, class = UnitClass("player")
 			if class == "DRUID" or class == "SHAMAN" then
 
 				-- Create button
-				local cancelFormBtn = CreateFrame("Button", nil, TaxiFrame, "SecureActionButtonTemplate")
+				local cancelFormBtn = CreateFrame("Button", nil, TaxiFrame, "InsecureActionButtonTemplate")
 				cancelFormBtn:SetAttribute("type", "macro")
 				cancelFormBtn:SetAttribute("macrotext", "/cancelform") 
 				cancelFormBtn:ClearAllPoints()
@@ -4403,6 +4406,42 @@
 				cancelFormBtn:SetNormalTexture("Interface\\ICONS\\Achievement_Character_Nightelf_Female")
 				cancelFormBtn:SetPushedTexture("Interface\\ICONS\\Achievement_Character_Nightelf_Female")
 				cancelFormBtn:SetHighlightTexture("Interface\\ICONS\\Achievement_Character_Nightelf_Female")
+
+				-- Button message
+				cancelFormBtn.f = cancelFormBtn:CreateFontString(nil, 'ARTWORK', 'GameFontNormal')
+				cancelFormBtn.f:SetHeight(32)
+				cancelFormBtn.f:SetPoint('RIGHT', cancelFormBtn, 'LEFT', -10, 0)
+				cancelFormBtn.f:SetText(L["Click to unshift"])
+
+				-- Toggle button when form changes
+				cancelFormBtn:SetScript("OnEvent", function()
+					local form = GetShapeshiftForm() or 0
+					if form ~= 0 then
+						if not cancelFormBtn:IsShown() then	cancelFormBtn:Show() end
+					else
+						cancelFormBtn:Hide()
+					end
+				end)
+
+				-- Function to set event and button status
+				local function SetShiftEvent()
+					if LeaPlusLC["DismountShowFormBtn"] == "On" then
+						cancelFormBtn:RegisterEvent("UPDATE_SHAPESHIFT_FORM")
+						local form = GetShapeshiftForm() or 0
+						if form ~= 0 then cancelFormBtn:Show() else cancelFormBtn:Hide() end
+					else
+						cancelFormBtn:UnregisterEvent("UPDATE_SHAPESHIFT_FORM")
+						cancelFormBtn:Hide()
+					end
+				end
+
+				-- Set button when option is clicked, when reset button is clicked, preset profile and on startup
+				LeaPlusCB["DismountShowFormBtn"]:HookScript("OnClick", SetShiftEvent)
+				DismountFrame.r:HookScript("OnClick", SetShiftEvent)
+				LeaPlusCB["DismountBtn"]:HookScript("OnClick", function()
+					if IsShiftKeyDown() and IsControlKeyDown() then	SetShiftEvent() end
+				end)
+				SetShiftEvent()
 
 			end
 
@@ -8751,6 +8790,7 @@
 				LeaPlusLC:LoadVarChk("DismountNoResource", "On")			-- Dismount on resource error
 				LeaPlusLC:LoadVarChk("DismountNoMoving", "On")				-- Dismount on moving
 				LeaPlusLC:LoadVarChk("DismountNoTaxi", "On")				-- Dismount on flight map open
+				LeaPlusLC:LoadVarChk("DismountShowFormBtn", "On")			-- Dismount cancel form button
 				LeaPlusLC:LoadVarChk("ShowVendorPrice", "Off")				-- Show vendor price
 				LeaPlusLC:LoadVarChk("CombatPlates", "Off")					-- Combat plates
 				LeaPlusLC:LoadVarChk("EasyItemDestroy", "Off")				-- Easy item destroy
@@ -8958,6 +8998,7 @@
 			LeaPlusDB["DismountNoResource"] 	= LeaPlusLC["DismountNoResource"]
 			LeaPlusDB["DismountNoMoving"] 		= LeaPlusLC["DismountNoMoving"]
 			LeaPlusDB["DismountNoTaxi"] 		= LeaPlusLC["DismountNoTaxi"]
+			LeaPlusDB["DismountShowFormBtn"] 	= LeaPlusLC["DismountShowFormBtn"]
 			LeaPlusDB["ShowVendorPrice"] 		= LeaPlusLC["ShowVendorPrice"]
 			LeaPlusDB["CombatPlates"]			= LeaPlusLC["CombatPlates"]
 			LeaPlusDB["EasyItemDestroy"]		= LeaPlusLC["EasyItemDestroy"]
