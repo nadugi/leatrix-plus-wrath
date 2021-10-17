@@ -1,3 +1,6 @@
+2.5.60.alpha.1 - 17th October 2021
+- The 'Enhance tooltip' option ('Interface') now scales Total RP 3 tooltips.
+
 2.5.59 - 13th October 2021
 - Added a new option called 'Show druid power bar' ('Interface').  If enabled, a druid power bar will be shown in the player frame while you are playing as a shapeshifted druid.
 - The 'Dismount me' option ('System') will now work with Shaman Ghost Wolf.  Added a new setting to show an unshift buton on the flight map when playing as a shapeshifted druid or shaman.  The setting to dismount when selecting a flight destination has been removed as that functionality is now built into the game.
