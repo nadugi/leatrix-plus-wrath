@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.60.alpha.1 (17th October 2021)
+-- 	Leatrix Plus 2.5.60.alpha.2 (18th October 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.60.alpha.1"
+	LeaPlusLC["AddonVer"] = "2.5.60.alpha.2"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -612,6 +612,15 @@
 
 				},
 
+				-- Chimes
+				["MuteChimes"] = {
+					"sound/doodad/belltollalliance.ogg#566564",
+					"sound/doodad/belltollhorde.ogg#565853",
+					"sound/doodad/belltollnightelf.ogg#566558",
+					"sound/doodad/belltolltribal.ogg#566027",
+					"sound/doodad/kharazahnbelltoll.ogg#566254",
+				},
+
 				-- Ready check
 				["MuteReady"] = {
 					"sound/interface/levelup2.ogg#567478",
@@ -691,7 +700,8 @@
 			LeaPlusLC:MakeCB(SoundPanel, "MuteInterface", "Interface", 16, -112, false, "If checked, the interface button sound, the chat frame tab click sound and the game menu toggle sound will be muted.")
 			LeaPlusLC:MakeCB(SoundPanel, "MuteTrains", "Trains", 16, -132, false, "If checked, train sounds will be muted.")
 			LeaPlusLC:MakeCB(SoundPanel, "MuteEvents", "Events", 16, -152, false, "If checked, holiday event sounds will be muted.|n|nThis applies to Headless Horseman.")
-			LeaPlusLC:MakeCB(SoundPanel, "MuteReady", "Ready", 16, -172, false, "If checked, the ready check sound will be muted.")
+			LeaPlusLC:MakeCB(SoundPanel, "MuteChimes", "Chimes", 16, -172, false, "If checked, clock hourly chimes will be muted.|n|nThis applies to Headless Horseman.")
+			LeaPlusLC:MakeCB(SoundPanel, "MuteReady", "Ready", 16, -192, false, "If checked, the ready check sound will be muted.")
 
 			LeaPlusLC:MakeTx(SoundPanel, "Mounts", 140, -72)
 			LeaPlusLC:MakeCB(SoundPanel, "MuteGyrocopters", "Gyrocopters", 140, -92, false, "If checked, gyrocopters will be muted.|n|nThis applies to the engineering flying machine mounts.")
