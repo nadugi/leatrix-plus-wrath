@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.62.alpha.1 (24th October 2021)
+-- 	Leatrix Plus 2.5.62.alpha.2 (24th October 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.62.alpha.1"
+	LeaPlusLC["AddonVer"] = "2.5.62.alpha.2"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -356,6 +356,7 @@
 	function LeaPlusLC:SetDim()
 		LeaPlusLC:LockOption("AutomateQuests", "AutomateQuestsBtn", false)			-- Automate quests
 		LeaPlusLC:LockOption("AutoReleasePvP", "AutoReleasePvPBtn", false)			-- Release in PvP
+		LeaPlusLC:LockOption("AutoSellJunk", "AutoSellJunkBtn", false)				-- Sell junk automatically
 		LeaPlusLC:LockOption("AutoRepairGear", "AutoRepairBtn", false)				-- Repair automatically
 		LeaPlusLC:LockOption("InviteFromWhisper", "InvWhisperBtn", false)			-- Invite from whispers
 		LeaPlusLC:LockOption("MailFontChange", "MailTextBtn", true)					-- Resize mail text
@@ -1626,8 +1627,43 @@
 
 			-- Declarations
 			local IterationCount, totalPrice = 500, 0
-			local SellJunkFrame = CreateFrame("FRAME")
 			local SellJunkTicker, mBagID, mBagSlot
+
+			-- Create configuration panel
+			local SellJunkFrame = LeaPlusLC:CreatePanel("Sell junk automatically", "SellJunkFrame")
+			LeaPlusLC:MakeTx(SellJunkFrame, "Settings", 16, -72)
+			LeaPlusLC:MakeCB(SellJunkFrame, "AutoSellShowSummary", "Show vendor summary in chat", 16, -92, false, "If checked, a vendor summary will be shown in chat when junk is automatically sold.")
+
+			-- Help button hidden
+			SellJunkFrame.h:Hide()
+
+			-- Back button handler
+			SellJunkFrame.b:SetScript("OnClick", function() 
+				SellJunkFrame:Hide(); LeaPlusLC["PageF"]:Show(); LeaPlusLC["Page1"]:Show();
+				return
+			end)
+
+			-- Reset button handler
+			SellJunkFrame.r:SetScript("OnClick", function()
+
+				-- Reset checkboxes
+				LeaPlusLC["AutoSellShowSummary"] = "On"
+
+				-- Refresh panel
+				SellJunkFrame:Hide(); SellJunkFrame:Show()
+
+			end)
+
+			-- Show panal when options panel button is clicked
+			LeaPlusCB["AutoSellJunkBtn"]:SetScript("OnClick", function()
+				if IsShiftKeyDown() and IsControlKeyDown() then
+					-- Preset profile
+					LeaPlusLC["AutoSellShowSummary"] = "On"
+				else
+					SellJunkFrame:Show()
+					LeaPlusLC:HideFrames()
+				end
+			end)
 
 			-- Function to stop selling
 			local function StopSelling()
@@ -1678,7 +1714,7 @@
 				-- Stop selling if no items were sold for this iteration or iteration limit was reached
 				if SoldCount == 0 or SellJunkTicker and SellJunkTicker._remainingIterations == 1 then 
 					StopSelling() 
-					if totalPrice > 0 then 
+					if totalPrice > 0 and LeaPlusLC["AutoSellShowSummary"] == "On" then 
 						LeaPlusLC:Print(L["Sold junk for"] .. " " .. GetCoinText(totalPrice) .. ".")
 					end
 				end
@@ -1762,7 +1798,9 @@
 							RepairAllItems()
 						end
 						-- Show cost summary
-						LeaPlusLC:Print(L["Repaired for"] .. " " .. GetCoinText(RepairCost) .. ".")
+						if LeaPlusLC["AutoRepairShowSummary"] == "On" then
+							LeaPlusLC:Print(L["Repaired for"] .. " " .. GetCoinText(RepairCost) .. ".")
+						end
 					end
 				end
 			end
@@ -1791,6 +1829,7 @@
 
 			LeaPlusLC:MakeTx(RepairPanel, "Settings", 16, -72)
 			LeaPlusLC:MakeCB(RepairPanel, "AutoRepairGuildFunds", "Repair using guild funds if available", 16, -92, false, "If checked, repair costs will be taken from guild funds for characters that are guilded and have permission to repair.")
+			LeaPlusLC:MakeCB(RepairPanel, "AutoRepairShowSummary", "Show repair summary in chat", 16, -112, false, "If checked, a repair summary will be shown in chat when your gear is automatically repaired.")
 
 			-- Help button hidden
 			RepairPanel.h:Hide()
@@ -1806,6 +1845,7 @@
 
 				-- Reset checkboxes
 				LeaPlusLC["AutoRepairGuildFunds"] = "On"
+				LeaPlusLC["AutoRepairShowSummary"] = "On"
 
 				-- Refresh panel
 				RepairPanel:Hide(); RepairPanel:Show()
@@ -1817,6 +1857,7 @@
 				if IsShiftKeyDown() and IsControlKeyDown() then
 					-- Preset profile
 					LeaPlusLC["AutoRepairGuildFunds"] = "On"
+					LeaPlusLC["AutoRepairShowSummary"] = "On"
 				else
 					RepairPanel:Show()
 					LeaPlusLC:HideFrames()
@@ -8692,8 +8733,10 @@
 				LeaPlusLC:LoadVarNum("AutoReleaseDelay", 200, 200, 3000)	-- Release in PvP Delay
 
 				LeaPlusLC:LoadVarChk("AutoSellJunk", "Off")					-- Sell junk automatically
+				LeaPlusLC:LoadVarChk("AutoSellShowSummary", "On")			-- Sell junk summary in chat
 				LeaPlusLC:LoadVarChk("AutoRepairGear", "Off")				-- Repair automatically
 				LeaPlusLC:LoadVarChk("AutoRepairGuildFunds", "On")			-- Repair using guild funds
+				LeaPlusLC:LoadVarChk("AutoRepairShowSummary", "On")			-- Repair show summary in chat
 
 				-- Social
 				LeaPlusLC:LoadVarChk("NoDuelRequests", "Off")				-- Block duels
@@ -8900,8 +8943,10 @@
 			LeaPlusDB["AutoReleaseDelay"] 		= LeaPlusLC["AutoReleaseDelay"]
 
 			LeaPlusDB["AutoSellJunk"] 			= LeaPlusLC["AutoSellJunk"]
+			LeaPlusDB["AutoSellShowSummary"] 	= LeaPlusLC["AutoSellShowSummary"]
 			LeaPlusDB["AutoRepairGear"] 		= LeaPlusLC["AutoRepairGear"]
 			LeaPlusDB["AutoRepairGuildFunds"] 	= LeaPlusLC["AutoRepairGuildFunds"]
+			LeaPlusDB["AutoRepairShowSummary"] 	= LeaPlusLC["AutoRepairShowSummary"]
 
 			-- Social
 			LeaPlusDB["NoDuelRequests"] 		= LeaPlusLC["NoDuelRequests"]
@@ -10845,6 +10890,7 @@
 
  	LeaPlusLC:CfgBtn("AutomateQuestsBtn", LeaPlusCB["AutomateQuests"])
 	LeaPlusLC:CfgBtn("AutoReleasePvPBtn", LeaPlusCB["AutoReleasePvP"])
+ 	LeaPlusLC:CfgBtn("AutoSellJunkBtn", LeaPlusCB["AutoSellJunk"])
  	LeaPlusLC:CfgBtn("AutoRepairBtn", LeaPlusCB["AutoRepairGear"])
 
 ----------------------------------------------------------------------
