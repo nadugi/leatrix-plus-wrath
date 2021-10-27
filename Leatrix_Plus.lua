@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.62.alpha.5 (26th October 2021)
+-- 	Leatrix Plus 2.5.62.alpha.6 (27th October 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.62.alpha.5"
+	LeaPlusLC["AddonVer"] = "2.5.62.alpha.6"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -3169,7 +3169,36 @@
 				end
 			end)
 
-
+			-- Show nearby target outfit on me button
+			LeaPlusLC:CreateButton("DressUpTargetSelfBtn", DressUpFrameResetButton, "S", "BOTTOMLEFT", 26, 79, 80, 22, false, "")
+			LeaPlusCB["DressUpTargetSelfBtn"]:ClearAllPoints()
+			LeaPlusCB["DressUpTargetSelfBtn"]:SetPoint("RIGHT", LeaPlusCB["DressUpTargetBtn"], "LEFT", 0, 0)
+			SetButton(LeaPlusCB["DressUpTargetSelfBtn"], "S", "Show nearby target outfit on me")
+			LeaPlusCB["DressUpTargetSelfBtn"]:SetScript("OnClick", function()
+				if UnitIsPlayer("target") then
+					if not CanInspect("target") then 
+						ActionStatus_DisplayMessage(L["Target out of range."], true)
+ 						return
+					end
+					NotifyInspect("target")
+					LeaPlusCB["DressUpTargetSelfBtn"]:RegisterEvent("INSPECT_READY")
+					LeaPlusCB["DressUpTargetSelfBtn"]:SetScript("OnEvent", function()
+						DressUpFrame.DressUpModel:SetUnit("player")
+						DressUpFrame.DressUpModel:Undress()
+						C_Timer.After(0.01, function()
+							for i = 1, 19 do
+								local itemName = GetInventoryItemID("target", i)
+								C_Timer.After(0.01, function()
+									if itemName then
+										DressUpFrame.DressUpModel:TryOn("item:" .. itemName)
+									end
+								end)
+							end
+						end)
+						LeaPlusCB["DressUpTargetSelfBtn"]:UnregisterEvent("INSPECT_READY")
+					end)
+				end
+			end)
 
 			-- Change player actor to player when reset button is clicked (needed because target button changes it)
 			DressUpFrameResetButton:HookScript("OnClick", function()
