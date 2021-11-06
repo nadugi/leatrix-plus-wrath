@@ -1,3 +1,6 @@
+2.5.67.alpha.1 - 6th November 2021
+- Added a new option 'Hide action button text' ('Text').  If enabled, macro and keybind text will not be shown on action buttons.
+
 2.5.66 - 4th November 2021
 - Added a new option 'More font sizes' ('Chat').  If enabled, additional font sizes will be available in the chat frame font size menu.
 
