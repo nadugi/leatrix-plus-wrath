@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.68.alpha.2 (15th November 2021)
+-- 	Leatrix Plus 2.5.68.alpha.4 (15th November 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.68.alpha.2"
+	LeaPlusLC["AddonVer"] = "2.5.68.alpha.4"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -620,18 +620,18 @@
 
 				},
 
-				-- Chimes
+				-- Chimes (sound/doodad/)
 				["MuteChimes"] = {
-					"sound/doodad/belltollalliance.ogg#566564",
-					"sound/doodad/belltollhorde.ogg#565853",
-					"sound/doodad/belltollnightelf.ogg#566558",
-					"sound/doodad/belltolltribal.ogg#566027",
-					"sound/doodad/kharazahnbelltoll.ogg#566254",
+					"belltollalliance.ogg#566564",
+					"belltollhorde.ogg#565853",
+					"belltollnightelf.ogg#566558",
+					"belltolltribal.ogg#566027",
+					"kharazahnbelltoll.ogg#566254",
 				},
 
-				-- Ready check
+				-- Ready check (sound/interface/)
 				["MuteReady"] = {
-					"sound/interface/levelup2.ogg#567478",
+					"levelup2.ogg#567478",
 				},
 
 				-- Events
@@ -684,6 +684,13 @@
 
 				},
 
+				-- Yawns (sound/creature/tiger/)
+				["MuteYawns"] = {
+
+					"mtigerstand2a.ogg#562388",
+
+				},
+
 			}
 
 			-- Give table file level scope (its used during logout and for wipe and admin commands)
@@ -713,6 +720,9 @@
 
 			LeaPlusLC:MakeTx(SoundPanel, "Mounts", 140, -72)
 			LeaPlusLC:MakeCB(SoundPanel, "MuteGyrocopters", "Gyrocopters", 140, -92, false, "If checked, gyrocopters will be muted.|n|nThis applies to the engineering flying machine mounts.")
+
+			LeaPlusLC:MakeTx(SoundPanel, "Pets", 264, -72)
+			LeaPlusLC:MakeCB(SoundPanel, "MuteYawns", "Yawns", 264, -92, false, "If checked, yawns from hunter pet cats will be muted.")
 
 			-- Set click width for sounds checkboxes
 			for k, v in pairs(muteTable) do
