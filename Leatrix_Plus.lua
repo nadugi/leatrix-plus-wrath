@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.70.alpha.1 (24th November 2021)
+-- 	Leatrix Plus 2.5.70.alpha.2 (25th November 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.70.alpha.1"
+	LeaPlusLC["AddonVer"] = "2.5.70.alpha.2"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -371,6 +371,7 @@
 		LeaPlusLC:LockOption("EnhanceQuestLog", "EnhanceQuestLogBtn", true)			-- Enhance quest log
 		LeaPlusLC:LockOption("ShowCooldowns", "CooldownsButton", true)				-- Show cooldowns
 		LeaPlusLC:LockOption("ShowPlayerChain", "ModPlayerChain", true)				-- Show player chain
+		LeaPlusLC:LockOption("ShowWowheadLinks", "ShowWowheadLinksBtn", true)		-- Show Wowhead links
 		LeaPlusLC:LockOption("FrmEnabled", "MoveFramesButton", true)				-- Manage frames
 		LeaPlusLC:LockOption("ManageBuffs", "ManageBuffsButton", true)				-- Manage buffs
 		LeaPlusLC:LockOption("ManageWidget", "ManageWidgetButton", true)			-- Manage widget
@@ -856,6 +857,43 @@
 
 		if LeaPlusLC["ShowWowheadLinks"] == "On" then
 
+			-- Create configuration panel
+			local WowheadPanel = LeaPlusLC:CreatePanel("Show Wowhead links", "WowheadPanel")
+
+			LeaPlusLC:MakeTx(WowheadPanel, "Settings", 16, -72)
+			LeaPlusLC:MakeCB(WowheadPanel, "WowheadLinkComments", "Links go directly to the comments section", 16, -92, false, "If checked, Wowhead links will go directly to the comments section.")
+
+			-- Help button hidden
+			WowheadPanel.h:Hide()
+
+			-- Back button handler
+			WowheadPanel.b:SetScript("OnClick", function() 
+				WowheadPanel:Hide(); LeaPlusLC["PageF"]:Show(); LeaPlusLC["Page5"]:Show()
+				return
+			end)
+
+			-- Reset button handler
+			WowheadPanel.r:SetScript("OnClick", function()
+
+				-- Reset controls
+				LeaPlusLC["WowheadLinkComments"] = "Off"
+
+				-- Refresh configuration panel
+				WowheadPanel:Hide(); WowheadPanel:Show()
+
+			end)
+
+			-- Show configuration panal when options panel button is clicked
+			LeaPlusCB["ShowWowheadLinksBtn"]:SetScript("OnClick", function()
+				if IsShiftKeyDown() and IsControlKeyDown() then
+					-- Preset profile
+					LeaPlusLC["WowheadLinkComments"] = "Off"
+				else
+					WowheadPanel:Show()
+					LeaPlusLC:HideFrames()
+				end
+			end)
+
 			-- Get localised Wowhead URL
 			local wowheadLoc
 			if GameLocale == "deDE" then wowheadLoc = "de.tbc.wowhead.com"
@@ -910,7 +948,11 @@
 					if questID == 0 then mEB:Hide() else mEB:Show() end
 
 					-- Set editbox text
-					mEB:SetText("https://" .. wowheadLoc .. "/quest=" .. questID)
+					if LeaPlusLC["WowheadLinkComments"] == "On" then
+						mEB:SetText("https://" .. wowheadLoc .. "/quest=" .. questID .. "#comments")
+					else
+						mEB:SetText("https://" .. wowheadLoc .. "/quest=" .. questID)
+					end
 
 					-- Set hidden fontstring then resize editbox to match
 					mEB.z:SetText(mEB:GetText())
@@ -9262,6 +9304,7 @@
 				LeaPlusLC:LoadVarNum("PlayerChainMenu", 2, 1, 3)			-- Player chain dropdown value
 				LeaPlusLC:LoadVarChk("ShowDruidPowerBar", "Off")			-- Show druid power bar
 				LeaPlusLC:LoadVarChk("ShowWowheadLinks", "Off")				-- Show Wowhead links
+				LeaPlusLC:LoadVarChk("WowheadLinkComments", "Off")			-- Show Wowhead links to comments
 
 				-- Frames
 				LeaPlusLC:LoadVarChk("FrmEnabled", "Off")					-- Manage frames
@@ -9479,6 +9522,7 @@
 			LeaPlusDB["PlayerChainMenu"]		= LeaPlusLC["PlayerChainMenu"]
 			LeaPlusDB["ShowDruidPowerBar"]		= LeaPlusLC["ShowDruidPowerBar"]
 			LeaPlusDB["ShowWowheadLinks"]		= LeaPlusLC["ShowWowheadLinks"]
+			LeaPlusDB["WowheadLinkComments"]	= LeaPlusLC["WowheadLinkComments"]
 
 			-- Frames
 			LeaPlusDB["FrmEnabled"]				= LeaPlusLC["FrmEnabled"]
@@ -11070,6 +11114,7 @@
 				LeaPlusDB["PlayerChainMenu"] = 3				-- Player chain style
 				LeaPlusDB["ShowDruidPowerBar"] = "On"			-- Show druid power bar
 				LeaPlusDB["ShowWowheadLinks"] = "On"			-- Show Wowhead links
+				LeaPlusDB["WowheadLinkComments"] = "On"			-- Show Wowhead links to comments
 
 				-- Interface: Manage frames
 				LeaPlusDB["FrmEnabled"] = "On"
@@ -11443,18 +11488,20 @@
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "EnhanceProfessions"		, 	"Enhance professions"			,	146, -172, 	true,	"If checked, the professions frame will be larger.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "EnhanceTrainers"			, 	"Enhance trainers"				,	146, -192, 	true,	"If checked, the skill trainer frame will be larger.")
 
+	LeaPlusLC:MakeTx(LeaPlusLC[pg], "Extras"					, 	146, -232);
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowVolume"				, 	"Show volume slider"			, 	146, -252, 	true,	"If checked, a master volume slider will be shown in the character sheet.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "AhExtras"					, 	"Show auction controls"			, 	146, -272, 	true,	"If checked, additional functionality will be added to the auction house.|n|nBuyout only - create buyout auctions without filling in the starting price.|n|nGold only - set the copper and silver prices at 99 to speed up new auctions.|n|nFind item - search the auction house for the item you are selling.|n|nIn addition, the auction duration setting will be saved account-wide.")
+
 	LeaPlusLC:MakeTx(LeaPlusLC[pg], "Extras"					, 	340, -72);
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowVolume"				, 	"Show volume slider"			, 	340, -92, 	true,	"If checked, a master volume slider will be shown in the character sheet.")
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "AhExtras"					, 	"Show auction controls"			, 	340, -112, 	true,	"If checked, additional functionality will be added to the auction house.|n|nBuyout only - create buyout auctions without filling in the starting price.|n|nGold only - set the copper and silver prices at 99 to speed up new auctions.|n|nFind item - search the auction house for the item you are selling.|n|nIn addition, the auction duration setting will be saved account-wide.")
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowCooldowns"				, 	"Show cooldowns"				, 	340, -132, 	true,	"If checked, you will be able to place up to five beneficial cooldown icons above the target frame.")
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "DurabilityStatus"			, 	"Show durability status"		, 	340, -152, 	true,	"If checked, a button will be added to the character sheet which will show your equipped item durability when you hover the pointer over it.|n|nIn addition, an overall percentage will be shown in the chat frame when you die.")
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowVanityControls"		, 	"Show vanity controls"			, 	340, -172, 	true,	"If checked, helm and cloak toggle checkboxes will be shown in the character sheet.|n|nYou can hold shift and right-click the checkboxes to switch layouts.")
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowBagSearchBox"			, 	"Show bag search box"			, 	340, -192, 	true,	"If checked, a bag search box will be shown in the backpack frame and the bank frame.")
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowFreeBagSlots"			, 	"Show free bag slots"			, 	340, -212, 	true,	"If checked, the number of free bag slots will be shown in the backpack button icon and tooltip.")
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowRaidToggle"			, 	"Show raid button"				,	340, -232, 	true,	"If checked, the button to toggle the raid container frame will be shown just above the raid management frame (left side of the screen) instead of in the raid management frame itself.|n|nThis allows you to toggle the raid container frame without needing to open the raid management frame.")
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowPlayerChain"			, 	"Show player chain"				,	340, -252, 	true,	"If checked, you will be able to show a rare, elite or rare elite chain around the player frame.")
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowDruidPowerBar"			, 	"Show druid power bar"			,	340, -272, 	true,	"If checked, a power bar will be shown in the player frame when you are playing a shapeshifted druid.")
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowWowheadLinks"			, 	"Show Wowhead links"			, 	340, -292, 	true,	"If checked, Wowhead links will be shown above the quest log frame.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowCooldowns"				, 	"Show cooldowns"				, 	340, -92, 	true,	"If checked, you will be able to place up to five beneficial cooldown icons above the target frame.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "DurabilityStatus"			, 	"Show durability status"		, 	340, -112, 	true,	"If checked, a button will be added to the character sheet which will show your equipped item durability when you hover the pointer over it.|n|nIn addition, an overall percentage will be shown in the chat frame when you die.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowVanityControls"		, 	"Show vanity controls"			, 	340, -132, 	true,	"If checked, helm and cloak toggle checkboxes will be shown in the character sheet.|n|nYou can hold shift and right-click the checkboxes to switch layouts.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowBagSearchBox"			, 	"Show bag search box"			, 	340, -152, 	true,	"If checked, a bag search box will be shown in the backpack frame and the bank frame.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowFreeBagSlots"			, 	"Show free bag slots"			, 	340, -172, 	true,	"If checked, the number of free bag slots will be shown in the backpack button icon and tooltip.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowRaidToggle"			, 	"Show raid button"				,	340, -192, 	true,	"If checked, the button to toggle the raid container frame will be shown just above the raid management frame (left side of the screen) instead of in the raid management frame itself.|n|nThis allows you to toggle the raid container frame without needing to open the raid management frame.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowPlayerChain"			, 	"Show player chain"				,	340, -212, 	true,	"If checked, you will be able to show a rare, elite or rare elite chain around the player frame.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowDruidPowerBar"			, 	"Show druid power bar"			,	340, -232, 	true,	"If checked, a power bar will be shown in the player frame when you are playing a shapeshifted druid.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowWowheadLinks"			, 	"Show Wowhead links"			, 	340, -252, 	true,	"If checked, Wowhead links will be shown above the quest log frame.")
 
 	LeaPlusLC:CfgBtn("ModMinimapBtn", LeaPlusCB["MinimapMod"])
 	LeaPlusLC:CfgBtn("MoveTooltipButton", LeaPlusCB["TipModEnable"])
@@ -11462,6 +11509,7 @@
 	LeaPlusLC:CfgBtn("EnhanceQuestLogBtn", LeaPlusCB["EnhanceQuestLog"])
 	LeaPlusLC:CfgBtn("CooldownsButton", LeaPlusCB["ShowCooldowns"])
 	LeaPlusLC:CfgBtn("ModPlayerChain", LeaPlusCB["ShowPlayerChain"])
+	LeaPlusLC:CfgBtn("ShowWowheadLinksBtn", LeaPlusCB["ShowWowheadLinks"])
 
 ----------------------------------------------------------------------
 -- 	LC6: Frames
