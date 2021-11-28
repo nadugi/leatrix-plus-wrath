@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.70.alpha.3 (26th November 2021)
+-- 	Leatrix Plus 2.5.70.alpha.4 (28th November 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.70.alpha.3"
+	LeaPlusLC["AddonVer"] = "2.5.70.alpha.4"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -1454,7 +1454,7 @@
 						if GetItemCount(29425) >= 10 then return true end
 					elseif title == L["Single Mark of Sargeras"] then
 						-- Requires 1 Marks of Sargeras (if more than 10, leave for More Marks of Sargeras)
-						if GetItemCount(30809) > 1 and GetItemCount(30809) < 10 then return true end
+						if GetItemCount(30809) >= 1 and GetItemCount(30809) < 10 then return true end
 					elseif title == L["More Marks of Sargeras"] then
 						-- Requires 10 Marks of Sargeras
 						if GetItemCount(30809) >= 10 then return true end
@@ -1463,7 +1463,7 @@
 						if GetItemCount(29426) >= 10 then return true end
 					elseif title == L["Single Sunfury Signet"] then
 						-- Requires 1 Sunfury Signet (if more than 10, leave for More Sunfury Signets)
-						if GetItemCount(30810) > 1 and GetItemCount(30810) < 10 then return true end
+						if GetItemCount(30810) >= 1 and GetItemCount(30810) < 10 then return true end
 					elseif title == L["More Sunfury Signets"] then
 						-- Requires 10 Sunfury Signets
 						if GetItemCount(30810) >= 10 then return true end
