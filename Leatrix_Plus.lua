@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.72.alpha.1 (2nd December 2021)
+-- 	Leatrix Plus 2.5.72.alpha.2 (2nd December 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.72.alpha.1"
+	LeaPlusLC["AddonVer"] = "2.5.72.alpha.2"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -2671,11 +2671,37 @@
 			LeaPlusLC:MakeTx(SideMinimap, "Settings", 16, -72)
 			LeaPlusLC:MakeCB(SideMinimap, "HideMiniZoomBtns", "Hide the zoom buttons", 16, -92, false, "If checked, the zoom buttons will be hidden.  You can use the mousewheel to zoom regardless of this setting.")
 			LeaPlusLC:MakeCB(SideMinimap, "HideMiniClock", "Hide the clock", 16, -112, false, "If checked, the clock will be hidden.")
-			LeaPlusLC:MakeCB(SideMinimap, "UnlockMinimap", "Unlock the minimap", 16, -132, false, "If checked, you can hold alt and drag the minimap to move it.")
+			LeaPlusLC:MakeCB(SideMinimap, "HideMiniZoneText", "Hide the zone text bar", 16, -132, false, "If checked, the zone text bar will be hidden.")
+			LeaPlusLC:MakeCB(SideMinimap, "HideMiniMapButton", "Hide the world map button", 16, -152, false, "If checked, the world map button will be hidden.")
+			LeaPlusLC:MakeCB(SideMinimap, "UnlockMinimap", "Unlock the minimap", 16, -172, false, "If checked, you can hold alt and drag the minimap to move it.")
 
 			-- Add slider control
 			LeaPlusLC:MakeTx(SideMinimap, "Scale", 356, -72)
 			LeaPlusLC:MakeSL(SideMinimap, "MinimapScale", "Drag to set the minimap scale.", 1, 2, 0.1, 356, -92, "%.2f")
+
+			----------------------------------------------------------------------
+			-- Hide the world map button
+			----------------------------------------------------------------------
+
+			-- Function to set world map button
+			local function SetWorldMapButton()
+				if LeaPlusLC["HideMiniMapButton"] == "On" then
+					MiniMapWorldMapButton:Hide()
+				else
+					MiniMapWorldMapButton:Show()
+				end
+			end
+
+			-- Set map button when option is clicked and on startup
+			LeaPlusCB["HideMiniMapButton"]:HookScript("OnClick", SetWorldMapButton)
+			SetWorldMapButton()
+
+			-- Hide world map button when it's shown
+			hooksecurefunc(MiniMapWorldMapButton, "Show", function()
+				if LeaPlusLC["HideMiniMapButton"] == "On" then
+					MiniMapWorldMapButton:Hide()
+				end
+			end)
 
 			----------------------------------------------------------------------
 			-- Unlock the minimap
@@ -2719,7 +2745,7 @@
 			-- Reset position when reset button is clicked
 			SideMinimap.r:HookScript("OnClick", function()
 				LeaPlusLC["UnlockMinimap"] = "On"
-				LeaPlusLC["MinimapA"], LeaPlusLC["MinimapR"], LeaPlusLC["MinimapX"], LeaPlusLC["MinimapY"] = "TOPRIGHT", "TOPRIGHT", -17, -2
+				LeaPlusLC["MinimapA"], LeaPlusLC["MinimapR"], LeaPlusLC["MinimapX"], LeaPlusLC["MinimapY"] = "TOPRIGHT", "TOPRIGHT", -17, -22
 				Minimap:ClearAllPoints()
 				Minimap:SetPoint(LeaPlusLC["MinimapA"], UIParent, LeaPlusLC["MinimapR"], LeaPlusLC["MinimapX"], LeaPlusLC["MinimapY"])
 			end)
@@ -2728,10 +2754,46 @@
 			-- Hide the zone text bar, time of day button and toggle button
 			----------------------------------------------------------------------
 
-			MinimapZoneTextButton:Hide()
-			MinimapBorderTop:SetTexture("")
+			-- Reparent MinimapCluster elements 
+			MinimapBorderTop:SetParent(Minimap)
+			MinimapZoneTextButton:SetParent(MinimapBackdrop)
+
+			-- Anchor border top to MinimapBackdrop
+			MinimapBorderTop:ClearAllPoints()
+			MinimapBorderTop:SetPoint("TOP", MinimapBackdrop, "TOP", 0, 20)
+
+			-- Position toggle button
+			MinimapToggleButton:ClearAllPoints()
+			MinimapToggleButton:SetPoint("TOPRIGHT", MinimapBackdrop, "TOPRIGHT", 1, 23)
+
+			-- Match toggle button scale to minimap scale
+			local function SetToggleScale()
+				MinimapToggleButton:SetScale(LeaPlusLC["MinimapScale"])
+			end
+			LeaPlusCB["MinimapScale"]:HookScript("OnValueChanged", SetToggleScale)
+			SetToggleScale()
+
+			-- Function to set zone text bar
+			local function SetZoneTextBar()
+				if LeaPlusLC["HideMiniZoneText"] == "On" then
+					MinimapBorderTop:Hide()
+					MinimapZoneTextButton:Hide()
+					MinimapToggleButton:Hide()
+				else
+					MinimapZoneTextButton:ClearAllPoints()
+					MinimapZoneTextButton:SetPoint("CENTER", MinimapBorderTop, "CENTER", -1, 3)
+					MinimapBorderTop:Show()
+					MinimapZoneTextButton:Show()
+					MinimapToggleButton:Show()
+				end
+			end
+
+			-- Set the zone text bar when option is clicked and on startup
+			LeaPlusCB["HideMiniZoneText"]:HookScript("OnClick", SetZoneTextBar)
+			SetZoneTextBar()
+
+			-- Hide time of day
 			GameTimeFrame:Hide()
-			MinimapToggleButton:Hide()
 
 			----------------------------------------------------------------------
 			-- Hide the zoom buttons
@@ -2843,9 +2905,12 @@
 			SideMinimap.r:HookScript("OnClick", function()
 				LeaPlusLC["HideMiniZoomBtns"] = "Off"; ToggleZoomButtons()
 				LeaPlusLC["HideMiniClock"] = "Off"; SetMiniClock()
+				LeaPlusLC["HideMiniZoneText"] = "Off"; SetZoneTextBar()
 				LeaPlusLC["MinimapScale"] = 1
 				Minimap:SetScale(1)
 				SetMiniScale()
+				-- Hide world map button
+				LeaPlusLC["HideMiniMapButton"] = "On"; SetWorldMapButton()
 				SideMinimap:Hide(); SideMinimap:Show()
 			end)
 
@@ -2858,9 +2923,12 @@
 						-- Preset profile
 						LeaPlusLC["HideMiniZoomBtns"] = "Off"; ToggleZoomButtons()
 						LeaPlusLC["HideMiniClock"] = "Off"; SetMiniClock()
+						LeaPlusLC["HideMiniZoneText"] = "On"; SetZoneTextBar()
 						LeaPlusLC["MinimapScale"] = 1.30
 						Minimap:SetScale(1)
 						SetMiniScale()
+						-- Hide world map button
+						LeaPlusLC["HideMiniMapButton"] = "On"; SetWorldMapButton()
 						-- Map position
 						LeaPlusLC["MinimapA"], LeaPlusLC["MinimapR"], LeaPlusLC["MinimapX"], LeaPlusLC["MinimapY"] = "TOPRIGHT", "TOPRIGHT", -17, -2
 						Minimap:SetMovable(true)
@@ -9264,12 +9332,14 @@
 				LeaPlusLC:LoadVarChk("MinimapMod", "Off")					-- Enhance minimap
 				LeaPlusLC:LoadVarChk("HideMiniZoomBtns", "Off")				-- Hide zoom buttons
 				LeaPlusLC:LoadVarChk("HideMiniClock", "Off")				-- Hide the clock
+				LeaPlusLC:LoadVarChk("HideMiniZoneText", "Off")				-- Hide the zone text bar
+				LeaPlusLC:LoadVarChk("HideMiniMapButton", "On")				-- Hide the world map button
 				LeaPlusLC:LoadVarNum("MinimapScale", 1, 1, 2)				-- Minimap scale slider
 				LeaPlusLC:LoadVarChk("UnlockMinimap", "On")					-- Unlock the minimap
 				LeaPlusLC:LoadVarAnc("MinimapA", "TOPRIGHT")				-- Minimap anchor
 				LeaPlusLC:LoadVarAnc("MinimapR", "TOPRIGHT")				-- Minimap relative
 				LeaPlusLC:LoadVarNum("MinimapX", -17, -5000, 5000)			-- Minimap X
-				LeaPlusLC:LoadVarNum("MinimapY", -2, -5000, 5000)			-- Minimap Y
+				LeaPlusLC:LoadVarNum("MinimapY", -22, -5000, 5000)			-- Minimap Y
 				LeaPlusLC:LoadVarChk("TipModEnable", "Off")					-- Enhance tooltip
 				LeaPlusLC:LoadVarChk("TipShowRank", "On")					-- Show rank
 				LeaPlusLC:LoadVarChk("TipShowOtherRank", "Off")				-- Show rank for other guilds
@@ -9486,6 +9556,8 @@
 			LeaPlusDB["MinimapMod"]				= LeaPlusLC["MinimapMod"]
 			LeaPlusDB["HideMiniZoomBtns"]		= LeaPlusLC["HideMiniZoomBtns"]
 			LeaPlusDB["HideMiniClock"]			= LeaPlusLC["HideMiniClock"]
+			LeaPlusDB["HideMiniZoneText"]		= LeaPlusLC["HideMiniZoneText"]
+			LeaPlusDB["HideMiniMapButton"]		= LeaPlusLC["HideMiniMapButton"]
 			LeaPlusDB["MinimapScale"]			= LeaPlusLC["MinimapScale"]
 			LeaPlusDB["UnlockMinimap"]			= LeaPlusLC["UnlockMinimap"]
 			LeaPlusDB["MinimapA"]				= LeaPlusLC["MinimapA"]
@@ -11100,6 +11172,8 @@
 
 				-- Interface
 				LeaPlusDB["MinimapMod"] = "On"					-- Enhance minimap
+				LeaPlusDB["HideMiniZoneText"] = "On"			-- Hide zone text bar
+				LeaPlusDB["HideMiniMapButton"] = "On"			-- Hide world map button
 				LeaPlusDB["MinimapScale"] = 1.30				-- Minimap scale slider
 				LeaPlusDB["UnlockMinimap"] = "On"				-- Unlock the minimap
 				LeaPlusDB["MinimapA"] = "TOPRIGHT"				-- Minimap anchor
