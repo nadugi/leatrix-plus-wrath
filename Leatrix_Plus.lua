@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.70 (1st December 2021)
+-- 	Leatrix Plus 2.5.71 (2nd December 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.70"
+	LeaPlusLC["AddonVer"] = "2.5.71"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -2672,7 +2672,6 @@
 			LeaPlusLC:MakeCB(SideMinimap, "HideMiniZoomBtns", "Hide the zoom buttons", 16, -92, false, "If checked, the zoom buttons will be hidden.  You can use the mousewheel to zoom regardless of this setting.")
 			LeaPlusLC:MakeCB(SideMinimap, "HideMiniClock", "Hide the clock", 16, -112, false, "If checked, the clock will be hidden.")
 			LeaPlusLC:MakeCB(SideMinimap, "UnlockMinimap", "Unlock the minimap", 16, -132, false, "If checked, you can hold alt and drag the minimap to move it.")
-			LeaPlusLC:MakeCB(SideMinimap, "ScaleEntireCluster", "Scale entire cluster", 16, -152, false, "If checked, the scale slider will apply to the entire minimap cluster.|n|nNote that if you are using the default action bars, rescaling the cluster will also rescale the right action bars at startup so you may want to leave the scale slider at 100%.|n|nIf unchecked, the scale slider will only apply to the minimap.")
 
 			-- Add slider control
 			LeaPlusLC:MakeTx(SideMinimap, "Scale", 356, -72)
@@ -2681,10 +2680,6 @@
 			----------------------------------------------------------------------
 			-- Unlock the minimap
 			----------------------------------------------------------------------
-
-			-- Move the minimap up to the top
-			MinimapCluster:ClearAllPoints()
-			MinimapCluster:SetPoint("TOPRIGHT", UIParent, "TOPRIGHT", 0, 20)
 
 			-- Raise the frame in case it's hidden
 			Minimap:Raise()
@@ -2730,12 +2725,13 @@
 			end)
 
 			----------------------------------------------------------------------
-			-- Hide the zone text bar and time of day button
+			-- Hide the zone text bar, time of day button and toggle button
 			----------------------------------------------------------------------
 
 			MinimapZoneTextButton:Hide()
 			MinimapBorderTop:SetTexture("")
 			GameTimeFrame:Hide()
+			MinimapToggleButton:Hide()
 
 			----------------------------------------------------------------------
 			-- Hide the zoom buttons
@@ -2821,11 +2817,7 @@
 
 			-- Function to set the minimap scale
 			local function SetMiniScale()
-				if LeaPlusLC["ScaleEntireCluster"] == "On" then
-					MinimapCluster:SetScale(LeaPlusLC["MinimapScale"])
-				else
-					Minimap:SetScale(LeaPlusLC["MinimapScale"])
-				end
+				Minimap:SetScale(LeaPlusLC["MinimapScale"])
 				-- Set slider formatted text
 				LeaPlusCB["MinimapScale"].f:SetFormattedText("%.0f%%", LeaPlusLC["MinimapScale"] * 100)
 			end
@@ -2833,14 +2825,6 @@
 			-- Set minimap scale when slider is changed and on startup
 			LeaPlusCB["MinimapScale"]:HookScript("OnValueChanged", SetMiniScale)
 			SetMiniScale()
-
-			-- Reset minimap and minimap cluster scales when setting is clicked
-			LeaPlusCB["ScaleEntireCluster"]:HookScript("OnClick", function()
-				LeaPlusLC["MinimapScale"] = 1
-				MinimapCluster:SetScale(LeaPlusLC["MinimapScale"])
-				Minimap:SetScale(LeaPlusLC["MinimapScale"])
-				SideMinimap:Hide(); SideMinimap:Show()
-			end)
 
 			----------------------------------------------------------------------
 			-- Buttons
@@ -2860,8 +2844,6 @@
 				LeaPlusLC["HideMiniZoomBtns"] = "Off"; ToggleZoomButtons()
 				LeaPlusLC["HideMiniClock"] = "Off"; SetMiniClock()
 				LeaPlusLC["MinimapScale"] = 1
-				LeaPlusLC["ScaleEntireCluster"] = "On"
-				MinimapCluster:SetScale(LeaPlusLC["MinimapScale"])
 				Minimap:SetScale(1)
 				SetMiniScale()
 				SideMinimap:Hide(); SideMinimap:Show()
@@ -2877,8 +2859,6 @@
 						LeaPlusLC["HideMiniZoomBtns"] = "Off"; ToggleZoomButtons()
 						LeaPlusLC["HideMiniClock"] = "Off"; SetMiniClock()
 						LeaPlusLC["MinimapScale"] = 1.30
-						LeaPlusLC["ScaleEntireCluster"] = "On"; 
-						MinimapCluster:SetScale(LeaPlusLC["MinimapScale"])
 						Minimap:SetScale(1)
 						SetMiniScale()
 						-- Map position
@@ -9286,7 +9266,6 @@
 				LeaPlusLC:LoadVarChk("HideMiniClock", "Off")				-- Hide the clock
 				LeaPlusLC:LoadVarNum("MinimapScale", 1, 1, 2)				-- Minimap scale slider
 				LeaPlusLC:LoadVarChk("UnlockMinimap", "On")					-- Unlock the minimap
-				LeaPlusLC:LoadVarChk("ScaleEntireCluster", "On")			-- Scale entire cluster
 				LeaPlusLC:LoadVarAnc("MinimapA", "TOPRIGHT")				-- Minimap anchor
 				LeaPlusLC:LoadVarAnc("MinimapR", "TOPRIGHT")				-- Minimap relative
 				LeaPlusLC:LoadVarNum("MinimapX", -17, -5000, 5000)			-- Minimap X
@@ -9509,7 +9488,6 @@
 			LeaPlusDB["HideMiniClock"]			= LeaPlusLC["HideMiniClock"]
 			LeaPlusDB["MinimapScale"]			= LeaPlusLC["MinimapScale"]
 			LeaPlusDB["UnlockMinimap"]			= LeaPlusLC["UnlockMinimap"]
-			LeaPlusDB["ScaleEntireCluster"]		= LeaPlusLC["ScaleEntireCluster"]
 			LeaPlusDB["MinimapA"]				= LeaPlusLC["MinimapA"]
 			LeaPlusDB["MinimapR"]				= LeaPlusLC["MinimapR"]
 			LeaPlusDB["MinimapX"]				= LeaPlusLC["MinimapX"]
@@ -11124,7 +11102,6 @@
 				LeaPlusDB["MinimapMod"] = "On"					-- Enhance minimap
 				LeaPlusDB["MinimapScale"] = 1.30				-- Minimap scale slider
 				LeaPlusDB["UnlockMinimap"] = "On"				-- Unlock the minimap
-				LeaPlusDB["ScaleEntireCluster"] = "On"			-- Scale entire cluster
 				LeaPlusDB["MinimapA"] = "TOPRIGHT"				-- Minimap anchor
 				LeaPlusDB["MinimapR"] = "TOPRIGHT"				-- Minimap relative
 				LeaPlusDB["MinimapX"] = -17						-- Minimap X
