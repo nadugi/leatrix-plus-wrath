@@ -1,4 +1,4 @@
-2.5.72.alpha.2 - 2nd December 2021
+2.5.72 - 2nd December 2021
 - If 'Enhance minimap' is enabled, you can toggle the zone text bar once again using a setting in the configuration panel.  Added a new setting to toggle the world map button.
 
 2.5.71 - 2nd December 2021
