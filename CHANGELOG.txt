@@ -1,7 +1,7 @@
-2.5.73.alpha.6 - 8th December 2021
+2.5.73.alpha.7 - 8th December 2021
 - Added some new settings to 'Enhance minimap' ('Interface').  'Square minimap' changes the minimap shape to a square.  'Hide addon buttons' hides addon buttons automatically while the pointer is not over the minimap.  'Combine addon buttons' combines all addon buttons into a single frame which you can toggle by right-clicking the minimap (cannot be used with 'Hide addon buttons').  You can always drag the minimap now while holding the alt key so the 'Unlock map frame' setting has been removed.  The maximum minimap scale is now 400% (was 200%).
 - If 'Automate gossip' ('Automation') is enabled, battlemaster gossip will now be automatically selected and the battleground name will be shown at the top of the battlefield instance window.
-- Fixed a minor issue with 'Enhance professions' ('Interface') which caused the craft frame filter dropdown menu to not be positioned correctly.
+- Fixed a minor issue with 'Enhance professions' ('Interface') which caused the craft frame filter dropdown menu to not be positioned correctly.  Also fixed a minor issue with the default UI which caused beast training points to show in profession frames (this bug is not caused by addons).
 
 2.5.72 - 2nd December 2021
 - If 'Enhance minimap' is enabled, you can toggle the zone text bar once again using a setting in the configuration panel.  Added a new setting to toggle the world map button.

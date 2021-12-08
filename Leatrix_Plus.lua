@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.73.alpha.6 (8th December 2021)
+-- 	Leatrix Plus 2.5.73.alpha.7 (8th December 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.73.alpha.6"
+	LeaPlusLC["AddonVer"] = "2.5.73.alpha.7"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -4802,6 +4802,14 @@
 				CraftFramePointsLabel:SetPoint("TOPLEFT", CraftFrame, "TOPLEFT", 100, -50)
 				CraftFramePointsText:ClearAllPoints()
 				CraftFramePointsText:SetPoint("LEFT", CraftFramePointsLabel, "RIGHT", 3, 0)
+
+				-- Fix default UI bug causing training points to show in profession frames
+				hooksecurefunc(CraftFramePointsText, "Show", function()
+					if CraftRankFrame:IsShown() then
+						CraftFramePointsLabel:Hide()
+						CraftFramePointsText:Hide()
+					end
+				end)
 
 				-- Set highlight bar width when shown
 				hooksecurefunc(_G["CraftHighlightFrame"], "Show", function()
