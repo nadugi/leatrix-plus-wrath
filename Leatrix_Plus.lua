@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.73.alpha.5 (8th December 2021)
+-- 	Leatrix Plus 2.5.73.alpha.6 (8th December 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.73.alpha.5"
+	LeaPlusLC["AddonVer"] = "2.5.73.alpha.6"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -4867,6 +4867,11 @@
 				-- Position close box
 				_G["CraftFrameCloseButton"]:ClearAllPoints()
 				_G["CraftFrameCloseButton"]:SetPoint("TOPRIGHT", _G["CraftFrame"], "TOPRIGHT", -30, -8)
+
+				-- Position dropdown menu
+				CraftFrameFilterDropDown:ClearAllPoints()
+				CraftFrameFilterDropDown:ClearAllPoints()
+				CraftFrameFilterDropDown:SetPoint("TOPLEFT", CraftFrame, "TOPLEFT", 510, -40)
 
 				-- ElvUI fixes
 				local function ElvUIFixes()
