@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.73 (8th December 2021)
+-- 	Leatrix Plus 2.5.74.alpha.1 (9th December 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.73"
+	LeaPlusLC["AddonVer"] = "2.5.74.alpha.1"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -2898,20 +2898,30 @@
 					MinimapNorthTag:Hide()
 				end)
 
+				-- Tracking button
+				MiniMapTracking:SetScale(0.60)
+				miniFrame.ClearAllPoints(MiniMapTracking)
+				MiniMapTracking:SetPoint("TOPLEFT", Minimap, "TOPLEFT", -24, -7)
+
 				-- Mail button
 				MiniMapMailFrame:SetScale(0.75)
 				miniFrame.ClearAllPoints(MiniMapMailFrame)
-				MiniMapMailFrame:SetPoint("TOPLEFT", Minimap, "TOPLEFT", -19, -43)
+				MiniMapMailFrame:SetPoint("TOPLEFT", Minimap, "TOPLEFT", -19, -36)
 
-				-- Tracking button
-				MiniMapTracking:SetScale(0.65)
-				MiniMapTracking:ClearAllPoints()
-				MiniMapTracking:SetPoint("TOP", MiniMapMailFrame, "BOTTOM", -2, 0)
+				-- Battleground queue button
+				MiniMapBattlefieldFrame:SetScale(0.75)
+				miniFrame.ClearAllPoints(MiniMapBattlefieldFrame)
+				MiniMapBattlefieldFrame:SetPoint("TOP", MiniMapMailFrame, "BOTTOM", 0, 0)
 
 				-- World map button
 				MiniMapWorldMapButton:SetScale(0.75)
 				MiniMapWorldMapButton:ClearAllPoints()
-				MiniMapWorldMapButton:SetPoint("TOP", MiniMapTracking, "BOTTOM", 3, -7)
+				MiniMapWorldMapButton:SetPoint("TOP", MiniMapBattlefieldFrame, "BOTTOM", 0, 0)
+
+				-- Looking For Group button
+				MiniMapLFGFrame:SetScale(0.75)
+				MiniMapLFGFrame:ClearAllPoints()
+				MiniMapLFGFrame:SetPoint("TOP", MiniMapWorldMapButton, "BOTTOM", 0, 0)
 
 				-- Zoom in button
 				MinimapZoomIn:SetScale(0.75)
@@ -2923,10 +2933,22 @@
 				miniFrame.ClearAllPoints(MinimapZoomOut)
 				MinimapZoomOut:SetPoint("TOP", MinimapZoomIn, "BOTTOM", 0, 0)
 
-				-- Calendar button
-				miniFrame.SetSize(GameTimeFrame, 32, 32)
+				-- Calendar button -- Add setting to toggle this
 				miniFrame.ClearAllPoints(GameTimeFrame)
+				GameTimeFrame:SetPoint("TOPRIGHT", Minimap, "TOPRIGHT", 26, 26)
 				LibDBIconStub:SetButtonToPosition(GameTimeFrame, 44)
+
+				-- Debug buttons (should be commented out)
+				LeaPlusMiniMapDebug = nil
+				if LeaPlusMiniMapDebug then
+					C_Timer.After(2, function()
+						MiniMapMailFrame:Show()
+						MiniMapBattlefieldFrame:Show()
+						MiniMapWorldMapButton:Show()
+						GameTimeFrame:Show()
+						MiniMapLFGFrame:Show()
+					end)
+				end
 
 				-- Rescale addon buttons if combine addon buttons is disabled
 				if LeaPlusLC["CombineAddonButtons"] == "Off" then
