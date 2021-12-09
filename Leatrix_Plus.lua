@@ -2939,7 +2939,7 @@
 				LibDBIconStub:SetButtonToPosition(GameTimeFrame, 44)
 
 				-- Debug buttons (should be commented out)
-				LeaPlusMiniMapDebug = nil
+				local LeaPlusMiniMapDebug = nil
 				if LeaPlusMiniMapDebug then
 					C_Timer.After(2, function()
 						MiniMapMailFrame:Show()
