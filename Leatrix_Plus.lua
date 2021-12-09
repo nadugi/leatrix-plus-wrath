@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.74.alpha.1 (9th December 2021)
+-- 	Leatrix Plus 2.5.74.alpha.2 (9th December 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.74.alpha.1"
+	LeaPlusLC["AddonVer"] = "2.5.74.alpha.2"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -2901,27 +2901,27 @@
 				-- Tracking button
 				MiniMapTracking:SetScale(0.60)
 				miniFrame.ClearAllPoints(MiniMapTracking)
-				MiniMapTracking:SetPoint("TOPLEFT", Minimap, "TOPLEFT", -24, -7)
+				MiniMapTracking:SetPoint("TOPLEFT", Minimap, "TOPLEFT", -24, -24)
 
 				-- Mail button
 				MiniMapMailFrame:SetScale(0.75)
 				miniFrame.ClearAllPoints(MiniMapMailFrame)
-				MiniMapMailFrame:SetPoint("TOPLEFT", Minimap, "TOPLEFT", -19, -36)
+				MiniMapMailFrame:SetPoint("TOPLEFT", Minimap, "TOPLEFT", -19, -53)
 
 				-- Battleground queue button
 				MiniMapBattlefieldFrame:SetScale(0.75)
 				miniFrame.ClearAllPoints(MiniMapBattlefieldFrame)
 				MiniMapBattlefieldFrame:SetPoint("TOP", MiniMapMailFrame, "BOTTOM", 0, 0)
 
-				-- World map button
-				MiniMapWorldMapButton:SetScale(0.75)
-				MiniMapWorldMapButton:ClearAllPoints()
-				MiniMapWorldMapButton:SetPoint("TOP", MiniMapBattlefieldFrame, "BOTTOM", 0, 0)
-
 				-- Looking For Group button
 				MiniMapLFGFrame:SetScale(0.75)
 				MiniMapLFGFrame:ClearAllPoints()
-				MiniMapLFGFrame:SetPoint("TOP", MiniMapWorldMapButton, "BOTTOM", 0, 0)
+				MiniMapLFGFrame:SetPoint("TOP", MiniMapBattlefieldFrame, "BOTTOM", 0, 0)
+
+				-- World map button
+				MiniMapWorldMapButton:SetScale(0.75)
+				MiniMapWorldMapButton:ClearAllPoints()
+				MiniMapWorldMapButton:SetPoint("BOTTOM", MinimapZoomIn, "TOP", 0, 0)
 
 				-- Zoom in button
 				MinimapZoomIn:SetScale(0.75)
