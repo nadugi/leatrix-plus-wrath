@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.74 (9th December 2021)
+-- 	Leatrix Plus 2.5.75.alpha.1 (11th December 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.74"
+	LeaPlusLC["AddonVer"] = "2.5.75.alpha.1"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -2680,6 +2680,10 @@
 
 			local miniFrame = CreateFrame("FRAME")
 			local LibDBIconStub = LibStub("LibDBIcon-1.0")
+
+			Minimap:SetParent(UIParent)
+			MinimapToggleButton:SetParent(UIParent)
+			QuestWatchFrame:SetFrameStrata("LOW")
 
 			-- Function to set button radius
 			local function SetButtonRad()
