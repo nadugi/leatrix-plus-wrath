@@ -1,5 +1,5 @@
-2.5.75.alpha.1 - 11th December 2021
-- Maintenance update.
+2.5.75.alpha.2 - 12th December 2021
+- For 'Enhance minimap' ('Interface'), added square minimap buttons for ZPerl and BankItems.
 
 2.5.74 - 9th December 2021
 - Fixed a few default UI minimap button locations for 'Enhance minimap' ('Interface') when using the square minimap.
