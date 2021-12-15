@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.75.alpha.8 (15th December 2021)
+-- 	Leatrix Plus 2.5.75.alpha.9 (15th December 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.75.alpha.8"
+	LeaPlusLC["AddonVer"] = "2.5.75.alpha.9"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -427,7 +427,7 @@
 		or	(LeaPlusLC["SquareMinimap"]			~= LeaPlusDB["SquareMinimap"])			-- Square minimap
 		or	(LeaPlusLC["MiniShowBugSack"]		~= LeaPlusDB["MiniShowBugSack"])		-- Exclude BugSack
 		or	(LeaPlusLC["CombineAddonButtons"]	~= LeaPlusDB["CombineAddonButtons"])	-- Combine addon buttons
-		or	(LeaPlusLC["MiniCustomButtons"]		~= LeaPlusDB["MiniCustomButtons"])		-- Include custom buttons
+		or	(LeaPlusLC["MiniCustomButtons"]		~= LeaPlusDB["MiniCustomButtons"])		-- Replace non-standard buttons
 		or	(LeaPlusLC["TipModEnable"]			~= LeaPlusDB["TipModEnable"])			-- Enhance tooltip
 		or	(LeaPlusLC["EnhanceDressup"]		~= LeaPlusDB["EnhanceDressup"])			-- Enhance dressup
 		or	(LeaPlusLC["EnhanceQuestLog"]		~= LeaPlusDB["EnhanceQuestLog"])		-- Enhance quest log
@@ -2689,7 +2689,7 @@
 
 			-- Function to set button radius
 			local function SetButtonRad()
-				if LeaPlusLC["SquareMinimap"] == "On" and LeaPlusLC["CombineAddonButtons"] == "Off" then
+				if LeaPlusLC["SquareMinimap"] == "On" then
 					LibDBIconStub:SetButtonRadius(26 + ((LeaPlusLC["MinimapSize"] - 140) * 0.165))
 				else
 					LibDBIconStub:SetButtonRadius(1)
@@ -2836,10 +2836,12 @@
 				-- Hide LibDBIcon icons
 				local buttons = LibDBIconStub:GetButtonList()
 				for i = 1, #buttons do
+					local button = LibDBIconStub:GetMinimapButton(buttons[i])
 					if LeaPlusLC["MiniShowBugSack"] == "Off" or buttons[i] ~= "BugSack" then
-						local button = LibDBIconStub:GetMinimapButton(buttons[i])
 						button:Hide()
 						button:SetScript("OnShow", function() if not bFrame:IsShown() then button:Hide() end end)
+					elseif buttons[i] == "BugSack" and LeaPlusLC["MiniShowBugSack"] == "On" and LeaPlusLC["SquareMinimap"] == "On" then
+						button:SetScale(0.75)
 					end
 				end
 
@@ -2850,6 +2852,8 @@
 								button:Hide()
 								button:SetScript("OnShow", function() if not bFrame:IsShown() then button:Hide() end end)
 							end
+						elseif name == "BugSack" and LeaPlusLC["MiniShowBugSack"] == "On" and LeaPlusLC["SquareMinimap"] == "On" then
+							button:SetScale(0.75)
 						end
 					end)
 				end)
@@ -3033,10 +3037,10 @@
 			end
 
 			----------------------------------------------------------------------
-			-- Include custom buttons
+			-- Replace non-standard buttons
 			----------------------------------------------------------------------
 
-			-- Include custom buttons for addons that don't use the standard LibDBIcon library
+			-- Replace non-standard buttons for addons that don't use the standard LibDBIcon library
 			if LeaPlusLC["MiniCustomButtons"] == "On" then
 
 				-- Make custom LibDBIcon buttons for addons that don't use LibDBIcon
@@ -9966,7 +9970,7 @@
 				LeaPlusLC:LoadVarChk("SquareMinimap", "Off")				-- Square minimap
 				LeaPlusLC:LoadVarChk("MiniShowBugSack", "Off")				-- Exclude BugSack
 				LeaPlusLC:LoadVarChk("CombineAddonButtons", "Off")			-- Combine addon buttons
-				LeaPlusLC:LoadVarChk("MiniCustomButtons", "Off")			-- Include custom buttons
+				LeaPlusLC:LoadVarChk("MiniCustomButtons", "Off")			-- Replace non-standard buttons
 				LeaPlusLC:LoadVarChk("HideMiniZoomBtns", "Off")				-- Hide zoom buttons
 				LeaPlusLC:LoadVarChk("HideMiniClock", "Off")				-- Hide the clock
 				LeaPlusLC:LoadVarChk("HideMiniZoneText", "Off")				-- Hide the zone text bar
@@ -11860,7 +11864,7 @@
 				LeaPlusDB["SquareMinimap"] = "On"				-- Square minimap
 				LeaPlusDB["MiniShowBugSack"] = "On"				-- Exclude BugSack
 				LeaPlusDB["CombineAddonButtons"] = "Off"		-- Combine addon buttons
-				LeaPlusDB["MiniCustomButtons"] = "On"			-- Include custom buttons
+				LeaPlusDB["MiniCustomButtons"] = "On"			-- Replace non-standard buttons
 				LeaPlusDB["MinimapScale"] = 1.40				-- Minimap scale slider
 				LeaPlusDB["MinimapSize"] = 180					-- Minimap size slider
 				LeaPlusDB["HideMiniZoneText"] = "On"			-- Hide zone text bar
