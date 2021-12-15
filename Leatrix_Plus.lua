@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.75.alpha.6 (15th December 2021)
+-- 	Leatrix Plus 2.5.75.alpha.7 (15th December 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.75.alpha.6"
+	LeaPlusLC["AddonVer"] = "2.5.75.alpha.7"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -2719,7 +2719,7 @@
 			LeaPlusLC:MakeCB(SideMinimap, "HideMiniMapButton", "Hide the world map button", 16, -152, false, "If checked, the world map button will be hidden.")
 			LeaPlusLC:MakeCB(SideMinimap, "HideMiniAddonButtons", "Hide addon buttons", 16, -172, false, "If checked, addon buttons will be hidden while the pointer is not over the minimap.")
 			LeaPlusLC:MakeCB(SideMinimap, "CombineAddonButtons", "Combine addon buttons", 16, -192, true, "If checked, addon buttons will be combined into a single button frame which you can toggle by right-clicking the minimap.|n|nNote that enabling this option will lock out the 'Hide addon buttons' setting.")
-			LeaPlusLC:MakeCB(SideMinimap, "MiniCustomButtons", "Replace custom buttons", 16, -212, true, "If checked, non-standard, custom minimap buttons will be replaced with standard LibDBIcon buttons.|n|nThis will fix the problems of custom buttons not hiding, not following the minimap's shape and not being placed in the button frame but the replaced buttons will use a generic texture.|n|nPlease ask addon authors to use the standard LibDBIcon library for their minimap buttons then this setting won't be necessary.")
+			LeaPlusLC:MakeCB(SideMinimap, "MiniCustomButtons", "Replace non-standard buttons", 16, -212, true, "If checked, non-standard minimap buttons will be replaced with standard LibDBIcon buttons.|n|nThis will fix the problems with non-standard buttons such as not hiding automatically, not following the minimap shape and not being placed in the button frame but the replaced buttons will use a generic texture.|n|nPlease ask addon authors to use the standard LibDBIcon library for their minimap buttons then this setting won't be necessary.")
 			LeaPlusLC:MakeCB(SideMinimap, "SquareMinimap", "Square minimap", 16, -232, true, "If checked, the minimap shape will be square.")
 
 			-- Add slider control
