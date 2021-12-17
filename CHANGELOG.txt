@@ -1,3 +1,6 @@
+2.5.77 - 17th December 2021
+- Another fix for 'Replace non-standard buttons'.
+
 2.5.76 - 16th December 2021
 - Fixed an issue with 'Questie' addon and 'Replace non-standard buttons' for 'Enhance minimap' ('Interface').
 
