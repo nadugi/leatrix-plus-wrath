@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.80.alpha.1 (19th December 2021)
+-- 	Leatrix Plus 2.5.80.alpha.2 (19th December 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.80.alpha.1"
+	LeaPlusLC["AddonVer"] = "2.5.80.alpha.2"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -2894,7 +2894,7 @@
 						elseif name == "BugSack" and LeaPlusLC["MiniShowBugSack"] == "On" and LeaPlusLC["SquareMinimap"] == "On" then
 							button:SetScale(0.75)
 						end
-					-- Move GameTooltip to below the minimap in case the button uses it
+						-- Move GameTooltip to below the minimap in case the button uses it
 						button:HookScript("OnEnter", SetButtonTooltip)
 					end)
 				end)
