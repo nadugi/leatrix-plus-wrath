@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.79 (18th December 2021)
+-- 	Leatrix Plus 2.5.80.alpha.1 (19th December 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.79"
+	LeaPlusLC["AddonVer"] = "2.5.80.alpha.1"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -2849,15 +2849,23 @@
 					end
 				end)
 
-				-- Function to set button tooltip to below the map
-				local function SetButtonTooltip()
-					GameTooltip:ClearAllPoints()
+				-- Position LibDBIcon tooltips when shown
+				LibDBIconTooltip:HookScript("OnShow", function()
+					GameTooltip:Hide()
 					LibDBIconTooltip:ClearAllPoints()
 					if bFrame:GetPoint() == "BOTTOMLEFT" then
 						LibDBIconTooltip:SetPoint("TOPLEFT", Minimap, "BOTTOMLEFT", 0, -6)
-						GameTooltip:SetPoint("TOPLEFT", Minimap, "BOTTOMLEFT", 0, -6)
 					else
 						LibDBIconTooltip:SetPoint("TOPRIGHT", Minimap, "BOTTOMRIGHT", 0, -6)
+					end
+				end)
+
+				-- Function to position GameTooltip below the minimap
+				local function SetButtonTooltip()
+					GameTooltip:ClearAllPoints()
+					if bFrame:GetPoint() == "BOTTOMLEFT" then
+						GameTooltip:SetPoint("TOPLEFT", Minimap, "BOTTOMLEFT", 0, -6)
+					else
 						GameTooltip:SetPoint("TOPRIGHT", Minimap, "BOTTOMRIGHT", 0, -6)
 					end
 				end
@@ -2872,7 +2880,7 @@
 					elseif buttons[i] == "BugSack" and LeaPlusLC["MiniShowBugSack"] == "On" and LeaPlusLC["SquareMinimap"] == "On" then
 						button:SetScale(0.75)
 					end
-					-- Move button tooltip to below the minimap
+					-- Move GameTooltip to below the minimap in case the button uses it
 					button:HookScript("OnEnter", SetButtonTooltip)
 				end
 
@@ -2886,7 +2894,7 @@
 						elseif name == "BugSack" and LeaPlusLC["MiniShowBugSack"] == "On" and LeaPlusLC["SquareMinimap"] == "On" then
 							button:SetScale(0.75)
 						end
-						-- Move button tooltip to below the minimap
+					-- Move GameTooltip to below the minimap in case the button uses it
 						button:HookScript("OnEnter", SetButtonTooltip)
 					end)
 				end)
