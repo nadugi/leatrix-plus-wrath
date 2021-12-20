@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.80.alpha.5 (20th December 2021)
+-- 	Leatrix Plus 2.5.80.alpha.6 (20th December 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.80.alpha.5"
+	LeaPlusLC["AddonVer"] = "2.5.80.alpha.6"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -3101,12 +3101,22 @@
 
 					-- Get non-standard button texture
 					local finalTex = "Interface\\HELPFRAME\\HelpIcon-KnowledgeBase"
-					for i = 1, select('#', _G[name]:GetRegions()) do
-						local region = select(i, _G[name]:GetRegions())
-						if region.GetTexture then
-							local x, y = region:GetSize()
-							if x and x < 30 then
-								finalTex = region:GetTexture()
+
+					if _G[name .. "Icon"] then
+						if _G[name .. "Icon"]:GetObjectType() == "Texture" then
+							local gTex = _G[name .. "Icon"]:GetTexture()
+							if gTex then
+								finalTex = gTex
+							end
+						end
+					else
+						for i = 1, select('#', _G[name]:GetRegions()) do
+							local region = select(i, _G[name]:GetRegions())
+							if region.GetTexture then
+								local x, y = region:GetSize()
+								if x and x < 30 then
+									finalTex = region:GetTexture()
+								end
 							end
 						end
 					end
