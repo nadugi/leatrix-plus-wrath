@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.80.alpha.9 (21st December 2021)
+-- 	Leatrix Plus 2.5.80.alpha.10 (21st December 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.80.alpha.9"
+	LeaPlusLC["AddonVer"] = "2.5.80.alpha.10"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -3150,6 +3150,7 @@
 						end,
 					})
 					LeaPlusDB["CustomAddonButtons"][name] = LeaPlusDB["CustomAddonButtons"][name] or {}
+					LeaPlusDB["CustomAddonButtons"][name].hide = false
 					CustomAddonTable[name] = name
 					local icon = LibStub("LibDBIcon-1.0", true)
 					icon:Register("LeaPlusCustomIcon_" .. name, zeroButton, LeaPlusDB["CustomAddonButtons"][name])
