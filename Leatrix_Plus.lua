@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.80.alpha.7 (21st December 2021)
+-- 	Leatrix Plus 2.5.80.alpha.8 (21st December 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.80.alpha.7"
+	LeaPlusLC["AddonVer"] = "2.5.80.alpha.8"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -3459,7 +3459,7 @@
 			----------------------------------------------------------------------
 
 			-- Help button tooltip
-			SideMinimap.h.tiptext = L["To move the minimap, hold down the alt key and drag it.|n|nThis panel will close automatically if you enter combat."]
+			SideMinimap.h.tiptext = L["To move the minimap, hold down the alt key and drag it.|n|nIf you toggle an addon's minimap button, you may need to reload your UI for the change to take effect.  This only affects a few addons that don't use standard buttons.|n|nThis panel will close automatically if you enter combat."]
 
 			-- Back button handler
 			SideMinimap.b:SetScript("OnClick", function() 
