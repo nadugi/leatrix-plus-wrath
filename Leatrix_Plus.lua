@@ -38,6 +38,14 @@
 		end
 	end
 
+	-- Quit if client has not been restarted
+	if not Leatrix_Plus["FlightData"] then 
+		C_Timer.After(3, function()
+			print("NOTICE! You need to fully restart your game client before you can use this version of Leatrix Plus.")
+		end)
+		return
+	end
+
 ----------------------------------------------------------------------
 --	L00: Leatrix Plus
 ----------------------------------------------------------------------
