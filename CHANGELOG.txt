@@ -1,6 +1,6 @@
-2.5.81.alpha.4 - 27th December 2021
+2.5.81.alpha.5 - 27th December 2021
 - You need to restart your game client after installing this update.
-- Added a new setting 'Show flight times' ('Interface').  If enabled, a flight time progress bar will be shown when you take a flight.  Note that for non-English locales, the progress bar will only show if the start and destination flight point names have been translated.
+- Added a new setting 'Show flight times' ('Interface').  If enabled, a flight time progress bar will be shown when you take a flight (for known flight times).  It will also be shown in the flight map tooltips (for known flight times).  Note that for non-English locales, the progress bar will only show if the start and destination flight point names have been translated.
 - Added a new command '/ltp flight'.  Once entered, all flights will be timed and you will see the total taken time after you land.  Used for getting times of unknown flights so they can be added to LTP.
 
 2.5.80 - 22nd December 2021

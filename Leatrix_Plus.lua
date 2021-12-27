@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.81.alpha.4 (27th December 2021)
+-- 	Leatrix Plus 2.5.81.alpha.5 (27th December 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.81.alpha.4"
+	LeaPlusLC["AddonVer"] = "2.5.81.alpha.5"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -2787,6 +2787,30 @@
 			hooksecurefunc("TaxiRequestEarlyLanding", CeaseProgress)
 			hooksecurefunc("AcceptBattlefieldPort", CeaseProgress) 
 			hooksecurefunc(C_SummonInfo, "ConfirmSummon", CeaseProgress)
+
+			-- Show flight time in node tooltips
+			hooksecurefunc("TaxiNodeOnButtonEnter", function(button)
+				local index = button:GetID()
+				for i = 1, NumTaxiNodes() do
+					local nodeType = TaxiNodeGetType(i)
+					local nodeName = GetNodeName(i)
+					if nodeType == "CURRENT" then
+						-- Get current node
+						local currentNode = L[nodeName]
+						local destination = L[GetNodeName(index)]
+						if currentNode and destination and data[faction] and data[faction][currentNode] and data[faction][currentNode][destination] then
+							local duration = data[faction][currentNode][destination]
+							if duration then
+								--duration = date("%M:%S", duration):gsub("^0","")
+								duration = date("%M:%S", duration)
+								GameTooltip:AddLine(duration, 0.9, 0.9, 0.9, true)
+								GameTooltip:Show()
+							end
+						end
+
+					end
+				end
+			end)
 
 		end
 
