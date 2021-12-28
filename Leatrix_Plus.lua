@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.81.alpha.6 (28th December 2021)
+-- 	Leatrix Plus 2.5.81.alpha.7 (28th December 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.81.alpha.6"
+	LeaPlusLC["AddonVer"] = "2.5.81.alpha.7"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -2813,6 +2813,42 @@
 					end
 				end
 			end)
+
+			-- Show flight time after flight (may be temporary or optional)
+
+			do
+
+				-- Start flight time tracking
+				local timeStart, timeEnd = 0, 0
+				local startName, finishName
+				local flightFrame = CreateFrame("FRAME")
+				hooksecurefunc("TakeTaxiNode", function(node)
+					timeStart = GetTime()
+					for i = 1, NumTaxiNodes() do
+						local nodeType = TaxiNodeGetType(i)
+						local nodeName = GetNodeName(i)
+						local endName = GetNodeName(node)
+						if nodeType == "CURRENT" and nodeName and endName then
+							startName, finishName = L[nodeName], L[endName]
+						end
+					end
+					-- Register landing event only if character is on a taxi
+					C_Timer.After(5, function()
+						if UnitOnTaxi("player") then
+							flightFrame:RegisterEvent("PLAYER_CONTROL_GAINED")
+						end
+					end)
+				end)
+
+				-- Show flight time when flight ends
+				flightFrame:SetScript("OnEvent", function()
+					timeEnd = GetTime()
+					local timeTaken = timeEnd - timeStart
+					LeaPlusLC:Print(startName .. " " .. "to" .. " " .. finishName .. ": " .. string.format("%0.0f", timeTaken) .. " " .. L["seconds"] ..".  " .. L["Report innacurate or missing flight times."])
+					flightFrame:UnregisterEvent("PLAYER_CONTROL_GAINED")
+				end)
+
+			end
 
 		end
 
@@ -12603,7 +12639,7 @@
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowPlayerChain"			, 	"Show player chain"				,	340, -212, 	true,	"If checked, you will be able to show a rare, elite or rare elite chain around the player frame.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowDruidPowerBar"			, 	"Show druid power bar"			,	340, -232, 	true,	"If checked, a power bar will be shown in the player frame when you are playing a shapeshifted druid.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowWowheadLinks"			, 	"Show Wowhead links"			, 	340, -252, 	true,	"If checked, Wowhead links will be shown above the quest log frame.")
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowFlightTimes"			, 	"Show flight times"				, 	340, -272, 	true,	"If checked, a flight time progress bar will be shown when you take a flight.|n|nNote that for non-English locales, the progress bar will only show if the start and destination flight point names have been translated.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowFlightTimes"			, 	"Show flight times"				, 	340, -272, 	true,	"If checked, a flight time progress bar will be shown when you take a flight.|n|nFor the time being, the flight time will be printed in chat when you land so that you can report inaccurate or missing flight times.|n|nNote that for non-English locales, the progress bar will only show if the start and destination flight point names have been translated.")
 
 	LeaPlusLC:CfgBtn("ModMinimapBtn", LeaPlusCB["MinimapMod"])
 	LeaPlusLC:CfgBtn("MoveTooltipButton", LeaPlusCB["TipModEnable"])
