@@ -1,4 +1,4 @@
-2.5.81.alpha.8 - 28th December 2021
+2.5.81.alpha.9 - 28th December 2021
 - You need to restart your game client after installing this update.
 - Added a new setting 'Show flight times' ('Interface').  If enabled, a flight time progress bar will be shown when you take a flight and flight times will be shown in flight map node tooltips (for known flight times).  For the time being, all flight times (whether known or not) will be printed in chat when you land so that you can report inaccurate or missing flight times (there are some of both).  For non-English locales, progress bar and flight times will only be shown if the start and end flight point names have been translated.
 

@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.81.alpha.8 (28th December 2021)
+-- 	Leatrix Plus 2.5.81.alpha.9 (28th December 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.81.alpha.8"
+	LeaPlusLC["AddonVer"] = "2.5.81.alpha.9"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -2751,6 +2751,12 @@
 						if destination and data[faction] and data[faction][currentNode] and data[faction][currentNode][destination] then
 							local duration = data[faction][currentNode][destination]
 							if duration then
+
+								-- Delete an existing progress bar if one exists
+								if LeaPlusLC.FlightProgressBar then
+									LeaPlusLC.FlightProgressBar:Stop()
+									LeaPlusLC.FlightProgressBar = nil
+								end
 
 								-- Create progress bar
 								local mybar = candy:New(texture, 230, 16)
