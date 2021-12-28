@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.81.alpha.7 (28th December 2021)
+-- 	Leatrix Plus 2.5.81.alpha.8 (28th December 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.81.alpha.7"
+	LeaPlusLC["AddonVer"] = "2.5.81.alpha.8"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -2857,12 +2857,14 @@
 					end)
 				end)
 
-				-- Show flight time when flight ends
+				-- Show flight time when flight ends if the localised names exist
 				flightFrame:SetScript("OnEvent", function()
-					timeEnd = GetTime()
-					local timeTaken = timeEnd - timeStart
-					LeaPlusLC:Print(startName .. " " .. "to" .. " " .. finishName .. ": " .. string.format("%0.0f", timeTaken) .. " " .. L["seconds"] ..".  " .. L["Report innacurate or missing flight times."])
-					flightFrame:UnregisterEvent("PLAYER_CONTROL_GAINED")
+					if data[faction][startName] and data[faction][finishName] then
+						timeEnd = GetTime()
+						local timeTaken = timeEnd - timeStart
+						LeaPlusLC:Print(startName .. " " .. "to" .. " " .. finishName .. ": " .. string.format("%0.0f", timeTaken) .. " " .. L["seconds"] ..".  " .. L["Report innacurate or missing flight times."])
+						flightFrame:UnregisterEvent("PLAYER_CONTROL_GAINED")
+					end
 				end)
 
 			end
