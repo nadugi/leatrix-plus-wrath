@@ -2862,7 +2862,7 @@
 					if data[faction][startName] and data[faction][finishName] then
 						timeEnd = GetTime()
 						local timeTaken = timeEnd - timeStart
-						LeaPlusLC:Print(startName .. " " .. "to" .. " " .. finishName .. ": " .. string.format("%0.0f", timeTaken) .. " " .. L["seconds"] ..".  " .. L["Report innacurate or missing flight times."])
+						LeaPlusLC:Print(startName .. " " .. "to" .. " " .. finishName .. ": " .. string.format("%0.0f", timeTaken) .. " " .. L["seconds"] ..".  " .. L["Report innacurate or missing flight times for Leatrix Plus."])
 						flightFrame:UnregisterEvent("PLAYER_CONTROL_GAINED")
 					end
 				end)
