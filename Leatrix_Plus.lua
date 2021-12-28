@@ -2710,9 +2710,26 @@
 			end
 
 			-- Variables
-			local faction, data = UnitFactionGroup("player"), Leatrix_Plus["FlightData"]
+			local faction = UnitFactionGroup("player")
 			local candy = LibStub("LibCandyBar-3.0")
 			local texture = "Interface\\TargetingFrame\\UI-StatusBar"
+
+			-- Copy the flight data table but with localised keys
+			local function DeepCopy(orig)
+				local orig_type = type(orig)
+				local copy
+				if orig_type == 'table' then
+					copy = {}
+					for orig_key, orig_value in next, orig, nil do
+						copy[DeepCopy(L[orig_key])] = DeepCopy(orig_value)
+					end
+					setmetatable(copy, DeepCopy(getmetatable(orig)))
+				else
+					copy = orig
+				end
+				return copy
+			end
+			local data = DeepCopy(Leatrix_Plus["FlightData"])
 
 			-- Function to get node name
 			local function GetNodeName(i)
