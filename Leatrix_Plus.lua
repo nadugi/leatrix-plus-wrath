@@ -2744,10 +2744,10 @@
 					if nodeType == "CURRENT" then
 
 						-- Get current node
-						local currentNode = L[nodeName]
+						local currentNode = nodeName
 
 						-- Get flight duration and start the progress timer
-						local destination = L[GetNodeName(node)]
+						local destination = GetNodeName(node)
 						if destination and data[faction] and data[faction][currentNode] and data[faction][currentNode][destination] then
 							local duration = data[faction][currentNode][destination]
 							if duration then
@@ -2815,8 +2815,8 @@
 					local nodeName = GetNodeName(i)
 					if nodeType == "CURRENT" then
 						-- Get current node
-						local currentNode = L[nodeName]
-						local destination = L[GetNodeName(index)]
+						local currentNode = nodeName
+						local destination = GetNodeName(index)
 						if currentNode and destination and data[faction] and data[faction][currentNode] and data[faction][currentNode][destination] then
 							local duration = data[faction][currentNode][destination]
 							if duration then
@@ -2846,7 +2846,7 @@
 						local nodeName = GetNodeName(i)
 						local endName = GetNodeName(node)
 						if nodeType == "CURRENT" and nodeName and endName then
-							startName, finishName = L[nodeName], L[endName]
+							startName, finishName = nodeName, endName
 						end
 					end
 					-- Register landing event only if character is on a taxi
