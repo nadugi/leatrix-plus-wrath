@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.81.alpha.10 (29th December 2021)
+-- 	Leatrix Plus 2.5.81 (29th December 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.81.alpha.10"
+	LeaPlusLC["AddonVer"] = "2.5.81"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -12674,7 +12674,7 @@
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowPlayerChain"			, 	"Show player chain"				,	340, -212, 	true,	"If checked, you will be able to show a rare, elite or rare elite chain around the player frame.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowDruidPowerBar"			, 	"Show druid power bar"			,	340, -232, 	true,	"If checked, a power bar will be shown in the player frame when you are playing a shapeshifted druid.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowWowheadLinks"			, 	"Show Wowhead links"			, 	340, -252, 	true,	"If checked, Wowhead links will be shown above the quest log frame.")
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowFlightTimes"			, 	"Show flight times"				, 	340, -272, 	true,	"If checked, a flight time progress bar will be shown when you take a flight.|n|nFor the time being, the flight time will be printed in chat when you land so that you can report inaccurate or missing flight times.  So please do so.|n|nReporting is very important as it's the only way that this setting can work as intended.  You can report inaccurate or missing flight times by creating a ticket at github.com/leatrix or by sending a message to leatrix on CurseForge.  In your report, include all the flight information shown in chat when you land.|n|nNote that for non-English locales, the progress bar and flight time will only show if the start and destination flight point names have been translated.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowFlightTimes"			, 	"Show flight times"				, 	340, -272, 	true,	"If checked, a flight time progress bar will be shown when you take a flight.|n|nFor the time being, the flight time will be printed in chat when you land so that you can report inaccurate or missing flight times.  So please do so.|n|nReporting is very important as it's the only way that this setting can work as intended.  You can report inaccurate or missing flight times by creating a ticket at github.com/leatrix or by sending a message to leatrix on CurseForge.  In your report, include all the flight information shown in chat when you land.|n|nNote that for non-English locales, the progress bar and flight time will only show if the start and destination flight point names have been translated.  If you want to help with translations, send a message to leatrix on CurseForge.")
 
 	LeaPlusLC:CfgBtn("ModMinimapBtn", LeaPlusCB["MinimapMod"])
 	LeaPlusLC:CfgBtn("MoveTooltipButton", LeaPlusCB["TipModEnable"])
