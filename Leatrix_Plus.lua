@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.81.alpha.9 (28th December 2021)
+-- 	Leatrix Plus 2.5.81.alpha.10 (29th December 2021)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.81.alpha.9"
+	LeaPlusLC["AddonVer"] = "2.5.81.alpha.10"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -2868,10 +2868,20 @@
 					if data[faction][startName] and data[faction][finishName] then
 						timeEnd = GetTime()
 						local timeTaken = timeEnd - timeStart
-						LeaPlusLC:Print(startName .. " " .. "to" .. " " .. finishName .. ": " .. string.format("%0.0f", timeTaken) .. " " .. L["seconds"] ..".  " .. L["Report innacurate or missing flight times for Leatrix Plus."])
+						LeaPlusLC:Print(startName .. " " .. "to" .. " " .. finishName .. " (" .. faction .. "): " .. string.format("%0.0f", timeTaken) .. " " .. L["seconds"] ..".  " .. L["Report innacurate or missing flight times for Leatrix Plus."])
 						flightFrame:UnregisterEvent("PLAYER_CONTROL_GAINED")
 					end
 				end)
+
+				-- Unregister event for various reasons that stop taxi early
+				local function StopLandingEvent()
+					flightFrame:UnregisterEvent("PLAYER_CONTROL_GAINED")
+				end
+
+				hooksecurefunc("TaxiNodeOnButtonEnter", StopLandingEvent)
+				hooksecurefunc("TaxiRequestEarlyLanding", StopLandingEvent)
+				hooksecurefunc("AcceptBattlefieldPort", StopLandingEvent)
+				hooksecurefunc(C_SummonInfo, "ConfirmSummon", StopLandingEvent)
 
 			end
 
