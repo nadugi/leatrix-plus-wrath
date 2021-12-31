@@ -1,5 +1,5 @@
-2.5.82.alpha.2 - 31st December 2021
-- The 'Show flight times' setting ('Interface') now works with any locale without the need for translations.  Added some missing flight times.
+2.5.82.alpha.3 - 31st December 2021
+- The 'Show flight times' setting ('Interface') now works with any locale without the need for translations.  Added some missing flight times.  After landing from a flight, you will now only see the flight times printed in chat if there is a difference of at least 5 seconds between the actual flight time and the saved flight time or if the flight does not exist in Leatrix Plus database.  So if you see the chat message with flight details, report the flight information shown so that it can be added to Leatrix Plus and you won't see the chat message for that flight again.
 
 2.5.81 - 29th December 2021
 - You need to restart your game client after installing this update.
