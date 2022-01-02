@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.82.alpha.5 (1st January 2022)
+-- 	Leatrix Plus 2.5.82.alpha.6 (2nd January 2022)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.82.alpha.5"
+	LeaPlusLC["AddonVer"] = "2.5.82.alpha.6"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -12198,7 +12198,7 @@
 				return
 			elseif str == "dis" then
 				-- Disband group
-				if not LeaPlusLC:IsInLFGQueue() then
+				if not LeaPlusLC:IsInLFGQueue() and not IsInGroup(LE_PARTY_CATEGORY_INSTANCE) then
 					local x = GetNumGroupMembers() or 0
 					for i = x, 1, -1 do
 						if GetNumGroupMembers() > 0 then
