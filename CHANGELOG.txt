@@ -1,5 +1,5 @@
-2.5.82.alpha.7 - 2nd January 2022
-- The 'Show flight times' setting ('Interface') now works with any locale without the need for translations.  Added lots of missing flight times.  After landing from a flight, if the saved flight time is missing or incorrect, you will see a copy-friendly window with the flight details making it very easy for you to report the missing or incorrect flight time.
+2.5.82 - 5th January 2022
+- The 'Show flight times' setting ('Interface') now works with any locale without the need for translations.  Added lots of missing flight times.  After landing from a flight, if the saved flight time is missing or incorrect (greater than 5 second difference), you will see a copy-friendly window with the flight details making it very easy for you to report the missing or incorrect flight time.
 
 2.5.81 - 29th December 2021
 - You need to restart your game client after installing this update.
