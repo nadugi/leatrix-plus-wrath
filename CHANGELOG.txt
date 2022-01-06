@@ -1,7 +1,8 @@
-2.5.83.alpha.1 - 5th January 2022
+2.5.83.alpha.2 - 6th January 2022
 - Updated flight times:
 - Horde: Area 52 to Shattrath
 - Horde: Hellfire Peninsula to Shattrath
+- Horde: Shattrath to Hellfire
 - Horde: Shattrath to The Stormspire
 - Horde: Shattrath to Thrallmar
 - Horde: The Stormspire to Garadar
