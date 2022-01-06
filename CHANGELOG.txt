@@ -1,4 +1,4 @@
-2.5.83.alpha.2 - 6th January 2022
+2.5.83.alpha.3 - 6th January 2022
 - Updated flight times:
 - Horde: Area 52 to Shattrath
 - Horde: Hellfire Peninsula to Shattrath
@@ -6,6 +6,10 @@
 - Horde: Shattrath to The Stormspire
 - Horde: Shattrath to Thrallmar
 - Horde: The Stormspire to Garadar
+- Alliance: Refuge Pointe to Booty Bay
+- Alliance: Stormwind to Thelsamar
+- Alliance: Shattrath to Toshley's Station
+- Many thanks to the people that reported their flight details when prompted.  If everyone reports flight details when prompted to do so by the addon, every flight time will be accurate and you will never see those prompt windows again.
 
 2.5.82 - 5th January 2022
 - The 'Show flight times' setting ('Interface') now works with any locale without the need for translations.  Added lots of missing flight times.  After landing from a flight, if the saved flight time is missing or incorrect (greater than 5 second difference), you will see a copy-friendly window with the flight details making it very easy for you to report the missing or incorrect flight time.

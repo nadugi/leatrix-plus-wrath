@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.83.alpha.2 (6th January 2022)
+-- 	Leatrix Plus 2.5.83.alpha.3 (6th January 2022)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.83.alpha.2"
+	LeaPlusLC["AddonVer"] = "2.5.83.alpha.3"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -2868,7 +2868,7 @@
 						flightFrame:SetScript("OnEvent", function()
 							local timeEnd = GetTime()
 							local timeTaken = timeEnd - timeStart
-							local flightMsg = L["Flight details"] .. ": " .. nodeName .. " (" .. currentNode .. ") to" .. " " .. barName .. " (" .. destination .. ") (" .. faction .. ") took " .. string.format("%0.0f", timeTaken) .. " " .. L["seconds"] .. "."
+							local flightMsg = L["Flight details"] .. " (" .. L["BCC"].. "): " .. nodeName .. " (" .. currentNode .. ") " .. L["to"] .. " " .. barName .. " (" .. destination .. ") (" .. faction .. ") " .. L["took"] .. " " .. string.format("%0.0f", timeTaken) .. " " .. L["seconds"] .. "."
 							if destination and data[faction] and data[faction][continent] and data[faction][continent][currentNode] and data[faction][continent][currentNode][destination] then
 								local savedDuration = data[faction][continent][currentNode][destination]
 								if savedDuration then
