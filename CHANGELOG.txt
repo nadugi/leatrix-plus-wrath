@@ -1,4 +1,4 @@
-2.5.83.alpha.4 - 6th January 2022
+2.5.83.alpha.5 - 6th January 2022
 - Updated flight times:
 - Horde: Area 52 to Shattrath
 - Horde: Hellfire Peninsula to Shattrath
@@ -6,6 +6,7 @@
 - Horde: Shattrath to The Stormspire
 - Horde: Shattrath to Thrallmar
 - Horde: The Stormspire to Garadar
+- Alliance: Blood Watch to The Exodar
 - Alliance: Everlook to Astranaar
 - Alliance: Nethergarde Keep to Booty Bay
 - Alliance: Nethergarde Keep to Southshore
@@ -15,6 +16,9 @@
 - Alliance: Shattrath to Toshley's Station
 - Alliance: Stormwind to Thelsamar
 - Alliance: Telredor to Honor Hold
+- Alliance: The Altar of Sha'tar to every connected flight point (and vice versa)
+- Alliance: The Exodar to Blood Watch
+
 - Many thanks to the people that reported their flight details when prompted.  If everyone reports flight details when prompted to do so by the addon, every flight time will be accurate and you will never see those report windows again.
 
 2.5.82 - 5th January 2022
