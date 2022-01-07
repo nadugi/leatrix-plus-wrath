@@ -1,4 +1,4 @@
-2.5.83.alpha.5 - 6th January 2022
+2.5.83.alpha.6 - 7th January 2022
 - Updated flight times:
 - Horde: Area 52 to Shattrath
 - Horde: Hellfire Peninsula to Shattrath
@@ -7,6 +7,7 @@
 - Horde: Shattrath to Thrallmar
 - Horde: The Stormspire to Garadar
 - Alliance: Blood Watch to The Exodar
+- Alliance: Evergrove to Honor Hold
 - Alliance: Everlook to Astranaar
 - Alliance: Nethergarde Keep to Booty Bay
 - Alliance: Nethergarde Keep to Southshore
