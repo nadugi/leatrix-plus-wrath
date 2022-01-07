@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.83.alpha.7 (7th January 2022)
+-- 	Leatrix Plus 2.5.83.alpha.8 (7th January 2022)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.83.alpha.7"
+	LeaPlusLC["AddonVer"] = "2.5.83.alpha.8"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -2856,6 +2856,9 @@
 						local destination = string.format("%0.2f", endX) .. ":" .. string.format("%0.2f", endY)
 						local barName = GetNodeName(node)
 
+						-- Get number of hops to destination
+						local numHops = GetNumRoutes(node)
+
 						-- Handle flight time not correct or flight does not exist in database
 						local timeStart = GetTime()
 						C_Timer.After(5, function()
@@ -2868,7 +2871,7 @@
 						flightFrame:SetScript("OnEvent", function()
 							local timeEnd = GetTime()
 							local timeTaken = timeEnd - timeStart
-							local flightMsg = L["Flight details"] .. " (" .. L["BCC"].. "): " .. nodeName .. " (" .. currentNode .. ") " .. L["to"] .. " " .. barName .. " (" .. destination .. ") (" .. faction .. ") " .. L["took"] .. " " .. string.format("%0.0f", timeTaken) .. " " .. L["seconds"] .. "."
+							local flightMsg = L["Flight details"] .. " (" .. L["BCC"].. "): " .. nodeName .. " (" .. currentNode .. ") " .. L["to"] .. " " .. barName .. " (" .. destination .. ") (" .. faction .. ") " .. L["took"] .. " " .. string.format("%0.0f", timeTaken) .. " " .. L["seconds"] .. " (" .. numHops .. " " .. L["hop"] ..")."
 							if destination and data[faction] and data[faction][continent] and data[faction][continent][currentNode] and data[faction][continent][currentNode][destination] then
 								local savedDuration = data[faction][continent][currentNode][destination]
 								if savedDuration then
@@ -2969,6 +2972,9 @@
 						local endX, endY = TaxiNodePosition(index)
 						local destination = string.format("%0.2f", endX) .. ":" .. string.format("%0.2f", endY)
 
+						-- Get number of hops to destination
+						local numEnterHops = GetNumRoutes(index)
+
 						-- print(GetNodeName(index), destination) -- Debug
 
 						if currentNode and destination and data[faction] and data[faction][continent] and data[faction][continent][currentNode] and data[faction][continent][currentNode][destination] then
@@ -2976,7 +2982,7 @@
 							if duration then
 								--duration = date("%M:%S", duration):gsub("^0","")
 								duration = date("%M:%S", duration)
-								GameTooltip:AddLine(duration, 0.9, 0.9, 0.9, true)
+								GameTooltip:AddLine(duration .. " - " .. numEnterHops .. " " .. L["hop"], 0.9, 0.9, 0.9, true)
 								GameTooltip:Show()
 							end
 						end
