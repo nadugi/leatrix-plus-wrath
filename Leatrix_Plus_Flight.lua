@@ -1013,6 +1013,9 @@
 					["0.50:0.42:0.48:0.39"] = 53, -- Aerie Peak, Chillwind Camp
 					["0.50:0.42:0.61:0.35"] = 164, -- Aerie Peak, Light's Hope Chapel
 
+					-- Alliance: Altar of Sha'tar (Shadowmoon Valley)
+					["0.81:0.77:0.55:0.77:0.44:0.67"] = 254, -- Altar of Sha'tar, Allerian Stronghold, Shattrath
+
 					-- Alliance: Booty Bay (Stranglethorn Vale)
 					["0.41:0.93:0.39:0.80"] = 181, -- Booty Bay, Sentinel Hill
 					["0.41:0.93:0.43:0.82"] = 118, -- Booty Bay, Rebel Camp
