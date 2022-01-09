@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.83.alpha.12 (9th January 2022)
+-- 	Leatrix Plus 2.5.83.alpha.13 (9th January 2022)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.83.alpha.12"
+	LeaPlusLC["AddonVer"] = "2.5.83.alpha.13"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -36,14 +36,6 @@
 			end)
 			return
 		end
-	end
-
-	-- Quit if client has not been restarted
-	if not Leatrix_Plus["FlightData"] then 
-		C_Timer.After(3, function()
-			print("NOTICE! You need to fully restart your game client before you can use this version of Leatrix Plus.")
-		end)
-		return
 	end
 
 ----------------------------------------------------------------------
@@ -2704,6 +2696,9 @@
 
 		if LeaPlusLC["ShowFlightTimes"] == "On" then
 
+			-- Load flight data
+			Leatrix_Plus:LoadFlightData()
+
 			-- Create editbox
 			local editFrame = CreateFrame("ScrollFrame", nil, UIParent, "InputScrollFrameTemplate")
 
@@ -2817,12 +2812,6 @@
 			local flightFrame = CreateFrame("FRAME")
 			LeaPlusLC.flightFrame = flightFrame
 
-			-- Set game title as shown in incorrect flight details window
-			local gameTitle = L["Classic Era"]
-			if C_Seasons.HasActiveSeason() then
-				gameTitle = L["Classic Era (SoM)"]
-			end
-
 			-- Function to get continent
 			local function getContinent()
 				local mapID = C_Map.GetBestMapForUnit("player")
@@ -2874,7 +2863,7 @@
 							routeString = routeString .. ":" .. hopPos
 						end
 
-						debugString = debugString .. '"] = TimeTakenPlaceHolder'
+						debugString = debugString .. '"] = TimeTakenPlaceHolder,'
 						debugString = debugString .. " -- " .. nodeName
 						for i = 2, numHops + 1 do
 							local fpName = string.split(",", TaxiNodeName(TaxiGetNodeSlot(node, i, true)))
