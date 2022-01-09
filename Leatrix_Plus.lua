@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.83.alpha.9 (7th January 2022)
+-- 	Leatrix Plus 2.5.83.alpha.10 (9th January 2022)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.83.alpha.9"
+	LeaPlusLC["AddonVer"] = "2.5.83.alpha.10"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -2817,6 +2817,12 @@
 			local flightFrame = CreateFrame("FRAME")
 			LeaPlusLC.flightFrame = flightFrame
 
+			-- Set game title as shown in incorrect flight details window
+			local gameTitle = L["Classic Era"]
+			if C_Seasons.HasActiveSeason() then
+				gameTitle = L["Classic Era (SoM)"]
+			end
+
 			-- Function to get continent
 			local function getContinent()
 				local mapID = C_Map.GetBestMapForUnit("player")
@@ -2858,6 +2864,23 @@
 
 						-- Get number of hops to destination
 						local numHops = GetNumRoutes(node)
+						local debugString = '["' .. currentNode
+						local routeString = currentNode
+						for i = 2, numHops + 1 do
+							local hopPosX, hopPosY = TaxiNodePosition(TaxiGetNodeSlot(node, i, true)) -- TaxiNodeName
+							local hopPos = string.format("%0.2f", hopPosX) .. ":" .. string.format("%0.2f", hopPosY)
+							local fpName = string.split(", ", TaxiNodeName(TaxiGetNodeSlot(node, i, true)))
+							-- debugString = debugString .. ":" .. fpName .. ":" .. hopPos
+							debugString = debugString .. ":" .. hopPos
+							routeString = routeString .. ":" .. hopPos
+						end
+
+						debugString = debugString .. '"] = TimeTakenPlaceHolder'
+						debugString = debugString .. " -- " .. nodeName
+						for i = 2, numHops + 1 do
+							local fpName = string.split(",", TaxiNodeName(TaxiGetNodeSlot(node, i, true)))
+							debugString = debugString .. ", " .. fpName
+						end
 
 						-- Handle flight time not correct or flight does not exist in database
 						local timeStart = GetTime()
@@ -2871,28 +2894,30 @@
 						flightFrame:SetScript("OnEvent", function()
 							local timeEnd = GetTime()
 							local timeTaken = timeEnd - timeStart
-							local flightMsg = L["Flight details"] .. " (" .. L["BCC"].. "): " .. nodeName .. " (" .. currentNode .. ") " .. L["to"] .. " " .. barName .. " (" .. destination .. ") (" .. faction .. ") " .. L["took"] .. " " .. string.format("%0.0f", timeTaken) .. " " .. L["seconds"] .. " (" .. numHops .. " " .. L["hop"] ..")."
-							if destination and data[faction] and data[faction][continent] and data[faction][continent][currentNode] and data[faction][continent][currentNode][destination] then
-								local savedDuration = data[faction][continent][currentNode][destination]
+							debugString = gsub(debugString, "TimeTakenPlaceHolder", string.format("%0.0f", timeTaken))
+							local flightMsg = L["Flight details"] .. " (" .. L["BCC"].. "): " .. nodeName .. " (" .. currentNode .. ") " .. L["to"] .. " " .. barName .. " (" .. destination .. ") (" .. faction .. ") " .. L["took"] .. " " .. string.format("%0.0f", timeTaken) .. " " .. L["seconds"] .. " (" .. numHops .. " " .. L["hop"] ..").|n|n" .. debugString .. "|n|n"
+							if destination and data[faction] and data[faction][continent] and data[faction][continent][routeString] then
+								local savedDuration = data[faction][continent][routeString]
 								if savedDuration then
 									if timeTaken > (savedDuration + 5) or timeTaken < (savedDuration - 5) then
-										local editMsg = introMsg .. flightMsg .. "  " .. L["This flight's actual time of"] .. " " .. string.format("%0.0f", timeTaken) .. " " .. L["seconds does not match the saved flight time of"] .. " " .. savedDuration .. " " .. L["seconds"] .. "."
+										local editMsg = introMsg .. flightMsg .. L["This flight's actual time of"] .. " " .. string.format("%0.0f", timeTaken) .. " " .. L["seconds does not match the saved flight time of"] .. " " .. savedDuration .. " " .. L["seconds"] .. "."
 										editBox:SetText(editMsg); editFrame:Show()
 									end
 								else
-									local editMsg = introMsg .. flightMsg .."  " .. L["This flight does not have a saved duration in the database."]
+									local editMsg = introMsg .. flightMsg .. L["This flight does not have a saved duration in the database."]
 									editBox:SetText(editMsg); editFrame:Show()
 								end
 							else
-								local editMsg = introMsg .. flightMsg .."  " .. L["This flight does not exist in the database."]
+								local editMsg = introMsg .. flightMsg .. L["This flight does not exist in the database."]
 								editBox:SetText(editMsg); editFrame:Show()
 							end
 							flightFrame:UnregisterEvent("PLAYER_CONTROL_GAINED")
 						end)
 
 						-- Show flight progress bar if flight exists in database
-						if destination and data[faction] and data[faction][continent] and data[faction][continent][currentNode] and data[faction][continent][currentNode][destination] then
-							local duration = data[faction][continent][currentNode][destination]
+						if data[faction] and data[faction][continent] and data[faction][continent][routeString] then
+
+							local duration = data[faction][continent][routeString]
 							if duration then
 
 								-- Delete an existing progress bar if one exists
@@ -2937,6 +2962,7 @@
 								LeaPlusLC.FlightProgressBar = mybar
 
 							end
+
 						end
 
 					end
@@ -2968,24 +2994,76 @@
 						local startX, startY = TaxiNodePosition(i)
 						local currentNode = string.format("%0.2f", startX) .. ":" .. string.format("%0.2f", startY)
 
-						-- Get destination
-						local endX, endY = TaxiNodePosition(index)
-						local destination = string.format("%0.2f", endX) .. ":" .. string.format("%0.2f", endY)
-
 						-- Get number of hops to destination
 						local numEnterHops = GetNumRoutes(index)
 
-						-- print(GetNodeName(index), destination) -- Debug
+						-- local debugString = nodeName .. ":" .. currentNode
+						local debugString = '["' .. currentNode
+						local routeString = currentNode
+
+						for i = 2, numEnterHops + 1 do
+							local hopPosX, hopPosY = TaxiNodePosition(TaxiGetNodeSlot(index, i, true)) -- TaxiNodeName
+							local hopPos = string.format("%0.2f", hopPosX) .. ":" .. string.format("%0.2f", hopPosY)
+							local fpName = string.split(", ", TaxiNodeName(TaxiGetNodeSlot(index, i, true)))
+							debugString = debugString .. ":" .. hopPos
+							routeString = routeString .. ":" .. hopPos
+						end
+
+						debugString = debugString .. '"] = '
+
+
+-- temporary
+local tempDebugTime = 0
+-- Get flight duration and start the progress timer
+local endX, endY = TaxiNodePosition(index)
+local destination = string.format("%0.2f", endX) .. ":" .. string.format("%0.2f", endY)
+local barName = GetNodeName(index)
+--print("KKKKKKKKKKK" .. barName)
+if currentNode and destination and data[faction] and data[faction][continent] and data[faction][continent][currentNode] and data[faction][continent][currentNode][destination] then
+ tempDebugTime = data[faction][continent][currentNode][destination]
+if tempDebugTime then
+	--duration = date("%M:%S", duration):gsub("^0","")
+	--duration = date("%M:%S", duration)
+--print(tempDebugTime)
+	--GameTooltip:AddLine(tempDebugTime .. " - " .. numEnterHops .. " " .. L["hop"], 0.9, 0.9, 0.9, true)
+	--GameTooltip:Show()
+end
+end
+
 
 						if currentNode and destination and data[faction] and data[faction][continent] and data[faction][continent][currentNode] and data[faction][continent][currentNode][destination] then
-							local duration = data[faction][continent][currentNode][destination]
-							if duration then
+							local tempDebugTime = data[faction][continent][currentNode][destination]
+							if tempDebugTime then
+								debugString = debugString .. tempDebugTime .. ","
+
+							end
+						end
+
+
+						if data[faction] and data[faction][continent] and data[faction][continent][routeString] then
+
+							local duration = data[faction][continent][routeString]
+							if duration and type(duration) ~= "table" then
 								--duration = date("%M:%S", duration):gsub("^0","")
+								-- debugString = debugString .. duration .. ","
 								duration = date("%M:%S", duration)
 								GameTooltip:AddLine(duration .. " - " .. numEnterHops .. " " .. L["hop"], 0.9, 0.9, 0.9, true)
 								GameTooltip:Show()
 							end
+
 						end
+
+						debugString = debugString .. " -- " .. nodeName
+
+						for i = 2, numEnterHops + 1 do
+							local fpName = string.split(",", TaxiNodeName(TaxiGetNodeSlot(index, i, true)))
+							debugString = debugString .. ", " .. fpName
+						end
+
+						 print(debugString)
+
+
+						-- print(GetNodeName(index), destination) -- Debug
 
 					end
 				end
