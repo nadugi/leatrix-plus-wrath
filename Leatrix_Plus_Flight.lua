@@ -1828,6 +1828,7 @@
 					["0.44:0.67:0.38:0.50:0.42:0.37:0.58:0.27"] = 235, -- Shattrath, Telredor, Toshley's Station, Area 52
 					["0.44:0.67:0.38:0.50:0.42:0.37:0.58:0.27:0.72:0.28"] = 301, -- Shattrath, Telredor, Toshley's Station, Area 52, Cosmowrench
 					["0.44:0.67:0.38:0.50:0.42:0.37:0.58:0.27:0.63:0.18"] = 284, -- Shattrath, Telredor, Toshley's Station, Area 52, The Stormspire
+					["0.44:0.67:0.55:0.77:0.69:0.85"] = 235, -- Shattrath, Allerian Stronghold, Wildhammer Stronghold
 
 					-- Alliance: Sylvanaar (Blade's Edge Mountains)
 					["0.32:0.34:0.38:0.50:0.27:0.74"] = 207, -- Sylvanaar, Telredor, Telaar
