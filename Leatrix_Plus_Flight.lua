@@ -822,6 +822,10 @@
 				["0.49:0.36:0.58:0.27:0.72:0.28"] = 122, -- Mok'Nathal Village, Area 52, Cosmowrench
 				["0.49:0.36:0.58:0.27:0.63:0.18"] = 104, -- Mok'Nathal Village, Area 52, The Stormspire
 
+				-- Horde: Sanctum of the Stars (Shadowmoon Valley)
+				["0.78:0.85:0.66:0.77"] = 61 -- Sanctum of the Stars, Shadowmoon Village
+				["0.78:0.85:0.51:0.73"] = 134 -- Sanctum of the Stars, Stonebreaker Hold
+
 				-- Horde: Shadowmoon Village (Shadowmoon Valley)
 				["0.66:0.77:0.51:0.73"] = 73, -- Shadowmoon Village, Stonebreaker Hold
 				["0.66:0.77:0.51:0.73:0.44:0.67"] = 126, -- Shadowmoon Village, Stonebreaker Hold, Shattrath
@@ -838,6 +842,7 @@
 				["0.66:0.77:0.51:0.73:0.44:0.67:0.44:0.51:0.49:0.36:0.58:0.27"] = 331, -- Shadowmoon Village, Stonebreaker Hold, Shattrath, Swamprat Post, Mok'Nathal Village, Area 52
 				["0.66:0.77:0.51:0.73:0.44:0.67:0.44:0.51:0.49:0.36:0.58:0.27:0.72:0.28"] = 397, -- Shadowmoon Village, Stonebreaker Hold, Shattrath, Swamprat Post, Mok'Nathal Village, Area 52, Cosmowrench
 				["0.66:0.77:0.51:0.73:0.44:0.67:0.44:0.51:0.49:0.36:0.58:0.27:0.63:0.18"] = 384, -- Shadowmoon Village, Stonebreaker Hold, Shattrath, Swamprat Post, Mok'Nathal Village, Area 52, The Stormspire
+				["0.66:0.77:0.78:0.85"] = 66 -- Shadowmoon Village, Sanctum of the Stars
 
 				-- Horde: Shattrath (Terokkar Forest)
 				["0.44:0.67:0.23:0.50"] = 136, -- Shattrath, Zabra'jin
