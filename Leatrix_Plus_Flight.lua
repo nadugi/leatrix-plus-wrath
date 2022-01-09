@@ -1013,9 +1013,6 @@
 					["0.50:0.42:0.48:0.39"] = 53, -- Aerie Peak, Chillwind Camp
 					["0.50:0.42:0.61:0.35"] = 164, -- Aerie Peak, Light's Hope Chapel
 
-					-- Alliance: Altar of Sha'tar (Shadowmoon Valley)
-					["0.81:0.77:0.55:0.77:0.44:0.67"] = 254, -- Altar of Sha'tar, Allerian Stronghold, Shattrath
-
 					-- Alliance: Booty Bay (Stranglethorn Vale)
 					["0.41:0.93:0.39:0.80"] = 181, -- Booty Bay, Sentinel Hill
 					["0.41:0.93:0.43:0.82"] = 118, -- Booty Bay, Rebel Camp
@@ -1717,6 +1714,9 @@
 					["0.55:0.77:0.44:0.67:0.38:0.50:0.42:0.37:0.58:0.27"] = 311, -- Allerian Stronghold, Shattrath, Telredor, Toshley's Station, Area 52
 					["0.55:0.77:0.44:0.67:0.38:0.50:0.42:0.37:0.58:0.27:0.63:0.18"] = 358, -- Allerian Stronghold, Shattrath, Telredor, Toshley's Station, Area 52, The Stormspire
 					["0.55:0.77:0.44:0.67:0.38:0.50:0.42:0.37:0.58:0.27:0.72:0.28"] = 375, -- Allerian Stronghold, Shattrath, Telredor, Toshley's Station, Area 52, Cosmowrench
+
+					-- Alliance: Altar of Sha'tar (Shadowmoon Valley)
+					["0.81:0.77:0.55:0.77:0.44:0.67"] = 254, -- Altar of Sha'tar, Allerian Stronghold, Wildhammer (not recorded), Shattrath
 
 					-- Alliance: Area 52 (Netherstorm)
 					["0.58:0.27:0.42:0.37:0.38:0.50:0.27:0.74"] = 290, -- Area 52, Toshley's Station, Telredor, Telaar
