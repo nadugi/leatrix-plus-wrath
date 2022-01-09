@@ -864,6 +864,7 @@
 					["0.44:0.67:0.44:0.51:0.49:0.36:0.58:0.27"] = 205, -- Shattrath, Swamprat Post, Mok'Nathal Village, Area 52
 					["0.44:0.67:0.44:0.51:0.49:0.36:0.58:0.27:0.63:0.18"] = 329, -- Shattrath, Swamprat Post, Mok'Nathal Village, Area 52, The Stormspire
 					["0.44:0.67:0.44:0.51:0.49:0.36:0.58:0.27:0.72:0.28"] = 270, -- Shattrath, Swamprat Post, Mok'Nathal Village, Area 52, Cosmowrench
+					["0.44:0.67:0.51:0.73:0.66:0.77:0.81:0.77"] = 215, -- Shattrath, Stonebreaker Hold, Shadowmoon Village, Altar of Sha'tar
 
 					-- Horde: Spinebreaker Ridge (Hellfire Peninsula)
 					["0.68:0.63:0.65:0.50:0.54:0.57:0.29:0.62"] = 263, -- Spinebreaker Ridge, Thrallmar, Falcon Watch, Garadar
@@ -898,6 +899,7 @@
 					["0.51:0.73:0.44:0.67:0.44:0.51:0.49:0.36:0.58:0.27"] = 261, -- Stonebreaker Hold, Shattrath, Swamprat Post, Mok'Nathal Village, Area 52
 					["0.51:0.73:0.44:0.67:0.44:0.51:0.49:0.36:0.58:0.27:0.72:0.28"] = 330, -- Stonebreaker Hold, Shattrath, Swamprat Post, Mok'Nathal Village, Area 52, Cosmowrench
 					["0.51:0.73:0.44:0.67:0.44:0.51:0.49:0.36:0.58:0.27:0.63:0.18"] = 313, -- Stonebreaker Hold, Shattrath, Swamprat Post, Mok'Nathal Village, Area 52, The Stormspire
+					["0.51:0.73:0.66:0.77:0.78:0.85"] = 133, -- Stonebreaker Hold, Shadowmoon Village, Sanctum of the Stars
 
 					-- Horde: Swamprat Post (Zangarmarsh)
 					["0.44:0.51:0.44:0.67:0.51:0.73:0.66:0.77"] = 220, -- Swamprat Post, Shattrath, Stonebreaker Hold, Shadowmoon Village
@@ -1021,7 +1023,7 @@
 					["0.41:0.93:0.43:0.82:0.47:0.79:0.55:0.81"] = 252, -- Booty Bay, Rebel Camp, Darkshire, Nethergarde Keep
 					["0.41:0.93:0.43:0.82:0.47:0.79:0.50:0.75"] = 230, -- Booty Bay, Rebel Camp, Darkshire, Lakeshire
 					["0.41:0.93:0.43:0.82:0.47:0.79:0.50:0.75:0.52:0.72"] = 291, -- Booty Bay, Rebel Camp, Darkshire, Lakeshire, Morgan's Vigil
-					["0.41:0.93:0.41:0.73"] = 220, -- Booty Bay, Stormwind
+					["0.41:0.93:0.41:0.73"] = 200, -- Booty Bay, Stormwind
 					["0.41:0.93:0.41:0.73:0.47:0.65"] = 318, -- Booty Bay, Stormwind, Thorium Point
 					["0.41:0.93:0.41:0.73:0.47:0.65:0.53:0.61"] = 397, -- Booty Bay, Stormwind, Thorium Point, Thelsamar
 					["0.41:0.93:0.41:0.73:0.47:0.59"] = 464, -- Booty Bay, Stormwind, Ironforge
@@ -1265,6 +1267,7 @@
 					["0.41:0.73:0.47:0.65:0.53:0.61:0.51:0.47:0.50:0.42"] = 508, -- Stormwind, Thorium Point, Thelsamar, Refuge Pointe, Aerie Peak
 					["0.41:0.73:0.47:0.59:0.48:0.39"] = 506, -- Stormwind, Ironforge, Chillwind Camp
 					["0.41:0.73:0.47:0.59:0.61:0.35"] = 563, -- Stormwind, Ironforge, Light's Hope Chapel
+					["0.41:0.73:0.47:0.59:0.61:0.35:0.61:0.28"] = 621, -- Stormwind, Ironforge, Light's Hope Chapel, Zul'Aman
 
 					-- Alliance: Thelsamar (Loch Modan)
 					["0.53:0.61:0.47:0.65:0.41:0.73:0.41:0.93"] = 390, -- Thelsamar, Thorium Point, Stormwind, Booty Bay
@@ -1574,6 +1577,7 @@
 					["0.61:0.55:0.61:0.40:0.58:0.39:0.50:0.35:0.53:0.26"] = 389, -- Ratchet, Talrendis Point, Forest Song, Emerald Sanctuary, Talonbranch Glade
 					["0.61:0.55:0.61:0.40:0.65:0.23:0.55:0.21"] = 420, -- Ratchet, Talrendis Point, Everlook, Moonglade
 					["0.61:0.55:0.61:0.40:0.65:0.23"] = 310, -- Ratchet, Talrendis Point, Everlook
+					["0.61:0.55:0.46:0.40:0.50:0.35"] = 276, -- Ratchet, Astranaar, Emerald Sanctuary
 
 					-- Alliance: Rut'theran Village (Teldrassil)
 					["0.42:0.16:0.43:0.25:0.31:0.69"] = 557, -- Rut'theran Village, Auberdine, Feathermoon
@@ -1715,9 +1719,14 @@
 					["0.55:0.77:0.44:0.67:0.38:0.50:0.42:0.37:0.58:0.27"] = 311, -- Allerian Stronghold, Shattrath, Telredor, Toshley's Station, Area 52
 					["0.55:0.77:0.44:0.67:0.38:0.50:0.42:0.37:0.58:0.27:0.63:0.18"] = 358, -- Allerian Stronghold, Shattrath, Telredor, Toshley's Station, Area 52, The Stormspire
 					["0.55:0.77:0.44:0.67:0.38:0.50:0.42:0.37:0.58:0.27:0.72:0.28"] = 375, -- Allerian Stronghold, Shattrath, Telredor, Toshley's Station, Area 52, Cosmowrench
+					["0.55:0.77:0.69:0.85:0.81:0.77"] = 161, -- Allerian Stronghold, Wildhammer Stronghold, Altar of Sha'tar
 
 					-- Alliance: Altar of Sha'tar (Shadowmoon Valley)
-					["0.81:0.77:0.55:0.77:0.44:0.67"] = 254, -- Altar of Sha'tar, Allerian Stronghold, Wildhammer (not recorded), Shattrath
+					["0.81:0.77:0.69:0.85"] = 81, -- Altar of Sha'tar, Wildhammer Stronghold
+					["0.81:0.77:0.55:0.77:0.44:0.67"] = 254, -- Altar of Sha'tar, Allerian Stronghold, Shattrath
+					["0.81:0.77:0.55:0.77:0.65:0.58:0.75:0.50"] = 330, -- Altar of Sha'tar, Allerian Stronghold, Honor Hold, Shatter Point
+					["0.81:0.77:0.55:0.77:0.65:0.58:0.79:0.55"] = 336, -- Altar of Sha'tar, Allerian Stronghold, Honor Hold, Hellfire Peninsula
+					["0.81:0.77:0.55:0.77"] = 182, -- Altar of Sha'tar, Allerian Stronghold
 
 					-- Alliance: Area 52 (Netherstorm)
 					["0.58:0.27:0.42:0.37:0.38:0.50:0.27:0.74"] = 290, -- Area 52, Toshley's Station, Telredor, Telaar
@@ -1782,6 +1791,8 @@
 					["0.79:0.55:0.52:0.51:0.38:0.50:0.42:0.37:0.58:0.27"] = 348, -- Hellfire Peninsula, Temple of Telhamat, Telredor, Toshley's Station, Area 52
 					["0.79:0.55:0.52:0.51:0.38:0.50:0.42:0.37:0.58:0.27:0.72:0.28"] = 413, -- Hellfire Peninsula, Temple of Telhamat, Telredor, Toshley's Station, Area 52, Cosmowrench
 					["0.79:0.55:0.52:0.51:0.38:0.50:0.42:0.37:0.58:0.27:0.63:0.18"] = 396, -- Hellfire Peninsula, Temple of Telhamat, Telredor, Toshley's Station, Area 52, The Stormspire
+					["0.79:0.55:0.75:0.50"] = 28, -- Hellfire Peninsula, Shatter Point
+					["0.79:0.55:0.65:0.58:0.55:0.77:0.69:0.85:0.81:0.77"] = 348, -- Hellfire Peninsula, Honor Hold, Allerian Stronghold, Wildhammer Stronghold, Altar of Sha'tar
 
 					-- Alliance: Honor Hold (Hellfire Peninsula)
 					["0.65:0.58:0.44:0.67:0.27:0.74"] = 207, -- Honor Hold, Shattrath, Telaar
@@ -1798,6 +1809,7 @@
 					["0.65:0.58:0.52:0.51:0.38:0.50:0.42:0.37:0.58:0.27"] = 309, -- Honor Hold, Temple of Telhamat, Telredor, Toshley's Station, Area 52
 					["0.65:0.58:0.52:0.51:0.38:0.50:0.42:0.37:0.58:0.27:0.63:0.18"] = 356, -- Honor Hold, Temple of Telhamat, Telredor, Toshley's Station, Area 52, The Stormspire
 					["0.65:0.58:0.52:0.51:0.38:0.50:0.42:0.37:0.58:0.27:0.72:0.28"] = 374, -- Honor Hold, Temple of Telhamat, Telredor, Toshley's Station, Area 52, Cosmowrench
+					["0.65:0.58:0.75:0.50"] = 57, -- Honor Hold, Shatter Point
 
 					-- Alliance: Orebor Harborage (Zangarmarsh)
 					["0.27:0.44:0.38:0.50:0.27:0.74"] = 177, -- Orebor Harborage, Telredor, Telaar
@@ -1815,7 +1827,15 @@
 					["0.27:0.44:0.32:0.34:0.58:0.27:0.72:0.28"] = 249, -- Orebor Harborage, Sylvanaar, Area 52, Cosmowrench
 					["0.27:0.44:0.32:0.34:0.63:0.18"] = 219, -- Orebor Harborage, Sylvanaar, The Stormspire
 
+					-- Alliance: Sanctum of the Stars (Shadowmoon Valley)
+					["0.78:0.85:0.55:0.77:0.44:0.67"] = 215, -- Sanctum of the Stars, Allerian Stronghold, Shattrath
+
 					-- Alliance: Shatter Point (Hellfire Peninsula)
+					["0.75:0.50:0.79:0.55"] = 33, -- Shatter Point, Hellfire Peninsula
+					["0.75:0.50:0.65:0.58"] = 57, -- Shatter Point, Honor Hold
+					["0.75:0.50:0.65:0.58:0.55:0.77:0.69:0.85:0.81:0.77"] = 334, -- Shatter Point, Honor Hold, Allerian Stronghold, Wildhammer Stronghold, Altar of Sha'tar
+					["0.75:0.50:0.65:0.58:0.55:0.77:0.69:0.85"] = 252, -- Shatter Point, Honor Hold, Allerian Stronghold, Wildhammer Stronghold
+					["0.75:0.50:0.65:0.58:0.55:0.77"] = 174, -- Shatter Point, Honor Hold, Allerian Stronghold
 
 					-- Alliance: Shattrath (Terokkar Forest)
 					["0.44:0.67:0.27:0.74"] = 88, -- Shattrath, Telaar
@@ -1832,6 +1852,9 @@
 					["0.44:0.67:0.38:0.50:0.42:0.37:0.58:0.27"] = 235, -- Shattrath, Telredor, Toshley's Station, Area 52
 					["0.44:0.67:0.38:0.50:0.42:0.37:0.58:0.27:0.72:0.28"] = 301, -- Shattrath, Telredor, Toshley's Station, Area 52, Cosmowrench
 					["0.44:0.67:0.38:0.50:0.42:0.37:0.58:0.27:0.63:0.18"] = 284, -- Shattrath, Telredor, Toshley's Station, Area 52, The Stormspire
+					["0.44:0.67:0.55:0.77:0.69:0.85:0.81:0.77"] =  235, -- Shattrath, Allerian Stronghold, Wildhammer Stronghold, Altar of Sha'tar
+					["0.44:0.67:0.65:0.58:0.75:0.50"] = 165, -- Shattrath, Honor Hold, Shatter Point
+					["0.44:0.67:0.55:0.77:0.69:0.85:0.78:0.85"] = 195, -- Shattrath, Allerian Stronghold, Wildhammer Stronghold, Sanctum of the Stars
 
 					-- Alliance: Sylvanaar (Blade's Edge Mountains)
 					["0.32:0.34:0.38:0.50:0.27:0.74"] = 207, -- Sylvanaar, Telredor, Telaar
@@ -1944,6 +1967,8 @@
 					["0.69:0.85:0.55:0.77:0.44:0.67:0.38:0.50:0.42:0.37:0.58:0.27"] = 409, -- Wildhammer Stronghold, Allerian Stronghold, Shattrath, Telredor, Toshley's Station, Area 52
 					["0.69:0.85:0.55:0.77:0.44:0.67:0.38:0.50:0.42:0.37:0.58:0.27:0.72:0.28"] = 475, -- Wildhammer Stronghold, Allerian Stronghold, Shattrath, Telredor, Toshley's Station, Area 52, Cosmowrench
 					["0.69:0.85:0.55:0.77:0.44:0.67:0.38:0.50:0.42:0.37:0.58:0.27:0.63:0.18"] = 457, -- Wildhammer Stronghold, Allerian Stronghold, Shattrath, Telredor, Toshley's Station, Area 52, The Stormspire
+					["0.69:0.85:0.81:0.77"] = 84, -- Wildhammer Stronghold, Altar of Sha'tar
+					["0.69:0.85:0.55:0.77:0.65:0.58:0.75:0.50"] = 250, -- Wildhammer Stronghold, Allerian Stronghold, Honor Hold, Shatter Point
 
 				},
 
