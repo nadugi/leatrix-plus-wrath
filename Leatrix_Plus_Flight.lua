@@ -1720,6 +1720,7 @@
 					["0.55:0.77:0.44:0.67:0.38:0.50:0.42:0.37:0.58:0.27:0.63:0.18"] = 358, -- Allerian Stronghold, Shattrath, Telredor, Toshley's Station, Area 52, The Stormspire
 					["0.55:0.77:0.44:0.67:0.38:0.50:0.42:0.37:0.58:0.27:0.72:0.28"] = 375, -- Allerian Stronghold, Shattrath, Telredor, Toshley's Station, Area 52, Cosmowrench
 					["0.55:0.77:0.69:0.85:0.81:0.77"] = 161, -- Allerian Stronghold, Wildhammer Stronghold, Altar of Sha'tar
+					["0.55:0.77:0.69:0.85:0.78:0.85"] = 121, -- Allerian Stronghold, Wildhammer Stronghold, Sanctum of the Stars
 
 					-- Alliance: Altar of Sha'tar (Shadowmoon Valley)
 					["0.81:0.77:0.69:0.85"] = 81, -- Altar of Sha'tar, Wildhammer Stronghold
@@ -1804,6 +1805,7 @@
 					["0.79:0.55:0.52:0.51:0.38:0.50:0.42:0.37:0.58:0.27:0.63:0.18"] = 396, -- Hellfire Peninsula, Temple of Telhamat, Telredor, Toshley's Station, Area 52, The Stormspire
 					["0.79:0.55:0.75:0.50"] = 28, -- Hellfire Peninsula, Shatter Point
 					["0.79:0.55:0.65:0.58:0.55:0.77:0.69:0.85:0.81:0.77"] = 348, -- Hellfire Peninsula, Honor Hold, Allerian Stronghold, Wildhammer Stronghold, Altar of Sha'tar
+					["0.79:0.55:0.65:0.58:0.55:0.77:0.69:0.85:0.78:0.85"] = 308, -- Hellfire Peninsula, Honor Hold, Allerian Stronghold, Wildhammer Stronghold, Sanctum of the Stars
 
 					-- Alliance: Honor Hold (Hellfire Peninsula)
 					["0.65:0.58:0.44:0.67:0.27:0.74"] = 207, -- Honor Hold, Shattrath, Telaar
@@ -1822,6 +1824,7 @@
 					["0.65:0.58:0.52:0.51:0.38:0.50:0.42:0.37:0.58:0.27:0.72:0.28"] = 374, -- Honor Hold, Temple of Telhamat, Telredor, Toshley's Station, Area 52, Cosmowrench
 					["0.65:0.58:0.75:0.50"] = 57, -- Honor Hold, Shatter Point
 					["0.65:0.58:0.55:0.77:0.69:0.85:0.81:0.77"] = 278, -- Honor Hold, Allerian Stronghold, Wildhammer Stronghold, Altar of Sha'tar
+					["0.65:0.58:0.55:0.77:0.69:0.85:0.78:0.85"] = 238, -- Honor Hold, Allerian Stronghold, Wildhammer Stronghold, Sanctum of the Stars
 
 					-- Alliance: Orebor Harborage (Zangarmarsh)
 					["0.27:0.44:0.38:0.50:0.27:0.74"] = 177, -- Orebor Harborage, Telredor, Telaar
@@ -1843,6 +1846,12 @@
 
 					-- Alliance: Sanctum of the Stars (Shadowmoon Valley)
 					["0.78:0.85:0.55:0.77:0.44:0.67"] = 215, -- Sanctum of the Stars, Allerian Stronghold, Shattrath
+					["0.78:0.85:0.55:0.77"] = 142, -- Sanctum of the Stars, Allerian Stronghold
+					["0.78:0.85:0.69:0.85"] = 42, -- Sanctum of the Stars, Wildhammer Stronghold
+					["0.78:0.85:0.55:0.77:0.27:0.74"] = 290, -- Sanctum of the Stars, Allerian Stronghold, Telaar
+					["0.78:0.85:0.55:0.77:0.65:0.58"] = 237, -- Sanctum of the Stars, Allerian Stronghold, Honor Hold
+					["0.78:0.85:0.55:0.77:0.65:0.58:0.79:0.55"] = 296, -- Sanctum of the Stars, Allerian Stronghold, Honor Hold, Hellfire Peninsula
+					["0.78:0.85:0.55:0.77:0.65:0.58:0.75:0.50"] = 290, -- Sanctum of the Stars, Allerian Stronghold, Honor Hold, Shatter Point
 
 					-- Alliance: Shatter Point (Hellfire Peninsula)
 					["0.75:0.50:0.79:0.55"] = 33, -- Shatter Point, Hellfire Peninsula
@@ -1858,6 +1867,7 @@
 					["0.75:0.50:0.65:0.58:0.52:0.51:0.38:0.50:0.42:0.37:0.58:0.27"] = 364, -- Shatter Point, Honor Hold, Temple of Telhamat, Telredor, Toshley's Station, Area 52
 					["0.75:0.50:0.65:0.58:0.52:0.51:0.38:0.50:0.27:0.44"] = 275, -- Shatter Point, Honor Hold, Temple of Telhamat, Telredor, Orebor Harborage
 					["0.75:0.50:0.65:0.58:0.52:0.51:0.38:0.50:0.42:0.37:0.58:0.27:0.63:0.18"] = 412, -- Shatter Point, Honor Hold, Temple of Telhamat, Telredor, Toshley's Station, Area 52, The Stormspire
+					["0.75:0.50:0.65:0.58:0.55:0.77:0.69:0.85:0.78:0.85"] = 294, -- Shatter Point, Honor Hold, Allerian Stronghold, Wildhammer Stronghold, Sanctum of the Stars
 
 					-- Alliance: Shattrath (Terokkar Forest)
 					["0.44:0.67:0.27:0.74"] = 88, -- Shattrath, Telaar
@@ -1911,6 +1921,7 @@
 					["0.27:0.74:0.38:0.50:0.42:0.37:0.58:0.27:0.63:0.18"] = 327, -- Telaar, Telredor, Toshley's Station, Area 52, The Stormspire
 					["0.27:0.74:0.55:0.77:0.69:0.85:0.81:0.77"] = 281, -- Telaar, Allerian Stronghold, Wildhammer Stronghold, Altar of Sha'tar
 					["0.27:0.74:0.44:0.67:0.65:0.58:0.75:0.50"] = 253, -- Telaar, Shattrath, Honor Hold, Shatter Point
+					["0.27:0.74:0.55:0.77:0.69:0.85:0.78:0.85"] = 241, -- Telaar, Allerian Stronghold, Wildhammer Stronghold, Sanctum of the Stars
 
 					-- Alliance: Telredor (Zangarmarsh)
 					["0.38:0.50:0.27:0.74"] = 125, -- Telredor, Telaar
@@ -1999,6 +2010,7 @@
 					["0.69:0.85:0.55:0.77:0.44:0.67:0.38:0.50:0.42:0.37:0.58:0.27:0.63:0.18"] = 457, -- Wildhammer Stronghold, Allerian Stronghold, Shattrath, Telredor, Toshley's Station, Area 52, The Stormspire
 					["0.69:0.85:0.81:0.77"] = 84, -- Wildhammer Stronghold, Altar of Sha'tar
 					["0.69:0.85:0.55:0.77:0.65:0.58:0.75:0.50"] = 250, -- Wildhammer Stronghold, Allerian Stronghold, Honor Hold, Shatter Point
+					["0.69:0.85:0.78:0.85"] = 43, -- Wildhammer Stronghold, Sanctum of the Stars
 
 				},
 
