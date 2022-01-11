@@ -723,6 +723,7 @@
 					["0.58:0.27:0.42:0.28"] = 80, -- Area 52, Evergrove
 					["0.58:0.27:0.63:0.18"] = 47, -- Area 52, The Stormspire
 					["0.58:0.27:0.72:0.28"] = 66, -- Area 52, Cosmowrench
+					["0.58:0.27:0.49:0.36:0.44:0.51:0.44:0.67:0.51:0.73:0.66:0.77:0.81:0.77"] = 437, -- Area 52, Mok'Nathal Village, Swamprat Post, Shattrath, Stonebreaker Hold, Shadowmoon Village, Altar of Sha'tar
 
 					-- Horde: Cosmowrench (Netherstorm)
 					["0.72:0.28:0.58:0.27:0.49:0.36:0.44:0.51:0.44:0.67:0.51:0.73:0.66:0.77"] = 420, -- Cosmowrench, Area 52, Mok'Nathal Village, Swamprat Post, Shattrath, Stonebreaker Hold, Shadowmoon Village
