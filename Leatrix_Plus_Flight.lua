@@ -1950,7 +1950,7 @@
 
 					-- Alliance: Temple of Telhamat (Hellfire Peninsula)
 					["0.52:0.51:0.38:0.50:0.27:0.74"] = 206, -- Temple of Telhamat, Telredor, Telaar
-					["0.52:0.51:0.38:0.50:0.44:0.67"] = 143, -- Temple of Telhamat, Telredor, Shattrath
+					["0.52:0.51:0.38:0.50:0.44:0.67"] = 178, -- Temple of Telhamat, Telredor, Shattrath
 					["0.52:0.51:0.65:0.58:0.55:0.77"] = 203, -- Temple of Telhamat, Honor Hold, Allerian Stronghold
 					["0.52:0.51:0.65:0.58:0.55:0.77:0.69:0.85"] = 281, -- Temple of Telhamat, Honor Hold, Allerian Stronghold, Wildhammer Stronghold
 					["0.52:0.51:0.65:0.58"] = 88, -- Temple of Telhamat, Honor Hold
