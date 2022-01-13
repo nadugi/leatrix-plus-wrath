@@ -1449,6 +1449,7 @@
 					["0.31:0.69:0.43:0.25:0.53:0.26"] = 657, -- Feathermoon, Auberdine, Talonbranch Glade
 					["0.31:0.69:0.43:0.25"] = 468, -- Feathermoon, Auberdine
 					["0.31:0.69:0.43:0.25:0.42:0.16"] = 552, -- Feathermoon, Auberdine, Rut'theran Village
+					["0.31:0.69:0.48:0.70:0.64:0.67:0.61:0.55"] = 429, -- Feathermoon, Thalanaar, Theramore, Ratchet
 
 					-- Alliance: Forest Song (Ashenvale)
 					["0.58:0.39:0.61:0.40:0.61:0.55:0.64:0.67:0.48:0.70:0.31:0.69"] = 602, -- Forest Song, Talrendis Point, Ratchet, Theramore, Thalanaar, Feathermoon
