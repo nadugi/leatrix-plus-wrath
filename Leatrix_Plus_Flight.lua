@@ -1256,6 +1256,7 @@
 					["0.44:0.45:0.50:0.42"] = 71, -- Southshore, Aerie Peak
 					["0.44:0.45:0.48:0.39"] = 81, -- Southshore, Chillwind Camp
 					["0.44:0.45:0.48:0.39:0.61:0.35"] = 219, -- Southshore, Chillwind Camp, Light's Hope Chapel
+					["0.44:0.45:0.45:0.56:0.47:0.59:0.41:0.73"] = 370, -- Southshore, Menethil Harbor, Ironforge, Stormwind
 
 					-- Alliance: Stormwind (Elwynn Forest)
 					["0.41:0.73:0.41:0.93"] = 200, -- Stormwind, Booty Bay
@@ -1275,6 +1276,7 @@
 					["0.41:0.73:0.47:0.59:0.48:0.39"] = 506, -- Stormwind, Ironforge, Chillwind Camp
 					["0.41:0.73:0.47:0.59:0.61:0.35"] = 563, -- Stormwind, Ironforge, Light's Hope Chapel
 					["0.41:0.73:0.47:0.59:0.61:0.35:0.61:0.28"] = 621, -- Stormwind, Ironforge, Light's Hope Chapel, Zul'Aman
+					["0.41:0.73:0.47:0.59:0.53:0.61"] = 274, -- Stormwind, Ironforge, Thelsamar
 
 					-- Alliance: Thelsamar (Loch Modan)
 					["0.53:0.61:0.47:0.65:0.41:0.73:0.41:0.93"] = 390, -- Thelsamar, Thorium Point, Stormwind, Booty Bay
