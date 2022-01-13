@@ -1711,6 +1711,7 @@
 					["0.64:0.67:0.43:0.25"] = 440, -- Theramore, Auberdine
 					["0.64:0.67:0.43:0.25:0.42:0.16"] = 524, -- Theramore, Auberdine, Rut'theran Village
 					["0.64:0.67:0.61:0.55:0.46:0.40:0.39:0.40"] = 464, -- Theramore, Ratchet, Astranaar, Stonetalon Peak
+					["0.64:0.67:0.40:0.51:0.31:0.69"] = 567, -- Theramore, Nijel's Point, Feathermoon
 
 				},
 
