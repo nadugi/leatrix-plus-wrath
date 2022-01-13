@@ -163,7 +163,7 @@
 					["0.46:0.43:0.55:0.46:0.50:0.66"] = 377, -- Tarren Mill, Hammerfall, Kargath
 					["0.46:0.43:0.55:0.46:0.50:0.66:0.46:0.65"] = 432, -- Tarren Mill, Hammerfall, Kargath, Thorium Point
 					["0.46:0.43:0.55:0.46"] = 118, -- Tarren Mill, Hammerfall
-					["0.46:0.43:0.59:0.45"] = 195, -- Tarren Mill, Revantusk Village
+					["0.46:0.43:0.59:0.45"] = 160, -- Tarren Mill, Revantusk Village
 					["0.46:0.43:0.59:0.45:0.61:0.35"] = 329, -- Tarren Mill, Revantusk Village, Light's Hope Chapel
 					["0.46:0.43:0.59:0.45:0.61:0.35:0.58:0.25"] = 415, -- Tarren Mill, Revantusk Village, Light's Hope Chapel, Tranquillien
 					["0.46:0.43:0.59:0.45:0.61:0.35:0.58:0.25:0.59:0.19"] = 481, -- Tarren Mill, Revantusk Village, Light's Hope Chapel, Tranquillien, Silvermoon City
@@ -1034,7 +1034,7 @@
 					["0.41:0.93:0.41:0.73"] = 200, -- Booty Bay, Stormwind
 					["0.41:0.93:0.41:0.73:0.47:0.65"] = 318, -- Booty Bay, Stormwind, Thorium Point
 					["0.41:0.93:0.41:0.73:0.47:0.65:0.53:0.61"] = 397, -- Booty Bay, Stormwind, Thorium Point, Thelsamar
-					["0.41:0.93:0.41:0.73:0.47:0.59"] = 464, -- Booty Bay, Stormwind, Ironforge
+					["0.41:0.93:0.41:0.73:0.47:0.59"] = 401, -- Booty Bay, Stormwind, Ironforge
 					["0.41:0.93:0.41:0.73:0.47:0.59:0.45:0.56"] = 548, -- Booty Bay, Stormwind, Ironforge, Menethil Harbor
 					["0.41:0.93:0.41:0.73:0.47:0.65:0.53:0.61:0.51:0.47"] = 560, -- Booty Bay, Stormwind, Thorium Point, Thelsamar, Refuge Pointe
 					["0.41:0.93:0.41:0.73:0.47:0.59:0.44:0.45"] = 649, -- Booty Bay, Stormwind, Ironforge, Southshore
