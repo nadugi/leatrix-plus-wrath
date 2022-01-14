@@ -922,7 +922,7 @@
 					["0.44:0.51:0.38:0.32"] = 106, -- Swamprat Post, Thunderlord Stronghold
 					["0.44:0.51:0.38:0.32:0.42:0.28"] = 132, -- Swamprat Post, Thunderlord Stronghold, Evergrove
 					["0.44:0.51:0.49:0.36"] = 71, -- Swamprat Post, Mok'Nathal Village
-					["0.44:0.51:0.49:0.36:0.58:0.27"] = 203, -- Swamprat Post, Mok'Nathal Village, Area 52
+					["0.44:0.51:0.49:0.36:0.58:0.27"] = 126, -- Swamprat Post, Mok'Nathal Village, Area 52
 					["0.44:0.51:0.49:0.36:0.58:0.27:0.72:0.28"] = 193, -- Swamprat Post, Mok'Nathal Village, Area 52, Cosmowrench
 					["0.44:0.51:0.49:0.36:0.58:0.27:0.63:0.18"] = 174, -- Swamprat Post, Mok'Nathal Village, Area 52, The Stormspire
 
@@ -1114,6 +1114,7 @@
 					["0.50:0.75:0.52:0.72:0.47:0.65:0.53:0.61:0.51:0.47:0.50:0.42"] = 296, -- Lakeshire, Morgan's Vigil, Thorium Point, Thelsamar, Refuge Pointe, Aerie Peak
 					["0.50:0.75:0.52:0.72:0.47:0.65:0.47:0.59:0.48:0.39"] = 475, -- Lakeshire, Morgan's Vigil, Thorium Point, Ironforge, Chillwind Camp
 					["0.50:0.75:0.52:0.72:0.47:0.65:0.47:0.59:0.61:0.35"] = 540, -- Lakeshire, Morgan's Vigil, Thorium Point, Ironforge, Light's Hope Chapel
+					["0.50:0.75:0.52:0.72:0.47:0.65:0.47:0.59:0.50:0.42:0.44:0.45"] = 489, -- Lakeshire, Morgan's Vigil, Thorium Point, Ironforge, Aerie Peak, Southshore
 
 					-- Alliance: Light's Hope Chapel (Eastern Plaguelands)
 					["0.61:0.35:0.47:0.59:0.47:0.65:0.41:0.73:0.41:0.93"] = 712, -- Light's Hope Chapel, Ironforge, Thorium Point, Stormwind, Booty Bay
