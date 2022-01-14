@@ -706,6 +706,7 @@
 
 					-- Horde: Altar of Sha'tar (Shadowmoon Valley)
 					["0.81:0.77:0.66:0.77"] = 67, -- Altar of Sha'tar, Shadowmoon Village
+					["0.81:0.77:0.51:0.73:0.44:0.67"] = 193, -- Altar of Sha'tar, Stonebreaker Hold, Shattrath
 
 					-- Horde: Area 52 (Netherstorm)
 					["0.58:0.27:0.49:0.36:0.44:0.51:0.44:0.67:0.51:0.73:0.66:0.77"] = 357, -- Area 52, Mok'Nathal Village, Swamprat Post, Shattrath, Stonebreaker Hold, Shadowmoon Village
@@ -1255,6 +1256,7 @@
 					["0.39:0.80:0.41:0.73:0.47:0.65:0.53:0.61:0.51:0.47:0.50:0.42"] = 376, -- Sentinel Hill, Stormwind, Thorium Point, Thelsamar, Refuge Pointe, Aerie Peak
 					["0.39:0.80:0.41:0.73:0.47:0.59:0.48:0.39"] = 555, -- Sentinel Hill, Stormwind, Ironforge, Chillwind Camp
 					["0.39:0.80:0.41:0.73:0.47:0.59:0.61:0.35"] = 664, -- Sentinel Hill, Stormwind, Ironforge, Light's Hope Chapel
+					["0.39:0.80:0.41:0.73:0.47:0.59:0.53:0.61"] = 346, -- Sentinel Hill, Stormwind, Ironforge, Thelsamar
 
 					-- Alliance: Southshore (Hillsbrad Foothills)
 					["0.44:0.45:0.45:0.56:0.47:0.59:0.47:0.65:0.41:0.73:0.41:0.93"] = 597, -- Southshore, Menethil Harbor, Ironforge, Thorium Point, Stormwind, Booty Bay
@@ -1876,6 +1878,7 @@
 					["0.27:0.44:0.32:0.34:0.63:0.18"] = 219, -- Orebor Harborage, Sylvanaar, The Stormspire
 					["0.27:0.44:0.38:0.50:0.52:0.51:0.65:0.58:0.75:0.50"] = 275, -- Orebor Harborage, Telredor, Temple of Telhamat, Honor Hold, Shatter Point
 					["0.27:0.44:0.38:0.50:0.44:0.67:0.55:0.77:0.69:0.85:0.81:0.77"] = 384, -- Orebor Harborage, Telredor, Shattrath, Allerian Stronghold, Wildhammer Stronghold, Altar of Sha'tar
+					["0.27:0.44:0.38:0.50:0.42:0.37:0.58:0.27:0.63:0.18"] = 253, -- Orebor Harborage, Telredor, Toshley's Station, Area 52, The Stormspire
 
 					-- Alliance: Sanctum of the Stars (Shadowmoon Valley)
 					["0.78:0.85:0.55:0.77:0.44:0.67"] = 215, -- Sanctum of the Stars, Allerian Stronghold, Shattrath
