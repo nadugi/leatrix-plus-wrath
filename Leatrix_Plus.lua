@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.86.alpha.7 (14th January 2022)
+-- 	Leatrix Plus 2.5.86.alpha.8 (14th January 2022)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.86.alpha.7"
+	LeaPlusLC["AddonVer"] = "2.5.86.alpha.8"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -1133,6 +1133,7 @@
 				if GetTime() - tDelay >= 0.3 then
 					tDelay = GetTime()
  					if GetCVarBool("autoLootDefault") ~= IsModifiedClick("AUTOLOOTTOGGLE") then
+						if TSMDestroyBtn and TSMDestroyBtn:IsShown() and TSMDestroyBtn:GetButtonState() == "DISABLED" then tDelay = GetTime() return end
 						local lootMethod = GetLootMethod()
 						if lootMethod == "master" then
 							-- Master loot is enabled so fast loot if item should be auto looted
