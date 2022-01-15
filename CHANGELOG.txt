@@ -1,4 +1,4 @@
-2.5.86.alpha.8 - 14th January 2022
+2.5.86.alpha.9 - 15th January 2022
 - Added more flight times.  Keep reporting until there's none left to report.
 - The 'Faster looting' option ('System') will now work with TSM Destroy.  You no longer need to disable fast looting when using TSM Destroy.
 
