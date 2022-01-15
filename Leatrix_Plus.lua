@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.86.alpha.10 (15th January 2022)
+-- 	Leatrix Plus 2.5.86.alpha.11 (15th January 2022)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.86.alpha.10"
+	LeaPlusLC["AddonVer"] = "2.5.86.alpha.11"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -3023,10 +3023,13 @@
 						if data[faction] and data[faction][continent] and data[faction][continent][routeString] then
 							local duration = data[faction][continent][routeString]
 							if duration and type(duration) == "number" then
-								duration = date("%M:%S", duration)
-								GameTooltip:AddLine(duration, 0.9, 0.9, 0.9, true)
+								duration = date("%M:%S", duration):gsub("^0","")
+								GameTooltip:AddLine(L["Duration"] .. ": " .. duration, 0.9, 0.9, 0.9, true)
 								GameTooltip:Show()
 							end
+						elseif currentNode ~= destination then
+							GameTooltip:AddLine(L["Duration"] .. ": -:--", 0.9, 0.9, 0.9, true)
+							GameTooltip:Show()
 						end
 
 						-- Add node names to debug string
