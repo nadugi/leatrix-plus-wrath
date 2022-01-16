@@ -1182,6 +1182,7 @@
 					["0.45:0.56:0.44:0.45:0.48:0.39"] = 186, -- Menethil Harbor, Southshore, Chillwind Camp
 					["0.45:0.56:0.44:0.45:0.48:0.39:0.61:0.35"] = 324, -- Menethil Harbor, Southshore, Chillwind Camp, Light's Hope Chapel
 					["0.45:0.56:0.47:0.59:0.41:0.73:0.41:0.93"] = 445, -- Menethil Harbor, Ironforge, Stormwind, Booty Bay
+					["0.45:0.56:0.47:0.59:0.41:0.73"] = 260, -- Menethil Harbor, Ironforge, Stormwind
 
 					-- Alliance: Morgan's Vigil (Burning Steppes)
 					["0.52:0.72:0.50:0.75:0.47:0.79:0.43:0.82:0.41:0.93"] = 278, -- Morgan's Vigil, Lakeshire, Darkshire, Rebel Camp, Booty Bay
