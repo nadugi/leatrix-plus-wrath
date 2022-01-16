@@ -109,6 +109,7 @@
 					["0.61:0.35:0.59:0.45:0.46:0.43"] = 301, -- Light's Hope Chapel, Revantusk Village, Tarren Mill
 					["0.61:0.35:0.42:0.37"] = 262, -- Light's Hope Chapel, Undercity
 					["0.61:0.35:0.42:0.37:0.37:0.41"] = 294, -- Light's Hope Chapel, Undercity, The Sepulcher
+					["0.61:0.35:0.42:0.37:0.46:0.43"] = 326, -- Light's Hope Chapel, Undercity, Tarren Mill 
 
 					-- Horde: Revantusk Village (The Hinterlands)
 					["0.59:0.45:0.55:0.46:0.50:0.66:0.41:0.93"] = 648, -- Revantusk Village, Hammerfall, Kargath, Booty Bay
@@ -763,6 +764,7 @@
 					["0.42:0.28:0.58:0.27"] = 78, -- Evergrove, Area 52
 					["0.42:0.28:0.58:0.27:0.72:0.28"] = 143, -- Evergrove, Area 52, Cosmowrench
 					["0.42:0.28:0.58:0.27:0.63:0.18"] = 125, -- Evergrove, Area 52, The Stormspire
+					["0.42:0.28:0.38:0.32:0.44:0.51:0.44:0.67:0.51:0.73:0.66:0.77:0.78:0.85"] = 435, -- Evergrove, Thunderlord Stronghold, Swamprat Post, Shattrath, Stonebreaker Hold, Shadowmoon Village, Sanctum of the Stars
 
 					-- Horde: Falcon Watch (Hellfire Peninsula)
 					["0.54:0.57:0.44:0.67:0.51:0.73:0.66:0.77"] = 204, -- Falcon Watch, Shattrath, Stonebreaker Hold, Shadowmoon Village
@@ -1056,7 +1058,7 @@
 					["0.41:0.93:0.41:0.73:0.47:0.65"] = 318, -- Booty Bay, Stormwind, Thorium Point
 					["0.41:0.93:0.41:0.73:0.47:0.65:0.53:0.61"] = 397, -- Booty Bay, Stormwind, Thorium Point, Thelsamar
 					["0.41:0.93:0.41:0.73:0.47:0.59"] = 401, -- Booty Bay, Stormwind, Ironforge
-					["0.41:0.93:0.41:0.73:0.47:0.59:0.45:0.56"] = 548, -- Booty Bay, Stormwind, Ironforge, Menethil Harbor
+					["0.41:0.93:0.41:0.73:0.47:0.59:0.45:0.56"] = 472, -- Booty Bay, Stormwind, Ironforge, Menethil Harbor
 					["0.41:0.93:0.41:0.73:0.47:0.65:0.53:0.61:0.51:0.47"] = 560, -- Booty Bay, Stormwind, Thorium Point, Thelsamar, Refuge Pointe
 					["0.41:0.93:0.41:0.73:0.47:0.59:0.44:0.45"] = 649, -- Booty Bay, Stormwind, Ironforge, Southshore
 					["0.41:0.93:0.41:0.73:0.47:0.65:0.53:0.61:0.51:0.47:0.50:0.42"] = 489, -- Booty Bay, Stormwind, Thorium Point, Thelsamar, Refuge Pointe, Aerie Peak
@@ -1121,6 +1123,7 @@
 					["0.47:0.59:0.61:0.35"] = 349, -- Ironforge, Light's Hope Chapel
 					["0.47:0.59:0.61:0.35:0.61:0.28"] = 446, -- Ironforge, Light's Hope Chapel, Zul'Aman
 					["0.47:0.59:0.41:0.73:0.43:0.82"] = 290, -- Ironforge, Stormwind, Rebel Camp
+					["0.47:0.59:0.41:0.73:0.39:0.80"] = 274, -- Ironforge, Stormwind, Sentinel Hill
 
 					-- Alliance: Lakeshire (Redridge Mountains)
 					["0.50:0.75:0.47:0.79:0.43:0.82:0.41:0.93"] = 227, -- Lakeshire, Darkshire, Rebel Camp, Booty Bay
@@ -1178,6 +1181,7 @@
 					["0.45:0.56:0.44:0.45:0.50:0.42"] = 176, -- Menethil Harbor, Southshore, Aerie Peak
 					["0.45:0.56:0.44:0.45:0.48:0.39"] = 186, -- Menethil Harbor, Southshore, Chillwind Camp
 					["0.45:0.56:0.44:0.45:0.48:0.39:0.61:0.35"] = 324, -- Menethil Harbor, Southshore, Chillwind Camp, Light's Hope Chapel
+					["0.45:0.56:0.47:0.59:0.41:0.73:0.41:0.93"] = 445, -- Menethil Harbor, Ironforge, Stormwind, Booty Bay
 
 					-- Alliance: Morgan's Vigil (Burning Steppes)
 					["0.52:0.72:0.50:0.75:0.47:0.79:0.43:0.82:0.41:0.93"] = 278, -- Morgan's Vigil, Lakeshire, Darkshire, Rebel Camp, Booty Bay
@@ -1190,7 +1194,7 @@
 					["0.52:0.72:0.47:0.65:0.53:0.61"] = 172, -- Morgan's Vigil, Thorium Point, Thelsamar
 					["0.52:0.72:0.47:0.65"] = 91, -- Morgan's Vigil, Thorium Point
 					["0.52:0.72:0.47:0.65:0.47:0.59"] = 187, -- Morgan's Vigil, Thorium Point, Ironforge
-					["0.52:0.72:0.47:0.65:0.47:0.59:0.45:0.56"] = 270, -- Morgan's Vigil, Thorium Point, Ironforge, Menethil Harbor
+					["0.52:0.72:0.47:0.65:0.47:0.59:0.45:0.56"] = 240, -- Morgan's Vigil, Thorium Point, Ironforge, Menethil Harbor
 					["0.52:0.72:0.47:0.65:0.53:0.61:0.51:0.47"] = 335, -- Morgan's Vigil, Thorium Point, Thelsamar, Refuge Pointe
 					["0.52:0.72:0.47:0.65:0.47:0.59:0.44:0.45"] = 342, -- Morgan's Vigil, Thorium Point, Ironforge, Southshore
 					["0.52:0.72:0.47:0.65:0.53:0.61:0.51:0.47:0.50:0.42"] = 436, -- Morgan's Vigil, Thorium Point, Thelsamar, Refuge Pointe, Aerie Peak
@@ -1291,6 +1295,7 @@
 					["0.44:0.45:0.48:0.39"] = 81, -- Southshore, Chillwind Camp
 					["0.44:0.45:0.48:0.39:0.61:0.35"] = 219, -- Southshore, Chillwind Camp, Light's Hope Chapel
 					["0.44:0.45:0.45:0.56:0.47:0.59:0.41:0.73"] = 370, -- Southshore, Menethil Harbor, Ironforge, Stormwind
+					["0.44:0.45:0.45:0.56:0.47:0.59:0.47:0.65:0.41:0.73:0.55:0.81"] = 517, -- Southshore, Menethil Harbor, Ironforge, Thorium Point, Stormwind, Nethergarde Keep
 
 					-- Alliance: Stormwind (Elwynn Forest)
 					["0.41:0.73:0.41:0.93"] = 200, -- Stormwind, Booty Bay
@@ -1308,11 +1313,13 @@
 					["0.41:0.73:0.47:0.59:0.44:0.45"] = 387, -- Stormwind, Ironforge, Southshore
 					["0.41:0.73:0.47:0.65:0.53:0.61:0.51:0.47:0.50:0.42"] = 508, -- Stormwind, Thorium Point, Thelsamar, Refuge Pointe, Aerie Peak
 					["0.41:0.73:0.47:0.59:0.48:0.39"] = 506, -- Stormwind, Ironforge, Chillwind Camp
-					["0.41:0.73:0.47:0.59:0.61:0.35"] = 563, -- Stormwind, Ironforge, Light's Hope Chapel
+					["0.41:0.73:0.47:0.59:0.61:0.35"] = 523, -- Stormwind, Ironforge, Light's Hope Chapel
 					["0.41:0.73:0.47:0.59:0.61:0.35:0.61:0.28"] = 621, -- Stormwind, Ironforge, Light's Hope Chapel, Zul'Aman
 					["0.41:0.73:0.47:0.59:0.53:0.61"] = 274, -- Stormwind, Ironforge, Thelsamar
 					["0.41:0.73:0.47:0.59:0.51:0.47"] = 377, -- Stormwind, Ironforge, Refuge Pointe
 					["0.41:0.73:0.47:0.59:0.50:0.42:0.44:0.45"] = 497, -- Stormwind, Ironforge, Aerie Peak, Southshore
+					["0.41:0.73:0.47:0.59:0.50:0.42"] = 304, -- Stormwind, Ironforge, Aerie Peak
+					["0.41:0.73:0.47:0.59:0.50:0.42:0.48:0.39"] = 484, -- Stormwind, Ironforge, Aerie Peak, Chillwind Camp
 
 					-- Alliance: Thelsamar (Loch Modan)
 					["0.53:0.61:0.47:0.65:0.41:0.73:0.41:0.93"] = 390, -- Thelsamar, Thorium Point, Stormwind, Booty Bay
@@ -1730,6 +1737,7 @@
 					["0.48:0.70:0.58:0.70:0.64:0.67:0.61:0.40:0.65:0.23:0.55:0.21"] = 658, -- Thalanaar, Mudsprocket, Theramore, Talrendis Point, Everlook, Moonglade
 					["0.48:0.70:0.58:0.70:0.64:0.67:0.43:0.25"] = 577, -- Thalanaar, Mudsprocket, Theramore, Auberdine
 					["0.48:0.70:0.58:0.70:0.64:0.67:0.43:0.25:0.42:0.16"] = 661, -- Thalanaar, Mudsprocket, Theramore, Auberdine, Rut'theran Village
+					["0.48:0.70:0.64:0.67:0.61:0.55"] = 275, -- Thalanaar, Theramore, Ratchet
 
 					-- Alliance: Theramore (Dustwallow Marsh)
 					["0.64:0.67:0.48:0.70:0.31:0.69"] = 340, -- Theramore, Thalanaar, Feathermoon
