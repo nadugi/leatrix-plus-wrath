@@ -546,6 +546,8 @@
 					["0.63:0.44:0.46:0.30"] = 252, -- Orgrimmar, Bloodvenom Post
 					["0.63:0.44:0.63:0.36:0.64:0.23:0.54:0.21"] = 358, -- Orgrimmar, Valormok, Everlook, Moonglade
 					["0.63:0.44:0.64:0.23"] = 240, -- Orgrimmar, Everlook
+					["0.63:0.44:0.55:0.42:0.50:0.35:0.46:0.30:0.54:0.21"] = 371, -- Orgrimmar, Splintertree Post, Emerald Sanctuary, Bloodvenom Post, Moonglade
+					["0.63:0.44:0.56:0.53:0.41:0.37"] = 339, -- Orgrimmar, Crossroads, Zoram'gar Outpost
 
 					-- Horde: Ratchet (The Barrens)
 					["0.61:0.55:0.61:0.80:0.50:0.76:0.42:0.79"] = 443, -- Ratchet, Gadgetzan, Marshal's Refuge, Cenarion Hold
@@ -709,6 +711,7 @@
 					-- Horde: Altar of Sha'tar (Shadowmoon Valley)
 					["0.81:0.77:0.66:0.77"] = 67, -- Altar of Sha'tar, Shadowmoon Village
 					["0.81:0.77:0.51:0.73:0.44:0.67"] = 193, -- Altar of Sha'tar, Stonebreaker Hold, Shattrath
+					["0.81:0.77:0.51:0.73"] = 140, -- Altar of Sha'tar, Stonebreaker Hold 
 
 					-- Horde: Area 52 (Netherstorm)
 					["0.58:0.27:0.49:0.36:0.44:0.51:0.44:0.67:0.51:0.73:0.66:0.77"] = 357, -- Area 52, Mok'Nathal Village, Swamprat Post, Shattrath, Stonebreaker Hold, Shadowmoon Village
@@ -1046,6 +1049,7 @@
 					["0.50:0.42:0.44:0.45"] = 68, -- Aerie Peak, Southshore
 					["0.50:0.42:0.48:0.39"] = 53, -- Aerie Peak, Chillwind Camp
 					["0.50:0.42:0.61:0.35"] = 164, -- Aerie Peak, Light's Hope Chapel
+					["0.50:0.42:0.51:0.47:0.53:0.61:0.47:0.65:0.41:0.73:0.50:0.75"] = 547, -- Aerie Peak, Refuge Pointe, Thelsamar, Thorium Point, Stormwind, Lakeshire
 
 					-- Alliance: Booty Bay (Stranglethorn Vale)
 					["0.41:0.93:0.39:0.80"] = 181, -- Booty Bay, Sentinel Hill
@@ -1065,13 +1069,14 @@
 					["0.41:0.93:0.41:0.73:0.47:0.59:0.48:0.39"] = 712, -- Booty Bay, Stormwind, Ironforge, Chillwind Camp
 					["0.41:0.93:0.41:0.73:0.47:0.59:0.61:0.35"] = 777, -- Booty Bay, Stormwind, Ironforge, Light's Hope Chapel
 					["0.41:0.93:0.41:0.73:0.47:0.59:0.61:0.35:0.61:0.28"] = 806, -- Booty Bay, Stormwind, Ironforge, Light's Hope Chapel, Zul'Aman
+					["0.41:0.93:0.41:0.73:0.47:0.59:0.51:0.47"] = 562, -- Booty Bay, Stormwind, Ironforge, Refuge Pointe
 
 					-- Alliance: Chillwind Camp (Western Plaguelands)
 					["0.48:0.39:0.47:0.59:0.47:0.65:0.41:0.73:0.41:0.93"] = 662, -- Chillwind Camp, Ironforge, Thorium Point, Stormwind, Booty Bay
 					["0.48:0.39:0.47:0.59:0.47:0.65:0.41:0.73:0.39:0.80"] = 495, -- Chillwind Camp, Ironforge, Thorium Point, Stormwind, Sentinel Hill
 					["0.48:0.39:0.47:0.59:0.47:0.65:0.41:0.73:0.43:0.82"] = 497, -- Chillwind Camp, Ironforge, Thorium Point, Stormwind, Rebel Camp
 					["0.48:0.39:0.47:0.59:0.47:0.65:0.52:0.72:0.50:0.75:0.47:0.79"] = 482, -- Chillwind Camp, Ironforge, Thorium Point, Morgan's Vigil, Lakeshire, Darkshire
-					["0.48:0.39:0.47:0.59:0.47:0.65:0.52:0.72:0.55:0.81"] = 595, -- Chillwind Camp, Ironforge, Thorium Point, Morgan's Vigil, Nethergarde Keep
+					["0.48:0.39:0.47:0.59:0.47:0.65:0.52:0.72:0.55:0.81"] = 560, -- Chillwind Camp, Ironforge, Thorium Point, Morgan's Vigil, Nethergarde Keep
 					["0.48:0.39:0.47:0.59:0.47:0.65:0.52:0.72:0.50:0.75"] = 423, -- Chillwind Camp, Ironforge, Thorium Point, Morgan's Vigil, Lakeshire
 					["0.48:0.39:0.47:0.59:0.47:0.65:0.52:0.72"] = 395, -- Chillwind Camp, Ironforge, Thorium Point, Morgan's Vigil
 					["0.48:0.39:0.47:0.59:0.47:0.65:0.41:0.73"] = 418, -- Chillwind Camp, Ironforge, Thorium Point, Stormwind
@@ -1184,6 +1189,7 @@
 					["0.45:0.56:0.44:0.45:0.48:0.39:0.61:0.35"] = 324, -- Menethil Harbor, Southshore, Chillwind Camp, Light's Hope Chapel
 					["0.45:0.56:0.47:0.59:0.41:0.73:0.41:0.93"] = 445, -- Menethil Harbor, Ironforge, Stormwind, Booty Bay
 					["0.45:0.56:0.47:0.59:0.41:0.73"] = 260, -- Menethil Harbor, Ironforge, Stormwind
+					["0.45:0.56:0.47:0.59:0.47:0.65:0.41:0.73:0.55:0.81"] = 407, -- Menethil Harbor, Ironforge, Thorium Point, Stormwind, Nethergarde Keep
 
 					-- Alliance: Morgan's Vigil (Burning Steppes)
 					["0.52:0.72:0.50:0.75:0.47:0.79:0.43:0.82:0.41:0.93"] = 278, -- Morgan's Vigil, Lakeshire, Darkshire, Rebel Camp, Booty Bay
@@ -1222,6 +1228,7 @@
 					["0.55:0.81:0.52:0.72:0.47:0.65:0.47:0.59:0.48:0.39"] = 631, -- Nethergarde Keep, Morgan's Vigil, Thorium Point, Ironforge, Chillwind Camp
 					["0.55:0.81:0.52:0.72:0.47:0.65:0.47:0.59:0.61:0.35"] = 687, -- Nethergarde Keep, Morgan's Vigil, Thorium Point, Ironforge, Light's Hope Chapel
 					["0.55:0.81:0.52:0.72:0.47:0.65:0.47:0.59:0.61:0.35:0.61:0.28"] = 763, -- Nethergarde Keep, Morgan's Vigil, Thorium Point, Ironforge, Light's Hope Chapel, Zul'Aman
+					["0.55:0.81:0.47:0.79:0.41:0.93"] = 262, -- Nethergarde Keep, Darkshire, Booty Bay
 
 					-- Alliance: Rebel Camp (Stranglethorn Vale)
 					["0.43:0.82:0.41:0.93"] = 116, -- Rebel Camp, Booty Bay
@@ -1259,6 +1266,7 @@
 					["0.51:0.47:0.50:0.42"] = 72, -- Refuge Pointe, Aerie Peak
 					["0.51:0.47:0.50:0.42:0.48:0.39"] = 123, -- Refuge Pointe, Aerie Peak, Chillwind Camp
 					["0.51:0.47:0.50:0.42:0.61:0.35"] = 233, -- Refuge Pointe, Aerie Peak, Light's Hope Chapel
+					["0.51:0.47:0.45:0.56:0.47:0.59:0.41:0.73:0.41:0.93"] = 570, -- Refuge Pointe, Menethil Harbor, Ironforge, Stormwind, Booty Bay
 
 					-- Alliance: Sentinel Hill (Westfall)
 					["0.39:0.80:0.41:0.93"] = 185, -- Sentinel Hill, Booty Bay
