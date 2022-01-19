@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.86 (19th January 2022)
+-- 	Leatrix Plus 2.5.87 (19th January 2022)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.86"
+	LeaPlusLC["AddonVer"] = "2.5.87"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -5386,6 +5386,10 @@
 				-- Hide expand tab (left of All button)
 				_G["TradeSkillExpandTabLeft"]:Hide()
 
+				-- Hide skills list horizontal dividing bar (this hides it behind RecipeInset)
+				TradeSkillHorizontalBarLeft:SetSize(1, 1)
+				TradeSkillHorizontalBarLeft:Hide()
+
 				-- Get tradeskill frame textures
 				local regions = {_G["TradeSkillFrame"]:GetRegions()}
 
@@ -5402,10 +5406,6 @@
 				-- Hide bottom left and bottom right textures
 				regions[4]:Hide()
 				regions[5]:Hide()
-
-				-- Hide skills list dividing bar
-				regions[9]:Hide()
-				regions[10]:Hide()
 
 				-- Move create button row
 				_G["TradeSkillCreateButton"]:ClearAllPoints()

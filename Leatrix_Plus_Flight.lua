@@ -1515,6 +1515,7 @@
 					["0.31:0.69:0.43:0.25:0.42:0.16"] = 552, -- Feathermoon, Auberdine, Rut'theran Village
 					["0.31:0.69:0.48:0.70:0.64:0.67:0.61:0.55"] = 429, -- Feathermoon, Thalanaar, Theramore, Ratchet
 					["0.31:0.69:0.40:0.51:0.64:0.67"] = 535, -- Feathermoon, Nijel's Point, Theramore
+					["0.31:0.69:0.40:0.51:0.64:0.67:0.60:0.81"] = 690, -- Feathermoon, Nijel's Point, Theramore, Gadgetzan 
 
 					-- Alliance: Forest Song (Ashenvale)
 					["0.58:0.39:0.61:0.40:0.61:0.55:0.64:0.67:0.48:0.70:0.31:0.69"] = 602, -- Forest Song, Talrendis Point, Ratchet, Theramore, Thalanaar, Feathermoon
@@ -2014,6 +2015,7 @@
 					["0.27:0.74:0.55:0.77:0.69:0.85:0.81:0.77"] = 281, -- Telaar, Allerian Stronghold, Wildhammer Stronghold, Altar of Sha'tar
 					["0.27:0.74:0.44:0.67:0.65:0.58:0.75:0.50"] = 253, -- Telaar, Shattrath, Honor Hold, Shatter Point
 					["0.27:0.74:0.55:0.77:0.69:0.85:0.78:0.85"] = 241, -- Telaar, Allerian Stronghold, Wildhammer Stronghold, Sanctum of the Stars
+					["0.27:0.74:0.38:0.50:0.32:0.34:0.42:0.28"] = 269, -- Telaar, Telredor, Sylvanaar, Evergrove
 
 					-- Alliance: Telredor (Zangarmarsh)
 					["0.38:0.50:0.27:0.74"] = 125, -- Telredor, Telaar
