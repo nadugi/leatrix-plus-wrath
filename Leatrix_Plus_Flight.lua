@@ -1330,8 +1330,8 @@
 					["0.41:0.73:0.47:0.59:0.45:0.56"] = 286, -- Stormwind, Ironforge, Menethil Harbor
 					["0.41:0.73:0.47:0.65:0.53:0.61:0.51:0.47"] = 375, -- Stormwind, Thorium Point, Thelsamar, Refuge Pointe
 					["0.41:0.73:0.47:0.59:0.44:0.45"] = 387, -- Stormwind, Ironforge, Southshore
-					["0.41:0.73:0.47:0.65:0.53:0.61:0.51:0.47:0.50:0.42"] = 508, -- Stormwind, Thorium Point, Thelsamar, Refuge Pointe, Aerie Peak
-					["0.41:0.73:0.47:0.59:0.48:0.39"] = 506, -- Stormwind, Ironforge, Chillwind Camp
+					["0.41:0.73:0.47:0.65:0.53:0.61:0.51:0.47:0.50:0.42"] = 446, -- Stormwind, Thorium Point, Thelsamar, Refuge Pointe, Aerie Peak
+					["0.41:0.73:0.47:0.59:0.48:0.39"] = 429, -- Stormwind, Ironforge, Chillwind Camp
 					["0.41:0.73:0.47:0.59:0.61:0.35"] = 523, -- Stormwind, Ironforge, Light's Hope Chapel
 					["0.41:0.73:0.47:0.59:0.61:0.35:0.61:0.28"] = 621, -- Stormwind, Ironforge, Light's Hope Chapel, Zul'Aman
 					["0.41:0.73:0.47:0.59:0.53:0.61"] = 274, -- Stormwind, Ironforge, Thelsamar
@@ -1978,6 +1978,7 @@
 					["0.44:0.67:0.55:0.77:0.69:0.85:0.78:0.85"] = 195, -- Shattrath, Allerian Stronghold, Wildhammer Stronghold, Sanctum of the Stars
 					["0.44:0.67:0.38:0.50:0.32:0.34:0.58:0.27:0.72:0.28"] = 359, -- Shattrath, Telredor, Sylvanaar, Area 52, Cosmowrench
 					["0.44:0.67:0.65:0.58:0.52:0.51"] = 185, -- Shattrath, Honor Hold, Temple of Telhamat 
+					["0.44:0.67:0.38:0.50:0.32:0.34:0.63:0.18"] = 329, -- Shattrath, Telredor, Sylvanaar, The Stormspire
 
 					-- Alliance: Sylvanaar (Blade's Edge Mountains)
 					["0.32:0.34:0.38:0.50:0.27:0.74"] = 207, -- Sylvanaar, Telredor, Telaar
