@@ -1,3 +1,7 @@
+2.5.88.alpha.1 - 19th January 2022
+- For 'Mute game sounds' ('System'), the 'Chimes' setting will now mute the Ironforge hourly horn sound.
+- Added more flight times.  Keep reporting.  Every little helps.
+
 2.5.87 - 19th January 2022
 - Fixed the textures for 'Enhance professions' ('Interface').
 

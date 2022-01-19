@@ -1128,7 +1128,7 @@
 					["0.47:0.59:0.45:0.56"] = 115, -- Ironforge, Menethil Harbor
 					["0.47:0.59:0.51:0.47"] = 204, -- Ironforge, Refuge Pointe
 					["0.47:0.59:0.44:0.45"] = 216, -- Ironforge, Southshore
-					["0.47:0.59:0.50:0.42"] = 240, -- Ironforge, Aerie Peak
+					["0.47:0.59:0.50:0.42"] = 299, -- Ironforge, Aerie Peak
 					["0.47:0.59:0.48:0.39"] = 258, -- Ironforge, Chillwind Camp
 					["0.47:0.59:0.61:0.35"] = 349, -- Ironforge, Light's Hope Chapel
 					["0.47:0.59:0.61:0.35:0.61:0.28"] = 446, -- Ironforge, Light's Hope Chapel, Zul'Aman
@@ -1136,6 +1136,7 @@
 					["0.47:0.59:0.41:0.73:0.39:0.80"] = 274, -- Ironforge, Stormwind, Sentinel Hill
 					["0.47:0.59:0.41:0.73:0.50:0.75"] = 309, -- Ironforge, Stormwind, Lakeshire
 					["0.47:0.59:0.41:0.73:0.55:0.81"] = 373, -- Ironforge, Stormwind, Nethergarde Keep
+					["0.47:0.59:0.41:0.73:0.47:0.79"] = 312, -- Ironforge, Stormwind, Darkshire
 
 					-- Alliance: Lakeshire (Redridge Mountains)
 					["0.50:0.75:0.47:0.79:0.43:0.82:0.41:0.93"] = 227, -- Lakeshire, Darkshire, Rebel Camp, Booty Bay
@@ -1287,7 +1288,7 @@
 					["0.39:0.80:0.41:0.73:0.47:0.65"] = 205, -- Sentinel Hill, Stormwind, Thorium Point
 					["0.39:0.80:0.41:0.73:0.47:0.65:0.53:0.61"] = 284, -- Sentinel Hill, Stormwind, Thorium Point, Thelsamar
 					["0.39:0.80:0.41:0.73:0.47:0.59"] = 288, -- Sentinel Hill, Stormwind, Ironforge
-					["0.39:0.80:0.41:0.73:0.47:0.59:0.45:0.56"] = 414, -- Sentinel Hill, Stormwind, Ironforge, Menethil Harbor
+					["0.39:0.80:0.41:0.73:0.47:0.59:0.45:0.56"] = 358, -- Sentinel Hill, Stormwind, Ironforge, Menethil Harbor
 					["0.39:0.80:0.41:0.73:0.47:0.65:0.53:0.61:0.51:0.47"] = 447, -- Sentinel Hill, Stormwind, Thorium Point, Thelsamar, Refuge Pointe
 					["0.39:0.80:0.41:0.73:0.47:0.59:0.44:0.45"] = 569, -- Sentinel Hill, Stormwind, Ironforge, Southshore
 					["0.39:0.80:0.41:0.73:0.47:0.65:0.53:0.61:0.51:0.47:0.50:0.42"] = 376, -- Sentinel Hill, Stormwind, Thorium Point, Thelsamar, Refuge Pointe, Aerie Peak

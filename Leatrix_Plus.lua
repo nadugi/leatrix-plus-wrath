@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.87 (19th January 2022)
+-- 	Leatrix Plus 2.5.88.alpha.1 (19th January 2022)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.87"
+	LeaPlusLC["AddonVer"] = "2.5.88.alpha.1"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -648,6 +648,7 @@
 					"belltollnightelf.ogg#566558",
 					"belltolltribal.ogg#566027",
 					"kharazahnbelltoll.ogg#566254",
+					"dwarfhorn.ogg#566064",
 				},
 
 				-- Ready check (sound/interface/)
