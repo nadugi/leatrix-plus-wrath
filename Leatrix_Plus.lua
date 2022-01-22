@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.88.alpha.3 (22nd January 2022)
+-- 	Leatrix Plus 2.5.88.alpha.4 (22nd January 2022)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.88.alpha.3"
+	LeaPlusLC["AddonVer"] = "2.5.88.alpha.4"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -3211,6 +3211,7 @@
 				bFrame:HookScript("OnShow", function()
 					if ButtonFrameTicker then ButtonFrameTicker:Cancel() end
 					ButtonFrameTicker = C_Timer.NewTicker(2, function()
+						if ItemRackMenuFrame and ItemRackMenuFrame:IsMouseOver() then return end
 						if not bFrame:IsMouseOver() and not Minimap:IsMouseOver() then
 							bFrame:Hide()
 							if ButtonFrameTicker then ButtonFrameTicker:Cancel() end
