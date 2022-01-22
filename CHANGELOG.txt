@@ -1,4 +1,4 @@
-2.5.88.alpha.2 - 21st January 2022
+2.5.88.alpha.3 - 22nd January 2022
 - For 'Mute game sounds' ('System'), the 'Chimes' setting will now mute the Ironforge hourly horn sound.
 - Added lots of flight times.  Keep reporting.  Every little helps.
 
