@@ -1014,6 +1014,7 @@
 					["0.38:0.32:0.58:0.27"] = 97, -- Thunderlord Stronghold, Area 52
 					["0.38:0.32:0.58:0.27:0.72:0.28"] = 163, -- Thunderlord Stronghold, Area 52, Cosmowrench
 					["0.38:0.32:0.63:0.18"] = 158, -- Thunderlord Stronghold, The Stormspire
+					["0.38:0.32:0.44:0.51:0.44:0.67:0.51:0.73:0.66:0.77:0.81:0.77"] = 416, -- Thunderlord Stronghold, Swamprat Post, Shattrath, Stonebreaker Hold, Shadowmoon Village, Altar of Sha'tar
 
 					-- Horde: Zabra'jin (Zangarmarsh)
 					["0.23:0.50:0.29:0.62"] = 81, -- Zabra'jin, Garadar
