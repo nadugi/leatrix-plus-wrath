@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.90.alpha.1 (5th February 2022)
+-- 	Leatrix Plus 2.5.90.alpha.2 (5th February 2022)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.90.alpha.1"
+	LeaPlusLC["AddonVer"] = "2.5.90.alpha.2"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -713,6 +713,13 @@
 
 				},
 
+				-- Screech (sound/spells/)
+				["MuteScreech"] = {
+
+					"screech.ogg#569429",
+
+				},
+
 			}
 
 			-- Give table file level scope (its used during logout and for wipe and admin commands)
@@ -745,6 +752,7 @@
 
 			LeaPlusLC:MakeTx(SoundPanel, "Pets", 264, -72)
 			LeaPlusLC:MakeCB(SoundPanel, "MuteYawns", "Yawns", 264, -92, false, "If checked, yawns from hunter pet cats will be muted.")
+			LeaPlusLC:MakeCB(SoundPanel, "MuteScreech", "Screech", 264, -112, false, "If checked, Screech will be muted.|n|nThis is a spell used by some flying pets.")
 
 			-- Set click width for sounds checkboxes
 			for k, v in pairs(muteTable) do
