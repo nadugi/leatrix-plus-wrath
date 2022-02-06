@@ -1,5 +1,5 @@
-2.5.90.alpha.3 - 5th February 2022
-- Added lots of flight times.  There are now 1914 flight times stored in Leatrix Plus for BCC.
+2.5.90.alpha.4 - 6th February 2022
+- Added lots of flight times.  There are now 1918 flight times stored in Leatrix Plus for BCC.
 - Added 'Screech' to 'Mute game sounds' ('System').  This is a spell used by some flying pets.
 - Added 'Striders' to 'Mute game sounds' ('System').  This will mute mechanostrider mounts.
 
