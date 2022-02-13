@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.91.alpha.2 (11th February 2022)
+-- 	Leatrix Plus 2.5.91.alpha.3 (13th February 2022)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.91.alpha.2"
+	LeaPlusLC["AddonVer"] = "2.5.91.alpha.3"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -12549,6 +12549,196 @@
 				else
 					LeaPlusLC:Print("You cannot do that while in group finder.")
 				end
+				return
+			elseif str == "limit" then
+				-- Sound Limit
+				if not LeaPlusLC.MuteFrame then
+					-- Panel frame
+					local frame = CreateFrame("FRAME", nil, UIParent)
+					frame:SetSize(294, 86); frame:SetFrameStrata("FULLSCREEN_DIALOG"); frame:SetFrameLevel(100); frame:SetScale(2)
+					frame.tex = frame:CreateTexture(nil, "BACKGROUND"); frame.tex:SetAllPoints(); frame.tex:SetColorTexture(0.05, 0.05, 0.05, 0.9)
+					frame.close = CreateFrame("Button", nil, frame, "UIPanelCloseButton"); frame.close:SetSize(30, 30); frame.close:SetPoint("TOPRIGHT", 0, 0); frame.close:SetScript("OnClick", function() frame:Hide() end)
+					frame:ClearAllPoints(); frame:SetPoint("CENTER", UIParent, "CENTER", 0, 0)
+					frame:SetClampedToScreen(true)
+					frame:EnableMouse(true)
+					frame:SetMovable(true)
+					frame:RegisterForDrag("LeftButton")
+					frame:SetScript("OnDragStart", frame.StartMoving)
+					frame:SetScript("OnDragStop", function() frame:StopMovingOrSizing() frame:SetUserPlaced(false) end)
+					frame:Hide()
+					LeaPlusLC:CreateBar("MutePanelMainTexture", frame, 294, 86, "TOPRIGHT", 0.7, 0.7, 0.7, 0.7,  "Interface\\ACHIEVEMENTFRAME\\UI-GuildAchievement-Parchment-Horizontal-Desaturated.png")
+					-- Panel contents
+					LeaPlusLC:MakeTx(frame, "Sound Limit", 16, -12)
+					local endBox = LeaPlusLC:CreateEditBox("SoundEndBox", frame, 116, 10, "TOPLEFT", 16, -32, "SoundEndBox", "SoundEndBox")
+					endBox:SetText(3000000)
+					endBox:SetScript("OnMouseWheel", function(self, delta)
+						local endSound = tonumber(endBox:GetText())
+						if endSound then
+							if delta == 1 then endSound = endSound + LeaPlusLC.SoundByte else endSound = endSound - LeaPlusLC.SoundByte end
+							if endSound < 1 then endSound = 1 elseif endSound >= 3000000 then endSound = 3000000 end
+							endBox:SetText(endSound)
+						else
+							endSound = 100000
+							endBox:SetText(endSound)
+						end
+					end)
+					-- Set limit button
+					frame.btn = LeaPlusLC:CreateButton("muteRangeButton", frame, "SET LIMIT", "TOPLEFT", 16, -72, 0, 25, true, "Click to set the sound file limit.  Use the mousewheel on the editbox along with the step buttons below to adjust the sound limit.  Acceptable range is from 1 to 3000000.  Sound files higher than this limit will be muted.")
+					frame.btn:ClearAllPoints()
+					frame.btn:SetPoint("LEFT", endBox, "RIGHT", 10, 0)
+					frame.btn:SetScript("OnClick", function()
+						local endSound = tonumber(endBox:GetText())
+						if endSound then
+							if endSound > 3000000 then endSound = 3000000 endBox:SetText(endSound) end
+							frame.btn:SetText("WAIT")
+							C_Timer.After(0.1, function()
+								for i = 1, 3000000 do
+									MuteSoundFile(i)
+								end
+								for i = 1, endSound do
+									UnmuteSoundFile(i)
+								end
+								Sound_GameSystem_RestartSoundSystem()
+								frame.btn:SetText("SET LIMIT")
+							end)
+						else
+							frame.btn:SetText("INVALID")
+							frame.btn:EnableMouse(false)
+							C_Timer.After(2, function()
+								frame.btn:SetText("SET LIMIT")
+								frame.btn:EnableMouse(true)
+							end)
+						end
+					end)
+					-- Mute all button
+					frame.MuteAllBtn = LeaPlusLC:CreateButton("muteMuteAllButton", frame, "MUTE ALL", "TOPLEFT", 16, -92, 0, 25, true, "Click to mute every sound in the game.")
+					frame.MuteAllBtn:SetScale(0.5)
+					frame.MuteAllBtn:ClearAllPoints()
+					frame.MuteAllBtn:SetPoint("TOPLEFT", frame.btn, "TOPRIGHT", 20, 0)
+					frame.MuteAllBtn:SetScript("OnClick", function()
+						frame.MuteAllBtn:SetText("WAIT")
+						C_Timer.After(0.1, function()
+							for i = 1, 3000000 do
+								MuteSoundFile(i)
+							end
+							Sound_GameSystem_RestartSoundSystem()
+							frame.MuteAllBtn:SetText("MUTE ALL")
+						end)
+						return
+					end)
+					-- Unmute all button
+					frame.UnmuteAllBtn = LeaPlusLC:CreateButton("muteUnmuteAllButton", frame, "UNMUTE ALL", "TOPLEFT", 16, -92, 0, 25, true, "Click to unmute every sound in the game.")
+					frame.UnmuteAllBtn:SetScale(0.5)
+					frame.UnmuteAllBtn:ClearAllPoints()
+					frame.UnmuteAllBtn:SetPoint("TOPLEFT", frame.MuteAllBtn, "BOTTOMLEFT", 0, -10)
+					frame.UnmuteAllBtn:SetScript("OnClick", function()
+						frame.UnmuteAllBtn:SetText("WAIT")
+						C_Timer.After(0.1, function()
+							for i = 1, 3000000 do
+								UnmuteSoundFile(i)
+							end
+							Sound_GameSystem_RestartSoundSystem()
+							frame.UnmuteAllBtn:SetText("UNMUTE ALL")
+						end)
+						return
+					end)
+					-- Step buttons
+					frame.millionBtn = LeaPlusLC:CreateButton("SoundMillionButton", frame, "1000000", "TOPLEFT", 26, -122, 0, 25, true, "Set the editbox step value to 1000000.")
+					frame.millionBtn:SetScale(0.5)
+
+					frame.hundredThousandBtn = LeaPlusLC:CreateButton("SoundHundredThousandButton", frame, "100000", "TOPLEFT", 16, -112, 0, 25, true, "Set the editbox step value to 100000.")
+					frame.hundredThousandBtn:ClearAllPoints()
+					frame.hundredThousandBtn:SetPoint("LEFT", frame.millionBtn, "RIGHT", 10, 0)
+					frame.hundredThousandBtn:SetScale(0.5)
+
+					frame.tenThousandBtn = LeaPlusLC:CreateButton("SoundTenThousandButton", frame, "10000", "TOPLEFT", 16, -112, 0, 25, true, "Set the editbox step value to 10000.")
+					frame.tenThousandBtn:ClearAllPoints()
+					frame.tenThousandBtn:SetPoint("LEFT", frame.hundredThousandBtn, "RIGHT", 10, 0)
+					frame.tenThousandBtn:SetScale(0.5)
+
+					frame.thousandBtn = LeaPlusLC:CreateButton("SoundThousandButton", frame, "1000", "TOPLEFT", 16, -112, 0, 25, true, "Set the editbox step value to 1000.")
+					frame.thousandBtn:ClearAllPoints()
+					frame.thousandBtn:SetPoint("LEFT", frame.tenThousandBtn, "RIGHT", 10, 0)
+					frame.thousandBtn:SetScale(0.5)
+
+					frame.hundredBtn = LeaPlusLC:CreateButton("SoundHundredButton", frame, "100", "TOPLEFT", 16, -112, 0, 25, true, "Set the editbox step value to 100.")
+					frame.hundredBtn:ClearAllPoints()
+					frame.hundredBtn:SetPoint("LEFT", frame.thousandBtn, "RIGHT", 10, 0)
+					frame.hundredBtn:SetScale(0.5)
+
+					frame.tenBtn = LeaPlusLC:CreateButton("SoundTenButton", frame, "10", "TOPLEFT", 16, -112, 0, 25, true, "Set the editbox step value to 10.")
+					frame.tenBtn:ClearAllPoints()
+					frame.tenBtn:SetPoint("LEFT", frame.hundredBtn, "RIGHT", 10, 0)
+					frame.tenBtn:SetScale(0.5)
+
+					frame.oneBtn = LeaPlusLC:CreateButton("SoundTenButton", frame, "1", "TOPLEFT", 16, -112, 0, 25, true, "Set the editbox step value to 1.")
+					frame.oneBtn:ClearAllPoints()
+					frame.oneBtn:SetPoint("LEFT", frame.tenBtn, "RIGHT", 10, 0)
+					frame.oneBtn:SetScale(0.5)
+
+					local function DimAllBoxes()
+						frame.millionBtn:SetAlpha(0.3)
+						frame.hundredThousandBtn:SetAlpha(0.3)
+						frame.tenThousandBtn:SetAlpha(0.3)
+						frame.thousandBtn:SetAlpha(0.3)
+						frame.hundredBtn:SetAlpha(0.3)
+						frame.tenBtn:SetAlpha(0.3)
+						frame.oneBtn:SetAlpha(0.3)
+					end
+
+					LeaPlusLC.SoundByte = 1000000
+					DimAllBoxes()
+					frame.millionBtn:SetAlpha(1)
+
+					-- Step button handlers
+					frame.millionBtn:SetScript("OnClick", function()
+						LeaPlusLC.SoundByte = 1000000
+						DimAllBoxes()
+						frame.millionBtn:SetAlpha(1)
+					end)
+
+					frame.hundredThousandBtn:SetScript("OnClick", function()
+						LeaPlusLC.SoundByte = 100000
+						DimAllBoxes()
+						frame.hundredThousandBtn:SetAlpha(1)
+					end)
+
+					frame.tenThousandBtn:SetScript("OnClick", function()
+						LeaPlusLC.SoundByte = 10000
+						DimAllBoxes()
+						frame.tenThousandBtn:SetAlpha(1)
+					end)
+
+					frame.thousandBtn:SetScript("OnClick", function()
+						LeaPlusLC.SoundByte = 1000
+						DimAllBoxes()
+						frame.thousandBtn:SetAlpha(1)
+					end)
+
+					frame.hundredBtn:SetScript("OnClick", function()
+						LeaPlusLC.SoundByte = 100
+						DimAllBoxes()
+						frame.hundredBtn:SetAlpha(1)
+					end)
+
+					frame.tenBtn:SetScript("OnClick", function()
+						LeaPlusLC.SoundByte = 10
+						DimAllBoxes()
+						frame.tenBtn:SetAlpha(1)
+					end)
+
+					frame.oneBtn:SetScript("OnClick", function()
+						LeaPlusLC.SoundByte = 1
+						DimAllBoxes()
+						frame.oneBtn:SetAlpha(1)
+					end)
+
+					-- Final code
+					LeaPlusLC.MuteFrame = frame
+					_G["LeaPlusGlobalMutePanel"] = frame
+					table.insert(UISpecialFrames, "LeaPlusGlobalMutePanel")
+				end
+				if LeaPlusLC.MuteFrame:IsShown() then LeaPlusLC.MuteFrame:Hide() else LeaPlusLC.MuteFrame:Show() end
 				return
 			elseif str == "admin" then
 				-- Preset profile (used for testing)
