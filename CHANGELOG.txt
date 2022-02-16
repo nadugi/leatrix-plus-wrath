@@ -1,7 +1,7 @@
-2.5.91.alpha.5 - 14th February 2022
+2.5.91 - 16th February 2022
 - For 'Enhance minimap' ('Interface'), added a new setting 'Show who pinged'.  It's enabled by default.  Note that this does not apply to your own pings.
 - For 'Mute game sounds' ('System'), added 'A'dal'.  This will mute A'dal in Shattrath City.
-- Added lots of flight times.  There are now 1951 flight times stored in Leatrix Plus for BCC.
+- Added lots of flight times.  There are now 1952 flight times stored in Leatrix Plus for BCC.
 
 2.5.90 - 9th February 2022
 - Added lots of flight times.  There are now 1932 flight times stored in Leatrix Plus for BCC.
