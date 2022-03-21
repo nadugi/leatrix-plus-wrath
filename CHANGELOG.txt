@@ -1,3 +1,7 @@
+2.5.95.alpha.1 - 21st March 2022
+- Added lots of flight times.  There are now 2025 flight times stored in Leatrix Plus for BCC.
+- Updated the '/ltp ra' rare announcement message.
+
 2.5.94 - 9th March 2022
 - Added lots of flight times.  There are now 1994 flight times stored in Leatrix Plus for BCC.
 
