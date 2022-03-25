@@ -1,3 +1,6 @@
+2.5.97.alpha.1 - 25th March 2022
+- Added a compatibility fix for 'Enhance professions' when using the 'Classic Profession Filter' addon so that you can see the search box in the craft frame (used for enchanting).
+
 2.5.96 - 25th March 2022
 - Fixed an issue with 'Enhance professions' ('Interface') which caused the new search box to be obscured.
 - Added lots of flight times.  There are now 2051 flight times stored in Leatrix Plus for BCC.

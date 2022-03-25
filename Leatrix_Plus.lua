@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.96 (25th March 2022)
+-- 	Leatrix Plus 2.5.97.alpha.1 (25th March 2022)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.96"
+	LeaPlusLC["AddonVer"] = "2.5.97.alpha.1"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -5837,11 +5837,18 @@
 
 				-- Classic Profession Filter addon fixes
 				if IsAddOnLoaded("ClassicProfessionFilter") and CraftFrame.SearchBox and CraftFrame.HaveMats and CraftFrame.HaveMats.text and CraftFrame.SearchMats and CraftFrame.SearchMats.text then
+
 					CraftFrame.SearchBox:ClearAllPoints()
-					CraftFrame.SearchBox:SetPoint("LEFT", CraftRankFrame, "RIGHT", 20, -10)
+					CraftFrame.SearchBox:SetPoint("BOTTOMRIGHT", CraftListScrollFrame, "TOPRIGHT", 23, 2)
+					CraftFrame.SearchBox:SetWidth(130)
+					CraftFrame.SearchBox:SetFrameLevel(4)
+
+					CraftFrameAvailableFilterCheckButtonText:SetWidth(110)
+					CraftFrameAvailableFilterCheckButtonText:SetWordWrap(false)
+					CraftFrameAvailableFilterCheckButtonText:SetJustifyH("LEFT")
 
 					CraftFrame.HaveMats:ClearAllPoints()
-					CraftFrame.HaveMats:SetPoint("LEFT", CraftFrame.SearchBox, "RIGHT", 10, 8)
+					CraftFrame.HaveMats:SetPoint("LEFT", CraftFrame.SearchBox, "RIGHT", 10, 14)
 					CraftFrame.HaveMats.text:SetText(L["Have mats?"])
 					CraftFrame.HaveMats:SetHitRectInsets(0, -CraftFrame.HaveMats.text:GetStringWidth() + 4, 0, 0)
 					CraftFrame.HaveMats.text:SetJustifyH("LEFT")
