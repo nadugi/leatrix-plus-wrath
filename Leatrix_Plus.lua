@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.97.alpha.3 (26th March 2022)
+-- 	Leatrix Plus 2.5.97.alpha.4 (26th March 2022)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.97.alpha.3"
+	LeaPlusLC["AddonVer"] = "2.5.97.alpha.4"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -5382,6 +5382,10 @@
 						end
 					end
 					LeaPlusCB["TrainAllButton"]:SetEnabled(skillsAvailable)
+					-- Refresh tooltip
+					if LeaPlusCB["TrainAllButton"]:IsMouseOver() and skillsAvailable then
+						LeaPlusCB["TrainAllButton"]:GetScript("OnEnter")(LeaPlusCB["TrainAllButton"])
+					end
 				end)
 
 				----------------------------------------------------------------------
