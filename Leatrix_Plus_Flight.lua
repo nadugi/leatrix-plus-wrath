@@ -247,6 +247,7 @@
 					-- Horde: Zul'Aman
 					["0.61:0.28:0.58:0.25"] = 53, -- Zul'Aman, Tranquillien
 					["0.61:0.28:0.58:0.25:0.59:0.19"] = 118, -- Zul'Aman, Tranquillien, Silvermoon City
+					["0.61:0.28:0.61:0.35:0.42:0.37"] = 362, -- Zul'Aman, Light's Hope Chapel, Undercity 
 
 				},
 
@@ -1684,6 +1685,7 @@
 					["0.31:0.69:0.43:0.25:0.39:0.40"] = 649, -- Feathermoon, Auberdine, Stonetalon Peak
 					["0.31:0.69:0.48:0.70:0.64:0.67:0.61:0.40:0.65:0.23"] = 724, -- Feathermoon, Thalanaar, Theramore, Talrendis Point, Everlook 
 					["0.31:0.69:0.43:0.25:0.55:0.21:0.65:0.23"] = 737, -- Feathermoon, Auberdine, Moonglade, Everlook 
+					["0.31:0.69:0.48:0.70:0.64:0.67"] = 314, -- Mondfederfeste, Thalanaar, Theramore 
 
 					-- Alliance: Forest Song (Ashenvale)
 					["0.58:0.39:0.61:0.40:0.61:0.55:0.64:0.67:0.48:0.70:0.31:0.69"] = 602, -- Forest Song, Talrendis Point, Ratchet, Theramore, Thalanaar, Feathermoon
@@ -2154,6 +2156,7 @@
 					["0.78:0.85:0.55:0.77:0.44:0.67:0.38:0.50:0.27:0.44"] = 361, -- Sanctum of the Stars, Allerian Stronghold, Shattrath, Telredor, Orebor Harborage
 					["0.78:0.85:0.55:0.77:0.44:0.67:0.38:0.50:0.42:0.37"] = 366, -- Sanctum of the Stars, Allerian Stronghold, Shattrath, Telredor, Toshley's Station 
 					["0.78:0.85:0.69:0.85:0.55:0.77:0.44:0.67:0.38:0.50:0.42:0.37:0.42:0.28"] = 419, -- Sanctum of the Stars, Wildhammer Stronghold, Allerian Stronghold, Shattrath, Telredor, Toshley's Station, Evergrove
+					["0.78:0.85:0.69:0.85:0.55:0.77:0.44:0.67"] = 215, -- Sanctum of the Stars, Wildhammer Stronghold, Allerian Stronghold, Shattrath 
 
 					-- Alliance: Shatter Point (Hellfire Peninsula)
 					["0.75:0.50:0.79:0.55"] = 33, -- Shatter Point, Hellfire Peninsula
