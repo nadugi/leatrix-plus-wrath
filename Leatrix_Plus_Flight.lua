@@ -245,7 +245,7 @@
 					["0.42:0.37:0.61:0.35:0.61:0.28"] = 354, -- Undercity, Light's Hope Chapel, Zul'Aman
 
 					-- Horde: Zul'Aman
-					["0.61:0.28:0.58:0.25"] = 53, -- Zul'Aman, Tranquillien
+					["0.61:0.28:0.58:0.25"] = 52, -- Zul'Aman, Tranquillien
 					["0.61:0.28:0.58:0.25:0.59:0.19"] = 118, -- Zul'Aman, Tranquillien, Silvermoon City
 					["0.61:0.28:0.61:0.35:0.42:0.37"] = 362, -- Zul'Aman, Light's Hope Chapel, Undercity 
 
