@@ -1768,6 +1768,7 @@
 					["0.50:0.76:0.60:0.81:0.61:0.55:0.46:0.40:0.43:0.25"] = 694, -- Marshal's Refuge, Gadgetzan, Ratchet, Astranaar, Auberdine
 					["0.50:0.76:0.60:0.81:0.61:0.55:0.46:0.40:0.43:0.25:0.42:0.16"] = 778, -- Marshal's Refuge, Gadgetzan, Ratchet, Astranaar, Auberdine, Rut'theran Village
 					["0.50:0.76:0.60:0.81:0.48:0.70:0.31:0.69"] = 458, -- Marshal's Refuge, Gadgetzan, Thalanaar, Feathermoon
+					["0.50:0.76:0.60:0.81:0.61:0.55:0.46:0.40:0.58:0.39"] = 680, -- Marshal's Refuge, Gadgetzan, Ratchet, Astranaar, Forest Song
 
 					-- Alliance: Moonglade (Moonglade)
 					["0.55:0.21:0.43:0.25:0.31:0.69"] = 614, -- Moonglade, Auberdine, Feathermoon
