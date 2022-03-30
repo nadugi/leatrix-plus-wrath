@@ -1,7 +1,7 @@
-2.5.97.alpha.6 - 29th March 2022
+2.5.97.alpha.7 - 30th March 2022
 - If 'Enhance trainers' ('Interface') is enabled, a 'Train All' button will now be shown in the skill trainer frame allowing you to train all available skills in one click.
 - Added a compatibility fix for 'Enhance professions' when using the 'Classic Profession Filter' addon so that you can see the search box in the craft frame (used for enchanting).
-- Added flight times.  There are now 2068 flight times stored in Leatrix Plus for BCC.
+- Added lots of flight times.  There are now 2075 flight times stored in Leatrix Plus for BCC.
 
 2.5.96 - 25th March 2022
 - Fixed an issue with 'Enhance professions' ('Interface') which caused the new search box to be obscured.
