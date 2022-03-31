@@ -1250,7 +1250,7 @@
 					["0.47:0.59:0.50:0.42"] = 299, -- Ironforge, Aerie Peak
 					["0.47:0.59:0.48:0.39"] = 258, -- Ironforge, Chillwind Camp
 					["0.47:0.59:0.61:0.35"] = 349, -- Ironforge, Light's Hope Chapel
-					["0.47:0.59:0.61:0.35:0.61:0.28"] = 451, -- Ironforge, Light's Hope Chapel, Zul'Aman
+					["0.47:0.59:0.61:0.35:0.61:0.28"] = 446, -- Ironforge, Light's Hope Chapel, Zul'Aman
 					["0.47:0.59:0.41:0.73:0.43:0.82"] = 290, -- Ironforge, Stormwind, Rebel Camp
 					["0.47:0.59:0.41:0.73:0.39:0.80"] = 275, -- Ironforge, Stormwind, Sentinel Hill
 					["0.47:0.59:0.41:0.73:0.50:0.75"] = 309, -- Ironforge, Stormwind, Lakeshire
@@ -2042,6 +2042,7 @@
 					["0.81:0.77:0.69:0.85:0.55:0.77:0.44:0.67"] = 254, -- Altar of Sha'tar, Wildhammer Stronghold, Allerian Stronghold, Shattrath
 					["0.81:0.77:0.69:0.85:0.55:0.77:0.44:0.67:0.38:0.50"] = 338, -- Altar of Sha'tar, Wildhammer Stronghold, Allerian Stronghold, Shattrath, Telredor
 					["0.81:0.77:0.69:0.85:0.55:0.77:0.27:0.74"] = 329, -- Altar of Sha'tar, Wildhammer Stronghold, Allerian Stronghold, Telaar 
+					["0.81:0.77:0.69:0.85:0.55:0.77:0.65:0.58"] = 276, -- Altar of Sha'tar, Wildhammer Stronghold, Allerian Stronghold, Honor Hold
 
 					-- Alliance: Area 52 (Netherstorm)
 					["0.58:0.27:0.42:0.37:0.38:0.50:0.27:0.74"] = 290, -- Area 52, Toshley's Station, Telredor, Telaar
