@@ -1551,6 +1551,7 @@
 					["0.61:0.28:0.61:0.35:0.48:0.39"] = 253, -- Zul'Aman, Light's Hope Chapel, Chillwind Camp
 					["0.61:0.28:0.61:0.35:0.50:0.42:0.51:0.47"] = 337, -- Zul'Aman, Light's Hope Chapel, Aerie Peak, Refuge Pointe
 					["0.61:0.28:0.61:0.35:0.47:0.59:0.47:0.65:0.52:0.72:0.50:0.75:0.47:0.79"] = 696, -- Zul'Aman, Light's Hope Chapel, Ironforge, Thorium Point, Morgan's Vigil, Lakeshire, Darkshire
+					["0.61:0.28:0.61:0.35:0.47:0.59:0.47:0.65:0.41:0.73:0.43:0.82"] = 710, -- Zul'Aman, Light's Hope Chapel, Ironforge, Thorium Point, Stormwind, Rebel Camp 
 
 				},
 
