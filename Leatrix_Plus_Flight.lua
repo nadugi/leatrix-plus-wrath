@@ -346,6 +346,7 @@
 					["0.53:0.61:0.56:0.53:0.46:0.30:0.54:0.21"] = 453, -- Camp Taurajo, Crossroads, Bloodvenom Post, Moonglade
 					["0.53:0.61:0.56:0.53:0.63:0.36:0.64:0.23"] = 372, -- Camp Taurajo, Crossroads, Valormok, Everlook
 					["0.53:0.61:0.56:0.53:0.44:0.69"] = 330, -- Camp Taurajo, Crossroads, Camp Mojache
+					["0.53:0.61:0.56:0.53:0.63:0.44:0.64:0.23"] = 435, -- Camp Taurajo, Crossroads, Orgrimmar, Everlook
 
 					-- Horde: Cenarion Hold (Silithus)
 					["0.42:0.79:0.61:0.80"] = 242, -- Cenarion Hold, Gadgetzan
@@ -437,6 +438,7 @@
 					["0.64:0.23:0.54:0.21"] = 135, -- Everlook, Moonglade
 					["0.64:0.23:0.63:0.44:0.56:0.53:0.45:0.56"] = 457, -- Everlook, Orgrimmar, Crossroads, Thunder Bluff 
 					["0.64:0.23:0.63:0.44:0.61:0.55"] = 351, -- Everlook, Orgrimmar, Ratchet 
+					["0.64:0.23:0.63:0.44:0.55:0.42"] = 333, -- Everlook, Orgrimmar, Splintertree Post
 
 					-- Horde: Freewind Post (Thousand Needles)
 					["0.55:0.73:0.44:0.69:0.42:0.79"] = 252, -- Freewind Post, Camp Mojache, Cenarion Hold
@@ -533,6 +535,7 @@
 					["0.54:0.21:0.64:0.23:0.63:0.44"] = 384, -- Moonglade, Everlook, Orgrimmar
 					["0.54:0.21:0.46:0.30:0.63:0.44"] = 371, -- Moonglade, Bloodvenom Post, Orgrimmar
 					["0.54:0.21:0.64:0.23:0.63:0.44:0.61:0.55:0.57:0.64"] = 592, -- Moonglade, Everlook, Orgrimmar, Ratchet, Brackenwall Village
+					["0.54:0.21:0.46:0.30:0.63:0.36"] = 339, -- Moonglade, Bloodvenom Post, Valormok 
 
 					-- Horde: Mudsprocket (Dustwallow Marsh)
 					["0.58:0.70:0.55:0.73:0.44:0.69:0.42:0.79"] = 324, -- Mudsprocket, Freewind Post, Camp Mojache, Cenarion Hold
@@ -654,6 +657,7 @@
 					["0.55:0.42:0.63:0.36:0.64:0.23"] = 221, -- Splintertree Post, Valormok, Everlook
 					["0.55:0.42:0.56:0.53:0.61:0.55"] = 212, -- Splintertree Post, Crossroads, Ratchet
 					["0.55:0.42:0.56:0.53:0.41:0.47"] = 310, -- Splintertree Post, Crossroads, Sun Rock Retreat
+					["0.55:0.42:0.63:0.44:0.46:0.30"] = 348, -- Splintertree Post, Orgrimmar, Bloodvenom Post
 
 					-- Horde: Sun Rock Retreat (Stonetalon Mountains)
 					["0.41:0.47:0.56:0.53:0.55:0.73:0.61:0.80"] = 426, -- Sun Rock Retreat, Crossroads, Freewind Post, Gadgetzan
@@ -799,6 +803,7 @@
 					["0.58:0.27:0.38:0.32:0.44:0.51"] = 224, -- Area 52, Thunderlord Stronghold, Swamprat Post
 					["0.58:0.27:0.38:0.32:0.44:0.51:0.44:0.67:0.51:0.73"] = 379, -- Area 52, Thunderlord Stronghold, Swamprat Post, Shattrath, Stonebreaker Hold
 					["0.58:0.27:0.38:0.32:0.23:0.50"] = 257, -- Area 52, Thunderlord Stronghold, Zabra'jin
+					["0.58:0.27:0.38:0.32:0.23:0.50:0.29:0.62"] = 335, -- Area 52, Thunderlord Stronghold, Zabra'jin, Garadar
 
 					-- Horde: Cosmowrench (Netherstorm)
 					["0.72:0.28:0.58:0.27:0.49:0.36:0.44:0.51:0.44:0.67:0.51:0.73:0.66:0.77"] = 420, -- Cosmowrench, Area 52, Mok'Nathal Village, Swamprat Post, Shattrath, Stonebreaker Hold, Shadowmoon Village
