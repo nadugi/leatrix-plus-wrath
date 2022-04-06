@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.98 (6th April 2022)
+-- 	Leatrix Plus 2.5.99 (6th April 2022)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.98"
+	LeaPlusLC["AddonVer"] = "2.5.99"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -6211,6 +6211,27 @@
 		----------------------------------------------------------------------
 
 		if LeaPlusLC["ShowBagSearchBox"] == "On" then
+
+			-- Function to unregister search event for guild bank since it isn't used
+			local function SetGuildBankFunc()
+				for i = 1, 6 do
+					_G["GuildBankTab" .. i].Button:UnregisterEvent("INVENTORY_SEARCH_UPDATE")
+				end
+			end
+
+			-- Run search event function when Blizzard addon is loaded
+			if IsAddOnLoaded("Blizzard_GuildBankUI") then
+				SetGuildBankFunc()
+			else
+				local waitFrame = CreateFrame("FRAME")
+				waitFrame:RegisterEvent("ADDON_LOADED")
+				waitFrame:SetScript("OnEvent", function(self, event, arg1)
+					if arg1 == "Blizzard_GuildBankUI" then
+						SetGuildBankFunc()
+						waitFrame:UnregisterAllEvents()
+					end
+				end)
+			end
 
 			-- Create bag item search box
 			local BagItemSearchBox = CreateFrame("EditBox", "BagItemSearchBox", ContainerFrame1, "BagSearchBoxTemplate")

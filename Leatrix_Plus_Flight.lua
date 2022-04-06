@@ -513,6 +513,7 @@
 					["0.50:0.76:0.61:0.80:0.61:0.55:0.63:0.44:0.63:0.36"] = 546, -- Marshal's Refuge, Gadgetzan, Ratchet, Orgrimmar, Valormok
 					["0.50:0.76:0.61:0.80:0.61:0.55:0.63:0.44:0.63:0.36:0.64:0.23"] = 675, -- Marshal's Refuge, Gadgetzan, Ratchet, Orgrimmar, Valormok, Everlook
 					["0.50:0.76:0.61:0.80:0.55:0.73:0.56:0.53:0.46:0.30:0.54:0.21"] = 766, -- Marshal's Refuge, Gadgetzan, Freewind Post, Crossroads, Bloodvenom Post, Moonglade
+					["0.50:0.76:0.61:0.80:0.44:0.69"] = 312, -- Marshal's Refuge, Gadgetzan, Camp Mojache
 
 					-- Horde: Moonglade (Moonglade)
 					["0.54:0.21:0.46:0.30:0.56:0.53:0.44:0.69:0.42:0.79"] = 734, -- Moonglade, Bloodvenom Post, Crossroads, Camp Mojache, Cenarion Hold
@@ -1366,6 +1367,7 @@
 					["0.52:0.72:0.47:0.65:0.47:0.59:0.48:0.39"] = 435, -- Morgan's Vigil, Thorium Point, Ironforge, Chillwind Camp
 					["0.52:0.72:0.47:0.65:0.47:0.59:0.61:0.35"] = 478, -- Morgan's Vigil, Thorium Point, Ironforge, Light's Hope Chapel
 					["0.52:0.72:0.47:0.65:0.47:0.59:0.50:0.42:0.48:0.39"] = 437, -- Morgan's Vigil, Thorium Point, Ironforge, Aerie Peak, Chillwind Camp
+					["0.52:0.72:0.41:0.73:0.47:0.59"] = 354, -- Morgan's Vigil, Stormwind, Ironforge
 
 					-- Alliance: Nethergarde Keep (Blasted Lands)
 					["0.55:0.81:0.47:0.79:0.43:0.82:0.41:0.93"] = 251, -- Nethergarde Keep, Darkshire, Rebel Camp, Booty Bay
@@ -2339,6 +2341,7 @@
 					["0.63:0.18:0.58:0.27:0.42:0.37:0.38:0.50:0.52:0.51:0.65:0.58:0.75:0.50"] = 440, -- The Stormspire, Area 52, Toshley's Station, Telredor, Temple of Telhamat, Honor Hold, Shatter Point
 					["0.63:0.18:0.58:0.27:0.42:0.37:0.38:0.50:0.44:0.67:0.55:0.77:0.69:0.85:0.81:0.77"] = 549, -- The Stormspire, Area 52, Toshley's Station, Telredor, Shattrath, Allerian Stronghold, Wildhammer Stronghold, Altar of Sha'tar
 					["0.63:0.18:0.58:0.27:0.42:0.37:0.38:0.50:0.44:0.67:0.55:0.77:0.69:0.85:0.78:0.85"] = 509, -- The Stormspire, Area 52, Toshley's Station, Telredor, Shattrath, Allerian Stronghold, Wildhammer Stronghold, Sanctum of the Stars 
+					["0.63:0.18:0.32:0.34:0.38:0.50:0.44:0.67"] = 332, -- The Stormspire, Sylvanaar, Telredor, Shattrath
 
 					-- Alliance: Toshley's Station (Blade's Edge Mountains)
 					["0.42:0.37:0.38:0.50:0.27:0.74"] = 265, -- Toshley's Station, Telredor, Telaar
