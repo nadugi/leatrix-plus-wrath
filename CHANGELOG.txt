@@ -1,6 +1,6 @@
-2.5.98.alpha.8 - 5th April 2022
+2.5.98 - 6th April 2022
 - The 'Enhance dressup' option now shows a toggle stats button in the character frame.  You can either click this button or middle-click the character frame to toggle stats.  For new Leatrix Plus users, stats are now shown by default.
-- Added lots of flight times.  There are now 2100 flight times stored in Leatrix Plus for BCC.
+- Added lots of flight times.  There are now 2102 flight times stored in Leatrix Plus for BCC.
 
 2.5.97 - 30th March 2022
 - If 'Enhance trainers' ('Interface') is enabled, a 'Train All' button will now be shown in the skill trainer frame allowing you to train all available skills in one click.
