@@ -1220,6 +1220,7 @@
 					["0.48:0.39:0.47:0.59:0.41:0.73:0.50:0.75"] = 531, -- Chillwind Camp, Ironforge, Stormwind, Lakeshire
 					["0.48:0.39:0.47:0.59:0.41:0.73"] = 433, -- Chillwind Camp, Ironforge, Stormwind
 					["0.48:0.39:0.47:0.59:0.47:0.65:0.41:0.73:0.55:0.81"] = 581, -- Chillwind Camp, Ironforge, Thorium Point, Stormwind, Nethergarde Keep 
+					["0.48:0.39:0.61:0.35:0.61:0.28"] = 244, -- Chillwind Camp, Light's Hope Chapel, Zul'Aman
 
 					-- Alliance: Darkshire (Duskwood)
 					["0.47:0.79:0.41:0.93"] = 171, -- Darkshire, Booty Bay
@@ -1889,6 +1890,7 @@
 					["0.61:0.55:0.46:0.40:0.50:0.35"] = 276, -- Ratchet, Astranaar, Emerald Sanctuary
 					["0.61:0.55:0.46:0.40:0.58:0.39"] = 332, -- Ratchet, Astranaar, Forest Song
 					["0.61:0.55:0.64:0.67:0.43:0.25:0.42:0.16"] = 629, -- Ratchet, Theramore, Auberdine, Rut'theran Village 
+					["0.61:0.55:0.46:0.40:0.39:0.40:0.40:0.51"] = 477, -- Ratchet, Astranaar, Stonetalon Peak, Nijel's Point
 
 					-- Alliance: Rut'theran Village (Teldrassil)
 					["0.42:0.16:0.43:0.25:0.31:0.69"] = 557, -- Rut'theran Village, Auberdine, Feathermoon
