@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.100.alpha.2 (8th April 2022)
+-- 	Leatrix Plus 2.5.100.alpha.3 (8th April 2022)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.100.alpha.2"
+	LeaPlusLC["AddonVer"] = "2.5.100.alpha.3"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -3190,7 +3190,7 @@
 			LeaPlusLC:MakeCB(SideMinimap, "ShowWhoPinged", "Show who pinged", 16, -232, false, "If checked, when someone pings the minimap, their name will be shown.  This does not apply to your pings.")
 
 			-- Add excluded button
-			local MiniExcludedButton = LeaPlusLC:CreateButton("MiniExcludedButton", SideMinimap, "Buttons", "TOPLEFT", 16, -72, 0, 25, true, "Click to toggle the always-visibible addon buttons editor.")
+			local MiniExcludedButton = LeaPlusLC:CreateButton("MiniExcludedButton", SideMinimap, "Buttons", "TOPLEFT", 16, -72, 0, 25, true, "Click to toggle the always-visible addon buttons editor.")
 			LeaPlusCB["MiniExcludedButton"]:ClearAllPoints()
 			LeaPlusCB["MiniExcludedButton"]:SetPoint("LEFT", SideMinimap.h, "RIGHT", 10, 0)
 
@@ -3227,7 +3227,7 @@
 				LeaPlusLC:MakeTx(ExcludedButtonsPanel, "Always-visible addon buttons editor", 16, -72)
 
 				-- Add second excluded button
-				local MiniExcludedButton2 = LeaPlusLC:CreateButton("MiniExcludedButton2", ExcludedButtonsPanel, "Buttons", "TOPLEFT", 16, -72, 0, 25, true, "Click to toggle the always-visibible addon buttons editor.")
+				local MiniExcludedButton2 = LeaPlusLC:CreateButton("MiniExcludedButton2", ExcludedButtonsPanel, "Buttons", "TOPLEFT", 16, -72, 0, 25, true, "Click to toggle the always-visible addon buttons editor.")
 				LeaPlusCB["MiniExcludedButton2"]:ClearAllPoints()
 				LeaPlusCB["MiniExcludedButton2"]:SetPoint("LEFT", ExcludedButtonsPanel.h, "RIGHT", 10, 0)
 				LeaPlusCB["MiniExcludedButton2"]:SetScript("OnClick", function() 
