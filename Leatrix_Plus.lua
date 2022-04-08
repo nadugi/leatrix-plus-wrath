@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.100.alpha.1 (7th April 2022)
+-- 	Leatrix Plus 2.5.100.alpha.2 (8th April 2022)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.100.alpha.1"
+	LeaPlusLC["AddonVer"] = "2.5.100.alpha.2"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -36,6 +36,14 @@
 			end)
 			return
 		end
+	end
+
+	-- Check for incompatible addons
+	if IsAddOnLoaded("NDui") then
+		C_Timer.After(5, function()
+			print("Leatrix Plus is not compatible with NDui.  To use Leatrix Plus, you need to uninstall NDui.")
+		end)
+		return
 	end
 
 ----------------------------------------------------------------------
