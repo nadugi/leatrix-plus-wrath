@@ -82,6 +82,7 @@
 					["0.55:0.46:0.46:0.43"] = 117, -- Hammerfall, Tarren Mill
 					["0.55:0.46:0.46:0.43:0.37:0.41"] = 215, -- Hammerfall, Tarren Mill, The Sepulcher
 					["0.55:0.46:0.59:0.45:0.61:0.35:0.61:0.28"] = 322, -- Hammerfall, Revantusk Village, Light's Hope Chapel, Zul'Aman
+					["0.55:0.46:0.46:0.43:0.42:0.37:0.61:0.35:0.61:0.28"] = 532, -- Hammerfall, Tarren Mill, Undercity, Light's Hope Chapel, Zul'Aman
 
 					-- Horde: Kargath (Badlands)
 					["0.50:0.66:0.41:0.93"] = 298, -- Kargath, Booty Bay
@@ -132,6 +133,7 @@
 					["0.59:0.45:0.61:0.35:0.58:0.25"] = 255, -- Revantusk Village, Light's Hope Chapel, Tranquillien
 					["0.59:0.45:0.61:0.35:0.58:0.25:0.59:0.19"] = 322, -- Revantusk Village, Light's Hope Chapel, Tranquillien, Silvermoon City
 					["0.59:0.45:0.42:0.37:0.50:0.66:0.41:0.93"] = 993, -- Revantusk Village, Undercity, Kargath, Booty Bay 
+					["0.59:0.45:0.61:0.35:0.61:0.28"] = 232, -- Revantusk Village, Light's Hope Chapel, Zul'Aman
 
 					-- Horde: Silvermoon City (Eversong Woods)
 					["0.59:0.19:0.58:0.25:0.61:0.35:0.59:0.45:0.55:0.46:0.50:0.66:0.41:0.93"] = 963, -- Silvermoon City, Tranquillien, Light's Hope Chapel, Revantusk Village, Hammerfall, Kargath, Booty Bay
@@ -181,6 +183,8 @@
 					["0.46:0.43:0.59:0.45:0.61:0.35:0.58:0.25:0.59:0.19"] = 481, -- Tarren Mill, Revantusk Village, Light's Hope Chapel, Tranquillien, Silvermoon City
 					["0.46:0.43:0.42:0.37"] = 139, -- Tarren Mill, Undercity
 					["0.46:0.43:0.37:0.41"] = 99, -- Tarren Mill, The Sepulcher
+					["0.46:0.43:0.42:0.37:0.61:0.35"] = 325, -- Tarren Mill, Undercity, Light's Hope Chapel
+					["0.46:0.43:0.42:0.37:0.61:0.35:0.61:0.28"] = 416, -- Tarren Mill, Undercity, Light's Hope Chapel, Zul'Aman
 
 					-- Horde: The Sepulcher (Silverpine Forest)
 					["0.37:0.41:0.46:0.43:0.55:0.46:0.50:0.66:0.41:0.93"] = 767, -- The Sepulcher, Tarren Mill, Hammerfall, Kargath, Booty Bay
@@ -196,6 +200,7 @@
 					["0.37:0.41:0.42:0.37:0.61:0.35:0.58:0.25:0.59:0.19"] = 483, -- The Sepulcher, Undercity, Light's Hope Chapel, Tranquillien, Silvermoon City
 					["0.37:0.41:0.42:0.37"] = 112, -- The Sepulcher, Undercity
 					["0.37:0.41:0.46:0.43"] = 95, -- The Sepulcher, Tarren Mill
+					["0.37:0.41:0.42:0.37:0.61:0.35:0.61:0.28"] = 392, -- The Sepulcher, Undercity, Light's Hope Chapel, Zul'Aman
 
 					-- Horde: Thorium Point (Searing Gorge)
 					["0.46:0.65:0.50:0.69:0.42:0.86:0.41:0.93"] = 312, -- Thorium Point, Flame Crest, Grom'gol, Booty Bay
@@ -250,7 +255,9 @@
 					-- Horde: Zul'Aman
 					["0.61:0.28:0.58:0.25"] = 52, -- Zul'Aman, Tranquillien
 					["0.61:0.28:0.58:0.25:0.59:0.19"] = 118, -- Zul'Aman, Tranquillien, Silvermoon City
-					["0.61:0.28:0.61:0.35:0.42:0.37"] = 362, -- Zul'Aman, Light's Hope Chapel, Undercity 
+					["0.61:0.28:0.61:0.35:0.42:0.37"] = 362, -- Zul'Aman, Light's Hope Chapel, Undercity
+					["0.61:0.28:0.61:0.35"] = 102, -- Zul'Aman, Light's Hope Chapel
+					["0.61:0.28:0.61:0.35:0.42:0.37:0.37:0.41"] = 395, -- Zul'Aman, Light's Hope Chapel, Undercity, The Sepulcher
 
 				},
 
