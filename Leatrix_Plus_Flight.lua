@@ -1587,6 +1587,7 @@
 					["0.61:0.28:0.61:0.35:0.47:0.59:0.47:0.65:0.52:0.72:0.50:0.75:0.47:0.79"] = 696, -- Zul'Aman, Light's Hope Chapel, Ironforge, Thorium Point, Morgan's Vigil, Lakeshire, Darkshire
 					["0.61:0.28:0.61:0.35:0.47:0.59:0.47:0.65:0.41:0.73:0.43:0.82"] = 710, -- Zul'Aman, Light's Hope Chapel, Ironforge, Thorium Point, Stormwind, Rebel Camp 
 					["0.61:0.28:0.61:0.35:0.50:0.42:0.44:0.45:0.45:0.56"] = 436, -- Zul'Aman, Light's Hope Chapel, Aerie Peak, Southshore, Menethil Harbor
+					["0.61:0.28:0.61:0.35:0.47:0.59:0.47:0.65:0.52:0.72:0.55:0.81"] = 775, -- Zul'Aman, Light's Hope Chapel, Ironforge, Thorium Point, Morgan's Vigil, Nethergarde Keep 
 
 				},
 
@@ -2020,6 +2021,7 @@
 					["0.48:0.70:0.64:0.67:0.46:0.40:0.39:0.40"] = 683, -- Thalanaar, Theramore, Astranaar, Stonetalon Peak
 					["0.48:0.70:0.64:0.67:0.43:0.25"] = 599, -- Thalanaar, Theramore, Auberdine
 					["0.48:0.70:0.64:0.67:0.43:0.25:0.42:0.16"] = 683, -- Thalanaar, Theramore, Auberdine, Rut'theran Village
+					["0.48:0.70:0.64:0.67:0.40:0.51"] = 494, -- Thalanaar, Theramore, Nijel's Point
 
 					-- Alliance: Theramore (Dustwallow Marsh)
 					["0.64:0.67:0.48:0.70:0.31:0.69"] = 340, -- Theramore, Thalanaar, Feathermoon
@@ -2090,6 +2092,7 @@
 					["0.81:0.77:0.69:0.85:0.55:0.77:0.44:0.67:0.38:0.50"] = 338, -- Altar of Sha'tar, Wildhammer Stronghold, Allerian Stronghold, Shattrath, Telredor
 					["0.81:0.77:0.69:0.85:0.55:0.77:0.27:0.74"] = 329, -- Altar of Sha'tar, Wildhammer Stronghold, Allerian Stronghold, Telaar 
 					["0.81:0.77:0.69:0.85:0.55:0.77:0.65:0.58"] = 276, -- Altar of Sha'tar, Wildhammer Stronghold, Allerian Stronghold, Honor Hold
+					["0.81:0.77:0.69:0.85:0.55:0.77:0.44:0.67:0.38:0.50:0.42:0.37:0.58:0.27:0.63:0.18"] = 537, -- Altar of Sha'tar, Wildhammer Stronghold, Allerian Stronghold, Shattrath, Telredor, Toshley's Station, Area 52, The Stormspire
 
 					-- Alliance: Area 52 (Netherstorm)
 					["0.58:0.27:0.42:0.37:0.38:0.50:0.27:0.74"] = 290, -- Area 52, Toshley's Station, Telredor, Telaar
