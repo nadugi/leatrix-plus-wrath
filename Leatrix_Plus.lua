@@ -3337,7 +3337,7 @@
 						end
 					end
 					if msg ~= "" then
-						msg = L["Supported Addon"] .. "|n|n" .. msg:sub(1, (strlen(msg) - 2)) .. "."
+						msg = L["Supported Addons"] .. "|n|n" .. msg:sub(1, (strlen(msg) - 2)) .. "."
 					else
 						msg = L["No supported addons."]
 					end
