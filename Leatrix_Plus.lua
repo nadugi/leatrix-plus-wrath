@@ -3216,7 +3216,7 @@
 			LeaPlusLC:MakeSL(SideMinimap, "MiniClusterScale", "Drag to set the cluster scale.|n|nNote: Adjusting the cluster scale affects the entire cluster including frames attached to it such as the quest watch frame.|n|nIt will also cause the default UI right-side action bars to scale when you login.  If you use the default UI right-side action bars, you may want to leave this at 100%.", 1, 2, 0.1, 356, -212, "%.2f")
 
 			----------------------------------------------------------------------
-			-- Always-visible addon buttons editor
+			-- Addon buttons editor
 			----------------------------------------------------------------------
 
 			do
