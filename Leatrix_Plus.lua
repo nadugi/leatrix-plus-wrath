@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.100.alpha.7 (10th April 2022)
+-- 	Leatrix Plus 2.5.100.alpha.8 (11th April 2022)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.100.alpha.7"
+	LeaPlusLC["AddonVer"] = "2.5.100.alpha.8"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -3291,7 +3291,7 @@
 				SaveString()
 
 				-- Help button tooltip
-				ExcludedButtonsPanel.h.tiptext = L["This editor is used to specify always-visible addon buttons.|n|nThe editbox tooltip shows the addon names that you can enter.|n|nEnter the addon names that you want into the editbox separated by a comma.  The names must match exactly with the names shown in the editbox tooltip though case does not matter.|n|nYou can only choose from the addons shown in the editbox tooltip.  Addons that use custom buttons are not supported.|n|nChanges to this list will require a UI reload to take effect."]
+				ExcludedButtonsPanel.h.tiptext = L["If you use the 'Hide addon buttons' or 'Combine addon buttons' settings but you want some addon buttons to remain visible around the minimap, enter the addon names into the editbox separated by a comma.|n|nThe editbox tooltip shows the addon names that you can enter.  The names must match exactly with the names shown in the editbox tooltip though case does not matter.|n|nChanges to this list will require a UI reload to take effect."]
 
 				-- Back button handler
 				ExcludedButtonsPanel.b:SetScript("OnClick", function() 
@@ -3337,7 +3337,7 @@
 						end
 					end
 					if msg ~= "" then
-						msg = L["Supported Addon Names"] .. "|n|n" .. msg:sub(1, (strlen(msg) - 2)) .. "."
+						msg = L["Supported Addon"] .. "|n|n" .. msg:sub(1, (strlen(msg) - 2)) .. "."
 					else
 						msg = L["No supported addons."]
 					end
