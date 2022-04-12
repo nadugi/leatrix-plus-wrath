@@ -66,6 +66,7 @@
 					["0.42:0.86:0.50:0.66:0.55:0.46:0.59:0.45:0.61:0.35:0.58:0.25"] = 851, -- Grom'gol, Kargath, Hammerfall, Revantusk Village, Light's Hope Chapel, Tranquillien
 					["0.42:0.86:0.50:0.66:0.55:0.46:0.59:0.45:0.61:0.35:0.58:0.25:0.59:0.19"] = 918, -- Grom'gol, Kargath, Hammerfall, Revantusk Village, Light's Hope Chapel, Tranquillien, Silvermoon City
 					["0.42:0.86:0.50:0.66:0.46:0.65"] = 302, -- Grom'gol, Kargath, Thorium Point
+					["0.42:0.86:0.50:0.66:0.55:0.46:0.59:0.45:0.61:0.35:0.61:0.28"] = 829, -- Grom'gol, Kargath, Hammerfall, Revantusk Village, Light's Hope Chapel, Zul'Aman
 
 					-- Horde: Hammerfall (Arathi Highlands)
 					["0.55:0.46:0.50:0.66:0.41:0.93"] = 556, -- Hammerfall, Kargath, Booty Bay
@@ -260,6 +261,11 @@
 					["0.61:0.28:0.61:0.35:0.42:0.37"] = 362, -- Zul'Aman, Light's Hope Chapel, Undercity
 					["0.61:0.28:0.61:0.35"] = 102, -- Zul'Aman, Light's Hope Chapel
 					["0.61:0.28:0.61:0.35:0.42:0.37:0.37:0.41"] = 395, -- Zul'Aman, Light's Hope Chapel, Undercity, The Sepulcher
+					["0.61:0.28:0.61:0.35:0.59:0.45"] = 244, -- Zul'Aman, Light's Hope Chapel, Revantusk Village
+					["0.61:0.28:0.61:0.35:0.59:0.45:0.55:0.46"] = 335, -- Zul'Aman, Light's Hope Chapel, Revantusk Village, Hammerfall
+					["0.61:0.28:0.61:0.35:0.59:0.45:0.46:0.43"] = 401, -- Zul'Aman, Light's Hope Chapel, Revantusk Village, Tarren Mill
+					["0.61:0.28:0.61:0.35:0.59:0.45:0.55:0.46:0.50:0.66:0.41:0.93"] = 889, -- Zul'Aman, Light's Hope Chapel, Revantusk Village, Hammerfall, Kargath, Booty Bay
+					["0.61:0.28:0.61:0.35:0.59:0.45:0.55:0.46:0.50:0.66:0.42:0.86"] = 831, -- Zul'Aman, Light's Hope Chapel, Revantusk Village, Hammerfall, Kargath, Grom'gol
 
 				},
 
