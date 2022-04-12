@@ -266,6 +266,7 @@
 					["0.61:0.28:0.61:0.35:0.59:0.45:0.46:0.43"] = 401, -- Zul'Aman, Light's Hope Chapel, Revantusk Village, Tarren Mill
 					["0.61:0.28:0.61:0.35:0.59:0.45:0.55:0.46:0.50:0.66:0.41:0.93"] = 889, -- Zul'Aman, Light's Hope Chapel, Revantusk Village, Hammerfall, Kargath, Booty Bay
 					["0.61:0.28:0.61:0.35:0.59:0.45:0.55:0.46:0.50:0.66:0.42:0.86"] = 831, -- Zul'Aman, Light's Hope Chapel, Revantusk Village, Hammerfall, Kargath, Grom'gol
+					["0.61:0.28:0.61:0.35:0.59:0.45:0.55:0.46:0.50:0.66:0.54:0.79"] = 817, -- Zul'Aman, Light's Hope Chapel, Revantusk Village, Hammerfall, Kargath, Stonard
 
 				},
 
