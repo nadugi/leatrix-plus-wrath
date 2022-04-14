@@ -1300,7 +1300,7 @@
 					["0.47:0.59:0.50:0.42"] = 299, -- Ironforge, Aerie Peak
 					["0.47:0.59:0.48:0.39"] = 258, -- Ironforge, Chillwind Camp
 					["0.47:0.59:0.61:0.35"] = 349, -- Ironforge, Light's Hope Chapel
-					["0.47:0.59:0.61:0.35:0.61:0.28"] = 446, -- Ironforge, Light's Hope Chapel, Zul'Aman
+					["0.47:0.59:0.61:0.35:0.61:0.28"] = 445, -- Ironforge, Light's Hope Chapel, Zul'Aman
 					["0.47:0.59:0.41:0.73:0.43:0.82"] = 290, -- Ironforge, Stormwind, Rebel Camp
 					["0.47:0.59:0.41:0.73:0.39:0.80"] = 275, -- Ironforge, Stormwind, Sentinel Hill
 					["0.47:0.59:0.41:0.73:0.50:0.75"] = 309, -- Ironforge, Stormwind, Lakeshire
@@ -1821,6 +1821,7 @@
 					["0.60:0.81:0.64:0.67:0.61:0.40"] = 387, -- Gadgetzan, Theramore, Talrendis Point
 					["0.60:0.81:0.64:0.67:0.43:0.25:0.42:0.16"] = 672, -- Gadgetzan, Theramore, Auberdine, Rut'theran Village
 					["0.60:0.81:0.64:0.67:0.46:0.40:0.50:0.35"] = 596, -- Gadgetzan, Theramore, Astranaar, Emerald Sanctuary
+					["0.60:0.81:0.64:0.67:0.46:0.40"] = 518, -- Gadgetzan, Theramore, Astranaar
 
 					-- Alliance: Marshal's Refuge (Un'Goro Crater)
 					["0.50:0.76:0.42:0.79:0.31:0.69"] = 258, -- Marshal's Refuge, Cenarion Hold, Feathermoon
@@ -1917,6 +1918,7 @@
 					["0.40:0.51:0.43:0.25:0.55:0.21"] = 433, -- Nijel's Point, Auberdine, Moonglade
 					["0.40:0.51:0.43:0.25:0.55:0.21:0.65:0.23"] = 552, -- Nijel's Point, Auberdine, Moonglade, Everlook
 					["0.40:0.51:0.43:0.25:0.46:0.40"] = 449, -- Nijel's Point, Auberdine, Astranaar
+					["0.40:0.51:0.64:0.67:0.48:0.70"] = 471, -- Nijel's Point, Theramore, Thalanaar
 
 					-- Alliance: Ratchet (The Barrens)
 					["0.61:0.55:0.64:0.67:0.48:0.70:0.31:0.69"] = 446, -- Ratchet, Theramore, Thalanaar, Feathermoon
