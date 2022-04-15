@@ -1337,6 +1337,7 @@
 					["0.50:0.75:0.41:0.73:0.47:0.59:0.53:0.61"] = 373, -- Lakeshire, Stormwind, Ironforge, Thelsamar
 					["0.50:0.75:0.41:0.73:0.55:0.81"] = 276, -- Seenhain, Sturmwind, Burg Nethergarde
 					["0.50:0.75:0.41:0.73:0.47:0.59:0.48:0.39"] = 528, -- Lakeshire, Stormwind, Ironforge, Chillwind Camp
+					["0.50:0.75:0.41:0.73:0.47:0.59:0.44:0.45"] = 487, -- Lakeshire, Stormwind, Ironforge, Southshore 
 
 					-- Alliance: Light's Hope Chapel (Eastern Plaguelands)
 					["0.61:0.35:0.47:0.59:0.47:0.65:0.41:0.73:0.41:0.93"] = 712, -- Light's Hope Chapel, Ironforge, Thorium Point, Stormwind, Booty Bay
@@ -2229,6 +2230,7 @@
 					["0.65:0.58:0.55:0.77:0.69:0.85:0.81:0.77"] = 278, -- Honor Hold, Allerian Stronghold, Wildhammer Stronghold, Altar of Sha'tar
 					["0.65:0.58:0.55:0.77:0.69:0.85:0.78:0.85"] = 238, -- Honor Hold, Allerian Stronghold, Wildhammer Stronghold, Sanctum of the Stars
 					["0.65:0.58:0.44:0.67:0.38:0.50:0.27:0.44"] = 266, -- Honor Hold, Shattrath, Telredor, Orebor Harborage
+					["0.65:0.58:0.44:0.67:0.38:0.50"] = 203, -- Honor Hold, Shattrath, Telredor
 
 					-- Alliance: Orebor Harborage (Zangarmarsh)
 					["0.27:0.44:0.38:0.50:0.27:0.74"] = 177, -- Orebor Harborage, Telredor, Telaar
