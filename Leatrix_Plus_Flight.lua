@@ -2079,6 +2079,7 @@
 					["0.64:0.67:0.40:0.51:0.31:0.69"] = 567, -- Theramore, Nijel's Point, Feathermoon
 					["0.64:0.67:0.61:0.55:0.46:0.40:0.58:0.39"] = 443, -- Theramore, Ratchet, Astranaar, Forest Song
 					["0.64:0.67:0.43:0.25:0.39:0.40"] = 621, -- Theramore, Auberdine, Stonetalon Peak
+					["0.64:0.67:0.61:0.55:0.46:0.40:0.50:0.35"] = 388, -- Theramore, Ratchet, Astranaar, Emerald Sanctuary
 
 				},
 
