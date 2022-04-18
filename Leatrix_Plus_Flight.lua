@@ -1209,6 +1209,7 @@
 					["0.50:0.42:0.47:0.59:0.41:0.73:0.50:0.75"] = 527, -- Aerie Peak, Ironforge, Stormwind, Lakeshire
 					["0.50:0.42:0.51:0.47:0.53:0.61:0.47:0.65:0.41:0.73:0.47:0.79"] = 550, -- Aerie Peak, Refuge Pointe, Thelsamar, Thorium Point, Stormwind, Darkshire
 					["0.50:0.42:0.61:0.35:0.61:0.28"] = 262, -- Aerie Peak, Light's Hope Chapel, Zul'Aman
+					["0.50:0.42:0.61:0.35:0.58:0.06"] = 501, -- Aerie Peak, Light's Hope Chapel, Shattered Sun Staging Area
 
 					-- Alliance: Booty Bay (Stranglethorn Vale)
 					["0.41:0.93:0.39:0.80"] = 148, -- Booty Bay, Sentinel Hill
@@ -1233,6 +1234,7 @@
 					["0.41:0.93:0.41:0.73:0.47:0.59:0.51:0.47:0.50:0.42"] = 633, -- Booty Bay, Stormwind, Ironforge, Refuge Pointe, Aerie Peak
 					["0.41:0.93:0.47:0.79:0.55:0.81"] = 258, -- Booty Bay, Darkshire, Nethergarde Keep
 					["0.41:0.93:0.47:0.79:0.50:0.75"] = 222, -- Booty Bay, Darkshire, Lakeshire
+					["0.41:0.93:0.41:0.73:0.47:0.59:0.58:0.06"] = 465, -- Booty Bay, Stormwind, Ironforge, Shattered Sun Staging Area
 
 					-- Alliance: Chillwind Camp (Western Plaguelands)
 					["0.48:0.39:0.47:0.59:0.47:0.65:0.41:0.73:0.41:0.93"] = 662, -- Chillwind Camp, Ironforge, Thorium Point, Stormwind, Booty Bay
@@ -1257,6 +1259,7 @@
 					["0.48:0.39:0.47:0.59:0.41:0.73"] = 433, -- Chillwind Camp, Ironforge, Stormwind
 					["0.48:0.39:0.47:0.59:0.47:0.65:0.41:0.73:0.55:0.81"] = 581, -- Chillwind Camp, Ironforge, Thorium Point, Stormwind, Nethergarde Keep 
 					["0.48:0.39:0.61:0.35:0.61:0.28"] = 244, -- Chillwind Camp, Light's Hope Chapel, Zul'Aman
+					["0.48:0.39:0.61:0.35:0.58:0.06"] = 482, -- Chillwind Camp, Light's Hope Chapel, Shattered Sun Staging Area
 
 					-- Alliance: Darkshire (Duskwood)
 					["0.47:0.79:0.41:0.93"] = 171, -- Darkshire, Booty Bay
@@ -1285,6 +1288,7 @@
 					["0.47:0.79:0.41:0.73:0.47:0.59:0.51:0.47"] = 451, -- Darkshire, Stormwind, Ironforge, Refuge Pointe
 					["0.47:0.79:0.41:0.73:0.47:0.59:0.53:0.61"] = 348, -- Darkshire, Stormwind, Ironforge, Thelsamar
 					["0.47:0.79:0.50:0.75:0.52:0.72:0.47:0.65:0.47:0.59:0.48:0.39"] = 534, -- Darkshire, Lakeshire, Morgan's Vigil, Thorium Point, Ironforge, Chillwind Camp
+					["0.47:0.79:0.50:0.75:0.52:0.72:0.47:0.65:0.47:0.59:0.58:0.06"] = 333, -- Darkshire, Lakeshire, Morgan's Vigil, Thorium Point, Ironforge, Shattered Sun Staging Area
 
 					-- Alliance: Ironforge (Dun Morogh)
 					["0.47:0.59:0.47:0.65:0.41:0.73:0.41:0.93"] = 381, -- Ironforge, Thorium Point, Stormwind, Booty Bay
@@ -1341,6 +1345,7 @@
 					["0.50:0.75:0.41:0.73:0.55:0.81"] = 276, -- Seenhain, Sturmwind, Burg Nethergarde
 					["0.50:0.75:0.41:0.73:0.47:0.59:0.48:0.39"] = 528, -- Lakeshire, Stormwind, Ironforge, Chillwind Camp
 					["0.50:0.75:0.41:0.73:0.47:0.59:0.44:0.45"] = 487, -- Lakeshire, Stormwind, Ironforge, Southshore 
+					["0.50:0.75:0.52:0.72:0.47:0.65:0.47:0.59:0.58:0.06"] = 273, -- Lakeshire, Morgan's Vigil, Thorium Point, Ironforge, Shattered Sun Staging Area
 
 					-- Alliance: Light's Hope Chapel (Eastern Plaguelands)
 					["0.61:0.35:0.47:0.59:0.47:0.65:0.41:0.73:0.41:0.93"] = 712, -- Light's Hope Chapel, Ironforge, Thorium Point, Stormwind, Booty Bay
@@ -1362,6 +1367,7 @@
 					["0.61:0.35:0.61:0.28"] = 104, -- Light's Hope Chapel, Zul'Aman
 					["0.61:0.35:0.48:0.39:0.44:0.45"] = 226, -- Light's Hope Chapel, Chillwind Camp, Southshore 
 					["0.61:0.35:0.47:0.59:0.41:0.73"] = 541, -- Light's Hope Chapel, Ironforge, Stormwind
+					["0.61:0.35:0.58:0.06"] = 339, -- Light's Hope Chapel, Shattered Sun Staging Area
 
 					-- Alliance: Menethil Harbor (Wetlands)
 					["0.45:0.56:0.47:0.59:0.47:0.65:0.41:0.73:0.41:0.93"] = 429, -- Menethil Harbor, Ironforge, Thorium Point, Stormwind, Booty Bay
@@ -1389,6 +1395,7 @@
 					["0.45:0.56:0.47:0.59:0.41:0.73:0.43:0.82"] = 339, -- Menethil Harbor, Ironforge, Stormwind, Rebel Camp
 					["0.45:0.56:0.47:0.59:0.41:0.73:0.55:0.81"] = 422, -- Menethil Harbor, Ironforge, Stormwind, Nethergarde Keep
 					["0.45:0.56:0.44:0.45:0.48:0.39:0.61:0.35:0.61:0.28"] = 422, -- Menethil Harbor, Southshore, Chillwind Camp, Light's Hope Chapel, Zul'Aman
+					["0.45:0.56:0.47:0.59:0.58:0.06"] = 153, -- Menethil Harbor, Ironforge, Shattered Sun Staging Area
 
 					-- Alliance: Morgan's Vigil (Burning Steppes)
 					["0.52:0.72:0.50:0.75:0.47:0.79:0.43:0.82:0.41:0.93"] = 278, -- Morgan's Vigil, Lakeshire, Darkshire, Rebel Camp, Booty Bay
@@ -1412,6 +1419,7 @@
 					["0.52:0.72:0.47:0.65:0.47:0.59:0.61:0.35:0.61:0.28"] = 576, -- Morgan's Vigil, Thorium Point, Ironforge, Light's Hope Chapel, Zul'Aman
 					["0.52:0.72:0.41:0.73:0.47:0.59:0.45:0.56"] = 423, -- Morgan's Vigil, Stormwind, Ironforge, Menethil Harbor
 					["0.52:0.72:0.41:0.73:0.47:0.59:0.53:0.61"] = 411, -- Morgan's Vigil, Stormwind, Ironforge, Thelsamar
+					["0.52:0.72:0.47:0.65:0.47:0.59:0.58:0.06"] = 236, -- Morgan's Vigil, Thorium Point, Ironforge, Shattered Sun Staging Area
 
 					-- Alliance: Nethergarde Keep (Blasted Lands)
 					["0.55:0.81:0.47:0.79:0.43:0.82:0.41:0.93"] = 251, -- Nethergarde Keep, Darkshire, Rebel Camp, Booty Bay
@@ -1439,6 +1447,7 @@
 					["0.55:0.81:0.47:0.79:0.41:0.73:0.47:0.59:0.51:0.47:0.50:0.42"] = 612, -- Nethergarde Keep, Darkshire, Stormwind, Ironforge, Refuge Pointe, Aerie Peak
 					["0.55:0.81:0.47:0.79:0.41:0.73:0.47:0.59:0.51:0.47"] = 541, -- Nethergarde Keep, Darkshire, Stormwind, Ironforge, Refuge Pointe
 					["0.55:0.81:0.47:0.79:0.41:0.73:0.47:0.59:0.53:0.61"] = 439, -- Nethergarde Keep, Darkshire, Stormwind, Ironforge, Thelsamar 
+					["0.55:0.81:0.52:0.72:0.47:0.65:0.47:0.59:0.58:0.06"] = 422, -- Nethergarde Keep, Morgan's Vigil, Thorium Point, Ironforge, Shattered Sun Staging Area
 
 					-- Alliance: Rebel Camp (Stranglethorn Vale)
 					["0.43:0.82:0.41:0.93"] = 116, -- Rebel Camp, Booty Bay
@@ -1460,6 +1469,7 @@
 					["0.43:0.82:0.41:0.73:0.47:0.59:0.61:0.35:0.61:0.28"] = 704, -- Rebel Camp, Stormwind, Ironforge, Light's Hope Chapel, Zul'Aman
 					["0.43:0.82:0.41:0.73:0.47:0.59:0.51:0.47"] = 461, -- Rebel Camp, Stormwind, Ironforge, Refuge Pointe
 					["0.43:0.82:0.41:0.73:0.47:0.59:0.53:0.61"] = 358, -- Rebel Camp, Stormwind, Ironforge, Thelsamar
+					["0.43:0.82:0.41:0.73:0.47:0.59:0.58:0.06"] = 365, -- Rebel Camp, Stormwind, Ironforge, Shattered Sun Staging Area
 
 					-- Alliance: Refuge Pointe (Arathi Highlands)
 					["0.51:0.47:0.53:0.61:0.47:0.65:0.41:0.73:0.41:0.93"] = 558, -- Refuge Pointe, Thelsamar, Thorium Point, Stormwind, Booty Bay
@@ -1486,6 +1496,7 @@
 					["0.51:0.47:0.45:0.56:0.47:0.59:0.41:0.73:0.43:0.82"] = 464, -- Refuge Pointe, Menethil Harbor, Ironforge, Stormwind, Rebel Camp
 					["0.51:0.47:0.45:0.56:0.47:0.59:0.41:0.73:0.55:0.81"] = 548, -- Refuge Pointe, Menethil Harbor, Ironforge, Stormwind, Nethergarde Keep
 					["0.51:0.47:0.45:0.56:0.47:0.59:0.41:0.73:0.50:0.75"] = 484, -- Refuge Pointe, Menethil Harbor, Ironforge, Stormwind, Lakeshire
+					["0.51:0.47:0.50:0.42:0.61:0.35:0.58:0.06"] = 569, -- Refuge Pointe, Aerie Peak, Light's Hope Chapel, Shattered Sun Staging Area
 
 					-- Alliance: Sentinel Hill (Westfall)
 					["0.39:0.80:0.41:0.93"] = 185, -- Sentinel Hill, Booty Bay
@@ -1508,6 +1519,27 @@
 					["0.39:0.80:0.41:0.73:0.47:0.59:0.61:0.35:0.61:0.28"] = 693, -- Sentinel Hill, Stormwind, Ironforge, Light's Hope Chapel, Zul'Aman
 					["0.39:0.80:0.41:0.73:0.47:0.59:0.51:0.47:0.50:0.42"] = 519, -- Sentinel Hill, Stormwind, Ironforge, Refuge Pointe, Aerie Peak
 					["0.39:0.80:0.41:0.73:0.47:0.59:0.51:0.47"] = 449, -- Sentinel Hill, Stormwind, Ironforge, Refuge Pointe
+					["0.39:0.80:0.41:0.73:0.47:0.59:0.58:0.06"] = 352, -- Sentinel Hill, Stormwind, Ironforge, Shattered Sun Staging Area
+
+					-- Alliance: Shattered Sun Staging Area (Isle of Quel'Danas)
+					["0.58:0.06:0.61:0.35"] = 324, -- Shattered Sun Staging Area, Light's Hope Chapel
+					["0.58:0.06:0.61:0.35:0.47:0.59:0.47:0.65:0.41:0.73"] = 849, -- Shattered Sun Staging Area, Light's Hope Chapel, Ironforge, Thorium Point, Stormwind
+					["0.58:0.06:0.61:0.35:0.48:0.39"] = 470, -- Shattered Sun Staging Area, Light's Hope Chapel, Chillwind Camp
+					["0.58:0.06:0.61:0.35:0.47:0.59"] = 690, -- Shattered Sun Staging Area, Light's Hope Chapel, Ironforge
+					["0.58:0.06:0.61:0.35:0.50:0.42"] = 483, -- Shattered Sun Staging Area, Light's Hope Chapel, Aerie Peak
+					["0.58:0.06:0.61:0.35:0.47:0.59:0.47:0.65:0.41:0.73:0.41:0.93"] = 1033, -- Shattered Sun Staging Area, Light's Hope Chapel, Ironforge, Thorium Point, Stormwind, Booty Bay
+					["0.58:0.06:0.61:0.35:0.47:0.59:0.47:0.65:0.52:0.72"] = 822, -- Shattered Sun Staging Area, Light's Hope Chapel, Ironforge, Thorium Point, Morgan's Vigil
+					["0.58:0.06:0.61:0.35:0.47:0.59:0.47:0.65:0.52:0.72:0.55:0.81"] = 991, -- Shattered Sun Staging Area, Light's Hope Chapel, Ironforge, Thorium Point, Morgan's Vigil, Nethergarde Keep
+					["0.58:0.06:0.61:0.35:0.47:0.59:0.47:0.65:0.52:0.72:0.50:0.75:0.47:0.79"] = 912, -- Shattered Sun Staging Area, Light's Hope Chapel, Ironforge, Thorium Point, Morgan's Vigil, Lakeshire, Darkshire
+					["0.58:0.06:0.61:0.35:0.47:0.59:0.47:0.65:0.41:0.73:0.43:0.82"] = 928, -- Shattered Sun Staging Area, Light's Hope Chapel, Ironforge, Thorium Point, Stormwind, Rebel Camp
+					["0.58:0.06:0.61:0.35:0.47:0.59:0.47:0.65:0.41:0.73:0.39:0.80"] = 912, -- Shattered Sun Staging Area, Light's Hope Chapel, Ironforge, Thorium Point, Stormwind, Sentinel Hill
+					["0.58:0.06:0.61:0.35:0.47:0.59:0.47:0.65"] = 738, -- Shattered Sun Staging Area, Light's Hope Chapel, Ironforge, Thorium Point
+					["0.58:0.06:0.61:0.35:0.47:0.59:0.47:0.65:0.52:0.72:0.50:0.75"] = 854, -- Shattered Sun Staging Area, Light's Hope Chapel, Ironforge, Thorium Point, Morgan's Vigil, Lakeshire
+					["0.58:0.06:0.61:0.35:0.50:0.42:0.51:0.47"] = 553, -- Shattered Sun Staging Area, Light's Hope Chapel, Aerie Peak, Refuge Pointe
+					["0.58:0.06:0.61:0.35:0.50:0.42:0.51:0.47:0.53:0.61"] = 723, -- Shattered Sun Staging Area, Light's Hope Chapel, Aerie Peak, Refuge Pointe, Thelsamar
+					["0.58:0.06:0.61:0.35:0.50:0.42:0.44:0.45"] = 545, -- Shattered Sun Staging Area, Light's Hope Chapel, Aerie Peak, Southshore
+					["0.58:0.06:0.61:0.35:0.50:0.42:0.44:0.45:0.45:0.56"] = 653, -- Shattered Sun Staging Area, Light's Hope Chapel, Aerie Peak, Southshore, Menethil Harbor
+					["0.58:0.06:0.61:0.28"] = 233, -- Shattered Sun Staging Area, Zul'Aman
 
 					-- Alliance: Southshore (Hillsbrad Foothills)
 					["0.44:0.45:0.45:0.56:0.47:0.59:0.47:0.65:0.41:0.73:0.41:0.93"] = 597, -- Southshore, Menethil Harbor, Ironforge, Thorium Point, Stormwind, Booty Bay
@@ -1533,6 +1565,8 @@
 					["0.44:0.45:0.45:0.56:0.47:0.59:0.41:0.73:0.39:0.80"] = 433, -- Southshore, Menethil Harbor, Ironforge, Stormwind, Sentinel Hill
 					["0.44:0.45:0.45:0.56:0.47:0.59:0.41:0.73:0.50:0.75"] = 468, -- Southshore, Menethil Harbor, Ironforge, Stormwind, Lakeshire 
 					["0.44:0.45:0.45:0.56:0.47:0.59:0.41:0.73:0.47:0.79"] = 472, -- Southshore, Menethil Harbor, Ironforge, Stormwind, Darkshire 
+					["0.44:0.45:0.48:0.39:0.61:0.35:0.58:0.06"] = 555, -- Southshore, Chillwind Camp, Light's Hope Chapel, Shattered Sun Staging Area
+					["0.44:0.45:0.48:0.39:0.61:0.35:0.61:0.28"] = 318, -- Southshore, Chillwind Camp, Light's Hope Chapel, Zul'Aman
 
 					-- Alliance: Stormwind (Elwynn Forest)
 					["0.41:0.73:0.41:0.93"] = 200, -- Stormwind, Booty Bay
@@ -1558,6 +1592,7 @@
 					["0.41:0.73:0.47:0.59:0.50:0.42"] = 304, -- Stormwind, Ironforge, Aerie Peak
 					["0.41:0.73:0.47:0.59:0.50:0.42:0.48:0.39"] = 484, -- Stormwind, Ironforge, Aerie Peak, Chillwind Camp
 					["0.41:0.73:0.47:0.59:0.51:0.47:0.50:0.42"] = 448, -- Stormwind, Ironforge, Refuge Pointe, Aerie Peak
+					["0.41:0.73:0.47:0.59:0.58:0.06"] = 281, -- Stormwind, Ironforge, Shattered Sun Staging Area
 
 					-- Alliance: Thelsamar (Loch Modan)
 					["0.53:0.61:0.47:0.65:0.41:0.73:0.41:0.93"] = 390, -- Thelsamar, Thorium Point, Stormwind, Booty Bay
@@ -1583,6 +1618,7 @@
 					["0.53:0.61:0.47:0.59:0.41:0.73:0.50:0.75"] = 376, -- Thelsamar, Ironforge, Stormwind, Lakeshire
 					["0.53:0.61:0.47:0.59:0.41:0.73:0.43:0.82"] = 355, -- Thelsamar, Ironforge, Stormwind, Rebel Camp
 					["0.53:0.61:0.47:0.59:0.41:0.73:0.41:0.93"] = 461, -- Thelsamar, Ironforge, Stormwind, Booty Bay
+					["0.53:0.61:0.47:0.59:0.58:0.06"] = 175, -- Thelsamar, Ironforge, Shattered Sun Staging Area
 
 					-- Alliance: Thorium Point (Searing Gorge)
 					["0.47:0.65:0.41:0.73:0.41:0.93"] = 310, -- Thorium Point, Stormwind, Booty Bay
@@ -1605,6 +1641,7 @@
 					["0.47:0.65:0.41:0.73:0.47:0.79"] = 228, -- Thorium Point, Stormwind, Darkshire
 					["0.47:0.65:0.41:0.73:0.55:0.81"] = 289, -- Thorium Point, Stormwind, Nethergarde Keep
 					["0.47:0.65:0.41:0.73:0.50:0.75"] = 224, -- Thorium Point, Stormwind, Lakeshire
+					["0.47:0.65:0.47:0.59:0.58:0.06"] = 155, -- Thorium Point, Ironforge, Shattered Sun Staging Area
 
 					-- Alliance: Zul'Aman (Ghostlands)
 					["0.61:0.28:0.61:0.35:0.47:0.59:0.47:0.65:0.41:0.73"] = 631, -- Zul'Aman, Light's Hope Chapel, Ironforge, Thorium Point, Stormwind 
@@ -1623,6 +1660,8 @@
 					["0.61:0.28:0.61:0.35:0.47:0.59:0.47:0.65:0.52:0.72:0.50:0.75"] = 637, -- Zul'Aman, Light's Hope Chapel, Ironforge, Thorium Point, Morgan's Vigil, Lakeshire
 					["0.61:0.28:0.61:0.35:0.47:0.59:0.47:0.65:0.52:0.72"] = 605, -- Zul'Aman, Light's Hope Chapel, Ironforge, Thorium Point, Morgan's Vigil
 					["0.61:0.28:0.61:0.35:0.47:0.59:0.47:0.65:0.41:0.73:0.39:0.80"] = 695, -- Zul'Aman, Light's Hope Chapel, Ironforge, Thorium Point, Stormwind, Sentinel Hill
+					["0.61:0.28:0.58:0.06"] = 252, -- Zul'Aman, Shattered Sun Staging Area
+					["0.61:0.28:0.61:0.35:0.47:0.59:0.47:0.65"] = 521, -- Zul'Aman, Light's Hope Chapel, Ironforge, Thorium Point
 
 				},
 
