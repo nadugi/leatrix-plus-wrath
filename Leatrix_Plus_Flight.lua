@@ -1786,6 +1786,7 @@
 					["0.65:0.23:0.55:0.21:0.43:0.25:0.31:0.69:0.42:0.79"] = 874, -- Everlook, Moonglade, Auberdine, Feathermoon, Cenarion Hold
 					["0.65:0.23:0.53:0.26:0.50:0.35:0.46:0.40:0.61:0.55:0.64:0.67"] = 590, -- Everlook, Talonbranch Glade, Emerald Sanctuary, Astranaar, Ratchet, Theramore
 					["0.65:0.23:0.53:0.26:0.50:0.35:0.46:0.40:0.61:0.55"] = 489, -- Everlook, Talonbranch Glade, Emerald Sanctuary, Astranaar, Ratchet
+					["0.65:0.23:0.55:0.21:0.43:0.25:0.64:0.67:0.60:0.81"] = 847, -- Everlook, Moonglade, Auberdine, Theramore, Gadgetzan
 
 					-- Alliance: Feathermoon (Feralas)
 					["0.31:0.69:0.42:0.79"] = 153, -- Feathermoon, Cenarion Hold
