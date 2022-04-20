@@ -1,4 +1,4 @@
-2.5.101.alpha.1 - 20th April 2022
+2.5.101 - 20th April 2022
 - Added lots of flight times.  There are now 2265 flight times stored in Leatrix Plus for BCC.
 
 2.5.100 - 13th April 2022
