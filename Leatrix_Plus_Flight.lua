@@ -429,6 +429,7 @@
 					["0.42:0.79:0.44:0.69:0.56:0.53:0.46:0.30:0.54:0.21"] = 769, -- Cenarion Hold, Camp Mojache, Crossroads, Bloodvenom Post, Moonglade
 					["0.42:0.79:0.44:0.69:0.56:0.53:0.61:0.55"] = 446, -- Cenarion Hold, Camp Mojache, Crossroads, Ratchet
 					["0.42:0.79:0.44:0.69:0.56:0.53:0.63:0.44:0.64:0.23"] = 750, -- Cenarion Hold, Camp Mojache, Crossroads, Orgrimmar, Everlook 
+					["0.42:0.79:0.61:0.80:0.63:0.44"] = 591, -- Cenarion Hold, Gadgetzan, Orgrimmar 
 
 					-- Horde: Crossroads (The Barrens)
 					["0.56:0.53:0.44:0.69:0.42:0.79"] = 382, -- Crossroads, Camp Mojache, Cenarion Hold
