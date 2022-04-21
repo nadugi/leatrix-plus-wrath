@@ -2053,6 +2053,7 @@
 					["0.42:0.16:0.43:0.25:0.53:0.26:0.65:0.23"] = 363, -- Rut'theran Village, Auberdine, Talonbranch Glade, Everlook
 					["0.42:0.16:0.43:0.25:0.61:0.40:0.65:0.23"] = 564, -- Rut'theran Village, Auberdine, Talrendis Point, Everlook
 					["0.42:0.16:0.43:0.25:0.64:0.67:0.61:0.55"] = 637, -- Rut'theran Village, Auberdine, Theramore, Ratchet
+					["0.42:0.16:0.43:0.25:0.64:0.67:0.60:0.81:0.42:0.79"] = 878, -- Rut'theran Village, Auberdine, Theramore, Gadgetzan, Cenarion Hold
 
 					-- Alliance: Stonetalon Peak (Stonetalon Mountains)
 					["0.39:0.40:0.40:0.51:0.31:0.69"] = 359, -- Stonetalon Peak, Nijel's Point, Feathermoon
