@@ -89,6 +89,7 @@
 					["0.55:0.46:0.59:0.45:0.61:0.35:0.61:0.28"] = 322, -- Hammerfall, Revantusk Village, Light's Hope Chapel, Zul'Aman
 					["0.55:0.46:0.46:0.43:0.42:0.37:0.61:0.35:0.61:0.28"] = 532, -- Hammerfall, Tarren Mill, Undercity, Light's Hope Chapel, Zul'Aman
 					["0.55:0.46:0.59:0.45:0.61:0.35:0.61:0.28:0.58:0.06"] = 571, -- Hammerfall, Revantusk Village, Light's Hope Chapel, Zul'Aman, Shattered Sun Staging Area
+					["0.55:0.46:0.46:0.43:0.42:0.37:0.61:0.35"] = 441, -- Hammerfall, Tarren Mill, Undercity, Light's Hope Chapel
 
 					-- Horde: Kargath (Badlands)
 					["0.50:0.66:0.41:0.93"] = 298, -- Kargath, Booty Bay
