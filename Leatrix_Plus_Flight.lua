@@ -127,6 +127,7 @@
 					["0.61:0.35:0.61:0.28"] = 98, -- Light's Hope Chapel, Zul'Aman
 					["0.61:0.35:0.42:0.37:0.50:0.66"] = 673, -- Light's Hope Chapel, Undercity, Kargath
 					["0.61:0.35:0.61:0.28:0.58:0.06"] = 344, -- Light's Hope Chapel, Zul'Aman, Shattered Sun Staging Area
+					["0.61:0.35:0.42:0.37:0.50:0.66:0.42:0.86"] = 911, -- Light's Hope Chapel, Undercity, Kargath, Grom'gol
 
 					-- Horde: Revantusk Village (The Hinterlands)
 					["0.59:0.45:0.55:0.46:0.50:0.66:0.41:0.93"] = 648, -- Revantusk Village, Hammerfall, Kargath, Booty Bay
@@ -200,6 +201,7 @@
 					["0.54:0.79:0.50:0.66:0.42:0.37:0.46:0.43"] = 795, -- Stonard, Kargath, Undercity, Tarren Mill
 					["0.54:0.79:0.50:0.66:0.55:0.46:0.59:0.45:0.61:0.35:0.61:0.28"] = 814, -- Stonard, Kargath, Hammerfall, Revantusk Village, Light's Hope Chapel, Zul'Aman
 					["0.54:0.79:0.50:0.66:0.55:0.46:0.59:0.45:0.61:0.35:0.61:0.28:0.58:0.06"] = 1062, -- Stonard, Kargath, Hammerfall, Revantusk Village, Light's Hope Chapel, Zul'Aman, Shattered Sun Staging Area
+					["0.54:0.79:0.50:0.66:0.42:0.37:0.37:0.41"] = 762, -- Stonard, Kargath, Undercity, The Sepulcher
 
 					-- Horde: Tarren Mill (Hillsbrad Foothills)
 					["0.46:0.43:0.55:0.46:0.50:0.66:0.41:0.93"] = 673, -- Tarren Mill, Hammerfall, Kargath, Booty Bay
@@ -503,6 +505,7 @@
 					["0.64:0.23:0.63:0.44:0.55:0.42"] = 333, -- Everlook, Orgrimmar, Splintertree Post
 					["0.64:0.23:0.63:0.44:0.61:0.55:0.61:0.80"] = 591, -- Everlook, Orgrimmar, Ratchet, Gadgetzan
 					["0.64:0.23:0.63:0.44:0.56:0.53:0.44:0.69"] = 602, -- Everlook, Orgrimmar, Crossroads, Camp Mojache
+					["0.64:0.23:0.63:0.36:0.55:0.42:0.50:0.35"] = 306, -- Everlook, Valormok, Splintertree Post, Emerald Sanctuary
 
 					-- Horde: Freewind Post (Thousand Needles)
 					["0.55:0.73:0.44:0.69:0.42:0.79"] = 252, -- Freewind Post, Camp Mojache, Cenarion Hold
@@ -679,6 +682,7 @@
 					["0.61:0.55:0.63:0.44:0.63:0.36:0.64:0.23"] = 325, -- Ratchet, Orgrimmar, Valormok, Everlook
 					["0.61:0.55:0.56:0.53:0.55:0.73"] = 253, -- Ratchet, Crossroads, Freewind Post
 					["0.61:0.55:0.63:0.44:0.64:0.23"] = 341, -- Ratchet, Orgrimmar, Everlook
+					["0.61:0.55:0.56:0.53:0.46:0.30:0.54:0.21"] = 443, -- Ratchet, Crossroads, Bloodvenom Post, Moonglade
 
 					-- Horde: Shadowprey Village (Desolace)
 					["0.32:0.58:0.44:0.69:0.42:0.79"] = 326, -- Shadowprey Village, Camp Mojache, Cenarion Hold
@@ -853,6 +857,7 @@
 					["0.81:0.77:0.66:0.77:0.51:0.73:0.44:0.67:0.44:0.51:0.49:0.36:0.58:0.27:0.63:0.18"] = 445, -- Altar of Sha'tar, Shadowmoon Village, Stonebreaker Hold, Shattrath, Swamprat Post, Mok'Nathal Village, Area 52, The Stormspire
 					["0.81:0.77:0.66:0.77:0.51:0.73:0.65:0.50"] = 263, -- Altar of Sha'tar, Shadowmoon Village, Stonebreaker Hold, Thrallmar
 					["0.81:0.77:0.66:0.77:0.51:0.73:0.65:0.50:0.79:0.54"] = 333, -- Altar of Sha'tar, Shadowmoon Village, Stonebreaker Hold, Thrallmar, Hellfire Peninsula
+					["0.81:0.77:0.66:0.77:0.51:0.73:0.44:0.67:0.44:0.51"] = 272, -- Altar of Sha'tar, Shadowmoon Village, Stonebreaker Hold, Shattrath, Swamprat Post
 
 					-- Horde: Area 52 (Netherstorm)
 					["0.58:0.27:0.49:0.36:0.44:0.51:0.44:0.67:0.51:0.73:0.66:0.77"] = 357, -- Area 52, Mok'Nathal Village, Swamprat Post, Shattrath, Stonebreaker Hold, Shadowmoon Village
@@ -1300,6 +1305,7 @@
 					["0.48:0.39:0.47:0.59:0.47:0.65:0.41:0.73:0.55:0.81"] = 581, -- Chillwind Camp, Ironforge, Thorium Point, Stormwind, Nethergarde Keep 
 					["0.48:0.39:0.61:0.35:0.61:0.28"] = 244, -- Chillwind Camp, Light's Hope Chapel, Zul'Aman
 					["0.48:0.39:0.61:0.35:0.58:0.06"] = 482, -- Chillwind Camp, Light's Hope Chapel, Shattered Sun Staging Area
+					["0.48:0.39:0.47:0.59:0.41:0.73:0.55:0.81"] = 595, -- Chillwind Camp, Ironforge, Stormwind, Nethergarde Keep
 
 					-- Alliance: Darkshire (Duskwood)
 					["0.47:0.79:0.41:0.93"] = 171, -- Darkshire, Booty Bay
@@ -1490,6 +1496,7 @@
 					["0.55:0.81:0.47:0.79:0.41:0.73:0.47:0.59:0.51:0.47"] = 541, -- Nethergarde Keep, Darkshire, Stormwind, Ironforge, Refuge Pointe
 					["0.55:0.81:0.47:0.79:0.41:0.73:0.47:0.59:0.53:0.61"] = 439, -- Nethergarde Keep, Darkshire, Stormwind, Ironforge, Thelsamar 
 					["0.55:0.81:0.52:0.72:0.47:0.65:0.47:0.59:0.58:0.06"] = 422, -- Nethergarde Keep, Morgan's Vigil, Thorium Point, Ironforge, Shattered Sun Staging Area
+					["0.55:0.81:0.47:0.79:0.41:0.73:0.47:0.59"] = 381, -- Nethergarde Keep, Darkshire, Stormwind, Ironforge
 
 					-- Alliance: Rebel Camp (Stranglethorn Vale)
 					["0.43:0.82:0.41:0.93"] = 116, -- Rebel Camp, Booty Bay
@@ -1661,6 +1668,7 @@
 					["0.53:0.61:0.47:0.59:0.41:0.73:0.43:0.82"] = 355, -- Thelsamar, Ironforge, Stormwind, Rebel Camp
 					["0.53:0.61:0.47:0.59:0.41:0.73:0.41:0.93"] = 461, -- Thelsamar, Ironforge, Stormwind, Booty Bay
 					["0.53:0.61:0.47:0.59:0.58:0.06"] = 175, -- Thelsamar, Ironforge, Shattered Sun Staging Area
+					["0.53:0.61:0.47:0.65:0.41:0.73:0.47:0.79"] = 307, -- Thelsamar, Thorium Point, Stormwind, Darkshire
 
 					-- Alliance: Thorium Point (Searing Gorge)
 					["0.47:0.65:0.41:0.73:0.41:0.93"] = 310, -- Thorium Point, Stormwind, Booty Bay
@@ -1805,6 +1813,7 @@
 					["0.50:0.35:0.46:0.40:0.61:0.55:0.64:0.67"] = 374, -- Emerald Sanctuary, Astranaar, Ratchet, Theramore 
 					["0.50:0.35:0.53:0.26:0.43:0.25"] = 297, -- Emerald Sanctuary, Talonbranch Glade, Auberdine
 					["0.50:0.35:0.53:0.26:0.43:0.25:0.42:0.16"] = 381, -- Emerald Sanctuary, Talonbranch Glade, Auberdine, Rut'theran Village
+					["0.50:0.35:0.46:0.40:0.61:0.40"] = 228, -- Emerald Sanctuary, Astranaar, Talrendis Point
 
 					-- Alliance: Everlook (Winterspring)
 					["0.65:0.23:0.55:0.21:0.43:0.25:0.31:0.69"] = 724, -- Everlook, Moonglade, Auberdine, Feathermoon
@@ -2179,6 +2188,7 @@
 					["0.64:0.67:0.61:0.55:0.46:0.40:0.58:0.39"] = 443, -- Theramore, Ratchet, Astranaar, Forest Song
 					["0.64:0.67:0.43:0.25:0.39:0.40"] = 621, -- Theramore, Auberdine, Stonetalon Peak
 					["0.64:0.67:0.61:0.55:0.46:0.40:0.50:0.35"] = 388, -- Theramore, Ratchet, Astranaar, Emerald Sanctuary
+					["0.64:0.67:0.43:0.25:0.53:0.26"] = 629, -- Theramore, Auberdine, Talonbranch Glade
 
 				},
 
