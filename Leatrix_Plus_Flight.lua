@@ -672,7 +672,7 @@
 					["0.61:0.55:0.56:0.53:0.45:0.56"] = 175, -- Ratchet, Crossroads, Thunder Bluff
 					["0.61:0.55:0.56:0.53"] = 69, -- Ratchet, Crossroads
 					["0.61:0.55:0.56:0.53:0.41:0.47"] = 218, -- Ratchet, Crossroads, Sun Rock Retreat
-					["0.61:0.55:0.63:0.44:0.55:0.42"] = 190, -- Ratchet, Orgrimmar, Splintertree Post
+					["0.61:0.55:0.63:0.44:0.55:0.42"] = 101, -- Ratchet, Orgrimmar, Splintertree Post
 					["0.61:0.55:0.63:0.44"] = 101, -- Ratchet, Orgrimmar
 					["0.61:0.55:0.63:0.44:0.63:0.36"] = 196, -- Ratchet, Orgrimmar, Valormok
 					["0.61:0.55:0.63:0.44:0.55:0.42:0.50:0.35"] = 269, -- Ratchet, Orgrimmar, Splintertree Post, Emerald Sanctuary
@@ -781,6 +781,7 @@
 					["0.45:0.56:0.63:0.36:0.64:0.23:0.54:0.21"] = 513, -- Thunder Bluff, Valormok, Everlook, Moonglade
 					["0.45:0.56:0.63:0.36:0.64:0.23"] = 380, -- Thunder Bluff, Valormok, Everlook
 					["0.45:0.56:0.61:0.80:0.50:0.76:0.42:0.79"] = 490, -- Thunder Bluff, Gadgetzan, Marshal's Refuge, Cenarion Hold
+					["0.45:0.56:0.63:0.44:0.64:0.23"] = 448, -- Thunder Bluff, Orgrimmar, Everlook
 
 					-- Horde: Valormok (Azshara)
 					["0.63:0.36:0.56:0.53:0.55:0.73:0.61:0.80"] = 441, -- Valormok, Crossroads, Freewind Post, Gadgetzan
@@ -1841,6 +1842,7 @@
 					["0.65:0.23:0.53:0.26:0.50:0.35:0.46:0.40:0.61:0.55"] = 489, -- Everlook, Talonbranch Glade, Emerald Sanctuary, Astranaar, Ratchet
 					["0.65:0.23:0.55:0.21:0.43:0.25:0.64:0.67:0.60:0.81"] = 847, -- Everlook, Moonglade, Auberdine, Theramore, Gadgetzan
 					["0.65:0.23:0.61:0.40:0.61:0.55:0.64:0.67:0.48:0.70:0.31:0.69"] = 740, -- Everlook, Talrendis Point, Ratchet, Theramore, Thalanaar, Feathermoon
+					["0.65:0.23:0.53:0.26:0.43:0.25:0.42:0.16"] = 361, -- Everlook, Talonbranch Glade, Auberdine, Rut'theran Village 
 
 					-- Alliance: Feathermoon (Feralas)
 					["0.31:0.69:0.42:0.79"] = 153, -- Feathermoon, Cenarion Hold
@@ -2189,6 +2191,7 @@
 					["0.64:0.67:0.43:0.25:0.39:0.40"] = 621, -- Theramore, Auberdine, Stonetalon Peak
 					["0.64:0.67:0.61:0.55:0.46:0.40:0.50:0.35"] = 388, -- Theramore, Ratchet, Astranaar, Emerald Sanctuary
 					["0.64:0.67:0.43:0.25:0.53:0.26"] = 629, -- Theramore, Auberdine, Talonbranch Glade
+					["0.64:0.67:0.61:0.55:0.46:0.40:0.50:0.35:0.53:0.26:0.65:0.23"] = 605, -- Theramore, Ratchet, Astranaar, Emerald Sanctuary, Talonbranch Glade, Everlook
 
 				},
 
