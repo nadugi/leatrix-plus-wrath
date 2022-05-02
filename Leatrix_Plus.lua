@@ -3873,10 +3873,12 @@
 							local name = btn:GetName()
 							local btype = btn:GetObjectType()
 							if name and btype == "Button" and not CustomAddonTable[name] and btn:GetNumRegions() >= 3 and not issecurevariable(name) and btn:IsShown() then
-								if not string.find(name, "LibDBIcon") or name == "LibDBIcon10_MethodRaidTools" then
-									CreateBadButton(name)
-									btn:Hide()
-									btn:SetScript("OnShow", function() btn:Hide() end)
+								if not strfind(strlower(LeaPlusDB["MiniExcludeList"]), strlower("##" .. name)) then
+									if not string.find(name, "LibDBIcon") or name == "LibDBIcon10_MethodRaidTools" then
+										CreateBadButton(name)
+										btn:Hide()
+										btn:SetScript("OnShow", function() btn:Hide() end)
+									end
 								end
 							end
 						end
