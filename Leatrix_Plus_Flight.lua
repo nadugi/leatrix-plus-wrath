@@ -1552,6 +1552,7 @@
 					["0.51:0.47:0.45:0.56:0.47:0.59:0.41:0.73:0.55:0.81"] = 548, -- Refuge Pointe, Menethil Harbor, Ironforge, Stormwind, Nethergarde Keep
 					["0.51:0.47:0.45:0.56:0.47:0.59:0.41:0.73:0.50:0.75"] = 484, -- Refuge Pointe, Menethil Harbor, Ironforge, Stormwind, Lakeshire
 					["0.51:0.47:0.50:0.42:0.61:0.35:0.58:0.06"] = 569, -- Refuge Pointe, Aerie Peak, Light's Hope Chapel, Shattered Sun Staging Area
+					["0.51:0.47:0.44:0.45:0.48:0.39"] = 166, -- Refuge Pointe, Southshore, Chillwind Camp
 
 					-- Alliance: Sentinel Hill (Westfall)
 					["0.39:0.80:0.41:0.93"] = 185, -- Sentinel Hill, Booty Bay
