@@ -12752,6 +12752,12 @@
 						f.t:SetRotation(x)
 						f.f:SetFormattedText("%.1f", x)
 					end
+					-- Print coordinates when mouse is in right place
+					local x, y = WorldMapFrame.ScrollContainer:GetNormalizedCursorPosition()
+					if x and y and x > 0 and y > 0 and MouseIsOver(f, -24, 24, 31, -32) then
+						print(('{"Arrow", ' .. floor(x * 1000 + 0.5) / 10 + 0.4) .. ',', (floor(y * 1000 + 0.5) / 10) .. ', L["Step 1"], L["Start here."], arTex, nil, nil, nil, nil, nil, ' .. f.f:GetText() .. "},")
+						PlaySoundFile(567412, "Master", false, true)
+					end
 				end)
 
 				f:SetMovable(true)
@@ -12763,11 +12769,11 @@
 
 				f:SetScript("OnMouseUp", function()
 					f:StopMovingOrSizing()
-					ChatFrame1:Clear()
-					local x, y = WorldMapFrame.ScrollContainer:GetNormalizedCursorPosition()
-					if x and y and x > 0 and y > 0 and MouseIsOver(f) then
-						print(('{"Arrow", ' .. floor(x * 1000 + 0.5) / 10) .. ',', (floor(y * 1000 + 0.5) / 10) .. ', L["Step 1"], L["Start here."], ' .. f.f:GetText() .. "},")
-					end
+					--ChatFrame1:Clear()
+					--local x, y = WorldMapFrame.ScrollContainer:GetNormalizedCursorPosition()
+					--if x and y and x > 0 and y > 0 and MouseIsOver(f) then
+					--	print(('{"Arrow", ' .. floor(x * 1000 + 0.5) / 10) .. ',', (floor(y * 1000 + 0.5) / 10) .. ', L["Step 1"], L["Start here."], ' .. f.f:GetText() .. "},")
+					--end
 				end)
 				return
 			elseif str == "flight" then
