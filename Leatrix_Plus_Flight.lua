@@ -2259,6 +2259,7 @@
 					["0.81:0.77:0.69:0.85:0.55:0.77:0.44:0.67:0.38:0.50:0.32:0.34"] = 428, -- Altar of Sha'tar, Wildhammer Stronghold, Allerian Stronghold, Shattrath, Telredor, Sylvanaar
 					["0.81:0.77:0.69:0.85:0.55:0.77:0.65:0.58:0.52:0.51"] = 350, -- Altar of Sha'tar, Wildhammer Stronghold, Allerian Stronghold, Honor Hold, Temple of Telhamat
 					["0.81:0.77:0.69:0.85:0.55:0.77"] = 181, -- Altar of Sha'tar, Wildhammer Stronghold, Allerian Stronghold
+					["0.81:0.77:0.69:0.85:0.55:0.77:0.44:0.67:0.38:0.50:0.42:0.37:0.58:0.27"] = 489, -- Altar der Sha'tar, Wildhammerfeste, Allerias Feste, Shattrath, Telredor, Toshleys Station, Area 52
 
 					-- Alliance: Area 52 (Netherstorm)
 					["0.58:0.27:0.42:0.37:0.38:0.50:0.27:0.74"] = 290, -- Area 52, Toshley's Station, Telredor, Telaar
