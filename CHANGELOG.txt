@@ -1,4 +1,5 @@
-2.5.104.alpha.2 - 10th May 2022
+2.5.104.alpha.3 - 10th May 2022
+- For 'Sell junk automatically' ('Automation'), you can now exclude specific junk items from being sold.  There is an exclusion list in the configuration panel where you can enter your own item IDs (separated by commas).  Item IDs will be shown in item tooltips while the configuration panel is showing.
 - Added flight times.  There are now 2324 flight times stored in Leatrix Plus for BCC.
 
 2.5.103 - 5th May 2022
