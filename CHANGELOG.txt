@@ -1,6 +1,7 @@
-2.5.104.alpha.3 - 10th May 2022
+2.5.104.alpha.4 - 10th May 2022
 - For 'Sell junk automatically' ('Automation'), you can now exclude specific junk items from being sold.  There is an exclusion list in the configuration panel where you can enter your own item IDs (separated by commas).  Item IDs will be shown in item tooltips while the configuration panel is showing.
-- Added flight times.  There are now 2324 flight times stored in Leatrix Plus for BCC.
+- If you try to use 'Enhance minimap' ('Interface') and ElvUI Minimap together, you will now be asked which one you want to use on startup.  Choosing Leatrix Plus will disable ElvUI's minimap module.  Choosing ElvUI will disable Leatrix Plus 'Enhance minimap' setting.
+- Added flight times.  There are now 2325 flight times stored in Leatrix Plus for BCC.
 
 2.5.103 - 5th May 2022
 - Added lots of flight times.  There are now 2314 flight times stored in Leatrix Plus for BCC.
