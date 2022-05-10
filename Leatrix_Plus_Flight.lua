@@ -385,6 +385,7 @@
 					["0.44:0.69:0.55:0.73:0.61:0.80:0.50:0.76"] = 301, -- Camp Mojache, Freewind Post, Gadgetzan, Marshal's Refuge
 					["0.44:0.69:0.56:0.53:0.61:0.55"] = 316, -- Camp Mojache, Crossroads, Ratchet
 					["0.44:0.69:0.56:0.53:0.63:0.44:0.64:0.23"] = 621, -- Camp Mojache, Crossroads, Orgrimmar, Everlook
+					["0.44:0.69:0.56:0.53:0.41:0.47"] = 415, -- Camp Mojache, Crossroads, Sun Rock Retreat
 
 					-- Horde: Camp Taurajo (The Barrens)
 					["0.53:0.61:0.55:0.73:0.61:0.80"] = 218, -- Camp Taurajo, Freewind Post, Gadgetzan
@@ -864,6 +865,7 @@
 					["0.81:0.77:0.66:0.77:0.51:0.73:0.65:0.50:0.79:0.54"] = 333, -- Altar of Sha'tar, Shadowmoon Village, Stonebreaker Hold, Thrallmar, Hellfire Peninsula
 					["0.81:0.77:0.66:0.77:0.51:0.73:0.44:0.67:0.44:0.51"] = 272, -- Altar of Sha'tar, Shadowmoon Village, Stonebreaker Hold, Shattrath, Swamprat Post
 					["0.81:0.77:0.66:0.77:0.51:0.73:0.44:0.67:0.44:0.51:0.38:0.32:0.42:0.28"] = 403, -- Altar of Sha'tar, Shadowmoon Village, Stonebreaker Hold, Shattrath, Swamprat Post, Thunderlord Stronghold, Evergrove
+					["0.81:0.77:0.66:0.77:0.51:0.73:0.44:0.67:0.44:0.51:0.38:0.32:0.58:0.27"] = 474, -- Altar of Sha'tar, Shadowmoon Village, Stonebreaker Hold, Shattrath, Swamprat Post, Thunderlord Stronghold, Area 52
 
 					-- Horde: Area 52 (Netherstorm)
 					["0.58:0.27:0.49:0.36:0.44:0.51:0.44:0.67:0.51:0.73:0.66:0.77"] = 357, -- Area 52, Mok'Nathal Village, Swamprat Post, Shattrath, Stonebreaker Hold, Shadowmoon Village
@@ -1033,6 +1035,7 @@
 					["0.78:0.85:0.66:0.77:0.51:0.73"] = 134, -- Sanctum of the Stars, Shadowmoon Village, Stonebreaker Hold
 					["0.78:0.85:0.66:0.77:0.51:0.73:0.44:0.67:0.44:0.51"] = 266, -- Sanctum of the Stars, Shadowmoon Village, Stonebreaker Hold, Shattrath, Swamprat Post
 					["0.78:0.85:0.66:0.77:0.51:0.73:0.44:0.67:0.44:0.51:0.38:0.32:0.58:0.27"] = 468, -- Sanctum of the Stars, Shadowmoon Village, Stonebreaker Hold, Shattrath, Swamprat Post, Thunderlord Stronghold, Area 52
+					["0.78:0.85:0.66:0.77:0.51:0.73:0.44:0.67:0.44:0.51:0.38:0.32"] = 372, -- Sanctum of the Stars, Shadowmoon Village, Stonebreaker Hold, Shattrath, Swamprat Post, Thunderlord Stronghold
 
 					-- Horde: Shadowmoon Village (Shadowmoon Valley)
 					["0.66:0.77:0.51:0.73"] = 73, -- Shadowmoon Village, Stonebreaker Hold
@@ -1508,6 +1511,7 @@
 					["0.55:0.81:0.47:0.79:0.41:0.73:0.47:0.59:0.53:0.61"] = 439, -- Nethergarde Keep, Darkshire, Stormwind, Ironforge, Thelsamar 
 					["0.55:0.81:0.52:0.72:0.47:0.65:0.47:0.59:0.58:0.06"] = 422, -- Nethergarde Keep, Morgan's Vigil, Thorium Point, Ironforge, Shattered Sun Staging Area
 					["0.55:0.81:0.47:0.79:0.41:0.73:0.47:0.59"] = 381, -- Nethergarde Keep, Darkshire, Stormwind, Ironforge
+					["0.55:0.81:0.47:0.79:0.41:0.73:0.47:0.59:0.44:0.45"] = 552, -- Burg Nethergarde, Dunkelhain, Sturmwind, Eisenschmiede, Süderstade
 
 					-- Alliance: Rebel Camp (Stranglethorn Vale)
 					["0.43:0.82:0.41:0.93"] = 116, -- Rebel Camp, Booty Bay
@@ -1696,7 +1700,7 @@
 					["0.47:0.65:0.47:0.59"] = 94, -- Thorium Point, Ironforge
 					["0.47:0.65:0.47:0.59:0.45:0.56"] = 159, -- Thorium Point, Ironforge, Menethil Harbor
 					["0.47:0.65:0.53:0.61:0.51:0.47"] = 251, -- Thorium Point, Thelsamar, Refuge Pointe
-					["0.47:0.65:0.47:0.59:0.44:0.45"] = 370, -- Thorium Point, Ironforge, Southshore
+					["0.47:0.65:0.47:0.59:0.44:0.45"] = 261, -- Thorium Point, Ironforge, Southshore (was 370, changed by Yannick Jacoby)
 					["0.47:0.65:0.53:0.61:0.51:0.47:0.50:0.42"] = 323, -- Thorium Point, Thelsamar, Refuge Pointe, Aerie Peak
 					["0.47:0.65:0.47:0.59:0.48:0.39"] = 302, -- Thorium Point, Ironforge, Chillwind Camp
 					["0.47:0.65:0.47:0.59:0.61:0.35"] = 398, -- Thorium Point, Ironforge, Light's Hope Chapel
