@@ -1,3 +1,6 @@
+2.5.105.alpha.1 - 12th May 2022
+- Updated flight times.
+
 2.5.104 - 12th May 2022
 - For 'Sell junk automatically' ('Automation'), you can now exclude specific junk items from being sold.  There is an exclusion list in the configuration panel where you can enter your own item IDs (separated by commas).  Item IDs will be shown in item tooltips while the configuration panel is showing.
 - If you try to use 'Enhance minimap' ('Interface') and ElvUI Minimap together, you will now be asked which one you want to use on startup.  Choosing Leatrix Plus will disable ElvUI's minimap module.  Choosing ElvUI will disable Leatrix Plus 'Enhance minimap' setting.

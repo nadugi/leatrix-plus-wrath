@@ -1378,7 +1378,7 @@
 					["0.47:0.59:0.47:0.65:0.41:0.73:0.55:0.81"] = 359, -- Ironforge, Thorium Point, Stormwind, Nethergarde Keep
 					["0.47:0.59:0.47:0.65:0.41:0.73:0.47:0.79"] = 298, -- Ironforge, Thorium Point, Stormwind, Darkshire
 					["0.47:0.59:0.41:0.73:0.52:0.72"] = 350, -- Ironforge, Stormwind, Morgan's Vigil
-					["0.47:0.59:0.58:0.06"] = 111, -- Ironforge, Shattered Sun Staging Area (was 100, changed by Maximilian Wittig)
+					["0.47:0.59:0.58:0.06"] = 99, -- Ironforge, Shattered Sun Staging Area (was 100, changed to 111 by Maximilian Wittig, changed back to 99 by Sarah Normington)
 
 					-- Alliance: Lakeshire (Redridge Mountains)
 					["0.50:0.75:0.47:0.79:0.43:0.82:0.41:0.93"] = 218, -- Lakeshire, Darkshire, Rebel Camp, Booty Bay
