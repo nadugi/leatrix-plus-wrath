@@ -2605,6 +2605,7 @@
 					["0.69:0.85:0.81:0.77"] = 84, -- Wildhammer Stronghold, Altar of Sha'tar
 					["0.69:0.85:0.55:0.77:0.65:0.58:0.75:0.50"] = 250, -- Wildhammer Stronghold, Allerian Stronghold, Honor Hold, Shatter Point
 					["0.69:0.85:0.78:0.85"] = 43, -- Wildhammer Stronghold, Sanctum of the Stars
+					["0.69:0.85:0.55:0.77:0.44:0.67:0.38:0.50:0.32:0.34:0.63:0.18"] = 503, -- Wildhammer Stronghold, Allerian Stronghold, Shattrath, Telredor, Sylvanaar, The Stormspire
 
 				},
 
