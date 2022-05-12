@@ -1,5 +1,5 @@
-2.5.105.alpha.1 - 12th May 2022
-- Updated flight times.
+2.5.105 - 12th May 2022
+- Corrected a very popular flight route and added flight times.  There are now 2329 flight times stored in Leatrix Plus for BCC.
 
 2.5.104 - 12th May 2022
 - For 'Sell junk automatically' ('Automation'), you can now exclude specific junk items from being sold.  There is an exclusion list in the configuration panel where you can enter your own item IDs (separated by commas).  Item IDs will be shown in item tooltips while the configuration panel is showing.
