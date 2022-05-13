@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.106.alpha.1 (13th May 2022)
+-- 	Leatrix Plus 2.5.106.alpha.2 (13th May 2022)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.106.alpha.1"
+	LeaPlusLC["AddonVer"] = "2.5.106.alpha.2"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -456,6 +456,7 @@
 		or	(LeaPlusLC["TipModEnable"]			~= LeaPlusDB["TipModEnable"])			-- Enhance tooltip
 		or	(LeaPlusLC["EnhanceDressup"]		~= LeaPlusDB["EnhanceDressup"])			-- Enhance dressup
 		or	(LeaPlusLC["EnhanceQuestLog"]		~= LeaPlusDB["EnhanceQuestLog"])		-- Enhance quest log
+		or	(LeaPlusLC["TallerQuestLog"]		~= LeaPlusDB["TallerQuestLog"])			-- Taller quest log
 		or	(LeaPlusLC["EnhanceProfessions"]	~= LeaPlusDB["EnhanceProfessions"])		-- Enhance professions
 		or	(LeaPlusLC["EnhanceTrainers"]		~= LeaPlusDB["EnhanceTrainers"])		-- Enhance trainers
 
@@ -6339,12 +6340,22 @@
 
 		if LeaPlusLC["EnhanceQuestLog"] == "On" then
 
+			-- Set tall or short quest log variables
+			local tall, numTallQuests = 0, 0
+			if LeaPlusLC["TallerQuestLog"] == "On" then 
+				tall = 104
+				numTallQuests = 23
+			else
+				tall = 0
+				numTallQuests = 16
+			end
+
 			-- Make the quest log frame double-wide
 			UIPanelWindows["QuestLogFrame"] = {area = "override", pushable = 0, xoffset = -16, yoffset = 12, bottomClampOverride = 140 + 12, width = 714, height = 487, whileDead = 1}
 
 			-- Size the quest log frame
 			QuestLogFrame:SetWidth(714)
-			QuestLogFrame:SetHeight(487)
+			QuestLogFrame:SetHeight(487 + tall)
 
 			-- Adjust quest log title text
 			QuestLogTitleText:ClearAllPoints()
@@ -6353,14 +6364,14 @@
 			-- Move the detail frame to the right and stretch it to full height
 			QuestLogDetailScrollFrame:ClearAllPoints()
 			QuestLogDetailScrollFrame:SetPoint("TOPLEFT", QuestLogListScrollFrame, "TOPRIGHT", 31, 1)
-			QuestLogDetailScrollFrame:SetHeight(336)
+			QuestLogDetailScrollFrame:SetHeight(336 + tall)
 
 			-- Expand the quest list to full height
-			QuestLogListScrollFrame:SetHeight(336)
+			QuestLogListScrollFrame:SetHeight(336 + tall)
 
 			-- Create additional quest rows
 			local oldQuestsDisplayed = QUESTS_DISPLAYED
-			_G.QUESTS_DISPLAYED = _G.QUESTS_DISPLAYED + 16
+			_G.QUESTS_DISPLAYED = _G.QUESTS_DISPLAYED + numTallQuests
 			for i = oldQuestsDisplayed + 1, QUESTS_DISPLAYED do
 				local button = CreateFrame("Button", "QuestLogTitle" .. i, QuestLogFrame, "QuestLogTitleButtonTemplate")
 				button:SetID(i)
@@ -6373,14 +6384,25 @@
 			local regions = {QuestLogFrame:GetRegions()}
 
 			-- Set top left texture
-			regions[3]:SetTexture("Interface\\QUESTFRAME\\UI-QuestLogDualPane-Left")
-			regions[3]:SetSize(512,512)
+			if LeaPlusLC["TallerQuestLog"] == "On" then
+				regions[3]:SetTexture("Interface\\AddOns\\Leatrix_Plus\\Leatrix_Plus_QuestLeft")
+				regions[3]:SetSize(512, 1024)
+			else
+				regions[3]:SetTexture("Interface\\QUESTFRAME\\UI-QuestLogDualPane-Left")
+				regions[3]:SetSize(512, 512)
+			end
 
 			-- Set top right texture
 			regions[4]:ClearAllPoints()
 			regions[4]:SetPoint("TOPLEFT", regions[3], "TOPRIGHT", 0, 0)
-			regions[4]:SetTexture("Interface\\QUESTFRAME\\UI-QuestLogDualPane-Right")
-			regions[4]:SetSize(256,512)
+
+			if LeaPlusLC["TallerQuestLog"] == "On" then
+				regions[4]:SetTexture("Interface\\AddOns\\Leatrix_Plus\\Leatrix_Plus_QuestRight")
+				regions[4]:SetSize(256, 1024)
+			else
+				regions[4]:SetTexture("Interface\\QUESTFRAME\\UI-QuestLogDualPane-Right")
+				regions[4]:SetSize(256, 512)
+			end
 
 			-- Hide bottom left and bottom right textures
 			regions[5]:Hide()
@@ -6504,6 +6526,7 @@
 
 			LeaPlusLC:MakeTx(EnhanceQuestPanel, "Settings", 16, -72)
 			LeaPlusLC:MakeCB(EnhanceQuestPanel, "EnhanceQuestLevels", "Show quest levels", 16, -92, false, "If checked, quest levels will be shown.")
+			LeaPlusLC:MakeCB(EnhanceQuestPanel, "TallerQuestLog", "Taller quest log", 16, -112, true, "If checked, the quest log will be taller.")
 
 			-- Help button hidden
 			EnhanceQuestPanel.h:Hide()
@@ -6515,6 +6538,7 @@
 			end)
 
 			-- Reset button handler
+			EnhanceQuestPanel.r.tiptext = EnhanceQuestPanel.r.tiptext .. "|n|n" .. L["Note that this will not reset settings that require a UI reload."]
 			EnhanceQuestPanel.r:SetScript("OnClick", function()
 
 				-- Reset checkboxes
@@ -6530,6 +6554,8 @@
 				if IsShiftKeyDown() and IsControlKeyDown() then
 					-- Preset profile
 					LeaPlusLC["EnhanceQuestLevels"] = "On"
+					LeaPlusLC["TallerQuestLog"] = "On"
+					LeaPlusLC:ReloadCheck() -- Special reload check
 				else
 					EnhanceQuestPanel:Show()
 					LeaPlusLC:HideFrames()
@@ -11112,6 +11138,7 @@
 				LeaPlusLC:LoadVarChk("HideDressupStats", "Off")				-- Hide dressup stats
 				LeaPlusLC:LoadVarChk("EnhanceQuestLog", "Off")				-- Enhance quest log
 				LeaPlusLC:LoadVarChk("EnhanceQuestLevels", "On")			-- Enhance quest log quest levels
+				LeaPlusLC:LoadVarChk("TallerQuestLog", "Off")				-- Taller quest log
 				LeaPlusLC:LoadVarChk("EnhanceProfessions", "Off")			-- Enhance professions
 				LeaPlusLC:LoadVarChk("EnhanceTrainers", "Off")				-- Enhance trainers
 
@@ -11349,6 +11376,7 @@
 			LeaPlusDB["HideDressupStats"]		= LeaPlusLC["HideDressupStats"]
 			LeaPlusDB["EnhanceQuestLog"]		= LeaPlusLC["EnhanceQuestLog"]
 			LeaPlusDB["EnhanceQuestLevels"]		= LeaPlusLC["EnhanceQuestLevels"]
+			LeaPlusDB["TallerQuestLog"]			= LeaPlusLC["TallerQuestLog"]
 			LeaPlusDB["EnhanceProfessions"]		= LeaPlusLC["EnhanceProfessions"]
 			LeaPlusDB["EnhanceTrainers"]		= LeaPlusLC["EnhanceTrainers"]
 
@@ -13339,6 +13367,7 @@
 				LeaPlusDB["HideDressupStats"] = "On"			-- Hide dressup stats
 				LeaPlusDB["EnhanceQuestLog"] = "On"				-- Enhance quest log
 				LeaPlusDB["EnhanceQuestLevels"] = "On"			-- Enhance quest log quest levels
+				LeaPlusDB["TallerQuestLog"] = "On"				-- Taller quest log
 				LeaPlusDB["EnhanceProfessions"] = "On"			-- Enhance professions
 				LeaPlusDB["EnhanceTrainers"] = "On"				-- Enhance trainers
 				LeaPlusDB["ShowVolume"] = "On"					-- Show volume slider
