@@ -1,4 +1,4 @@
-2.5.106.alpha.2 - 13th May 2022
+2.5.106.alpha.3 - 14th May 2022
 - For 'Enhance quest log' ('Interface'), you can now make the quest log taller using a new setting in the configuration panel.  It's disabled by default.
 - Added flight times.  There are now 2331 flight times stored in Leatrix Plus for BCC.
 

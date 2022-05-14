@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.106.alpha.2 (13th May 2022)
+-- 	Leatrix Plus 2.5.106.alpha.3 (14th May 2022)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.106.alpha.2"
+	LeaPlusLC["AddonVer"] = "2.5.106.alpha.3"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -6385,7 +6385,8 @@
 
 			-- Set top left texture
 			if LeaPlusLC["TallerQuestLog"] == "On" then
-				regions[3]:SetTexture("Interface\\AddOns\\Leatrix_Plus\\Leatrix_Plus_QuestLeft")
+				regions[3]:SetTexture("Interface\\AddOns\\Leatrix_Plus\\Leatrix_Plus_QuestLog")
+				regions[3]:SetTexCoord(0, 0.5, 0, 1)
 				regions[3]:SetSize(512, 1024)
 			else
 				regions[3]:SetTexture("Interface\\QUESTFRAME\\UI-QuestLogDualPane-Left")
@@ -6397,7 +6398,8 @@
 			regions[4]:SetPoint("TOPLEFT", regions[3], "TOPRIGHT", 0, 0)
 
 			if LeaPlusLC["TallerQuestLog"] == "On" then
-				regions[4]:SetTexture("Interface\\AddOns\\Leatrix_Plus\\Leatrix_Plus_QuestRight")
+				regions[4]:SetTexture("Interface\\AddOns\\Leatrix_Plus\\Leatrix_Plus_QuestLog")
+				regions[4]:SetTexCoord(0.5, 0.75, 0, 1)
 				regions[4]:SetSize(256, 1024)
 			else
 				regions[4]:SetTexture("Interface\\QUESTFRAME\\UI-QuestLogDualPane-Right")
