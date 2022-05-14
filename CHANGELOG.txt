@@ -1,7 +1,7 @@
-2.5.106.alpha.4 - 14th May 2022
+2.5.106.alpha.5 - 14th May 2022
 - For 'Enhance quest log' ('Interface'), you can now make the quest log taller using a new setting in the configuration panel.  It's disabled by default.
 - For 'Enhance professions' ('Interface'), you can now make the professions frame taller using a new configuration panel.  It's disabled by default.
-- For 'Enhance trainers' ('Interface'), you can now make the trainers frame taller using a new configuration panel.  It's disabled by default.
+- For 'Enhance trainers' ('Interface'), you can now make the skill trainer frame taller using a new configuration panel.  It's disabled by default.
 - Added flight times.  There are now 2332 flight times stored in Leatrix Plus for BCC.
 
 2.5.105 - 12th May 2022

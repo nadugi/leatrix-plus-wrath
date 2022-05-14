@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.106.alpha.4 (14th May 2022)
+-- 	Leatrix Plus 2.5.106.alpha.5 (14th May 2022)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.106.alpha.4"
+	LeaPlusLC["AddonVer"] = "2.5.106.alpha.5"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -5573,7 +5573,7 @@
 			local TrainersPanel = LeaPlusLC:CreatePanel("Enhance trainers", "TrainersPanel")
 
 			LeaPlusLC:MakeTx(TrainersPanel, "Settings", 16, -72)
-			LeaPlusLC:MakeCB(TrainersPanel, "TallerTrainers", "Taller trainers frame", 16, -92, true, "If checked, the trainers frame will be taller.")
+			LeaPlusLC:MakeCB(TrainersPanel, "TallerTrainers", "Taller skill trainer frame", 16, -92, true, "If checked, the skill trainer frame will be taller.")
 
 			-- Help button hidden
 			TrainersPanel.h:Hide()
