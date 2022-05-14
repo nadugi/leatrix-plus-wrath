@@ -2277,8 +2277,8 @@
 					PlayerFrameTexture:SetTexCoord(1, .09375, 0, .78125)
 
 				elseif chain == 3 then -- Rare Elite
-					PlayerFrameTexture:SetTexture("Interface\\AddOns\\Leatrix_Plus\\Leatrix_Plus.blp")
-					PlayerFrameTexture:SetTexCoord(1,.09375, 0, 0.390625)
+					PlayerFrameTexture:SetTexture("Interface\\AddOns\\Leatrix_Plus\\Leatrix_Plus_QuestLog.blp")
+					PlayerFrameTexture:SetTexCoord(0.25, 0.0234375, 0, 0.09765625)
 
 				end
 			end
@@ -6386,7 +6386,7 @@
 			-- Set top left texture
 			if LeaPlusLC["TallerQuestLog"] == "On" then
 				regions[3]:SetTexture("Interface\\AddOns\\Leatrix_Plus\\Leatrix_Plus_QuestLog")
-				regions[3]:SetTexCoord(0, 0.5, 0, 1)
+				regions[3]:SetTexCoord(0.25, 0.75, 0, 1)
 				regions[3]:SetSize(512, 1024)
 			else
 				regions[3]:SetTexture("Interface\\QUESTFRAME\\UI-QuestLogDualPane-Left")
@@ -6399,7 +6399,7 @@
 
 			if LeaPlusLC["TallerQuestLog"] == "On" then
 				regions[4]:SetTexture("Interface\\AddOns\\Leatrix_Plus\\Leatrix_Plus_QuestLog")
-				regions[4]:SetTexCoord(0.5, 0.75, 0, 1)
+				regions[4]:SetTexCoord(0.75, 1, 0, 1)
 				regions[4]:SetSize(256, 1024)
 			else
 				regions[4]:SetTexture("Interface\\QUESTFRAME\\UI-QuestLogDualPane-Right")
@@ -11931,10 +11931,10 @@
 		if reskin then
 
 			-- Set skinned button textures
-			mbtn:SetNormalTexture("Interface\\AddOns\\Leatrix_Plus\\Leatrix_Plus.blp")
-			mbtn:GetNormalTexture():SetTexCoord(0.5, 1, 0.875, 1)
-			mbtn:SetHighlightTexture("Interface\\AddOns\\Leatrix_Plus\\Leatrix_Plus.blp")
-			mbtn:GetHighlightTexture():SetTexCoord(0, 0.5, 0.875, 1)
+			mbtn:SetNormalTexture("Interface\\AddOns\\Leatrix_Plus\\Leatrix_Plus_QuestLog.blp")
+			mbtn:GetNormalTexture():SetTexCoord(0.125, 0.25, 0.21875, 0.25)
+			mbtn:SetHighlightTexture("Interface\\AddOns\\Leatrix_Plus\\Leatrix_Plus_QuestLog.blp")
+			mbtn:GetHighlightTexture():SetTexCoord(0, 0.125, 0.21875, 0.25)
 
 			-- Hide the default textures
 			mbtn:HookScript("OnShow", function() mbtn.Left:Hide(); mbtn.Middle:Hide(); mbtn.Right:Hide() end)
