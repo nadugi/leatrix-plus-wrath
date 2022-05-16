@@ -1,8 +1,8 @@
-2.5.106.alpha.7 - 15th May 2022
+2.5.106.alpha.8 - 16th May 2022
 - For 'Enhance quest log' ('Interface'), the quest log is now taller.
 - For 'Enhance professions' ('Interface'), the professions frame is now taller.
 - For 'Enhance trainers' ('Interface'), the skill trainer frame is now taller.  Also fixed a cosmetic bug with the position of the beast training cost column.
-- Added some flight times.  There are now 2337 flight times stored in Leatrix Plus for BCC.
+- Added some flight times.  There are now 2339 flight times stored in Leatrix Plus for BCC.
 
 2.5.105 - 12th May 2022
 - Corrected a very popular flight route and added flight times.  There are now 2329 flight times stored in Leatrix Plus for BCC.

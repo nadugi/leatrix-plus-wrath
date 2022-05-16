@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.106.alpha.7 (15th May 2022)
+-- 	Leatrix Plus 2.5.106.alpha.8 (16th May 2022)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.106.alpha.7"
+	LeaPlusLC["AddonVer"] = "2.5.106.alpha.8"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -9813,12 +9813,14 @@
 					local EnhanceMinimapElvUIButton1 = LeaPlusLC:CreateButton("EnhanceMinimapElvUIButton1", noFrame, "Leatrix Plus", "TOP", -100, -60, 0, 25, true, "")
 					EnhanceMinimapElvUIButton1:SetScript("OnClick", function()
 						E.private.general.minimap.enable = false
+						EnableAddOn("Leatrix_Plus")
 						ReloadUI()
 					end)
 
 					local EnhanceMinimapElvUIButton2 = LeaPlusLC:CreateButton("EnhanceMinimapElvUIButton2", noFrame, "ElvUI", "TOP", 100, -60, 0, 25, true, "")
 					EnhanceMinimapElvUIButton2:SetScript("OnClick", function()
 						LeaPlusLC["MinimapMod"] = "Off"
+						EnableAddOn("Leatrix_Plus")
 						ReloadUI()
 					end)
 
