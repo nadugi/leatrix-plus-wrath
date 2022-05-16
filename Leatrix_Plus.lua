@@ -1077,6 +1077,36 @@
 				GameTooltip:Hide()
 			end)
 
+			-- ElvUI fix to move Wowhead link inside the quest log frame
+			local function ElvUIFix()
+				C_Timer.After(0.1, function()
+					QuestLogTitleText:ClearAllPoints()
+					QuestLogTitleText:SetPoint("TOPLEFT", QuestLogFrame, "TOPLEFT", 32, -18)
+					if QuestLogTitleText:GetStringWidth() > 200 then
+						QuestLogTitleText:SetWidth(200)
+					else
+						QuestLogTitleText:SetWidth(QuestLogTitleText:GetStringWidth())
+					end
+					mEB:ClearAllPoints()
+					mEB:SetPoint("LEFT", QuestLogTitleText, "RIGHT", 10, 0)
+					mEB.t:Hide()
+				end)
+			end
+
+			-- Run ElvUI fix when ElvUI has loaded
+			if IsAddOnLoaded("ElvUI") then
+				ElvUIFix()
+			else
+				local waitFrame = CreateFrame("FRAME")
+				waitFrame:RegisterEvent("ADDON_LOADED")
+				waitFrame:SetScript("OnEvent", function(self, event, arg1)
+					if arg1 == "ElvUI" then
+						ElvUIFix()
+						waitFrame:UnregisterAllEvents()
+					end
+				end)
+			end
+
 		end
 
 		----------------------------------------------------------------------

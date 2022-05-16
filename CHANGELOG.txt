@@ -2,6 +2,7 @@
 - For 'Enhance quest log' ('Interface'), the quest log is now taller.
 - For 'Enhance professions' ('Interface'), the professions frame is now taller.
 - For 'Enhance trainers' ('Interface'), the skill trainer frame is now taller.  Also fixed a cosmetic bug with the position of the beast training cost column.
+- If you are using ElvUI, 'Show Wowhead links' ('Interface') will now place links inside the quest log frame rather than above it.  For 'Enhance professions', the search box and 'Have materials' checkbox have been repositioned.
 - Added some flight times.  There are now 2339 flight times stored in Leatrix Plus for BCC.
 
 2.5.105 - 12th May 2022
