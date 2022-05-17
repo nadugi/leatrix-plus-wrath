@@ -1,4 +1,4 @@
-2.5.106.alpha.8 - 16th May 2022
+2.5.106.alpha.9 - 17th May 2022
 - For 'Enhance quest log' ('Interface'), the quest log is now taller.
 - For 'Enhance professions' ('Interface'), the professions frame is now taller.
 - For 'Enhance trainers' ('Interface'), the skill trainer frame is now taller.  Also fixed a cosmetic bug with the position of the beast training cost column.
