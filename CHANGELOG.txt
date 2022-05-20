@@ -1,5 +1,5 @@
-2.5.107.alpha.1 - 19th May 2022
-- Added some flight times.  There are now 2342 flight times stored in Leatrix Plus for BCC.
+2.5.107.alpha.1 - 20th May 2022
+- Added some flight times.  There are now 2346 flight times stored in Leatrix Plus for BCC.
 
 2.5.106 - 18th May 2022
 - For 'Enhance quest log' ('Interface'), the quest log is now taller.
