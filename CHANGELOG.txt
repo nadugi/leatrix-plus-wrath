@@ -1,6 +1,6 @@
-2.5.107.alpha.5 - 25th May 2022
+2.5.107 - 25th May 2022
 - Added a new option 'Show ready timer' ('Interface').  If checked, a timer will be shown under the PvP encounter ready frame so that you know how long you have left to click the enter button.
-- Added lots of flight times.  There are now 2357 flight times stored in Leatrix Plus for BCC.
+- Added lots of flight times.  There are now 2359 flight times stored in Leatrix Plus for BCC.
 
 2.5.106 - 18th May 2022
 - For 'Enhance quest log' ('Interface'), the quest log is now taller.
