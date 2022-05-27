@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.107 (25th May 2022)
+-- 	Leatrix Plus 2.5.108.alpha.1 (27th May 2022)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.107"
+	LeaPlusLC["AddonVer"] = "2.5.108.alpha.1"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -741,7 +741,7 @@
 
 				},
 
-				-- Striders
+				-- Striders (footsteps are in another setting)
 				["MuteStriders"] = {
 
 					-- sound/creature/mechastrider/
@@ -754,6 +754,11 @@
 					"mechastriderwoundb.ogg#555129", 
 					"mechastriderwoundc.ogg#555130", 
 					"mechastriderwoundcrit.ogg#555131",
+
+				},
+
+				-- Mechanical mount footsteps
+				["MuteSteps"] = {
 
 					-- sound/creature/gnomespidertank/
 					"gnomespidertankfootstepa.ogg#550507",
@@ -795,7 +800,8 @@
 
 			LeaPlusLC:MakeTx(SoundPanel, "Mounts", 140, -72)
 			LeaPlusLC:MakeCB(SoundPanel, "MuteGyrocopters", "Gyrocopters", 140, -92, false, "If checked, gyrocopters will be muted.|n|nThis applies to the engineering flying machine mounts.")
-			LeaPlusLC:MakeCB(SoundPanel, "MuteStriders", "Mechstriders", 140, -112, false, "If checked, mechanostriders will be muted.")
+			LeaPlusLC:MakeCB(SoundPanel, "MuteStriders", "Mechstriders", 140, -112, false, "If checked, mechanostriders will be quieter.")
+			LeaPlusLC:MakeCB(SoundPanel, "MuteSteps", "Mechsteps", 140, -132, false, "If checked, footsteps for mechanical mounts will be muted.")
 
 			LeaPlusLC:MakeTx(SoundPanel, "Pets", 264, -72)
 			LeaPlusLC:MakeCB(SoundPanel, "MuteYawns", "Yawns", 264, -92, false, "If checked, yawns from hunter pet cats will be muted.")
@@ -11123,6 +11129,13 @@
 
 		if event == "ADDON_LOADED" then
 			if arg1 == "Leatrix_Plus" then
+
+				-- Replace old var names with new ones
+				local function UpdateVars(oldvar, newvar)
+					if LeaPlusDB[oldvar] and not LeaPlusDB[newvar] then LeaPlusDB[newvar] = LeaPlusDB[oldvar]; LeaPlusDB[oldvar] = nil end
+				end
+
+				UpdateVars("MuteStriders", "MuteSteps")						-- 2.5.108 (1st June 2022)
 
 				-- Automation
 				LeaPlusLC:LoadVarChk("AutomateQuests", "Off")				-- Automate quests
