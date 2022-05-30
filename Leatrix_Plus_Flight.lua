@@ -761,7 +761,7 @@
 					["0.41:0.47:0.32:0.58"] = 143, -- Sun Rock Retreat, Shadowprey Village
 					["0.41:0.47:0.45:0.56"] = 175, -- Sun Rock Retreat, Thunder Bluff
 					["0.41:0.47:0.56:0.53"] = 150, -- Sun Rock Retreat, Crossroads
-					["0.41:0.47:0.56:0.53:0.61:0.55"] = 200, -- Sun Rock Retreat, Crossroads, Ratchet
+					["0.41:0.47:0.56:0.53:0.61:0.55"] = 150, -- Sun Rock Retreat, Crossroads, Ratchet (was 200, changed by William Black)
 					["0.41:0.47:0.56:0.53:0.63:0.44"] = 266, -- Sun Rock Retreat, Crossroads, Orgrimmar
 					["0.41:0.47:0.41:0.37:0.55:0.42"] = 294, -- Sun Rock Retreat, Zoram'gar Outpost, Splintertree Post
 					["0.41:0.47:0.56:0.53:0.63:0.36"] = 313, -- Sun Rock Retreat, Crossroads, Valormok
@@ -1530,6 +1530,7 @@
 					["0.55:0.81:0.52:0.72:0.47:0.65:0.47:0.59:0.58:0.06"] = 422, -- Nethergarde Keep, Morgan's Vigil, Thorium Point, Ironforge, Shattered Sun Staging Area
 					["0.55:0.81:0.47:0.79:0.41:0.73:0.47:0.59"] = 381, -- Nethergarde Keep, Darkshire, Stormwind, Ironforge
 					["0.55:0.81:0.47:0.79:0.41:0.73:0.47:0.59:0.44:0.45"] = 552, -- Burg Nethergarde, Dunkelhain, Sturmwind, Eisenschmiede, Süderstade
+					["0.55:0.81:0.47:0.79:0.41:0.73:0.47:0.65:0.53:0.61"] = 377, -- Nethergarde Keep, Darkshire, Stormwind, Thorium Point, Thelsamar
 
 					-- Alliance: Rebel Camp (Stranglethorn Vale)
 					["0.43:0.82:0.41:0.93"] = 116, -- Rebel Camp, Booty Bay
