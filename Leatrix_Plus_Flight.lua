@@ -878,6 +878,7 @@
 					["0.81:0.77:0.66:0.77:0.51:0.73:0.44:0.67:0.44:0.51:0.38:0.32:0.42:0.28"] = 403, -- Altar of Sha'tar, Shadowmoon Village, Stonebreaker Hold, Shattrath, Swamprat Post, Thunderlord Stronghold, Evergrove
 					["0.81:0.77:0.66:0.77:0.51:0.73:0.44:0.67:0.44:0.51:0.38:0.32:0.58:0.27"] = 474, -- Altar of Sha'tar, Shadowmoon Village, Stonebreaker Hold, Shattrath, Swamprat Post, Thunderlord Stronghold, Area 52
 					["0.81:0.77:0.66:0.77:0.51:0.73:0.44:0.67:0.44:0.51:0.49:0.36"] = 342, -- Altar of Sha'tar, Shadowmoon Village, Stonebreaker Hold, Shattrath, Swamprat Post, Mok'Nathal Village
+					["0.81:0.77:0.66:0.77:0.51:0.73:0.44:0.67:0.44:0.51:0.49:0.36:0.58:0.27:0.72:0.28"] = 463, -- Altar of Sha'tar, Shadowmoon Village, Stonebreaker Hold, Shattrath, Swamprat Post, Mok'Nathal Village, Area 52, Cosmowrench
 
 					-- Horde: Area 52 (Netherstorm)
 					["0.58:0.27:0.49:0.36:0.44:0.51:0.44:0.67:0.51:0.73:0.66:0.77"] = 357, -- Area 52, Mok'Nathal Village, Swamprat Post, Shattrath, Stonebreaker Hold, Shadowmoon Village
@@ -1658,6 +1659,7 @@
 					["0.44:0.45:0.48:0.39:0.61:0.35:0.58:0.06"] = 555, -- Southshore, Chillwind Camp, Light's Hope Chapel, Shattered Sun Staging Area
 					["0.44:0.45:0.48:0.39:0.61:0.35:0.61:0.28"] = 318, -- Southshore, Chillwind Camp, Light's Hope Chapel, Zul'Aman
 					["0.44:0.45:0.45:0.56:0.53:0.61"] = 273, -- Southshore, Menethil Harbor, Thelsamar 
+					["0.44:0.45:0.47:0.59:0.41:0.73"] = 373, -- Southshore, Ironforge, Stormwind
 
 					-- Alliance: Stormwind (Elwynn Forest)
 					["0.41:0.73:0.41:0.93"] = 200, -- Stormwind, Booty Bay
