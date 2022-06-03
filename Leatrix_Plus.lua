@@ -9941,6 +9941,7 @@
 
 					C_Timer.After(0.1, function()
 						E:StaticPopup_Hide('INCOMPATIBLE_ADDON')
+						if ElvUIInstallFrame then ElvUIInstallFrame:Hide() end
 					end)
 
 					local noFrame = CreateFrame("Frame", nil, UIParent)
