@@ -1,5 +1,5 @@
 2.5.109.alpha.1 - 2nd June 2022
-- Added flight times.  There are now 2385 flight times stored in Leatrix Plus for BCC.
+- Added flight times.  There are now 2387 flight times stored in Leatrix Plus for BCC.
 
 2.5.108 - 1st June 2022
 - For 'Enhance trainers' ('Interface'), you can now disable the train all skills button if you wish using a new setting in the configuration panel.
