@@ -2201,6 +2201,7 @@
 					["0.53:0.26:0.43:0.25:0.64:0.67:0.60:0.81"] = 783, -- Talonbranch Glade, Auberdine, Theramore, Gadgetzan
 					["0.53:0.26:0.43:0.25:0.46:0.40"] = 356, -- Talonbranch Glade, Auberdine, Astranaar
 					["0.53:0.26:0.50:0.35:0.46:0.40:0.61:0.55"] = 402, -- Talonbranch Glade, Emerald Sanctuary, Astranaar, Ratchet
+					["0.53:0.26:0.43:0.25:0.39:0.40"] = 369, -- Talonbranch Glade, Auberdine, Stonetalon Peak
 
 					-- Alliance: Talrendis Point (Azshara)
 					["0.61:0.40:0.61:0.55:0.64:0.67:0.48:0.70:0.31:0.69"] = 574, -- Talrendis Point, Ratchet, Theramore, Thalanaar, Feathermoon

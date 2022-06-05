@@ -3272,7 +3272,7 @@
 								mybar.candyBarLabel:SetPoint("TOPLEFT", mybar.candyBarBackground, "TOPLEFT", 2, 0)
 								mybar.candyBarLabel:SetPoint("BOTTOMRIGHT", mybar.candyBarBackground, "BOTTOMRIGHT", -40, 0)
 
-								if LeaPlusLC["FlightBarTransparent"] == "On" then
+								if LeaPlusLC["FlightBarNoBackground"] == "On" then
 									mybar.candyBarBackground:SetTexture("")
 									mybar.candyBarBar:SetStatusBarTexture("")
 								else
@@ -3433,7 +3433,7 @@
 			local FlightPanel = LeaPlusLC:CreatePanel("Show flight times", "FlightPanel")
 
 			LeaPlusLC:MakeTx(FlightPanel, "Settings", 16, -72)
-			LeaPlusLC:MakeCB(FlightPanel, "FlightBarTransparent", "Transparent progress bar", 16, -92, false, "If checked, the flight progress bar background will be transparent.")
+			LeaPlusLC:MakeCB(FlightPanel, "FlightBarNoBackground", "Remove progress bar background", 16, -92, false, "If checked, the flight progress bar will not have a background texture.  You will see only the destination and flight time.")
 
 			LeaPlusLC:MakeTx(FlightPanel, "Scale", 356, -72)
 			LeaPlusLC:MakeSL(FlightPanel, "FlightBarScale", "Drag to set the flight progress bar scale.", 1, 5, 0.1, 356, -92, "%.2f")
@@ -3441,10 +3441,10 @@
 			LeaPlusLC:MakeTx(FlightPanel, "Width", 356, -132)
 			LeaPlusLC:MakeSL(FlightPanel, "FlightBarWidth", "Drag to set the flight progress bar width.", 115, 460, 5, 356, -152, "%.0f")
 
-			-- Transparent progress bar
-			local function TransparentProgressBar()
+			-- Set progress bar background
+			local function RemoveBarBackground()
 				if LeaPlusLC.FlightProgressBar then
-					if LeaPlusLC["FlightBarTransparent"] == "On" then
+					if LeaPlusLC["FlightBarNoBackground"] == "On" then
 						LeaPlusLC.FlightProgressBar.candyBarBackground:SetTexture("")
 						LeaPlusLC.FlightProgressBar.candyBarBar:SetStatusBarTexture("")
 					else
@@ -3454,9 +3454,9 @@
 				end
 			end
 
-			-- Set bar transparency when option is clicked and on startup
-			LeaPlusCB["FlightBarTransparent"]:HookScript("OnClick", TransparentProgressBar)
-			TransparentProgressBar()
+			-- Set progress bar background when option is clicked and on startup
+			LeaPlusCB["FlightBarNoBackground"]:HookScript("OnClick", RemoveBarBackground)
+			RemoveBarBackground()
 
 			-- Flight progress bar scale
 			local function SetFlightBarScale()
@@ -3506,13 +3506,13 @@
 				tempFrame:SetScale(LeaPlusLC["FlightBarScale"])
 				LeaPlusLC["FlightBarWidth"] = 230
 				tempFrame:SetWidth(LeaPlusLC["FlightBarWidth"])
-				LeaPlusLC["FlightBarTransparent"] = "Off"
+				LeaPlusLC["FlightBarNoBackground"] = "Off"
 				if LeaPlusLC.FlightProgressBar then
 					LeaPlusLC.FlightProgressBar:ClearAllPoints()
 					LeaPlusLC.FlightProgressBar:SetPoint(LeaPlusLC["FlightBarA"], UIParent, LeaPlusLC["FlightBarR"], LeaPlusLC["FlightBarX"], LeaPlusLC["FlightBarY"])
 					LeaPlusLC.FlightProgressBar:SetScale(LeaPlusLC["FlightBarScale"])
 					LeaPlusLC.FlightProgressBar:SetWidth(LeaPlusLC["FlightBarWidth"])
-					if LeaPlusLC["FlightBarTransparent"] == "On" then
+					if LeaPlusLC["FlightBarNoBackground"] == "On" then
 						LeaPlusLC.FlightProgressBar.candyBarBackground:SetTexture("")
 						LeaPlusLC.FlightProgressBar.candyBarBar:SetStatusBarTexture("")
 					else
@@ -11496,7 +11496,7 @@
 				LeaPlusLC:LoadVarChk("WowheadLinkComments", "Off")			-- Show Wowhead links to comments
 
 				LeaPlusLC:LoadVarChk("ShowFlightTimes", "Off")				-- Show flight times
-				LeaPlusLC:LoadVarChk("FlightBarTransparent", "Off")			-- Show flight times bar transparent
+				LeaPlusLC:LoadVarChk("FlightBarNoBackground", "Off")		-- Show flight times bar no background
 				LeaPlusLC:LoadVarAnc("FlightBarA", "TOP")					-- Show flight times anchor
 				LeaPlusLC:LoadVarAnc("FlightBarR", "TOP")					-- Show flight times relative
 				LeaPlusLC:LoadVarNum("FlightBarX", 0, -5000, 5000)			-- Show flight position X
@@ -11743,7 +11743,7 @@
 			LeaPlusDB["WowheadLinkComments"]	= LeaPlusLC["WowheadLinkComments"]
 
 			LeaPlusDB["ShowFlightTimes"]		= LeaPlusLC["ShowFlightTimes"]
-			LeaPlusDB["FlightBarTransparent"]	= LeaPlusLC["FlightBarTransparent"]
+			LeaPlusDB["FlightBarNoBackground"]	= LeaPlusLC["FlightBarNoBackground"]
 			LeaPlusDB["FlightBarA"]				= LeaPlusLC["FlightBarA"]
 			LeaPlusDB["FlightBarR"]				= LeaPlusLC["FlightBarR"]
 			LeaPlusDB["FlightBarX"]				= LeaPlusLC["FlightBarX"]
@@ -13735,7 +13735,7 @@
 				LeaPlusDB["ShowWowheadLinks"] = "On"			-- Show Wowhead links
 				LeaPlusDB["WowheadLinkComments"] = "On"			-- Show Wowhead links to comments
 				LeaPlusDB["ShowFlightTimes"] = "On"				-- Show flight times
-				LeaPlusDB["FlightBarTransparent"] = "On"		-- Show flight times bar transparent
+				LeaPlusDB["FlightBarNoBackground"] = "On"		-- Show flight times bar no background
 
 				-- Interface: Manage frames
 				LeaPlusDB["FrmEnabled"] = "On"
