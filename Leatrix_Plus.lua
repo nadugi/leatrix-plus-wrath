@@ -3240,7 +3240,7 @@
 								-- Create progress bar
 								local mybar = candy:New(texture, 230, 16)
 								mybar:SetPoint(LeaPlusLC["FlightBarA"], UIParent, LeaPlusLC["FlightBarR"], LeaPlusLC["FlightBarX"], LeaPlusLC["FlightBarY"])
-								mybar:SetScale(2)
+								mybar:SetScale(LeaPlusLC["FlightBarScale"])
 								if faction == "Alliance" then
 									mybar:SetColor(0, 0.5, 1, 0.5)
 								else
@@ -3392,7 +3392,7 @@
 			tempFrame:Hide()
 			tempFrame:SetFrameStrata("FULLSCREEN_DIALOG")
 			tempFrame:SetFrameLevel(5000)
-			tempFrame:SetClampedToScreen(true)
+			tempFrame:SetClampedToScreen(false)
 
 			-- Create texture
 			tempFrame.t = tempFrame:CreateTexture(nil, "BORDER")
@@ -3425,6 +3425,23 @@
 
 			LeaPlusLC:MakeTx(FlightPanel, "Settings", 16, -72)
 
+			LeaPlusLC:MakeTx(FlightPanel, "Scale", 356, -72)
+			LeaPlusLC:MakeSL(FlightPanel, "FlightBarScale", "Drag to set the flight progress bar scale.", 1, 5, 0.1, 356, -92, "%.2f")
+
+			-- Flight progress bar scale
+			local function SetFlightBarScale()
+				tempFrame:SetScale(LeaPlusLC["FlightBarScale"])
+				if LeaPlusLC.FlightProgressBar then
+					LeaPlusLC.FlightProgressBar:SetScale(LeaPlusLC["FlightBarScale"])
+				end
+				-- Set slider formatted text
+				LeaPlusCB["FlightBarScale"].f:SetFormattedText("%.0f%%", (LeaPlusLC["FlightBarScale"] / 2) * 100)
+			end
+
+			-- Set flight bar scale when slider is changed and on startup
+			LeaPlusCB["FlightBarScale"]:HookScript("OnValueChanged", SetFlightBarScale)
+			SetFlightBarScale()
+
 			-- Help button tooltip
 			FlightPanel.h.tiptext = L["Drag the frame overlay to position the frame."]
 
@@ -3441,9 +3458,12 @@
 				LeaPlusLC["FlightBarA"], LeaPlusLC["FlightBarR"], LeaPlusLC["FlightBarX"], LeaPlusLC["FlightBarY"] = "TOP", "TOP", 0, -66
 				tempFrame:ClearAllPoints()
 				tempFrame:SetPoint(LeaPlusLC["FlightBarA"], UIParent, LeaPlusLC["FlightBarR"], LeaPlusLC["FlightBarX"], LeaPlusLC["FlightBarY"])
+				LeaPlusLC["FlightBarScale"] = 2
+				tempFrame:SetScale(LeaPlusLC["FlightBarScale"])
 				if LeaPlusLC.FlightProgressBar then
 					LeaPlusLC.FlightProgressBar:ClearAllPoints()
 					LeaPlusLC.FlightProgressBar:SetPoint(LeaPlusLC["FlightBarA"], UIParent, LeaPlusLC["FlightBarR"], LeaPlusLC["FlightBarX"], LeaPlusLC["FlightBarY"])
+					LeaPlusLC.FlightProgressBar:SetScale(LeaPlusLC["FlightBarScale"])
 				end
 
 				-- Refresh configuration panel
@@ -11424,6 +11444,7 @@
 				LeaPlusLC:LoadVarAnc("FlightBarR", "TOP")					-- Show flight times relative
 				LeaPlusLC:LoadVarNum("FlightBarX", 0, -5000, 5000)			-- Show flight position X
 				LeaPlusLC:LoadVarNum("FlightBarY", -66, -5000, 5000)		-- Show flight position Y
+				LeaPlusLC:LoadVarNum("FlightBarScale", 1, 1, 5)				-- Show flight times scale
 
 				-- Frames
 				LeaPlusLC:LoadVarChk("FrmEnabled", "Off")					-- Manage frames
@@ -11667,6 +11688,7 @@
 			LeaPlusDB["FlightBarR"]				= LeaPlusLC["FlightBarR"]
 			LeaPlusDB["FlightBarX"]				= LeaPlusLC["FlightBarX"]
 			LeaPlusDB["FlightBarY"]				= LeaPlusLC["FlightBarY"]
+			LeaPlusDB["FlightBarScale"]			= LeaPlusLC["FlightBarScale"]
 
 			-- Frames
 			LeaPlusDB["FrmEnabled"]				= LeaPlusLC["FrmEnabled"]
