@@ -2275,7 +2275,7 @@
 					["0.64:0.67:0.61:0.55:0.46:0.40:0.50:0.35"] = 388, -- Theramore, Ratchet, Astranaar, Emerald Sanctuary
 					["0.64:0.67:0.43:0.25:0.53:0.26"] = 629, -- Theramore, Auberdine, Talonbranch Glade
 					["0.64:0.67:0.61:0.55:0.46:0.40:0.50:0.35:0.53:0.26:0.65:0.23"] = 605, -- Theramore, Ratchet, Astranaar, Emerald Sanctuary, Talonbranch Glade, Everlook
-					["0.64:0.67:0.61:0.40:0.53:0.26"] = 234, -- Theramore, Talrendis Point, Talonbranch Glade
+					["0.64:0.67:0.61:0.40:0.53:0.26"] = 516, -- Theramore, Talrendis Point, Talonbranch Glade (was 234, changed by Michael Keller)
 					["0.64:0.67:0.46:0.40:0.58:0.39"] = 504, -- Theramore, Astranaar, Forest Song
 					["0.64:0.67:0.61:0.55:0.46:0.40:0.50:0.35:0.53:0.26"] = 516, -- Theramore, Ratschet, Astranaar, Emerald Sanctuary, Talonbranch Glade
 					["0.64:0.67:0.60:0.81:0.42:0.79:0.31:0.69"] = 520, -- Theramore, Gadgetzan, Cenarion Hold, Feathermoon
