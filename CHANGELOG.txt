@@ -1,5 +1,5 @@
 2.5.109.alpha.3 - 5th June 2022
-- For 'Show flight times', you can now change the position, scale, width and transparency of the flight progress bar using a new configuration panel.
+- For 'Show flight times', you can now change the position, scale and width of the flight progress bar using a new configuration panel.  You can also remove the progress bar background texture if you wish.
 - Added lots of flight times.  There are now 2397 flight times stored in Leatrix Plus for BCC.
 
 2.5.108 - 1st June 2022
