@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.109.alpha.2 (5th June 2022)
+-- 	Leatrix Plus 2.5.109.alpha.3 (5th June 2022)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.109.alpha.2"
+	LeaPlusLC["AddonVer"] = "2.5.109.alpha.3"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -407,6 +407,7 @@
 		LeaPlusLC:LockOption("ShowCooldowns", "CooldownsButton", true)				-- Show cooldowns
 		LeaPlusLC:LockOption("ShowPlayerChain", "ModPlayerChain", true)				-- Show player chain
 		LeaPlusLC:LockOption("ShowWowheadLinks", "ShowWowheadLinksBtn", true)		-- Show Wowhead links
+		LeaPlusLC:LockOption("ShowFlightTimes", "ShowFlightTimesBtn", true)			-- Show flight times
 		LeaPlusLC:LockOption("FrmEnabled", "MoveFramesButton", true)				-- Manage frames
 		LeaPlusLC:LockOption("ManageBuffs", "ManageBuffsButton", true)				-- Manage buffs
 		LeaPlusLC:LockOption("ManageWidget", "ManageWidgetButton", true)			-- Manage widget
@@ -3238,7 +3239,7 @@
 
 								-- Create progress bar
 								local mybar = candy:New(texture, 230, 16)
-								mybar:SetPoint("TOP", UIParent, "TOP", 0, -66)
+								mybar:SetPoint(LeaPlusLC["FlightBarA"], UIParent, LeaPlusLC["FlightBarR"], LeaPlusLC["FlightBarX"], LeaPlusLC["FlightBarY"])
 								mybar:SetScale(2)
 								if faction == "Alliance" then
 									mybar:SetColor(0, 0.5, 1, 0.5)
@@ -3376,6 +3377,98 @@
 			hooksecurefunc("TaxiRequestEarlyLanding", StopLandingEvent)
 			hooksecurefunc("AcceptBattlefieldPort", StopLandingEvent)
 			hooksecurefunc(C_SummonInfo, "ConfirmSummon", StopLandingEvent)
+
+			----------------------------------------------------------------------
+			-- Drag frame
+			----------------------------------------------------------------------
+
+			-- Create drag frame
+			local tempFrame = CreateFrame("FRAME", nil, UIParent)
+			tempFrame:SetWidth(230)
+			tempFrame:SetHeight(16)
+			tempFrame:SetScale(2)
+			tempFrame:ClearAllPoints()
+			tempFrame:SetPoint(LeaPlusLC["FlightBarA"], UIParent, LeaPlusLC["FlightBarR"], LeaPlusLC["FlightBarX"], LeaPlusLC["FlightBarY"])
+			tempFrame:Hide()
+			tempFrame:SetFrameStrata("FULLSCREEN_DIALOG")
+			tempFrame:SetFrameLevel(5000)
+			tempFrame:SetClampedToScreen(true)
+
+			-- Create texture
+			tempFrame.t = tempFrame:CreateTexture(nil, "BORDER")
+			tempFrame.t:SetAllPoints()
+			tempFrame.t:SetTexture("Interface\\TargetingFrame\\UI-StatusBar")
+			tempFrame.t:SetVertexColor(0.0, 1.0, 0.0, 0.5)
+
+			-- Enable movement
+			tempFrame:EnableMouse(true)
+			tempFrame:SetMovable(true)
+			tempFrame:SetScript("OnMouseDown", function()
+				tempFrame:StartMoving()
+			end)
+			tempFrame:SetScript("OnMouseUp", function()
+				tempFrame:StopMovingOrSizing()
+				LeaPlusLC["FlightBarA"], void, LeaPlusLC["FlightBarR"], LeaPlusLC["FlightBarX"], LeaPlusLC["FlightBarY"] = tempFrame:GetPoint()
+				-- Position actual flight progress bar if one exists
+				if LeaPlusLC.FlightProgressBar then
+					LeaPlusLC.FlightProgressBar:ClearAllPoints()
+					LeaPlusLC.FlightProgressBar:SetPoint(LeaPlusLC["FlightBarA"], UIParent, LeaPlusLC["FlightBarR"], LeaPlusLC["FlightBarX"], LeaPlusLC["FlightBarY"])
+				end
+			end)
+
+			----------------------------------------------------------------------
+			-- Configuration panel
+			----------------------------------------------------------------------
+
+			-- Create configuration panel
+			local FlightPanel = LeaPlusLC:CreatePanel("Show flight times", "FlightPanel")
+
+			LeaPlusLC:MakeTx(FlightPanel, "Settings", 16, -72)
+
+			-- Help button tooltip
+			FlightPanel.h.tiptext = L["Drag the frame overlay to position the frame."]
+
+			-- Back button handler
+			FlightPanel.b:SetScript("OnClick", function() 
+				FlightPanel:Hide(); LeaPlusLC["PageF"]:Show(); LeaPlusLC["Page5"]:Show()
+				return
+			end)
+
+			-- Reset button handler
+			FlightPanel.r:SetScript("OnClick", function()
+
+				-- Reset controls
+				LeaPlusLC["FlightBarA"], LeaPlusLC["FlightBarR"], LeaPlusLC["FlightBarX"], LeaPlusLC["FlightBarY"] = "TOP", "TOP", 0, -66
+				tempFrame:ClearAllPoints()
+				tempFrame:SetPoint(LeaPlusLC["FlightBarA"], UIParent, LeaPlusLC["FlightBarR"], LeaPlusLC["FlightBarX"], LeaPlusLC["FlightBarY"])
+				if LeaPlusLC.FlightProgressBar then
+					LeaPlusLC.FlightProgressBar:ClearAllPoints()
+					LeaPlusLC.FlightProgressBar:SetPoint(LeaPlusLC["FlightBarA"], UIParent, LeaPlusLC["FlightBarR"], LeaPlusLC["FlightBarX"], LeaPlusLC["FlightBarY"])
+				end
+
+				-- Refresh configuration panel
+				FlightPanel:Hide(); FlightPanel:Show()
+
+			end)
+
+			-- Show configuration panal when options panel button is clicked
+			LeaPlusCB["ShowFlightTimesBtn"]:SetScript("OnClick", function()
+				if IsShiftKeyDown() and IsControlKeyDown() then
+					-- Preset profile
+				else
+					FlightPanel:Show()
+					LeaPlusLC:HideFrames()
+				end
+			end)
+
+			-- Toggle drag frame with configuration panel
+			FlightPanel:HookScript("OnShow", function()
+				tempFrame:Show()
+			end)
+
+			FlightPanel:HookScript("OnHide", function()
+				tempFrame:Hide()
+			end)
 
 		end
 
@@ -11327,6 +11420,10 @@
 				LeaPlusLC:LoadVarChk("ShowWowheadLinks", "Off")				-- Show Wowhead links
 				LeaPlusLC:LoadVarChk("WowheadLinkComments", "Off")			-- Show Wowhead links to comments
 				LeaPlusLC:LoadVarChk("ShowFlightTimes", "Off")				-- Show flight times
+				LeaPlusLC:LoadVarAnc("FlightBarA", "TOP")					-- Show flight times anchor
+				LeaPlusLC:LoadVarAnc("FlightBarR", "TOP")					-- Show flight times relative
+				LeaPlusLC:LoadVarNum("FlightBarX", 0, -5000, 5000)			-- Show flight position X
+				LeaPlusLC:LoadVarNum("FlightBarY", -66, -5000, 5000)		-- Show flight position Y
 
 				-- Frames
 				LeaPlusLC:LoadVarChk("FrmEnabled", "Off")					-- Manage frames
@@ -11566,6 +11663,10 @@
 			LeaPlusDB["ShowWowheadLinks"]		= LeaPlusLC["ShowWowheadLinks"]
 			LeaPlusDB["WowheadLinkComments"]	= LeaPlusLC["WowheadLinkComments"]
 			LeaPlusDB["ShowFlightTimes"]		= LeaPlusLC["ShowFlightTimes"]
+			LeaPlusDB["FlightBarA"]				= LeaPlusLC["FlightBarA"]
+			LeaPlusDB["FlightBarR"]				= LeaPlusLC["FlightBarR"]
+			LeaPlusDB["FlightBarX"]				= LeaPlusLC["FlightBarX"]
+			LeaPlusDB["FlightBarY"]				= LeaPlusLC["FlightBarY"]
 
 			-- Frames
 			LeaPlusDB["FrmEnabled"]				= LeaPlusLC["FrmEnabled"]
@@ -13949,6 +14050,7 @@
 	LeaPlusLC:CfgBtn("CooldownsButton", LeaPlusCB["ShowCooldowns"])
 	LeaPlusLC:CfgBtn("ModPlayerChain", LeaPlusCB["ShowPlayerChain"])
 	LeaPlusLC:CfgBtn("ShowWowheadLinksBtn", LeaPlusCB["ShowWowheadLinks"])
+	LeaPlusLC:CfgBtn("ShowFlightTimesBtn", LeaPlusCB["ShowFlightTimes"])
 
 ----------------------------------------------------------------------
 -- 	LC6: Frames

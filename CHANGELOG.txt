@@ -1,4 +1,5 @@
-2.5.109.alpha.2 - 5th June 2022
+2.5.109.alpha.3 - 5th June 2022
+- For 'Show flight times', you can now change the position of the flight progress bar using a new configuration panel.
 - Added lots of flight times.  There are now 2396 flight times stored in Leatrix Plus for BCC.
 
 2.5.108 - 1st June 2022
