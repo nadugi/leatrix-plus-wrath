@@ -3251,7 +3251,7 @@
 									mybar:SetColor(1, 0.0, 0, 0.5)
 								end
 								mybar:SetShadowColor(0, 0, 0, 0.5)
-								mybar:EnableMouse()
+
 								mybar:SetScript("OnMouseDown", function(self, btn)
 									if btn == "RightButton" then
 										mybar:Stop()
@@ -3279,6 +3279,7 @@
 								mybar.candyBarLabel:SetPoint("TOPLEFT", mybar.candyBarBackground, "TOPLEFT", 2, 0)
 								mybar.candyBarLabel:SetPoint("BOTTOMRIGHT", mybar.candyBarBackground, "BOTTOMRIGHT", -40, 0)
 
+								-- Set flight bar background
 								if LeaPlusLC["FlightBarBackground"] == "On" then
 									mybar.candyBarBackground:SetTexture(texture)
 									mybar.candyBarBar:SetStatusBarTexture(texture)
@@ -3287,8 +3288,16 @@
 									mybar.candyBarBar:SetStatusBarTexture("")
 								end
 
+								-- Set flight bar destination
 								if LeaPlusLC["FlightBarDestination"] == "On" then
 									mybar:SetLabel(barName)
+								end
+
+								-- Set flight bar noninteractive (must be last)
+								if LeaPlusLC["FlightBarNonActive"] == "On" then
+									mybar:EnableMouse(false)
+								else
+									mybar:EnableMouse(true)
 								end
 
 								mybar:SetDuration(duration)
@@ -3445,6 +3454,7 @@
 			LeaPlusLC:MakeTx(FlightPanel, "Settings", 16, -72)
 			LeaPlusLC:MakeCB(FlightPanel, "FlightBarBackground", "Show background", 16, -92, false, "If checked, the flight progress bar background texture will be shown.")
 			LeaPlusLC:MakeCB(FlightPanel, "FlightBarDestination", "Show destination", 16, -112, false, "If checked, the flight progress bar destination will be shown.")
+			LeaPlusLC:MakeCB(FlightPanel, "FlightBarNonActive", "Make noninteractive", 16, -132, false, "If checked, the flight progress bar will be noninteractive.  This will allow you to click through it.|n|nNote that this will prevent you from using right-click to close.")
 
 			LeaPlusLC:MakeTx(FlightPanel, "Scale", 356, -72)
 			LeaPlusLC:MakeSL(FlightPanel, "FlightBarScale", "Drag to set the flight progress bar scale.", 1, 5, 0.1, 356, -92, "%.2f")
@@ -3482,9 +3492,24 @@
 				end
 			end
 
-			-- Set flight bar destination when slider is changed and on startup
+			-- Set flight bar destination when option is clicked and on startup
 			LeaPlusCB["FlightBarDestination"]:HookScript("OnClick", SetProgressBarDestination)
 			SetProgressBarDestination()
+
+			-- Set flight bar noninteracive
+			local function SetFlightBarNoninteractive()
+				if LeaPlusLC.FlightProgressBar then
+					if LeaPlusLC["FlightBarNonActive"] == "On" then
+						LeaPlusLC.FlightProgressBar:EnableMouse(false)
+					else
+						LeaPlusLC.FlightProgressBar:EnableMouse(true)
+					end
+				end
+			end
+
+			-- Set flight bar noninteractive when option is clicked and on startup
+			LeaPlusCB["FlightBarNonActive"]:HookScript("OnClick", SetFlightBarNoninteractive)
+			SetFlightBarNoninteractive()
 
 			-- Flight progress bar scale
 			local function SetFlightBarScale()
@@ -3539,6 +3564,7 @@
 				-- Reset background and destination
 				LeaPlusLC["FlightBarBackground"] = "On"
 				LeaPlusLC["FlightBarDestination"] = "On"
+				LeaPlusLC["FlightBarNonActive"] = "Off"
 				-- Reset live progress bar
 				if LeaPlusLC.FlightProgressBar then
 					-- Reset position
@@ -3554,6 +3580,8 @@
 					if LeaPlusLC.FlightDestination then
 						LeaPlusLC.FlightProgressBar:SetLabel(LeaPlusLC.FlightDestination)
 					end
+					-- Reset noninteractive
+					LeaPlusLC.FlightProgressBar:EnableMouse(true)
 				end
 
 				-- Refresh configuration panel
@@ -11533,6 +11561,7 @@
 				LeaPlusLC:LoadVarChk("ShowFlightTimes", "Off")				-- Show flight times
 				LeaPlusLC:LoadVarChk("FlightBarBackground", "On")			-- Show flight times bar background
 				LeaPlusLC:LoadVarChk("FlightBarDestination", "On")			-- Show flight times bar destination
+				LeaPlusLC:LoadVarChk("FlightBarNonActive", "Off")			-- Show flight times bar noninteractive
 				LeaPlusLC:LoadVarAnc("FlightBarA", "TOP")					-- Show flight times anchor
 				LeaPlusLC:LoadVarAnc("FlightBarR", "TOP")					-- Show flight times relative
 				LeaPlusLC:LoadVarNum("FlightBarX", 0, -5000, 5000)			-- Show flight position X
@@ -11781,6 +11810,7 @@
 			LeaPlusDB["ShowFlightTimes"]		= LeaPlusLC["ShowFlightTimes"]
 			LeaPlusDB["FlightBarBackground"]	= LeaPlusLC["FlightBarBackground"]
 			LeaPlusDB["FlightBarDestination"]	= LeaPlusLC["FlightBarDestination"]
+			LeaPlusDB["FlightBarNonActive"]		= LeaPlusLC["FlightBarNonActive"]
 			LeaPlusDB["FlightBarA"]				= LeaPlusLC["FlightBarA"]
 			LeaPlusDB["FlightBarR"]				= LeaPlusLC["FlightBarR"]
 			LeaPlusDB["FlightBarX"]				= LeaPlusLC["FlightBarX"]
@@ -13774,6 +13804,7 @@
 				LeaPlusDB["ShowFlightTimes"] = "On"				-- Show flight times
 				LeaPlusDB["FlightBarBackground"] = "Off"		-- Show flight times bar background
 				LeaPlusDB["FlightBarDestination"] = "On"		-- Show flight times bar destination
+				LeaPlusDB["FlightBarNonActive"] = "Off"			-- Show flight times bar noninteractive
 
 				-- Interface: Manage frames
 				LeaPlusDB["FrmEnabled"] = "On"
