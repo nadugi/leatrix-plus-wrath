@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.109.alpha.4 (6th June 2022)
+-- 	Leatrix Plus 2.5.109.alpha.5 (6th June 2022)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.109.alpha.4"
+	LeaPlusLC["AddonVer"] = "2.5.109.alpha.5"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -3281,11 +3281,9 @@
 
 								-- Set flight bar background
 								if LeaPlusLC["FlightBarBackground"] == "On" then
-									mybar.candyBarBackground:SetTexture(texture)
-									mybar.candyBarBar:SetStatusBarTexture(texture)
+									mybar:SetTexture(texture)
 								else
-									mybar.candyBarBackground:SetTexture("")
-									mybar.candyBarBar:SetStatusBarTexture("")
+									mybar:SetTexture("")
 								end
 
 								-- Set flight bar destination
@@ -3466,11 +3464,9 @@
 			local function SetProgressBarBackground()
 				if LeaPlusLC.FlightProgressBar then
 					if LeaPlusLC["FlightBarBackground"] == "On" then
-						LeaPlusLC.FlightProgressBar.candyBarBackground:SetTexture(texture)
-						LeaPlusLC.FlightProgressBar.candyBarBar:SetStatusBarTexture(texture)
+						LeaPlusLC.FlightProgressBar:SetTexture(texture)
 					else
-						LeaPlusLC.FlightProgressBar.candyBarBackground:SetTexture("")
-						LeaPlusLC.FlightProgressBar.candyBarBar:SetStatusBarTexture("")
+						LeaPlusLC.FlightProgressBar:SetTexture("")
 					end
 				end
 			end
@@ -3574,8 +3570,7 @@
 					-- Reset width
 					LeaPlusLC.FlightProgressBar:SetWidth(LeaPlusLC["FlightBarWidth"])
 					-- Reset background
-					LeaPlusLC.FlightProgressBar.candyBarBackground:SetTexture(texture)
-					LeaPlusLC.FlightProgressBar.candyBarBar:SetStatusBarTexture(texture)
+					LeaPlusLC.FlightProgressBar:SetTexture(texture)
 					-- Reset destination
 					if LeaPlusLC.FlightDestination then
 						LeaPlusLC.FlightProgressBar:SetLabel(LeaPlusLC.FlightDestination)
