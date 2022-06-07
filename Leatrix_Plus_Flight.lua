@@ -122,7 +122,7 @@
 					["0.61:0.35:0.59:0.45:0.55:0.46"] = 234, -- Light's Hope Chapel, Revantusk Village, Hammerfall
 					["0.61:0.35:0.59:0.45"] = 141, -- Light's Hope Chapel, Revantusk Village
 					["0.61:0.35:0.58:0.25"] = 118, -- Light's Hope Chapel, Tranquillien
-					["0.61:0.35:0.58:0.25:0.59:0.19"] = 190, -- Light's Hope Chapel, Tranquillien, Silvermoon City (was 184, changed by GurnsyTV on CurseForge)
+					["0.61:0.35:0.58:0.25:0.59:0.19"] = 186, -- Light's Hope Chapel, Tranquillien, Silvermoon City (was 184, changed to 190 by GurnsyTV on CurseForge, changed to 186 by Jon Kipp Lauesen)
 					["0.61:0.35:0.59:0.45:0.46:0.43"] = 301, -- Light's Hope Chapel, Revantusk Village, Tarren Mill
 					["0.61:0.35:0.42:0.37"] = 262, -- Light's Hope Chapel, Undercity
 					["0.61:0.35:0.42:0.37:0.37:0.41"] = 294, -- Light's Hope Chapel, Undercity, The Sepulcher
@@ -1458,6 +1458,7 @@
 					["0.61:0.35:0.47:0.59:0.53:0.61"] = 434, -- Light's Hope Chapel, Ironforge, Thelsamar
 					["0.61:0.35:0.48:0.39:0.44:0.45:0.45:0.56"] = 334, -- Light's Hope Chapel, Chillwind Camp, Southshore, Menethil Harbor
 					["0.61:0.35:0.47:0.59:0.41:0.73:0.47:0.79"] = 643, -- Light's Hope Chapel, Ironforge, Stormwind, Darkshire
+					["0.61:0.35:0.48:0.39:0.44:0.45:0.51:0.47"] = 298, -- Light's Hope Chapel, Chillwind Camp, Southshore, Refuge Pointe
 
 					-- Alliance: Menethil Harbor (Wetlands)
 					["0.45:0.56:0.47:0.59:0.47:0.65:0.41:0.73:0.41:0.93"] = 429, -- Menethil Harbor, Ironforge, Thorium Point, Stormwind, Booty Bay
@@ -2333,6 +2334,7 @@
 					["0.81:0.77:0.69:0.85:0.55:0.77"] = 181, -- Altar of Sha'tar, Wildhammer Stronghold, Allerian Stronghold
 					["0.81:0.77:0.69:0.85:0.55:0.77:0.44:0.67:0.38:0.50:0.42:0.37:0.58:0.27"] = 489, -- Altar der Sha'tar, Wildhammerfeste, Allerias Feste, Shattrath, Telredor, Toshleys Station, Area 52
 					["0.81:0.77:0.69:0.85:0.55:0.77:0.65:0.58:0.75:0.50"] = 329, -- Altar of Sha'tar, Wildhammer Stronghold, Allerian Stronghold, Honor Hold, Shatter Point
+					["0.81:0.77:0.69:0.85:0.55:0.77:0.44:0.67:0.38:0.50:0.27:0.44"] = 400, -- Altar of Sha'tar, Wildhammer Stronghold, Allerian Stronghold, Shattrath, Telredor, Orebor Harborage
 
 					-- Alliance: Area 52 (Netherstorm)
 					["0.58:0.27:0.42:0.37:0.38:0.50:0.27:0.74"] = 290, -- Area 52, Toshley's Station, Telredor, Telaar
