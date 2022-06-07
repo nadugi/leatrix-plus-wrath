@@ -11532,7 +11532,7 @@
 				LeaPlusLC:LoadVarAnc("FlightBarR", "TOP")					-- Show flight times relative
 				LeaPlusLC:LoadVarNum("FlightBarX", 0, -5000, 5000)			-- Show flight position X
 				LeaPlusLC:LoadVarNum("FlightBarY", -66, -5000, 5000)		-- Show flight position Y
-				LeaPlusLC:LoadVarNum("FlightBarScale", 1, 1, 5)				-- Show flight times bar scale
+				LeaPlusLC:LoadVarNum("FlightBarScale", 2, 1, 5)				-- Show flight times bar scale
 				LeaPlusLC:LoadVarNum("FlightBarWidth", 230, 40, 460)		-- Show flight times bar width
 
 				-- Frames
