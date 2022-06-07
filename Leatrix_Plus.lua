@@ -3439,16 +3439,16 @@
 			LeaPlusLC:MakeTx(FlightPanel, "Width", 356, -132)
 			LeaPlusLC:MakeSL(FlightPanel, "FlightBarWidth", "Drag to set the flight progress bar width.", 40, 460, 10, 356, -152, "%.0f")
 
-			-- Add close bar button (not currently used)
-			-- local CloseFlightBarButton = LeaPlusLC:CreateButton("CloseFlightBarButton", FlightPanel, "Close Bar", "TOPLEFT", 16, -72, 0, 25, true, "Click to close a currently active flight progress bar.")
-			-- LeaPlusCB["CloseFlightBarButton"]:ClearAllPoints()
-			-- LeaPlusCB["CloseFlightBarButton"]:SetPoint("LEFT", FlightPanel.h, "RIGHT", 10, 0)
-			-- LeaPlusCB["CloseFlightBarButton"]:SetScript("OnClick", function()
-			-- 		if LeaPlusLC.FlightProgressBar then
-			-- 			LeaPlusLC.FlightProgressBar:Stop()
-			--			LeaPlusLC.FlightProgressBar = nil
-			--		end
-			--	end)
+			-- Add close bar button
+			local CloseFlightBarButton = LeaPlusLC:CreateButton("CloseFlightBarButton", FlightPanel, "Close Bar", "TOPLEFT", 16, -72, 0, 25, true, "Click to close a currently active flight progress bar.")
+			LeaPlusCB["CloseFlightBarButton"]:ClearAllPoints()
+			LeaPlusCB["CloseFlightBarButton"]:SetPoint("LEFT", FlightPanel.h, "RIGHT", 10, 0)
+			LeaPlusCB["CloseFlightBarButton"]:SetScript("OnClick", function()
+				if LeaPlusLC.FlightProgressBar then
+					LeaPlusLC.FlightProgressBar:Stop()
+					LeaPlusLC.FlightProgressBar = nil
+				end
+			end)
 
 			-- Set progress bar background
 			local function SetProgressBarBackground()
