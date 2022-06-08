@@ -911,6 +911,7 @@
 					["0.58:0.27:0.38:0.32:0.23:0.50"] = 257, -- Area 52, Thunderlord Stronghold, Zabra'jin
 					["0.58:0.27:0.38:0.32:0.23:0.50:0.29:0.62"] = 335, -- Area 52, Thunderlord Stronghold, Zabra'jin, Garadar
 					["0.58:0.27:0.38:0.32:0.44:0.51:0.54:0.57:0.65:0.50:0.79:0.54"] = 430, -- Area 52, Thunderlord Stronghold, Swamprat Post, Falcon Watch, Thrallmar, Hellfire Peninsula
+					["0.58:0.27:0.38:0.32:0.44:0.51:0.44:0.67:0.51:0.73:0.66:0.77:0.78:0.85"] = 507, -- Area 52, Thunderlord Stronghold, Swamprat Post, Shattrath, Stonebreaker Hold, Shadowmoon Village, Sanctum of the Stars
 
 					-- Horde: Cosmowrench (Netherstorm)
 					["0.72:0.28:0.58:0.27:0.49:0.36:0.44:0.51:0.44:0.67:0.51:0.73:0.66:0.77"] = 420, -- Cosmowrench, Area 52, Mok'Nathal Village, Swamprat Post, Shattrath, Stonebreaker Hold, Shadowmoon Village
@@ -1431,6 +1432,7 @@
 					["0.50:0.75:0.52:0.72:0.47:0.65:0.47:0.59:0.58:0.06"] = 273, -- Lakeshire, Morgan's Vigil, Thorium Point, Ironforge, Shattered Sun Staging Area
 					["0.50:0.75:0.47:0.79:0.41:0.93"] = 228, -- Lakeshire, Darkshire, Booty Bay
 					["0.50:0.75:0.41:0.73:0.47:0.65"] = 232, -- Lakeshire, Stormwind, Thorium Point
+					["0.50:0.75:0.41:0.73:0.47:0.59:0.51:0.47"] = 475, -- Lakeshire, Stormwind, Ironforge, Refuge Pointe
 
 					-- Alliance: Light's Hope Chapel (Eastern Plaguelands)
 					["0.61:0.35:0.47:0.59:0.47:0.65:0.41:0.73:0.41:0.93"] = 712, -- Light's Hope Chapel, Ironforge, Thorium Point, Stormwind, Booty Bay
