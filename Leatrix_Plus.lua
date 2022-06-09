@@ -8464,6 +8464,28 @@
 				FocusFrame:SetPoint(LeaPlusLC["FocusA"], UIParent, LeaPlusLC["FocusR"], LeaPlusLC["FocusX"], LeaPlusLC["FocusY"])
 			end)
 
+			-- Snap-to-grid
+			do
+				local frame, grid = dragframe, 5
+				local w, h = 196, 86
+				local xpos, ypos, scale, uiscale
+				frame:HookScript("OnMouseDown", function(self, btn)
+					if btn == "RightButton" then 
+						frame:SetScript("OnUpdate", function()
+							scale, uiscale = frame:GetScale(), UIParent:GetScale()
+							xpos, ypos = GetCursorPosition()
+							xpos = floor((xpos / scale / uiscale) / grid) * grid - w / 2
+							ypos = ceil((ypos / scale / uiscale) / grid) * grid + h / 2
+							FocusFrame:ClearAllPoints()
+							FocusFrame:SetPoint("TOPLEFT", UIParent, "BOTTOMLEFT", xpos, ypos)
+						end)
+					end
+				end)
+				frame:HookScript("OnMouseUp", function() 
+					frame:SetScript("OnUpdate", nil)
+				end)
+			end
+
 			-- Create configuration panel
 			local FocusPanel = LeaPlusLC:CreatePanel("Manage focus", "FocusPanel")
 			LeaPlusLC:MakeTx(FocusPanel, "Scale", 16, -72)
@@ -8497,7 +8519,7 @@
 			end)
 
 			-- Help button tooltip
-			FocusPanel.h.tiptext = L["Drag the frame overlay to position the frame.|n|nThis panel will close automatically if you enter combat."]
+			FocusPanel.h.tiptext = L["Drag the frame overlay with the left button to position the frame freely.|n|nDrag the frame overlay with the right button to position the frame using snap-to-grid."]
 
 			-- Back button handler
 			FocusPanel.b:SetScript("OnClick", function()
