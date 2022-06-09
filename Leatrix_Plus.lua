@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.109 (8th June 2022)
+-- 	Leatrix Plus 2.5.110.alpha.1 (9th June 2022)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.109"
+	LeaPlusLC["AddonVer"] = "2.5.110.alpha.1"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -7907,7 +7907,7 @@
 			end)
 
 			-- Help button tooltip
-			SideFrames.h.tiptext = L["Drag the frame overlays to position the frames.|n|nTo change the scale of a frame, click it to select it then adjust the scale slider.|n|nThis panel will close automatically if you enter combat."]
+			SideFrames.h.tiptext = L["Drag the frame overlays with the left button to position the frames freely.|n|nDrag the frame overlays with the right button to position the frames using snap-to-grid.|n|nMiddle-click a frame overlay to select it without moving it.|n|nTo change the scale of a frame, click it to select it then adjust the scale slider.|n|nThis panel will close automatically if you enter combat."]
 
 			-- Back button handler
 			SideFrames.b:SetScript("OnClick", function()
@@ -8051,6 +8051,30 @@
 				if realframe:GetName() == "PlayerFrame" 					then dragframe.f:SetText(L["Player"]) end
 				if realframe:GetName() == "TargetFrame" 					then dragframe.f:SetText(L["Target"]) end
 				if realframe:GetName() == "MirrorTimer1" 					then dragframe.f:SetText(L["Timer"]) end
+
+				-- Snap-to-grid
+				do
+					local frame, grid = dragframe, 5
+					local w, h = frame:GetWidth(), frame:GetHeight()
+					local xpos, ypos, scale, uiscale
+					frame:HookScript("OnMouseDown", function(self, btn)
+						if btn == "RightButton" then 
+							frame:SetScript("OnUpdate", function()
+								scale, uiscale = frame:GetScale(), UIParent:GetScale()
+								xpos, ypos = GetCursorPosition()
+								xpos = floor((xpos / scale / uiscale) / grid) * grid - w / 2
+								ypos = ceil((ypos / scale / uiscale) / grid) * grid + h / 2
+								realframe:ClearAllPoints()
+								realframe:SetPoint("TOPLEFT", UIParent, "BOTTOMLEFT", xpos, ypos)
+							end)
+						end
+					end)
+					frame:HookScript("OnMouseUp", function() 
+						frame:SetScript("OnUpdate", nil)
+					end)
+				end
+
+				-- Return frame
 				return LeaPlusLC[dragframe]
 
 			end
