@@ -8272,6 +8272,28 @@
 				topCenterHolder:SetPoint(LeaPlusLC["WidgetA"], UIParent, LeaPlusLC["WidgetR"], LeaPlusLC["WidgetX"], LeaPlusLC["WidgetY"])
 			end)
 
+			-- Snap-to-grid
+			do
+				local frame, grid = dragframe, 5
+				local w, h = 0, 60
+				local xpos, ypos, scale, uiscale
+				frame:HookScript("OnMouseDown", function(self, btn)
+					if btn == "RightButton" then 
+						frame:SetScript("OnUpdate", function()
+							scale, uiscale = frame:GetScale(), UIParent:GetScale()
+							xpos, ypos = GetCursorPosition()
+							xpos = floor((xpos / scale / uiscale) / grid) * grid - w / 2
+							ypos = ceil((ypos / scale / uiscale) / grid) * grid + h / 2
+							topCenterHolder:ClearAllPoints()
+							topCenterHolder:SetPoint("TOPLEFT", UIParent, "BOTTOMLEFT", xpos, ypos)
+						end)
+					end
+				end)
+				frame:HookScript("OnMouseUp", function() 
+					frame:SetScript("OnUpdate", nil)
+				end)
+			end
+
 			-- Create configuration panel
 			local WidgetPanel = LeaPlusLC:CreatePanel("Manage widget", "WidgetPanel")
 
@@ -8313,7 +8335,7 @@
 			end)
 
 			-- Help button tooltip
-			WidgetPanel.h.tiptext = L["Drag the frame overlay to position the frame."]
+			WidgetPanel.h.tiptext = L["Drag the frame overlay with the left button to position the frame freely.|n|nDrag the frame overlay with the right button to position the frame using snap-to-grid."]
 
 			-- Back button handler
 			WidgetPanel.b:SetScript("OnClick", function()
