@@ -7742,6 +7742,17 @@
 				LeaPlusCB["BuffFrameScale"].f:SetFormattedText("%.0f%%", LeaPlusLC["BuffFrameScale"] * 100)
 			end)
 
+			-- Toggle grid button
+			local BuffsToggleGridButton = LeaPlusLC:CreateButton("BuffsToggleGridButton", BuffPanel, "Toggle Grid", "TOPLEFT", 16, -72, 0, 25, true, "Click to toggle the frame alignment grid.")
+			LeaPlusCB["BuffsToggleGridButton"]:ClearAllPoints()
+			LeaPlusCB["BuffsToggleGridButton"]:SetPoint("LEFT", BuffPanel.h, "RIGHT", 10, 0)
+			LeaPlusCB["BuffsToggleGridButton"]:SetScript("OnClick", function()
+				SlashCmdList["Leatrix_Plus"]("grid")
+			end)
+			BuffPanel:HookScript("OnHide", function()
+				if LeaPlusLC.grid then LeaPlusLC.grid:Hide() end
+			end)
+
 			-- Help button tooltip
 			BuffPanel.h.tiptext = L["Drag the frame overlay to position the frame."]
 
@@ -8268,6 +8279,17 @@
 				LeaPlusCB["WidgetScale"].f:SetFormattedText("%.0f%%", LeaPlusLC["WidgetScale"] * 100)
 			end)
 
+			-- Toggle grid button
+			local WidgetToggleGridButton = LeaPlusLC:CreateButton("WidgetToggleGridButton", WidgetPanel, "Toggle Grid", "TOPLEFT", 16, -72, 0, 25, true, "Click to toggle the frame alignment grid.")
+			LeaPlusCB["WidgetToggleGridButton"]:ClearAllPoints()
+			LeaPlusCB["WidgetToggleGridButton"]:SetPoint("LEFT", WidgetPanel.h, "RIGHT", 10, 0)
+			LeaPlusCB["WidgetToggleGridButton"]:SetScript("OnClick", function()
+				SlashCmdList["Leatrix_Plus"]("grid")
+			end)
+			WidgetPanel:HookScript("OnHide", function()
+				if LeaPlusLC.grid then LeaPlusLC.grid:Hide() end
+			end)
+
 			-- Help button tooltip
 			WidgetPanel.h.tiptext = L["Drag the frame overlay to position the frame."]
 
@@ -8417,6 +8439,17 @@
 				dragframe:SetScale(LeaPlusLC["FocusScale"])
 				-- Show formatted slider value
 				LeaPlusCB["FocusScale"].f:SetFormattedText("%.0f%%", LeaPlusLC["FocusScale"] * 100)
+			end)
+
+			-- Toggle grid button
+			local FocusToggleGridButton = LeaPlusLC:CreateButton("FocusToggleGridButton", FocusPanel, "Toggle Grid", "TOPLEFT", 16, -72, 0, 25, true, "Click to toggle the frame alignment grid.")
+			LeaPlusCB["FocusToggleGridButton"]:ClearAllPoints()
+			LeaPlusCB["FocusToggleGridButton"]:SetPoint("LEFT", FocusPanel.h, "RIGHT", 10, 0)
+			LeaPlusCB["FocusToggleGridButton"]:SetScript("OnClick", function()
+				SlashCmdList["Leatrix_Plus"]("grid")
+			end)
+			FocusPanel:HookScript("OnHide", function()
+				if LeaPlusLC.grid then LeaPlusLC.grid:Hide() end
 			end)
 
 			-- Help button tooltip
