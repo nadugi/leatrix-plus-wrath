@@ -7913,6 +7913,9 @@
 			LeaPlusCB["FramesToggleGridButton"]:SetScript("OnClick", function()
 				SlashCmdList["Leatrix_Plus"]("grid")
 			end)
+			SideFrames:HookScript("OnHide", function()
+				if LeaPlusLC.grid then LeaPlusLC.grid:Hide() end
+			end)
 
 			-- Help button tooltip
 			SideFrames.h.tiptext = L["Drag the frame overlays with the left button to position the frames freely.|n|nDrag the frame overlays with the right button to position the frames using snap-to-grid.|n|nMiddle-click a frame overlay to select it without moving it.|n|nTo change the scale of a frame, click it to select it then adjust the scale slider.|n|nThis panel will close automatically if you enter combat."]
