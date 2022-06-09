@@ -7872,7 +7872,7 @@
 
 			-- Create scale title
 			LeaPlusLC:MakeTx(SideFrames, "Scale", 16, -72)
-			
+
 			-- Set initial slider value (will be changed when drag frames are selected)
 			LeaPlusLC["FrameScale"] = 1.00
 
@@ -7904,6 +7904,14 @@
 				LeaPlusCB["FrameScale"]:SetValue(LeaPlusDB["Frames"][currentframe]["Scale"])
 				-- Set slider formatted text
 				LeaPlusCB["FrameScale"].f:SetFormattedText("%.0f%%", LeaPlusLC["FrameScale"] * 100)
+			end)
+
+			-- Toggle grid button
+			local FramesToggleGridButton = LeaPlusLC:CreateButton("FramesToggleGridButton", SideFrames, "Toggle Grid", "TOPLEFT", 16, -72, 0, 25, true, "Click to toggle the frame alignment grid.")
+			LeaPlusCB["FramesToggleGridButton"]:ClearAllPoints()
+			LeaPlusCB["FramesToggleGridButton"]:SetPoint("LEFT", SideFrames.h, "RIGHT", 10, 0)
+			LeaPlusCB["FramesToggleGridButton"]:SetScript("OnClick", function()
+				SlashCmdList["Leatrix_Plus"]("grid")
 			end)
 
 			-- Help button tooltip

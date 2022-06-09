@@ -1,5 +1,6 @@
 2.5.110.alpha.1 - 9th June 2022
-- For 'Manage frames' ('Frames'), you can now drag frames with the right button to position them using snap-to-grid (to help you line up frames).  Dragging with the left button still positions the frames freely and middle-clicking a frame selects it without moving it.  This information is shown in the help button tooltip in the configuration panel.
+- For 'Manage frames' ('Frames'), you can now drag frames with the right button to position them using snap-to-grid.
+- The configuration panel for 'Manage frames' ('Frames') now features a 'Toggle Grid' button to help with frame alignment.
 - Added lots of flight times.  There are now 2407 flight times stored in Leatrix Plus for BCC.
 
 2.5.109 - 8th June 2022
