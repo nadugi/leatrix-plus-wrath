@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.110.alpha.1 (9th June 2022)
+-- 	Leatrix Plus 2.5.110.alpha.2 (10th June 2022)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.110.alpha.1"
+	LeaPlusLC["AddonVer"] = "2.5.110.alpha.2"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -7729,7 +7729,7 @@
 
 			-- Snap-to-grid
 			do
-				local frame, grid = dragframe, 5
+				local frame, grid = dragframe, 10
 				local w, h = -190, 225
 				local xpos, ypos, scale, uiscale
 				frame:HookScript("OnMouseDown", function(self, btn)
@@ -8098,7 +8098,7 @@
 
 				-- Snap-to-grid
 				do
-					local frame, grid = dragframe, 5
+					local frame, grid = dragframe, 10
 					local w, h = frame:GetWidth(), frame:GetHeight()
 					local xpos, ypos, scale, uiscale
 					frame:HookScript("OnMouseDown", function(self, btn)
@@ -8274,7 +8274,7 @@
 
 			-- Snap-to-grid
 			do
-				local frame, grid = dragframe, 5
+				local frame, grid = dragframe, 10
 				local w, h = 0, 60
 				local xpos, ypos, scale, uiscale
 				frame:HookScript("OnMouseDown", function(self, btn)
@@ -8466,7 +8466,7 @@
 
 			-- Snap-to-grid
 			do
-				local frame, grid = dragframe, 5
+				local frame, grid = dragframe, 10
 				local w, h = 196, 86
 				local xpos, ypos, scale, uiscale
 				frame:HookScript("OnMouseDown", function(self, btn)
