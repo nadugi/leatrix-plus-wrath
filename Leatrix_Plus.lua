@@ -7794,6 +7794,9 @@
 				BuffPanel:Hide(); BuffPanel:Show()
 				dragframe:Show()
 
+				-- Show frame alignment grid
+				LeaPlusLC.grid:Show()
+
 			end)
 
 			-- Show configuration panel when options panel button is clicked
@@ -7981,6 +7984,8 @@
 					LeaPlusCB["FrameScale"]:SetValue(LeaPlusDB["Frames"][currentframe]["Scale"])
 					-- Refresh the panel
 					SideFrames:Hide(); SideFrames:Show()
+					-- Show frame alignment grid
+					LeaPlusLC.grid:Show()
 				end
 			end)
 
@@ -8347,6 +8352,9 @@
 				WidgetPanel:Hide(); WidgetPanel:Show()
 				dragframe:Show()
 
+				-- Show frame alignment grid
+				LeaPlusLC.grid:Show()
+
 			end)
 
 			-- Show configuration panel when options panel button is clicked
@@ -8527,6 +8535,9 @@
 				-- Refresh configuration panel
 				FocusPanel:Hide(); FocusPanel:Show()
 				dragframe:Show()
+
+				-- Show frame alignment grid
+				LeaPlusLC.grid:Show()
 
 			end)
 
