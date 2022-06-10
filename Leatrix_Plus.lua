@@ -7764,15 +7764,9 @@
 				LeaPlusCB["BuffFrameScale"].f:SetFormattedText("%.0f%%", LeaPlusLC["BuffFrameScale"] * 100)
 			end)
 
-			-- Toggle grid button
-			local BuffsToggleGridButton = LeaPlusLC:CreateButton("BuffsToggleGridButton", BuffPanel, "Toggle Grid", "TOPLEFT", 16, -72, 0, 25, true, "Click to toggle the frame alignment grid.")
-			LeaPlusCB["BuffsToggleGridButton"]:ClearAllPoints()
-			LeaPlusCB["BuffsToggleGridButton"]:SetPoint("LEFT", BuffPanel.h, "RIGHT", 10, 0)
-			LeaPlusCB["BuffsToggleGridButton"]:SetScript("OnClick", function()
-				SlashCmdList["Leatrix_Plus"]("grid")
-			end)
+			-- Hide frame alignment grid with panel
 			BuffPanel:HookScript("OnHide", function()
-				if LeaPlusLC.grid then LeaPlusLC.grid:Hide() end
+				LeaPlusLC.grid:Hide()
 			end)
 
 			-- Help button tooltip
@@ -7831,6 +7825,9 @@
 					BuffPanel:Show()
 					LeaPlusLC:HideFrames()
 					dragframe:Show()
+
+					-- Show frame alignment grid
+					LeaPlusLC.grid:Show()
 				end
 			end)
 
@@ -7939,15 +7936,9 @@
 				LeaPlusCB["FrameScale"].f:SetFormattedText("%.0f%%", LeaPlusLC["FrameScale"] * 100)
 			end)
 
-			-- Toggle grid button
-			local FramesToggleGridButton = LeaPlusLC:CreateButton("FramesToggleGridButton", SideFrames, "Toggle Grid", "TOPLEFT", 16, -72, 0, 25, true, "Click to toggle the frame alignment grid.")
-			LeaPlusCB["FramesToggleGridButton"]:ClearAllPoints()
-			LeaPlusCB["FramesToggleGridButton"]:SetPoint("LEFT", SideFrames.h, "RIGHT", 10, 0)
-			LeaPlusCB["FramesToggleGridButton"]:SetScript("OnClick", function()
-				SlashCmdList["Leatrix_Plus"]("grid")
-			end)
+			-- Hide frame alignment grid with panel
 			SideFrames:HookScript("OnHide", function()
-				if LeaPlusLC.grid then LeaPlusLC.grid:Hide() end
+				LeaPlusLC.grid:Hide()
 			end)
 
 			-- Help button tooltip
@@ -8195,6 +8186,9 @@
 
 						-- Set timer bar scale
 						LeaPlusLC["DragMirrorTimer1"]:SetSize(206 * LeaPlusLC["gscale"], 50 * LeaPlusLC["gscale"]);
+
+						-- Show frame alignment grid
+						LeaPlusLC.grid:Show()
 					end
 				end
 			end)
@@ -8323,15 +8317,9 @@
 				LeaPlusCB["WidgetScale"].f:SetFormattedText("%.0f%%", LeaPlusLC["WidgetScale"] * 100)
 			end)
 
-			-- Toggle grid button
-			local WidgetToggleGridButton = LeaPlusLC:CreateButton("WidgetToggleGridButton", WidgetPanel, "Toggle Grid", "TOPLEFT", 16, -72, 0, 25, true, "Click to toggle the frame alignment grid.")
-			LeaPlusCB["WidgetToggleGridButton"]:ClearAllPoints()
-			LeaPlusCB["WidgetToggleGridButton"]:SetPoint("LEFT", WidgetPanel.h, "RIGHT", 10, 0)
-			LeaPlusCB["WidgetToggleGridButton"]:SetScript("OnClick", function()
-				SlashCmdList["Leatrix_Plus"]("grid")
-			end)
+			-- Hide frame alignment grid with panel
 			WidgetPanel:HookScript("OnHide", function()
-				if LeaPlusLC.grid then LeaPlusLC.grid:Hide() end
+				LeaPlusLC.grid:Hide()
 			end)
 
 			-- Help button tooltip
@@ -8401,6 +8389,9 @@
 					WidgetPanel:Show()
 					LeaPlusLC:HideFrames()
 					dragframe:Show()
+
+					-- Show frame alignment grid
+					LeaPlusLC.grid:Show()
 				end
 			end)
 
@@ -8507,15 +8498,9 @@
 				LeaPlusCB["FocusScale"].f:SetFormattedText("%.0f%%", LeaPlusLC["FocusScale"] * 100)
 			end)
 
-			-- Toggle grid button
-			local FocusToggleGridButton = LeaPlusLC:CreateButton("FocusToggleGridButton", FocusPanel, "Toggle Grid", "TOPLEFT", 16, -72, 0, 25, true, "Click to toggle the frame alignment grid.")
-			LeaPlusCB["FocusToggleGridButton"]:ClearAllPoints()
-			LeaPlusCB["FocusToggleGridButton"]:SetPoint("LEFT", FocusPanel.h, "RIGHT", 10, 0)
-			LeaPlusCB["FocusToggleGridButton"]:SetScript("OnClick", function()
-				SlashCmdList["Leatrix_Plus"]("grid")
-			end)
+			-- Hide frame alignment grid with panel
 			FocusPanel:HookScript("OnHide", function()
-				if LeaPlusLC.grid then LeaPlusLC.grid:Hide() end
+				LeaPlusLC.grid:Hide()
 			end)
 
 			-- Help button tooltip
@@ -8578,6 +8563,9 @@
 						FocusPanel:Show()
 						LeaPlusLC:HideFrames()
 						dragframe:Show()
+
+						-- Show frame alignment grid
+						LeaPlusLC.grid:Show()
 					end
 				end
 			end)
@@ -10389,6 +10377,39 @@
 ----------------------------------------------------------------------
 
 	function LeaPlusLC:RunOnce()
+
+		----------------------------------------------------------------------
+		-- Frame alignment grid
+		----------------------------------------------------------------------
+
+		do
+
+			-- Create frame alignment grid
+			local grid = CreateFrame('FRAME')
+			LeaPlusLC.grid = grid
+			grid:Hide()
+			grid:SetAllPoints(UIParent)
+			local w, h = GetScreenWidth() * UIParent:GetEffectiveScale(), GetScreenHeight() * UIParent:GetEffectiveScale()
+			local ratio = w / h
+			local sqsize = w / 20
+			local wline = floor(sqsize - (sqsize % 2))
+			local hline = floor(sqsize / ratio - ((sqsize / ratio) % 2))
+			-- Plot vertical lines
+			for i = 0, wline do
+				local t = LeaPlusLC.grid:CreateTexture(nil, 'BACKGROUND')
+				if i == wline / 2 then t:SetColorTexture(1, 0, 0, 0.5) else t:SetColorTexture(0, 0, 0, 0.5) end
+				t:SetPoint('TOPLEFT', grid, 'TOPLEFT', i * w / wline - 1, 0)
+				t:SetPoint('BOTTOMRIGHT', grid, 'BOTTOMLEFT', i * w / wline + 1, 0)
+			end
+			-- Plot horizontal lines
+			for i = 0, hline do
+				local t = LeaPlusLC.grid:CreateTexture(nil, 'BACKGROUND')
+				if i == hline / 2 then	t:SetColorTexture(1, 0, 0, 0.5) else t:SetColorTexture(0, 0, 0, 0.5) end
+				t:SetPoint('TOPLEFT', grid, 'TOPLEFT', 0, -i * h / hline + 1)
+				t:SetPoint('BOTTOMRIGHT', grid, 'TOPRIGHT', 0, -i * h / hline - 1)
+			end
+
+		end
 
 		----------------------------------------------------------------------
 		-- Media player
@@ -12879,37 +12900,8 @@
 				end
 				return
 			elseif str == "grid" then
-				-- Create grid for first use
-				if not LeaPlusLC.grid then
-					LeaPlusLC.grid = CreateFrame('FRAME') 
-					LeaPlusLC.grid:Hide()
-					LeaPlusLC.grid:SetAllPoints(UIParent)
-					local w, h = GetScreenWidth() * UIParent:GetEffectiveScale(), GetScreenHeight() * UIParent:GetEffectiveScale()
-					local ratio = w / h
-					local sqsize = w / 20
-					local wline = floor(sqsize - (sqsize % 2))
-					local hline = floor(sqsize / ratio - ((sqsize / ratio) % 2))
-					-- Plot vertical lines
-					for i = 0, wline do
-						local t = LeaPlusLC.grid:CreateTexture(nil, 'BACKGROUND')
-						if i == wline / 2 then t:SetColorTexture(1, 0, 0, 0.5) else t:SetColorTexture(0, 0, 0, 0.9) end
-						t:SetPoint('TOPLEFT', LeaPlusLC.grid, 'TOPLEFT', i * w / wline - 1, 0)
-						t:SetPoint('BOTTOMRIGHT', LeaPlusLC.grid, 'BOTTOMLEFT', i * w / wline + 1, 0)
-					end
-					-- Plot horizontal lines
-					for i = 0, hline do
-						local t = LeaPlusLC.grid:CreateTexture(nil, 'BACKGROUND')
-						if i == hline / 2 then	t:SetColorTexture(1, 0, 0, 0.5) else t:SetColorTexture(0, 0, 0, 0.9) end
-						t:SetPoint('TOPLEFT', LeaPlusLC.grid, 'TOPLEFT', 0, -i * h / hline + 1)
-						t:SetPoint('BOTTOMRIGHT', LeaPlusLC.grid, 'TOPRIGHT', 0, -i * h / hline - 1)
-					end	
-				end
-				-- Show or hide grid
-				if LeaPlusLC.grid:IsShown() then
-					LeaPlusLC.grid:Hide()
-				else
-					LeaPlusLC.grid:Show()
-				end
+				-- Toggle frame alignment grid
+				if LeaPlusLC.grid:IsShown() then LeaPlusLC.grid:Hide() else LeaPlusLC.grid:Show() end
 				return
 			elseif str == "chk" then
 				-- List truncated checkbox labels
