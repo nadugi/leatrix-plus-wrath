@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.110.alpha.3 (13th June 2022)
+-- 	Leatrix Plus 2.5.110.alpha.4 (13th June 2022)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.110.alpha.3"
+	LeaPlusLC["AddonVer"] = "2.5.110.alpha.4"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -7733,7 +7733,7 @@
 				local w, h = -190, 225
 				local xpos, ypos, scale, uiscale
 				frame:RegisterForDrag("RightButton")
-				frame:HookScript("OnDragStart", function(self, btn)
+				frame:HookScript("OnDragStart", function()
 					frame:SetScript("OnUpdate", function()
 						scale, uiscale = frame:GetScale(), UIParent:GetScale()
 						xpos, ypos = GetCursorPosition()
@@ -8120,7 +8120,7 @@
 					local w, h = frame:GetWidth(), frame:GetHeight()
 					local xpos, ypos, scale, uiscale
 					frame:RegisterForDrag("RightButton")
-					frame:HookScript("OnDragStart", function(self, btn)
+					frame:HookScript("OnDragStart", function()
 						frame:SetScript("OnUpdate", function()
 							scale, uiscale = frame:GetScale(), UIParent:GetScale()
 							xpos, ypos = GetCursorPosition()
@@ -8299,7 +8299,7 @@
 				local w, h = 0, 60
 				local xpos, ypos, scale, uiscale
 				frame:RegisterForDrag("RightButton")
-				frame:HookScript("OnDragStart", function(self, btn)
+				frame:HookScript("OnDragStart", function()
 					frame:SetScript("OnUpdate", function()
 						scale, uiscale = frame:GetScale(), UIParent:GetScale()
 						xpos, ypos = GetCursorPosition()
@@ -8502,7 +8502,7 @@
 				local w, h = 196, 86
 				local xpos, ypos, scale, uiscale
 				frame:RegisterForDrag("RightButton")
-				frame:HookScript("OnDragStart", function(self, btn)
+				frame:HookScript("OnDragStart", function()
 					frame:SetScript("OnUpdate", function()
 						scale, uiscale = frame:GetScale(), UIParent:GetScale()
 						xpos, ypos = GetCursorPosition()
