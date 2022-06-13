@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.110.alpha.2 (10th June 2022)
+-- 	Leatrix Plus 2.5.110.alpha.3 (13th June 2022)
 ----------------------------------------------------------------------
 
 --	01:Functions	20:Live			50:RunOnce		70:Logout			
@@ -20,7 +20,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.110.alpha.2"
+	LeaPlusLC["AddonVer"] = "2.5.110.alpha.3"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -7732,20 +7732,20 @@
 				local frame, grid = dragframe, 10
 				local w, h = -190, 225
 				local xpos, ypos, scale, uiscale
-				frame:HookScript("OnMouseDown", function(self, btn)
-					if btn == "RightButton" then 
-						frame:SetScript("OnUpdate", function()
-							scale, uiscale = frame:GetScale(), UIParent:GetScale()
-							xpos, ypos = GetCursorPosition()
-							xpos = floor((xpos / scale / uiscale) / grid) * grid - w / 2
-							ypos = ceil((ypos / scale / uiscale) / grid) * grid + h / 2
-							BuffFrame:ClearAllPoints()
-							BuffFrame:SetPoint("TOPLEFT", UIParent, "BOTTOMLEFT", xpos, ypos)
-						end)
-					end
+				frame:RegisterForDrag("RightButton")
+				frame:HookScript("OnDragStart", function(self, btn)
+					frame:SetScript("OnUpdate", function()
+						scale, uiscale = frame:GetScale(), UIParent:GetScale()
+						xpos, ypos = GetCursorPosition()
+						xpos = floor((xpos / scale / uiscale) / grid) * grid - w / 2
+						ypos = ceil((ypos / scale / uiscale) / grid) * grid + h / 2
+						BuffFrame:ClearAllPoints()
+						BuffFrame:SetPoint("TOPLEFT", UIParent, "BOTTOMLEFT", xpos, ypos)
+					end)
 				end)
-				frame:HookScript("OnMouseUp", function() 
+				frame:HookScript("OnDragStop", function() 
 					frame:SetScript("OnUpdate", nil)
+					frame:GetScript("OnMouseUp")()
 				end)
 			end
 
@@ -7781,7 +7781,7 @@
 			end)
 
 			-- Help button tooltip
-			BuffPanel.h.tiptext = L["Drag the frame overlay with the left button to position the frame freely.|n|nDrag the frame overlay with the right button to position the frame using snap-to-grid."]
+			BuffPanel.h.tiptext = L["Drag the frame overlay with the left button to position it freely or with the right button to position it using snap-to-grid."]
 
 			-- Back button handler
 			BuffPanel.b:SetScript("OnClick", function()
@@ -7967,7 +7967,7 @@
 			end)
 
 			-- Help button tooltip
-			SideFrames.h.tiptext = L["Drag the frame overlays with the left button to position the frames freely.|n|nDrag the frame overlays with the right button to position the frames using snap-to-grid.|n|nMiddle-click a frame overlay to select it without moving it.|n|nTo change the scale of a frame, click it to select it then adjust the scale slider.|n|nThis panel will close automatically if you enter combat."]
+			SideFrames.h.tiptext = L["Drag the frame overlays with the left button to position them freely or with the right button to position them using snap-to-grid.|n|nTo change the scale of a frame, click it to select it then adjust the scale slider.|n|nThis panel will close automatically if you enter combat."]
 
 			-- Back button handler
 			SideFrames.b:SetScript("OnClick", function()
@@ -8119,20 +8119,20 @@
 					local frame, grid = dragframe, 10
 					local w, h = frame:GetWidth(), frame:GetHeight()
 					local xpos, ypos, scale, uiscale
-					frame:HookScript("OnMouseDown", function(self, btn)
-						if btn == "RightButton" then 
-							frame:SetScript("OnUpdate", function()
-								scale, uiscale = frame:GetScale(), UIParent:GetScale()
-								xpos, ypos = GetCursorPosition()
-								xpos = floor((xpos / scale / uiscale) / grid) * grid - w / 2
-								ypos = ceil((ypos / scale / uiscale) / grid) * grid + h / 2
-								realframe:ClearAllPoints()
-								realframe:SetPoint("TOPLEFT", UIParent, "BOTTOMLEFT", xpos, ypos)
-							end)
-						end
+					frame:RegisterForDrag("RightButton")
+					frame:HookScript("OnDragStart", function(self, btn)
+						frame:SetScript("OnUpdate", function()
+							scale, uiscale = frame:GetScale(), UIParent:GetScale()
+							xpos, ypos = GetCursorPosition()
+							xpos = floor((xpos / scale / uiscale) / grid) * grid - w / 2
+							ypos = ceil((ypos / scale / uiscale) / grid) * grid + h / 2
+							realframe:ClearAllPoints()
+							realframe:SetPoint("TOPLEFT", UIParent, "BOTTOMLEFT", xpos, ypos)
+						end)
 					end)
-					frame:HookScript("OnMouseUp", function() 
+					frame:HookScript("OnDragStop", function() 
 						frame:SetScript("OnUpdate", nil)
+						frame:GetScript("OnMouseUp")()
 					end)
 				end
 
@@ -8298,20 +8298,20 @@
 				local frame, grid = dragframe, 10
 				local w, h = 0, 60
 				local xpos, ypos, scale, uiscale
-				frame:HookScript("OnMouseDown", function(self, btn)
-					if btn == "RightButton" then 
-						frame:SetScript("OnUpdate", function()
-							scale, uiscale = frame:GetScale(), UIParent:GetScale()
-							xpos, ypos = GetCursorPosition()
-							xpos = floor((xpos / scale / uiscale) / grid) * grid - w / 2
-							ypos = ceil((ypos / scale / uiscale) / grid) * grid + h / 2
-							topCenterHolder:ClearAllPoints()
-							topCenterHolder:SetPoint("TOPLEFT", UIParent, "BOTTOMLEFT", xpos, ypos)
-						end)
-					end
+				frame:RegisterForDrag("RightButton")
+				frame:HookScript("OnDragStart", function(self, btn)
+					frame:SetScript("OnUpdate", function()
+						scale, uiscale = frame:GetScale(), UIParent:GetScale()
+						xpos, ypos = GetCursorPosition()
+						xpos = floor((xpos / scale / uiscale) / grid) * grid - w / 2
+						ypos = ceil((ypos / scale / uiscale) / grid) * grid + h / 2
+						topCenterHolder:ClearAllPoints()
+						topCenterHolder:SetPoint("TOPLEFT", UIParent, "BOTTOMLEFT", xpos, ypos)
+					end)
 				end)
-				frame:HookScript("OnMouseUp", function() 
+				frame:HookScript("OnDragStop", function() 
 					frame:SetScript("OnUpdate", nil)
+					frame:GetScript("OnMouseUp")()
 				end)
 			end
 
@@ -8361,7 +8361,7 @@
 			end)
 
 			-- Help button tooltip
-			WidgetPanel.h.tiptext = L["Drag the frame overlay with the left button to position the frame freely.|n|nDrag the frame overlay with the right button to position the frame using snap-to-grid."]
+			WidgetPanel.h.tiptext = L["Drag the frame overlay with the left button to position it freely or with the right button to position it using snap-to-grid."]
 
 			-- Back button handler
 			WidgetPanel.b:SetScript("OnClick", function()
@@ -8501,20 +8501,20 @@
 				local frame, grid = dragframe, 10
 				local w, h = 196, 86
 				local xpos, ypos, scale, uiscale
-				frame:HookScript("OnMouseDown", function(self, btn)
-					if btn == "RightButton" then 
-						frame:SetScript("OnUpdate", function()
-							scale, uiscale = frame:GetScale(), UIParent:GetScale()
-							xpos, ypos = GetCursorPosition()
-							xpos = floor((xpos / scale / uiscale) / grid) * grid - w / 2
-							ypos = ceil((ypos / scale / uiscale) / grid) * grid + h / 2
-							FocusFrame:ClearAllPoints()
-							FocusFrame:SetPoint("TOPLEFT", UIParent, "BOTTOMLEFT", xpos, ypos)
-						end)
-					end
+				frame:RegisterForDrag("RightButton")
+				frame:HookScript("OnDragStart", function(self, btn)
+					frame:SetScript("OnUpdate", function()
+						scale, uiscale = frame:GetScale(), UIParent:GetScale()
+						xpos, ypos = GetCursorPosition()
+						xpos = floor((xpos / scale / uiscale) / grid) * grid - w / 2
+						ypos = ceil((ypos / scale / uiscale) / grid) * grid + h / 2
+						FocusFrame:ClearAllPoints()
+						FocusFrame:SetPoint("TOPLEFT", UIParent, "BOTTOMLEFT", xpos, ypos)
+					end)
 				end)
-				frame:HookScript("OnMouseUp", function() 
+				frame:HookScript("OnDragStop", function() 
 					frame:SetScript("OnUpdate", nil)
+					frame:GetScript("OnMouseUp")()
 				end)
 			end
 
@@ -8556,7 +8556,7 @@
 			end)
 
 			-- Help button tooltip
-			FocusPanel.h.tiptext = L["Drag the frame overlay with the left button to position the frame freely.|n|nDrag the frame overlay with the right button to position the frame using snap-to-grid."]
+			FocusPanel.h.tiptext = L["Drag the frame overlay with the left button to position it freely or with the right button to position it using snap-to-grid.|n|nThis panel will close automatically if you enter combat."]
 
 			-- Back button handler
 			FocusPanel.b:SetScript("OnClick", function()
