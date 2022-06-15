@@ -2238,6 +2238,7 @@
 					["0.61:0.40:0.46:0.40:0.43:0.25:0.42:0.16"] = 383, -- Talrendis Point, Astranaar, Auberdine, Rut'theran Village
 					["0.61:0.40:0.43:0.25"] = 301, -- Talrendis Point, Auberdine
 					["0.61:0.40:0.64:0.67:0.60:0.81"] = 397, -- Talrendis Point, Theramore, Gadgetzan
+					["0.61:0.40:0.46:0.40:0.50:0.35"] = 229, -- Talrendis Point, Astranaar, Emerald Sanctuary
 
 					-- Alliance: Thalanaar
 					["0.48:0.70:0.31:0.69"] = 179, -- Thalanaar, Feathermoon
