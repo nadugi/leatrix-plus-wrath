@@ -1613,6 +1613,7 @@
 					["0.51:0.47:0.50:0.42:0.61:0.35:0.58:0.06"] = 569, -- Refuge Pointe, Aerie Peak, Light's Hope Chapel, Shattered Sun Staging Area
 					["0.51:0.47:0.44:0.45:0.48:0.39"] = 166, -- Refuge Pointe, Southshore, Chillwind Camp
 					["0.51:0.47:0.53:0.61:0.47:0.65:0.41:0.73:0.47:0.79"] = 475, -- Refuge Pointe, Thelsamar, Thorium Point, Stormwind, Darkshire
+					["0.51:0.47:0.50:0.42:0.61:0.35:0.61:0.28"] = 332, -- Refuge Pointe, Aerie Peak, Light's Hope Chapel, Zul'Aman
 
 					-- Alliance: Sentinel Hill (Westfall)
 					["0.39:0.80:0.41:0.93"] = 185, -- Sentinel Hill, Booty Bay
@@ -2083,6 +2084,7 @@
 					["0.55:0.21:0.53:0.26:0.50:0.35:0.46:0.40:0.61:0.55:0.60:0.81:0.50:0.76"] = 792, -- Moonglade, Talonbranch Glade, Emerald Sanctuary, Astranaar, Ratchet, Gadgetzan, Marshal's Refuge
 					["0.55:0.21:0.43:0.25:0.64:0.67:0.61:0.55"] = 693, -- Moonglade, Auberdine, Theramore, Ratchet
 					["0.55:0.21:0.65:0.23:0.61:0.40:0.64:0.67:0.60:0.81"] = 675, -- Moonglade, Everlook, Talrendis Point, Theramore, Gadgetzan
+					["0.55:0.21:0.43:0.25:0.61:0.40"] = 442, -- Moonglade, Auberdine, Talrendis Point
 
 					-- Alliance: Mudsprocket (Dustwallow Marsh)
 					["0.58:0.70:0.48:0.70:0.31:0.69"] = 283, -- Mudsprocket, Thalanaar, Feathermoon
