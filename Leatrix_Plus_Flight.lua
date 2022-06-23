@@ -761,6 +761,7 @@
 					["0.55:0.42:0.63:0.44:0.46:0.30"] = 348, -- Splintertree Post, Orgrimmar, Bloodvenom Post
 					["0.55:0.42:0.41:0.37:0.46:0.30"] = 303, -- Splintertree Post, Zoram'gar Outpost, Bloodvenom Post
 					["0.55:0.42:0.63:0.36:0.64:0.23:0.54:0.21"] = 354, -- Splintertree Post, Valormok, Everlook, Moonglade
+					["0.55:0.42:0.63:0.44:0.64:0.23"] = 336, -- Splintertree Post, Orgrimmar, Everlook
 
 					-- Horde: Sun Rock Retreat (Stonetalon Mountains)
 					["0.41:0.47:0.56:0.53:0.55:0.73:0.61:0.80"] = 426, -- Sun Rock Retreat, Crossroads, Freewind Post, Gadgetzan
@@ -1303,6 +1304,7 @@
 					["0.50:0.42:0.61:0.35:0.58:0.06"] = 501, -- Aerie Peak, Light's Hope Chapel, Shattered Sun Staging Area
 					["0.50:0.42:0.44:0.45:0.45:0.56:0.53:0.61"] = 339, -- Aerie Peak, Southshore, Menethil Harbor, Thelsamar
 					["0.50:0.42:0.51:0.47:0.53:0.61:0.47:0.65:0.41:0.73:0.55:0.81"] = 611, -- Aerie Peak, Refuge Pointe, Thelsamar, Thorium Point, Stormwind, Nethergarde Keep
+					["0.50:0.42:0.47:0.59:0.47:0.65" = 302, -- Aerie Peak, Ironforge, Thorium Point
 
 					-- Alliance: Booty Bay (Stranglethorn Vale)
 					["0.41:0.93:0.39:0.80"] = 148, -- Booty Bay, Sentinel Hill
