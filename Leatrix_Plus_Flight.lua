@@ -627,6 +627,7 @@
 					["0.54:0.21:0.64:0.23:0.63:0.44:0.61:0.55:0.57:0.64"] = 592, -- Moonglade, Everlook, Orgrimmar, Ratchet, Brackenwall Village
 					["0.54:0.21:0.46:0.30:0.63:0.36"] = 339, -- Moonglade, Bloodvenom Post, Valormok 
 					["0.54:0.21:0.64:0.23:0.63:0.36:0.55:0.42"] = 370, -- Moonglade, Everlook, Valormok, Splintertree Post
+					["0.54:0.21:0.64:0.23:0.63:0.36:0.56:0.53:0.44:0.69"] = 692, -- Moonglade, Everlook, Valormok, Crossroads, Camp Mojache
 
 					-- Horde: Mudsprocket (Dustwallow Marsh)
 					["0.58:0.70:0.55:0.73:0.44:0.69:0.42:0.79"] = 324, -- Mudsprocket, Freewind Post, Camp Mojache, Cenarion Hold
@@ -2023,6 +2024,8 @@
 					["0.60:0.81:0.61:0.55:0.46:0.40:0.58:0.39"] = 576, -- Gadgetzan, Ratchet, Astranaar, Forest Song
 					["0.60:0.81:0.64:0.67:0.46:0.40:0.39:0.40"] = 672, -- Gadgetzan, Theramore, Astranaar, Stonetalon Peak 
 					["0.60:0.81:0.64:0.67:0.40:0.51:0.31:0.69"] = 712, -- Gadgetzan, Theramore, Nijel's Point, Feathermoon
+					["0.60:0.81:0.64:0.67:0.43:0.25"] = 588, -- Gadgetzan, Theramore, Auberdine
+					["0.60:0.81:0.61:0.55:0.46:0.40:0.43:0.25:0.53:0.26"] = 780, -- Gadgetzan, Ratchet, Astranaar, Auberdine, Talonbranch Glade
 
 					-- Alliance: Marshal's Refuge (Un'Goro Crater)
 					["0.50:0.76:0.42:0.79:0.31:0.69"] = 258, -- Marshal's Refuge, Cenarion Hold, Feathermoon
@@ -2165,6 +2168,7 @@
 					["0.61:0.55:0.61:0.40:0.43:0.25:0.42:0.16"] = 515, -- Ratchet, Talrendis Point, Auberdine, Rut'theran Village
 					["0.61:0.55:0.46:0.40:0.50:0.35:0.53:0.26"] = 403, -- Ratchet, Astranaar, Emerald Sanctuary, Talonbranch Glade
 					["0.61:0.55:0.60:0.81:0.48:0.70"] = 421, -- Ratchet, Gadgetzan, Thalanaar
+					["0.61:0.55:0.46:0.40:0.50:0.35:0.53:0.26:0.65:0.23"] = 493, -- Ratchet, Astranaar, Emerald Sanctuary, Talonbranch Glade, Everlook
 
 					-- Alliance: Rut'theran Village (Teldrassil)
 					["0.42:0.16:0.43:0.25:0.31:0.69"] = 557, -- Rut'theran Village, Auberdine, Feathermoon
