@@ -947,6 +947,8 @@
 					["0.72:0.28:0.58:0.27:0.38:0.32:0.44:0.51:0.44:0.67:0.51:0.73"] = 442, -- Cosmowrench, Area 52, Thunderlord Stronghold, Swamprat Post, Shattrath, Stonebreaker Hold
 					["0.72:0.28:0.58:0.27:0.38:0.32:0.44:0.51"] = 288, -- Cosmowrench, Area 52, Thunderlord Stronghold, Swamprat Post
 					["0.72:0.28:0.63:0.18:0.38:0.32:0.44:0.51:0.54:0.57:0.65:0.50"] = 457, -- Cosmowrench, The Stormspire, Thunderlord Stronghold, Swamprat Post, Falcon Watch, Thrallmar
+					["0.72:0.28:0.58:0.27:0.38:0.32:0.23:0.50"] = 320, -- Cosmowrench, Area 52, Thunderlord Stronghold, Zabra'jin
+					["0.72:0.28:0.58:0.27:0.38:0.32:0.44:0.51:0.44:0.67:0.29:0.62"] = 456, -- Cosmowrench, Area 52, Thunderlord Stronghold, Swamprat Post, Shattrath, Garadar
 
 					-- Horde: Evergrove (Blade's Edge Mountains)
 					["0.42:0.28:0.38:0.32:0.44:0.51:0.44:0.67:0.51:0.73:0.66:0.77"] = 371, -- Evergrove, Thunderlord Stronghold, Swamprat Post, Shattrath, Stonebreaker Hold, Shadowmoon Village
@@ -1419,7 +1421,7 @@
 					["0.47:0.59:0.47:0.65:0.41:0.73:0.55:0.81"] = 359, -- Ironforge, Thorium Point, Stormwind, Nethergarde Keep
 					["0.47:0.59:0.47:0.65:0.41:0.73:0.47:0.79"] = 298, -- Ironforge, Thorium Point, Stormwind, Darkshire
 					["0.47:0.59:0.41:0.73:0.52:0.72"] = 350, -- Ironforge, Stormwind, Morgan's Vigil
-					["0.47:0.59:0.58:0.06"] = 100, -- Ironforge, Shattered Sun Staging Area (was 100, changed to 111 by Maximilian Wittig, changed back to 99 by many others, changed to 100 by Oliver)
+					["0.47:0.59:0.58:0.06"] = 101, -- Ironforge, Shattered Sun Staging Area (was 100, changed to 111 by Maximilian Wittig, changed back to 99 by many others, changed to 100 by Oliver, changed to 101 by Daehoon Oh who reported 105)
 					["0.47:0.59:0.58:0.06:0.61:0.28"] = 330, -- Ironforge, Shattered Sun Staging Area, Zul'Aman
 
 					-- Alliance: Lakeshire (Redridge Mountains)
@@ -1535,6 +1537,7 @@
 					["0.52:0.72:0.47:0.65:0.47:0.59:0.58:0.06"] = 236, -- Morgan's Vigil, Thorium Point, Ironforge, Shattered Sun Staging Area
 					["0.52:0.72:0.50:0.75:0.47:0.79:0.41:0.93"] = 289, -- Morgan's Vigil, Lakeshire, Darkshire, Booty Bay
 					["0.52:0.72:0.41:0.73:0.47:0.59:0.51:0.47:0.50:0.42"] = 586, -- Morgan's Vigil, Stormwind, Ironforge, Refuge Pointe, Aerie Peak
+					["0.52:0.72:0.41:0.73:0.47:0.59:0.61:0.35"] = 660, -- Morgan's Vigil, Stormwind, Ironforge, Light's Hope Chapel
 
 					-- Alliance: Nethergarde Keep (Blasted Lands)
 					["0.55:0.81:0.47:0.79:0.43:0.82:0.41:0.93"] = 251, -- Nethergarde Keep, Darkshire, Rebel Camp, Booty Bay
@@ -1827,6 +1830,7 @@
 					["0.46:0.40:0.43:0.25:0.53:0.26"] = 338, -- Astranaar, Auberdine, Talonbranch Glade
 					["0.46:0.40:0.43:0.25:0.40:0.51"] = 440, -- Astranaar, Auberdine, Nijel's Point
 					["0.46:0.40:0.61:0.40:0.65:0.23"] = 327, -- Astranaar, Talrendis Point, Everlook
+					["0.46:0.40:0.43:0.25:0.31:0.69"] = 621, -- Astranaar, Auberdine, Feathermoon
 
 					-- Alliance: Auberdine (Darkshore)
 					["0.43:0.25:0.31:0.69"] = 473, -- Auberdine, Feathermoon
@@ -1935,6 +1939,7 @@
 					["0.65:0.23:0.61:0.40:0.46:0.40"] = 316, -- Everlook, Talrendis Point, Astranaar
 					["0.65:0.23:0.55:0.21:0.43:0.25:0.46:0.40"] = 419, -- Everlook, Moonglade, Auberdine, Astranaar
 					["0.65:0.23:0.61:0.40:0.46:0.40:0.39:0.40"] = 470, -- Everlook, Talrendis Point, Astranaar, Stonetalon Peak
+					["0.65:0.23:0.53:0.26:0.50:0.35:0.46:0.40:0.39:0.40"] = 450, -- Everlook, Talonbranch Glade, Emerald Sanctuary, Astranaar, Stonetalon Peak
 
 					-- Alliance: Feathermoon (Feralas)
 					["0.31:0.69:0.42:0.79"] = 153, -- Feathermoon, Cenarion Hold
