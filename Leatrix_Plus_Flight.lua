@@ -2409,6 +2409,7 @@
 					["0.58:0.27:0.32:0.34:0.38:0.50:0.52:0.51:0.65:0.58"] = 377, -- Area 52, Sylvanaar, Telredor, Temple of Telhamat, Honor Hold
 					["0.58:0.27:0.32:0.34:0.38:0.50:0.44:0.67:0.55:0.77:0.69:0.85:0.78:0.85"] = 499, -- Area 52, Sylvanaar, Telredor, Shattrath, Allerian Stronghold, Wildhammer Stronghold, Sanctum of the Stars
 					["0.58:0.27:0.32:0.34:0.38:0.50:0.27:0.74"] = 332, -- Area 52, Sylvanaar, Telredor, Telaar
+					["0.58:0.27:0.32:0.34:0.38:0.50:0.52:0.51"] = 290, -- Area 52, Sylvanaar, Telredor, Temple of Telhamat
 
 					-- Alliance: Cosmowrench (Netherstorm)
 					["0.72:0.28:0.58:0.27:0.42:0.37:0.38:0.50:0.27:0.74"] = 353, -- Cosmowrench, Area 52, Toshley's Station, Telredor, Telaar
@@ -2567,7 +2568,7 @@
 
 					-- Alliance: Shattrath (Terokkar Forest)
 					["0.44:0.67:0.27:0.74"] = 88, -- Shattrath, Telaar
-					["0.44:0.67:0.55:0.77"] = 75, -- Shattrath, Allerian Stronghold
+					["0.44:0.67:0.55:0.77"] = 75, -- Shattrath, Allerian Stronghold (r-beauvais@hotmail.com reported 38)
 					["0.44:0.67:0.55:0.77:0.69:0.85"] = 153, -- Shattrath, Allerian Stronghold, Wildhammer Stronghold
 					["0.44:0.67:0.65:0.58:0.79:0.55"] = 172, -- Shattrath, Honor Hold, Hellfire Peninsula
 					["0.44:0.67:0.65:0.58"] = 111, -- Shattrath, Honor Hold
