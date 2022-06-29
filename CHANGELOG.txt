@@ -1,6 +1,6 @@
-2.5.112.alpha.4 - 28th June 2022
+2.5.112 - 29th June 2022
 - In the game key bindings menu, you can now set a keybind to announce rares in chat.  Target a creature, press your keybind and detals of your target will be shown in the General chat channel.  These details include your target's name, health percentage remaining and coordinates.
-- Added lots of flight times.  There are now 2453 flight times stored in Leatrix Plus for BCC.
+- Added lots of flight times.  There are now 2455 flight times stored in Leatrix Plus for BCC.
 
 2.5.111 - 22nd June 2022
 - In the game key bindings menu, you can now set a keybind to show a web link for whatever your pointer is over (as long as it has a tooltip).  For example, if you have an item in your bag and you don't know what it's for, hover your pointer over it so the item tooltip shows up then press your defined hotkey.  A Wowhead link will show in a copy-friendly window.  Press CTRL/C to copy the link then paste it into your browser.
