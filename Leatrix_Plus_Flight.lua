@@ -1127,6 +1127,7 @@
 					["0.44:0.67:0.51:0.73:0.65:0.50"] = 193, -- Shattrath, Stonebreaker Hold, Thrallmar
 					["0.44:0.67:0.44:0.51:0.38:0.32:0.63:0.18"] = 341, -- Shattrath, Swamprat Post, Thunderlord Stronghold, The Stormspire
 					["0.44:0.67:0.51:0.73:0.65:0.50:0.68:0.63"] = 257, -- Shattrath, Stonebreaker Hold, Thrallmar, Spinebreaker Ridge
+					["0.44:0.67:0.44:0.51:0.49:0.36:0.58:0.27:0.42:0.28"] = 286, -- Shattrath, Swamprat Post, Mok'Nathal Village, Area 52, Evergrove
 
 					-- Horde: Spinebreaker Ridge (Hellfire Peninsula)
 					["0.68:0.63:0.65:0.50:0.54:0.57:0.29:0.62"] = 263, -- Spinebreaker Ridge, Thrallmar, Falcon Watch, Garadar
@@ -1168,6 +1169,7 @@
 					["0.51:0.73:0.44:0.67:0.44:0.51:0.38:0.32:0.58:0.27:0.63:0.18"] = 385, -- Stonebreaker Hold, Shattrath, Swamprat Post, Thunderlord Stronghold, Area 52, The Stormspire
 					["0.51:0.73:0.44:0.67:0.44:0.51:0.38:0.32:0.58:0.27:0.72:0.28"] = 403, -- Stonebreaker Hold, Shattrath, Swamprat Post, Thunderlord Stronghold, Area 52, Cosmowrench
 					["0.51:0.73:0.44:0.67:0.44:0.51:0.38:0.32:0.58:0.27"] = 338, -- Stonebreaker Hold, Shattrath, Swamprat Post, Thunderlord Stronghold, Area 52
+					["0.51:0.73:0.65:0.50:0.54:0.57"] = 192, -- Stonebreaker Hold, Thrallmar, Falcon Watch
 
 					-- Horde: Swamprat Post (Zangarmarsh)
 					["0.44:0.51:0.44:0.67:0.51:0.73:0.66:0.77"] = 220, -- Swamprat Post, Shattrath, Stonebreaker Hold, Shadowmoon Village
@@ -1446,7 +1448,7 @@
 					["0.50:0.75:0.52:0.72:0.47:0.65:0.53:0.61:0.51:0.47"] = 374, -- Lakeshire, Morgan's Vigil, Thorium Point, Thelsamar, Refuge Pointe
 					["0.50:0.75:0.52:0.72:0.47:0.65:0.47:0.59:0.44:0.45"] = 379, -- Lakeshire, Morgan's Vigil, Thorium Point, Ironforge, Southshore (was 489, changed by Isaac Guinn and Georgi Georgiev)
 					["0.50:0.75:0.52:0.72:0.47:0.65:0.53:0.61:0.51:0.47:0.50:0.42"] = 445, -- Lakeshire, Morgan's Vigil, Thorium Point, Thelsamar, Refuge Pointe, Aerie Peak
-					["0.50:0.75:0.52:0.72:0.47:0.65:0.47:0.59:0.48:0.39"] = 475, -- Lakeshire, Morgan's Vigil, Thorium Point, Ironforge, Chillwind Camp
+					["0.50:0.75:0.52:0.72:0.47:0.65:0.47:0.59:0.48:0.39"] = 475, -- Lakeshire, Morgan's Vigil, Thorium Point, Ironforge, Chillwind Camp (Christian Bösherz reported 421)
 					["0.50:0.75:0.52:0.72:0.47:0.65:0.47:0.59:0.61:0.35"] = 540, -- Lakeshire, Morgan's Vigil, Thorium Point, Ironforge, Light's Hope Chapel
 					["0.50:0.75:0.52:0.72:0.47:0.65:0.47:0.59:0.50:0.42:0.44:0.45"] = 489, -- Lakeshire, Morgan's Vigil, Thorium Point, Ironforge, Aerie Peak, Southshore
 					["0.50:0.75:0.52:0.72:0.47:0.65:0.47:0.59:0.61:0.35:0.61:0.28"] = 614, -- Lakeshire, Morgan's Vigil, Thorium Point, Ironforge, Light's Hope Chapel, Zul'Aman
