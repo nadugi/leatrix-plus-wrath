@@ -234,6 +234,7 @@
 					["0.46:0.43:0.42:0.37:0.61:0.35:0.61:0.28"] = 416, -- Tarren Mill, Undercity, Light's Hope Chapel, Zul'Aman
 					["0.46:0.43:0.59:0.45:0.61:0.35:0.61:0.28"] = 393, -- Tarren Mill, Revantusk Village, Light's Hope Chapel, Zul'Aman
 					["0.46:0.43:0.59:0.45:0.61:0.35:0.61:0.28:0.58:0.06"] = 640, -- Tarren Mill, Revantusk Village, Light's Hope Chapel, Zul'Aman, Shattered Sun Staging Area
+					["0.46:0.43:0.42:0.37:0.50:0.66:0.42:0.86"] = 787, -- Tarren Mill, Undercity, Kargath, Grom'gol
 
 					-- Horde: The Sepulcher (Silverpine Forest)
 					["0.37:0.41:0.46:0.43:0.55:0.46:0.50:0.66:0.41:0.93"] = 767, -- The Sepulcher, Tarren Mill, Hammerfall, Kargath, Booty Bay
@@ -1580,6 +1581,8 @@
 					["0.55:0.81:0.47:0.79:0.41:0.73:0.47:0.59"] = 381, -- Nethergarde Keep, Darkshire, Stormwind, Ironforge
 					["0.55:0.81:0.47:0.79:0.41:0.73:0.47:0.59:0.44:0.45"] = 552, -- Burg Nethergarde, Dunkelhain, Sturmwind, Eisenschmiede, Süderstade
 					["0.55:0.81:0.47:0.79:0.41:0.73:0.47:0.65:0.53:0.61"] = 377, -- Nethergarde Keep, Darkshire, Stormwind, Thorium Point, Thelsamar
+					["0.55:0.81:0.47:0.79:0.41:0.73:0.47:0.59:0.61:0.35"] = 687, -- Nethergarde Keep, Darkshire, Stormwind, Ironforge, Light's Hope Chapel
+					["0.55:0.81:0.41:0.73:0.47:0.59:0.53:0.61"] = 450, -- Nethergarde Keep, Stormwind, Ironforge, Thelsamar
 
 					-- Alliance: Rebel Camp (Stranglethorn Vale)
 					["0.43:0.82:0.41:0.93"] = 116, -- Rebel Camp, Booty Bay
@@ -1763,6 +1766,7 @@
 					["0.53:0.61:0.47:0.59:0.58:0.06"] = 175, -- Thelsamar, Ironforge, Shattered Sun Staging Area
 					["0.53:0.61:0.47:0.65:0.41:0.73:0.47:0.79"] = 307, -- Thelsamar, Thorium Point, Stormwind, Darkshire
 					["0.53:0.61:0.47:0.59:0.41:0.73:0.55:0.81"] = 440, -- Thelsamar, Ironforge, Stormwind, Nethergarde Keep
+					["0.53:0.61:0.47:0.65:0.41:0.73:0.55:0.81"] = 368, -- Thelsamar, Thorium Point, Stormwind, Nethergarde Keep
 
 					-- Alliance: Thorium Point (Searing Gorge)
 					["0.47:0.65:0.41:0.73:0.41:0.93"] = 310, -- Thorium Point, Stormwind, Booty Bay
@@ -2289,6 +2293,7 @@
 					["0.61:0.40:0.43:0.25"] = 301, -- Talrendis Point, Auberdine
 					["0.61:0.40:0.64:0.67:0.60:0.81"] = 397, -- Talrendis Point, Theramore, Gadgetzan
 					["0.61:0.40:0.46:0.40:0.50:0.35"] = 229, -- Talrendis Point, Astranaar, Emerald Sanctuary
+					["0.61:0.40:0.43:0.25:0.42:0.16"] = 386, -- Talrendis Point, Auberdine, Rut'theran Village
 
 					-- Alliance: Thalanaar
 					["0.48:0.70:0.31:0.69"] = 179, -- Thalanaar, Feathermoon
