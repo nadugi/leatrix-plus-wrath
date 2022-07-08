@@ -552,6 +552,7 @@
 		or	(LeaPlusLC["CombineAddonButtons"]	~= LeaPlusDB["CombineAddonButtons"])	-- Combine addon buttons
 		or	(LeaPlusLC["MiniExcludeList"]		~= LeaPlusDB["MiniExcludeList"])		-- Minimap exclude list
 		or	(LeaPlusLC["TipModEnable"]			~= LeaPlusDB["TipModEnable"])			-- Enhance tooltip
+		or	(LeaPlusLC["TipNoHealthBar"]		~= LeaPlusDB["TipNoHealthBar"])			-- Enhance tooltip
 		or	(LeaPlusLC["EnhanceDressup"]		~= LeaPlusDB["EnhanceDressup"])			-- Enhance dressup
 		or	(LeaPlusLC["EnhanceQuestLog"]		~= LeaPlusDB["EnhanceQuestLog"])		-- Enhance quest log
 		or	(LeaPlusLC["EnhanceProfessions"]	~= LeaPlusDB["EnhanceProfessions"])		-- Enhance professions
@@ -9498,7 +9499,7 @@
 			LeaPlusLC:MakeCB(SideTip, "TipShowOtherRank", "Show guild ranks for other guilds", 16, -112, false, "If checked, guild ranks will be shown for players who are not in your guild.")
 			LeaPlusLC:MakeCB(SideTip, "TipShowTarget", "Show unit targets", 16, -132, false, "If checked, unit targets will be shown.")
 			LeaPlusLC:MakeCB(SideTip, "TipHideInCombat", "Hide tooltips for world units during combat", 16, -152, false, "If checked, tooltips for world units will be hidden during combat.|n|nYou can hold the shift key down to override this setting.")
-			LeaPlusLC:MakeCB(SideTip, "TipNoHealthBar", "Hide the health bar", 16, -172, false, "If checked, the health bar will not be shown.")
+			LeaPlusLC:MakeCB(SideTip, "TipNoHealthBar", "Hide the health bar", 16, -172, true, "If checked, the health bar will not be shown.")
 
 			LeaPlusLC:CreateDropDown("TooltipAnchorMenu", "Anchor", SideTip, 146, "TOPLEFT", 356, -115, {L["None"], L["Overlay"], L["Cursor"], L["Cursor Left"], L["Cursor Right"]}, "")
 
@@ -9543,31 +9544,6 @@
 			LeaPlusCB["ListFrameTooltipAnchorMenu"]:HookScript("OnHide", SetAnchorControls)
 			SetAnchorControls()
 
-			---------------------------------------------------------------------------------------------------------
-			-- Hide health bar
-			---------------------------------------------------------------------------------------------------------
-
-			-- Create frame for health bar
-			local tframe = CreateFrame("FRAME")
-			tframe:Hide()
-
-			-- Function to set health bar
-			local function SetHealthBar()
-				if LeaPlusLC["TipNoHealthBar"] == "On" then
-					GameTooltipStatusBar:SetParent(tframe)
-				else
-					GameTooltipStatusBar:SetParent(GameTooltip)
-				end
-			end
-
-			-- Set health bar when option is clicked and on startp
-			LeaPlusCB["TipNoHealthBar"]:HookScript("OnClick", SetHealthBar)
-			SetHealthBar()
-
-			---------------------------------------------------------------------------------------------------------
-			-- Rest of configuration panel
-			---------------------------------------------------------------------------------------------------------
-
 			-- Help button hidden
 			SideTip.h:Hide()
 
@@ -9583,12 +9559,12 @@
 			end)
 
 			-- Reset button handler
+			SideTip.r.tiptext = SideTip.r.tiptext .. "|n|n" .. L["Note that this will not reset settings that require a UI reload."]
 			SideTip.r:SetScript("OnClick", function()
 				LeaPlusLC["TipShowRank"] = "On"
 				LeaPlusLC["TipShowOtherRank"] = "Off"
 				LeaPlusLC["TipShowTarget"] = "On"
 				LeaPlusLC["TipHideInCombat"] = "Off"
-				LeaPlusLC["TipNoHealthBar"] = "Off"; SetHealthBar()
 				LeaPlusLC["LeaPlusTipSize"] = 1.00
 				LeaPlusLC["TipOffsetX"] = -13
 				LeaPlusLC["TipOffsetY"] = 94
@@ -9638,7 +9614,6 @@
 					LeaPlusLC["TipShowOtherRank"] = "Off"
 					LeaPlusLC["TipShowTarget"] = "On"
 					LeaPlusLC["TipHideInCombat"] = "Off"
-					LeaPlusLC["TipNoHealthBar"] = "Off"; SetHealthBar()
 					LeaPlusLC["LeaPlusTipSize"] = 1.25
 					LeaPlusLC["TipOffsetX"] = -13
 					LeaPlusLC["TipOffsetY"] = 94
@@ -9665,6 +9640,11 @@
 				end
 
 			end)
+
+			-- Hide health bar
+			if LeaPlusLC["TipNoHealthBar"] == "On" then
+				GameTooltipStatusBar:SetStatusBarTexture("")
+			end
 
 			---------------------------------------------------------------------------------------------------------
 			-- Tooltip scale settings
