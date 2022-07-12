@@ -957,6 +957,7 @@
 					["0.72:0.28:0.63:0.18:0.38:0.32:0.44:0.51:0.54:0.57:0.65:0.50"] = 457, -- Cosmowrench, The Stormspire, Thunderlord Stronghold, Swamprat Post, Falcon Watch, Thrallmar
 					["0.72:0.28:0.58:0.27:0.38:0.32:0.23:0.50"] = 320, -- Cosmowrench, Area 52, Thunderlord Stronghold, Zabra'jin
 					["0.72:0.28:0.58:0.27:0.38:0.32:0.44:0.51:0.44:0.67:0.29:0.62"] = 456, -- Cosmowrench, Area 52, Thunderlord Stronghold, Swamprat Post, Shattrath, Garadar
+					["0.72:0.28:0.63:0.18:0.38:0.32:0.44:0.51:0.44:0.67"] = 409, -- Cosmowrench, The Stormspire, Thunderlord Stronghold, Swamprat Post, Shattrath
 
 					-- Horde: Evergrove (Blade's Edge Mountains)
 					["0.42:0.28:0.38:0.32:0.44:0.51:0.44:0.67:0.51:0.73:0.66:0.77"] = 371, -- Evergrove, Thunderlord Stronghold, Swamprat Post, Shattrath, Stonebreaker Hold, Shadowmoon Village
@@ -1610,6 +1611,7 @@
 					["0.43:0.82:0.41:0.73:0.47:0.59:0.51:0.47"] = 461, -- Rebel Camp, Stormwind, Ironforge, Refuge Pointe
 					["0.43:0.82:0.41:0.73:0.47:0.59:0.53:0.61"] = 358, -- Rebel Camp, Stormwind, Ironforge, Thelsamar
 					["0.43:0.82:0.41:0.73:0.47:0.59:0.58:0.06"] = 365, -- Rebel Camp, Stormwind, Ironforge, Shattered Sun Staging Area
+					["0.43:0.82:0.41:0.73:0.47:0.59:0.51:0.47:0.50:0.42"] = 532, -- Rebel Camp, Stormwind, Ironforge, Refuge Pointe, Aerie Peak
 
 					-- Alliance: Refuge Pointe (Arathi Highlands)
 					["0.51:0.47:0.53:0.61:0.47:0.65:0.41:0.73:0.41:0.93"] = 558, -- Refuge Pointe, Thelsamar, Thorium Point, Stormwind, Booty Bay
