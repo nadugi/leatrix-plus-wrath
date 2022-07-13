@@ -1,6 +1,6 @@
-2.5.114.alpha.1 - 12th July 2022
+2.5.114 - 13th July 2022
 - For 'Enhance tooltip' ('Interface'), there is a new setting to hide the health bar.  It's disabled by default.
-- Added lots of flight times.  There are now 2489 flight times stored in Leatrix Plus for BCC.
+- Added lots of flight times.  There are now 2492 flight times stored in Leatrix Plus for BCC.
 
 2.5.113 - 6th July 2022
 - Added lots of flight times.  There are now 2473 flight times stored in Leatrix Plus for BCC.
