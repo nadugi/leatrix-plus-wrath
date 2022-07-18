@@ -1,5 +1,6 @@
-2.5.115.alpha.1 - 16th July 2022
+2.5.115.alpha.1 - 18th July 2022
 - Removed the compatibility fix for ClassicCodex addon.
+- Added lots of flight times.  There are now 2503 flight times stored in Leatrix Plus for BCC.
 
 2.5.114 - 13th July 2022
 - For 'Enhance tooltip' ('Interface'), there is a new setting to hide the health bar.  It's disabled by default.
