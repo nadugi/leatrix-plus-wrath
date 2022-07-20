@@ -1,3 +1,7 @@
+2.5.116.alpha.1 - 20th July 2022
+- For 'Enhance minimap', the clock and zone text bar will now be shown on top when using square minimap.
+- Added flight times.  There are now 2508 flight times stored in Leatrix Plus for BCC.
+
 2.5.115 - 20th July 2022
 - Removed the compatibility fix for ClassicCodex addon.
 - Added lots of flight times.  There are now 2507 flight times stored in Leatrix Plus for BCC.
