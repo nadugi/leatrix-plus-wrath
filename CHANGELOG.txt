@@ -1,4 +1,4 @@
-2.5.115.alpha.1 - 18th July 2022
+2.5.115 - 20th July 2022
 - Removed the compatibility fix for ClassicCodex addon.
 - Added lots of flight times.  There are now 2507 flight times stored in Leatrix Plus for BCC.
 
