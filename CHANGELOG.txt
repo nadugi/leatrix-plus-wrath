@@ -1,6 +1,7 @@
-2.5.116.alpha.7 - 24th July 2022
+2.5.116.alpha.8 - 24th July 2022
 - For 'Enhance minimap', added a new setting to hide the tracking button while the pointer is not over the minimap.  The clock and zone text bar will now be shown on top when using square minimap.  Some structural changes to the code.
 - Added lots of flight times.  There are now 2518 flight times stored in Leatrix Plus for BCC.
+- Leatrix Plus will now attempt to run on Wrath Beta but note that it hasn't been tested and there are no Wrath features yet.
 
 2.5.115 - 20th July 2022
 - Removed the compatibility fix for ClassicCodex addon.
