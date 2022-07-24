@@ -1,5 +1,5 @@
-2.5.116.alpha.4 - 24th July 2022
-- For 'Enhance minimap', the clock and zone text bar will now be shown on top when using square minimap.  Also made some structural changes to the code.
+2.5.116.alpha.5 - 24th July 2022
+- For 'Enhance minimap', added a new setting to hide the tracking button while the pointer is not over the minimap.  The clock and zone text bar will now be shown on top when using square minimap.  Some structural changes to the code.
 - Added lots of flight times.  There are now 2518 flight times stored in Leatrix Plus for BCC.
 
 2.5.115 - 20th July 2022
