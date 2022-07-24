@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.116.alpha.6 (24th July 2022)
+-- 	Leatrix Plus 2.5.116.alpha.7 (24th July 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.116.alpha.6"
+	LeaPlusLC["AddonVer"] = "2.5.116.alpha.7"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -34,6 +34,10 @@
 				print(L["LEATRIX PLUS: WRONG VERSION INSTALLED!"])
 			end)
 			return
+		end
+		if gametocversion > 30000 then
+			-- Game client is Wrath Beta
+			LeaPlusLC.Wrath = true
 		end
 	end
 
@@ -3291,6 +3295,14 @@
 							local timeTaken = timeEnd - timeStart
 							debugString = gsub(debugString, "TimeTakenPlaceHolder", string.format("%0.0f", timeTaken))
 							local flightMsg = L["Flight details"] .. " (" .. L["BCC"].. "): " .. nodeName .. " (" .. currentNode .. ") " .. L["to"] .. " " .. barName .. " (" .. destination .. ") (" .. faction .. ") " .. L["took"] .. " " .. string.format("%0.0f", timeTaken) .. " " .. L["seconds"] .. " (" .. numHops .. " " .. L["hop"] ..").|n|n" .. debugString .. "|n|n"
+
+							-- Wrath Beta start
+							if LeaPlusLC.Wrath then 
+								flightMsg = "<<<>>> THIS IS FOR WRATH BETA <<<>>>|n<<<>>> THIS IS FOR WRATH BETA <<<>>>|n<<<>>> THIS IS FOR WRATH BETA <<<>>>|n|n" .. flightMsg 
+								flightMsg = gsub(flightMsg, L["BCC"], L["WRATH"])
+							end
+							-- Wrath Beta end
+
 							if destination and data[faction] and data[faction][continent] and data[faction][continent][routeString] then
 								local savedDuration = data[faction][continent][routeString]
 								if savedDuration then
