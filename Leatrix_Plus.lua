@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.116.alpha.5 (24th July 2022)
+-- 	Leatrix Plus 2.5.116.alpha.6 (24th July 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.116.alpha.5"
+	LeaPlusLC["AddonVer"] = "2.5.116.alpha.6"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -28,7 +28,7 @@
 	-- Check Wow version is valid
 	do
 		local gameversion, gamebuild, gamedate, gametocversion = GetBuildInfo()
-		if gametocversion and gametocversion < 20000 or gametocversion > 29999 then
+		if gametocversion and gametocversion < 20000 or gametocversion > 39999 then
 			-- Game client is not Wow Classic
 			C_Timer.After(2, function()
 				print(L["LEATRIX PLUS: WRONG VERSION INSTALLED!"])
