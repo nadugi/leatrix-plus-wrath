@@ -1,5 +1,5 @@
 2.5.117.alpha.2 - 31st July 2022
-- Added lots of flight times.  There are now 2538 flight times stored in Leatrix Plus for BCC.
+- Added lots of flight times.  There are now 2541 flight times stored in Leatrix Plus for BCC.
 - Leatrix Plus will be updated for Wrath Beta during August 2022.
 
 2.5.116 - 27th July 2022
