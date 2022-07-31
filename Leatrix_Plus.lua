@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.117.alpha.2 (31st July 2022)
+-- 	Leatrix Plus 2.5.117.alpha.3 (31st July 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.117.alpha.2"
+	LeaPlusLC["AddonVer"] = "2.5.117.alpha.3"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -38,6 +38,9 @@
 		if gametocversion > 30000 then
 			-- Game client is Wrath Beta
 			LeaPlusLC.Wrath = true
+			C_Timer.After(2, function()
+				DEFAULT_CHAT_FRAME:AddMessage(L["This edition of Leatrix Plus is for BCC so some settings might not work yet in Wrath Classic.|n|nThere's no need to worry.  Leatrix Plus will be fully updated to support Wrath Classic in August 2022."], 1.0, 0.85, 0.0)
+			end)
 		end
 	end
 
