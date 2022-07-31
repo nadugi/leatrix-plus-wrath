@@ -587,6 +587,7 @@
 					["0.61:0.80:0.45:0.56:0.32:0.58"] = 463, -- Gadgetzan, Thunder Bluff, Shadowprey Village
 					["0.61:0.80:0.56:0.53:0.53:0.61"] = 374, -- Gadgetzan, Crossroads, Camp Taurajo
 					["0.61:0.80:0.61:0.55:0.63:0.44:0.64:0.23"] = 580, -- Gadgetzan, Ratchet, Orgrimmar, Everlook
+					["0.61:0.80:0.57:0.64:0.58:0.70"] = 255, -- Gadgetzan, Brackenwall Village, Mudsprocket
 
 					-- Horde: Marshal's Refuge (Un'Goro Crater)
 					["0.50:0.76:0.42:0.79"] = 100, -- Marshal's Refuge, Cenarion Hold
@@ -611,6 +612,7 @@
 					["0.50:0.76:0.61:0.80:0.55:0.73:0.56:0.53:0.46:0.30:0.54:0.21"] = 766, -- Marshal's Refuge, Gadgetzan, Freewind Post, Crossroads, Bloodvenom Post, Moonglade
 					["0.50:0.76:0.61:0.80:0.44:0.69"] = 312, -- Marshal's Refuge, Gadgetzan, Camp Mojache
 					["0.50:0.76:0.61:0.80:0.61:0.55:0.63:0.44:0.64:0.23"] = 691, -- Marshal's Refuge, Gadgetzan, Ratchet, Orgrimmar, Everlook
+					["0.50:0.76:0.61:0.80:0.44:0.69:0.32:0.58"] = 512, -- Marshal's Refuge, Gadgetzan, Camp Mojache, Shadowprey Village
 
 					-- Horde: Moonglade (Moonglade)
 					["0.54:0.21:0.46:0.30:0.56:0.53:0.44:0.69:0.42:0.79"] = 734, -- Moonglade, Bloodvenom Post, Crossroads, Camp Mojache, Cenarion Hold
@@ -2460,6 +2462,7 @@
 					["0.81:0.77:0.69:0.85:0.55:0.77:0.44:0.67:0.38:0.50:0.42:0.37:0.42:0.28"] = 459, -- Altar of Sha'tar, Wildhammer Stronghold, Allerian Stronghold, Shattrath, Telredor, Toshley's Station, Evergrove
 					["0.81:0.77:0.69:0.85:0.55:0.77:0.44:0.67:0.38:0.50:0.42:0.37"] = 406, -- Altar of Sha'tar, Wildhammer Stronghold, Allerian Stronghold, Shattrath, Telredor, Toshley's Station
 					["0.81:0.77:0.69:0.85:0.55:0.77:0.65:0.58:0.79:0.55"] = 336, -- Altar of Sha'tar, Wildhammer Stronghold, Allerian Stronghold, Honor Hold, Hellfire Peninsula
+					["0.81:0.77:0.69:0.85:0.55:0.77:0.44:0.67:0.38:0.50:0.42:0.37:0.58:0.27:0.72:0.28"] = 555, -- Altar of Sha'tar, Wildhammer Stronghold, Allerian Stronghold, Shattrath, Telredor, Toshley's Station, Area 52, Cosmowrench
 
 					-- Alliance: Area 52 (Netherstorm)
 					["0.58:0.27:0.42:0.37:0.38:0.50:0.27:0.74"] = 290, -- Area 52, Toshley's Station, Telredor, Telaar
