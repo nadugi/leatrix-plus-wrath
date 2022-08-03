@@ -1080,6 +1080,7 @@
 					["0.49:0.36:0.58:0.27:0.63:0.18"] = 104, -- Mok'Nathal Village, Area 52, The Stormspire
 					["0.49:0.36:0.44:0.51:0.44:0.67:0.51:0.73:0.66:0.77:0.81:0.77"] = 374, -- Mok'Nathal Village, Swamprat Post, Shattrath, Stonebreaker Hold, Shadowmoon Village, Altar of Sha'tar
 					["0.49:0.36:0.44:0.51:0.44:0.67:0.51:0.73:0.66:0.77:0.78:0.85"] = 357, -- Mok'Nathal Village, Swamprat Post, Shattrath, Stonebreaker Hold, Shadowmoon Village, Sanctum of the Stars
+					["0.49:0.36:0.38:0.32:0.23:0.50:0.44:0.67"] = 359, -- Mok'Nathal Village, Thunderlord Stronghold, Zabra'jin, Shattrath
 
 					-- Horde: Sanctum of the Stars (Shadowmoon Valley)
 					["0.78:0.85:0.66:0.77"] = 61, -- Sanctum of the Stars, Shadowmoon Village
@@ -1634,7 +1635,7 @@
 					["0.43:0.82:0.41:0.73:0.47:0.65:0.53:0.61:0.51:0.47"] = 459, -- Rebel Camp, Stormwind, Thorium Point, Thelsamar, Refuge Pointe
 					["0.43:0.82:0.41:0.73:0.47:0.59:0.44:0.45"] = 472, -- Rebel Camp, Stormwind, Ironforge, Southshore
 					["0.43:0.82:0.41:0.73:0.47:0.65:0.53:0.61:0.51:0.47:0.50:0.42"] = 531, -- Rebel Camp, Stormwind, Thorium Point, Thelsamar, Refuge Pointe, Aerie Peak
-					["0.43:0.82:0.41:0.73:0.47:0.59:0.48:0.39"] = 513, -- Rebel Camp, Stormwind, Ironforge, Chillwind Camp (was 567, changed by SchinknBrot on CurseForge)
+					["0.43:0.82:0.41:0.73:0.47:0.59:0.48:0.39"] = 513, -- Rebel Camp, Stormwind, Ironforge, Chillwind Camp (was 567, changed by SchinknBrot on CurseForge and Alexander Vestbjerg)
 					["0.43:0.82:0.41:0.73:0.47:0.59:0.61:0.35"] = 676, -- Rebel Camp, Stormwind, Ironforge, Light's Hope Chapel
 					["0.43:0.82:0.41:0.73:0.47:0.59:0.61:0.35:0.61:0.28"] = 704, -- Rebel Camp, Stormwind, Ironforge, Light's Hope Chapel, Zul'Aman
 					["0.43:0.82:0.41:0.73:0.47:0.59:0.51:0.47"] = 461, -- Rebel Camp, Stormwind, Ironforge, Refuge Pointe
