@@ -13319,6 +13319,20 @@
 					elseif GameLocale == "zhTW" then LeaPlusLC.WowheadLock = "cn.tbc.wowhead.com"
 					else							 LeaPlusLC.WowheadLock = "tbc.wowhead.com"
 					end
+					if LeaPlusLC.Wrath then
+							if GameLocale == "deDE" then LeaPlusLC.WowheadLock = "wowhead.com/wotlk/de"
+						elseif GameLocale == "esMX" then LeaPlusLC.WowheadLock = "wowhead.com/wotlk/es"
+						elseif GameLocale == "esES" then LeaPlusLC.WowheadLock = "wowhead.com/wotlk/es"
+						elseif GameLocale == "frFR" then LeaPlusLC.WowheadLock = "wowhead.com/wotlk/fr"
+						elseif GameLocale == "itIT" then LeaPlusLC.WowheadLock = "wowhead.com/wotlk/it"
+						elseif GameLocale == "ptBR" then LeaPlusLC.WowheadLock = "wowhead.com/wotlk/pt"
+						elseif GameLocale == "ruRU" then LeaPlusLC.WowheadLock = "wowhead.com/wotlk/ru"
+						elseif GameLocale == "koKR" then LeaPlusLC.WowheadLock = "wowhead.com/wotlk/ko"
+						elseif GameLocale == "zhCN" then LeaPlusLC.WowheadLock = "wowhead.com/wotlk/cn"
+						elseif GameLocale == "zhTW" then LeaPlusLC.WowheadLock = "wowhead.com/wotlk/cn"
+						else							 LeaPlusLC.WowheadLock = "wowhead.com/wotlk"
+						end
+					end
 				end
 				-- Store frame under mouse
 				local mouseFocus = GetMouseFocus()
