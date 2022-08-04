@@ -1200,18 +1200,22 @@
 
 			end
 
-			-- Run function when achievement UI is loaded
-			if IsAddOnLoaded("Blizzard_AchievementUI") then
-				DoWowheadAchievementFunc()
-			else
-				local waitAchievementsFrame = CreateFrame("FRAME")
-				waitAchievementsFrame:RegisterEvent("ADDON_LOADED")
-				waitAchievementsFrame:SetScript("OnEvent", function(self, event, arg1)
-					if arg1 == "Blizzard_AchievementUI" then
-						DoWowheadAchievementFunc()
-						waitAchievementsFrame:UnregisterAllEvents()
-					end
-				end)
+			if LeaPlusLC.Wrath then
+
+				-- Run function when achievement UI is loaded
+				if IsAddOnLoaded("Blizzard_AchievementUI") then
+					DoWowheadAchievementFunc()
+				else
+					local waitAchievementsFrame = CreateFrame("FRAME")
+					waitAchievementsFrame:RegisterEvent("ADDON_LOADED")
+					waitAchievementsFrame:SetScript("OnEvent", function(self, event, arg1)
+						if arg1 == "Blizzard_AchievementUI" then
+							DoWowheadAchievementFunc()
+							waitAchievementsFrame:UnregisterAllEvents()
+						end
+					end)
+				end
+
 			end
 
 			----------------------------------------------------------------------
