@@ -1,5 +1,6 @@
 2.5.118.alpha.2 - 4th August 2022
 - Updated for Wrath of the Lich King Beta.
+- Wrath: Show Wowhead links (Interface) will now show achievement links as well as quest links.
 - Added lots of flight times.  There are now 2589 flight times stored in Leatrix Plus for BCC and Wrath.
 
 2.5.117 - 3rd August 2022

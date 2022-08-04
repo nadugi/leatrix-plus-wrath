@@ -1104,6 +1104,120 @@
 			else							 wowheadLoc = "tbc.wowhead.com"
 			end
 
+			if LeaPlusLC.Wrath then
+				if 	   GameLocale == "deDE" then wowheadLoc = "wowhead.com/wotlk/de"
+				elseif GameLocale == "esMX" then wowheadLoc = "wowhead.com/wotlk/es"
+				elseif GameLocale == "esES" then wowheadLoc = "wowhead.com/wotlk/es"
+				elseif GameLocale == "frFR" then wowheadLoc = "wowhead.com/wotlk/fr"
+				elseif GameLocale == "itIT" then wowheadLoc = "wowhead.com/wotlk/it"
+				elseif GameLocale == "ptBR" then wowheadLoc = "wowhead.com/wotlk/pt"
+				elseif GameLocale == "ruRU" then wowheadLoc = "wowhead.com/wotlk/ru"
+				elseif GameLocale == "koKR" then wowheadLoc = "wowhead.com/wotlk/ko"
+				elseif GameLocale == "zhCN" then wowheadLoc = "wowhead.com/wotlk/cn"
+				elseif GameLocale == "zhTW" then wowheadLoc = "wowhead.com/wotlk/cn"
+				else							 wowheadLoc = "wowhead.com/wotlk"
+				end
+			end
+
+			----------------------------------------------------------------------
+			-- Achievements frame
+			----------------------------------------------------------------------
+
+			-- Achievement link function
+			local function DoWowheadAchievementFunc()
+
+				-- Create editbox
+				local aEB = CreateFrame("EditBox", nil, AchievementFrame)
+				aEB:ClearAllPoints()
+				aEB:SetPoint("BOTTOMRIGHT", -50, 1)
+				aEB:SetHeight(16)
+				aEB:SetFontObject("GameFontNormalSmall")
+				aEB:SetBlinkSpeed(0)
+				aEB:SetJustifyH("RIGHT")
+				aEB:SetAutoFocus(false)
+				aEB:EnableKeyboard(false)
+				aEB:SetHitRectInsets(90, 0, 0, 0)
+				aEB:SetScript("OnKeyDown", function() end)
+				aEB:SetScript("OnMouseUp", function()
+					if aEB:IsMouseOver() then
+						aEB:HighlightText()
+					else
+						aEB:HighlightText(0, 0)
+					end
+				end)
+
+				-- Create hidden font string (used for setting width of editbox)
+				aEB.z = aEB:CreateFontString(nil, 'ARTWORK', 'GameFontNormalSmall')
+				aEB.z:Hide()
+
+				-- Store last link in case editbox is cleared
+				local lastAchievementLink
+
+				-- Function to set editbox value
+				hooksecurefunc("AchievementFrameAchievements_SelectButton", function(self)
+					local achievementID = self.id or nil
+					if achievementID then
+						-- Set editbox text
+						if LeaPlusLC["WowheadLinkComments"] == "On" then
+							aEB:SetText("https://" .. wowheadLoc .. "/achievement=" .. achievementID .. "#comments")
+						else
+							aEB:SetText("https://" .. wowheadLoc .. "/achievement=" .. achievementID)
+						end
+						lastAchievementLink = aEB:GetText()
+						-- Set hidden fontstring then resize editbox to match
+						aEB.z:SetText(aEB:GetText())
+						aEB:SetWidth(aEB.z:GetStringWidth() + 90)
+						-- Get achievement title for tooltip
+						local achievementLink = GetAchievementLink(self.id)
+						if achievementLink then
+							aEB.tiptext = achievementLink:match("%[(.-)%]") .. "|n" .. L["Press CTRL/C to copy."]
+						end
+						-- Show the editbox
+						aEB:Show()
+					end
+				end)
+
+				-- Create tooltip
+				aEB:HookScript("OnEnter", function()
+					aEB:HighlightText()
+					aEB:SetFocus()
+					GameTooltip:SetOwner(aEB, "ANCHOR_TOP", 0, 10)
+					GameTooltip:SetText(aEB.tiptext, nil, nil, nil, nil, true)
+					GameTooltip:Show()
+				end)
+
+				aEB:HookScript("OnLeave", function()
+					-- Set link text again if it's changed since it was set
+					if aEB:GetText() ~= lastAchievementLink then aEB:SetText(lastAchievementLink) end
+					aEB:HighlightText(0, 0)
+					aEB:ClearFocus()
+					GameTooltip:Hide()
+				end)
+
+				-- Hide editbox when achievement is deselected
+				hooksecurefunc("AchievementFrameAchievements_ClearSelection", function(self) aEB:Hide()	end)
+				hooksecurefunc("AchievementCategoryButton_OnClick", function(self) aEB:Hide() end)
+
+			end
+
+			-- Run function when achievement UI is loaded
+			if IsAddOnLoaded("Blizzard_AchievementUI") then
+				DoWowheadAchievementFunc()
+			else
+				local waitAchievementsFrame = CreateFrame("FRAME")
+				waitAchievementsFrame:RegisterEvent("ADDON_LOADED")
+				waitAchievementsFrame:SetScript("OnEvent", function(self, event, arg1)
+					if arg1 == "Blizzard_AchievementUI" then
+						DoWowheadAchievementFunc()
+						waitAchievementsFrame:UnregisterAllEvents()
+					end
+				end)
+			end
+
+			----------------------------------------------------------------------
+			-- World map frame
+			----------------------------------------------------------------------
+
 			-- Create editbox
 			local mEB = CreateFrame("EditBox", nil, QuestLogFrame)
 			mEB:ClearAllPoints()
@@ -14750,7 +14864,7 @@
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowPlayerChain"			, 	"Show player chain"				,	340, -212, 	true,	"If checked, you will be able to show a rare, elite or rare elite chain around the player frame.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowDruidPowerBar"			, 	"Show druid power bar"			,	340, -232, 	true,	"If checked, a power bar will be shown in the player frame when you are playing a shapeshifted druid.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowReadyTimer"			, 	"Show ready timer"				,	340, -252, 	true,	"If checked, a timer will be shown under the PvP encounter ready frame so that you know how long you have left to click the enter button.")
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowWowheadLinks"			, 	"Show Wowhead links"			, 	340, -272, 	true,	"If checked, Wowhead links will be shown above the quest log frame.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowWowheadLinks"			, 	"Show Wowhead links"			, 	340, -272, 	true,	"If checked, Wowhead links will be shown in the world map frame and the achievements frame.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowFlightTimes"			, 	"Show flight times"				, 	340, -292, 	true,	"If checked, flight times will be shown in the flight map and when you take a flight.")
 
 	LeaPlusLC:CfgBtn("ModMinimapBtn", LeaPlusCB["MinimapMod"])
