@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.117 (3rd August 2022)
+-- 	Leatrix Plus 2.5.118.alpha.1 (4th August 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.117"
+	LeaPlusLC["AddonVer"] = "2.5.118.alpha.1"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -38,9 +38,6 @@
 		if gametocversion > 30000 then
 			-- Game client is Wrath Beta
 			LeaPlusLC.Wrath = true
-			C_Timer.After(2, function()
-				DEFAULT_CHAT_FRAME:AddMessage(L["This edition of Leatrix Plus is for BCC so some settings might not work yet in Wrath Classic.|n|nThere's no need to worry.  Leatrix Plus will be fully updated to support Wrath Classic in August 2022."], 1.0, 0.85, 0.0)
-			end)
 		end
 	end
 
@@ -3695,7 +3692,9 @@
 			local miniFrame = CreateFrame("FRAME")
 			local LibDBIconStub = LibStub("LibDBIcon-1.0")
 
-			QuestWatchFrame:SetFrameStrata("LOW")
+			if not LeaPlusLC.Wrath then
+				QuestWatchFrame:SetFrameStrata("LOW")
+			end
 
 			-- Function to set button radius
 			local function SetButtonRad()
@@ -4534,15 +4533,17 @@
 			MinimapBorderTop:SetPoint("TOP", MinimapBackdrop, "TOP", 0, 20)
 
 			-- Position toggle button
-			MinimapToggleButton:ClearAllPoints()
-			MinimapToggleButton:SetPoint("TOPRIGHT", MinimapBackdrop, "TOPRIGHT", 1, 23)
+			if not LeaPlusLC.Wrath then
+				MinimapToggleButton:ClearAllPoints()
+				MinimapToggleButton:SetPoint("TOPRIGHT", MinimapBackdrop, "TOPRIGHT", 1, 23)
 
-			-- Match toggle button scale to minimap scale
-			local function SetToggleScale()
-				MinimapToggleButton:SetScale(LeaPlusLC["MinimapScale"])
+				-- Match toggle button scale to minimap scale
+				local function SetToggleScale()
+					MinimapToggleButton:SetScale(LeaPlusLC["MinimapScale"])
+				end
+				LeaPlusCB["MinimapScale"]:HookScript("OnValueChanged", SetToggleScale)
+				SetToggleScale()
 			end
-			LeaPlusCB["MinimapScale"]:HookScript("OnValueChanged", SetToggleScale)
-			SetToggleScale()
 
 			-- Refresh buttons
 			C_Timer.After(0.1, SetButtonRad)
@@ -4552,19 +4553,25 @@
 				if LeaPlusLC["HideMiniZoneText"] == "On" then
 					MinimapBorderTop:Hide()
 					MinimapZoneTextButton:Hide()
-					MinimapToggleButton:Hide()
+					if not LeaPlusLC.Wrath then
+						MinimapToggleButton:Hide()
+					end
 				else
 					MinimapZoneTextButton:ClearAllPoints()
 					MinimapZoneTextButton:SetPoint("CENTER", MinimapBorderTop, "CENTER", -1, 3)
 					MinimapBorderTop:Show()
 					MinimapZoneTextButton:Show()
-					MinimapToggleButton:Show()
+					if not LeaPlusLC.Wrath then
+						MinimapToggleButton:Show()
+					end
 					if LeaPlusDB["SquareMinimap"] == "On" then
 						MinimapBorderTop:Hide()
 						MinimapZoneTextButton:ClearAllPoints()
 						MinimapZoneTextButton:SetPoint("TOP", Minimap, "TOP", 0, 0)
 						MinimapZoneTextButton:SetFrameLevel(100)
-						MinimapToggleButton:Hide()
+						if not LeaPlusLC.Wrath then
+							MinimapToggleButton:Hide()
+						end
 					end
 				end
 			end
