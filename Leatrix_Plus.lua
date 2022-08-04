@@ -12272,6 +12272,12 @@
 				-- Start page
 				LeaPlusLC:LoadVarNum("LeaStartPage", 0, 0, LeaPlusLC["NumberOfPages"])
 
+				-- Disable Show druid power bar option for Wrath since it's now included in the default UI
+				if LeaPlusLC.Wrath then
+					LeaPlusLC["ShowDruidPowerBar"] = "Off"
+					LeaPlusLC:LockItem(LeaPlusCB["ShowDruidPowerBar"], true)
+				end
+
 				-- Run other startup items
 				LeaPlusLC:Live()
 				LeaPlusLC:Isolated()
