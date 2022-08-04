@@ -1313,6 +1313,13 @@
 
 				},
 
+				-- Horde: Northrend
+				[113] = {
+
+					-- Horde: Someplace
+
+				},
+
 			},
 
 			----------------------------------------------------------------------
@@ -2830,6 +2837,80 @@
 					["0.69:0.85:0.55:0.77:0.44:0.67:0.38:0.50:0.32:0.34:0.63:0.18"] = 503, -- Wildhammer Stronghold, Allerian Stronghold, Shattrath, Telredor, Sylvanaar, The Stormspire
 
 				},
+
+				-- Alliance: Northrend
+				[113] = {
+
+					-- Alliance: Dalaran (Northrend)
+					["0.52:0.38:0.54:0.52"] = 122, -- Dalaran, Wyrmrest Temple
+
+					-- Alliance: Crystalsong Forest: Windrunner's Overlook
+					["0.59:0.43:0.64:0.42"] = 46, -- Windrunner's Overlook, Ebon Watch
+
+					-- Alliance: Dragonblight: Wintergarde Keep
+					["0.60:0.52:0.54:0.52"] = 55, -- Wintergarde Keep, Wyrmrest Temple
+
+					-- Alliance: Dragonblight: Wyrmrest Temple
+					["0.54:0.52:0.60:0.52"] = 36, -- Wyrmrest Temple, Wintergarde Keep
+					["0.54:0.52:0.60:0.52:0.59:0.43"] = 78, -- Wyrmrest Temple, Wintergarde Keep, Windrunner's Overlook
+
+					-- Alliance: Grizzly Hills: Amberpine Lodge
+					["0.73:0.54:0.76:0.67"] = 84, -- Amberpine Lodge, Westguard Keep
+					["0.73:0.54:0.76:0.67:0.74:0.71"] = 134, -- Amberpine Lodge, Westguard Keep, Kamagua
+					["0.73:0.54:0.76:0.67:0.88:0.72"] = 152, -- Amberpine Lodge, Westguard Keep, Valgarde Port
+					["0.73:0.54:0.88:0.60"] = 117, -- Amberpine Lodge, Fort Wildervar
+
+					-- Alliance: Grizzly Hills: Westfall Brigade
+					["0.83:0.46:0.73:0.54"] = 79, -- Westfall Brigade, Amberpine Lodge
+					["0.83:0.46:0.78:0.38"] = 73, -- Westfall Brigade, Zim'Torga
+
+					-- Alliance: Howling Fjord: Fort Wildervar
+					["0.88:0.60:0.83:0.46"] = 98, -- Fort Wildervar, Westfall Brigade
+					["0.88:0.60:0.88:0.72"] = 74, -- Fort Wildervar, Valgarde Port
+					["0.88:0.60:0.76:0.67"] = 81, -- Fort Wildervar, Westguard Keep
+					["0.88:0.60:0.76:0.67:0.74:0.71"] = 130, -- Fort Wildervar, Westguard Keep, Kamagua
+					["0.88:0.60:0.73:0.54"] = 97, -- Fort Wildervar, Amberpine Lodge
+					["0.88:0.60:0.83:0.46:0.78:0.38"] = 170, -- Fort Wildervar, Westfall Brigade, Zim'Torga
+
+					-- Alliance: Howling Fjord: Kamagua
+					["0.74:0.71:0.76:0.67"] = 37, -- Kamagua, Westguard Keep
+					["0.74:0.71:0.88:0.72"] = 81, -- Kamagua, Valgarde Port
+					["0.74:0.71:0.76:0.67:0.88:0.60"] = 121, -- Kamagua, Westguard Keep, Fort Wildervar
+					["0.74:0.71:0.76:0.67:0.73:0.54"] = 112, -- Kamagua, Westguard Keep, Amberpine Lodge
+
+					-- Alliance: Howling Fjord: Valgarde Port, Howling Fjord
+					["0.88:0.72:0.88:0.60"] = 71, -- Valgarde Port, Fort Wildervar
+					["0.88:0.72:0.76:0.67"] = 70, -- Valgarde Port, Westguard Keep
+					["0.88:0.72:0.74:0.71"] = 96, -- Valgarde Port, Kamagua
+					["0.88:0.72:0.76:0.67:0.73:0.54"] = 144, -- Valgarde Port, Westguard Keep, Amberpine Lodge
+					["0.88:0.72:0.88:0.60:0.83:0.46"] = 168, -- Valgarde Port, Fort Wildervar, Westfall Brigade
+
+					-- Alliance: Howling Fjord: Westguard Keep
+					["0.76:0.67:0.74:0.71"] = 52, -- Westguard Keep, Kamagua
+					["0.76:0.67:0.88:0.72"] = 70, -- Westguard Keep, Valgarde Port
+					["0.76:0.67:0.88:0.60"] = 86, -- Westguard Keep, Fort Wildervar
+					["0.76:0.67:0.73:0.54"] = 77, -- Westguard Keep, Amberpine Lodge
+
+					-- Alliance: Zul'Drak: Ebon Watch
+					["0.64:0.42:0.69:0.42"] = 45, -- Ebon Watch, Light's Breach
+
+					-- Alliance: Zul'Drak: Light's Breach
+					["0.69:0.42:0.72:0.40"] = 44, -- Light's Breach, The Argent Stand
+
+					-- Alliance: Zul'Drak: The Argent Stand
+					["0.72:0.40:0.78:0.38"] = 42, -- The Argent Stand, Zim'Torga
+
+					-- Alliance: Zul'Drak: Gundrak
+					["0.82:0.31:0.78:0.38"] = 56, -- Gundrak, Zim'Torga
+
+					-- Alliance: Zul'Drak: Zim'Torga
+					["0.78:0.38:0.83:0.46"] = 56, -- Zim'Torga, Westfall Brigade
+					["0.78:0.38:0.83:0.46:0.88:0.60"] = 142, -- Zim'Torga, Westfall Brigade, Fort Wildervar
+					["0.78:0.38:0.82:0.31"] = 54, -- Zim'Torga, Gundrak
+					["0.78:0.38:0.83:0.46:0.88:0.60:0.88:0.72"] = 215, -- Zim'Torga, Westfall Brigade, Fort Wildervar, Valgarde Port
+
+				},
+
 
 			},
 		}
