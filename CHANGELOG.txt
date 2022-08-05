@@ -1,8 +1,7 @@
-2.5.118.alpha.5 - 5th August 2022
+2.5.118.alpha.6 - 6th August 2022
 - Updated for Wrath of the Lich King Beta.
 - Wrath: Show Wowhead links (Interface) will now show achievement links as well as quest links.
 - Wrath: Show druid power bar is disabled since it's now included in the default UI.
-- Wrath: Enhance quest log is disabled for now.
 - Added lots of flight times.  There are now 2630 flight times stored in Leatrix Plus for BCC and Wrath.
 - For Wrath, it's best to use alpha releases during Wrath Beta/prepatch so that you get the latest development updates.  To switch to alpha releases, open CurseForge App, right-click Leatrix Plus in your Wrath addon listing and change release type to Alpha.  You can change it back to Release once Wrath is live for everyone.
 

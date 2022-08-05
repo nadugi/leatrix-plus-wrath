@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.118.alpha.5 (5th August 2022)
+-- 	Leatrix Plus 2.5.118.alpha.6 (6th August 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.118.alpha.5"
+	LeaPlusLC["AddonVer"] = "2.5.118.alpha.6"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -7136,19 +7136,34 @@
 			end
 
 			-- Expand the quest list to full height
-			QuestLogListScrollFrame:SetHeight(336 + tall)
+			if LeaPlusLC.Wrath then
+				QuestLogListScrollFrame:SetHeight(336 + tall - 2) -- Minus 2 for a slight bufffer
+			else
+				QuestLogListScrollFrame:SetHeight(336 + tall)
+			end
 
 			-- Create additional quest rows
-			local oldQuestsDisplayed = QUESTS_DISPLAYED
-			_G.QUESTS_DISPLAYED = _G.QUESTS_DISPLAYED + numTallQuests
-			for i = oldQuestsDisplayed + 1, QUESTS_DISPLAYED do
-				local button = CreateFrame("Button", "QuestLogTitle" .. i, QuestLogFrame, "QuestLogTitleButtonTemplate")
-				button:SetID(i)
-				button:Hide()
-				button:ClearAllPoints()
-				button:SetPoint("TOPLEFT", _G["QuestLogTitle" .. (i-1)], "BOTTOMLEFT", 0, 1)
-				if LeaPlusLC.Wrath then
-					tinsert(QuestLogListScrollFrame.buttons, button)
+			if LeaPlusLC.Wrath then
+				local oldQuestsDisplayed = QUESTS_DISPLAYED
+				_G.QUESTS_DISPLAYED = _G.QUESTS_DISPLAYED + numTallQuests
+				for i = oldQuestsDisplayed + 1, QUESTS_DISPLAYED do
+					local button = CreateFrame("Button", "QuestLogTitle" .. i, QuestLogListScrollFrame.scrollChild, "QuestLogTitleButtonTemplate")
+					button:SetID(i)
+					button:Hide()
+					button:ClearAllPoints()
+					button:SetPoint("TOPLEFT", _G["QuestLogTitle" .. (i-1)], "BOTTOMLEFT", 0, 1)
+					button:SetPoint("TOPLEFT", QuestLogListScrollFrame.buttons[i - 1], "BOTTOMLEFT", 0, 0)
+					QuestLogListScrollFrame.buttons[i] = button
+				end
+			else
+				local oldQuestsDisplayed = QUESTS_DISPLAYED
+				_G.QUESTS_DISPLAYED = _G.QUESTS_DISPLAYED + numTallQuests
+				for i = oldQuestsDisplayed + 1, QUESTS_DISPLAYED do
+					local button = CreateFrame("Button", "QuestLogTitle" .. i, QuestLogFrame, "QuestLogTitleButtonTemplate")
+					button:SetID(i)
+					button:Hide()
+					button:ClearAllPoints()
+					button:SetPoint("TOPLEFT", _G["QuestLogTitle" .. (i-1)], "BOTTOMLEFT", 0, 1)
 				end
 			end
 
@@ -12276,9 +12291,6 @@
 					-- Now included with default UI
 					LeaPlusLC["ShowDruidPowerBar"] = "Off"
 					LeaPlusLC:LockItem(LeaPlusCB["ShowDruidPowerBar"], true)
-					-- Switched to hybrid scroll frame
-					LeaPlusLC["EnhanceQuestLog"] = "Off"
-					LeaPlusLC:LockItem(LeaPlusCB["EnhanceQuestLog"], true)
 				end
 
 				-- Run other startup items
