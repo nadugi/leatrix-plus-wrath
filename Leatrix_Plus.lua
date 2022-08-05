@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.118.alpha.3 (5th August 2022)
+-- 	Leatrix Plus 2.5.118.alpha.4 (5th August 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.118.alpha.3"
+	LeaPlusLC["AddonVer"] = "2.5.118.alpha.4"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -12272,10 +12272,14 @@
 				-- Start page
 				LeaPlusLC:LoadVarNum("LeaStartPage", 0, 0, LeaPlusLC["NumberOfPages"])
 
-				-- Disable Show druid power bar option for Wrath since it's now included in the default UI
+				-- Disable options for Wrath
 				if LeaPlusLC.Wrath then
+					-- Now included with default UI
 					LeaPlusLC["ShowDruidPowerBar"] = "Off"
 					LeaPlusLC:LockItem(LeaPlusCB["ShowDruidPowerBar"], true)
+					-- Switched to hybrid scroll frame
+					LeaPlusLC["EnhanceQuestLog"] = "Off"
+					LeaPlusLC:LockItem(LeaPlusCB["EnhanceQuestLog"], true)
 				end
 
 				-- Run other startup items
