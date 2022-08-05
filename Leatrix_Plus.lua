@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.118.alpha.4 (5th August 2022)
+-- 	Leatrix Plus 2.5.118.alpha.5 (5th August 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.118.alpha.4"
+	LeaPlusLC["AddonVer"] = "2.5.118.alpha.5"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -3416,7 +3416,6 @@
 
 							-- Wrath Beta start
 							if LeaPlusLC.Wrath then
-								flightMsg = "<<<>>> THIS IS FOR WRATH BETA <<<>>>|n<<<>>> THIS IS FOR WRATH BETA <<<>>>|n<<<>>> THIS IS FOR WRATH BETA <<<>>>|n|n" .. flightMsg
 								flightMsg = gsub(flightMsg, L["BCC"], L["WRATH"])
 							end
 							-- Wrath Beta end
