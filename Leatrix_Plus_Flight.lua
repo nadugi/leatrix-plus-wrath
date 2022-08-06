@@ -115,6 +115,8 @@
 					["0.50:0.66:0.42:0.37:0.61:0.35:0.58:0.25:0.59:0.19"] = 870, -- Kargath, Undercity, Light's Hope Chapel, Tranquillien, Silvermoon City
 					["0.50:0.66:0.42:0.37:0.37:0.41"] = 532, -- Kargath, Undercity, The Sepulcher
 
+					-- Horde: Acherus (Eastern Plaguelands)
+
 					-- Horde: Light's Hope Chapel (Eastern Plaguelands)
 					["0.61:0.35:0.59:0.45:0.55:0.46:0.50:0.66:0.41:0.93"] = 789, -- Light's Hope Chapel, Revantusk Village, Hammerfall, Kargath, Booty Bay
 					["0.61:0.35:0.59:0.45:0.55:0.46:0.50:0.66:0.42:0.86"] = 730, -- Light's Hope Chapel, Revantusk Village, Hammerfall, Kargath, Grom'gol
@@ -712,6 +714,7 @@
 					["0.63:0.44:0.45:0.56:0.55:0.73"] = 429, -- Orgrimmar, Thunder Bluff, Freewind Post
 					["0.63:0.44:0.56:0.53:0.55:0.73:0.58:0.70"] = 361, -- Orgrimmar, Crossroads, Freewind Post, Mudsprocket
 					["0.63:0.44:0.46:0.30:0.50:0.35"] = 278, -- Orgrimmar, Bloodvenom Post, Emerald Sanctuary
+					["0.63:0.44:0.61:0.55:0.57:0.64:0.55:0.73:0.44:0.69:0.32:0.58"] = 633, -- Orgrimmar, Ratchet, Brackenwall Village, Freewind Post, Camp Mojache, Shadowprey Village
 
 					-- Horde: Ratchet (The Barrens)
 					["0.61:0.55:0.61:0.80:0.50:0.76:0.42:0.79"] = 443, -- Ratchet, Gadgetzan, Marshal's Refuge, Cenarion Hold
@@ -1297,6 +1300,7 @@
 					["0.38:0.32:0.63:0.18"] = 158, -- Thunderlord Stronghold, The Stormspire
 					["0.38:0.32:0.44:0.51:0.44:0.67:0.51:0.73:0.66:0.77:0.81:0.77"] = 416, -- Thunderlord Stronghold, Swamprat Post, Shattrath, Stonebreaker Hold, Shadowmoon Village, Altar of Sha'tar
 					["0.38:0.32:0.44:0.51:0.44:0.67:0.51:0.73:0.66:0.77:0.78:0.85"] = 400, -- Thunderlord Stronghold, Swamprat Post, Shattrath, Stonebreaker Hold, Shadowmoon Village, Sanctum of the Stars
+					["0.38:0.32:0.23:0.50:0.44:0.67"] = 297, -- Thunderlord Stronghold, Zabra'jin, Shattrath
 
 					-- Horde: Zabra'jin (Zangarmarsh)
 					["0.23:0.50:0.29:0.62"] = 81, -- Zabra'jin, Garadar
@@ -1519,6 +1523,9 @@
 					["0.50:0.75:0.41:0.73:0.47:0.59:0.51:0.47"] = 475, -- Lakeshire, Stormwind, Ironforge, Refuge Pointe
 					["0.50:0.75:0.41:0.73:0.47:0.65:0.53:0.61:0.51:0.47"] = 474, -- Lakeshire, Stormwind, Thorium Point, Thelsamar, Refuge Pointe
 					["0.50:0.75:0.39:0.80:0.43:0.82"] = 196, -- Lakeshire, Sentinel Hill, Rebel Camp
+
+					-- Alliance: Acherus (Eastern Plaguelands)
+					["0.62:0.34:0.61:0.35:0.58:0.06"] = 385, -- Acherus: The Ebon Hold, Light's Hope Chapel, Shattered Sun Staging Area
 
 					-- Alliance: Light's Hope Chapel (Eastern Plaguelands)
 					["0.61:0.35:0.47:0.59:0.47:0.65:0.41:0.73:0.41:0.93"] = 712, -- Light's Hope Chapel, Ironforge, Thorium Point, Stormwind, Booty Bay
