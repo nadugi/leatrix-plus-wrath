@@ -9455,7 +9455,7 @@
 			end
 
 			-- Create class tables if they don't exist
-			local classList = {"WARRIOR", "PALADIN", "HUNTER", "SHAMAN", "ROGUE", "DRUID", "MAGE", "WARLOCK", "PRIEST"}
+			local classList = {"WARRIOR", "PALADIN", "HUNTER", "SHAMAN", "ROGUE", "DRUID", "MAGE", "WARLOCK", "PRIEST", "DEATHKNIGHT"}
 			for index = 1, #classList do
 				if LeaPlusDB["Cooldowns"][classList[index]] == nil then
 					LeaPlusDB["Cooldowns"][classList[index]] = {}
