@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.118.alpha.6 (6th August 2022)
+-- 	Leatrix Plus 2.5.118.alpha.7 (6th August 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.118.alpha.6"
+	LeaPlusLC["AddonVer"] = "2.5.118.alpha.7"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -7278,7 +7278,7 @@
 				if numEntries == 0 then return end
 				-- Traverse quests in log
 				for i = 1, QUESTS_DISPLAYED do
-					local questIndex = i + FauxScrollFrame_GetOffset(QuestLogListScrollFrame)
+					local questIndex = i + FauxScrollFrame_GetOffset(QuestLogListScrollFrame) -- LeaPlusLC.Wrath - Change Faux to Hybrid
 					if questIndex <= numEntries then
 						-- Get quest title and check
 						local questLogTitle = _G["QuestLogTitle" .. i]
