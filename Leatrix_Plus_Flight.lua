@@ -2900,11 +2900,19 @@
 					--	Alliance: Dragonblight
 					----------------------------------------------------------------------
 
+					-- Alliance: Dragonblight: Fordragon Hold
+					["0.46:0.46:0.42:0.53"] = 74, -- Fordragon Hold, Stars' Rest
+					["0.46:0.46:0.54:0.52:0.49:0.58"] = 118, -- Fordragon Hold, Wyrmrest Temple, Moa'ki
+
 					-- Alliance: Dragonblight: Moa'ki
 					["0.49:0.58:0.42:0.53"] = 55, -- Moa'ki, Stars' Rest
+					["0.42:0.53:0.41:0.43"] = 67, -- Stars' Rest, Valiance Landing Camp
+					["0.49:0.58:0.42:0.53:0.41:0.43"] = 118, -- Moa'ki, Stars' Rest, Valiance Landing Camp
+					["0.41:0.43:0.46:0.46:0.64:0.42:0.72:0.40:0.78:0.38:0.82:0.31"] = 325, -- Valiance Landing Camp, Fordragon Hold, Ebon Watch, The Argent Stand, Zim'Torga, Gundrak
 
 					-- Alliance: Dragonblight: Stars' Rest
 					["0.42:0.53:0.49:0.58"] = 72, -- Stars' Rest, Moa'ki
+					["0.42:0.53:0.46:0.46"] = 82, -- Stars' Rest, Fordragon Hold
 
 					-- Alliance: Dragonblight: Wintergarde Keep
 					["0.60:0.52:0.54:0.52"] = 55, -- Wintergarde Keep, Wyrmrest Temple
@@ -2985,6 +2993,13 @@
 					-- Alliance: The Storm Peaks: K3
 					["0.62:0.36:0.57:0.33"] = 43, -- K3, Frosthold
 					["0.62:0.36:0.64:0.42"] = 44, -- K3, Ebon Watch
+
+					----------------------------------------------------------------------
+					--	Alliance: Wintergrasp
+					----------------------------------------------------------------------
+
+					-- Alliance: Wintergrasp: Valiance Landing Camp
+					["0.41:0.43:0.46:0.46"] = 49, -- Valiance Landing Camp, Fordragon Hold
 
 					----------------------------------------------------------------------
 					--	Alliance: Zul'Drak
