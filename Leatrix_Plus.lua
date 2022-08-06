@@ -7272,8 +7272,8 @@
 			mapButton:SetScript("OnClick", ToggleWorldMap)
 			mapButton:Hide()
 
-			-- Show quest levels
-			hooksecurefunc("QuestLog_Update", function()
+			-- Show quest levels and tracking check marks
+			local function QuestRefreshUpdate()
 				local numEntries, numQuests = GetNumQuestLogEntries()
 				if numEntries == 0 then return end
 				-- Traverse quests in log
@@ -7327,7 +7327,12 @@
 						end
 					end
 				end
-			end)
+			end
+
+			hooksecurefunc("QuestLog_Update", QuestRefreshUpdate)
+			if LeaPlusLC.Wrath then
+				QuestLogListScrollFrame:HookScript("OnScrollRangeChanged", QuestRefreshUpdate)
+			end
 
 			-- ElvUI fixes
 			local function ElvUIFixes()
