@@ -14927,6 +14927,10 @@
 	LeaPlusLC:CfgBtn("ShowWowheadLinksBtn", LeaPlusCB["ShowWowheadLinks"])
 	LeaPlusLC:CfgBtn("ShowFlightTimesBtn", LeaPlusCB["ShowFlightTimes"])
 
+	if LeaPlusLC.Wrath then
+		LeaPlusCB["EnhanceQuestLog"].tiptext = "If checked, the quest log frame will be taller and show quest levels."
+	end
+
 ----------------------------------------------------------------------
 -- 	LC6: Frames
 ----------------------------------------------------------------------
