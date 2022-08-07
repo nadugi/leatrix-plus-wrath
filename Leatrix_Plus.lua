@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.118.alpha.11 (7th August 2022)
+-- 	Leatrix Plus 2.5.118.alpha.12 (7th August 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.118.alpha.11"
+	LeaPlusLC["AddonVer"] = "2.5.118.alpha.12"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -13045,7 +13045,7 @@
 
 		-- Create dropdown placeholder for value (set it using OnShow)
 		local value = dd:CreateFontString(nil, "OVERLAY", "GameFontHighlight")
-		value:SetPoint("LEFT", lt, 26, 2); value:SetPoint("RIGHT", rt, -43, 0); value:SetJustifyH("LEFT")
+		value:SetPoint("LEFT", lt, 26, 2); value:SetPoint("RIGHT", rt, -43, 0); value:SetJustifyH("LEFT"); value:SetWordWrap(false)
 		dd:SetScript("OnShow", function() value:SetText(LeaPlusLC[ddname.."Table"][LeaPlusLC[ddname]]) end)
 
 		-- Create dropdown button (clicking it opens the dropdown list)
@@ -13087,6 +13087,10 @@
 			dditem.f = dditem:CreateFontString(nil, 'ARTWORK', 'GameFontHighlight')
 			dditem.f:SetPoint('LEFT', 16, 0)
 			dditem.f:SetText(items[k])
+
+			dditem.f:SetWordWrap(false)
+			dditem.f:SetJustifyH("LEFT")
+			dditem.f:SetWidth(ddlist:GetWidth()-36)
 
 			dditem.t = dditem:CreateTexture(nil, "BACKGROUND")
 			dditem.t:SetAllPoints()
