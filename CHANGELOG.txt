@@ -1,4 +1,4 @@
-2.5.118.alpha.8 - 6th August 2022
+2.5.118.alpha.9 - 7th August 2022
 - Updated for Wrath of the Lich King Beta.
 - Wrath: Show Wowhead links (Interface) will now show achievement links as well as quest links.
 - Wrath: Show druid power bar is disabled since it's now included in the default UI.

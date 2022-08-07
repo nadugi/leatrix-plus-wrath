@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.118.alpha.8 (6th August 2022)
+-- 	Leatrix Plus 2.5.118.alpha.9 (7th August 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.118.alpha.8"
+	LeaPlusLC["AddonVer"] = "2.5.118.alpha.9"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -7278,7 +7278,12 @@
 				if numEntries == 0 then return end
 				-- Traverse quests in log
 				for i = 1, QUESTS_DISPLAYED do
-					local questIndex = i + FauxScrollFrame_GetOffset(QuestLogListScrollFrame) -- LeaPlusLC.Wrath - Change Faux to Hybrid
+					local questIndex
+					if LeaPlusLC.Wrath then
+						questIndex = i + HybridScrollFrame_GetOffset(QuestLogListScrollFrame)
+					else
+						questIndex = i + FauxScrollFrame_GetOffset(QuestLogListScrollFrame)
+					end
 					if questIndex <= numEntries then
 						-- Get quest title and check
 						local questLogTitle = _G["QuestLogTitle" .. i]
@@ -7287,17 +7292,18 @@
 						if title and level and not isHeader and LeaPlusLC["EnhanceQuestLevels"] == "On" then
 							-- Add level tag if its not a header
 							local levelSuffix = ""
-							if suggestedGroup then
-								if suggestedGroup == LFG_TYPE_DUNGEON then levelSuffix = "D"
-								elseif suggestedGroup == RAID then levelSuffix = "R"
-								elseif suggestedGroup == ELITE then levelSuffix = "+"
-								end
-							end
+							-- Level suffixes not currently being used because it misaligns columns
+							-- if suggestedGroup then
+								-- if suggestedGroup == LFG_TYPE_DUNGEON then levelSuffix = "D"
+								-- elseif suggestedGroup == RAID then levelSuffix = "R"
+								-- elseif suggestedGroup == ELITE then levelSuffix = "+"
+								-- end
+							-- end
 							local questTextFormatted = string.format("  [%d" .. L[levelSuffix] .. "] %s", level, title)
 
 							if LeaPlusLC.Wrath then
 								QuestLogListScrollFrame.buttons[i]:SetText(questTextFormatted)
-								-- (remove questLogTitle variable)
+								-- (remove questLogTitle with wrath value under tracking check mark code below)
 							else
 								questLogTitle:SetText(questTextFormatted)
 							end
