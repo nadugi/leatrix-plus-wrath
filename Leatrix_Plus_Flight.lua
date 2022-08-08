@@ -1386,6 +1386,7 @@
 					["0.60:0.40:0.52:0.38"] = 56, -- Sunreaver's Command, Dalaran
 					["0.60:0.40:0.64:0.42"] = 38, -- Sunreaver's Command, Ebon Watch
 					["0.60:0.40:0.64:0.42:0.69:0.42:0.70:0.55:0.74:0.62"] = 213, -- Sunreaver's Command, Ebon Watch, Light's Breach, Conquest Hold, Apothecary Camp
+					["0.60:0.40:0.64:0.42:0.69:0.42:0.70:0.55:0.74:0.62:0.85:0.73"] = 305, -- Sunreaver's Command, Ebon Watch, Light's Breach, Conquest Hold, Apothecary Camp, New Agamand
 
 					----------------------------------------------------------------------
 					--	Horde: Dalaran
@@ -1418,6 +1419,7 @@
 					["0.52:0.38:0.48:0.44:0.45:0.51:0.29:0.54:0.17:0.53:0.12:0.53"] = 347, -- Dalaran, Kor'koron Vanguard, Agmar's Hammer, Taunka'le Village, Amber Ledge, Transitus Shield
 					["0.52:0.38:0.24:0.40:0.18:0.47"] = 265, -- Dalaran, River's Heart, Bor'gorok Outpost
 					["0.52:0.38:0.24:0.40"] = 212, -- Dalaran, River's Heart
+					["0.52:0.38:0.64:0.42:0.72:0.40:0.78:0.38:0.82:0.31"] = 239, -- Dalaran, Ebon Watch, The Argent Stand, Zim'Torga, Gundrak
 
 					----------------------------------------------------------------------
 					--	Horde: Dragonblight
@@ -1427,24 +1429,34 @@
 					["0.45:0.51:0.48:0.44:0.52:0.38"] = 121, -- Agmar's Hammer, Kor'koron Vanguard, Dalaran
 					["0.45:0.51:0.49:0.58"] = 64, -- Agmar's Hammer, Moa'ki
 					["0.45:0.51:0.48:0.44"] = 65, -- Agmar's Hammer, Kor'koron Vanguard
+					["0.45:0.51:0.54:0.52"] = 52, -- Agmar's Hammer, Wyrmrest Temple
 
 					-- Horde: Dragonblight: Kor'koron Vanguard
 					["0.48:0.44:0.52:0.38"] = 56, -- Kor'koron Vanguard, Dalaran
 					["0.48:0.44:0.52:0.38:0.60:0.40"] = 103, -- Kor'koron Vanguard, Dalaran, Sunreaver's Command
 					["0.48:0.44:0.45:0.51:0.29:0.54"] = 164, -- Kor'koron Vanguard, Agmar's Hammer, Taunka'le Village
+					["0.48:0.44:0.54:0.52"] = 67, -- Kor'koron Vanguard, Wyrmrest Temple
+					["0.48:0.44:0.45:0.51"] = 53, -- Kor'koron Vanguard, Agmar's Hammer
 
 					-- Horde: Dragonblight: Moa'ki
 					["0.49:0.58:0.45:0.51:0.31:0.43:0.24:0.40"] = 255, -- Moa'ki, Agmar's Hammer, Warsong Camp, River's Heart
 					["0.49:0.58:0.52:0.38"] = 123, -- Moa'ki, Dalaran
 					["0.49:0.58:0.45:0.51"] = 65, -- Moa'ki, Agmar's Hammer
+					["0.49:0.58:0.54:0.52"] = 49, -- Moa'ki, Wyrmrest Temple
 
 					-- Horde: Dragonblight: Venomspite
 					["0.59:0.55:0.54:0.52:0.52:0.38"] = 149, -- Venomspite, Wyrmrest Temple, Dalaran
 					["0.59:0.55:0.54:0.52"] = 52, -- Venomspite, Wyrmrest Temple
+					["0.59:0.55:0.49:0.58"] = 83, -- Venomspite, Moa'ki
+					["0.59:0.55:0.45:0.51"] = 133, -- Venomspite, Agmar's Hammer
 
 					-- Horde: Dragonblight: Wyrmrest Temple
 					["0.54:0.52:0.52:0.38"] = 65, -- Wyrmrest Temple, Dalaran
 					["0.54:0.52:0.45:0.51"] = 47, -- Wyrmrest Temple, Agmar's Hammer
+					["0.54:0.52:0.49:0.58"] = 36, -- Wyrmrest Temple, Moa'ki
+					["0.54:0.52:0.59:0.55"] = 35, -- Wyrmrest Temple, Venomspite
+					["0.54:0.52:0.48:0.44"] = 45, -- Wyrmrest Temple, Kor'koron Vanguard
+					["0.54:0.52:0.64:0.42:0.60:0.40"] = 89, -- Wyrmrest Temple, Ebon Watch, Sunreaver's Command
 
 					----------------------------------------------------------------------
 					--	Horde: Grizzly Hills
@@ -1453,11 +1465,14 @@
 					-- Horde: Grizzly Hills: Camp Oneqwah
 					["0.84:0.51:0.70:0.55:0.59:0.55:0.49:0.58:0.29:0.57:0.15:0.57"] = 483, -- Camp Oneqwah, Conquest Hold, Venomspite, Moa'ki, Unu'pe, Warsong Hold
 					["0.84:0.51:0.78:0.38:0.82:0.31"] = 147, -- Camp Oneqwah, Zim'Torga, Gundrak
+					["0.84:0.51:0.70:0.55"] = 96, -- Camp Oneqwah, Conquest Hold
+					["0.84:0.51:0.70:0.55:0.59:0.55"] = 183, -- Camp Oneqwah, Conquest Hold, Venomspite
 
 					-- Horde: Grizzly Hills: Conquest Hold
 					["0.70:0.55:0.74:0.62"] = 57, -- Conquest Hold, Apothecary Camp
 					["0.70:0.55:0.69:0.42:0.64:0.42:0.52:0.38"] = 186, -- Conquest Hold, Light's Breach, Ebon Watch, Dalaran
 					["0.70:0.55:0.84:0.59"] = 85, -- Conquest Hold, Camp Winterhoof
+					["0.70:0.55:0.84:0.51"] = 102, -- Conquest Hold, Camp Oneqwah
 
 					----------------------------------------------------------------------
 					--	Horde: Howling Fjord
@@ -1484,6 +1499,7 @@
 					["0.84:0.59:0.95:0.63"] = 75, -- Camp Winterhoof, Vengeance Landing
 					["0.84:0.59:0.84:0.51:0.69:0.42:0.64:0.42:0.52:0.38"] = 257, -- Camp Winterhoof, Camp Oneqwah, Light's Breach, Ebon Watch, Dalaran
 					["0.84:0.59:0.84:0.51"] = 58, -- Camp Winterhoof, Camp Oneqwah
+					["0.84:0.59:0.84:0.51:0.69:0.42:0.64:0.42:0.52:0.38:0.56:0.36"] = 277, -- Camp Winterhoof, Camp Oneqwah, Light's Breach, Ebon Watch, Dalaran, The Argent Vanguard
 
 					-- Horde: Howling Fjord: Kamagua
 					["0.74:0.71:0.85:0.73"] = 64, -- Kamagua, New Agamand
@@ -1498,6 +1514,7 @@
 					["0.85:0.73:0.74:0.71"] = 77, -- New Agamand, Kamagua
 					["0.85:0.73:0.84:0.59:0.84:0.51"] = 136, -- New Agamand, Camp Winterhoof, Camp Oneqwah
 					["0.85:0.73:0.74:0.62"] = 104, -- New Agamand, Apothecary Camp
+					["0.85:0.73:0.84:0.59"] = 80, -- New Agamand, Camp Winterhoof
 
 					-- Horde: Howling Fjord: Vengeance Landing
 					["0.95:0.63:0.85:0.73"] = 88, -- Vengeance Landing, New Agamand
@@ -1522,6 +1539,7 @@
 					["0.56:0.36:0.52:0.38"] = 32, -- The Argent Vanguard, Dalaran
 					["0.56:0.36:0.52:0.38:0.60:0.40"] = 78, -- The Argent Vanguard, Dalaran, Sunreaver's Command
 					["0.56:0.36:0.52:0.38:0.48:0.44"] = 93, -- The Argent Vanguard, Dalaran, Kor'koron Vanguard
+					["0.56:0.36:0.52:0.38:0.62:0.36"] = 77, -- The Argent Vanguard, Dalaran, K3
 
 					-- Horde: Icecrown: The Shadow Vault
 
@@ -1552,6 +1570,7 @@
 					-- Horde: The Storm Peaks: K3
 					["0.62:0.36:0.52:0.38"] = 72, -- K3, Dalaran
 					["0.62:0.36:0.64:0.42:0.72:0.40"] = 107, -- K3, Ebon Watch, The Argent Stand
+					["0.62:0.36:0.52:0.38:0.56:0.36"] = 94, -- K3, Dalaran, The Argent Vanguard
 
 					-- Horde: The Storm Peaks: Ulduar
 					["0.64:0.19:0.73:0.25"] = 88, -- Ulduar, Camp Tunka'lo
@@ -1588,6 +1607,7 @@
 					["0.82:0.31:0.78:0.38"] = 56, -- Gundrak, Zim'Torga
 					["0.82:0.31:0.78:0.38:0.72:0.40"] = 109, -- Gundrak, Zim'Torga, The Argent Stand
 					["0.82:0.31:0.78:0.38:0.72:0.40:0.64:0.42:0.52:0.38"] = 227, -- Gundrak, Zim'Torga, The Argent Stand, Ebon Watch, Dalaran
+					["0.82:0.31:0.78:0.38:0.84:0.51"] = 138, -- Gundrak, Zim'Torga, Camp Oneqwah
 
 					-- Horde: Zul'Drak: Light's Breach
 					["0.69:0.42:0.64:0.42"] = 41, -- Light's Breach, Ebon Watch
