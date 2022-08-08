@@ -1332,6 +1332,18 @@
 					--	Horde: Borean Tundra
 					----------------------------------------------------------------------
 
+					-- Horde: Borean Tundra: Bor'gorok Outpost
+					["0.18:0.47:0.29:0.54"] = 78, -- Bor'gorok Outpost, Taunka'le Village
+
+					-- Horde: Borean Tundra: Taunka'le Village
+					["0.29:0.54:0.29:0.57"] = 30, -- Taunka'le Village, Unu'pe
+					["0.29:0.54:0.31:0.43"] = 72, -- Taunka'le Village, Warsong Camp
+					["0.29:0.54:0.18:0.47:0.24:0.40"] = 129, -- Taunka'le Village, Bor'gorok Outpost, River's Heart
+					["0.29:0.54:0.45:0.51:0.59:0.55:0.85:0.73"] = 362, -- Taunka'le Village, Agmar's Hammer, Venomspite, New Agamand
+
+					-- Horde: Borean Tundra: Unu'pe
+					["0.29:0.57:0.29:0.54"] = 22, -- Unu'pe, Taunka'le Village
+
 					-- Horde: Borean Tundra: Warsong Hold
 					["0.15:0.57:0.29:0.57:0.49:0.58:0.74:0.71"] = 394, -- Warsong Hold, Unu'pe, Moa'ki, Kamagua
 
@@ -1354,6 +1366,9 @@
 					--	Horde: Dragonblight
 					----------------------------------------------------------------------
 
+					-- Horde: Dragonblight: Moa'ki
+					["0.49:0.58:0.45:0.51:0.31:0.43:0.24:0.40"] = 255, -- Moa'ki, Agmar's Hammer, Warsong Camp, River's Heart
+
 					----------------------------------------------------------------------
 					--	Horde: Grizzly Hills
 					----------------------------------------------------------------------
@@ -1369,16 +1384,32 @@
 
 					-- Horde: Howling Fjord: Apothecary Camp
 					["0.74:0.62:0.74:0.71"] = 54, -- Apothecary Camp, Kamagua
+					["0.74:0.62:0.84:0.59"] = 60, -- Apothecary Camp, Camp Winterhoof
+
+					-- Horde: Howling Fjord: Camp Oneqwah
+					["0.84:0.51:0.84:0.59"] = 49, -- Camp Oneqwah, Camp Winterhoof
 
 					-- Horde: Howling Fjord: Camp Winterhoof
+					["0.84:0.59:0.85:0.73"] = 80, -- Camp Winterhoof, New Agamand
+					["0.84:0.59:0.95:0.63"] = 75, -- Camp Winterhoof, Vengeance Landing
 
 					-- Horde: Howling Fjord: Kamagua
 					["0.74:0.71:0.85:0.73"] = 64, -- Kamagua, New Agamand
 					["0.74:0.71:0.74:0.62:0.70:0.55:0.69:0.42:0.64:0.42:0.52:0.38"] = 288, -- Kamagua, Apothecary Camp, Conquest Hold, Light's Breach, Ebon Watch, Dalaran
 					["0.74:0.71:0.74:0.62:0.84:0.59:0.84:0.51:0.78:0.38"] = 265, -- Kamagua, Apothecary Camp, Camp Winterhoof, Camp Oneqwah, Zim'Torga
+					["0.74:0.71:0.74:0.62"] = 56, -- Kamagua, Apothecary Camp
+					["0.74:0.71:0.85:0.73:0.95:0.63"] = 143, -- Kamagua, New Agamand, Vengeance Landing
 
 					-- Horde: Howling Fjord: New Agamand
 					["0.85:0.73:0.74:0.62:0.70:0.55:0.69:0.42:0.64:0.42:0.52:0.38"] = 335, -- New Agamand, Apothecary Camp, Conquest Hold, Light's Breach, Ebon Watch, Dalaran
+					["0.85:0.73:0.95:0.63"] = 80, -- New Agamand, Vengeance Landing
+					["0.85:0.73:0.74:0.71"] = 77, -- New Agamand, Kamagua
+					["0.85:0.73:0.84:0.59:0.84:0.51"] = 136, -- New Agamand, Camp Winterhoof, Camp Oneqwah
+
+					-- Horde: Howling Fjord: Vengeance Landing
+					["0.95:0.63:0.85:0.73"] = 88, -- Vengeance Landing, New Agamand
+					["0.95:0.63:0.85:0.73:0.74:0.71"] = 163, -- Vengeance Landing, New Agamand, Kamagua
+					["0.95:0.63:0.84:0.59:0.74:0.62:0.59:0.55:0.49:0.58"] = 330, -- Vengeance Landing, Camp Winterhoof, Apothecary Camp, Venomspite, Moa'ki
 
 					----------------------------------------------------------------------
 					--	Horde: Icecrown
@@ -1390,6 +1421,11 @@
 					----------------------------------------------------------------------
 					--	Horde: Sholazar Basin
 					----------------------------------------------------------------------
+
+					-- Horde: Sholazar Basin: River's Heart
+					["0.24:0.40:0.31:0.43"] = 129, -- River's Heart, Warsong Camp
+					["0.24:0.40:0.18:0.47:0.29:0.54"] = 209, -- River's Heart, Bor'gorok Outpost, Taunka'le Village
+					["0.24:0.40:0.52:0.38:0.64:0.42:0.69:0.42:0.84:0.51"] = 626, -- River's Heart, Dalaran, Ebon Watch, Light's Breach, Camp Oneqwah
 
 					----------------------------------------------------------------------
 					--	Horde: The Storm Peaks
@@ -1411,7 +1447,9 @@
 					--	Horde: Wintergrasp
 					----------------------------------------------------------------------
 
-					-- Horde: Wintergrasp: 
+					-- Horde: Wintergrasp: Warsong Camp
+					["0.31:0.43:0.24:0.40"] = 77, -- Warsong Camp, River's Heart
+					["0.31:0.43:0.29:0.54"] = 81, -- Warsong Camp, Taunka'le Village
 
 					----------------------------------------------------------------------
 					--	Horde: Zul'Drak
