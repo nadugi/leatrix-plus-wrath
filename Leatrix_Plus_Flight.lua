@@ -1332,13 +1332,36 @@
 					--	Horde: Borean Tundra
 					----------------------------------------------------------------------
 
+					-- Horde: Borean Tundra: Warsong Hold
+					["0.15:0.57:0.29:0.57:0.49:0.58:0.74:0.71"] = 394, -- Warsong Hold, Unu'pe, Moa'ki, Kamagua
+
 					----------------------------------------------------------------------
 					--	Horde: Crystalsong Forest
 					----------------------------------------------------------------------
 
 					----------------------------------------------------------------------
+					--	Horde: Dalaran
+					----------------------------------------------------------------------
+
+					-- Horde: Dalaran
+					["0.52:0.38:0.56:0.36"] = 33, -- Dalaran, The Argent Vanguard
+					["0.52:0.38:0.62:0.36"] = 55, -- Dalaran, K3
+					["0.52:0.38:0.64:0.42:0.69:0.42:0.70:0.55:0.74:0.62:0.85:0.73"] = 348, -- Dalaran, Ebon Watch, Light's Breach, Conquest Hold, Apothecary Camp, New Agamand
+					["0.52:0.38:0.64:0.42:0.69:0.42:0.70:0.55:0.74:0.62:0.74:0.71"] = 310, -- Dalaran, Ebon Watch, Light's Breach, Conquest Hold, Apothecary Camp, Kamagua
+					["0.52:0.38:0.64:0.42:0.72:0.40:0.78:0.38"] = 186, -- Dalaran, Ebon Watch, The Argent Stand, Zim'Torga
+
+					----------------------------------------------------------------------
 					--	Horde: Dragonblight
 					----------------------------------------------------------------------
+
+					----------------------------------------------------------------------
+					--	Horde: Grizzly Hills
+					----------------------------------------------------------------------
+
+					-- Horde: Grizzly Hills: Camp Oneqwah
+
+					-- Horde: Grizzly Hills: Conquest Hold
+					["0.70:0.55:0.74:0.62"] = 57, -- Conquest Hold, Apothecary Camp
 
 					----------------------------------------------------------------------
 					--	Horde: Howling Fjord
@@ -1351,21 +1374,18 @@
 
 					-- Horde: Howling Fjord: Kamagua
 					["0.74:0.71:0.85:0.73"] = 64, -- Kamagua, New Agamand
+					["0.74:0.71:0.74:0.62:0.70:0.55:0.69:0.42:0.64:0.42:0.52:0.38"] = 288, -- Kamagua, Apothecary Camp, Conquest Hold, Light's Breach, Ebon Watch, Dalaran
+					["0.74:0.71:0.74:0.62:0.84:0.59:0.84:0.51:0.78:0.38"] = 265, -- Kamagua, Apothecary Camp, Camp Winterhoof, Camp Oneqwah, Zim'Torga
 
 					-- Horde: Howling Fjord: New Agamand
-
-					----------------------------------------------------------------------
-					--	Horde: Grizzly Hills
-					----------------------------------------------------------------------
-
-					-- Horde: Grizzly Hills: Camp Oneqwah
-
-					-- Horde: Grizzly Hills: Conquest Hold
-					["0.70:0.55:0.74:0.62"] = 57, -- Conquest Hold, Apothecary Camp
+					["0.85:0.73:0.74:0.62:0.70:0.55:0.69:0.42:0.64:0.42:0.52:0.38"] = 335, -- New Agamand, Apothecary Camp, Conquest Hold, Light's Breach, Ebon Watch, Dalaran
 
 					----------------------------------------------------------------------
 					--	Horde: Icecrown
 					----------------------------------------------------------------------
+
+					-- Horde: Icecrown: The Argent Vanguard
+					["0.56:0.36:0.52:0.38"] = 32, -- The Argent Vanguard, Dalaran
 
 					----------------------------------------------------------------------
 					--	Horde: Sholazar Basin
@@ -1380,6 +1400,9 @@
 
 					-- Horde: The Storm Peaks: Camp Tunka'lo
 					["0.73:0.25:0.78:0.38:0.82:0.31"] = 152, -- Camp Tunka'lo, Zim'Torga, Gundrak
+
+					-- Horde: The Storm Peaks: K3
+					["0.62:0.36:0.52:0.38"] = 72, -- K3, Dalaran
 
 					-- Horde: The Storm Peaks: Ulduar
 					["0.64:0.19:0.73:0.25"] = 88, -- Ulduar, Camp Tunka'lo
@@ -1396,19 +1419,31 @@
 
 					-- Horde: Zul'Drak: The Argent Stand
 					["0.72:0.40:0.69:0.42"] = 25, -- The Argent Stand, Light's Breach
+					["0.72:0.40:0.78:0.38"] = 42, -- The Argent Stand, Zim'Torga
+					["0.72:0.40:0.78:0.38:0.82:0.31"] = 95, -- The Argent Stand, Zim'Torga, Gundrak
+					["0.72:0.40:0.64:0.42"] = 53, -- The Argent Stand, Ebon Watch
 
 					-- Horde: Zul'Drak: Ebon Watch
 					["0.64:0.42:0.69:0.42"] = 45, -- Ebon Watch, Light's Breach
+					["0.64:0.42:0.72:0.40"] = 65, -- Ebon Watch, The Argent Stand
+					["0.64:0.42:0.72:0.40:0.78:0.38"] = 105, -- Ebon Watch, The Argent Stand, Zim'Torga
+					["0.64:0.42:0.52:0.38"] = 68, -- Ebon Watch, Dalaran
 
 					-- Horde: Zul'Drak: Gundrak
 					["0.82:0.31:0.78:0.38"] = 56, -- Gundrak, Zim'Torga
+					["0.82:0.31:0.78:0.38:0.72:0.40"] = 109, -- Gundrak, Zim'Torga, The Argent Stand
 
 					-- Horde: Zul'Drak: Light's Breach
 					["0.69:0.42:0.64:0.42"] = 41, -- Light's Breach, Ebon Watch
 					["0.69:0.42:0.70:0.55"] = 75, -- Light's Breach, Conquest Hold
+					["0.69:0.42:0.72:0.40"] = 44, -- Light's Breach, The Argent Stand
 
 					-- Horde: Zul'Drak: Zim'Torga
 					["0.78:0.38:0.72:0.40"] = 54, -- Zim'Torga, The Argent Stand
+					["0.78:0.38:0.72:0.40:0.69:0.42"] = 77, -- Zim'Torga, The Argent Stand, Light's Breach
+					["0.78:0.38:0.72:0.40:0.64:0.42"] = 105, -- Zim'Torga, The Argent Stand, Ebon Watch
+					["0.78:0.38:0.72:0.40:0.64:0.42:0.54:0.52:0.45:0.51:0.29:0.54:0.15:0.57"] = 459, -- Zim'Torga, The Argent Stand, Ebon Watch, Wyrmrest Temple, Agmar's Hammer, Taunka'le Village, Warsong Hold
+					["0.78:0.38:0.72:0.40:0.64:0.42:0.52:0.38:0.24:0.40:0.18:0.47"] = 424, -- Zim'Torga, The Argent Stand, Ebon Watch, Dalaran, River's Heart, Bor'gorok Outpost
 
 				},
 
