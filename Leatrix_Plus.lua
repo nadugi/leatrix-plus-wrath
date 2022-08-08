@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.118.alpha.13 (8th August 2022)
+-- 	Leatrix Plus 2.5.118.alpha.14 (8th August 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.118.alpha.13"
+	LeaPlusLC["AddonVer"] = "2.5.118.alpha.14"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -1403,17 +1403,19 @@
 				end
 			end)
 
-			-- Show battleground name in battfield frame labels
-			hooksecurefunc(BattlefieldFrame, "Show", function()
-				if LeaPlusLC["AutomateGossip"] == "On" then
-					C_Timer.After(0.01, function()
-						local localizedName = GetBattlegroundInfo()
-						if localizedName then
-							BattlefieldFrameFrameLabel:SetText(localizedName)
-						end
-					end)
-				end
-			end)
+			-- Show battleground name in battfield frame labels (BCC only, not used in Wrath)
+			if not LeaPlusLC.Wrath then
+				hooksecurefunc(BattlefieldFrame, "Show", function()
+					if LeaPlusLC["AutomateGossip"] == "On" then
+						C_Timer.After(0.01, function()
+							local localizedName = GetBattlegroundInfo()
+							if localizedName then
+								BattlefieldFrameFrameLabel:SetText(localizedName)
+							end
+						end)
+					end
+				end)
+			end
 
 		end
 
