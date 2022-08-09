@@ -1350,6 +1350,8 @@
 					["0.18:0.47:0.24:0.40:0.52:0.38"] = 251, -- Bor'gorok Outpost, River's Heart, Dalaran
 					["0.18:0.47:0.24:0.40"] = 58, -- Bor'gorok Outpost, River's Heart
 					["0.18:0.47:0.17:0.53"] = 57, -- Bor'gorok Outpost, Amber Ledge
+					["0.18:0.47:0.17:0.53:0.12:0.53"] = 92, -- Bor'gorok Outpost, Amber Ledge, Transitus Shield
+					["0.18:0.47:0.24:0.40:0.52:0.38:0.56:0.36"] = 273, -- Bor'gorok Outpost, River's Heart, Dalaran, The Argent Vanguard
 
 					-- Horde: Borean Tundra: Taunka'le Village
 					["0.29:0.54:0.29:0.57"] = 30, -- Taunka'le Village, Unu'pe
@@ -1364,6 +1366,8 @@
 					["0.12:0.53:0.17:0.53:0.29:0.54:0.45:0.51:0.48:0.44:0.52:0.38"] = 216, -- Transitus Shield, Amber Ledge, Taunka'le Village, Agmar's Hammer, Kor'koron Vanguard, Dalaran
 					["0.12:0.53:0.17:0.53"] = 31, -- Transitus Shield, Amber Ledge
 					["0.12:0.53:0.17:0.53:0.18:0.47:0.24:0.40"] = 90, -- Transitus Shield, Amber Ledge, Bor'gorok Outpost, River's Heart
+					["0.12:0.53:0.17:0.53:0.18:0.47"] = 52, -- Transitus Shield, Amber Ledge, Bor'gorok Outpost
+					["0.12:0.53:0.17:0.53:0.29:0.54:0.45:0.51:0.48:0.44:0.52:0.38:0.62:0.36:0.73:0.25"] = 306, -- Transitus Shield, Amber Ledge, Taunka'le Village, Agmar's Hammer, Kor'koron Vanguard, Dalaran, K3, Camp Tunka'lo
 
 					-- Horde: Borean Tundra: Unu'pe
 					["0.29:0.57:0.29:0.54"] = 22, -- Unu'pe, Taunka'le Village
@@ -1420,6 +1424,10 @@
 					["0.52:0.38:0.24:0.40:0.18:0.47"] = 265, -- Dalaran, River's Heart, Bor'gorok Outpost
 					["0.52:0.38:0.24:0.40"] = 212, -- Dalaran, River's Heart
 					["0.52:0.38:0.64:0.42:0.72:0.40:0.78:0.38:0.82:0.31"] = 239, -- Dalaran, Ebon Watch, The Argent Stand, Zim'Torga, Gundrak
+					["0.52:0.38:0.64:0.42:0.69:0.42"] = 126, -- Dalaran, Ebon Watch, Light's Breach
+					["0.52:0.38:0.62:0.36:0.73:0.25"] = 145, -- Dalaran, K3, Camp Tunka'lo
+					["0.52:0.38:0.62:0.36:0.60:0.25"] = 130, -- Dalaran, K3, Grom'arsh Crash-Site, Grom'arsh Crash-Site
+					["0.52:0.38:0.31:0.43"] = 161, -- Dalaran, Warsong Camp
 
 					----------------------------------------------------------------------
 					--	Horde: Dragonblight
@@ -1540,6 +1548,9 @@
 					["0.56:0.36:0.52:0.38:0.60:0.40"] = 78, -- The Argent Vanguard, Dalaran, Sunreaver's Command
 					["0.56:0.36:0.52:0.38:0.48:0.44"] = 93, -- The Argent Vanguard, Dalaran, Kor'koron Vanguard
 					["0.56:0.36:0.52:0.38:0.62:0.36"] = 77, -- The Argent Vanguard, Dalaran, K3
+					["0.56:0.36:0.52:0.34:0.31:0.43"] = 186, -- The Argent Vanguard, Crusaders' Pinnacle, Warsong Camp
+					["0.56:0.36:0.52:0.38:0.64:0.42"] = 98, -- The Argent Vanguard, Dalaran, Ebon Watch
+					["0.56:0.36:0.52:0.38:0.24:0.40"] = 232, -- The Argent Vanguard, Dalaran, River's Heart
 
 					-- Horde: Icecrown: The Shadow Vault
 
@@ -1556,6 +1567,7 @@
 					["0.24:0.40:0.18:0.47:0.15:0.57"] = 201, -- River's Heart, Bor'gorok Outpost, Warsong Hold
 					["0.24:0.40:0.18:0.47:0.17:0.53"] = 177, -- River's Heart, Bor'gorok Outpost, Amber Ledge
 					["0.24:0.40:0.28:0.28"] = 140, -- River's Heart, Death's Rise
+					["0.24:0.40:0.18:0.47:0.17:0.53:0.12:0.53"] = 231, -- River's Heart, Bor'gorok Outpost, Amber Ledge, Transitus Shield
 
 					----------------------------------------------------------------------
 					--	Horde: The Storm Peaks
@@ -1566,6 +1578,10 @@
 
 					-- Horde: The Storm Peaks: Camp Tunka'lo
 					["0.73:0.25:0.78:0.38:0.82:0.31"] = 152, -- Camp Tunka'lo, Zim'Torga, Gundrak
+					["0.73:0.25:0.62:0.36:0.52:0.38"] = 186, -- Camp Tunka'lo, K3, Dalaran
+
+					-- Horde: The Storm Peaks: Grom'arsh Crash-Site
+					["0.60:0.25:0.56:0.36:0.52:0.38"] = 111, -- Grom'arsh Crash-Site, The Argent Vanguard, Dalaran
 
 					-- Horde: The Storm Peaks: K3
 					["0.62:0.36:0.52:0.38"] = 72, -- K3, Dalaran
@@ -1582,6 +1598,8 @@
 					-- Horde: Wintergrasp: Warsong Camp
 					["0.31:0.43:0.24:0.40"] = 77, -- Warsong Camp, River's Heart
 					["0.31:0.43:0.29:0.54"] = 81, -- Warsong Camp, Taunka'le Village
+					["0.31:0.43:0.52:0.38"] = 141, -- Warsong Camp, Dalaran
+					["0.31:0.43:0.24:0.40:0.18:0.47"] = 131, -- Warsong Camp, River's Heart, Bor'gorok Outpost
 
 					----------------------------------------------------------------------
 					--	Horde: Zul'Drak
@@ -1602,6 +1620,7 @@
 					["0.64:0.42:0.52:0.38"] = 68, -- Ebon Watch, Dalaran
 					["0.64:0.42:0.62:0.36"] = 41, -- Ebon Watch, K3
 					["0.64:0.42:0.69:0.42:0.70:0.55:0.74:0.62"] = 175, -- Ebon Watch, Light's Breach, Conquest Hold, Apothecary Camp
+					["0.64:0.42:0.52:0.38:0.56:0.36"] = 89, -- Ebon Watch, Dalaran, The Argent Vanguard
 
 					-- Horde: Zul'Drak: Gundrak
 					["0.82:0.31:0.78:0.38"] = 56, -- Gundrak, Zim'Torga
@@ -1613,6 +1632,7 @@
 					["0.69:0.42:0.64:0.42"] = 41, -- Light's Breach, Ebon Watch
 					["0.69:0.42:0.70:0.55"] = 75, -- Light's Breach, Conquest Hold
 					["0.69:0.42:0.72:0.40"] = 44, -- Light's Breach, The Argent Stand
+					["0.69:0.42:0.64:0.42:0.52:0.38"] = 107, -- Light's Breach, Ebon Watch, Dalaran
 
 					-- Horde: Zul'Drak: Zim'Torga
 					["0.78:0.38:0.72:0.40"] = 54, -- Zim'Torga, The Argent Stand
