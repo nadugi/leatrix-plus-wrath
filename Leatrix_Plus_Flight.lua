@@ -3250,12 +3250,21 @@
 					--	Alliance: Crystalsong Forest
 					----------------------------------------------------------------------
 
-					-- Alliance: Crystalsong Forest: Dalaran
-					["0.52:0.38:0.54:0.52"] = 122, -- Dalaran, Wyrmrest Temple
-
 					-- Alliance: Crystalsong Forest: Windrunner's Overlook
 					["0.59:0.43:0.64:0.42"] = 46, -- Windrunner's Overlook, Ebon Watch
 					["0.59:0.43:0.62:0.36"] = 47, -- Windrunner's Overlook, K3
+					["0.59:0.43:0.52:0.38"] = 48, -- Windrunner's Overlook, Dalaran
+
+					----------------------------------------------------------------------
+					--	Alliance: Dalaran
+					----------------------------------------------------------------------
+
+					-- Alliance: Dalaran
+					["0.52:0.38:0.54:0.52"] = 122, -- Dalaran, Wyrmrest Temple
+					["0.52:0.38:0.59:0.43:0.60:0.52"] = 128, -- Dalaran, Windrunner's Overlook, Wintergarde Keep
+					["0.52:0.38:0.59:0.43:0.60:0.52:0.76:0.67:0.88:0.72"] = 317, -- Dalaran, Windrunner's Overlook, Wintergarde Keep, Westguard Keep, Valgarde Port
+					["0.52:0.38:0.59:0.43:0.60:0.52:0.73:0.54"] = 199, -- Dalaran, Windrunner's Overlook, Wintergarde Keep, Amberpine Lodge
+					["0.52:0.38:0.64:0.42:0.72:0.40:0.83:0.46:0.88:0.60"] = 301, -- Dalaran, Ebon Watch, The Argent Stand, Westfall Brigade, Fort Wildervar
 
 					----------------------------------------------------------------------
 					--	Alliance: Dragonblight
@@ -3267,16 +3276,17 @@
 
 					-- Alliance: Dragonblight: Moa'ki
 					["0.49:0.58:0.42:0.53"] = 55, -- Moa'ki, Stars' Rest
-					["0.42:0.53:0.41:0.43"] = 67, -- Stars' Rest, Valiance Landing Camp
 					["0.49:0.58:0.42:0.53:0.41:0.43"] = 118, -- Moa'ki, Stars' Rest, Valiance Landing Camp
-					["0.41:0.43:0.46:0.46:0.64:0.42:0.72:0.40:0.78:0.38:0.82:0.31"] = 325, -- Valiance Landing Camp, Fordragon Hold, Ebon Watch, The Argent Stand, Zim'Torga, Gundrak
+					["0.49:0.58:0.52:0.38"] = 123, -- Moa'ki, Dalaran
 
 					-- Alliance: Dragonblight: Stars' Rest
 					["0.42:0.53:0.49:0.58"] = 72, -- Stars' Rest, Moa'ki
 					["0.42:0.53:0.46:0.46"] = 82, -- Stars' Rest, Fordragon Hold
+					["0.42:0.53:0.41:0.43"] = 67, -- Stars' Rest, Valiance Landing Camp
 
 					-- Alliance: Dragonblight: Wintergarde Keep
 					["0.60:0.52:0.54:0.52"] = 55, -- Wintergarde Keep, Wyrmrest Temple
+					["0.60:0.52:0.59:0.43:0.52:0.38"] = 119, -- Wintergarde Keep, Windrunner's Overlook, Dalaran
 
 					-- Alliance: Dragonblight: Wyrmrest Temple
 					["0.54:0.52:0.60:0.52"] = 36, -- Wyrmrest Temple, Wintergarde Keep
@@ -3291,6 +3301,7 @@
 					["0.73:0.54:0.76:0.67:0.74:0.71"] = 134, -- Amberpine Lodge, Westguard Keep, Kamagua
 					["0.73:0.54:0.76:0.67:0.88:0.72"] = 152, -- Amberpine Lodge, Westguard Keep, Valgarde Port
 					["0.73:0.54:0.88:0.60"] = 117, -- Amberpine Lodge, Fort Wildervar
+					["0.73:0.54:0.69:0.42:0.64:0.42:0.52:0.38"] = 173, -- Amberpine Lodge, Light's Breach, Ebon Watch, Dalaran
 
 					-- Alliance: Grizzly Hills: Westfall Brigade
 					["0.83:0.46:0.73:0.54"] = 79, -- Westfall Brigade, Amberpine Lodge
@@ -3322,6 +3333,7 @@
 					["0.88:0.72:0.74:0.71"] = 96, -- Valgarde Port, Kamagua
 					["0.88:0.72:0.76:0.67:0.73:0.54"] = 144, -- Valgarde Port, Westguard Keep, Amberpine Lodge
 					["0.88:0.72:0.88:0.60:0.83:0.46"] = 168, -- Valgarde Port, Fort Wildervar, Westfall Brigade
+					["0.88:0.72:0.74:0.71:0.49:0.58"] = 290, -- Valgarde Port, Kamagua, Moa'ki
 
 					-- Alliance: Howling Fjord: Westguard Keep
 					["0.76:0.67:0.74:0.71"] = 52, -- Westguard Keep, Kamagua
@@ -3354,6 +3366,7 @@
 					-- Alliance: The Storm Peaks: K3
 					["0.62:0.36:0.57:0.33"] = 43, -- K3, Frosthold
 					["0.62:0.36:0.64:0.42"] = 44, -- K3, Ebon Watch
+					["0.62:0.36:0.59:0.43"] = 54, -- K3, Windrunner's Overlook
 
 					----------------------------------------------------------------------
 					--	Alliance: Wintergrasp
@@ -3361,6 +3374,7 @@
 
 					-- Alliance: Wintergrasp: Valiance Landing Camp
 					["0.41:0.43:0.46:0.46"] = 49, -- Valiance Landing Camp, Fordragon Hold
+					["0.41:0.43:0.46:0.46:0.64:0.42:0.72:0.40:0.78:0.38:0.82:0.31"] = 325, -- Valiance Landing Camp, Fordragon Hold, Ebon Watch, The Argent Stand, Zim'Torga, Gundrak
 
 					----------------------------------------------------------------------
 					--	Alliance: Zul'Drak
