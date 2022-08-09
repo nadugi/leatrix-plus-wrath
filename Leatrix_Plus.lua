@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.118.alpha.18 (9th August 2022)
+-- 	Leatrix Plus 2.5.118.alpha.19 (9th August 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.118.alpha.18"
+	LeaPlusLC["AddonVer"] = "2.5.118.alpha.19"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -6742,8 +6742,13 @@
 				local function ElvUIFixes()
 					local E = unpack(ElvUI)
 					if E.private.skins.blizzard.enable and E.private.skins.blizzard.tradeskill then
-						regions[2]:Hide()
-						regions[3]:Hide()
+						if LeaPlusLC.Wrath then
+							regions[3]:Hide()
+							regions[4]:Hide()
+						else
+							regions[2]:Hide()
+							regions[3]:Hide()
+						end
 						RecipeInset:Hide()
 						DetailsInset:Hide()
 						_G["TradeSkillFrame"]:SetHeight(512 + tall)

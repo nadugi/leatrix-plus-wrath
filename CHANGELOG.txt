@@ -1,4 +1,4 @@
-2.5.118.alpha.18 - 9th August 2022
+2.5.118.alpha.19 - 9th August 2022
 - If you use 'Automate quests' ('Automation') with a Mac, you can now assign the override key to be the command key if you wish.
 - Updated for Wrath of the Lich King Beta.
 - Wrath: Show Wowhead links (Interface) will now show achievement links as well as quest links.
