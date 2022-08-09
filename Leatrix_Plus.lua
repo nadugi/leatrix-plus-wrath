@@ -7344,28 +7344,30 @@
 			end
 
 			-- ElvUI fixes
-			local function ElvUIFixes()
-				-- Unpack ElvUI engine
-				local E = unpack(ElvUI)
-				if E.private.skins.blizzard.enable and E.private.skins.blizzard.quest then
-					-- Skin map button
-					_G.LeaPlusGlobalMapButton = logMapButton
-					E:GetModule("Skins"):HandleButton(_G.LeaPlusGlobalMapButton)
-				end
-			end
-
-			-- Run ElvUI fixes when ElvUI has loaded
-			if IsAddOnLoaded("ElvUI") then
-				ElvUIFixes()
-			else
-				local waitFrame = CreateFrame("FRAME")
-				waitFrame:RegisterEvent("ADDON_LOADED")
-				waitFrame:SetScript("OnEvent", function(self, event, arg1)
-					if arg1 == "ElvUI" then
-						ElvUIFixes()
-						waitFrame:UnregisterAllEvents()
+			if not LeaPlusLC.Wrath then
+				local function ElvUIFixes()
+					-- Unpack ElvUI engine
+					local E = unpack(ElvUI)
+					if E.private.skins.blizzard.enable and E.private.skins.blizzard.quest then
+						-- Skin map button
+						_G.LeaPlusGlobalMapButton = logMapButton
+						E:GetModule("Skins"):HandleButton(_G.LeaPlusGlobalMapButton)
 					end
-				end)
+				end
+
+				-- Run ElvUI fixes when ElvUI has loaded
+				if IsAddOnLoaded("ElvUI") then
+					ElvUIFixes()
+				else
+					local waitFrame = CreateFrame("FRAME")
+					waitFrame:RegisterEvent("ADDON_LOADED")
+					waitFrame:SetScript("OnEvent", function(self, event, arg1)
+						if arg1 == "ElvUI" then
+							ElvUIFixes()
+							waitFrame:UnregisterAllEvents()
+						end
+					end)
+				end
 			end
 
 			-- Create configuration panel
