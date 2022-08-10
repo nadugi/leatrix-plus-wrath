@@ -3255,6 +3255,8 @@
 					["0.22:0.61:0.21:0.49"] = 76, -- Valiance Keep, Fizzcrank Airstrip
 					["0.22:0.61:0.17:0.53:0.12:0.53"] = 99, -- Valiance Keep, Amber Ledge, Transitus Shield
 					["0.22:0.61:0.42:0.53:0.46:0.46:0.52:0.38"] = 285, -- Valiance Keep, Stars' Rest, Fordragon Hold, Dalaran
+					["0.22:0.61:0.29:0.57:0.49:0.58:0.74:0.71:0.88:0.72"] = 445, -- Valiance Keep, Unu'pe, Moa'ki, Kamagua, Valgarde Port
+					["0.22:0.61:0.29:0.57:0.49:0.58:0.60:0.52:0.73:0.54:0.88:0.60"] = 450, -- Valiance Keep, Unu'pe, Moa'ki, Wintergarde Keep, Amberpine Lodge, Fort Wildervar
 
 					----------------------------------------------------------------------
 					--	Alliance: Crystalsong Forest
@@ -3288,6 +3290,8 @@
 					["0.52:0.38:0.59:0.43"] = 53, -- Dalaran, Windrunner's Overlook
 					["0.52:0.38:0.46:0.46:0.42:0.53:0.29:0.57"] = 270, -- Dalaran, Fordragon Hold, Stars' Rest, Unu'pe
 					["0.52:0.38:0.64:0.42:0.72:0.40:0.78:0.38:0.82:0.31"] = 239, -- Dalaran, Ebon Watch, The Argent Stand, Zim'Torga, Gundrak
+					["0.52:0.38:0.56:0.36:0.57:0.33"] = 72, -- Dalaran, The Argent Vanguard, Frosthold
+					["0.52:0.38:0.46:0.46:0.42:0.53:0.22:0.61"] = 302, -- Dalaran, Fordragon Hold, Stars' Rest, Valiance Keep
 
 					----------------------------------------------------------------------
 					--	Alliance: Dragonblight
@@ -3362,6 +3366,8 @@
 					["0.88:0.60:0.73:0.54"] = 97, -- Fort Wildervar, Amberpine Lodge
 					["0.88:0.60:0.83:0.46:0.78:0.38"] = 170, -- Fort Wildervar, Westfall Brigade, Zim'Torga
 					["0.88:0.60:0.83:0.46:0.78:0.38:0.82:0.31"] = 223, -- Fort Wildervar, Westfall Brigade, Zim'Torga, Gundrak
+					["0.88:0.60:0.73:0.54:0.60:0.52:0.46:0.46:0.41:0.43:0.24:0.40"] = 463, -- Fort Wildervar, Amberpine Lodge, Wintergarde Keep, Fordragon Hold, Valiance Landing Camp, River's Heart
+					["0.88:0.60:0.73:0.54:0.69:0.42:0.64:0.42:0.52:0.38"] = 267, -- Fort Wildervar, Amberpine Lodge, Light's Breach, Ebon Watch, Dalaran
 
 					-- Alliance: Howling Fjord: Kamagua
 					["0.74:0.71:0.76:0.67"] = 37, -- Kamagua, Westguard Keep
@@ -3380,6 +3386,7 @@
 					["0.88:0.72:0.74:0.71:0.49:0.58"] = 290, -- Valgarde Port, Kamagua, Moa'ki
 					["0.88:0.72:0.76:0.67:0.60:0.52:0.42:0.53:0.22:0.61"] = 455, -- Valgarde Port, Westguard Keep, Wintergarde Keep, Stars' Rest, Valiance Keep
 					["0.88:0.72:0.76:0.67:0.73:0.54:0.69:0.42:0.64:0.42:0.52:0.38"] = 315, -- Valgarde Port, Westguard Keep, Amberpine Lodge, Light's Breach, Ebon Watch, Dalaran
+					["0.88:0.72:0.88:0.60:0.83:0.46:0.78:0.38"] = 241, -- Valgarde Port, Fort Wildervar, Westfall Brigade, Zim'Torga
 
 					-- Alliance: Howling Fjord: Westguard Keep
 					["0.76:0.67:0.74:0.71"] = 52, -- Westguard Keep, Kamagua
@@ -3402,6 +3409,7 @@
 					-- Alliance: Sholazar Basin: River's Heart
 					["0.24:0.40:0.21:0.49"] = 104, -- River's Heart, Fizzcrank Airstrip
 					["0.24:0.40:0.52:0.38"] = 302, -- River's Heart, Dalaran
+					["0.24:0.40:0.41:0.43:0.46:0.46:0.60:0.52:0.73:0.54:0.88:0.60"] = 705, -- River's Heart, Valiance Landing Camp, Fordragon Hold, Wintergarde Keep, Amberpine Lodge, Fort Wildervar
 
 					----------------------------------------------------------------------
 					--	Alliance: The Storm Peaks
@@ -3410,6 +3418,7 @@
 					-- Alliance: The Storm Peaks: Frosthold
 					["0.57:0.33:0.56:0.36:0.52:0.34"] = 61, -- Frosthold, The Argent Vanguard, Crusaders' Pinnacle
 					["0.57:0.33:0.62:0.36"] = 49, -- Frosthold, K3
+					["0.57:0.33:0.56:0.36:0.52:0.38"] = 64, -- Frosthold, The Argent Vanguard, Dalaran
 
 					-- Alliance: The Storm Peaks: K3
 					["0.62:0.36:0.57:0.33"] = 43, -- K3, Frosthold
@@ -3458,6 +3467,7 @@
 					["0.78:0.38:0.83:0.46:0.88:0.60:0.88:0.72"] = 215, -- Zim'Torga, Westfall Brigade, Fort Wildervar, Valgarde Port
 					["0.78:0.38:0.72:0.40"] = 54, -- Zim'Torga, The Argent Stand
 					["0.78:0.38:0.72:0.40:0.64:0.42:0.52:0.38"] = 173, -- Zim'Torga, The Argent Stand, Ebon Watch, Dalaran
+					["0.78:0.38:0.72:0.40:0.64:0.42:0.54:0.52:0.42:0.53:0.22:0.61"] = 388, -- Zim'Torga, The Argent Stand, Ebon Watch, Wyrmrest Temple, Stars' Rest, Valiance Keep
 
 				},
 
