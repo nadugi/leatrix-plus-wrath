@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.118.alpha.23 (10th August 2022)
+-- 	Leatrix Plus 2.5.118 (10th August 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.118.alpha.23"
+	LeaPlusLC["AddonVer"] = "2.5.118"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -7247,6 +7247,7 @@
 				logMapButton:SetPoint("LEFT", QuestFramePushQuestButton, "RIGHT", -3, 0)
 				logMapButton:SetSize(100, 21)
 				logMapButton:SetScript("OnClick", ToggleWorldMap)
+				LeaPlusLC.logMapButton = logMapButton -- needed for ElvUI fix and can be removed in Wrath
 			end
 
 			-- Position and size close button
@@ -7359,7 +7360,7 @@
 					local E = unpack(ElvUI)
 					if E.private.skins.blizzard.enable and E.private.skins.blizzard.quest then
 						-- Skin map button
-						_G.LeaPlusGlobalMapButton = logMapButton
+						_G.LeaPlusGlobalMapButton = LeaPlusLC.logMapButton
 						E:GetModule("Skins"):HandleButton(_G.LeaPlusGlobalMapButton)
 					end
 				end
