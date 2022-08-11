@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.119.alpha.5"
+	LeaPlusLC["AddonVer"] = "2.5.119.alpha.6"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
