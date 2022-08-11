@@ -1,3 +1,6 @@
+2.5.119.alpha.1 - 11th August 2022
+- Added lots of flight times.  There are now 3004 flight times stored in Leatrix Plus for BCC.
+
 2.5.118 - 10th August 2022
 - If you use 'Automate quests' ('Automation') with a Mac, you can now assign the override key to be the command key if you wish.
 - Updated for Wrath of the Lich King Beta.
