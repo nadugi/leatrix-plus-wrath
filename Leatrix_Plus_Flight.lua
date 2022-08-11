@@ -3238,6 +3238,7 @@
 					["0.17:0.53:0.21:0.49:0.42:0.53:0.60:0.52:0.73:0.54:0.88:0.60"] = 316, -- Amber Ledge, Fizzcrank Airstrip, Stars' Rest, Wintergarde Keep, Amberpine Lodge, Fort Wildervar
 					["0.17:0.53:0.21:0.49:0.29:0.57:0.49:0.58:0.74:0.71:0.88:0.72"] = 320, -- Amber Ledge, Fizzcrank Airstrip, Unu'pe, Moa'ki, Kamagua, Valgarde Port
 					["0.17:0.53:0.21:0.49:0.29:0.57:0.49:0.58:0.74:0.71"] = 267, -- Amber Ledge, Fizzcrank Airstrip, Unu'pe, Moa'ki, Kamagua
+					["0.17:0.53:0.21:0.49:0.42:0.53:0.60:0.52:0.73:0.54"] = 239, -- Amber Ledge, Fizzcrank Airstrip, Stars' Rest, Wintergarde Keep, Amberpine Lodge
 
 					-- Alliance: Borean Tundra: Fizzcrank Airstrip
 					["0.21:0.49:0.17:0.53"] = 45, -- Fizzcrank Airstrip, Amber Ledge
@@ -3370,6 +3371,7 @@
 					["0.42:0.53:0.46:0.46:0.52:0.38:0.56:0.36"] = 170, -- Stars' Rest, Fordragon Hold, Dalaran, The Argent Vanguard
 					["0.42:0.53:0.29:0.57"] = 100, -- Stars' Rest, Unu'pe
 					["0.42:0.53:0.60:0.52:0.59:0.43"] = 189, -- Stars' Rest, Wintergarde Keep, Windrunner's Overlook
+					["0.42:0.53:0.60:0.52:0.76:0.67:0.88:0.72"] = 313, -- Stars' Rest, Wintergarde Keep, Westguard Keep, Valgarde Port
 
 					-- Alliance: Dragonblight: Wintergarde Keep
 					["0.60:0.52:0.54:0.52"] = 55, -- Wintergarde Keep, Wyrmrest Temple
@@ -3380,6 +3382,7 @@
 					["0.60:0.52:0.46:0.46:0.41:0.43"] = 156, -- Wintergarde Keep, Fordragon Hold, Valiance Landing Camp
 					["0.60:0.52:0.69:0.42"] = 89, -- Wintergarde Keep, Light's Breach
 					["0.60:0.52:0.73:0.54"] = 77, -- Wintergarde Keep, Amberpine Lodge
+					["0.60:0.52:0.76:0.67:0.88:0.72"] = 195, -- Wintergarde Keep, Westguard Keep, Valgarde Port
 
 					-- Alliance: Dragonblight: Wyrmrest Temple
 					["0.54:0.52:0.60:0.52"] = 36, -- Wyrmrest Temple, Wintergarde Keep
@@ -3389,6 +3392,7 @@
 					["0.54:0.52:0.42:0.53"] = 45, -- Wyrmrest Temple, Stars' Rest
 					["0.54:0.52:0.52:0.38"] = 65, -- Wyrmrest Temple, Dalaran
 					["0.54:0.52:0.42:0.53:0.29:0.57"] = 109, -- Wyrmrest Temple, Stars' Rest, Unu'pe
+					["0.54:0.52:0.46:0.46:0.41:0.43"] = 79, -- Wyrmrest Temple, Fordragon Hold, Valiance Landing Camp
 
 					----------------------------------------------------------------------
 					-- Alliance: Grizzly Hills
@@ -3405,6 +3409,7 @@
 					["0.73:0.54:0.60:0.52:0.42:0.53:0.22:0.61"] = 318, -- Amberpine Lodge, Wintergarde Keep, Stars' Rest, Valiance Keep
 					["0.73:0.54:0.69:0.42:0.64:0.42:0.62:0.36:0.57:0.33"] = 189, -- Amberpine Lodge, Light's Breach, Ebon Watch, K3, Frosthold
 					["0.73:0.54:0.60:0.52:0.42:0.53:0.21:0.49:0.17:0.53:0.12:0.53"] = 396, -- Amberpine Lodge, Wintergarde Keep, Stars' Rest, Fizzcrank Airstrip, Amber Ledge, Transitus Shield
+					["0.73:0.54:0.60:0.52:0.42:0.53"] = 190, -- Amberpine Lodge, Wintergarde Keep, Stars' Rest
 
 					-- Alliance: Grizzly Hills: Westfall Brigade
 					["0.83:0.46:0.73:0.54"] = 79, -- Westfall Brigade, Amberpine Lodge
@@ -3432,6 +3437,7 @@
 					["0.88:0.60:0.73:0.54:0.60:0.52:0.42:0.53:0.21:0.49"] = 412, -- Fort Wildervar, Amberpine Lodge, Wintergarde Keep, Stars' Rest, Fizzcrank Airstrip
 					["0.88:0.60:0.73:0.54:0.60:0.52:0.42:0.53:0.21:0.49:0.17:0.53:0.12:0.53"] = 491, -- Fort Wildervar, Amberpine Lodge, Wintergarde Keep, Stars' Rest, Fizzcrank Airstrip, Amber Ledge, Transitus Shield
 					["0.88:0.60:0.73:0.54:0.60:0.52:0.42:0.53:0.21:0.49:0.17:0.53"] = 455, -- Fort Wildervar, Amberpine Lodge, Wintergarde Keep, Stars' Rest, Fizzcrank Airstrip, Amber Ledge
+					["0.88:0.60:0.73:0.54:0.60:0.52:0.42:0.53:0.22:0.61"] = 413, -- Fort Wildervar, Amberpine Lodge, Wintergarde Keep, Stars' Rest, Valiance Keep
 
 					-- Alliance: Howling Fjord: Kamagua
 					["0.74:0.71:0.76:0.67"] = 37, -- Kamagua, Westguard Keep
@@ -3460,6 +3466,8 @@
 					["0.88:0.72:0.76:0.67:0.60:0.52:0.42:0.53:0.21:0.49:0.17:0.53:0.12:0.53"] = 534, -- Valgarde Port, Westguard Keep, Wintergarde Keep, Stars' Rest, Fizzcrank Airstrip, Amber Ledge, Transitus Shield
 					["0.88:0.72:0.76:0.67:0.60:0.52:0.42:0.53:0.21:0.49"] = 454, -- Valgarde Port, Westguard Keep, Wintergarde Keep, Stars' Rest, Fizzcrank Airstrip
 					["0.88:0.72:0.76:0.67:0.60:0.52:0.42:0.53:0.21:0.49:0.17:0.53"] = 498, -- Valgarde Port, Westguard Keep, Wintergarde Keep, Stars' Rest, Fizzcrank Airstrip, Amber Ledge
+					["0.88:0.72:0.76:0.67:0.60:0.52"] = 220, -- Valgarde Port, Westguard Keep, Wintergarde Keep
+					["0.88:0.72:0.76:0.67:0.60:0.52:0.54:0.52"] = 268, -- Valgarde Port, Westguard Keep, Wintergarde Keep, Wyrmrest Temple
 
 					-- Alliance: Howling Fjord: Westguard Keep
 					["0.76:0.67:0.74:0.71"] = 52, -- Westguard Keep, Kamagua
@@ -3544,6 +3552,7 @@
 					["0.41:0.43:0.46:0.46:0.60:0.52:0.76:0.67:0.88:0.72"] = 325, -- Valiance Landing Camp, Fordragon Hold, Wintergarde Keep, Westguard Keep, Valgarde Port
 					["0.41:0.43:0.46:0.46:0.64:0.42:0.69:0.42"] = 212, -- Valiance Landing Camp, Fordragon Hold, Ebon Watch, Light's Breach
 					["0.41:0.43:0.24:0.40"] = 137, -- Valiance Landing Camp, River's Heart
+					["0.41:0.43:0.46:0.46:0.60:0.52:0.73:0.54:0.88:0.60"] = 321, -- Valiance Landing Camp, Fordragon Hold, Wintergarde Keep, Amberpine Lodge, Fort Wildervar
 
 					----------------------------------------------------------------------
 					-- Alliance: Zul'Drak
