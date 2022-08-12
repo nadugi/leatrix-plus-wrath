@@ -3441,6 +3441,8 @@
 					["0.83:0.46:0.88:0.60"] = 85, -- Westfall Brigade, Fort Wildervar
 					["0.83:0.46:0.78:0.38:0.64:0.19:0.57:0.21"] = 275, -- Westfall Brigade, Zim'Torga, Ulduar, Bouldercrag's Refuge
 					["0.83:0.46:0.73:0.54:0.76:0.67"] = 162, -- Westfall Brigade, Amberpine Lodge, Westguard Keep
+					["0.83:0.46:0.88:0.60:0.88:0.72"] = 159, -- Westfall Brigade, Fort Wildervar, Valgarde Port
+					["0.83:0.46:0.73:0.54:0.76:0.67:0.74:0.71"] = 211, -- Westfall Brigade, Amberpine Lodge, Westguard Keep, Kamagua
 
 					----------------------------------------------------------------------
 					-- Alliance: Howling Fjord
@@ -3475,6 +3477,7 @@
 					["0.74:0.71:0.49:0.58:0.42:0.53:0.22:0.61"] = 377, -- Kamagua, Moa'ki, Stars' Rest, Valiance Keep
 					["0.74:0.71:0.49:0.58"] = 195, -- Kamagua, Moa'ki
 					["0.74:0.71:0.76:0.67:0.60:0.52"] = 188, -- Kamagua, Westguard Keep, Wintergarde Keep
+					["0.74:0.71:0.76:0.67:0.73:0.54:0.83:0.46"] = 195, -- Kamagua, Westguard Keep, Amberpine Lodge, Westfall Brigade
 
 					-- Alliance: Howling Fjord: Valgarde Port, Howling Fjord
 					["0.88:0.72:0.88:0.60"] = 71, -- Valgarde Port, Fort Wildervar
@@ -3495,6 +3498,9 @@
 					["0.88:0.72:0.76:0.67:0.60:0.52:0.42:0.53:0.21:0.49:0.17:0.53"] = 498, -- Valgarde Port, Westguard Keep, Wintergarde Keep, Stars' Rest, Fizzcrank Airstrip, Amber Ledge
 					["0.88:0.72:0.76:0.67:0.60:0.52"] = 220, -- Valgarde Port, Westguard Keep, Wintergarde Keep
 					["0.88:0.72:0.76:0.67:0.60:0.52:0.54:0.52"] = 268, -- Valgarde Port, Westguard Keep, Wintergarde Keep, Wyrmrest Temple
+					["0.88:0.72:0.76:0.67:0.73:0.54:0.69:0.42"] = 211, -- Valgarde Port, Westguard Keep, Amberpine Lodge, Light's Breach
+					["0.88:0.72:0.88:0.60:0.83:0.46:0.78:0.38:0.82:0.31"] = 294, -- Valgarde Port, Fort Wildervar, Westfall Brigade, Zim'Torga, Gundrak
+					["0.88:0.72:0.76:0.67:0.73:0.54:0.69:0.42:0.64:0.42"] = 249, -- Valgarde Port, Westguard Keep, Amberpine Lodge, Light's Breach, Ebon Watch
 
 					-- Alliance: Howling Fjord: Westguard Keep
 					["0.76:0.67:0.74:0.71"] = 52, -- Westguard Keep, Kamagua
@@ -3602,6 +3608,7 @@
 					["0.64:0.42:0.54:0.52:0.42:0.53:0.22:0.61"] = 284, -- Ebon Watch, Wyrmrest Temple, Stars' Rest, Valiance Keep
 					["0.64:0.42:0.60:0.52"] = 62, -- Ebon Watch, Wintergarde Keep
 					["0.64:0.42:0.52:0.38"] = 68, -- Ebon Watch, Dalaran
+					["0.64:0.42:0.72:0.40:0.83:0.46"] = 135, -- Ebon Watch, The Argent Stand, Westfall Brigade
 
 					-- Alliance: Zul'Drak: Gundrak
 					["0.82:0.31:0.78:0.38"] = 56, -- Gundrak, Zim'Torga
@@ -3609,6 +3616,7 @@
 					["0.82:0.31:0.78:0.38:0.72:0.40:0.64:0.42:0.52:0.38"] = 228, -- Gundrak, Zim'Torga, The Argent Stand, Ebon Watch, Dalaran
 					["0.82:0.31:0.78:0.38:0.72:0.40:0.69:0.42"] = 132, -- Gundrak, Zim'Torga, The Argent Stand, Light's Breach
 					["0.82:0.31:0.78:0.38:0.72:0.40:0.64:0.42:0.59:0.43"] = 194, -- Gundrak, Zim'Torga, The Argent Stand, Ebon Watch, Windrunner's Overlook
+					["0.82:0.31:0.78:0.38:0.83:0.46:0.88:0.60:0.88:0.72"] = 270, -- Gundrak, Zim'Torga, Westfall Brigade, Fort Wildervar, Valgarde Port
 
 					-- Alliance: Zul'Drak: Light's Breach
 					["0.69:0.42:0.72:0.40"] = 44, -- Light's Breach, The Argent Stand
@@ -3618,6 +3626,7 @@
 					["0.69:0.42:0.73:0.54"] = 84, -- Light's Breach, Amberpine Lodge
 					["0.69:0.42:0.72:0.40:0.83:0.46"] = 114, -- Light's Breach, The Argent Stand, Westfall Brigade
 					["0.69:0.42:0.73:0.54:0.76:0.67:0.88:0.72"] = 236, -- Light's Breach, Amberpine Lodge, Westguard Keep, Valgarde Port
+					["0.69:0.42:0.73:0.54:0.76:0.67:0.74:0.71"] = 218, -- Light's Breach, Amberpine Lodge, Westguard Keep, Kamagua
 
 					-- Alliance: Zul'Drak: The Argent Stand
 					["0.72:0.40:0.78:0.38"] = 42, -- The Argent Stand, Zim'Torga
