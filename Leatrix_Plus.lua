@@ -3450,6 +3450,12 @@
 								editBox:SetText(editMsg); editFrame:Show()
 							end
 							flightFrame:UnregisterEvent("PLAYER_CONTROL_GAINED")
+
+							-- Delete the progress bar since we have landed
+							if LeaPlusLC.FlightProgressBar then
+								LeaPlusLC.FlightProgressBar:Stop()
+								LeaPlusLC.FlightProgressBar = nil
+							end
 						end)
 
 						-- Show flight progress bar if flight exists in database

@@ -1,4 +1,5 @@
 2.5.119.alpha.16 - 14th August 2022
+- For 'Show flight times', the flight progress bar will now always hide when you land.  The time buffer (the minimum time before the flight report window is shown) is now 10 seconds (up from 5).  If the flight route includes a loading screen (such as Shattered Sun Staging Area), the time buffer will be 30 seconds.
 - Wrath: Added Northrend zone and dungeon music to the media section.  Most of the dungeon tracks are sound kits.
 - Added a massive number of flight times.  There are now 3379 flight times stored in Leatrix Plus for BCC and Wrath.
 
