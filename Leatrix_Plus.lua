@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.119.alpha.16 (14th August 2022)
+-- 	Leatrix Plus 2.5.119.alpha.17 (14th August 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.119.alpha.16"
+	LeaPlusLC["AddonVer"] = "2.5.119.alpha.17"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -5204,6 +5204,36 @@
 			LeaPlusCB["AutoAcceptRes"]:HookScript("OnClick", SetResEvent)
 			if LeaPlusLC["AutoAcceptRes"] == "On" then SetResEvent() end
 
+			-- Function to not accept resurrection based on certain conditions
+			local function DoNotAcceptResurrect()
+				local mapID = C_Map.GetBestMapForUnit("player") or nil
+				if mapID and mapID == 162 then -- Naxxramas
+					-- Check player for debuffs
+					if GetPlayerAuraBySpellID(28059) or GetPlayerAuraBySpellID(28084) then
+						-- Thaddius positive and negative charge debuffs
+						LeaPlusLC:Print("Resurrection not accepted.  You have a charge debuff.")
+						return true
+					end
+					-- Check party or raid for debuffs
+					local group = IsInRaid() and "raid" or "party"
+					for i = 1, GetNumGroupMembers() do
+						local unit = group .. i
+						if unit and UnitExists(unit) then
+							for j = 1, 40 do
+								local void, void, void, void, void, void, void, void, void, spellID = UnitDebuff(unit, j)
+								if spellID then
+									if spellID == 28059 or spellID == 28084 then
+										-- Thaddius positive and negative charge debuffs
+										LeaPlusLC:Print("Resurrection not accepted.  Someone in your group has a charge debuff.")
+										return true
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+
 			-- Handle event
 			AcceptResPanel:SetScript("OnEvent", function(self, event, arg1)
 				if event == "RESURRECT_REQUEST" then
@@ -5233,16 +5263,20 @@
 						C_Timer.After(resTimer + 1, function()
 							if not UnitAffectingCombat(arg1) or LeaPlusLC["AutoResNoCombat"] == "Off" then
 								if LeaPlusLC["AutoAcceptRes"] == "On" then
-									AcceptResurrect()
-									StaticPopup_Hide("RESURRECT_NO_TIMER")
+									if not DoNotAcceptResurrect() then
+										AcceptResurrect()
+										StaticPopup_Hide("RESURRECT_NO_TIMER")
+									end
 								end
 							end
 						end)
 					else
 						-- Resurrect has no delay so resurrect now
 						if not UnitAffectingCombat(arg1) or LeaPlusLC["AutoResNoCombat"] == "Off" then
-							AcceptResurrect()
-							StaticPopup_Hide("RESURRECT_NO_TIMER")
+							if not DoNotAcceptResurrect() then
+								AcceptResurrect()
+								StaticPopup_Hide("RESURRECT_NO_TIMER")
+							end
 						end
 					end
 

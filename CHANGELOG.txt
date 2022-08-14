@@ -1,4 +1,4 @@
-2.5.119.alpha.16 - 14th August 2022
+2.5.119.alpha.17 - 14th August 2022
 - For 'Show flight times' ('Interface'), the flight progress bar will now always hide when you land.  The flight report window will now show if the minimum time difference between the saved flight time and the actual flight time is 10 seconds (up from 5).
 - Wrath: Added Northrend zone and dungeon music to the media section.  Most of the dungeon tracks are sound kits.
 - Added a massive number of flight times.  There are now 3379 flight times stored in Leatrix Plus for BCC and Wrath.
