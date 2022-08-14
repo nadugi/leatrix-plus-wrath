@@ -5207,7 +5207,7 @@
 			-- Function to not accept resurrection based on certain conditions
 			local function DoNotAcceptResurrect()
 				local mapID = C_Map.GetBestMapForUnit("player") or nil
-				if mapID and mapID == 162 then -- Naxxramas
+				if mapID and mapID == 162 then -- Naxxramas Construct Quarter
 					-- Check party or raid for debuffs
 					local group = IsInRaid() and "raid" or "party"
 					for i = 1, GetNumGroupMembers() do
