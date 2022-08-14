@@ -1,4 +1,4 @@
-2.5.119.alpha.15 - 14th August 2022
+2.5.119.alpha.16 - 14th August 2022
 - Wrath: Added Northrend zone and dungeon music to the media section.  Most of the dungeon tracks are sound kits.
 - Added a massive number of flight times.  There are now 3379 flight times stored in Leatrix Plus for BCC and Wrath.
 
