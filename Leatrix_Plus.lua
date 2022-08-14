@@ -5208,12 +5208,6 @@
 			local function DoNotAcceptResurrect()
 				local mapID = C_Map.GetBestMapForUnit("player") or nil
 				if mapID and mapID == 162 then -- Naxxramas
-					-- Check player for debuffs
-					if GetPlayerAuraBySpellID(28059) or GetPlayerAuraBySpellID(28084) then
-						-- Thaddius positive and negative charge debuffs
-						LeaPlusLC:Print("Resurrection not accepted.  You have a charge debuff.")
-						return true
-					end
 					-- Check party or raid for debuffs
 					local group = IsInRaid() and "raid" or "party"
 					for i = 1, GetNumGroupMembers() do
