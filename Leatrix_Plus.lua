@@ -3426,14 +3426,6 @@
 							end
 							-- Wrath Beta end
 
-							-- Increase time buffer if the flight includes a loading screen
-							if string.find(routeString, "0.58:0.06") -- Both factions: Shattered Sun Staging Area (Isle of Quel'Danas)
-							then
-								timeBuffer = 30
-							else
-								timeBuffer = 10
-							end
-
 							if destination and data[faction] and data[faction][continent] and data[faction][continent][routeString] then
 								local savedDuration = data[faction][continent][routeString]
 								if savedDuration then
