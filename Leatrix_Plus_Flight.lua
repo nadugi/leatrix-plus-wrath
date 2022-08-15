@@ -1500,6 +1500,7 @@
 					["0.29:0.57:0.49:0.58"] = 119, -- Unu'pe, Moa'ki
 					["0.29:0.57:0.29:0.54:0.45:0.51"] = 113, -- Unu'pe, Taunka'le Village, Agmar's Hammer
 					["0.29:0.57:0.49:0.58:0.59:0.55:0.70:0.55"] = 238, -- Unu'pe, Moa'ki, Venomspite, Conquest Hold
+					["0.29:0.57:0.49:0.58:0.74:0.71:0.85:0.73"] = 364, -- Unu'pe, Moa'ki, Kamagua, New Agamand
 
 					-- Horde: Borean Tundra: Warsong Hold
 					["0.15:0.57:0.29:0.57:0.49:0.58:0.74:0.71"] = 394, -- Warsong Hold, Unu'pe, Moa'ki, Kamagua
@@ -1511,6 +1512,7 @@
 					["0.15:0.57:0.29:0.54"] = 87, -- Warsong Hold, Taunka'le Village
 					["0.15:0.57:0.29:0.57"] = 93, -- Warsong Hold, Unu'pe
 					["0.15:0.57:0.29:0.54:0.31:0.43"] = 157, -- Warsong Hold, Taunka'le Village, Warsong Camp
+					["0.15:0.57:0.29:0.54:0.45:0.51:0.59:0.55:0.85:0.73"] = 448, -- Warsong Hold, Taunka'le Village, Agmar's Hammer, Venomspite, New Agamand
 
 					----------------------------------------------------------------------
 					-- Horde: Crystalsong Forest
@@ -1674,6 +1676,9 @@
 					["0.85:0.73:0.74:0.62"] = 104, -- New Agamand, Apothecary Camp
 					["0.85:0.73:0.84:0.59"] = 80, -- New Agamand, Camp Winterhoof
 					["0.85:0.73:0.74:0.62:0.70:0.55"] = 150, -- New Agamand, Apothecary Camp, Conquest Hold
+					["0.85:0.73:0.74:0.71:0.49:0.58:0.29:0.57"] = 402, -- New Agamand, Kamagua, Moa'ki, Unu'pe
+					["0.85:0.73:0.74:0.71:0.49:0.58:0.29:0.57:0.15:0.57"] = 489, -- New Agamand, Kamagua, Moa'ki, Unu'pe, Warsong Hold
+					["0.85:0.73:0.74:0.71:0.49:0.58:0.29:0.57:0.29:0.54:0.17:0.53:0.12:0.53"] = 534, -- New Agamand, Kamagua, Moa'ki, Unu'pe, Taunka'le Village, Amber Ledge, Transitus Shield
 
 					-- Horde: Howling Fjord: Vengeance Landing
 					["0.95:0.63:0.85:0.73"] = 88, -- Vengeance Landing, New Agamand
@@ -1756,6 +1761,7 @@
 					["0.31:0.43:0.24:0.40:0.18:0.47"] = 131, -- Warsong Camp, River's Heart, Bor'gorok Outpost
 					["0.31:0.43:0.29:0.54:0.29:0.57"] = 109, -- Warsong Camp, Taunka'le Village, Unu'pe
 					["0.31:0.43:0.29:0.54:0.17:0.53:0.12:0.53"] = 191, -- Warsong Camp, Taunka'le Village, Amber Ledge, Transitus Shield
+					["0.31:0.43:0.45:0.51:0.59:0.55:0.85:0.73"] = 371, -- Warsong Camp, Agmar's Hammer, Venomspite, New Agamand
 
 					----------------------------------------------------------------------
 					-- Horde: Zul'Drak
