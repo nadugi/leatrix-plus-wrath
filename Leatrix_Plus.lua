@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.119.alpha.19 (15th August 2022)
+-- 	Leatrix Plus 2.5.119.alpha.20 (15th August 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.119.alpha.19"
+	LeaPlusLC["AddonVer"] = "2.5.119.alpha.20"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -7158,6 +7158,13 @@
 			else
 				QuestLogTitleText:ClearAllPoints()
 				QuestLogTitleText:SetPoint("TOP", QuestLogFrame, "TOP", 0, -18)
+			end
+
+			if not LeaPlusLC.Wrath then
+				-- Move the detail frame to the right and stretch it to full height
+				QuestLogDetailScrollFrame:ClearAllPoints()
+				QuestLogDetailScrollFrame:SetPoint("TOPLEFT", QuestLogListScrollFrame, "TOPRIGHT", 31, 1)
+				QuestLogDetailScrollFrame:SetHeight(336 + tall)
 			end
 
 			if LeaPlusLC.Wrath then
