@@ -3244,7 +3244,7 @@
 			Leatrix_Plus:LoadFlightData()
 
 			-- Minimum time difference (in seconds) to flight data entry before flight report window is shown
-			local timeBuffer = 10
+			local timeBuffer = 15
 
 			-- Create editbox
 			local editFrame = CreateFrame("ScrollFrame", nil, UIParent, "InputScrollFrameTemplate")

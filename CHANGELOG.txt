@@ -2,7 +2,7 @@
 - Wrath: Added a new option 'Hide alerts' ('Frames').  If checked, alert frames will not be shown.  When you earn an achievement, a message will be shown in chat instead (just like retail).
 - Wrath: Added Northrend zone and dungeon music to the media section.  Most of the dungeon tracks are sound kits.
 - Wrath: For 'Accept resurrection' ('Automation'), you will not accept a resurrection request automatically if you are in the Thaddius fight (Naxxramas) and someone in your group has a positive or negative charge.
-- For 'Show flight times' ('Interface'), the flight progress bar will now always hide when you land.  The flight report window will now show if the minimum time difference between the saved flight time and the actual flight time is 10 seconds (up from 5).
+- For 'Show flight times' ('Interface'), the flight progress bar will now always hide when you land.  The flight report window will now show if the minimum time difference between the saved flight time and the actual flight time is 15 seconds (up from 5).
 - Fixed a minor issue with 'Show cooldowns' ('Interface') which caused buff spell IDs to show in debuff tooltips.
 - Added a massive number of flight times.  There are now 3476 flight times stored in Leatrix Plus for BCC and Wrath.
 
