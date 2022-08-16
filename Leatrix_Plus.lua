@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.119.alpha.21 (16th August 2022)
+-- 	Leatrix Plus 2.5.119.alpha.22 (16th August 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.119.alpha.21"
+	LeaPlusLC["AddonVer"] = "2.5.119.alpha.22"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -582,6 +582,7 @@
 		or	(LeaPlusLC["ManageWidget"]			~= LeaPlusDB["ManageWidget"])			-- Manage widget
 		or	(LeaPlusLC["ManageFocus"]			~= LeaPlusDB["ManageFocus"])			-- Manage focus
 		or	(LeaPlusLC["ClassColFrames"]		~= LeaPlusDB["ClassColFrames"])			-- Class colored frames
+		or	(LeaPlusLC["NoAlerts"]				~= LeaPlusDB["NoAlerts"])				-- Hide alerts
 		or	(LeaPlusLC["NoGryphons"]			~= LeaPlusDB["NoGryphons"])				-- Hide gryphons
 		or	(LeaPlusLC["NoClassBar"]			~= LeaPlusDB["NoClassBar"])				-- Hide stance bar
 
@@ -3144,6 +3145,33 @@
 ----------------------------------------------------------------------
 
 	function LeaPlusLC:Player()
+
+		----------------------------------------------------------------------
+		-- Hide alerts
+		----------------------------------------------------------------------
+
+		if LeaPlusLC["NoAlerts"] == "On" then
+
+			-- Unregister alert events
+			hooksecurefunc(AlertFrame, "RegisterEvent", function(self, event)
+				AlertFrame:UnregisterEvent(event)
+			end)
+			AlertFrame:UnregisterAllEvents()
+
+			-- Show chat message and play sound for achievement alerts
+			local frame = CreateFrame("FRAME")
+			frame:RegisterEvent("ACHIEVEMENT_EARNED")
+			frame:SetScript("OnEvent", function(self, event, arg1)
+				if arg1 then
+					local alink = GetAchievementLink(arg1)
+					if alink then
+						LeaPlusLC:Print(string.format(NEW_ACHIEVEMENT_EARNED:gsub("'", ""), alink))
+						PlaySoundFile(569143)
+					end
+				end
+			end)
+
+		end
 
 		----------------------------------------------------------------------
 		-- Show ready timer
@@ -12147,6 +12175,7 @@
 				LeaPlusLC:LoadVarChk("ClassColPlayer", "On")				-- Class colored player frame
 				LeaPlusLC:LoadVarChk("ClassColTarget", "On")				-- Class colored target frame
 
+				LeaPlusLC:LoadVarChk("NoAlerts", "Off")						-- Hide alerts
 				LeaPlusLC:LoadVarChk("NoGryphons", "Off")					-- Hide gryphons
 				LeaPlusLC:LoadVarChk("NoClassBar", "Off")					-- Hide stance bar
 
@@ -12201,6 +12230,11 @@
 					-- Now included with default UI
 					LeaPlusLC["ShowDruidPowerBar"] = "Off"
 					LeaPlusLC:LockItem(LeaPlusCB["ShowDruidPowerBar"], true)
+				end
+
+				if not LeaPlusLC.Wrath then
+					LeaPlusLC["NoAlerts"] = "Off"
+					LeaPlusLC:LockItem(LeaPlusCB["NoAlerts"], true)
 				end
 
 				-- Run other startup items
@@ -12402,6 +12436,7 @@
 			LeaPlusDB["ClassColPlayer"]			= LeaPlusLC["ClassColPlayer"]
 			LeaPlusDB["ClassColTarget"]			= LeaPlusLC["ClassColTarget"]
 
+			LeaPlusDB["NoAlerts"]				= LeaPlusLC["NoAlerts"]
 			LeaPlusDB["NoGryphons"]				= LeaPlusLC["NoGryphons"]
 			LeaPlusDB["NoClassBar"]				= LeaPlusLC["NoClassBar"]
 
@@ -14504,6 +14539,7 @@
 
 				LeaPlusDB["ClassColFrames"] = "On"				-- Class colored frames
 
+				LeaPlusDB["NoAlerts"] = "On"					-- Hide alerts
 				LeaPlusDB["NoGryphons"] = "On"					-- Hide gryphons
 				LeaPlusDB["NoClassBar"] = "On"					-- Hide stance bar
 
@@ -14871,8 +14907,9 @@
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ClassColFrames"			, 	"Class colored frames"			,	146, -172, 	true,	"If checked, class coloring will be used in the player frame, target frame and focus frame.")
 
 	LeaPlusLC:MakeTx(LeaPlusLC[pg], "Visibility"				, 	340, -72);
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "NoGryphons"				,	"Hide gryphons"					, 	340, -92, 	true,	"If checked, the main bar gryphons will not be shown.")
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "NoClassBar"				,	"Hide stance bar"				, 	340, -112, 	true,	"If checked, the stance bar will not be shown.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "NoAlerts"					,	"Hide alerts"					, 	340, -92, 	true,	"If checked, alert frames will not be shown.|n|nWhen you earn an achievement, a message will be shown in chat instead.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "NoGryphons"				,	"Hide gryphons"					, 	340, -112, 	true,	"If checked, the main bar gryphons will not be shown.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "NoClassBar"				,	"Hide stance bar"				, 	340, -132, 	true,	"If checked, the stance bar will not be shown.")
 
 	LeaPlusLC:CfgBtn("MoveFramesButton", LeaPlusCB["FrmEnabled"])
 	LeaPlusLC:CfgBtn("ManageBuffsButton", LeaPlusCB["ManageBuffs"])
