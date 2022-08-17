@@ -1,4 +1,4 @@
-2.5.119.alpha.23 - 16th August 2022
+2.5.119 - 17th August 2022
 - Wrath: Added a new option 'Hide alerts' ('Frames').  If checked, alert frames will not be shown.  When you earn an achievement, a message will be shown in chat instead (just like retail).
 - Wrath: Added Northrend zone and dungeon music to the media section.  Most of the dungeon tracks are sound kits.
 - Wrath: For 'Accept resurrection' ('Automation'), you will not accept a resurrection request automatically if you are in the Thaddius fight (Naxxramas) and someone in your group has a positive or negative charge.
