@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.120.alpha.1 (18th August 2022)
+-- 	Leatrix Plus 2.5.120.alpha.2 (18th August 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -13,13 +13,13 @@
 	_G.LeaPlusDB = _G.LeaPlusDB or {}
 
 	-- Create locals
-	local LeaPlusLC, LeaPlusCB, LeaDropList, LeaConfigList = {}, {}, {}, {}
+	local LeaPlusLC, LeaPlusCB, LeaDropList, LeaConfigList, LeaLockList = {}, {}, {}, {}, {}
 	local ClientVersion = GetBuildInfo()
 	local GameLocale = GetLocale()
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.120.alpha.1"
+	LeaPlusLC["AddonVer"] = "2.5.120.alpha.2"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -12167,11 +12167,13 @@
 				if LeaPlusLC.Wrath then
 					-- Now included with default UI
 					LeaPlusLC["ShowDruidPowerBar"] = "Off"
+					LeaPlusDB["ShowDruidPowerBar"] = "Off"
 					LeaPlusLC:LockItem(LeaPlusCB["ShowDruidPowerBar"], true)
 				end
 
 				if not LeaPlusLC.Wrath then
 					LeaPlusLC["NoAlerts"] = "Off"
+					LeaPlusDB["NoAlerts"] = "Off"
 					LeaPlusLC:LockItem(LeaPlusCB["NoAlerts"], true)
 				end
 
@@ -12182,7 +12184,9 @@
 
 						-- Function to disable and lock an option and add a note to the tooltip
 						local function LockOption(option, emodule)
+							LeaLockList[option] = LeaPlusLC[option]
 							LeaPlusLC[option] = "Off"
+							LeaPlusDB[option] = "Off"
 							LeaPlusLC:LockItem(LeaPlusCB[option], true)
 							LeaPlusCB[option].tiptext = LeaPlusCB[option].tiptext .. "|n|n|cff00AAFF" .. L["Cannot be used with ElvUI"] .. ": " .. L[emodule]
 						end
@@ -12594,6 +12598,12 @@
 					LeaPlusDB["AHDuration"] = AuctionFrameAuctions.duration
 				end
 			end
+		end
+
+		-- Set locked options to original values (set before they were locked)
+		for k, v in pairs(LeaLockList) do
+			LeaPlusLC[k] = v
+			LeaPlusDB[k] = v
 		end
 
 	end
