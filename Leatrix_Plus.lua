@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.120.alpha.4 (18th August 2022)
+-- 	Leatrix Plus 2.5.120.alpha.5 (18th August 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.120.alpha.4"
+	LeaPlusLC["AddonVer"] = "2.5.120.alpha.5"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -40,6 +40,9 @@
 			LeaPlusLC.Wrath = true
 		end
 	end
+
+	-- Check for ElvUI
+	if IsAddOnLoaded("ElvUI") then LeaPlusLC.ElvUI = true end
 
 ----------------------------------------------------------------------
 --	L00: Leatrix Plus
@@ -1305,7 +1308,7 @@
 			end)
 
 			-- ElvUI fix to move Wowhead link inside the quest log frame
-			local function ElvUIFix()
+			if LeaPlusLC.ElvUI then
 				C_Timer.After(0.1, function()
 					QuestLogTitleText:ClearAllPoints()
 					QuestLogTitleText:SetPoint("TOPLEFT", QuestLogFrame, "TOPLEFT", 32, -18)
@@ -1317,20 +1320,6 @@
 					mEB:ClearAllPoints()
 					mEB:SetPoint("LEFT", QuestLogTitleText, "RIGHT", 10, 0)
 					mEB.t:Hide()
-				end)
-			end
-
-			-- Run ElvUI fix when ElvUI has loaded
-			if IsAddOnLoaded("ElvUI") then
-				ElvUIFix()
-			else
-				local waitFrame = CreateFrame("FRAME")
-				waitFrame:RegisterEvent("ADDON_LOADED")
-				waitFrame:SetScript("OnEvent", function(self, event, arg1)
-					if arg1 == "ElvUI" then
-						ElvUIFix()
-						waitFrame:UnregisterAllEvents()
-					end
 				end)
 			end
 
@@ -2448,31 +2437,6 @@
 				-- If combat log is undocked, do nothing but show warning
 				C_Timer.After(1, function()
 					LeaPlusLC:Print("Combat log cannot be hidden while undocked.")
-				end)
-			end
-
-			-- ElvUI Fix
-			local function ElvUIFix()
-				local E = unpack(ElvUI)
-				if E.private.chat.enable then
-					C_Timer.After(2, function()
-						LeaPlusLC:Print("To hide the combat log, you need to disable the chat module in ElvUI.")
-						return
-					end)
-				end
-			end
-
-			-- Run ElvUI fix when ElvUI has loaded
-			if IsAddOnLoaded("ElvUI") then
-				ElvUIFix()
-			else
-				local waitFrame = CreateFrame("FRAME")
-				waitFrame:RegisterEvent("ADDON_LOADED")
-				waitFrame:SetScript("OnEvent", function(self, event, arg1)
-					if arg1 == "ElvUI" then
-						ElvUIFix()
-						waitFrame:UnregisterAllEvents()
-					end
 				end)
 			end
 
@@ -6500,7 +6464,7 @@
 				----------------------------------------------------------------------
 
 				-- ElvUI fixes
-				local function ElvUIFixes()
+				if LeaPlusLC.ElvUI then
 					local E = unpack(ElvUI)
 					if E.private.skins.blizzard.enable and E.private.skins.blizzard.trainer then
 						regions[2]:Hide()
@@ -6515,20 +6479,6 @@
 						_G.LeaPlusGlobalTrainAllButton = LeaPlusCB["TrainAllButton"]
 						E:GetModule("Skins"):HandleButton(_G.LeaPlusGlobalTrainAllButton)
 					end
-				end
-
-				-- Run ElvUI fixes when ElvUI has loaded
-				if IsAddOnLoaded("ElvUI") then
-					ElvUIFixes()
-				else
-					local waitFrame = CreateFrame("FRAME")
-					waitFrame:RegisterEvent("ADDON_LOADED")
-					waitFrame:SetScript("OnEvent", function(self, event, arg1)
-						if arg1 == "ElvUI" then
-							ElvUIFixes()
-							waitFrame:UnregisterAllEvents()
-						end
-					end)
 				end
 
 			end
@@ -6804,7 +6754,7 @@
 				TradeSkillFrameAvailableFilterCheckButtonText:SetJustifyH("LEFT")
 
 				-- ElvUI fixes
-				local function ElvUIFixes()
+				if LeaPlusLC.ElvUI then
 					local E = unpack(ElvUI)
 					if E.private.skins.blizzard.enable and E.private.skins.blizzard.tradeskill then
 						if LeaPlusLC.Wrath then
@@ -6831,20 +6781,6 @@
 						_G["TradeSkillFrameAvailableFilterCheckButton"]:ClearAllPoints()
 						_G["TradeSkillFrameAvailableFilterCheckButton"]:SetPoint("TOPLEFT", TradeSkillFrame, "TOPLEFT", 20, -58)
 					end
-				end
-
-				-- Run ElvUI fixes when ElvUI has loaded
-				if IsAddOnLoaded("ElvUI") then
-					ElvUIFixes()
-				else
-					local waitFrame = CreateFrame("FRAME")
-					waitFrame:RegisterEvent("ADDON_LOADED")
-					waitFrame:SetScript("OnEvent", function(self, event, arg1)
-						if arg1 == "ElvUI" then
-							ElvUIFixes()
-							waitFrame:UnregisterAllEvents()
-						end
-					end)
 				end
 
 				-- Classic Profession Filter addon fixes
@@ -7039,7 +6975,7 @@
 					CraftFrameFilterDropDown:SetPoint("TOPLEFT", CraftFrame, "TOPLEFT", 510, -40)
 
 					-- ElvUI fixes
-					local function ElvUIFixes()
+					if LeaPlusLC.ElvUI then
 						local E = unpack(ElvUI)
 						if E.private.skins.blizzard.enable and E.private.skins.blizzard.craft then
 							regions[2]:Hide()
@@ -7052,20 +6988,6 @@
 							_G["CraftRankFrame"]:ClearAllPoints()
 							_G["CraftRankFrame"]:SetPoint("TOPLEFT", _G["CraftFrame"], "TOPLEFT", 24, -44)
 						end
-					end
-
-					-- Run ElvUI fixes when ElvUI has loaded
-					if IsAddOnLoaded("ElvUI") then
-						ElvUIFixes()
-					else
-						local waitFrame = CreateFrame("FRAME")
-						waitFrame:RegisterEvent("ADDON_LOADED")
-						waitFrame:SetScript("OnEvent", function(self, event, arg1)
-							if arg1 == "ElvUI" then
-								ElvUIFixes()
-								waitFrame:UnregisterAllEvents()
-							end
-						end)
 					end
 
 					-- Fix for TradeSkillMaster moving the craft create button
@@ -7422,7 +7344,7 @@
 
 			-- ElvUI fixes
 			if not LeaPlusLC.Wrath then
-				local function ElvUIFixes()
+				if LeaPlusLC.ElvUI then
 					-- Unpack ElvUI engine
 					local E = unpack(ElvUI)
 					if E.private.skins.blizzard.enable and E.private.skins.blizzard.quest then
@@ -7430,20 +7352,6 @@
 						_G.LeaPlusGlobalMapButton = LeaPlusLC.logMapButton
 						E:GetModule("Skins"):HandleButton(_G.LeaPlusGlobalMapButton)
 					end
-				end
-
-				-- Run ElvUI fixes when ElvUI has loaded
-				if IsAddOnLoaded("ElvUI") then
-					ElvUIFixes()
-				else
-					local waitFrame = CreateFrame("FRAME")
-					waitFrame:RegisterEvent("ADDON_LOADED")
-					waitFrame:SetScript("OnEvent", function(self, event, arg1)
-						if arg1 == "ElvUI" then
-							ElvUIFixes()
-							waitFrame:UnregisterAllEvents()
-						end
-					end)
 				end
 			end
 
@@ -12178,7 +12086,7 @@
 				end
 
 				-- Disable items that conflict with ElvUI
-				if IsAddOnLoaded("ElvUI") then
+				if LeaPlusLC.ElvUI then
 					local E = unpack(ElvUI)
 					if E and E.private then
 
