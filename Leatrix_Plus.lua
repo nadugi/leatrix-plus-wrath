@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.120.alpha.6 (18th August 2022)
+-- 	Leatrix Plus 2.5.120.alpha.7 (18th August 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.120.alpha.6"
+	LeaPlusLC["AddonVer"] = "2.5.120.alpha.7"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -7205,12 +7205,14 @@
 
 			-- Position and resize abandon button
 			if LeaPlusLC.Wrath then
-				hooksecurefunc("QuestLogControlPanel_UpdatePosition", function()
-					if QuestLogFrame:IsShown() then
-						QuestLogControlPanel:ClearAllPoints()
-						QuestLogControlPanel:SetPoint("BOTTOMLEFT", QuestLogFrame, "BOTTOMLEFT", 18, 50)
-					end
-				end)
+				if not LeaPlusLC.ElvUI then
+					hooksecurefunc("QuestLogControlPanel_UpdatePosition", function()
+						if QuestLogFrame:IsShown() then
+							QuestLogControlPanel:ClearAllPoints()
+							QuestLogControlPanel:SetPoint("BOTTOMLEFT", QuestLogFrame, "BOTTOMLEFT", 18, 50)
+						end
+					end)
+				end
 			else
 				QuestLogFrameAbandonButton:SetSize(110, 21)
 				QuestLogFrameAbandonButton:SetText(ABANDON_QUEST_ABBREV)
@@ -7241,6 +7243,12 @@
 
 			-- Position and size close button
 			if LeaPlusLC.Wrath then
+				if LeaPlusLC.ElvUI then
+					QuestLogFrameCancelButton:ClearAllPoints()
+					QuestLogFrameCancelButton:SetPoint("BOTTOMRIGHT", QuestLogFrame, "BOTTOMRIGHT", -10, 12)
+					QuestLogFrameCancelButton:SetHeight(20)
+					QuestLogFrame:SetHeight(447 + tall)
+				end
 			else
 				QuestFrameExitButton:SetSize(80, 22)
 				QuestFrameExitButton:SetText(CLOSE)
