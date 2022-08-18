@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.120.alpha.2 (18th August 2022)
+-- 	Leatrix Plus 2.5.120.alpha.3 (18th August 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.120.alpha.2"
+	LeaPlusLC["AddonVer"] = "2.5.120.alpha.3"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -12215,6 +12215,7 @@
 							LockOption("ShowPlayerChain", "UnitFrames") -- Show player chain
 							LockOption("NoHitIndicators", "UnitFrames") -- Hide portrait numbers
 							LockOption("ManageFocus", "UnitFrames") -- Manage focus
+							LockOption("ShowRaidToggle", "UnitFrames") -- Show raid button
 						end
 
 						-- ActionBars
