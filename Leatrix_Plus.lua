@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.120.alpha.3 (18th August 2022)
+-- 	Leatrix Plus 2.5.120.alpha.4 (18th August 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.120.alpha.3"
+	LeaPlusLC["AddonVer"] = "2.5.120.alpha.4"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -1284,8 +1284,8 @@
 				end
 			end
 
-			-- Set URL when quest is selected
-			hooksecurefunc("QuestLog_SetSelection", function(questListID)
+			-- Set URL when quest is selected (this works with Questie, old method used QuestLog_SetSelection)
+			hooksecurefunc("SelectQuestLogEntry", function(questListID)
 				SetQuestInBox(questListID)
 			end)
 

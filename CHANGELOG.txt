@@ -1,5 +1,6 @@
-2.5.120.alpha.3 - 18th August 2022
+2.5.120.alpha.4 - 18th August 2022
 - If you use ElvUI, Leatrix Plus options which are not compatible with specific ElvUI modules will now be disabled and locked while those ElvUI modules are enabled.  The option tooltip will tell you which ElvUI module is causing the Leatrix Plus option to be disabled.  Disabling the relevant ElvUI module will make the Leatrix Plus setting available again.
+- Fixed a minor issue with 'Show Wowhead links' ('Interface') and Questie which sometimes caused the quest link to not be updated.
 
 2.5.119 - 17th August 2022
 - Wrath: Added a new option 'Hide alerts' ('Frames').  If checked, alert frames will not be shown.  When you earn an achievement, a message will be shown in chat instead (just like retail).
