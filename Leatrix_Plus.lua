@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.120.alpha.7 (18th August 2022)
+-- 	Leatrix Plus 2.5.120.alpha.8 (19th August 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.120.alpha.7"
+	LeaPlusLC["AddonVer"] = "2.5.120.alpha.8"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -12103,7 +12103,11 @@
 							LeaPlusLC[option] = "Off"
 							LeaPlusDB[option] = "Off"
 							LeaPlusLC:LockItem(LeaPlusCB[option], true)
-							LeaPlusCB[option].tiptext = LeaPlusCB[option].tiptext .. "|n|n|cff00AAFF" .. L["Cannot be used with ElvUI"] .. ": " .. L[emodule]
+							if emodule == "Base" then
+								LeaPlusCB[option].tiptext = LeaPlusCB[option].tiptext .. "|n|n|cff00AAFF" .. L["Cannot be used with ElvUI."]
+							else
+								LeaPlusCB[option].tiptext = LeaPlusCB[option].tiptext .. "|n|n|cff00AAFF" .. L["Cannot be used with the ElvUI"] .. " " .. L[emodule] .. " " .. L["module"] .. "."
+							end
 						end
 
 						-- Chat
