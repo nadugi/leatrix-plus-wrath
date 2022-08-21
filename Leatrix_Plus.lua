@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.120.alpha.10 (21st August 2022)
+-- 	Leatrix Plus 2.5.120.alpha.11 (21st August 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.120.alpha.10"
+	LeaPlusLC["AddonVer"] = "2.5.120.alpha.11"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -12159,6 +12159,7 @@
 							LockOption("NoClassBar", "ActionBars") -- Hide stance bar
 							LockOption("HideKeybindText", "ActionBars") -- Hide keybind text
 							LockOption("HideMacroText", "ActionBars") -- Hide macro text
+							LockOption("ShowFreeBagSlots", "ActionBars") -- Show free bag slots
 						end
 
 						-- Bags
@@ -12177,7 +12178,6 @@
 							LockOption("FrmEnabled", "Base") -- Manage frames (base because of mirror timer bar)
 							LockOption("ManageBuffs", "Base") -- Manage buffs
 							LockOption("ManageWidget", "Base") -- Manage widget
-							LockOption("ShowFreeBagSlots", "Base") -- Show free bag slots
 						end
 
 					end
