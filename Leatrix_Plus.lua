@@ -7336,7 +7336,10 @@
 						if LeaPlusLC.Wrath then
 							checkText = QuestLogListScrollFrame.buttons[i].normalText
 							questCheck = QuestLogListScrollFrame.buttons[i].check
-							QuestLogListScrollFrame.buttons[i].normalText:SetWidth(QuestLogListScrollFrame.buttons[i]:GetWidth())
+							-- QuestLogListScrollFrame.buttons[i].normalText:SetWidth(QuestLogListScrollFrame.buttons[i]:GetWidth())
+							if not _G["QuestLogListScrollFrameButton" .. i].isHeader and _G["QuestLogListScrollFrameButton" .. i .. "Tag"]:GetText() then
+								QuestLogListScrollFrame.buttons[i].normalText:SetWidth(275 - _G["QuestLogListScrollFrameButton" .. i .. "Tag"]:GetStringWidth() - 15)
+							end
 							questLogTitle = QuestLogListScrollFrame.buttons[i]
 						end
 
