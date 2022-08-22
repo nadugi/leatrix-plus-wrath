@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.120.alpha.12 (21st August 2022)
+-- 	Leatrix Plus 2.5.120.alpha.13 (22nd August 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.120.alpha.12"
+	LeaPlusLC["AddonVer"] = "2.5.120.alpha.13"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -7316,7 +7316,7 @@
 						if title and level and not isHeader and LeaPlusLC["EnhanceQuestLevels"] == "On" then
 							-- Add level tag if its not a header
 							local levelSuffix = ""
-							local questTextFormatted = string.format("  [%d" .. L[levelSuffix] .. "] %s", level, title)
+							local questTextFormatted = string.format(" [%d" .. L[levelSuffix] .. "] %s", level, title)
 							if LeaPlusLC.Wrath then
 								QuestLogListScrollFrame.buttons[i]:SetText(questTextFormatted)
 							else
