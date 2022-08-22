@@ -7291,6 +7291,11 @@
 			mapButton:SetScript("OnClick", ToggleWorldMap)
 			mapButton:Hide()
 
+			local ResizeQuestLog
+			if LeaPlusLC.Wrath then
+				ResizeQuestLog = QuestLogTitleButton_Resize
+			end
+
 			-- Show quest levels and tracking check marks
 			local function QuestRefreshUpdate()
 				local numEntries, numQuests = GetNumQuestLogEntries()
@@ -7311,45 +7316,28 @@
 						if title and level and not isHeader and LeaPlusLC["EnhanceQuestLevels"] == "On" then
 							-- Add level tag if its not a header
 							local levelSuffix = ""
-							-- Level suffixes not currently being used because it misaligns columns
-							-- if suggestedGroup then
-								-- if suggestedGroup == LFG_TYPE_DUNGEON then levelSuffix = "D"
-								-- elseif suggestedGroup == RAID then levelSuffix = "R"
-								-- elseif suggestedGroup == ELITE then levelSuffix = "+"
-								-- end
-							-- end
 							local questTextFormatted = string.format("  [%d" .. L[levelSuffix] .. "] %s", level, title)
-
 							if LeaPlusLC.Wrath then
 								QuestLogListScrollFrame.buttons[i]:SetText(questTextFormatted)
-								-- (remove questLogTitle with wrath value under tracking check mark code below)
 							else
 								questLogTitle:SetText(questTextFormatted)
 							end
-
 							QuestLogDummyText:SetText(questTextFormatted)
 						end
 
 						-- Show tracking check mark
-						local checkText = _G["QuestLogTitle" .. i .. "NormalText"]
-
 						if LeaPlusLC.Wrath then
-							checkText = QuestLogListScrollFrame.buttons[i].normalText
-							questCheck = QuestLogListScrollFrame.buttons[i].check
-							-- QuestLogListScrollFrame.buttons[i].normalText:SetWidth(QuestLogListScrollFrame.buttons[i]:GetWidth())
-							if not _G["QuestLogListScrollFrameButton" .. i].isHeader and _G["QuestLogListScrollFrameButton" .. i .. "Tag"]:GetText() then
-								QuestLogListScrollFrame.buttons[i].normalText:SetWidth(275 - _G["QuestLogListScrollFrameButton" .. i .. "Tag"]:GetStringWidth() - 15)
-							end
-							questLogTitle = QuestLogListScrollFrame.buttons[i]
-						end
-
-						if checkText then
-							local checkPos = checkText:GetStringWidth()
-							if checkPos then
-								if checkPos <= 210 then
-									questCheck:SetPoint("LEFT", questLogTitle, "LEFT", checkPos + 24, 0)
-								else
-									questCheck:SetPoint("LEFT", questLogTitle, "LEFT", 210, 0)
+							ResizeQuestLog(QuestLogListScrollFrame.buttons[i])
+						else
+							local checkText = _G["QuestLogTitle" .. i .. "NormalText"]
+							if checkText then
+								local checkPos = checkText:GetStringWidth()
+								if checkPos then
+									if checkPos <= 210 then
+										questCheck:SetPoint("LEFT", questLogTitle, "LEFT", checkPos + 24, 0)
+									else
+										questCheck:SetPoint("LEFT", questLogTitle, "LEFT", 210, 0)
+									end
 								end
 							end
 						end
