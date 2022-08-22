@@ -7317,6 +7317,7 @@
 							-- Add level tag if its not a header
 							local levelSuffix = ""
 							local questTextFormatted = string.format(" [%d" .. L[levelSuffix] .. "] %s", level, title)
+							--[[Debug]] local questTextFormatted = string.format("  [%d" .. L[levelSuffix] .. "] %s", 8, "Learning to Leave and Return: the Magical Way")
 							if LeaPlusLC.Wrath then
 								QuestLogListScrollFrame.buttons[i]:SetText(questTextFormatted)
 							else
