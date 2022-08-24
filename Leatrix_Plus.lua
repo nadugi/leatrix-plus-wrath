@@ -6719,115 +6719,56 @@
 				ResizeQuestLog = QuestLogTitleButton_Resize
 			end
 
-			-- Show quest levels and tracking check marks
-			local function QuestRefreshUpdate()
-				local numEntries, numQuests = GetNumQuestLogEntries()
-				if numEntries == 0 then return end
-				-- Traverse quests in log
-				for i = 1, QUESTS_DISPLAYED do
-					local questIndex
-					if LeaPlusLC.Wrath then
-						questIndex = i + HybridScrollFrame_GetOffset(QuestLogListScrollFrame)
+			-- Show quest level in quest detail frame
+			hooksecurefunc(QuestInfoTitleHeader, "SetWidth", function()
+				if LeaPlusLC["EnhanceQuestLevels"] == "On" then
+					local quest = GetQuestLogSelection()
+					if quest then
+						local title, level = GetQuestLogTitle(GetQuestLogSelection())
+						if title and level then
+							QuestInfoTitleHeader:SetText("[" .. level .. "] " .. title)
+						end
+					end
+				end
+			end)
+
+			-- Show quest levels in quest log
+			hooksecurefunc("QuestLogTitleButton_Resize", function(questLogTitle)
+				if LeaPlusLC["EnhanceQuestLevels"] == "On" and not questLogTitle.isHeader then
+					local questIndex = questLogTitle:GetID()
+					local title, level = GetQuestLogTitle(questIndex)
+					local questTitleTag = questLogTitle.tag
+					local questNormalText = questLogTitle.normalText
+					local questCheck = questLogTitle.check
+
+					if level and level > 0 and level < 10 then level = "0" .. level end
+
+					questNormalText:SetWidth(0)
+					questNormalText:SetText("  [" .. level .. "] " .. title)
+
+					-- Debug
+					-- questLogTitle.normalText:SetText("  [80] Learning to Leave and Return The")
+
+					-- From QuestLogTitleButton_Resize
+					local rightEdge
+					if questTitleTag:IsShown() then
+						if questCheck:IsShown() then
+							rightEdge = questLogTitle:GetLeft() + questLogTitle:GetWidth() - questTitleTag:GetWidth() - 4 - questCheck:GetWidth() - 2
+						else
+							rightEdge = questLogTitle:GetLeft() + questLogTitle:GetWidth() - questTitleTag:GetWidth() - 4
+						end
 					else
-						questIndex = i + FauxScrollFrame_GetOffset(QuestLogListScrollFrame)
-					end
-					if questIndex <= numEntries then
-						-- Get quest title and check
-						local questLogTitle = _G["QuestLogTitle" .. i]
-						local questCheck = _G["QuestLogTitle" .. i .. "Check"]
-						local title, level, suggestedGroup, isHeader = GetQuestLogTitle(questIndex)
-						if title and level and not isHeader and LeaPlusLC["EnhanceQuestLevels"] == "On" then
-							-- Add level tag if its not a header
-							local levelSuffix = ""
-							local questTextFormatted = string.format("  [%d" .. L[levelSuffix] .. "] %s", level, title)
-							-- Debug local questTextFormatted = string.format("  [%d" .. L[levelSuffix] .. "] %s", 8, "Learning to Leave and Return: the Magical Way")
-							if LeaPlusLC.Wrath then
-								QuestLogListScrollFrame.buttons[i]:SetText(questTextFormatted)
-							else
-								questLogTitle:SetText(questTextFormatted)
-							end
-							QuestLogDummyText:SetText(questTextFormatted)
-						end
-
-						-- Show tracking check mark
-						if LeaPlusLC.Wrath then
-							ResizeQuestLog(QuestLogListScrollFrame.buttons[i])
+						if questCheck:IsShown() then
+							rightEdge = questLogTitle:GetLeft() + questLogTitle:GetWidth() - questCheck:GetWidth() - 2
 						else
-							local checkText = _G["QuestLogTitle" .. i .. "NormalText"]
-							if checkText then
-								local checkPos = checkText:GetStringWidth()
-								if checkPos then
-									if checkPos <= 210 then
-										questCheck:SetPoint("LEFT", questLogTitle, "LEFT", checkPos + 24, 0)
-									else
-										questCheck:SetPoint("LEFT", questLogTitle, "LEFT", 210, 0)
-									end
-								end
-							end
+							rightEdge = questLogTitle:GetLeft() + questLogTitle:GetWidth()
 						end
 					end
+					-- subtract from the text width the number of pixels that overrun the right edge
+					local questNormalTextWidth = questNormalText:GetWidth() - max(questNormalText:GetRight() - rightEdge, 0)
+					questNormalText:SetWidth(questNormalTextWidth)
 				end
-			end
-
-			-- Remove configuration panel for Wrath
-			if not LeaPlusLC.Wrath then
-				hooksecurefunc("QuestLog_Update", QuestRefreshUpdate)
-				if LeaPlusLC.Wrath then
-					QuestLogListScrollFrame:HookScript("OnScrollRangeChanged", QuestRefreshUpdate)
-				end
-			end
-
-			if LeaPlusLC.Wrath then
-				-- Show quest level in quest detail frame
-				hooksecurefunc(QuestInfoTitleHeader, "SetWidth", function()
-					if LeaPlusLC["EnhanceQuestLevels"] == "On" then
-						local quest = GetQuestLogSelection()
-						if quest then
-							local title, level = GetQuestLogTitle(GetQuestLogSelection())
-							if title and level then
-								QuestInfoTitleHeader:SetText("[" .. level .. "] " .. title)
-							end
-						end
-					end
-				end)
-				-- Show quest levels in quest log
-				hooksecurefunc("QuestLogTitleButton_Resize", function(questLogTitle)
-					if LeaPlusLC["EnhanceQuestLevels"] == "On" and not questLogTitle.isHeader then
-						local questIndex = questLogTitle:GetID()
-						local title, level = GetQuestLogTitle(questIndex)
-						local questTitleTag = questLogTitle.tag
-						local questNormalText = questLogTitle.normalText
-						local questCheck = questLogTitle.check
-
-						if level and level > 0 and level < 10 then level = "0" .. level end
-
-						questNormalText:SetWidth(0)
-						questNormalText:SetText("  [" .. level .. "] " .. title)
-
-						-- Debug
-						-- questLogTitle.normalText:SetText("  [80] Learning to Leave and Return The")
-
-						-- From QuestLogTitleButton_Resize
-						local rightEdge
-						if questTitleTag:IsShown() then
-							if questCheck:IsShown() then
-								rightEdge = questLogTitle:GetLeft() + questLogTitle:GetWidth() - questTitleTag:GetWidth() - 4 - questCheck:GetWidth() - 2
-							else
-								rightEdge = questLogTitle:GetLeft() + questLogTitle:GetWidth() - questTitleTag:GetWidth() - 4
-							end
-						else
-							if questCheck:IsShown() then
-								rightEdge = questLogTitle:GetLeft() + questLogTitle:GetWidth() - questCheck:GetWidth() - 2
-							else
-								rightEdge = questLogTitle:GetLeft() + questLogTitle:GetWidth()
-							end
-						end
-						-- subtract from the text width the number of pixels that overrun the right edge
-						local questNormalTextWidth = questNormalText:GetWidth() - max(questNormalText:GetRight() - rightEdge, 0)
-						questNormalText:SetWidth(questNormalTextWidth)
-					end
-				end)
-			end
+			end)
 
 			-- Create configuration panel
 			local EnhanceQuestPanel = LeaPlusLC:CreatePanel("Enhance quest log", "EnhanceQuestPanel")
