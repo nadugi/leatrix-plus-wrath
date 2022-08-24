@@ -6714,11 +6714,6 @@
 				EmptyQuestLogFrame:SetHeight(457)
 			end)
 
-			local ResizeQuestLog
-			if LeaPlusLC.Wrath then
-				ResizeQuestLog = QuestLogTitleButton_Resize
-			end
-
 			-- Show quest level in quest detail frame
 			hooksecurefunc(QuestInfoTitleHeader, "SetWidth", function()
 				if LeaPlusLC["EnhanceQuestLevels"] == "On" then
