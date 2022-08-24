@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.120 (24th August 2022)
+-- 	Leatrix Plus 3.0.00.alpha.1 (24th August 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.120"
+	LeaPlusLC["AddonVer"] = "3.0.00.alpha.1"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -28,7 +28,7 @@
 	-- Check Wow version is valid
 	do
 		local gameversion, gamebuild, gamedate, gametocversion = GetBuildInfo()
-		if gametocversion and gametocversion < 20000 or gametocversion > 39999 then
+		if gametocversion and gametocversion < 30000 or gametocversion > 39999 then
 			-- Game client is not Wow Classic
 			C_Timer.After(2, function()
 				print(L["LEATRIX PLUS: WRONG VERSION INSTALLED!"])
@@ -1096,32 +1096,17 @@
 
 			-- Get localised Wowhead URL
 			local wowheadLoc
-			if GameLocale == "deDE" then wowheadLoc = "de.tbc.wowhead.com"
-			elseif GameLocale == "esMX" then wowheadLoc = "es.tbc.wowhead.com"
-			elseif GameLocale == "esES" then wowheadLoc = "es.tbc.wowhead.com"
-			elseif GameLocale == "frFR" then wowheadLoc = "fr.tbc.wowhead.com"
-			elseif GameLocale == "itIT" then wowheadLoc = "it.tbc.wowhead.com"
-			elseif GameLocale == "ptBR" then wowheadLoc = "pt.tbc.wowhead.com"
-			elseif GameLocale == "ruRU" then wowheadLoc = "ru.tbc.wowhead.com"
-			elseif GameLocale == "koKR" then wowheadLoc = "ko.tbc.wowhead.com"
-			elseif GameLocale == "zhCN" then wowheadLoc = "cn.tbc.wowhead.com"
-			elseif GameLocale == "zhTW" then wowheadLoc = "cn.tbc.wowhead.com"
-			else							 wowheadLoc = "tbc.wowhead.com"
-			end
-
-			if LeaPlusLC.Wrath then
-				if 	   GameLocale == "deDE" then wowheadLoc = "wowhead.com/wotlk/de"
-				elseif GameLocale == "esMX" then wowheadLoc = "wowhead.com/wotlk/es"
-				elseif GameLocale == "esES" then wowheadLoc = "wowhead.com/wotlk/es"
-				elseif GameLocale == "frFR" then wowheadLoc = "wowhead.com/wotlk/fr"
-				elseif GameLocale == "itIT" then wowheadLoc = "wowhead.com/wotlk/it"
-				elseif GameLocale == "ptBR" then wowheadLoc = "wowhead.com/wotlk/pt"
-				elseif GameLocale == "ruRU" then wowheadLoc = "wowhead.com/wotlk/ru"
-				elseif GameLocale == "koKR" then wowheadLoc = "wowhead.com/wotlk/ko"
-				elseif GameLocale == "zhCN" then wowheadLoc = "wowhead.com/wotlk/cn"
-				elseif GameLocale == "zhTW" then wowheadLoc = "wowhead.com/wotlk/cn"
-				else							 wowheadLoc = "wowhead.com/wotlk"
-				end
+			if 	   GameLocale == "deDE" then wowheadLoc = "wowhead.com/wotlk/de"
+			elseif GameLocale == "esMX" then wowheadLoc = "wowhead.com/wotlk/es"
+			elseif GameLocale == "esES" then wowheadLoc = "wowhead.com/wotlk/es"
+			elseif GameLocale == "frFR" then wowheadLoc = "wowhead.com/wotlk/fr"
+			elseif GameLocale == "itIT" then wowheadLoc = "wowhead.com/wotlk/it"
+			elseif GameLocale == "ptBR" then wowheadLoc = "wowhead.com/wotlk/pt"
+			elseif GameLocale == "ruRU" then wowheadLoc = "wowhead.com/wotlk/ru"
+			elseif GameLocale == "koKR" then wowheadLoc = "wowhead.com/wotlk/ko"
+			elseif GameLocale == "zhCN" then wowheadLoc = "wowhead.com/wotlk/cn"
+			elseif GameLocale == "zhTW" then wowheadLoc = "wowhead.com/wotlk/cn"
+			else							 wowheadLoc = "wowhead.com/wotlk"
 			end
 
 			----------------------------------------------------------------------
@@ -1205,22 +1190,18 @@
 
 			end
 
-			if LeaPlusLC.Wrath then
-
-				-- Run function when achievement UI is loaded
-				if IsAddOnLoaded("Blizzard_AchievementUI") then
-					DoWowheadAchievementFunc()
-				else
-					local waitAchievementsFrame = CreateFrame("FRAME")
-					waitAchievementsFrame:RegisterEvent("ADDON_LOADED")
-					waitAchievementsFrame:SetScript("OnEvent", function(self, event, arg1)
-						if arg1 == "Blizzard_AchievementUI" then
-							DoWowheadAchievementFunc()
-							waitAchievementsFrame:UnregisterAllEvents()
-						end
-					end)
-				end
-
+			-- Run function when achievement UI is loaded
+			if IsAddOnLoaded("Blizzard_AchievementUI") then
+				DoWowheadAchievementFunc()
+			else
+				local waitAchievementsFrame = CreateFrame("FRAME")
+				waitAchievementsFrame:RegisterEvent("ADDON_LOADED")
+				waitAchievementsFrame:SetScript("OnEvent", function(self, event, arg1)
+					if arg1 == "Blizzard_AchievementUI" then
+						DoWowheadAchievementFunc()
+						waitAchievementsFrame:UnregisterAllEvents()
+					end
+				end)
 			end
 
 			----------------------------------------------------------------------
@@ -1393,20 +1374,6 @@
 					SkipGossip()
 				end
 			end)
-
-			-- Show battleground name in battfield frame labels (BCC only, not used in Wrath)
-			if not LeaPlusLC.Wrath then
-				hooksecurefunc(BattlefieldFrame, "Show", function()
-					if LeaPlusLC["AutomateGossip"] == "On" then
-						C_Timer.After(0.01, function()
-							local localizedName = GetBattlegroundInfo()
-							if localizedName then
-								BattlefieldFrameFrameLabel:SetText(localizedName)
-							end
-						end)
-					end
-				end)
-			end
 
 		end
 
@@ -3411,14 +3378,7 @@
 							local timeEnd = GetTime()
 							local timeTaken = timeEnd - timeStart
 							debugString = gsub(debugString, "TimeTakenPlaceHolder", string.format("%0.0f", timeTaken))
-							local flightMsg = L["Flight details"] .. " (" .. L["BCC"].. "): " .. nodeName .. " (" .. currentNode .. ") " .. L["to"] .. " " .. barName .. " (" .. destination .. ") (" .. faction .. ") " .. L["took"] .. " " .. string.format("%0.0f", timeTaken) .. " " .. L["seconds"] .. " (" .. numHops .. " " .. L["hop"] ..").|n|n" .. debugString .. "|n|n"
-
-							-- Wrath Beta start
-							if LeaPlusLC.Wrath then
-								flightMsg = gsub(flightMsg, L["BCC"], L["WRATH"])
-							end
-							-- Wrath Beta end
-
+							local flightMsg = L["Flight details"] .. " (" .. L["WRATH"].. "): " .. nodeName .. " (" .. currentNode .. ") " .. L["to"] .. " " .. barName .. " (" .. destination .. ") (" .. faction .. ") " .. L["took"] .. " " .. string.format("%0.0f", timeTaken) .. " " .. L["seconds"] .. " (" .. numHops .. " " .. L["hop"] ..").|n|n" .. debugString .. "|n|n"
 							if destination and data[faction] and data[faction][continent] and data[faction][continent][routeString] then
 								local savedDuration = data[faction][continent][routeString]
 								if savedDuration then
