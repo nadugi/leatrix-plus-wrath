@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 3.0.00.alpha.1 (24th August 2022)
+-- 	Leatrix Plus 3.0.00.alpha.2 (24th August 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "3.0.00.alpha.1"
+	LeaPlusLC["AddonVer"] = "3.0.00.alpha.2"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -5718,6 +5718,21 @@
 			LeaPlusCB["DressUpSideNudeBtn"]:SetScript("OnClick", function()
 				SideDressUpModel:Undress()
 			end)
+
+			-- Skin buttons for ElvUI
+			if LeaPlusLC.ElvUI then
+				_G.LeaPlusGlobalDressUpButtonsButton = LeaPlusCB["DressUpButonsBtn"]
+				LeaPlusLC.ElvUI:GetModule("Skins"):HandleButton(_G.LeaPlusGlobalDressUpButtonsButton)
+
+				_G.LeaPlusGlobalDressUpShowMeButton = LeaPlusCB["DressUpShowMeBtn"]
+				LeaPlusLC.ElvUI:GetModule("Skins"):HandleButton(_G.LeaPlusGlobalDressUpShowMeButton)
+
+				_G.LeaPlusGlobalDressUpTargetButton = LeaPlusCB["DressUpTargetBtn"]
+				LeaPlusLC.ElvUI:GetModule("Skins"):HandleButton(_G.LeaPlusGlobalDressUpTargetButton)
+
+				_G.LeaPlusGlobalDressUpNudeButton = LeaPlusCB["DressUpNudeBtn"]
+				LeaPlusLC.ElvUI:GetModule("Skins"):HandleButton(_G.LeaPlusGlobalDressUpNudeButton)
+			end
 
 			----------------------------------------------------------------------
 			-- Controls
