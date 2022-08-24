@@ -6778,171 +6778,72 @@
 			local tall, numTallQuests = 73, 21
 
 			-- Make the quest log frame double-wide
-			if LeaPlusLC.Wrath then
-				UIPanelWindows["QuestLogFrame"] = {area = "override", pushable = 0, xoffset = -16, yoffset = 12, bottomClampOverride = 140 + 12, width = 682, height = 487, whileDead = 1}
-			else
-				UIPanelWindows["QuestLogFrame"] = {area = "override", pushable = 0, xoffset = -16, yoffset = 12, bottomClampOverride = 140 + 12, width = 714, height = 487, whileDead = 1}
-			end
+			UIPanelWindows["QuestLogFrame"] = {area = "override", pushable = 0, xoffset = -16, yoffset = 12, bottomClampOverride = 140 + 12, width = 682, height = 487, whileDead = 1}
 
 			-- Size the quest log frame
-			if LeaPlusLC.Wrath then
-				QuestLogFrame:SetWidth(682)
-			else
-				QuestLogFrame:SetWidth(714)
-			end
+			QuestLogFrame:SetWidth(682)
 			QuestLogFrame:SetHeight(487 + tall)
 
-			-- Adjust quest log title text
-			if LeaPlusLC.Wrath then
-			else
-				QuestLogTitleText:ClearAllPoints()
-				QuestLogTitleText:SetPoint("TOP", QuestLogFrame, "TOP", 0, -18)
-			end
-
-			if not LeaPlusLC.Wrath then
-				-- Move the detail frame to the right and stretch it to full height
-				QuestLogDetailScrollFrame:ClearAllPoints()
-				QuestLogDetailScrollFrame:SetPoint("TOPLEFT", QuestLogListScrollFrame, "TOPRIGHT", 31, 1)
-				QuestLogDetailScrollFrame:SetHeight(336 + tall)
-			end
-
-			if LeaPlusLC.Wrath then
-				QuestLogListScrollFrame:ClearAllPoints()
-				QuestLogListScrollFrame:SetPoint("TOPLEFT", QuestLogFrame, "TOPLEFT", 19, -75)
-			end
+			QuestLogListScrollFrame:ClearAllPoints()
+			QuestLogListScrollFrame:SetPoint("TOPLEFT", QuestLogFrame, "TOPLEFT", 19, -75)
 
 			-- Position bottom-right close button
-			if LeaPlusLC.Wrath then
-				QuestLogFrameCancelButton:ClearAllPoints()
-				QuestLogFrameCancelButton:SetPoint("BOTTOMRIGHT", QuestLogFrame, "BOTTOMRIGHT", -10, 54)
-			end
+			QuestLogFrameCancelButton:ClearAllPoints()
+			QuestLogFrameCancelButton:SetPoint("BOTTOMRIGHT", QuestLogFrame, "BOTTOMRIGHT", -10, 54)
 
-			if LeaPlusLC.Wrath then
-				hooksecurefunc("QuestLogDetailFrame_AttachToQuestLog", function()
-					QuestLogDetailScrollFrame:ClearAllPoints()
-					QuestLogDetailScrollFrame:SetPoint("TOPLEFT", QuestLogListScrollFrame, "TOPRIGHT", 28, -1)
-					QuestLogDetailScrollFrame:SetHeight(336 + tall)
-				end)
-			end
+			hooksecurefunc("QuestLogDetailFrame_AttachToQuestLog", function()
+				QuestLogDetailScrollFrame:ClearAllPoints()
+				QuestLogDetailScrollFrame:SetPoint("TOPLEFT", QuestLogListScrollFrame, "TOPRIGHT", 28, -1)
+				QuestLogDetailScrollFrame:SetHeight(336 + tall)
+			end)
 
 			-- Expand the quest list to full height
-			if LeaPlusLC.Wrath then
-				QuestLogListScrollFrame:SetHeight(336 + tall - 2) -- Minus 2 for a slight bufffer
-			else
-				QuestLogListScrollFrame:SetHeight(336 + tall)
-			end
+			QuestLogListScrollFrame:SetHeight(336 + tall - 2) -- Minus 2 for a slight bufffer
 
 			-- Create additional quest rows
-			if LeaPlusLC.Wrath then
-				local oldQuestsDisplayed = QUESTS_DISPLAYED
-				_G.QUESTS_DISPLAYED = _G.QUESTS_DISPLAYED + numTallQuests
-				for i = oldQuestsDisplayed + 1, QUESTS_DISPLAYED do
-					local button = CreateFrame("Button", "QuestLogTitle" .. i, QuestLogListScrollFrame.scrollChild, "QuestLogTitleButtonTemplate")
-					button:SetID(i)
-					button:Hide()
-					button:ClearAllPoints()
-					button:SetPoint("TOPLEFT", _G["QuestLogTitle" .. (i-1)], "BOTTOMLEFT", 0, 1)
-					button:SetPoint("TOPLEFT", QuestLogListScrollFrame.buttons[i - 1], "BOTTOMLEFT", 0, 0)
-					QuestLogListScrollFrame.buttons[i] = button
-				end
-			else
-				local oldQuestsDisplayed = QUESTS_DISPLAYED
-				_G.QUESTS_DISPLAYED = _G.QUESTS_DISPLAYED + numTallQuests
-				for i = oldQuestsDisplayed + 1, QUESTS_DISPLAYED do
-					local button = CreateFrame("Button", "QuestLogTitle" .. i, QuestLogFrame, "QuestLogTitleButtonTemplate")
-					button:SetID(i)
-					button:Hide()
-					button:ClearAllPoints()
-					button:SetPoint("TOPLEFT", _G["QuestLogTitle" .. (i-1)], "BOTTOMLEFT", 0, 1)
-				end
+			local oldQuestsDisplayed = QUESTS_DISPLAYED
+			_G.QUESTS_DISPLAYED = _G.QUESTS_DISPLAYED + numTallQuests
+			for i = oldQuestsDisplayed + 1, QUESTS_DISPLAYED do
+				local button = CreateFrame("Button", "QuestLogTitle" .. i, QuestLogListScrollFrame.scrollChild, "QuestLogTitleButtonTemplate")
+				button:SetID(i)
+				button:Hide()
+				button:ClearAllPoints()
+				button:SetPoint("TOPLEFT", _G["QuestLogTitle" .. (i-1)], "BOTTOMLEFT", 0, 1)
+				button:SetPoint("TOPLEFT", QuestLogListScrollFrame.buttons[i - 1], "BOTTOMLEFT", 0, 0)
+				QuestLogListScrollFrame.buttons[i] = button
 			end
 
 			-- Get quest frame textures
 			local regions = {QuestLogFrame:GetRegions()}
 
 			-- Set top left texture
-			if LeaPlusLC.Wrath then
-				regions[2]:SetTexture("Interface\\AddOns\\Leatrix_Plus\\Leatrix_Plus")
-				regions[2]:SetTexCoord(0.25, 0.75, 0, 1)
-				regions[2]:SetSize(512, 512)
-			else
-				regions[3]:SetTexture("Interface\\AddOns\\Leatrix_Plus\\Leatrix_Plus")
-				regions[3]:SetTexCoord(0.25, 0.75, 0, 1)
-				regions[3]:SetSize(512, 512)
-			end
+			regions[2]:SetTexture("Interface\\AddOns\\Leatrix_Plus\\Leatrix_Plus")
+			regions[2]:SetTexCoord(0.25, 0.75, 0, 1)
+			regions[2]:SetSize(512, 512)
 
 			-- Set top right texture
-			if LeaPlusLC.Wrath then
-				regions[3]:ClearAllPoints()
-				regions[3]:SetPoint("TOPLEFT", regions[2], "TOPRIGHT", 0, 0)
-				regions[3]:SetTexture("Interface\\AddOns\\Leatrix_Plus\\Leatrix_Plus")
-				regions[3]:SetTexCoord(0.75, 1, 0, 1)
-				regions[3]:SetSize(256, 512)
-			else
-				regions[4]:ClearAllPoints()
-				regions[4]:SetPoint("TOPLEFT", regions[3], "TOPRIGHT", 0, 0)
-				regions[4]:SetTexture("Interface\\AddOns\\Leatrix_Plus\\Leatrix_Plus")
-				regions[4]:SetTexCoord(0.75, 1, 0, 1)
-				regions[4]:SetSize(256, 512)
-			end
-
-			-- Hide bottom left and bottom right textures
-			if not LeaPlusLC.Wrath then
-				regions[5]:Hide()
-				regions[6]:Hide()
-			end
+			regions[3]:ClearAllPoints()
+			regions[3]:SetPoint("TOPLEFT", regions[2], "TOPRIGHT", 0, 0)
+			regions[3]:SetTexture("Interface\\AddOns\\Leatrix_Plus\\Leatrix_Plus")
+			regions[3]:SetTexCoord(0.75, 1, 0, 1)
+			regions[3]:SetSize(256, 512)
 
 			-- Position and resize abandon button
-			if LeaPlusLC.Wrath then
-				if not LeaPlusLC.ElvUI then
-					hooksecurefunc("QuestLogControlPanel_UpdatePosition", function()
-						if QuestLogFrame:IsShown() then
-							QuestLogControlPanel:ClearAllPoints()
-							QuestLogControlPanel:SetPoint("BOTTOMLEFT", QuestLogFrame, "BOTTOMLEFT", 18, 50)
-						end
-					end)
-				end
-			else
-				QuestLogFrameAbandonButton:SetSize(110, 21)
-				QuestLogFrameAbandonButton:SetText(ABANDON_QUEST_ABBREV)
-				QuestLogFrameAbandonButton:ClearAllPoints()
-				QuestLogFrameAbandonButton:SetPoint("BOTTOMLEFT", QuestLogFrame, "BOTTOMLEFT", 17, 54)
-			end
-
-			-- Position and resize share button
-			if LeaPlusLC.Wrath then
-			else
-				QuestFramePushQuestButton:SetSize(100, 21)
-				QuestFramePushQuestButton:SetText(SHARE_QUEST_ABBREV)
-				QuestFramePushQuestButton:ClearAllPoints()
-				QuestFramePushQuestButton:SetPoint("LEFT", QuestLogFrameAbandonButton, "RIGHT", -3, 0)
-			end
-
-			-- Add map button
-			if LeaPlusLC.Wrath then
-			else
-				local logMapButton = CreateFrame("Button", nil, QuestLogFrame, "UIPanelButtonTemplate")
-				logMapButton:SetText(L["Map"])
-				logMapButton:ClearAllPoints()
-				logMapButton:SetPoint("LEFT", QuestFramePushQuestButton, "RIGHT", -3, 0)
-				logMapButton:SetSize(100, 21)
-				logMapButton:SetScript("OnClick", ToggleWorldMap)
-				LeaPlusLC.logMapButton = logMapButton -- needed for ElvUI fix and can be removed in Wrath
+			if not LeaPlusLC.ElvUI then
+				hooksecurefunc("QuestLogControlPanel_UpdatePosition", function()
+					if QuestLogFrame:IsShown() then
+						QuestLogControlPanel:ClearAllPoints()
+						QuestLogControlPanel:SetPoint("BOTTOMLEFT", QuestLogFrame, "BOTTOMLEFT", 18, 50)
+					end
+				end)
 			end
 
 			-- Position and size close button
-			if LeaPlusLC.Wrath then
-				if LeaPlusLC.ElvUI then
-					QuestLogFrameCancelButton:ClearAllPoints()
-					QuestLogFrameCancelButton:SetPoint("BOTTOMRIGHT", QuestLogFrame, "BOTTOMRIGHT", -10, 12)
-					QuestLogFrameCancelButton:SetHeight(20)
-					QuestLogFrame:SetHeight(447 + tall)
-				end
-			else
-				QuestFrameExitButton:SetSize(80, 22)
-				QuestFrameExitButton:SetText(CLOSE)
-				QuestFrameExitButton:ClearAllPoints()
-				QuestFrameExitButton:SetPoint("BOTTOMRIGHT", QuestLogFrame, "BOTTOMRIGHT", -42, 54)
+			if LeaPlusLC.ElvUI then
+				QuestLogFrameCancelButton:ClearAllPoints()
+				QuestLogFrameCancelButton:SetPoint("BOTTOMRIGHT", QuestLogFrame, "BOTTOMRIGHT", -10, 12)
+				QuestLogFrameCancelButton:SetHeight(20)
+				QuestLogFrame:SetHeight(447 + tall)
 			end
 
 			-- Empty quest frame
@@ -6950,26 +6851,9 @@
 			QuestLogNoQuestsText:SetPoint("TOP", QuestLogListScrollFrame, 0, -50)
 			hooksecurefunc(EmptyQuestLogFrame, "Show", function()
 				EmptyQuestLogFrame:ClearAllPoints()
-				if LeaPlusLC.Wrath then
-					EmptyQuestLogFrame:SetPoint("BOTTOMLEFT", QuestLogFrame, "BOTTOMLEFT", 20, 30)
-					EmptyQuestLogFrame:SetHeight(457)
-				else
-					EmptyQuestLogFrame:SetPoint("BOTTOMLEFT", QuestLogFrame, "BOTTOMLEFT", 20, -76)
-					EmptyQuestLogFrame:SetHeight(487)
-				end
+				EmptyQuestLogFrame:SetPoint("BOTTOMLEFT", QuestLogFrame, "BOTTOMLEFT", 20, 30)
+				EmptyQuestLogFrame:SetHeight(457)
 			end)
-
-			-- Show map button (not currently used)
-			local mapButton = CreateFrame("BUTTON", nil, QuestLogFrame)
-			mapButton:SetSize(36, 25)
-			mapButton:SetPoint("TOPRIGHT", -390, -44)
-			mapButton:SetNormalTexture("Interface\\QuestFrame\\UI-QuestMap_Button")
-			mapButton:GetNormalTexture():SetTexCoord(0.125, 0.875, 0, 0.5)
-			mapButton:SetPushedTexture("Interface\\QuestFrame\\UI-QuestMap_Button")
-			mapButton:GetPushedTexture():SetTexCoord(0.125, 0.875, 0.5, 1.0)
-			mapButton:SetHighlightTexture("Interface\\Buttons\\ButtonHilight-Square")
-			mapButton:SetScript("OnClick", ToggleWorldMap)
-			mapButton:Hide()
 
 			local ResizeQuestLog
 			if LeaPlusLC.Wrath then
@@ -7084,18 +6968,6 @@
 						questNormalText:SetWidth(questNormalTextWidth)
 					end
 				end)
-			end
-
-			-- ElvUI fixes
-			if not LeaPlusLC.Wrath then
-				if LeaPlusLC.ElvUI then
-					local E = LeaPlusLC.ElvUI
-					if E.private.skins.blizzard.enable and E.private.skins.blizzard.quest then
-						-- Skin map button
-						_G.LeaPlusGlobalMapButton = LeaPlusLC.logMapButton
-						E:GetModule("Skins"):HandleButton(_G.LeaPlusGlobalMapButton)
-					end
-				end
 			end
 
 			-- Create configuration panel
