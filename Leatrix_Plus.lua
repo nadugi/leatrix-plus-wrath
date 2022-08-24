@@ -576,7 +576,6 @@
 		or	(LeaPlusLC["ShowRaidToggle"]		~= LeaPlusDB["ShowRaidToggle"])			-- Show raid button
 		or	(LeaPlusLC["ShowPlayerChain"]		~= LeaPlusDB["ShowPlayerChain"])		-- Show player chain
 		or	(LeaPlusLC["ShowReadyTimer"]		~= LeaPlusDB["ShowReadyTimer"])			-- Show ready timer
-		or	(LeaPlusLC["ShowDruidPowerBar"]		~= LeaPlusDB["ShowDruidPowerBar"])		-- Show druid power bar
 		or	(LeaPlusLC["ShowWowheadLinks"]		~= LeaPlusDB["ShowWowheadLinks"])		-- Show Wowhead links
 		or	(LeaPlusLC["ShowFlightTimes"]		~= LeaPlusDB["ShowFlightTimes"])		-- Show flight times
 
@@ -5253,146 +5252,6 @@
 
 		if LeaPlusLC["MoreFontSizes"] == "On" then
 			RunScript('CHAT_FONT_HEIGHTS = {[1] = 10, [2] = 12, [3] = 14, [4] = 16, [5] = 18, [6] = 20, [7] = 22, [8] = 24, [9] = 26, [10] = 28}')
-		end
-
-		----------------------------------------------------------------------
-		--	Show druid power bar
-		----------------------------------------------------------------------
-
-		if LeaPlusLC["ShowDruidPowerBar"] == "On" then
-
-			local void, class = UnitClass("player")
-			if class == "DRUID" then
-
-				RunScript('ADDITIONAL_POWER_BAR_NAME = "MANA"')
-				RunScript('ADDITIONAL_POWER_BAR_INDEX = 0')
-				RunScript('ALT_MANA_BAR_PAIR_DISPLAY_INFO = {DRUID = {[Enum.PowerType.Rage] = true; [Enum.PowerType.Energy] = true}}')
-
-				-- Create local copies of Shadowlands functions (from Blizzard code AlternatePowerBar.lua)
-
-				-- Line 13
-				local function AlternatePowerBar_Initialize(self)
-					if not (self.powerName and self.powerIndex) then
-						self.powerName = ADDITIONAL_POWER_BAR_NAME
-						self.powerIndex = ADDITIONAL_POWER_BAR_INDEX
-					end
-
-					local parent = self:GetParent()
-					self:RegisterEvent("PLAYER_ENTERING_WORLD")
-					self:RegisterUnitEvent("UNIT_DISPLAYPOWER", parent.unit)
-					self:RegisterUnitEvent("UNIT_MAXPOWER", parent.unit)
-					self:RegisterUnitEvent("UNIT_POWER_UPDATE", parent.unit)
-
-					local color = PowerBarColor[self.powerName]
-					self:SetStatusBarColor(color.r, color.g, color.b)
-				end
-
-				-- Line 66
-				local function AlternatePowerBar_UpdateMaxValue(self)
-					self:SetMinMaxValues(0, UnitPowerMax(self:GetParent().unit, self.powerIndex))
-				end
-
-				-- Line 60
-				local function AlternatePowerBar_UpdateValue(self)
-					self:SetValue(UnitPower(self:GetParent().unit, self.powerIndex))
-				end
-
-				-- Line 101
-				local function AlternatePowerBar_UpdatePowerType(self)
-					local unit = self:GetParent().unit
-					local void, class = UnitClass(unit)
-					local show = (UnitPowerMax(unit, self.powerIndex) > 0 and ALT_MANA_BAR_PAIR_DISPLAY_INFO[class] and ALT_MANA_BAR_PAIR_DISPLAY_INFO[class][UnitPowerType(unit)])
-
-					self.pauseUpdates = not show
-					if show then AlternatePowerBar_UpdateValue(self) end
-					self:SetShown(show)
-				end
-
-				-- Line 4
-				local function AlternatePowerBar_OnLoad(self)
-					self.textLockable = 1
-					self.cvar = "statusText"
-					self.cvarLabel = "STATUS_TEXT_PLAYER"
-					self.capNumericDisplay = true
-					AlternatePowerBar_Initialize(self)
-					TextStatusBar_Initialize(self)
-				end
-
-				-- Line 32
-				local function AlternatePowerBar_OnEvent(self, event, ...)
-					if event == "PLAYER_ENTERING_WORLD" or event == "UNIT_MAXPOWER" then AlternatePowerBar_UpdateMaxValue(self) end
-					if event == "PLAYER_ENTERING_WORLD" or event == "UNIT_DISPLAYPOWER" then AlternatePowerBar_UpdatePowerType(self) end
-					if event == "UNIT_POWER_UPDATE" and self:IsShown() then AlternatePowerBar_UpdateValue(self) end
-					TextStatusBar_OnEvent(self, event, ...)
-				end
-
-				-- Line 55
-				local function AlternatePowerBar_OnUpdate(self, elapsed)
-					AlternatePowerBar_UpdateValue(self)
-				end
-
-				-- Create bar (uses Blizzard names from AlternatePowerBar.xml)
-				local bar = CreateFrame("StatusBar", nil, PlayerFrame, "TextStatusBar")
-				bar:SetStatusBarTexture("Interface\\TargetingFrame\\UI-StatusBar")
-				bar:SetStatusBarColor(0,0,1)
-				bar:SetSize(104, 12)
-				bar:SetPoint("BOTTOMLEFT", 114, 23)
-
-				-- Show bar above player chain if it's enabled
-				if LeaPlusLC["ShowPlayerChain"] == "On" then
-					bar:SetFrameLevel(3)
-				end
-
-				bar.DefaultBackground = bar:CreateTexture(nil, "BACKGROUND")
-				bar.DefaultBackground:SetColorTexture(0,0, 0, 0.5)
-				bar.DefaultBackground:SetAllPoints(bar)
-
-				-- Store yellow border colors for player chain
-				local chainR, chainG, chainB = 0.86, 0.70, 0.12
-
-				bar.DefaultBorder = bar:CreateTexture(nil, "OVERLAY")
-				bar.DefaultBorder:SetTexture("Interface\\CharacterFrame\\UI-CharacterFrame-GroupIndicator")
-				bar.DefaultBorder:SetTexCoord(0.125, 0.25, 1, 0)
-				bar.DefaultBorder:SetHeight(16)
-				bar.DefaultBorder:SetPoint("TOPLEFT", 4, 0)
-				bar.DefaultBorder:SetPoint("TOPRIGHT", -4, 0)
-				if LeaPlusLC["ShowPlayerChain"] == "On" then
-					bar.DefaultBorder:SetVertexColor(chainR, chainG, chainB)
-				end
-
-				bar.DefaultBorderLeft = bar:CreateTexture(nil, "OVERLAY")
-				bar.DefaultBorderLeft:SetTexture("Interface\\CharacterFrame\\UI-CharacterFrame-GroupIndicator")
-				bar.DefaultBorderLeft:SetTexCoord(0, 0.125, 1, 0)
-				bar.DefaultBorderLeft:SetSize(16, 16)
-				bar.DefaultBorderLeft:SetPoint("TOPLEFT", -12, 0)
-				if LeaPlusLC["ShowPlayerChain"] == "On" then
-					bar.DefaultBorderLeft:SetVertexColor(chainR, chainG, chainB)
-				end
-
-				bar.DefaultBorderRight = bar:CreateTexture(nil, "OVERLAY")
-				bar.DefaultBorderRight:SetTexture("Interface\\CharacterFrame\\UI-CharacterFrame-GroupIndicator")
-				bar.DefaultBorderRight:SetTexCoord(0.125, 0, 1, 0)
-				bar.DefaultBorderRight:SetSize(16, 16)
-				bar.DefaultBorderRight:SetPoint("TOPRIGHT", 12, 0)
-				if LeaPlusLC["ShowPlayerChain"] == "On" then
-					bar.DefaultBorderRight:SetVertexColor(chainR, chainG, chainB)
-				end
-
-				bar.TextString = bar:CreateFontString(nil, "OVERLAY", "TextStatusBarText")
-				bar.TextString:SetPoint("CENTER")
-
-				bar.LeftText = bar:CreateFontString(nil, "OVERLAY", "TextStatusBarText")
-				bar.LeftText:SetPoint("LEFT")
-
-				bar.RightText = bar:CreateFontString(nil, "OVERLAY", "TextStatusBarText")
-				bar.RightText:SetPoint("RIGHT")
-
-				bar:SetScript("OnEvent", AlternatePowerBar_OnEvent)
-				bar:SetScript("OnUpdate", AlternatePowerBar_OnUpdate)
-				AlternatePowerBar_OnLoad(bar)
-
-			end
-
 		end
 
 		----------------------------------------------------------------------
@@ -11601,7 +11460,6 @@
 				LeaPlusLC:LoadVarChk("ShowPlayerChain", "Off")				-- Show player chain
 				LeaPlusLC:LoadVarNum("PlayerChainMenu", 2, 1, 3)			-- Player chain dropdown value
 				LeaPlusLC:LoadVarChk("ShowReadyTimer", "Off")				-- Show ready timer
-				LeaPlusLC:LoadVarChk("ShowDruidPowerBar", "Off")			-- Show druid power bar
 				LeaPlusLC:LoadVarChk("ShowWowheadLinks", "Off")				-- Show Wowhead links
 				LeaPlusLC:LoadVarChk("WowheadLinkComments", "Off")			-- Show Wowhead links to comments
 
@@ -11693,20 +11551,6 @@
 
 				-- Start page
 				LeaPlusLC:LoadVarNum("LeaStartPage", 0, 0, LeaPlusLC["NumberOfPages"])
-
-				-- Disable options for Wrath
-				if LeaPlusLC.Wrath then
-					-- Now included with default UI
-					LeaPlusLC["ShowDruidPowerBar"] = "Off"
-					LeaPlusDB["ShowDruidPowerBar"] = "Off"
-					LeaPlusLC:LockItem(LeaPlusCB["ShowDruidPowerBar"], true)
-				end
-
-				if not LeaPlusLC.Wrath then
-					LeaPlusLC["NoAlerts"] = "Off"
-					LeaPlusDB["NoAlerts"] = "Off"
-					LeaPlusLC:LockItem(LeaPlusCB["NoAlerts"], true)
-				end
 
 				-- Disable items that conflict with ElvUI
 				if LeaPlusLC.ElvUI then
@@ -11943,7 +11787,6 @@
 			LeaPlusDB["ShowPlayerChain"]		= LeaPlusLC["ShowPlayerChain"]
 			LeaPlusDB["PlayerChainMenu"]		= LeaPlusLC["PlayerChainMenu"]
 			LeaPlusDB["ShowReadyTimer"]			= LeaPlusLC["ShowReadyTimer"]
-			LeaPlusDB["ShowDruidPowerBar"]		= LeaPlusLC["ShowDruidPowerBar"]
 			LeaPlusDB["ShowWowheadLinks"]		= LeaPlusLC["ShowWowheadLinks"]
 			LeaPlusDB["WowheadLinkComments"]	= LeaPlusLC["WowheadLinkComments"]
 
@@ -14042,7 +13885,6 @@
 				LeaPlusDB["ShowPlayerChain"] = "On"				-- Show player chain
 				LeaPlusDB["PlayerChainMenu"] = 3				-- Player chain style
 				LeaPlusDB["ShowReadyTimer"] = "On"				-- Show ready timer
-				LeaPlusDB["ShowDruidPowerBar"] = "On"			-- Show druid power bar
 				LeaPlusDB["ShowWowheadLinks"] = "On"			-- Show Wowhead links
 				LeaPlusDB["WowheadLinkComments"] = "On"			-- Show Wowhead links to comments
 				LeaPlusDB["ShowFlightTimes"] = "On"				-- Show flight times
@@ -14433,10 +14275,9 @@
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowFreeBagSlots"			, 	"Show free bag slots"			, 	340, -172, 	true,	"If checked, the number of free bag slots will be shown in the backpack button icon and tooltip.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowRaidToggle"			, 	"Show raid button"				,	340, -192, 	true,	"If checked, the button to toggle the raid container frame will be shown just above the raid management frame (left side of the screen) instead of in the raid management frame itself.|n|nThis allows you to toggle the raid container frame without needing to open the raid management frame.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowPlayerChain"			, 	"Show player chain"				,	340, -212, 	true,	"If checked, you will be able to show a rare, elite or rare elite chain around the player frame.")
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowDruidPowerBar"			, 	"Show druid power bar"			,	340, -232, 	true,	"If checked, a power bar will be shown in the player frame when you are playing a shapeshifted druid.")
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowReadyTimer"			, 	"Show ready timer"				,	340, -252, 	true,	"If checked, a timer will be shown under the PvP encounter ready frame so that you know how long you have left to click the enter button.")
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowWowheadLinks"			, 	"Show Wowhead links"			, 	340, -272, 	true,	"If checked, Wowhead links will be shown in the world map frame and the achievements frame.")
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowFlightTimes"			, 	"Show flight times"				, 	340, -292, 	true,	"If checked, flight times will be shown in the flight map and when you take a flight.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowReadyTimer"			, 	"Show ready timer"				,	340, -232, 	true,	"If checked, a timer will be shown under the PvP encounter ready frame so that you know how long you have left to click the enter button.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowWowheadLinks"			, 	"Show Wowhead links"			, 	340, -252, 	true,	"If checked, Wowhead links will be shown in the world map frame and the achievements frame.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowFlightTimes"			, 	"Show flight times"				, 	340, -272, 	true,	"If checked, flight times will be shown in the flight map and when you take a flight.")
 
 	LeaPlusLC:CfgBtn("ModMinimapBtn", LeaPlusCB["MinimapModder"])
 	LeaPlusLC:CfgBtn("MoveTooltipButton", LeaPlusCB["TipModEnable"])
