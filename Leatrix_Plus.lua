@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 2.5.120.alpha.18 (23rd August 2022)
+-- 	Leatrix Plus 2.5.120.alpha.19 (24th August 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "2.5.120.alpha.18"
+	LeaPlusLC["AddonVer"] = "2.5.120.alpha.19"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -7362,16 +7362,53 @@
 			if LeaPlusLC.Wrath then
 				-- Show quest level in quest detail frame
 				hooksecurefunc(QuestInfoTitleHeader, "SetWidth", function()
-					local quest = GetQuestLogSelection()
-					if quest then
-						local title, level = GetQuestLogTitle(GetQuestLogSelection())
-						if title and level then
-							QuestInfoTitleHeader:SetText("[" .. level .. "] " .. title)
+					if LeaPlusLC["EnhanceQuestLevels"] == "On" then
+						local quest = GetQuestLogSelection()
+						if quest then
+							local title, level = GetQuestLogTitle(GetQuestLogSelection())
+							if title and level then
+								QuestInfoTitleHeader:SetText("[" .. level .. "] " .. title)
+							end
 						end
 					end
 				end)
-				-- Hide the configuration panel for Wrath
-				LeaPlusCB["EnhanceQuestLogBtn"]:Hide()
+				-- Show quest levels in quest log
+				hooksecurefunc("QuestLogTitleButton_Resize", function(questLogTitle)
+					if LeaPlusLC["EnhanceQuestLevels"] == "On" and not questLogTitle.isHeader then
+						local questIndex = questLogTitle:GetID()
+						local title, level = GetQuestLogTitle(questIndex)
+						local questTitleTag = questLogTitle.tag
+						local questNormalText = questLogTitle.normalText
+						local questCheck = questLogTitle.check
+
+						if level and level > 0 and level < 10 then level = "0" .. level end
+
+						questNormalText:SetWidth(0)
+						questNormalText:SetText("  [" .. level .. "] " .. title)
+
+						-- Debug
+						-- questLogTitle.normalText:SetText("  [80] Learning to Leave and Return The")
+
+						-- From QuestLogTitleButton_Resize
+						local rightEdge
+						if questTitleTag:IsShown() then
+							if questCheck:IsShown() then
+								rightEdge = questLogTitle:GetLeft() + questLogTitle:GetWidth() - questTitleTag:GetWidth() - 4 - questCheck:GetWidth() - 2
+							else
+								rightEdge = questLogTitle:GetLeft() + questLogTitle:GetWidth() - questTitleTag:GetWidth() - 4
+							end
+						else
+							if questCheck:IsShown() then
+								rightEdge = questLogTitle:GetLeft() + questLogTitle:GetWidth() - questCheck:GetWidth() - 2
+							else
+								rightEdge = questLogTitle:GetLeft() + questLogTitle:GetWidth()
+							end
+						end
+						-- subtract from the text width the number of pixels that overrun the right edge
+						local questNormalTextWidth = questNormalText:GetWidth() - max(questNormalText:GetRight() - rightEdge, 0)
+						questNormalText:SetWidth(questNormalTextWidth)
+					end
+				end)
 			end
 
 			-- ElvUI fixes
