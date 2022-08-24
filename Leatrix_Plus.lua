@@ -6736,7 +6736,7 @@
 				if LeaPlusLC["EnhanceQuestLevels"] == "On" then
 					local quest = GetQuestLogSelection()
 					if quest then
-						local title, level = GetQuestLogTitle(GetQuestLogSelection())
+						local title, level = GetQuestLogTitle(quest)
 						if title and level then
 							QuestInfoTitleHeader:SetText("[" .. level .. "] " .. title)
 						end
