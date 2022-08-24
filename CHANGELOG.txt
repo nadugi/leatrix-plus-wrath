@@ -1,6 +1,7 @@
 3.0.00.alpha.1 - 24th August 2022
 - Welcome to Wrath of the Lich King!
 - Removed BCC transitional code.
+- Added a few flight times.  There are now 3517 flight times stored in Leatrix Plus for Wrath.
 
 2.5.120 - 24th August 2022
 - The 'Hide action button text' option ('Text') is now two options - 'Hide keybind text' and 'Hide macro text'.
