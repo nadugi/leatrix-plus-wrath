@@ -4658,10 +4658,10 @@
 			ToggleZoomButtons()
 
 			----------------------------------------------------------------------
-			-- Hide the clock
+			-- Style and position the clock
 			----------------------------------------------------------------------
 
-			-- Function to show or hide the clock
+			-- Function to style and position the clock
 			local function SetMiniClock(firstRun)
 				if IsAddOnLoaded("Blizzard_TimeManager") then
 					if LeaPlusLC["SquareMinimap"] == "On" and firstRun == true then
