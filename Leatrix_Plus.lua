@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 3.0.00.alpha.2 (24th August 2022)
+-- 	Leatrix Plus 3.0.00.alpha.3 (26th August 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "3.0.00.alpha.2"
+	LeaPlusLC["AddonVer"] = "3.0.00.alpha.3"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -11895,9 +11895,11 @@
 		end
 
 		-- Set locked options to original values (set before they were locked)
-		for k, v in pairs(LeaLockList) do
-			LeaPlusLC[k] = v
-			LeaPlusDB[k] = v
+		if LeaPlusLC.ElvUI then
+			for k, v in pairs(LeaLockList) do
+				LeaPlusLC[k] = v
+				LeaPlusDB[k] = v
+			end
 		end
 
 	end

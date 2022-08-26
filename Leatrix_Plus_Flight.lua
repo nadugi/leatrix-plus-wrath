@@ -203,6 +203,7 @@
 					["0.59:0.45:0.46:0.43:0.45:0.37"] = 228, -- Revantusk Village, Tarren Mill, The Bulwark
 					["0.59:0.45:0.61:0.35:0.51:0.36"] = 236, -- Revantusk Village, Light's Hope Chapel, Thondroril River
 					["0.59:0.45:0.61:0.35:0.62:0.34"] = 200, -- Revantusk Village, Light's Hope Chapel, Acherus: The Ebon Hold
+					["0.59:0.45:0.42:0.37:0.50:0.66"] = 697, -- Revantusk Village, Undercity, Kargath
 
 					-- Horde: Shattered Sun Staging Area (Isle of Quel'Danas)
 					["0.58:0.06:0.61:0.28:0.61:0.35:0.59:0.45:0.55:0.46:0.50:0.66:0.41:0.93"] = 1117, -- Shattered Sun Staging Area, Zul'Aman, Light's Hope Chapel, Revantusk Village, Hammerfall, Kargath, Booty Bay
@@ -993,6 +994,7 @@
 					["0.63:0.36:0.64:0.23:0.54:0.21"] = 264, -- Valormok, Everlook, Moonglade
 					["0.63:0.36:0.64:0.23"] = 131, -- Valormok, Everlook
 					["0.63:0.36:0.46:0.30:0.54:0.21"] = 349, -- Valormok, Bloodvenom Post, Moonglade
+					["0.63:0.36:0.63:0.44:0.61:0.55:0.61:0.80:0.50:0.76"] = 555, -- Valormok, Orgrimmar, Ratchet, Gadgetzan, Marshal's Refuge
 
 					-- Horde: Zoram'gar Outpost (Ashenvale)
 					["0.41:0.37:0.56:0.53:0.55:0.73:0.61:0.80"] = 512, -- Zoram'gar Outpost, Crossroads, Freewind Post, Gadgetzan
@@ -1452,6 +1454,7 @@
 					["0.23:0.50:0.44:0.67:0.51:0.73:0.66:0.77:0.78:0.85"] = 349, -- Zabra'jin, Shattrath, Stonebreaker Hold, Shadowmoon Village, Sanctum of the Stars
 					["0.23:0.50:0.44:0.51:0.49:0.36:0.58:0.27:0.72:0.28"] = 304, -- Zabra'jin, Swamprat Post, Mok'Nathal Village, Area 52, Cosmowrench
 					["0.23:0.50:0.44:0.67:0.51:0.73:0.66:0.77:0.81:0.77"] = 365, -- Zabra'jin, Shattrath, Stonebreaker Hold, Shadowmoon Village, Altar of Sha'tar
+					["0.23:0.50:0.44:0.67:0.51:0.73:0.65:0.50"] = 343, -- Zabra'jin, Shattrath, Stonebreaker Hold, Thrallmar
 
 				},
 
@@ -2208,6 +2211,7 @@
 					["0.52:0.72:0.47:0.65:0.47:0.59:0.48:0.39:0.51:0.36"] = 436, -- Morgan's Vigil, Thorium Point, Ironforge, Chillwind Camp, Thondroril River
 					["0.52:0.72:0.47:0.65:0.47:0.59:0.61:0.35:0.62:0.34"] = 544, -- Morgan's Vigil, Thorium Point, Ironforge, Light's Hope Chapel, Acherus: The Ebon Hold
 					["0.52:0.72:0.41:0.73:0.41:0.93"] = 336, -- Morgan's Vigil, Stormwind, Booty Bay
+					["0.52:0.72:0.41:0.73:0.47:0.59:0.44:0.45"] = 525, -- Morgan's Vigil, Stormwind, Ironforge, Southshore
 
 					-- Alliance: Nethergarde Keep (Blasted Lands)
 					["0.55:0.81:0.47:0.79:0.43:0.82:0.41:0.93"] = 251, -- Nethergarde Keep, Darkshire, Rebel Camp, Booty Bay
