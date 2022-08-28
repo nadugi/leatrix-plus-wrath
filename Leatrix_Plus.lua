@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 3.0.00.alpha.4 (28th August 2022)
+-- 	Leatrix Plus 3.0.00.alpha.5 (28th August 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "3.0.00.alpha.4"
+	LeaPlusLC["AddonVer"] = "3.0.00.alpha.5"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -11551,7 +11551,7 @@
 						end
 
 						-- UnitFrames: Disabled Blizzard: Player, Target and Focus
-						if E.private.unitframe.disabledBlizzardFrames.player and E.private.unitframe.disabledBlizzardFrames.target and E.private.unitframe.disabledBlizzardFrames.focus then
+						if E.private.unitframe.disabledBlizzardFrames.player or E.private.unitframe.disabledBlizzardFrames.target or E.private.unitframe.disabledBlizzardFrames.focus then
 							LockOption("ClassColFrames", "UnitFrames (Disabled Blizzard Frames Player, Target or Focus)") -- Class-colored frames
 						end
 
