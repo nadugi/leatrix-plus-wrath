@@ -2,6 +2,7 @@
 - Welcome to Wrath of the Lich King!
 - Removed BCC transitional code.
 - Removed the 'Hide the clock' setting (part of 'Enhance minimap') and the 'Show free bag slots' setting as they are now both included in the default UI (interface settings display menu).
+- Tweaked the ElvUI compatibility checks.
 - Added a few flight times.  There are now 3521 flight times stored in Leatrix Plus for Wrath.
 
 2.5.120 - 24th August 2022
