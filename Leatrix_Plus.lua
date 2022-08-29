@@ -3129,7 +3129,7 @@
 			-- Snap-to-grid
 			do
 				local frame, grid = dragframe, 10
-				local w, h = 183, 50
+				local w, h = 180, 20
 				local xpos, ypos, scale, uiscale
 				frame:RegisterForDrag("RightButton")
 				frame:HookScript("OnDragStart", function()
@@ -3230,7 +3230,8 @@
 
 					-- Set drag frame size according to UI scale
 					dragframe:SetWidth(206 * LeaPlusLC["gscale"])
-					dragframe:SetHeight(50 * LeaPlusLC["gscale"])
+					dragframe:SetHeight(20 * LeaPlusLC["gscale"])
+					dragframe:SetFrameStrata("HIGH") -- MirrorTimer is medium
 
 					-- Show configuration panel
 					TimerPanel:Show()
@@ -11739,6 +11740,7 @@
 						-- Base
 						do
 							LockOption("ManageWidget", "Base") -- Manage widget
+							LockOption("ManageTimer", "Base") -- Manage timer
 						end
 
 					end
@@ -14408,7 +14410,7 @@
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ManageBuffs"				,	"Manage buffs"					, 	146, -112, 	true,	"If checked, you will be able to change the position and scale of the buffs frame.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ManageWidget"				,	"Manage widget"					, 	146, -132, 	true,	"If checked, you will be able to change the position and scale of the widget frame.|n|nThe widget frame is commonly used for showing PvP scores and tracking objectives.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ManageFocus"				,	"Manage focus"					, 	146, -152, 	true,	"If checked, you will be able to change the position and scale of the focus frame.|n|nNote that enabling this option will prevent you from using the default UI to move the focus frame.")
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ManageTimer"				,	"Manage timer"					, 	146, -172, 	true,	"If checked, you will be able to change the position and scale of the timer bar.|n|nThe timer bar is used for showing remaining breath when under water as well as other things.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ManageTimer"				,	"Manage timer"					, 	146, -172, 	true,	"If checked, you will be able to change the position and scale of the timer bar.|n|nThe timer bar is used for showing remaining breath when underwater as well as other things.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ClassColFrames"			, 	"Class colored frames"			,	146, -192, 	true,	"If checked, class coloring will be used in the player frame, target frame and focus frame.")
 
 	LeaPlusLC:MakeTx(LeaPlusLC[pg], "Visibility"				, 	340, -72);
