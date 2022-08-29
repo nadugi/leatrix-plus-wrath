@@ -14014,12 +14014,6 @@
 				LeaPlusDB["Frames"]["TargetFrame"]["YOffset"] = -14
 				LeaPlusDB["Frames"]["TargetFrame"]["Scale"] = 1.20
 
-				LeaPlusDB["Frames"]["MirrorTimer1"] = {}
-				LeaPlusDB["Frames"]["MirrorTimer1"]["Point"] = "TOP"
-				LeaPlusDB["Frames"]["MirrorTimer1"]["Relative"] = "TOP"
-				LeaPlusDB["Frames"]["MirrorTimer1"]["XOffset"] = 0
-				LeaPlusDB["Frames"]["MirrorTimer1"]["YOffset"] = -120
-
 				LeaPlusDB["ManageBuffs"] = "On"					-- Manage buffs
 				LeaPlusDB["BuffFrameA"] = "TOPRIGHT"			-- Manage buffs anchor
 				LeaPlusDB["BuffFrameR"] = "TOPRIGHT"			-- Manage buffs relative
