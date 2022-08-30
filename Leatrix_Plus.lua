@@ -3080,57 +3080,46 @@
 		-- Manage durability
 		----------------------------------------------------------------------
 
-		if LeaPlusLC["ManageWidget"] == "On" then
+		if LeaPlusLC["ManageDurability"] == "On" then
 
+			-- Create and manage container for DurabilityFrame
+			local durabilityHolder = CreateFrame("Frame", nil, UIParent)
+			durabilityHolder:SetPoint("TOP", UIParent, "TOP", 0, -15)
+			durabilityHolder:SetSize(10, 58)
 
-			--	LeaPlusLC:LoadVarChk("ManageDurability", "Off")				-- Manage durability
-			--	LeaPlusLC:LoadVarAnc("DurabilityA", "TOP")					-- Manage durability anchor
-			--	LeaPlusLC:LoadVarAnc("DurabilityR", "TOP")					-- Manage durability relative
-			--	LeaPlusLC:LoadVarNum("DurabilityX", -5, -5000, 5000)		-- Manage durability position X
-			--	LeaPlusLC:LoadVarNum("DurabilityY", -96, -5000, 5000)		-- Manage durability position Y
-			--	LeaPlusLC:LoadVarNum("DurabilityScale", 1, 0.5, 2)			-- Manage durability scale
+			local durabilityContainer = _G.DurabilityFrame
+			durabilityContainer:ClearAllPoints()
+			durabilityContainer:SetPoint('CENTER', durabilityHolder)
 
-
-
-
-			-- Create and manage container for UIWidgetTopCenterContainerFrame
-			local topCenterHolder = CreateFrame("Frame", nil, UIParent)
-			topCenterHolder:SetPoint("TOP", UIParent, "TOP", 0, -15)
-			topCenterHolder:SetSize(10, 58)
-
-			local topCenterContainer = _G.UIWidgetTopCenterContainerFrame
-			topCenterContainer:ClearAllPoints()
-			topCenterContainer:SetPoint('CENTER', topCenterHolder)
-
-			hooksecurefunc(topCenterContainer, 'SetPoint', function(self, void, b)
-				if b and (b ~= topCenterHolder) then
-					-- Reset parent if it changes from topCenterHolder
+			hooksecurefunc(durabilityContainer, 'SetPoint', function(self, void, b)
+				if b and (b ~= durabilityHolder) then
+					-- Reset parent if it changes from durabilityHolder
 					self:ClearAllPoints()
-					self:SetPoint('CENTER', topCenterHolder)
-					self:SetParent(topCenterHolder)
+					self:SetPoint('CENTER', durabilityHolder)
+					self:SetParent(durabilityHolder)
 				end
 			end)
 
-			-- Allow widget frame to be moved
-			topCenterHolder:SetMovable(true)
-			topCenterHolder:SetUserPlaced(true)
-			topCenterHolder:SetDontSavePosition(true)
-			topCenterHolder:SetClampedToScreen(false)
+			-- Allow durability frame to be moved
+			durabilityHolder:SetMovable(true)
+			durabilityHolder:SetUserPlaced(true)
+			durabilityHolder:SetDontSavePosition(true)
+			durabilityHolder:SetClampedToScreen(false)
 
-			-- Set widget frame position at startup
-			topCenterHolder:ClearAllPoints()
-			topCenterHolder:SetPoint(LeaPlusLC["WidgetA"], UIParent, LeaPlusLC["WidgetR"], LeaPlusLC["WidgetX"], LeaPlusLC["WidgetY"])
-			topCenterHolder:SetScale(LeaPlusLC["WidgetScale"])
-			UIWidgetTopCenterContainerFrame:SetScale(LeaPlusLC["WidgetScale"])
+			-- Set durability frame position at startup
+			durabilityHolder:ClearAllPoints()
+			durabilityHolder:SetPoint(LeaPlusLC["DurabilityA"], UIParent, LeaPlusLC["DurabilityR"], LeaPlusLC["DurabilityX"], LeaPlusLC["DurabilityY"])
+			durabilityHolder:SetScale(LeaPlusLC["DurabilityScale"])
+			DurabilityFrame:SetScale(LeaPlusLC["DurabilityScale"])
 
 			-- Create drag frame
 			local dragframe = CreateFrame("FRAME", nil, nil, "BackdropTemplate")
-			dragframe:SetPoint("CENTER", topCenterHolder, "CENTER", 0, 1)
+			dragframe:SetPoint("CENTER", durabilityHolder, "CENTER", 0, 1)
 			dragframe:SetBackdropColor(0.0, 0.5, 1.0)
 			dragframe:SetBackdrop({edgeFile = "Interface/Tooltips/UI-Tooltip-Border", tile = false, tileSize = 0, edgeSize = 16, insets = { left = 0, right = 0, top = 0, bottom = 0}})
 			dragframe:SetToplevel(true)
 			dragframe:Hide()
-			dragframe:SetScale(LeaPlusLC["WidgetScale"])
+			dragframe:SetScale(LeaPlusLC["DurabilityScale"])
 
 			dragframe.t = dragframe:CreateTexture()
 			dragframe.t:SetAllPoints()
@@ -3139,23 +3128,23 @@
 
 			dragframe.f = dragframe:CreateFontString(nil, 'ARTWORK', 'GameFontNormalLarge')
 			dragframe.f:SetPoint('CENTER', 0, 0)
-			dragframe.f:SetText(L["Widget"])
+			dragframe.f:SetText(L["Durability"])
 
 			-- Click handler
 			dragframe:SetScript("OnMouseDown", function(self, btn)
 				-- Start dragging if left clicked
 				if btn == "LeftButton" then
-					topCenterHolder:StartMoving()
+					durabilityHolder:StartMoving()
 				end
 			end)
 
 			dragframe:SetScript("OnMouseUp", function()
 				-- Save frame position
-				topCenterHolder:StopMovingOrSizing()
-				LeaPlusLC["WidgetA"], void, LeaPlusLC["WidgetR"], LeaPlusLC["WidgetX"], LeaPlusLC["WidgetY"] = topCenterHolder:GetPoint()
-				topCenterHolder:SetMovable(true)
-				topCenterHolder:ClearAllPoints()
-				topCenterHolder:SetPoint(LeaPlusLC["WidgetA"], UIParent, LeaPlusLC["WidgetR"], LeaPlusLC["WidgetX"], LeaPlusLC["WidgetY"])
+				durabilityHolder:StopMovingOrSizing()
+				LeaPlusLC["DurabilityA"], void, LeaPlusLC["DurabilityR"], LeaPlusLC["DurabilityX"], LeaPlusLC["DurabilityY"] = durabilityHolder:GetPoint()
+				durabilityHolder:SetMovable(true)
+				durabilityHolder:ClearAllPoints()
+				durabilityHolder:SetPoint(LeaPlusLC["DurabilityA"], UIParent, LeaPlusLC["DurabilityR"], LeaPlusLC["DurabilityX"], LeaPlusLC["DurabilityY"])
 			end)
 
 			-- Snap-to-grid
@@ -3170,8 +3159,8 @@
 						xpos, ypos = GetCursorPosition()
 						xpos = floor((xpos / scale / uiscale) / grid) * grid - w / 2
 						ypos = ceil((ypos / scale / uiscale) / grid) * grid + h / 2
-						topCenterHolder:ClearAllPoints()
-						topCenterHolder:SetPoint("TOPLEFT", UIParent, "BOTTOMLEFT", xpos, ypos)
+						durabilityHolder:ClearAllPoints()
+						durabilityHolder:SetPoint("TOPLEFT", UIParent, "BOTTOMLEFT", xpos, ypos)
 					end)
 				end)
 				frame:HookScript("OnDragStop", function()
@@ -3181,73 +3170,59 @@
 			end
 
 			-- Create configuration panel
-			local WidgetPanel = LeaPlusLC:CreatePanel("Manage widget", "WidgetPanel")
+			local DurabilityPanel = LeaPlusLC:CreatePanel("Manage durability", "DurabilityPanel")
 
-			-- Create Titan Panel screen adjust warning
-			local titanFrame = CreateFrame("FRAME", nil, WidgetPanel)
-			titanFrame:SetAllPoints()
-			titanFrame:Hide()
-			LeaPlusLC:MakeTx(titanFrame, "Warning", 16, -172)
-			titanFrame.txt = LeaPlusLC:MakeWD(titanFrame, "Titan Panel screen adjust needs to be disabled for the frame to be saved correctly.", 16, -192, 500)
-			titanFrame.txt:SetWordWrap(false)
-			titanFrame.txt:SetWidth(520)
-			titanFrame.btn = LeaPlusLC:CreateButton("fixTitanBtn", titanFrame, "Okay, disable screen adjust for me", "TOPLEFT", 16, -212, 0, 25, true, "Click to disable Titan Panel screen adjust.  Your UI will be reloaded.")
-			titanFrame.btn:SetScript("OnClick", function()
-				TitanPanelSetVar("ScreenAdjust", 1)
-				ReloadUI()
-			end)
-
-			LeaPlusLC:MakeTx(WidgetPanel, "Scale", 16, -72)
-			LeaPlusLC:MakeSL(WidgetPanel, "WidgetScale", "Drag to set the widget scale.", 0.5, 2, 0.05, 16, -92, "%.2f")
+			LeaPlusLC:MakeTx(DurabilityPanel, "Scale", 16, -72)
+			LeaPlusLC:MakeSL(DurabilityPanel, "DurabilityScale", "Drag to set the durability frame scale.", 0.5, 2, 0.05, 16, -92, "%.2f")
 
 			-- Set scale when slider is changed
-			LeaPlusCB["WidgetScale"]:HookScript("OnValueChanged", function()
-				topCenterHolder:SetScale(LeaPlusLC["WidgetScale"])
-				UIWidgetTopCenterContainerFrame:SetScale(LeaPlusLC["WidgetScale"])
-				dragframe:SetScale(LeaPlusLC["WidgetScale"])
+			LeaPlusCB["DurabilityScale"]:HookScript("OnValueChanged", function()
+				durabilityHolder:SetScale(LeaPlusLC["DurabilityScale"])
+				DurabilityFrame:SetScale(LeaPlusLC["DurabilityScale"])
+				dragframe:SetScale(LeaPlusLC["DurabilityScale"])
 				-- Show formatted slider value
-				LeaPlusCB["WidgetScale"].f:SetFormattedText("%.0f%%", LeaPlusLC["WidgetScale"] * 100)
+				LeaPlusCB["DurabilityScale"].f:SetFormattedText("%.0f%%", LeaPlusLC["DurabilityScale"] * 100)
 			end)
 
 			-- Hide frame alignment grid with panel
-			WidgetPanel:HookScript("OnHide", function()
+			DurabilityPanel:HookScript("OnHide", function()
 				LeaPlusLC.grid:Hide()
 			end)
 
 			-- Toggle grid button
-			local WidgetToggleGridButton = LeaPlusLC:CreateButton("WidgetToggleGridButton", WidgetPanel, "Toggle Grid", "TOPLEFT", 16, -72, 0, 25, true, "Click to toggle the frame alignment grid.")
-			LeaPlusCB["WidgetToggleGridButton"]:ClearAllPoints()
-			LeaPlusCB["WidgetToggleGridButton"]:SetPoint("LEFT", WidgetPanel.h, "RIGHT", 10, 0)
-			LeaPlusCB["WidgetToggleGridButton"]:SetScript("OnClick", function()
+			local DurabilityToggleGridButton = LeaPlusLC:CreateButton("DurabilityToggleGridButton", DurabilityPanel, "Toggle Grid", "TOPLEFT", 16, -72, 0, 25, true, "Click to toggle the frame alignment grid.")
+			LeaPlusCB["DurabilityToggleGridButton"]:ClearAllPoints()
+			LeaPlusCB["DurabilityToggleGridButton"]:SetPoint("LEFT", DurabilityPanel.h, "RIGHT", 10, 0)
+			LeaPlusCB["DurabilityToggleGridButton"]:SetScript("OnClick", function()
 				if LeaPlusLC.grid:IsShown() then LeaPlusLC.grid:Hide() else LeaPlusLC.grid:Show() end
 			end)
-			WidgetPanel:HookScript("OnHide", function()
+			DurabilityPanel:HookScript("OnHide", function()
 				if LeaPlusLC.grid then LeaPlusLC.grid:Hide() end
 			end)
 
 			-- Help button tooltip
-			WidgetPanel.h.tiptext = L["Drag the frame overlay with the left button to position it freely or with the right button to position it using snap-to-grid."]
+			DurabilityPanel.h.tiptext = L["Drag the frame overlay with the left button to position it freely or with the right button to position it using snap-to-grid."]
 
 			-- Back button handler
-			WidgetPanel.b:SetScript("OnClick", function()
-				WidgetPanel:Hide(); LeaPlusLC["PageF"]:Show(); LeaPlusLC["Page6"]:Show()
+			DurabilityPanel.b:SetScript("OnClick", function()
+				DurabilityPanel:Hide(); LeaPlusLC["PageF"]:Show(); LeaPlusLC["Page6"]:Show()
 				return
 			end)
 
 			-- Reset button handler
-			WidgetPanel.r:SetScript("OnClick", function()
+			DurabilityPanel.r:SetScript("OnClick", function()
 
 				-- Reset position and scale
-				LeaPlusLC["WidgetA"] = "TOP"
-				LeaPlusLC["WidgetR"] = "TOP"
-				LeaPlusLC["WidgetX"] = 0
-				LeaPlusLC["WidgetY"] = -15
-				LeaPlusLC["WidgetScale"] = 1
-				topCenterHolder:ClearAllPoints()
-				topCenterHolder:SetPoint(LeaPlusLC["WidgetA"], UIParent, LeaPlusLC["WidgetR"], LeaPlusLC["WidgetX"], LeaPlusLC["WidgetY"])
+				LeaPlusLC["DurabilityA"] = "TOP"
+				LeaPlusLC["DurabilityR"] = "TOP"
+				LeaPlusLC["DurabilityX"] = 0
+				LeaPlusLC["DurabilityY"] = -15
+				LeaPlusLC["DurabilityScale"] = 1
+				durabilityHolder:ClearAllPoints()
+				durabilityHolder:SetPoint(LeaPlusLC["DurabilityA"], UIParent, LeaPlusLC["DurabilityR"], LeaPlusLC["DurabilityX"], LeaPlusLC["DurabilityY"])
 
 				-- Refresh configuration panel
-				WidgetPanel:Hide(); WidgetPanel:Show()
+				DurabilityPanel:Hide(); DurabilityPanel:Show()
 				dragframe:Show()
 
 				-- Show frame alignment grid
@@ -3256,30 +3231,19 @@
 			end)
 
 			-- Show configuration panel when options panel button is clicked
-			LeaPlusCB["ManageWidgetButton"]:SetScript("OnClick", function()
+			LeaPlusCB["ManageDurabilityButton"]:SetScript("OnClick", function()
 				if IsShiftKeyDown() and IsControlKeyDown() then
 					-- Preset profile
-					LeaPlusLC["WidgetA"] = "CENTER"
-					LeaPlusLC["WidgetR"] = "CENTER"
-					LeaPlusLC["WidgetX"] = 0
-					LeaPlusLC["WidgetY"] = -160
-					LeaPlusLC["WidgetScale"] = 1.25
-					topCenterHolder:ClearAllPoints()
-					topCenterHolder:SetPoint(LeaPlusLC["WidgetA"], UIParent, LeaPlusLC["WidgetR"], LeaPlusLC["WidgetX"], LeaPlusLC["WidgetY"])
-					topCenterHolder:SetScale(LeaPlusLC["WidgetScale"])
-					UIWidgetTopCenterContainerFrame:SetScale(LeaPlusLC["WidgetScale"])
+					LeaPlusLC["DurabilityA"] = "CENTER"
+					LeaPlusLC["DurabilityR"] = "CENTER"
+					LeaPlusLC["DurabilityX"] = 0
+					LeaPlusLC["DurabilityY"] = -160
+					LeaPlusLC["DurabilityScale"] = 1.25
+					durabilityHolder:ClearAllPoints()
+					durabilityHolder:SetPoint(LeaPlusLC["DurabilityA"], UIParent, LeaPlusLC["DurabilityR"], LeaPlusLC["DurabilityX"], LeaPlusLC["DurabilityY"])
+					durabilityHolder:SetScale(LeaPlusLC["DurabilityScale"])
+					DurabilityFrame:SetScale(LeaPlusLC["DurabilityScale"])
 				else
-					-- Show Titan Panel screen adjust warning if Titan Panel is installed with screen adjust enabled
-					if select(2, GetAddOnInfo("TitanClassic")) then
-						if IsAddOnLoaded("TitanClassic") then
-							if TitanPanelSetVar and TitanPanelGetVar then
-								if not TitanPanelGetVar("ScreenAdjust") then
-									titanFrame:Show()
-								end
-							end
-						end
-					end
-
 					-- Find out if the UI has a non-standard scale
 					if GetCVar("useuiscale") == "1" then
 						LeaPlusLC["gscale"] = GetCVar("uiscale")
@@ -3292,7 +3256,7 @@
 					dragframe:SetHeight(79 * LeaPlusLC["gscale"])
 
 					-- Show configuration panel
-					WidgetPanel:Show()
+					DurabilityPanel:Show()
 					LeaPlusLC:HideFrames()
 					dragframe:Show()
 
@@ -3302,7 +3266,7 @@
 			end)
 
 			-- Hide drag frame when configuration panel is closed
-			WidgetPanel:HookScript("OnHide", function() dragframe:Hide() end)
+			DurabilityPanel:HookScript("OnHide", function() dragframe:Hide() end)
 
 		end
 
