@@ -3215,8 +3215,8 @@
 				-- Reset position and scale
 				LeaPlusLC["DurabilityA"] = "TOPRIGHT"
 				LeaPlusLC["DurabilityR"] = "TOPRIGHT"
-				LeaPlusLC["DurabilityX"] = -41
-				LeaPlusLC["DurabilityY"] = -200
+				LeaPlusLC["DurabilityX"] = 0
+				LeaPlusLC["DurabilityY"] = -192
 				LeaPlusLC["DurabilityScale"] = 1
 				durabilityHolder:ClearAllPoints()
 				durabilityHolder:SetPoint(LeaPlusLC["DurabilityA"], UIParent, LeaPlusLC["DurabilityR"], LeaPlusLC["DurabilityX"], LeaPlusLC["DurabilityY"])
@@ -3236,8 +3236,8 @@
 					-- Preset profile
 					LeaPlusLC["DurabilityA"] = "TOPRIGHT"
 					LeaPlusLC["DurabilityR"] = "TOPRIGHT"
-					LeaPlusLC["DurabilityX"] = -41
-					LeaPlusLC["DurabilityY"] = -200
+					LeaPlusLC["DurabilityX"] = 0
+					LeaPlusLC["DurabilityY"] = -192
 					LeaPlusLC["DurabilityScale"] = 1
 					durabilityHolder:ClearAllPoints()
 					durabilityHolder:SetPoint(LeaPlusLC["DurabilityA"], UIParent, LeaPlusLC["DurabilityR"], LeaPlusLC["DurabilityX"], LeaPlusLC["DurabilityY"])
@@ -11806,8 +11806,8 @@
 				LeaPlusLC:LoadVarChk("ManageDurability", "Off")				-- Manage durability
 				LeaPlusLC:LoadVarAnc("DurabilityA", "TOPRIGHT")				-- Manage durability anchor
 				LeaPlusLC:LoadVarAnc("DurabilityR", "TOPRIGHT")				-- Manage durability relative
-				LeaPlusLC:LoadVarNum("DurabilityX", -41, -5000, 5000)		-- Manage durability position X
-				LeaPlusLC:LoadVarNum("DurabilityY", -200, -5000, 5000)		-- Manage durability position Y
+				LeaPlusLC:LoadVarNum("DurabilityX", 0, -5000, 5000)			-- Manage durability position X
+				LeaPlusLC:LoadVarNum("DurabilityY", -192, -5000, 5000)		-- Manage durability position Y
 				LeaPlusLC:LoadVarNum("DurabilityScale", 1, 0.5, 2)			-- Manage durability scale
 
 				LeaPlusLC:LoadVarChk("ClassColFrames", "Off")				-- Class colored frames
@@ -14268,8 +14268,8 @@
 				LeaPlusDB["ManageDurability"] = "On"			-- Manage durability
 				LeaPlusDB["DurabilityA"] = "TOPRIGHT"			-- Manage durability anchor
 				LeaPlusDB["DurabilityR"] = "TOPRIGHT"			-- Manage durability relative
-				LeaPlusDB["DurabilityX"] = -41					-- Manage durability position X
-				LeaPlusDB["DurabilityY"] = -200					-- Manage durability position Y
+				LeaPlusDB["DurabilityX"] = 0					-- Manage durability position X
+				LeaPlusDB["DurabilityY"] = -192					-- Manage durability position Y
 				LeaPlusDB["DurabilityScale"] = 1.00				-- Manage durability scale
 
 				LeaPlusDB["ClassColFrames"] = "On"				-- Class colored frames
