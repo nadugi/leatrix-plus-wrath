@@ -3085,7 +3085,7 @@
 			-- Create and manage container for DurabilityFrame
 			local durabilityHolder = CreateFrame("Frame", nil, UIParent)
 			durabilityHolder:SetPoint("TOP", UIParent, "TOP", 0, -15)
-			durabilityHolder:SetSize(10, 58)
+			durabilityHolder:SetSize(92, 75)
 
 			local durabilityContainer = _G.DurabilityFrame
 			durabilityContainer:ClearAllPoints()
@@ -3095,7 +3095,7 @@
 				if b and (b ~= durabilityHolder) then
 					-- Reset parent if it changes from durabilityHolder
 					self:ClearAllPoints()
-					self:SetPoint('CENTER', durabilityHolder)
+					self:SetPoint('TOPRIGHT', durabilityHolder) -- Has to be TOPRIGHT (drag frame while moving between subzones)
 					self:SetParent(durabilityHolder)
 				end
 			end)
@@ -3150,7 +3150,7 @@
 			-- Snap-to-grid
 			do
 				local frame, grid = dragframe, 10
-				local w, h = 0, 65
+				local w, h = 65, 75
 				local xpos, ypos, scale, uiscale
 				frame:RegisterForDrag("RightButton")
 				frame:HookScript("OnDragStart", function()
