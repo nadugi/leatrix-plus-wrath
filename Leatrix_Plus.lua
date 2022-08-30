@@ -3150,7 +3150,7 @@
 			-- Snap-to-grid
 			do
 				local frame, grid = dragframe, 10
-				local w, h = 0, 60
+				local w, h = 0, 65
 				local xpos, ypos, scale, uiscale
 				frame:RegisterForDrag("RightButton")
 				frame:HookScript("OnDragStart", function()
@@ -3213,10 +3213,10 @@
 			DurabilityPanel.r:SetScript("OnClick", function()
 
 				-- Reset position and scale
-				LeaPlusLC["DurabilityA"] = "TOP"
-				LeaPlusLC["DurabilityR"] = "TOP"
-				LeaPlusLC["DurabilityX"] = 0
-				LeaPlusLC["DurabilityY"] = -15
+				LeaPlusLC["DurabilityA"] = "TOPRIGHT"
+				LeaPlusLC["DurabilityR"] = "TOPRIGHT"
+				LeaPlusLC["DurabilityX"] = -41
+				LeaPlusLC["DurabilityY"] = -200
 				LeaPlusLC["DurabilityScale"] = 1
 				durabilityHolder:ClearAllPoints()
 				durabilityHolder:SetPoint(LeaPlusLC["DurabilityA"], UIParent, LeaPlusLC["DurabilityR"], LeaPlusLC["DurabilityX"], LeaPlusLC["DurabilityY"])
@@ -3234,11 +3234,11 @@
 			LeaPlusCB["ManageDurabilityButton"]:SetScript("OnClick", function()
 				if IsShiftKeyDown() and IsControlKeyDown() then
 					-- Preset profile
-					LeaPlusLC["DurabilityA"] = "CENTER"
-					LeaPlusLC["DurabilityR"] = "CENTER"
-					LeaPlusLC["DurabilityX"] = 0
-					LeaPlusLC["DurabilityY"] = -160
-					LeaPlusLC["DurabilityScale"] = 1.25
+					LeaPlusLC["DurabilityA"] = "TOPRIGHT"
+					LeaPlusLC["DurabilityR"] = "TOPRIGHT"
+					LeaPlusLC["DurabilityX"] = -41
+					LeaPlusLC["DurabilityY"] = -200
+					LeaPlusLC["DurabilityScale"] = 1
 					durabilityHolder:ClearAllPoints()
 					durabilityHolder:SetPoint(LeaPlusLC["DurabilityA"], UIParent, LeaPlusLC["DurabilityR"], LeaPlusLC["DurabilityX"], LeaPlusLC["DurabilityY"])
 					durabilityHolder:SetScale(LeaPlusLC["DurabilityScale"])
@@ -3252,8 +3252,8 @@
 					end
 
 					-- Set drag frame size according to UI scale
-					dragframe:SetWidth(160 * LeaPlusLC["gscale"])
-					dragframe:SetHeight(79 * LeaPlusLC["gscale"])
+					dragframe:SetWidth(92 * LeaPlusLC["gscale"])
+					dragframe:SetHeight(75 * LeaPlusLC["gscale"])
 
 					-- Show configuration panel
 					DurabilityPanel:Show()
@@ -11804,10 +11804,10 @@
 				LeaPlusLC:LoadVarNum("TimerScale", 1, 0.5, 2)				-- Manage timer scale
 
 				LeaPlusLC:LoadVarChk("ManageDurability", "Off")				-- Manage durability
-				LeaPlusLC:LoadVarAnc("DurabilityA", "TOP")					-- Manage durability anchor
-				LeaPlusLC:LoadVarAnc("DurabilityR", "TOP")					-- Manage durability relative
-				LeaPlusLC:LoadVarNum("DurabilityX", -5, -5000, 5000)		-- Manage durability position X
-				LeaPlusLC:LoadVarNum("DurabilityY", -96, -5000, 5000)		-- Manage durability position Y
+				LeaPlusLC:LoadVarAnc("DurabilityA", "TOPRIGHT")				-- Manage durability anchor
+				LeaPlusLC:LoadVarAnc("DurabilityR", "TOPRIGHT")				-- Manage durability relative
+				LeaPlusLC:LoadVarNum("DurabilityX", -41, -5000, 5000)		-- Manage durability position X
+				LeaPlusLC:LoadVarNum("DurabilityY", -200, -5000, 5000)		-- Manage durability position Y
 				LeaPlusLC:LoadVarNum("DurabilityScale", 1, 0.5, 2)			-- Manage durability scale
 
 				LeaPlusLC:LoadVarChk("ClassColFrames", "Off")				-- Class colored frames
@@ -14266,10 +14266,10 @@
 				LeaPlusDB["TimerScale"] = 1.00					-- Manage timer scale
 
 				LeaPlusDB["ManageDurability"] = "On"			-- Manage durability
-				LeaPlusDB["DurabilityA"] = "TOP"				-- Manage durability anchor
-				LeaPlusDB["DurabilityR"] = "TOP"				-- Manage durability relative
-				LeaPlusDB["DurabilityX"] = 0					-- Manage durability position X
-				LeaPlusDB["DurabilityY"] = -120					-- Manage durability position Y
+				LeaPlusDB["DurabilityA"] = "TOPRIGHT"			-- Manage durability anchor
+				LeaPlusDB["DurabilityR"] = "TOPRIGHT"			-- Manage durability relative
+				LeaPlusDB["DurabilityX"] = -41					-- Manage durability position X
+				LeaPlusDB["DurabilityY"] = -200					-- Manage durability position Y
 				LeaPlusDB["DurabilityScale"] = 1.00				-- Manage durability scale
 
 				LeaPlusDB["ClassColFrames"] = "On"				-- Class colored frames
