@@ -3090,6 +3090,7 @@
 			local durabilityContainer = _G.DurabilityFrame
 			durabilityContainer:ClearAllPoints()
 			durabilityContainer:SetPoint('CENTER', durabilityHolder)
+			durabilityContainer:SetIgnoreParentScale(true) -- Needed to keep drag frame position when scaled
 
 			hooksecurefunc(durabilityContainer, 'SetPoint', function(self, void, b)
 				if b and (b ~= durabilityHolder) then
