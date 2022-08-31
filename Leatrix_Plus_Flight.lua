@@ -1206,6 +1206,7 @@
 					["0.79:0.54:0.65:0.50:0.51:0.73:0.66:0.77:0.78:0.85"] = 316, -- Hellfire Peninsula, Thrallmar, Stonebreaker Hold, Shadowmoon Village, Sanctum of the Stars
 					["0.79:0.54:0.65:0.50:0.51:0.73:0.66:0.77:0.81:0.77"] = 333, -- Hellfire Peninsula, Thrallmar, Stonebreaker Hold, Shadowmoon Village, Altar of Sha'tar
 					["0.79:0.54:0.65:0.50:0.51:0.73:0.44:0.67"] = 241, -- Hellfire Peninsula, Thrallmar, Stonebreaker Hold, Shattrath
+					["0.79:0.54:0.65:0.50:0.44:0.67"] = 182, -- Hellfire Peninsula, Thrallmar, Shattrath
 
 					-- Horde: Mok'Nathal Village (Blade's Edge Mountains)
 					["0.49:0.36:0.44:0.51:0.44:0.67:0.51:0.73:0.66:0.77"] = 292, -- Mok'Nathal Village, Swamprat Post, Shattrath, Stonebreaker Hold, Shadowmoon Village
@@ -2158,6 +2159,7 @@
 					["0.61:0.35:0.51:0.36"] = 102, -- Light's Hope Chapel, Thondroril River
 					["0.61:0.35:0.62:0.34"] = 71, -- Light's Hope Chapel, Acherus: The Ebon Hold
 					["0.61:0.35:0.47:0.59:0.41:0.73:0.52:0.72"] = 680, -- Light's Hope Chapel, Ironforge, Stormwind, Morgan's Vigil
+					["0.61:0.35:0.47:0.59:0.41:0.73:0.41:0.93"] = 726, -- Light's Hope Chapel, Ironforge, Stormwind, Booty Bay
 
 					-- Alliance: Menethil Harbor (Wetlands)
 					["0.45:0.56:0.47:0.59:0.47:0.65:0.41:0.73:0.41:0.93"] = 429, -- Menethil Harbor, Ironforge, Thorium Point, Stormwind, Booty Bay
