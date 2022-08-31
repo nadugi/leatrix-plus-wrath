@@ -1,5 +1,7 @@
 3.0.01.alpha.4 - 31st August 2022
 - Added a new option 'Manage durability' ('Frames').  If enabled, you can move and scale the armored man durability frame.
+- Fixed an issue with 'Enhance minimap' missing calendar button.
+- Fixed an issue with 'Enhance quest log' incorrect quest title.
 - Added some flight times.  There are now 3535 flight times stored in Leatrix Plus for Wrath Classic.
 
 3.0.00 - 29th August 2022

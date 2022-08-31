@@ -4759,6 +4759,14 @@
 				_G.GetMinimapShape = function() return "ROUND" end
 				Minimap:SetMaskTexture([[Interface\CharacterFrame\TempPortraitAlphaMask]])
 
+				-- Calendar button
+				miniFrame.ClearAllPoints(GameTimeFrame)
+				LibDBIconStub:SetButtonToPosition(GameTimeFrame, 44)
+
+				-- World map button
+				miniFrame.ClearAllPoints(MiniMapWorldMapButton)
+				LibDBIconStub:SetButtonToPosition(MiniMapWorldMapButton, 14)
+
 			end
 
 			----------------------------------------------------------------------
@@ -5008,9 +5016,6 @@
 			-- Set the zone text bar when option is clicked and on startup
 			LeaPlusCB["HideMiniZoneText"]:HookScript("OnClick", SetZoneTextBar)
 			SetZoneTextBar()
-
-			-- Hide time of day
-			GameTimeFrame:Hide()
 
 			----------------------------------------------------------------------
 			-- Hide the zoom buttons
