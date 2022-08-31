@@ -1,4 +1,4 @@
-3.0.01.alpha.3 - 31st August 2022
+3.0.01.alpha.4 - 31st August 2022
 - Added a new option 'Manage durability' ('Frames').  If enabled, you can move and scale the armored man durability frame.
 - Added some flight times.  There are now 3535 flight times stored in Leatrix Plus for Wrath Classic.
 
