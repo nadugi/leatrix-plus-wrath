@@ -4722,10 +4722,10 @@
 				miniFrame.ClearAllPoints(MinimapZoomOut)
 				MinimapZoomOut:SetPoint("TOP", MinimapZoomIn, "BOTTOM", 0, 0)
 
-				-- Calendar button -- Add setting to toggle this
+				-- Calendar button
 				miniFrame.ClearAllPoints(GameTimeFrame)
-				GameTimeFrame:SetPoint("TOPRIGHT", Minimap, "TOPRIGHT", 26, 26)
-				LibDBIconStub:SetButtonToPosition(GameTimeFrame, 44)
+				GameTimeFrame:SetPoint("TOPRIGHT", MinimapBackdrop, "TOPRIGHT", 6, 20)
+				GameTimeFrame:SetParent(MinimapBackdrop)
 
 				-- Debug buttons
 				local LeaPlusMiniMapDebug = nil
