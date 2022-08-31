@@ -1,3 +1,6 @@
+3.0.02.alpha.1 - 31st August 2022
+- For 'Enhance quest log' ('Interface'), there is a new setting that lets you choose whether the quest log should be taller or not.
+
 3.0.01 - 31st August 2022
 - Added a new option 'Manage durability' ('Frames').  If enabled, you can move and scale the armored man durability frame.
 - Fixed an issue with 'Enhance minimap' missing calendar button.
