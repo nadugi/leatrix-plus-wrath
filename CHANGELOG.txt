@@ -1,5 +1,6 @@
-3.0.02.alpha.1 - 31st August 2022
+3.0.02.alpha.2 - 31st August 2022
 - For 'Enhance quest log' ('Interface'), there is a new setting that lets you choose whether the quest log should be taller or not.
+- Fix for 'Enhance minimap' calendar button #2.
 - Added some flight times.  There are now 3541 flight times stored in Leatrix Plus for Wrath Classic.
 
 3.0.01 - 31st August 2022
