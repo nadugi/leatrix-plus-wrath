@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 3.0.02 (31st August 2022)
+-- 	Leatrix Plus 3.0.03 (1st September 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "3.0.02"
+	LeaPlusLC["AddonVer"] = "3.0.03"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -6888,6 +6888,7 @@
 
 				-- Hide horizonal bar in recipe list
 				regions[8]:Hide()
+				regions[9]:Hide() -- The shorter pesky horizontal bar that only shows sometimes (texture is 130968)
 
 				-- Move skill rank text
 				TradeSkillRankFrameSkillRank:ClearAllPoints()
