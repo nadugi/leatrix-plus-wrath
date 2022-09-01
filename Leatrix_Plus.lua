@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 3.0.03.alpha.1 (1st September 2022)
+-- 	Leatrix Plus 3.0.03.alpha.2 (1st September 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "3.0.03.alpha.1"
+	LeaPlusLC["AddonVer"] = "3.0.03.alpha.2"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -4724,8 +4724,10 @@
 
 				-- Calendar button
 				miniFrame.ClearAllPoints(GameTimeFrame)
-				GameTimeFrame:SetPoint("TOPRIGHT", MinimapBackdrop, "TOPRIGHT", 6, 20)
+				GameTimeFrame:SetPoint("BOTTOM", MiniMapWorldMapButton, "TOP", 0, 2)
 				GameTimeFrame:SetParent(MinimapBackdrop)
+				GameTimeFrame:SetScale(0.75)
+				GameTimeFrame:SetSize(32, 32)
 
 				-- Debug buttons
 				local LeaPlusMiniMapDebug = nil
