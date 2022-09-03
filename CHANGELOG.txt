@@ -1,7 +1,7 @@
 3.0.03.alpha.5 - 3rd September 2022
 - Fix for professions frame intermittent horizontal bar.
 - Added lots of flight times.  There are now 3555 flight times stored in Leatrix Plus for Wrath Classic.
-- For 'Enhance quest log', quest levels will now be shown in the quest detail pane once again for quests that are in your quest log.  Added a new setting to show the quest difficulty in the quest log list.
+- For 'Enhance quest log', quest level and difficulty will now be shown in the quest detail pane once again for quests that are in your quest log.  Added a new setting to show the quest difficulty in the quest log list.
 
 3.0.02 - 31st August 2022
 - For 'Enhance quest log' ('Interface'), there is a new setting that lets you choose whether the quest log should be taller or not.
