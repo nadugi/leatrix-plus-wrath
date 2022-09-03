@@ -233,6 +233,7 @@
 					["0.58:0.06:0.61:0.28:0.61:0.35:0.51:0.36:0.45:0.37"] = 504, -- Shattered Sun Staging Area, Zul'Aman, Light's Hope Chapel, Thondroril River, The Bulwark
 					["0.58:0.06:0.61:0.28:0.61:0.35:0.51:0.36"] = 427, -- Shattered Sun Staging Area, Zul'Aman, Light's Hope Chapel, Thondroril River
 					["0.58:0.06:0.61:0.28:0.61:0.35:0.62:0.34"] = 394, -- Shattered Sun Staging Area, Zul'Aman, Light's Hope Chapel, Acherus: The Ebon Hold
+					["0.58:0.06:0.59:0.19:0.58:0.25:0.61:0.35:0.59:0.45:0.46:0.43"] = 641, -- Shattered Sun Staging Area, Silvermoon City, Tranquillien, Light's Hope Chapel, Revantusk Village, Tarren Mill
 
 					-- Horde: Silvermoon City (Eversong Woods)
 					["0.59:0.19:0.58:0.25:0.61:0.35:0.59:0.45:0.55:0.46:0.50:0.66:0.41:0.93"] = 963, -- Silvermoon City, Tranquillien, Light's Hope Chapel, Revantusk Village, Hammerfall, Kargath, Booty Bay
@@ -1158,7 +1159,7 @@
 					["0.54:0.57:0.65:0.50"] = 73, -- Falcon Watch, Thrallmar
 					["0.54:0.57:0.44:0.67:0.51:0.73"] = 139, -- Falcon Watch, Shattrath, Stonebreaker Hold
 					["0.54:0.57:0.44:0.67"] = 71, -- Falcon Watch, Shattrath
-					["0.54:0.57:0.44:0.51"] = 69, -- Falcon Watch, Swamprat Post
+					["0.54:0.57:0.44:0.51"] = 69, -- Falcon Watch, Swamprat Post (Infarkt reported 90)
 					["0.54:0.57:0.29:0.62"] = 132, -- Falcon Watch, Garadar
 					["0.54:0.57:0.23:0.50"] = 150, -- Falcon Watch, Zabra'jin
 					["0.54:0.57:0.44:0.51:0.38:0.32"] = 174, -- Falcon Watch, Swamprat Post, Thunderlord Stronghold
@@ -2715,6 +2716,7 @@
 					["0.65:0.23:0.53:0.26:0.50:0.35:0.46:0.40:0.39:0.40:0.40:0.51:0.31:0.69"] = 807, -- Everlook, Talonbranch Glade, Emerald Sanctuary, Astranaar, Stonetalon Peak, Nijel's Point, Feathermoon
 					["0.65:0.23:0.61:0.40:0.58:0.39:0.50:0.35"] = 298, -- Everlook, Talrendis Point, Forest Song, Emerald Sanctuary
 					["0.65:0.23:0.53:0.26:0.43:0.25:0.40:0.51"] = 568, -- Everlook, Talonbranch Glade, Auberdine, Nijel's Point
+					["0.65:0.23:0.61:0.40:0.46:0.40:0.43:0.25:0.42:0.16"] = 549, -- Everlook, Talrendis Point, Astranaar, Auberdine, Rut'theran Village
 
 					-- Alliance: Feathermoon (Feralas)
 					["0.31:0.69:0.42:0.79"] = 153, -- Feathermoon, Cenarion Hold
@@ -3113,6 +3115,7 @@
 					["0.48:0.70:0.64:0.67:0.61:0.55:0.46:0.40"] = 469, -- Thalanaar, Theramore, Cabestan, Astranaar
 					["0.48:0.70:0.31:0.69:0.43:0.25"] = 646, -- Thalanaar, Feathermoon, Auberdine
 					["0.48:0.70:0.58:0.70:0.64:0.67:0.61:0.55:0.46:0.40:0.50:0.35"] = 526, -- Thalanaar, Mudsprocket, Theramore, Ratchet, Astranaar, Emerald Sanctuary
+					["0.48:0.70:0.64:0.67:0.46:0.40"] = 529, -- Thalanaar, Theramore, Astranaar
 
 					-- Alliance: Theramore (Dustwallow Marsh)
 					["0.64:0.67:0.48:0.70:0.31:0.69"] = 340, -- Theramore, Thalanaar, Feathermoon
