@@ -7160,8 +7160,16 @@
 
 			LeaPlusLC:MakeTx(EnhanceQuestPanel, "Settings", 16, -72)
 			LeaPlusLC:MakeCB(EnhanceQuestPanel, "EnhanceQuestTaller", "Taller quest log frame", 16, -92, true, "If checked, the quest log frame will be taller.")
-			LeaPlusLC:MakeCB(EnhanceQuestPanel, "EnhanceQuestLevels", "Show quest levels", 16, -112, false, "If checked, quest levels will be shown.")
-			LeaPlusLC:MakeCB(EnhanceQuestPanel, "EnhanceQuestDifficulty", "Show quest difficulty in quest log list", 16, -132, false, "If checked, the quest difficulty will be shown next to the quest level in the quest log list.|n|nThis will indicate whether the quest requires a group (+), dungeon (D), raid (R) or PvP (P).|n|nThe quest difficulty will always be shown in the quest log detail pane regardless of this setting.")
+
+			LeaPlusLC:MakeTx(EnhanceQuestPanel, "Levels", 16, -132)
+			LeaPlusLC:MakeCB(EnhanceQuestPanel, "EnhanceQuestLevels", "Show quest levels", 16, -152, false, "If checked, quest levels will be shown.")
+			LeaPlusLC:MakeCB(EnhanceQuestPanel, "EnhanceQuestDifficulty", "Show quest difficulty in quest log list", 16, -172, false, "If checked, the quest difficulty will be shown next to the quest level in the quest log list.|n|nThis will indicate whether the quest requires a group (+), dungeon (D), raid (R) or PvP (P).|n|nThe quest difficulty will always be shown in the quest log detail pane regardless of this setting.")
+
+			-- Disable Show quest difficulty option if Show quest levels is disabled
+			LeaPlusCB["EnhanceQuestLevels"]:HookScript("OnClick", function()
+				LeaPlusLC:LockOption("EnhanceQuestLevels", "EnhanceQuestDifficulty", false)
+			end)
+			LeaPlusLC:LockOption("EnhanceQuestLevels", "EnhanceQuestDifficulty", false)
 
 			-- Help button hidden
 			EnhanceQuestPanel.h:Hide()
