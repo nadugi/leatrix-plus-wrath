@@ -1297,7 +1297,7 @@
 					["0.44:0.67:0.44:0.51"] = 79, -- Shattrath, Swamprat Post
 					["0.44:0.67:0.54:0.57"] = 77, -- Shattrath, Falcon Watch
 					["0.44:0.67:0.51:0.73"] = 69, -- Shattrath, Stonebreaker Hold
-					["0.44:0.67:0.51:0.73:0.66:0.77"] = 133, -- Shattrath, Stonebreaker Hold, Shadowmoon Village
+					["0.44:0.67:0.51:0.73:0.66:0.77"] = 133, -- Shattrath, Stonebreaker Hold, Shadowmoon Village (anders brøndum bach reported 150)
 					["0.44:0.67:0.54:0.57:0.65:0.50:0.68:0.63"] = 215, -- Shattrath, Falcon Watch, Thrallmar, Spinebreaker Ridge
 					["0.44:0.67:0.54:0.57:0.65:0.50:0.79:0.54"] = 220, -- Shattrath, Falcon Watch, Thrallmar, Hellfire Peninsula
 					["0.44:0.67:0.54:0.57:0.65:0.50"] = 150, -- Shattrath, Falcon Watch, Thrallmar (Mirko Riemann reported 78, not changed yet)
@@ -1364,6 +1364,7 @@
 					["0.51:0.73:0.44:0.67:0.44:0.51:0.38:0.32:0.58:0.27"] = 338, -- Stonebreaker Hold, Shattrath, Swamprat Post, Thunderlord Stronghold, Area 52
 					["0.51:0.73:0.65:0.50:0.54:0.57"] = 192, -- Stonebreaker Hold, Thrallmar, Falcon Watch
 					["0.51:0.73:0.65:0.50:0.54:0.57:0.44:0.51"] = 260, -- Stonebreaker Hold, Thrallmar, Falcon Watch, Swamprat Post
+					["0.51:0.73:0.65:0.50:0.54:0.57:0.29:0.62"] = 324, -- Stonebreaker Hold, Thrallmar, Falcon Watch, Garadar
 
 					-- Horde: Swamprat Post (Zangarmarsh)
 					["0.44:0.51:0.44:0.67:0.51:0.73:0.66:0.77"] = 220, -- Swamprat Post, Shattrath, Stonebreaker Hold, Shadowmoon Village
@@ -2616,6 +2617,7 @@
 					["0.43:0.25:0.46:0.40:0.61:0.55:0.60:0.81:0.48:0.70:0.58:0.70"] = 863, -- Auberdine, Astranaar, Ratchet, Gadgetzan, Thalanaar, Mudsprocket
 					["0.43:0.25:0.61:0.40:0.58:0.39"] = 326, -- Auberdine, Talrendis Point, Forest Song
 					["0.43:0.25:0.61:0.40:0.65:0.23"] = 478, -- Auberdine, Talrendis Point, Everlook
+					["0.43:0.25:0.46:0.40:0.61:0.55:0.60:0.81"] = 602, -- Auberdine, Astranaar, Trinquete, Gadgetzan
 
 					-- Alliance: Cenarion Hold (Silithus)
 					["0.42:0.79:0.31:0.69"] = 175, -- Cenarion Hold, Feathermoon
@@ -3284,6 +3286,7 @@
 					["0.42:0.28:0.32:0.34:0.38:0.50:0.44:0.67"] = 234, -- Evergrove, Sylvanaar, Telredor, Shattrath
 					["0.42:0.28:0.32:0.34:0.38:0.50:0.44:0.67:0.55:0.77"] = 308, -- Evergrove, Sylvanaar, Telredor, Shattrath, Allerian Stronghold
 					["0.42:0.28:0.32:0.34:0.38:0.50:0.44:0.67:0.55:0.77:0.69:0.85"] = 386, -- Evergrove, Sylvanaar, Telredor, Shattrath, Allerian Stronghold, Wildhammer Stronghold
+					["0.42:0.28:0.32:0.34:0.38:0.50"] = 137, -- Evergrove, Sylvanaar, Telredor
 
 					-- Alliance: Hellfire Peninsula (Hellfire Peninsula) (Dark Portal)
 					["0.79:0.55:0.65:0.58:0.44:0.67:0.27:0.74"] = 277, -- Hellfire Peninsula, Honor Hold, Shattrath, Telaar

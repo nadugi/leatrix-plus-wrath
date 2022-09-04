@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 3.0.03.alpha.7 (4th September 2022)
+-- 	Leatrix Plus 3.0.03 (4th September 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "3.0.03.alpha.7"
+	LeaPlusLC["AddonVer"] = "3.0.03"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -3627,9 +3627,9 @@
 				end)
 
 				-- Tracking button
-				MiniMapTracking:SetScale(0.60)
+				MiniMapTracking:SetScale(0.75)
 				miniFrame.ClearAllPoints(MiniMapTracking)
-				MiniMapTracking:SetPoint("TOPLEFT", Minimap, "TOPLEFT", -24, -24)
+				MiniMapTracking:SetPoint("TOPLEFT", Minimap, "TOPLEFT", -20, -40)
 
 				-- Mail button
 				MiniMapMailFrame:SetScale(0.75)
@@ -3929,6 +3929,17 @@
 			-- Reparent MinimapCluster elements
 			MinimapBorderTop:SetParent(Minimap)
 			MinimapZoneTextButton:SetParent(MinimapBackdrop)
+
+			-- Instance difficulty
+			miniFrame.SetParent(MiniMapInstanceDifficulty, Minimap)
+			miniFrame.ClearAllPoints(MiniMapInstanceDifficulty)
+			if LeaPlusLC["SquareMinimap"] == "On" then
+				MiniMapInstanceDifficulty:SetPoint("TOPLEFT", Minimap, "TOPLEFT", -21, 10)
+				MiniMapInstanceDifficulty:SetScale(0.75)
+			else
+				MiniMapInstanceDifficulty:SetPoint("TOPLEFT", Minimap, "TOPLEFT", -13, 5)
+			end
+			MiniMapInstanceDifficulty:SetFrameLevel(4)
 
 			-- Anchor border top to MinimapBackdrop
 			MinimapBorderTop:ClearAllPoints()
