@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 3.0.04.alpha.2 (4th September 2022)
+-- 	Leatrix Plus 3.0.04 (4th September 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "3.0.04.alpha.2"
+	LeaPlusLC["AddonVer"] = "3.0.04"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -3694,7 +3694,7 @@
 				-- Mail button
 				MiniMapMailFrame:SetScale(0.75)
 				miniFrame.ClearAllPoints(MiniMapMailFrame)
-				MiniMapMailFrame:SetPoint("TOPLEFT", Minimap, "TOPLEFT", -19, -53)
+				MiniMapMailFrame:SetPoint("TOPLEFT", Minimap, "TOPLEFT", -19, -75)
 
 				-- Battleground queue button
 				MiniMapBattlefieldFrame:SetScale(0.75)
