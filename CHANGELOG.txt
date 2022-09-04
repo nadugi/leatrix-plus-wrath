@@ -1,5 +1,5 @@
-3.0.04.alpha.1 - 4th September 2022
-- For 'Automate quests', Darkmoon Faire repeatable quests will now be automated if you have the required materials.
+3.0.04.alpha.2 - 4th September 2022
+- For 'Automate quests', Darkmoon Faire repeatable quests will now be automated for English game clients if you have the required materials in your bag.
 
 3.0.03 - 4th September 2022
 - For 'Enhance quest log', quest level and difficulty will now be shown in the quest detail pane once again for quests that are in your quest log.  Added a new setting to show the quest difficulty in the quest log list.
