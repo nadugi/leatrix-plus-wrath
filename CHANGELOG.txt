@@ -1,5 +1,6 @@
-3.0.05.alpha.1 - 6th September 2022
-- Added lots of flight times.  There are now 3585 flight times stored in Leatrix Plus for Wrath Classic.
+3.0.05.alpha.2 - 7th September 2022
+- For 'Enhance questlog', you can now click the quest count in the quest log frame to expand or collapse all the quest headers.
+- Added lots of flight times.  There are now 3588 flight times stored in Leatrix Plus for Wrath Classic.
 
 3.0.04 - 4th September 2022
 - For 'Automate quests', Darkmoon Faire repeatable quests will now be automated for English game clients if you have the required materials in your bag.
