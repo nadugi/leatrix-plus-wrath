@@ -1,5 +1,5 @@
-3.0.05.alpha.2 - 7th September 2022
-- For 'Enhance questlog', you can now click the quest count in the quest log frame to expand or collapse all the quest headers.
+3.0.05.alpha.3 - 7th September 2022
+- For 'Enhance questlog', added a button to the quest log frame which allows you to collapse or expand all quest headers.
 - Added lots of flight times.  There are now 3588 flight times stored in Leatrix Plus for Wrath Classic.
 
 3.0.04 - 4th September 2022

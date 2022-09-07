@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 3.0.05.alpha.2 (7th September 2022)
+-- 	Leatrix Plus 3.0.05.alpha.3 (7th September 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "3.0.05.alpha.2"
+	LeaPlusLC["AddonVer"] = "3.0.05.alpha.3"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -7073,20 +7073,40 @@
 
 		if LeaPlusLC["EnhanceQuestLog"] == "On" then
 
-			-- Click quest log count to toggle expand or collapse all quest headers
-			QuestLogCount:HookScript("OnMouseDown", function(self, btn)
+			-- Button to toggle quest headers
+			LeaPlusLC:CreateButton("ToggleQuestHeaders", QuestLogFrame, "Collapse", "BOTTOMLEFT", 344, 54, 0, 22, true, "", false)
+			LeaPlusCB["ToggleQuestHeaders"]:ClearAllPoints()
+			LeaPlusCB["ToggleQuestHeaders"]:SetPoint("TOPRIGHT", QuestLogFrame, "TOPRIGHT", -360, -44)
+			LeaPlusCB["ToggleQuestHeaders"]:GetFontString():SetWordWrap(false)
+
+			local function SetHeadersButton()
+				if LeaPlusCB["ToggleQuestHeaders"].collapsed then
+					LeaPlusCB["ToggleQuestHeaders"]:SetText("Expand")
+				else
+					LeaPlusCB["ToggleQuestHeaders"]:SetText("Collapse")
+				end
+				headerButtonWidth = LeaPlusCB["ToggleQuestHeaders"]:GetFontString():GetStringWidth() + 13.6
+				if headerButtonWidth > 120 then headerButtonWidth = 120 end
+				LeaPlusCB["ToggleQuestHeaders"]:GetFontString():SetWidth(headerButtonWidth)
+				LeaPlusCB["ToggleQuestHeaders"]:SetWidth(headerButtonWidth)
+			end
+
+			LeaPlusCB["ToggleQuestHeaders"]:HookScript("OnMouseDown", function(self, btn)
 				if btn == "LeftButton" then
 					if self.collapsed then
 						self.collapsed = nil
 						ExpandQuestHeader(0)
+						SetHeadersButton()
 					else
 						self.collapsed = 1
 						QuestLogListScrollFrameScrollBar:SetValue(0)
 						CollapseQuestHeader(0)
+						SetHeadersButton()
 					end
 				end
 			end)
 
+			-- Taller quest log
 			if LeaPlusLC["EnhanceQuestTaller"] == "On" then
 
 				-- Set increased height of quest log frame and maximum number of quests listed
@@ -7249,9 +7269,6 @@
 			LeaPlusLC:MakeTx(EnhanceQuestPanel, "Levels", 16, -132)
 			LeaPlusLC:MakeCB(EnhanceQuestPanel, "EnhanceQuestLevels", "Show quest levels", 16, -152, false, "If checked, quest levels will be shown.")
 			LeaPlusLC:MakeCB(EnhanceQuestPanel, "EnhanceQuestDifficulty", "Show quest difficulty in quest log list", 16, -172, false, "If checked, the quest difficulty will be shown next to the quest level in the quest log list.|n|nThis will indicate whether the quest requires a group (+), dungeon (D), raid (R) or PvP (P).|n|nThe quest difficulty will always be shown in the quest log detail pane regardless of this setting.")
-
-			-- Add footer
-			LeaPlusLC:MakeFT(EnhanceQuestPanel, "You can click the quest log count to expand or collapse all quest headers.", 16, 500)
 
 			-- Disable Show quest difficulty option if Show quest levels is disabled
 			LeaPlusCB["EnhanceQuestLevels"]:HookScript("OnClick", function()
