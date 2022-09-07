@@ -446,6 +446,7 @@
 					["0.42:0.37:0.51:0.36"] = 153, -- Undercity, Thondroril River
 					["0.42:0.37:0.51:0.36:0.61:0.35:0.62:0.34"] = 309, -- Undercity, Thondoril River, Light's Hope Chapel, Acherus: The Ebon Hold
 					["0.42:0.37:0.61:0.35:0.62:0.34"] = 318, -- Undercity, Light's Hope Chapel, Acherus: The Ebon Hold
+					["0.42:0.37:0.61:0.35:0.58:0.25:0.59:0.19:0.58:0.06"] = 627, -- Undercity, Light's Hope Chapel, Tranquillien, Silvermoon City, Shattered Sun Staging Area
 
 					-- Horde: Zul'Aman
 					["0.61:0.28:0.58:0.25"] = 52, -- Zul'Aman, Tranquillien
@@ -1449,6 +1450,7 @@
 					["0.65:0.50:0.54:0.57:0.44:0.51:0.38:0.32:0.63:0.18:0.72:0.28"] = 465, -- Thrallmar, Falcon Watch, Swamprat Post, Thunderlord Stronghold, The Stormspire, Cosmowrench
 					["0.65:0.50:0.44:0.67"] = 123, -- Thrallmar, Shattrath
 					["0.65:0.50:0.44:0.67:0.23:0.50"] = 257, -- Thrallmar, Shattrath, Zabra'jin
+					["0.65:0.50:0.54:0.57:0.23:0.50:0.38:0.32"] = 328, -- Thrallmar, Falcon Watch, Zabra'jin, Thunderlord Stronghold
 
 					-- Horde: Thunderlord Stronghold (Blade's Edge Mountains)
 					["0.38:0.32:0.44:0.51:0.44:0.67:0.51:0.73:0.66:0.77"] = 335, -- Thunderlord Stronghold, Swamprat Post, Shattrath, Stonebreaker Hold, Shadowmoon Village
