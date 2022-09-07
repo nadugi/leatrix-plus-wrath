@@ -1,4 +1,4 @@
-3.0.05.alpha.3 - 7th September 2022
+3.0.05 - 7th September 2022
 - For 'Enhance questlog', there is a new setting in the configuration panel to show a toggle headers button.  It's enabled by default.  The toggle headers button allows you to collapse and expand all quest headers in one click.
 - Added lots of flight times.  There are now 3590 flight times stored in Leatrix Plus for Wrath Classic.
 
