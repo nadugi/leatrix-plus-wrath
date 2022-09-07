@@ -10260,7 +10260,7 @@
 						-- Show level
 						if LT["Reaction"] < 5 then
 							if LT["UnitLevel"] == -1 then
-								LT["InfoText"] = LT["InfoText"] .. ("|cffff3333" .. ttLevel .. " ??|cffffffff")
+								LT["InfoText"] = LT["InfoText"] .. ("|cffff3333" .. "??" .. " " .. ttLevel .. "|cffffffff")
 							else
 								LT["LevelColor"] = GetCreatureDifficultyColor(LT["UnitLevel"])
 								LT["LevelColor"] = string.format('%02x%02x%02x', LT["LevelColor"].r * 255, LT["LevelColor"].g * 255, LT["LevelColor"].b * 255)
