@@ -10352,7 +10352,7 @@
 
 							-- Level ?? mob
 							if LT["UnitLevel"] == -1 then
-								LT["InfoText"] = LT["InfoText"] .. "|cffff3333" .. ttLevel .. " ??|cffffffff "
+								LT["InfoText"] = LT["InfoText"] .. "|cffff3333" .. "?? " .. ttLevel .. "|cffffffff "
 
 							-- Mobs within level range
 							else
