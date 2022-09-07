@@ -7085,7 +7085,7 @@
 				else
 					LeaPlusCB["ToggleQuestHeaders"]:SetText("Collapse")
 				end
-				headerButtonWidth = LeaPlusCB["ToggleQuestHeaders"]:GetFontString():GetStringWidth() + 13.6
+				local headerButtonWidth = LeaPlusCB["ToggleQuestHeaders"]:GetFontString():GetStringWidth() + 13.6
 				if headerButtonWidth > 120 then headerButtonWidth = 120 end
 				LeaPlusCB["ToggleQuestHeaders"]:GetFontString():SetWidth(headerButtonWidth)
 				LeaPlusCB["ToggleQuestHeaders"]:SetWidth(headerButtonWidth)
