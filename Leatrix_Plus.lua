@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 3.0.06.alpha.3 (7th September 2022)
+-- 	Leatrix Plus 3.0.06.alpha.4 (8th September 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "3.0.06.alpha.3"
+	LeaPlusLC["AddonVer"] = "3.0.06.alpha.4"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -9783,7 +9783,7 @@
 			-- Create locale specific level string
 			LT["LevelLocale"] = strtrim(strtrim(string.gsub(TOOLTIP_UNIT_LEVEL, "%%s", "")))
 			if GameLocale == "ruRU" then
-				LT["LevelLocale"] = " уровня"
+				LT["LevelLocale"] = "-ro уровня"
 			end
 
 			-- Tooltip
@@ -10260,7 +10260,7 @@
 						-- Show level
 						if LT["Reaction"] < 5 then
 							if LT["UnitLevel"] == -1 then
-								LT["InfoText"] = LT["InfoText"] .. ("|cffff3333" .. "??" .. " " .. ttLevel .. "|cffffffff")
+								LT["InfoText"] = LT["InfoText"] .. ("|cffff3333" .. "??-ro" .. " " .. ttLevel .. "|cffffffff")
 							else
 								LT["LevelColor"] = GetCreatureDifficultyColor(LT["UnitLevel"])
 								LT["LevelColor"] = string.format('%02x%02x%02x', LT["LevelColor"].r * 255, LT["LevelColor"].g * 255, LT["LevelColor"].b * 255)
@@ -10352,7 +10352,7 @@
 
 							-- Level ?? mob
 							if LT["UnitLevel"] == -1 then
-								LT["InfoText"] = LT["InfoText"] .. "|cffff3333" .. "?? " .. ttLevel .. "|cffffffff "
+								LT["InfoText"] = LT["InfoText"] .. "|cffff3333" .. "??-ro " .. ttLevel .. "|cffffffff "
 
 							-- Mobs within level range
 							else

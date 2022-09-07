@@ -1,4 +1,4 @@
-3.0.06.alpha.3 - 7th September 2022
+3.0.06.alpha.4 - 8th September 2022
 - For 'Enhance tooltip' ('Interface'), some locale updates.
 
 3.0.05 - 7th September 2022
