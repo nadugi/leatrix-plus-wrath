@@ -1,4 +1,4 @@
-3.0.06.alpha.1 - 7th September 2022
+3.0.06.alpha.2 - 7th September 2022
 - Locale updates.
 
 3.0.05 - 7th September 2022
