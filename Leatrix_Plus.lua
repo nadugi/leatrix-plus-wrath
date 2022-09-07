@@ -9783,7 +9783,7 @@
 			-- Create locale specific level string
 			LT["LevelLocale"] = strtrim(strtrim(string.gsub(TOOLTIP_UNIT_LEVEL, "%%s", "")))
 			if GameLocale == "ruRU" then
-				LT["LevelLocale"] = gsub(LT["LevelLocale"], "-й", "-ro")
+				LT["LevelLocale"] = "-ro уровня"
 			end
 
 			-- Tooltip
