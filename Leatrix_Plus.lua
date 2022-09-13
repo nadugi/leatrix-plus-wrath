@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 3.0.06.alpha.9 (12th September 2022)
+-- 	Leatrix Plus 3.0.06.alpha.10 (13th September 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "3.0.06.alpha.9"
+	LeaPlusLC["AddonVer"] = "3.0.06.alpha.10"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -7123,30 +7123,23 @@
 			if LeaPlusLC["EnhanceQuestTaller"] == "On" then
 
 				-- Set increased height of quest log frame and maximum number of quests listed
-				local tall, numTallQuests = 73, 21
+				local tall, numTallQuests = 70, 4
 
 				-- Make the quest log frame double-wide
 				UIPanelWindows["QuestLogFrame"] = {area = "override", pushable = 0, xoffset = -16, yoffset = 12, bottomClampOverride = 140 + 12, width = 682, height = 487, whileDead = 1}
 
 				-- Size the quest log frame
 				QuestLogFrame:SetWidth(682)
-				QuestLogFrame:SetHeight(487 + tall)
-
-				QuestLogListScrollFrame:ClearAllPoints()
-				QuestLogListScrollFrame:SetPoint("TOPLEFT", QuestLogFrame, "TOPLEFT", 19, -75)
-
-				-- Position bottom-right close button
-				QuestLogFrameCancelButton:ClearAllPoints()
-				QuestLogFrameCancelButton:SetPoint("BOTTOMRIGHT", QuestLogFrame, "BOTTOMRIGHT", -10, 54)
+				QuestLogFrame:SetHeight(444 + tall)
 
 				hooksecurefunc("QuestLogDetailFrame_AttachToQuestLog", function()
 					QuestLogDetailScrollFrame:ClearAllPoints()
 					QuestLogDetailScrollFrame:SetPoint("TOPLEFT", QuestLogListScrollFrame, "TOPRIGHT", 28, -1)
-					QuestLogDetailScrollFrame:SetHeight(336 + tall)
+					QuestLogDetailScrollFrame:SetHeight(331 + tall)
 				end)
 
 				-- Expand the quest list to full height
-				QuestLogListScrollFrame:SetHeight(336 + tall - 2) -- Minus 2 for a slight bufffer
+				QuestLogListScrollFrame:SetHeight(336 + tall - 4) -- Minus 4 for a slight bufffer
 
 				-- Create additional quest rows
 				local oldQuestsDisplayed = QUESTS_DISPLAYED
@@ -7167,40 +7160,29 @@
 				-- Set top left texture
 				regions[2]:SetTexture("Interface\\AddOns\\Leatrix_Plus\\Leatrix_Plus")
 				regions[2]:SetTexCoord(0.25, 0.75, 0, 1)
-				regions[2]:SetSize(512, 512)
+				regions[2]:SetSize(512, 506)
 
 				-- Set top right texture
 				regions[3]:ClearAllPoints()
 				regions[3]:SetPoint("TOPLEFT", regions[2], "TOPRIGHT", 0, 0)
 				regions[3]:SetTexture("Interface\\AddOns\\Leatrix_Plus\\Leatrix_Plus")
 				regions[3]:SetTexCoord(0.75, 1, 0, 1)
-				regions[3]:SetSize(256, 512)
-
-				-- Position and resize abandon button
-				if not LeaPlusLC.ElvUI then
-					hooksecurefunc("QuestLogControlPanel_UpdatePosition", function()
-						if QuestLogFrame:IsShown() then
-							QuestLogControlPanel:ClearAllPoints()
-							QuestLogControlPanel:SetPoint("BOTTOMLEFT", QuestLogFrame, "BOTTOMLEFT", 18, 50)
-						end
-					end)
-				end
+				regions[3]:SetSize(256, 506)
 
 				-- Position and size close button
 				if LeaPlusLC.ElvUI then
 					QuestLogFrameCancelButton:ClearAllPoints()
-					QuestLogFrameCancelButton:SetPoint("BOTTOMRIGHT", QuestLogFrame, "BOTTOMRIGHT", -10, 12)
+					QuestLogFrameCancelButton:SetPoint("BOTTOMRIGHT", QuestLogFrame, "BOTTOMRIGHT", -10, 11)
 					QuestLogFrameCancelButton:SetHeight(20)
-					QuestLogFrame:SetHeight(447 + tall)
 				end
 
 				-- Empty quest frame
 				QuestLogNoQuestsText:ClearAllPoints()
-				QuestLogNoQuestsText:SetPoint("TOP", QuestLogListScrollFrame, 0, -50)
+				QuestLogNoQuestsText:SetPoint("CENTER", QuestLogListScrollFrame, 0, 0)
 				hooksecurefunc(EmptyQuestLogFrame, "Show", function()
 					EmptyQuestLogFrame:ClearAllPoints()
-					EmptyQuestLogFrame:SetPoint("BOTTOMLEFT", QuestLogFrame, "BOTTOMLEFT", 20, 30)
-					EmptyQuestLogFrame:SetHeight(457)
+					EmptyQuestLogFrame:SetPoint("BOTTOMLEFT", QuestLogFrame, "BOTTOMLEFT", 20, -4)
+					EmptyQuestLogFrame:SetHeight(447)
 				end)
 
 			end
