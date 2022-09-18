@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 3.0.08.alpha.2 (18th September 2022)
+-- 	Leatrix Plus 3.0.08.alpha.3 (18th September 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "3.0.08.alpha.2"
+	LeaPlusLC["AddonVer"] = "3.0.08.alpha.3"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -846,6 +846,14 @@
 
 				},
 
+				-- Ripper (Arcanite ripper guitar sound)
+				["MuteRipper"] = {
+
+					-- sound/events/
+					"archaniteripper.ogg#567384",
+
+				},
+
 				-- Striders (footsteps are in another setting)
 				["MuteStriders"] = {
 
@@ -914,6 +922,7 @@
 
 			LeaPlusLC:MakeTx(SoundPanel, "Misc", 388, -72)
 			LeaPlusLC:MakeCB(SoundPanel, "MuteAdal", "A'dal", 388, -92, false, "If checked, A'dal in Shattrath City will be muted.")
+			LeaPlusLC:MakeCB(SoundPanel, "MuteRipper", "Ripper", 388, -112, false, "If checked, the Arcanite Ripper guitar sound will be muted.")
 
 			-- Set click width for sounds checkboxes
 			for k, v in pairs(muteTable) do
