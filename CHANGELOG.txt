@@ -1,5 +1,5 @@
-3.0.08.alpha.1 - 16th September 2022
-- Added lots of flight times.  There are now 3671 flight times stored in Leatrix Plus for Wrath Classic.
+3.0.08.alpha.2 - 18th September 2022
+- Added lots of flight times.  There are now 3699 flight times stored in Leatrix Plus for Wrath Classic.
 
 3.0.07 - 14th September 2022
 - For 'Enhance tooltip' ('Interface'), if you use the setting to hide tooltips for world units during combat, you can now specify whether holding shift should override that setting or not.  Also some locale updates.
