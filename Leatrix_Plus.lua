@@ -4989,7 +4989,7 @@
 
 						-- Handle flight time not correct or flight does not exist in database
 						local timeStart = GetTime()
-						C_Timer.After(5, function()
+						C_Timer.After(1, function()
 							if UnitOnTaxi("player") then
 								-- Player is on a taxi so register when taxi lands
 								flightFrame:RegisterEvent("PLAYER_CONTROL_GAINED")
