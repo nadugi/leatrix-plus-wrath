@@ -1,4 +1,4 @@
-3.0.08.alpha.6 - 19th September 2022
+3.0.08.alpha.7 - 19th September 2022
 - For 'Mute game sounds' ('System'), you can now mute the Arcanite Ripper guitar sound.
 - For 'Manage buffs' ('Frames'), fixed an issue which caused buff icons to overlap each other at higher scale values.  The scale slider will now affect the consolidated buff icon too.
 - Added lots of flight times.  There are now 3708 flight times stored in Leatrix Plus for Wrath Classic.
