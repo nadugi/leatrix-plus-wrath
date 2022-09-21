@@ -283,6 +283,7 @@
 					["0.59:0.19:0.58:0.25:0.61:0.35:0.51:0.36:0.42:0.37"] = 435, -- Silvermoon City, Tranquillien, Light's Hope Chapel, Thondoril River, Undercity
 					["0.59:0.19:0.58:0.06:0.61:0.28:0.61:0.35"] = 522, -- Silvermoon City, Shattered Sun Staging Area, Zul'Aman, Light's Hope Chapel (Tomas Nilsson reported 512)
 					["0.59:0.19:0.58:0.25:0.61:0.35:0.51:0.36:0.46:0.43:0.55:0.46:0.50:0.66:0.41:0.93"] = 1046, -- Silvermoon City, Tranquillien, Light's Hope Chapel, Thondoril River, Tarren Mill, Hammerfall, Kargath, Booty Bay
+					["0.59:0.19:0.58:0.06:0.61:0.28:0.61:0.35:0.42:0.37"] = 772, -- Silvermoon City, Shattered Sun Staging Area, Zul'Aman, Light's Hope Chapel, Undercity
 
 					-- Horde: Stonard (Swamp of Sorrows)
 					["0.54:0.79:0.41:0.93"] = 230, -- Stonard, Booty Bay
@@ -1283,7 +1284,7 @@
 					["0.79:0.54:0.65:0.50:0.51:0.73:0.66:0.77:0.78:0.85"] = 316, -- Hellfire Peninsula, Thrallmar, Stonebreaker Hold, Shadowmoon Village, Sanctum of the Stars
 					["0.79:0.54:0.65:0.50:0.51:0.73:0.66:0.77:0.81:0.77"] = 333, -- Hellfire Peninsula, Thrallmar, Stonebreaker Hold, Shadowmoon Village, Altar of Sha'tar
 					["0.79:0.54:0.65:0.50:0.51:0.73:0.44:0.67"] = 241, -- Hellfire Peninsula, Thrallmar, Stonebreaker Hold, Shattrath
-					["0.79:0.54:0.65:0.50:0.44:0.67"] = 182, -- Hellfire Peninsula, Thrallmar, Shattrath
+					["0.79:0.54:0.65:0.50:0.44:0.67"] = 182, -- Hellfire Peninsula, Thrallmar, Shattrath (Matthias Rössing reported 203)
 					["0.79:0.54:0.54:0.57:0.44:0.51:0.38:0.32:0.58:0.27"] = 392, -- Hellfire Peninsula, Falcon Watch, Swamprat Post, Thunderlord Stronghold, Area 52
 					["0.79:0.54:0.65:0.50:0.44:0.67:0.23:0.50"] = 316, -- Hellfire Peninsula, Thrallmar, Shattrath, Zabra'jin
 
@@ -2582,6 +2583,7 @@
 					["0.53:0.61:0.51:0.47:0.50:0.42:0.61:0.35:0.62:0.34"] = 465, -- Thelsamar, Refuge Pointe, Aerie Peak, Light's Hope Chapel, Acherus: The Ebon Hold
 					["0.53:0.61:0.45:0.56:0.44:0.45"] = 254, -- Thelsamar, Menethil Harbor, Southshore
 					["0.53:0.61:0.51:0.47:0.44:0.45:0.48:0.39:0.51:0.36"] = 379, -- Thelsamar, Refuge Pointe, Southshore, Chillwind Camp, Thondoril River
+					["0.53:0.61:0.47:0.59:0.41:0.73:0.52:0.72"] = 416, -- Thelsamar, Ironforge, Stormwind, Morgan's Vigil
 
 					-- Alliance: Thondroril River (Western Plaguelands)
 					["0.51:0.36:0.48:0.39:0.50:0.42"] = 123, -- Thondroril River, Chillwind Camp, Aerie Peak
@@ -3022,6 +3024,7 @@
 					["0.55:0.21:0.43:0.25:0.61:0.40"] = 442, -- Moonglade, Auberdine, Talrendis Point
 					["0.55:0.21:0.53:0.26:0.50:0.35:0.58:0.39:0.61:0.40:0.61:0.55"] = 436, -- Moonglade, Talonbranch Glade, Emerald Sanctuary, Forest Song, Talrendis Point, Ratchet
 					["0.55:0.21:0.43:0.25:0.31:0.69:0.48:0.70"] = 769, -- Moonglade, Auberdine, Feathermoon, Thalanaar
+					["0.55:0.21:0.53:0.26:0.50:0.35:0.58:0.39:0.61:0.40:0.61:0.55:0.60:0.81"] = 673, -- Moonglade, Talonbranch Glade, Emerald Sanctuary, Forest Song, Talrendis Point, Ratchet, Gadgetzan
 
 					-- Alliance: Mudsprocket (Dustwallow Marsh)
 					["0.58:0.70:0.48:0.70:0.31:0.69"] = 283, -- Mudsprocket, Thalanaar, Feathermoon

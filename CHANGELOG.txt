@@ -1,3 +1,7 @@
+3.0.09.alpha.1 - 22nd September 2022
+- Added a new option 'Restore chat messages' ('Chat').  If enabled, you can reload your UI without losing your recent chat messages.
+- Added lots of flight times.  There are now 3729 flight times stored in Leatrix Plus for Wrath Classic.
+
 3.0.08 - 21st September 2022
 - For 'Mute game sounds' ('System'), you can now mute the Arcanite Ripper guitar sound.
 - For 'Manage buffs' ('Frames'), fixed an issue which caused buff icons to overlap each other at higher scale values.  The scale slider will now affect the consolidated buff icon too.
