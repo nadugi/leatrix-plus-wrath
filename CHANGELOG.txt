@@ -1,4 +1,4 @@
-3.0.09.alpha.4 - 23rd September 2022
+3.0.09.alpha.5 - 23rd September 2022
 - Added a new option 'Restore chat messages' ('Chat').  If enabled, you can reload your UI without losing your recent chat messages.
 - Added a new option 'Block shared quests' ('Social').  If enabled, shared quests will be automatically declined unless the player sharing the quest is a friend.
 - Added lots of flight times.  There are now 3741 flight times stored in Leatrix Plus for Wrath Classic.

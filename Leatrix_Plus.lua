@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 3.0.09.alpha.4 (23rd September 2022)
+-- 	Leatrix Plus 3.0.09.alpha.5 (23rd September 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "3.0.09.alpha.4"
+	LeaPlusLC["AddonVer"] = "3.0.09.alpha.5"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -84,6 +84,21 @@
 	function LeaPlusLC:HideConfigPanels()
 		for k, v in pairs(LeaConfigList) do
 			v:Hide()
+		end
+	end
+
+	-- Decline a shared quest if needed
+	function LeaPlusLC:CheckIfQuestIsSharedAndShouldBeDeclined()
+		if LeaPlusLC["NoSharedQuests"] == "On" then
+			local npcName = UnitName("questnpc")
+			if npcName then
+				if UnitInParty(npcName) or UnitInRaid(npcName) then
+					if not LeaPlusLC:FriendCheck(npcName) then
+						DeclineQuest()
+						return
+					end
+				end
+			end
 		end
 	end
 
@@ -1885,17 +1900,9 @@
 			-- Event handler
 			qFrame:SetScript("OnEvent", function(self, event, arg1)
 
-				-- Block shared quests if option is enabled (also handled in other QUEST_DETAIL events)
-				if event == "QUEST_DETAIL" and LeaPlusLC["NoSharedQuests"] == "On" then
-					local npcName = UnitName("questnpc")
-					if npcName then
-						if UnitInParty(npcName) or UnitInRaid(npcName) then
-							if not LeaPlusLC:FriendCheck(npcName) then
-								DeclineQuest()
-								return
-							end
-						end
-					end
+				-- Block shared quests if option is enabled
+				if event == "QUEST_DETAIL" then
+					LeaPlusLC:CheckIfQuestIsSharedAndShouldBeDeclined()
 				end
 
 				-- Clear progress items when quest interaction has ceased
@@ -3160,26 +3167,27 @@
 
 	function LeaPlusLC:Player()
 
-
 		----------------------------------------------------------------------
-		-- Block shared quests (also handled in other QUEST_DETAIL events)
+		-- Block shared quests (no reload needed)
 		----------------------------------------------------------------------
 
-		if LeaPlusLC["NoSharedQuests"] == "On" then
+		do
 
 			local eFrame = CreateFrame("FRAME")
-			eFrame:RegisterEvent("QUEST_DETAIL")
-			eFrame:SetScript("OnEvent", function()
-				local npcName = UnitName("questnpc")
-				if npcName then
-					if UnitInParty(npcName) or UnitInRaid(npcName) then
-						if not LeaPlusLC:FriendCheck(npcName) then
-							DeclineQuest()
-							return
-						end
-					end
+			eFrame:SetScript("OnEvent", LeaPlusLC.CheckIfQuestIsSharedAndShouldBeDeclined)
+
+			-- Function to set event
+			local function SetSharedQuestsFunc()
+				if LeaPlusLC["NoSharedQuests"] == "On" then
+					eFrame:RegisterEvent("QUEST_DETAIL")
+				else
+					eFrame:UnregisterEvent("QUEST_DETAIL")
 				end
-			end)
+			end
+
+			-- Set event when option is clicked and on startup
+			LeaPlusCB["NoSharedQuests"]:HookScript("OnClick", SetSharedQuestsFunc)
+			SetSharedQuestsFunc()
 
 		end
 
