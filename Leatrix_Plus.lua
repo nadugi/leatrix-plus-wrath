@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 3.0.09.alpha.3 (23rd September 2022)
+-- 	Leatrix Plus 3.0.09.alpha.4 (23rd September 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "3.0.09.alpha.3"
+	LeaPlusLC["AddonVer"] = "3.0.09.alpha.4"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -1885,6 +1885,19 @@
 			-- Event handler
 			qFrame:SetScript("OnEvent", function(self, event, arg1)
 
+				-- Block shared quests if option is enabled (also handled in other QUEST_DETAIL events)
+				if event == "QUEST_DETAIL" and LeaPlusLC["NoSharedQuests"] == "On" then
+					local npcName = UnitName("questnpc")
+					if npcName then
+						if UnitInParty(npcName) or UnitInRaid(npcName) then
+							if not LeaPlusLC:FriendCheck(npcName) then
+								DeclineQuest()
+								return
+							end
+						end
+					end
+				end
+
 				-- Clear progress items when quest interaction has ceased
 				if event == "QUEST_FINISHED" then
 					for i = 1, 6 do
@@ -3146,6 +3159,29 @@
 ----------------------------------------------------------------------
 
 	function LeaPlusLC:Player()
+
+
+		----------------------------------------------------------------------
+		-- Block shared quests (also handled in other QUEST_DETAIL events)
+		----------------------------------------------------------------------
+
+		if LeaPlusLC["NoSharedQuests"] == "On" then
+
+			local eFrame = CreateFrame("FRAME")
+			eFrame:RegisterEvent("QUEST_DETAIL")
+			eFrame:SetScript("OnEvent", function()
+				local npcName = UnitName("questnpc")
+				if npcName then
+					if UnitInParty(npcName) or UnitInRaid(npcName) then
+						if not LeaPlusLC:FriendCheck(npcName) then
+							DeclineQuest()
+							return
+						end
+					end
+				end
+			end)
+
+		end
 
 		----------------------------------------------------------------------
 		-- Restore chat messages
@@ -12035,6 +12071,7 @@
 				LeaPlusLC:LoadVarChk("NoDuelRequests", "Off")				-- Block duels
 				LeaPlusLC:LoadVarChk("NoPartyInvites", "Off")				-- Block party invites
 				LeaPlusLC:LoadVarChk("NoFriendRequests", "Off")				-- Block friend requests
+				LeaPlusLC:LoadVarChk("NoSharedQuests", "Off")				-- Block shared quests
 
 				LeaPlusLC:LoadVarChk("AcceptPartyFriends", "Off")			-- Party from friends
 				LeaPlusLC:LoadVarChk("InviteFromWhisper", "Off")			-- Invite from whispers
@@ -12401,6 +12438,7 @@
 			LeaPlusDB["NoDuelRequests"] 		= LeaPlusLC["NoDuelRequests"]
 			LeaPlusDB["NoPartyInvites"]			= LeaPlusLC["NoPartyInvites"]
 			LeaPlusDB["NoFriendRequests"]		= LeaPlusLC["NoFriendRequests"]
+			LeaPlusDB["NoSharedQuests"]			= LeaPlusLC["NoSharedQuests"]
 
 			LeaPlusDB["AcceptPartyFriends"]		= LeaPlusLC["AcceptPartyFriends"]
 			LeaPlusDB["InviteFromWhisper"]		= LeaPlusLC["InviteFromWhisper"]
@@ -14524,6 +14562,8 @@
 				LeaPlusDB["NoDuelRequests"] = "On"				-- Block duels
 				LeaPlusDB["NoPartyInvites"] = "Off"				-- Block party invites
 				LeaPlusDB["NoFriendRequests"] = "Off"			-- Block friend requests
+				LeaPlusDB["NoSharedQuests"] = "Off"				-- Block shared quests
+
 				LeaPlusDB["AcceptPartyFriends"] = "On"			-- Party from friends
 				LeaPlusDB["InviteFromWhisper"] = "On"			-- Invite from whispers
 				LeaPlusDB["InviteFriendsOnly"] = "On"			-- Restrict invites to friends
@@ -14918,6 +14958,7 @@
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "NoDuelRequests"			, 	"Block duels"					,	146, -92, 	false,	"If checked, duel requests will be blocked unless the player requesting the duel is a friend.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "NoPartyInvites"			, 	"Block party invites"			, 	146, -112, 	false,	"If checked, party invitations will be blocked unless the player inviting you is a friend.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "NoFriendRequests"			, 	"Block friend requests"			, 	146, -132, 	false,	"If checked, BattleTag and Real ID friend requests will be automatically declined.|n|nEnabling this option will automatically decline any pending requests.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "NoSharedQuests"			, 	"Block shared quests"			, 	146, -152, 	false,	"If checked, shared quests will be automatically declined unless the player sharing the quest is a friend.")
 
 	LeaPlusLC:MakeTx(LeaPlusLC[pg], "Groups"					, 	340, -72);
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "AcceptPartyFriends"		, 	"Party from friends"			, 	340, -92, 	false,	"If checked, party invitations from friends will be automatically accepted unless you are queued for a battleground.")
