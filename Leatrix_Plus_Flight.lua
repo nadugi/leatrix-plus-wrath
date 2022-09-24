@@ -225,6 +225,7 @@
 					["0.59:0.45:0.61:0.35:0.62:0.34"] = 200, -- Revantusk Village, Light's Hope Chapel, Acherus: The Ebon Hold
 					["0.59:0.45:0.42:0.37:0.50:0.66"] = 697, -- Revantusk Village, Undercity, Kargath
 					["0.59:0.45:0.46:0.43:0.51:0.36"] = 260, -- Poblado Sañadiente, Molino Tarren, Río Thondroril
+					["0.59:0.45:0.42:0.37:0.45:0.37"] = 303, -- Revantusk Village, Undercity, The Bulwark
 
 					-- Horde: Shattered Sun Staging Area (Isle of Quel'Danas)
 					["0.58:0.06:0.61:0.28:0.61:0.35:0.59:0.45:0.55:0.46:0.50:0.66:0.41:0.93"] = 1117, -- Shattered Sun Staging Area, Zul'Aman, Light's Hope Chapel, Revantusk Village, Hammerfall, Kargath, Booty Bay
@@ -339,6 +340,7 @@
 					["0.46:0.43:0.51:0.36:0.61:0.35"] = 196, -- Tarren Mill, Thondoril River, Light's Hope Chapel
 					["0.46:0.43:0.59:0.45:0.61:0.35:0.61:0.28:0.58:0.06:0.59:0.19"] = 804, -- Tarren Mill, Revantusk Village, Light's Hope Chapel, Zul'Aman, Shattered Sun Staging Area, Silvermoon City
 					["0.46:0.43:0.42:0.37:0.50:0.66:0.50:0.69"] = 617, -- Tarren Mill, Undercity, Kargath, Flame Crest
+					["0.46:0.43:0.51:0.36:0.61:0.35:0.58:0.25:0.59:0.19"] = 380, -- Tarren Mill, Thondoril River, Light's Hope Chapel, Tranquillien, Silvermoon City
 
 					-- Horde: The Bulwark (Tirisfal Glades)
 					["0.45:0.37:0.42:0.37:0.61:0.35:0.58:0.25"] = 400, -- The Bulwark, Undercity, Light's Hope Chapel, Tranquillien
@@ -1165,6 +1167,7 @@
 					["0.58:0.27:0.38:0.32:0.44:0.51:0.44:0.67:0.51:0.73:0.66:0.77:0.81:0.77"] = 524, -- Area 52, Thunderlord Stronghold, Swamprat Post, Shattrath, Stonebreaker Hold, Shadowmoon Village, Altar of Sha'tar
 					["0.58:0.27:0.38:0.32:0.44:0.51:0.54:0.57:0.65:0.50:0.68:0.63"] = 424, -- Area 52, Thunderlord Stronghold, Swamprat Post, Falcon Watch, Thrallmar, Spinebreaker Ridge
 					["0.58:0.27:0.38:0.32:0.23:0.50:0.44:0.67"] = 405, -- Area 52, Thunderlord Stronghold, Zabra'jin, Shattrath
+					["0.58:0.27:0.38:0.32:0.23:0.50:0.44:0.67:0.51:0.73"] = 474, -- Area 52, Thunderlord Stronghold, Zabra'jin, Shattrath, Stonebreaker Hold
 
 					-- Horde: Cosmowrench (Netherstorm)
 					["0.72:0.28:0.58:0.27:0.49:0.36:0.44:0.51:0.44:0.67:0.51:0.73:0.66:0.77"] = 420, -- Cosmowrench, Area 52, Mok'Nathal Village, Swamprat Post, Shattrath, Stonebreaker Hold, Shadowmoon Village
@@ -2139,6 +2142,7 @@
 					["0.48:0.39:0.61:0.35:0.62:0.34"] = 214, -- Chillwind Camp, Light's Hope Chapel, Acherus: The Ebon Hold
 					["0.48:0.39:0.47:0.59:0.51:0.47"] = 428, -- Chillwind Camp, Ironforge, Refuge Pointe
 					["0.48:0.39:0.50:0.42:0.51:0.47:0.45:0.56"] = 264, -- Chillwind Camp, Aerie Peak, Refuge Pointe, Menethil Harbor
+					["0.48:0.39:0.47:0.59:0.45:0.56"] = 337, -- Chillwind Camp, Ironforge, Menethil Harbor
 
 					-- Alliance: Darkshire (Duskwood)
 					["0.47:0.79:0.41:0.93"] = 171, -- Darkshire, Booty Bay
@@ -3177,6 +3181,7 @@
 					["0.39:0.40:0.46:0.40:0.61:0.55:0.64:0.67:0.48:0.70"] = 612, -- Stonetalon Peak, Astranaar, Ratchet, Theramore, Thalanaar
 					["0.39:0.40:0.43:0.25:0.53:0.26"] = 367, -- Stonetalon Peak, Auberdine, Talonbranch Glade
 					["0.39:0.40:0.46:0.40:0.61:0.55:0.64:0.67"] = 449, -- Stonetalon Peak, Astranaar, Ratchet, Theramore
+					["0.39:0.40:0.40:0.51:0.64:0.67:0.48:0.70"] = 598, -- Stonetalon Peak, Nijel's Point, Theramore, Thalanaar
 
 					-- Alliance: Talonbranch Glade (Felwood)
 					["0.53:0.26:0.43:0.25:0.31:0.69"] = 660, -- Talonbranch Glade, Auberdine, Feathermoon
@@ -3441,6 +3446,7 @@
 					["0.42:0.28:0.32:0.34:0.38:0.50:0.44:0.67:0.55:0.77"] = 308, -- Evergrove, Sylvanaar, Telredor, Shattrath, Allerian Stronghold
 					["0.42:0.28:0.32:0.34:0.38:0.50:0.44:0.67:0.55:0.77:0.69:0.85"] = 386, -- Evergrove, Sylvanaar, Telredor, Shattrath, Allerian Stronghold, Wildhammer Stronghold
 					["0.42:0.28:0.32:0.34:0.38:0.50"] = 137, -- Evergrove, Sylvanaar, Telredor
+					["0.42:0.28:0.42:0.37:0.38:0.50:0.27:0.44"] = 178, -- Evergrove, Toshley's Station, Telredor, Orebor Harborage
 
 					-- Alliance: Hellfire Peninsula (Hellfire Peninsula) (Dark Portal)
 					["0.79:0.55:0.65:0.58:0.44:0.67:0.27:0.74"] = 277, -- Hellfire Peninsula, Honor Hold, Shattrath, Telaar
@@ -3490,6 +3496,7 @@
 					["0.65:0.58:0.52:0.51:0.38:0.50:0.32:0.34:0.58:0.27"] = 366, -- Honor Hold, Temple of Telhamat, Telredor, Sylvanaar, Area 52
 					["0.65:0.58:0.55:0.77:0.27:0.74"] = 267, -- Honor Hold, Allerian Stronghold, Telaar
 					["0.65:0.58:0.44:0.67:0.38:0.50:0.42:0.37:0.58:0.27:0.63:0.18"] = 403, -- Honor Hold, Shattrath, Telredor, Toshley's Station, Area 52, The Stormspire
+					["0.65:0.58:0.52:0.51:0.38:0.50:0.32:0.34:0.63:0.18"] = 402, -- Honor Hold, Temple of Telhamat, Telredor, Sylvanaar, The Stormspire
 
 					-- Alliance: Orebor Harborage (Zangarmarsh)
 					["0.27:0.44:0.38:0.50:0.27:0.74"] = 177, -- Orebor Harborage, Telredor, Telaar
