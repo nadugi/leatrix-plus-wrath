@@ -1,7 +1,7 @@
 3.0.09.alpha.7 - 25th September 2022
 - Added a new option 'Restore chat messages' ('Chat').  If enabled, you can reload your UI without losing your recent chat messages.
 - Added a new option 'Block shared quests' ('Social').  If enabled, shared quests will be automatically declined unless the player sharing the quest is a friend.
-- Added lots of flight times.  There are now 3768 flight times stored in Leatrix Plus for Wrath Classic.
+- Added lots of flight times.  There are now 3778 flight times stored in Leatrix Plus for Wrath Classic.
 
 3.0.08 - 21st September 2022
 - For 'Mute game sounds' ('System'), you can now mute the Arcanite Ripper guitar sound.
