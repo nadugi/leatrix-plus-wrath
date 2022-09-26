@@ -1249,6 +1249,7 @@
 					["0.54:0.57:0.44:0.51:0.38:0.32:0.58:0.27"] = 271, -- Falcon Watch, Swamprat Post, Thunderlord Stronghold, Area 52
 					["0.54:0.57:0.44:0.51:0.38:0.32:0.58:0.27:0.63:0.18"] = 319, -- Falcon Watch, Swamprat Post, Thunderlord Stronghold, Area 52, The Stormspire
 					["0.54:0.57:0.23:0.50:0.38:0.32"] = 261, -- Falcon Watch, Zabra'jin, Thunderlord Stronghold
+					["0.54:0.57:0.65:0.50:0.51:0.73"] = 201, -- Falcon Watch, Thrallmar, Stonebreaker Hold
 
 					-- Horde: Garadar (Nagrand)
 					["0.29:0.62:0.44:0.67:0.51:0.73:0.66:0.77"] = 210, -- Garadar, Shattrath, Stonebreaker Hold, Shadowmoon Village
@@ -2510,6 +2511,7 @@
 					["0.58:0.06:0.61:0.35:0.47:0.59:0.41:0.73:0.41:0.93"] = 1050, -- Shattered Sun Staging Area, Light's Hope Chapel, Ironforge, Stormwind, Booty Bay
 					["0.58:0.06:0.61:0.35:0.48:0.39:0.44:0.45:0.45:0.56"] = 680, -- Shattered Sun Staging Area, Light's Hope Chapel, Chillwind Camp, Southshore, Menethil Harbor
 					["0.58:0.06:0.61:0.35:0.48:0.39:0.44:0.45"] = 547, -- Shattered Sun Staging Area, Light's Hope Chapel, Chillwind Camp, Southshore
+					["0.58:0.06:0.61:0.35:0.62:0.34"] = 392, -- Shattered Sun Staging Area, Light's Hope Chapel, Acherus: The Ebon Hold
 
 					-- Alliance: Southshore (Hillsbrad Foothills)
 					["0.44:0.45:0.45:0.56:0.47:0.59:0.47:0.65:0.41:0.73:0.41:0.93"] = 539, -- Southshore, Menethil Harbor, Ironforge, Thorium Point, Stormwind, Booty Bay (was 597, changed by Daniel Hoedt and Robert Keller)
@@ -2546,6 +2548,7 @@
 					["0.44:0.45:0.45:0.56:0.47:0.59:0.41:0.73:0.52:0.72"] = 508, -- Southshore, Menethil Harbor, Ironforge, Stormwind, Morgan's Vigil
 					["0.44:0.45:0.47:0.59:0.41:0.73:0.43:0.82"] = 451, -- Southshore, Ironforge, Stormwind, Rebel Camp
 					["0.44:0.45:0.45:0.56:0.47:0.59:0.47:0.65:0.41:0.73:0.50:0.75"] = 453, -- Southshore, Menethil Harbor, Ironforge, Thorium Point, Stormwind, Lakeshire
+					["0.44:0.45:0.45:0.56:0.47:0.59:0.58:0.06"] = 263, -- Southshore, Menethil Harbor, Ironforge, Shattered Sun Staging Area
 
 					-- Alliance: Stormwind (Elwynn Forest)
 					["0.41:0.73:0.41:0.93"] = 200, -- Stormwind, Booty Bay
@@ -2976,6 +2979,7 @@
 					["0.60:0.81:0.61:0.55:0.61:0.40:0.53:0.26"] = 657, -- Gadgetzan, Ratchet, Talrendis Point, Talonbranch Glade
 					["0.60:0.81:0.64:0.67:0.61:0.40:0.65:0.23:0.55:0.21"] = 676, -- Gadgetzan, Theramore, Talrendis Point, Everlook, Moonglade
 					["0.60:0.81:0.48:0.70:0.31:0.69:0.40:0.51:0.39:0.40"] = 701, -- Gadgetzan, Thalanaar, Feathermoon, Nijel's Point, Stonetalon Peak
+					["0.60:0.81:0.61:0.55:0.46:0.40:0.43:0.25:0.55:0.21:0.65:0.23"] = 860, -- Gadgetzan, Ratchet, Astranaar, Auberdine, Moonglade, Everlook
 
 					-- Alliance: Marshal's Refuge (Un'Goro Crater)
 					["0.50:0.76:0.42:0.79:0.31:0.69"] = 258, -- Marshal's Refuge, Cenarion Hold, Feathermoon
