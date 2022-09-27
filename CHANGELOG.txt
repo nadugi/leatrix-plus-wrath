@@ -1,3 +1,6 @@
+3.0.11.alpha.1 - 28th September 2022
+- Added some flight times.  There are now 4004 flight times stored in Leatrix Plus for Wrath Classic.
+
 3.0.10 - 28th September 2022
 - For 'Automate gossip' ('Automation'), stable master gossip will now be skipped as long as there are no other gossip options.  You can hold shift to prevent this.
 - Added Wrath of the Lich King main title music (media > various > main titles).
