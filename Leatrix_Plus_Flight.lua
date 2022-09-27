@@ -1878,6 +1878,7 @@
 					["0.84:0.59:0.85:0.73:0.74:0.71:0.49:0.58"] = 348, -- Camp Winterhoof, New Agamand, Kamagua, Moa'ki
 					["0.84:0.59:0.74:0.62:0.59:0.55"] = 174, -- Camp Winterhoof, Apothecary Camp, Venomspite
 					["0.84:0.59:0.74:0.62:0.74:0.71:0.49:0.58"] = 305, -- Camp Winterhoof, Apothecary Camp, Kamagua, Moa'ki
+					["0.84:0.59:0.74:0.62:0.59:0.55:0.54:0.52:0.45:0.51"] = 295, -- Camp Sabot-d'hiver, Camp des Apothicaires, Vexevenin, Temple du Repos du ver, Marteau d'Agmar
 
 					-- Horde: Howling Fjord: Kamagua
 					["0.74:0.71:0.85:0.73"] = 64, -- Kamagua, New Agamand
