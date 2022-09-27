@@ -1,3 +1,7 @@
+3.0.10 - 27th September 2022
+- For 'Automate gossip' ('Automation'), stable master gossip will now be skipped as long as there are no other gossip options.
+- Added some flight times.  There are now 3853 flight times stored in Leatrix Plus for Wrath Classic.
+
 3.0.09 - 27th September 2022
 - Added a new option 'Restore chat messages' ('Chat').  If enabled, you can reload your UI without losing your recent chat messages.
 - Added a new option 'Block shared quests' ('Social').  If enabled, shared quests will be automatically declined unless the player sharing the quest is a friend.
