@@ -726,6 +726,7 @@
 					["0.64:0.23:0.63:0.44:0.55:0.42:0.50:0.35"] = 411, -- Everlook, Orgrimmar, Splintertree Post, Emerald Sanctuary
 					["0.64:0.23:0.63:0.36:0.55:0.42:0.41:0.37"] = 388, -- Everlook, Valormok, Splintertree Post, Zoram'gar Outpost
 					["0.64:0.23:0.63:0.44:0.56:0.53"] = 350, -- Everlook, Orgrimmar, Crossroads
+					["0.64:0.23:0.63:0.44:0.56:0.53:0.55:0.73"] = 535, -- Everlook, Orgrimmar, Crossroads, Freewind Post
 
 					-- Horde: Freewind Post (Thousand Needles)
 					["0.55:0.73:0.44:0.69:0.42:0.79"] = 252, -- Freewind Post, Camp Mojache, Cenarion Hold
@@ -1961,6 +1962,7 @@
 					["0.95:0.63:0.85:0.73:0.74:0.62:0.70:0.55"] = 236, -- Vengeance Landing, New Agamand, Apothecary Camp, Conquest Hold
 					["0.95:0.63:0.84:0.59:0.74:0.62:0.59:0.55:0.45:0.51"] = 380, -- Vengeance Landing, Camp Winterhoof, Apothecary Camp, Venomspite, Agmar's Hammer
 					["0.95:0.63:0.85:0.73:0.59:0.55"] = 280, -- Vengeance Landing, New Agamand, Venomspite
+					["0.95:0.63:0.85:0.73:0.59:0.55:0.54:0.52:0.45:0.51:0.29:0.54:0.17:0.53:0.12:0.53"] = 622, -- Vengeance Landing, New Agamand, Venomspite, Wyrmrest Temple, Agmar's Hammer, Taunka'le Village, Amber Ledge, Transitus Shield
 
 					----------------------------------------------------------------------
 					-- Horde: Icecrown
@@ -2081,6 +2083,7 @@
 					["0.64:0.42:0.52:0.38:0.56:0.36"] = 89, -- Ebon Watch, Dalaran, The Argent Vanguard
 					["0.64:0.42:0.59:0.55:0.70:0.55:0.84:0.59"] = 242, -- Ebon Watch, Venomspite, Conquest Hold, Camp Winterhoof
 					["0.64:0.42:0.59:0.55:0.70:0.55:0.84:0.59:0.95:0.63"] = 316, -- Ebon Watch, Venomspite, Conquest Hold, Camp Winterhoof, Vengeance Landing
+					["0.64:0.42:0.54:0.52:0.45:0.51"] = 159, -- Ebon Watch, Wyrmrest Temple, Agmar's Hammer
 
 					-- Horde: Zul'Drak: Gundrak
 					["0.82:0.31:0.78:0.38"] = 56, -- Gundrak, Zim'Torga
@@ -3429,6 +3432,7 @@
 					["0.64:0.67:0.46:0.40:0.50:0.35"] = 448, -- Theramore, Astranaar, Emerald Sanctuary
 					["0.64:0.67:0.46:0.40:0.50:0.35:0.53:0.26"] = 575, -- Theramore, Astranaar, Emerald Sanctuary, Talonbranch Glade
 					["0.64:0.67:0.46:0.40:0.50:0.35:0.53:0.26:0.65:0.23"] = 665, -- Theramore, Astranaar, Emerald Sanctuary, Talonbranch Glade, Everlook
+					["0.64:0.67:0.61:0.55:0.46:0.40:0.50:0.35:0.53:0.26:0.55:0.21"] = 574, -- Theramore, Ratchet, Astranaar, Emerald Sanctuary, Talonbranch Glade, Moonglade
 
 				},
 
@@ -4080,6 +4084,7 @@
 					["0.49:0.58:0.29:0.57:0.21:0.49"] = 211, -- Moa'ki, Unu'pe, Fizzcrank Airstrip
 					["0.49:0.58:0.29:0.57:0.22:0.61"] = 191, -- Moa'ki, Unu'pe, Valiance Keep
 					["0.49:0.58:0.60:0.52:0.76:0.67:0.88:0.72"] = 274, -- Moa'ki, Wintergarde Keep, Westguard Keep, Valgarde Port
+					["0.49:0.58:0.42:0.53:0.22:0.61:0.17:0.53:0.12:0.53"] = 281, -- Moa'ki, Stars' Rest, Valiance Keep, Amber Ledge, Transitus Shield
 
 					-- Alliance: Dragonblight: Stars' Rest
 					["0.42:0.53:0.49:0.58"] = 72, -- Stars' Rest, Moa'ki
@@ -4127,6 +4132,7 @@
 					["0.60:0.52:0.42:0.53:0.21:0.49:0.17:0.53"] = 284, -- Wintergarde Keep, Stars' Rest, Fizzcrank Airstrip, Amber Ledge
 					["0.60:0.52:0.76:0.67:0.88:0.60"] = 210, -- Wintergarde Keep, Westguard Keep, Fort Wildervar
 					["0.60:0.52:0.54:0.52:0.52:0.38"] = 147, -- Wintergarde Keep, Wyrmrest Temple, Dalaran
+					["0.60:0.52:0.42:0.53:0.21:0.49"] = 240, -- Wintergarde Keep, Stars' Rest, Fizzcrank Airstrip
 
 					-- Alliance: Dragonblight: Wyrmrest Temple
 					["0.54:0.52:0.60:0.52"] = 36, -- Wyrmrest Temple, Wintergarde Keep
@@ -4203,6 +4209,7 @@
 					["0.88:0.60:0.73:0.54:0.69:0.42:0.64:0.42:0.62:0.36"] = 241, -- Fort Wildervar, Amberpine Lodge, Light's Breach, Ebon Watch, K3
 					["0.88:0.60:0.73:0.54:0.69:0.42:0.64:0.42"] = 201, -- Fort Wildervar, Amberpine Lodge, Light's Breach, Ebon Watch
 					["0.88:0.60:0.73:0.54:0.60:0.52:0.42:0.53:0.29:0.57"] = 382, -- Fort Wildervar, Amberpine Lodge, Wintergarde Keep, Stars' Rest, Unu'pe
+					["0.88:0.60:0.76:0.67:0.60:0.52"] = 230, -- Fort Wildervar, Westguard Keep, Wintergarde Keep
 
 					-- Alliance: Howling Fjord: Kamagua
 					["0.74:0.71:0.76:0.67"] = 37, -- Kamagua, Westguard Keep
