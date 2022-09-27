@@ -1656,6 +1656,7 @@
 					["0.12:0.53:0.17:0.53:0.29:0.54:0.45:0.51:0.59:0.55:0.70:0.55:0.84:0.59:0.95:0.63"] = 338, -- Transitus Shield, Amber Ledge, Taunka'le Village, Agmar's Hammer, Venomspite, Conquest Hold, Camp Winterhoof, Vengeance Landing
 					["0.12:0.53:0.17:0.53:0.29:0.54"] = 78, -- Transitus Shield, Amber Ledge, Taunka'le Village
 					["0.12:0.53:0.17:0.53:0.29:0.54:0.45:0.51"] = 138, -- Transitus Shield, Amber Ledge, Taunka'le Village, Agmar's Hammer
+					["0.12:0.53:0.17:0.53:0.29:0.54:0.45:0.51:0.49:0.58"] = 178, -- Transitus Shield, Amber Ledge, Taunka'le Village, Agmar's Hammer, Moa'ki
 
 					-- Horde: Borean Tundra: Unu'pe
 					["0.29:0.57:0.29:0.54"] = 22, -- Unu'pe, Taunka'le Village
@@ -1767,6 +1768,7 @@
 					["0.45:0.51:0.29:0.54:0.15:0.57"] = 198, -- Agmar's Hammer, Taunka'le Village, Warsong Hold
 					["0.45:0.51:0.54:0.52:0.52:0.38"] = 145, -- Agmar's Hammer, Wyrmrest Temple, Dalaran
 					["0.45:0.51:0.49:0.58:0.29:0.57:0.15:0.57"] = 282, -- Agmar's Hammer, Moa'ki, Unu'pe, Warsong Hold
+					["0.45:0.51:0.59:0.55:0.70:0.55"] = 146, -- Agmar's Hammer, Venomspite, Conquest Hold
 
 					-- Horde: Dragonblight: Kor'koron Vanguard
 					["0.48:0.44:0.52:0.38"] = 56, -- Kor'koron Vanguard, Dalaran
