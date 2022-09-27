@@ -3941,6 +3941,7 @@
 					["0.17:0.53:0.21:0.49:0.42:0.53:0.60:0.52:0.64:0.42:0.72:0.40:0.78:0.38"] = 300, -- Amber Ledge, Fizzcrank Airstrip, Stars' Rest, Wintergarde Keep, Ebon Watch, The Argent Stand, Zim'Torga
 					["0.17:0.53:0.21:0.49:0.42:0.53:0.60:0.52:0.64:0.42:0.72:0.40"] = 273, -- Amber Ledge, Fizzcrank Airstrip, Stars' Rest, Wintergarde Keep, Ebon Watch, The Argent Stand
 					["0.17:0.53:0.22:0.61:0.42:0.53"] = 140, -- Amber Ledge, Valiance Keep, Stars' Rest
+					["0.17:0.53:0.22:0.61:0.42:0.53:0.46:0.46:0.52:0.38"] = 233, -- Amber Ledge, Valiance Keep, Stars' Rest, Fordragon Hold, Dalaran
 
 					-- Alliance: Borean Tundra: Fizzcrank Airstrip
 					["0.21:0.49:0.17:0.53"] = 45, -- Fizzcrank Airstrip, Amber Ledge
