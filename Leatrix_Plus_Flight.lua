@@ -2086,6 +2086,7 @@
 					["0.72:0.40:0.64:0.42:0.52:0.38"] = 120, -- The Argent Stand, Ebon Watch, Dalaran
 					["0.72:0.40:0.64:0.42:0.52:0.38:0.56:0.36"] = 141, -- The Argent Stand, Ebon Watch, Dalaran, The Argent Vanguard
 					["0.72:0.40:0.84:0.51:0.84:0.59"] = 148, -- The Argent Stand, Camp Oneqwah, Camp Winterhoof
+					["0.72:0.40:0.84:0.51"] = 100, -- The Argent Stand, Camp Oneqwah
 
 					-- Horde: Zul'Drak: Ebon Watch
 					["0.64:0.42:0.69:0.42"] = 45, -- Ebon Watch, Light's Breach
@@ -2118,6 +2119,7 @@
 					["0.69:0.42:0.64:0.42:0.54:0.52:0.49:0.58"] = 183, -- Light's Breach, Ebon Watch, Wyrmrest Temple, Moa'ki
 					["0.69:0.42:0.64:0.42:0.54:0.52:0.49:0.58:0.29:0.57"] = 314, -- Light's Breach, Ebon Watch, Wyrmrest Temple, Moa'ki, Unu'pe
 					["0.69:0.42:0.64:0.42:0.54:0.52:0.49:0.58:0.74:0.71"] = 366, -- Light's Breach, Ebon Watch, Wyrmrest Temple, Moa'ki, Kamagua
+					["0.69:0.42:0.59:0.55"] = 122, -- Light's Breach, Venomspite
 
 					-- Horde: Zul'Drak: Zim'Torga
 					["0.78:0.38:0.72:0.40"] = 54, -- Zim'Torga, The Argent Stand
@@ -4194,6 +4196,8 @@
 					["0.73:0.54:0.60:0.52"] = 82, -- Amberpine Lodge, Wintergarde Keep
 					["0.73:0.54:0.60:0.52:0.54:0.52"] = 131, -- Amberpine Lodge, Wintergarde Keep, Wyrmrest Temple
 					["0.73:0.54:0.69:0.42:0.64:0.42:0.46:0.46:0.42:0.53:0.21:0.49"] = 415, -- Amberpine Lodge, Light's Breach, Ebon Watch, Fordragon Hold, Stars' Rest, Fizzcrank Airstrip
+					["0.73:0.54:0.69:0.42"] = 67, -- Amberpine Lodge, Light's Breach
+					["0.73:0.54:0.76:0.67:0.74:0.71:0.49:0.58"] = 328, -- Amberpine Lodge, Westguard Keep, Kamagua, Moa'ki
 
 					-- Alliance: Grizzly Hills: Westfall Brigade
 					["0.83:0.46:0.73:0.54"] = 79, -- Westfall Brigade, Amberpine Lodge
@@ -4354,6 +4358,7 @@
 					["0.24:0.40:0.21:0.49:0.17:0.53"] = 169, -- River's Heart, Fizzcrank Airstrip, Amber Ledge
 					["0.24:0.40:0.28:0.28"] = 141, -- River's Heart, Death's Rise
 					["0.24:0.40:0.52:0.38:0.64:0.42:0.72:0.40:0.83:0.46"] = 604, -- River's Heart, Dalaran, Ebon Watch, The Argent Stand, Westfall Brigade
+					["0.24:0.40:0.18:0.40"] = 65, -- River's Heart, Nesingwary Base Camp
 
 					----------------------------------------------------------------------
 					-- Alliance: The Storm Peaks
