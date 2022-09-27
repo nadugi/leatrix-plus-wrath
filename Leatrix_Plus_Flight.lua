@@ -4077,6 +4077,7 @@
 					["0.49:0.58:0.60:0.52:0.73:0.54"] = 156, -- Moa'ki, Wintergarde Keep, Amberpine Lodge
 					["0.49:0.58:0.29:0.57:0.21:0.49"] = 211, -- Moa'ki, Unu'pe, Fizzcrank Airstrip
 					["0.49:0.58:0.29:0.57:0.22:0.61"] = 191, -- Moa'ki, Unu'pe, Valiance Keep
+					["0.49:0.58:0.60:0.52:0.76:0.67:0.88:0.72"] = 274, -- Moa'ki, Wintergarde Keep, Westguard Keep, Valgarde Port
 
 					-- Alliance: Dragonblight: Stars' Rest
 					["0.42:0.53:0.49:0.58"] = 72, -- Stars' Rest, Moa'ki
