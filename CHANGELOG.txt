@@ -1,4 +1,4 @@
-3.0.10.alpha.5 - 27th September 2022
+3.0.10.alpha.6 - 27th September 2022
 - For 'Automate gossip' ('Automation'), stable master gossip will now be skipped as long as there are no other gossip options.  You can hold shift to prevent this.
 - Added media Wrath main title music (Media > Various > Main titles).
 - Added lots of flight times.  There are now 3965 flight times stored in Leatrix Plus for Wrath Classic.
