@@ -1669,6 +1669,7 @@
 					["0.12:0.53:0.17:0.53:0.29:0.54:0.45:0.51:0.54:0.52:0.64:0.42:0.69:0.42:0.84:0.51:0.84:0.59"] = 370, -- Transitus Shield, Amber Ledge, Taunka'le Village, Agmar's Hammer, Wyrmrest Temple, Ebon Watch, Light's Breach, Camp Oneqwah, Camp Winterhoof
 					["0.12:0.53:0.17:0.53:0.15:0.57:0.29:0.57:0.49:0.58"] = 197, -- Transitus Shield, Amber Ledge, Warsong Hold, Unu'pe, Moa'ki
 					["0.12:0.53:0.17:0.53:0.29:0.54:0.29:0.57:0.49:0.58"] = 176, -- Transitus Shield, Amber Ledge, Taunka'le Village, Unu'pe, Moa'ki
+					["0.12:0.53:0.17:0.53:0.15:0.57:0.29:0.57:0.49:0.58:0.45:0.51"] = 239, -- Transitus Shield, Amber Ledge, Warsong Hold, Unu'pe, Moa'ki, Agmar's Hammer
 
 					-- Horde: Borean Tundra: Unu'pe
 					["0.29:0.57:0.29:0.54"] = 22, -- Unu'pe, Taunka'le Village
@@ -2158,7 +2159,6 @@
 					["0.73:0.25:0.64:0.19:0.57:0.21"] = 122, -- Camp Tunka'lo, Ulduar, Bouldercrag's Refuge
 
 					-- Horde: The Storm Peaks: Dun Nifflelem
-					["0.72:0.29:0.62:0.36:0.52:0.38"] = 159, -- Dun Nifflelem, K3, Dalaran
 					["0.72:0.29:0.62:0.36:0.52:0.38"] = 159, -- Dun Nifflelem, K3, Dalaran
 
 					-- Horde: The Storm Peaks: Grom'arsh Crash-Site
@@ -4093,6 +4093,7 @@
 					["0.21:0.49:0.29:0.57:0.49:0.58"] = 183, -- Fizzcrank Airstrip, Unu'pe, Moa'ki
 					["0.21:0.49:0.29:0.57:0.49:0.58:0.74:0.71"] = 366, -- Fizzcrank Airstrip, Unu'pe, Moa'ki, Kamagua
 					["0.21:0.49:0.42:0.53:0.46:0.46:0.52:0.38"] = 276, -- Fizzcrank Airstrip, Stars' Rest, Fordragon Hold, Dalaran
+					["0.21:0.49:0.42:0.53:0.60:0.52:0.73:0.54"] = 325, -- Fizzcrank Airstrip, Stars' Rest, Wintergarde Keep, Amberpine Lodge
 
 					-- Alliance: Borean Tundra: Transitus Shield (Coldarra)
 					["0.12:0.53:0.17:0.53:0.21:0.49:0.24:0.40"] = 95, -- Transitus Shield, Amber Ledge, Fizzcrank Airstrip, River's Heart
@@ -4178,6 +4179,7 @@
 					["0.22:0.61:0.29:0.57:0.49:0.58:0.60:0.52:0.59:0.43"] = 330, -- Valiance Keep, Unu'pe, Moa'ki, Wintergarde Keep, Windrunner's Overlook
 					["0.22:0.61:0.42:0.53:0.60:0.52:0.69:0.42"] = 347, -- Valiance Keep, Stars' Rest, Wintergarde Keep, Light's Breach
 					["0.22:0.61:0.29:0.57:0.49:0.58:0.74:0.71:0.76:0.67"] = 401, -- Valiance Keep, Unu'pe, Moa'ki, Kamagua, Westguard Keep
+					["0.22:0.61:0.29:0.57:0.49:0.58:0.60:0.52:0.76:0.67:0.88:0.72"] = 455, -- Valianzfeste, Unu'pe, Moa'ki, Feste Wintergarde, Westwacht, Hafen von Valgarde
 
 					----------------------------------------------------------------------
 					-- Alliance: Crystalsong Forest
