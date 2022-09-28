@@ -4543,6 +4543,7 @@
 					["0.88:0.72:0.74:0.71:0.49:0.58:0.29:0.57:0.21:0.49:0.17:0.53:0.12:0.53"] = 580, -- Valgarde Port, Kamagua, Moa'ki, Unu'pe, Fizzcrank Airstrip, Amber Ledge, Transitus Shield
 					["0.88:0.72:0.76:0.67:0.60:0.52:0.59:0.43:0.52:0.38"] = 332, -- Valgarde Port, Westguard Keep, Wintergarde Keep, Windrunner's Overlook, Dalaran
 					["0.88:0.72:0.74:0.71:0.49:0.58:0.29:0.57:0.21:0.49"] = 501, -- Valgarde Port, Kamagua, Moa'ki, Unu'pe, Fizzcrank Airstrip
+					["0.88:0.72:0.76:0.67:0.60:0.52:0.54:0.52:0.52:0.38"] = 361, -- Valgarde Port, Westguard Keep, Wintergarde Keep, Wyrmrest Temple, Dalaran
 
 					-- Alliance: Howling Fjord: Westguard Keep
 					["0.76:0.67:0.74:0.71"] = 52, -- Westguard Keep, Kamagua
