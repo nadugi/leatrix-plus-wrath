@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 3.0.13 (29th September 2022)
+-- 	Leatrix Plus 3.0.14.alpha.1 (30th September 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "3.0.13"
+	LeaPlusLC["AddonVer"] = "3.0.14.alpha.1"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -4989,7 +4989,9 @@
 		if LeaPlusLC["ShowFlightTimes"] == "On" then
 
 			-- Load flight data
-			Leatrix_Plus:LoadFlightData()
+			Leatrix_Plus["FlightData"] = {}
+			Leatrix_Plus:LoadFlightDataAlliance()
+			Leatrix_Plus:LoadFlightDataHorde()
 
 			-- Minimum time difference (in seconds) to flight data entry before flight report window is shown
 			local timeBuffer = 15
