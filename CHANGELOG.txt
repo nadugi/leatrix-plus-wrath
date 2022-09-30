@@ -1,5 +1,6 @@
-3.0.14.alpha.1 - 30th September 2022
+3.0.14 - 30th September 2022
 - Changes to file structure.
+- Added flight times.
 
 3.0.13 - 29th September 2022
 - Added lots and lots of flight times.  There are now 4378 flight times stored in Leatrix Plus for Wrath Classic.
