@@ -1,4 +1,4 @@
-3.0.16.alpha.2 - 30th September 2022
+3.0.16.alpha.3 - 30th September 2022
 - If 'Automate gossip' ('Automation') is enabled, the gossip from the engineer auction house robots in Dalaran will be skipped.
 - Added flight times.
 
