@@ -1,3 +1,6 @@
+3.0.15 - 30th September 2022
+- Added flight times.
+
 3.0.14 - 30th September 2022
 - Changes to file structure.
 - Added flight times.
