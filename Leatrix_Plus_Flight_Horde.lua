@@ -1868,6 +1868,8 @@
 				["0.52:0.38:0.24:0.40:0.18:0.47:0.17:0.53"] = 321, -- Dalaran, River's Heart, Bor'gorok Outpost, Amber Ledge
 				["0.52:0.38:0.54:0.52:0.59:0.55:0.74:0.62:0.84:0.59"] = 328, -- Dalaran, Wyrmrest Temple, Venomspite, Apothecary Camp, Camp Winterhoof
 				["0.52:0.38:0.54:0.52:0.59:0.55:0.70:0.55:0.84:0.51"] = 330, -- Dalaran, Wyrmrest Temple, Venomspite, Conquest Hold, Camp Oneqwah
+				["0.52:0.38:0.48:0.44:0.59:0.55:0.74:0.62:0.84:0.59:0.95:0.63"] = 393, -- Dalaran, Kor'koron Vanguard, Venomspite, Apothecary Camp, Camp Winterhoof, Vengeance Landing
+				["0.52:0.38:0.49:0.58:0.59:0.55:0.69:0.42"] = 325, -- Dalaran, Moa'ki, Venomspite, Light's Breach
 
 				----------------------------------------------------------------------
 				-- Horde: Dragonblight
@@ -2245,6 +2247,7 @@
 				["0.28:0.28:0.31:0.43"] = 114, -- Death's Rise, Warsong Camp
 				["0.28:0.28:0.31:0.43:0.29:0.54:0.29:0.57"] = 223, -- Death's Rise, Warsong Camp, Taunka'le Village, Unu'pe
 				["0.28:0.28:0.38:0.21:0.57:0.21"] = 215, -- Death's Rise, The Shadow Vault, Bouldercrag's Refuge
+				["0.28:0.28:0.38:0.21:0.57:0.21:0.64:0.19:0.78:0.38"] = 412, -- Death's Rise, The Shadow Vault, Bouldercrag's Refuge, Ulduar, Zim'Torga
 
 				-- Horde: Icecrown: The Argent Vanguard
 				["0.56:0.36:0.52:0.38"] = 32, -- The Argent Vanguard, Dalaran

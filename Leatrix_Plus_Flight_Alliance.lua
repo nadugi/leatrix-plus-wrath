@@ -2070,6 +2070,7 @@
 				["0.52:0.38:0.64:0.42:0.72:0.40:0.78:0.38:0.64:0.19"] = 339, -- Dalaran, Ebon Watch, The Argent Stand, Zim'Torga, Ulduar
 				["0.52:0.38:0.64:0.42:0.69:0.42:0.73:0.54:0.76:0.67:0.88:0.72"] = 360, -- Dalaran, Ebon Watch, Light's Breach, Amberpine Lodge, Westguard Keep, Valgarde Port
 				["0.52:0.38:0.62:0.36:0.57:0.33"] = 98, -- Dalaran, K3, Frosthold
+				["0.52:0.38:0.64:0.42:0.72:0.40:0.78:0.38:0.72:0.29"] = 270, -- Dalaran, Ebon Watch, The Argent Stand, Zim'Torga, Dun Nifflelem
 
 				----------------------------------------------------------------------
 				-- Alliance: Dragonblight
@@ -2291,6 +2292,7 @@
 				["0.83:0.46:0.73:0.54:0.60:0.52:0.42:0.53:0.22:0.61:0.17:0.53"] = 456, -- Westfall Brigade, Amberpine Lodge, Wintergarde Keep, Stars' Rest, Valiance Keep, Amber Ledge
 				["0.83:0.46:0.73:0.54:0.60:0.52:0.49:0.58:0.52:0.38"] = 372, -- Westfall Brigade, Amberpine Lodge, Wintergarde Keep, Moa'ki, Dalaran
 				["0.83:0.46:0.73:0.54:0.60:0.52:0.59:0.43:0.52:0.38"] = 270, -- Westfall Brigade, Amberpine Lodge, Wintergarde Keep, Windrunner's Overlook, Dalaran
+				["0.83:0.46:0.88:0.60:0.76:0.67:0.60:0.52"] = 316, -- Westfall Brigade, Fort Wildervar, Westguard Keep, Wintergarde Keep
 
 				----------------------------------------------------------------------
 				-- Alliance: Howling Fjord
@@ -2390,6 +2392,7 @@
 				["0.88:0.72:0.74:0.71:0.49:0.58:0.42:0.53:0.22:0.61"] = 472, -- Valgarde Port, Kamagua, Moa'ki, Stars' Rest, Valiance Keep
 				["0.88:0.72:0.74:0.71:0.49:0.58:0.29:0.57:0.22:0.61:0.17:0.53:0.12:0.53"] = 579, -- Valgarde Port, Kamagua, Moa'ki, Unu'pe, Valiance Keep, Amber Ledge, Transitus Shield
 				["0.88:0.72:0.76:0.67:0.60:0.52:0.59:0.43:0.62:0.36:0.57:0.33:0.64:0.19"] = 470, -- Valgarde Port, Westguard Keep, Wintergarde Keep, Windrunner's Overlook, K3, Frosthold, Ulduar
+				["0.88:0.72:0.76:0.67:0.60:0.52:0.42:0.53:0.41:0.43"] = 391, -- Valgarde Port, Westguard Keep, Wintergarde Keep, Stars' Rest, Valiance Landing Camp
 
 				-- Alliance: Howling Fjord: Westguard Keep
 				["0.76:0.67:0.74:0.71"] = 52, -- Westguard Keep, Kamagua
