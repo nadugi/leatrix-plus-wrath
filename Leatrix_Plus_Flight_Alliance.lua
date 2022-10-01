@@ -1951,7 +1951,7 @@
 				["0.22:0.61:0.42:0.53:0.60:0.52:0.73:0.54:0.88:0.60:0.88:0.72"] = 523, -- Valiance Keep, Stars' Rest, Wintergarde Keep, Amberpine Lodge, Fort Wildervar, Valgarde Port
 				["0.22:0.61:0.42:0.53:0.60:0.52:0.73:0.54:0.88:0.60"] = 450, -- Valiance Keep, Stars' Rest, Wintergarde Keep, Amberpine Lodge, Fort Wildervar
 				["0.22:0.61:0.29:0.57:0.49:0.58:0.74:0.71:0.76:0.67:0.88:0.60"] = 485, -- Valiance Keep, Unu'pe, Moa'ki, Kamagua, Westguard Keep, Fort Wildervar
-				["0.22:0.61:0.42:0.53:0.46:0.46:0.64:0.42:0.59:0.43"] = 371, -- Valiance Keep, Stars' Rest, Fordragon Hold, Ebon Watch, Windrunner's Overlook 
+				["0.22:0.61:0.42:0.53:0.46:0.46:0.64:0.42:0.59:0.43"] = 371, -- Valiance Keep, Stars' Rest, Fordragon Hold, Ebon Watch, Windrunner's Overlook
 
 				----------------------------------------------------------------------
 				-- Alliance: Crystalsong Forest
@@ -2602,6 +2602,7 @@
 				["0.62:0.36:0.64:0.42:0.72:0.40:0.78:0.38:0.82:0.31"] = 201, -- K3, Ebon Watch, The Argent Stand, Zim'Torga, Gundrak
 				["0.62:0.36:0.52:0.38:0.24:0.40:0.18:0.40"] = 308, -- K3, Dalaran, Le Cœur du fleuve, Camp de base de Nesingwary
 				["0.62:0.36:0.64:0.42:0.54:0.52"] = 134, -- K3, Ebon Watch, Wyrmrest Temple
+				["0.62:0.36:0.57:0.33:0.64:0.19"] = 140, -- K3, Frosthold, Ulduar
 
 				-- Alliance: The Storm Peaks: Ulduar
 				["0.64:0.19:0.57:0.33:0.56:0.36:0.52:0.38"] = 167, -- Ulduar, Frosthold, The Argent Vanguard, Dalaran

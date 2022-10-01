@@ -1977,6 +1977,7 @@
 				["0.49:0.58:0.45:0.51:0.29:0.54"] = 174, -- Moa'ki, Agmar's Hammer, Taunka'le Village
 				["0.49:0.58:0.54:0.52:0.48:0.44"] = 115, -- Moa'ki, Wyrmrest Temple, Kor'koron Vanguard
 				["0.49:0.58:0.74:0.71:0.85:0.73:0.84:0.59"] = 326, -- Moa'ki, Kamagua, Neu-Agamand, Lager der Winterhufe
+				["0.49:0.58:0.29:0.57:0.29:0.54:0.18:0.47:0.24:0.40"] = 282, -- Moa'ki, Unu'pe, Taunka'le Village, Bor'gorok Outpost, River's Heart
 
 				-- Horde: Dragonblight: Venomspite
 				["0.59:0.55:0.54:0.52:0.52:0.38"] = 149, -- Venomspite, Wyrmrest Temple, Dalaran
@@ -2441,6 +2442,7 @@
 				["0.31:0.43:0.29:0.54:0.18:0.47"] = 152, -- Warsong Camp, Taunka'le Village, Bor'gorok Outpost
 				["0.31:0.43:0.52:0.38:0.56:0.36"] = 163, -- Warsong Camp, Dalaran, The Argent Vanguard
 				["0.31:0.43:0.29:0.54:0.15:0.57"] = 164, -- Warsong Camp, Taunka'le Village, Warsong Hold
+				["0.31:0.43:0.52:0.38:0.62:0.36:0.72:0.29"] = 287, -- Warsong Camp, Dalaran, K3, Dun Nifflelem
 
 				----------------------------------------------------------------------
 				-- Horde: Zul'Drak
