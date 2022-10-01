@@ -1,4 +1,4 @@
-3.0.18.alpha.1 - 1st October 2022
+3.0.18.alpha.2 - 1st October 2022
 - Added flight times.
 
 3.0.17 - 1st October 2022
