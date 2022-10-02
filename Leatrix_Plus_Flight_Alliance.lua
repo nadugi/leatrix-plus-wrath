@@ -2532,6 +2532,7 @@
 				["0.52:0.34:0.56:0.36:0.57:0.33:0.64:0.19"] = 169, -- Crusaders' Pinnacle, The Argent Vanguard, Frosthold, Ulduar
 				["0.52:0.34:0.28:0.28"] = 168, -- Crusaders' Pinnacle, Death's Rise
 				["0.52:0.34:0.52:0.38"] = 71, -- Kreuzfahrerturm, Dalaran
+				["0.52:0.34:0.56:0.36:0.57:0.33:0.57:0.21"] = 137, -- Crusaders' Pinnacle, The Argent Vanguard, Frosthold, Bouldercrag's Refuge
 
 				-- Alliance: Icecrown: Death's Rise
 				["0.28:0.28:0.52:0.34:0.56:0.36:0.52:0.38"] = 238, -- Death's Rise, Crusaders' Pinnacle, The Argent Vanguard, Dalaran
@@ -2647,6 +2648,7 @@
 				["0.72:0.29:0.62:0.36:0.59:0.43:0.60:0.52:0.54:0.52"] = 264, -- Dun Nifflelem, K3, Windrunner's Overlook, Wintergarde Keep, Wyrmrest Temple
 				["0.72:0.29:0.62:0.36:0.64:0.42:0.54:0.52"] = 222, -- Dun Niffelem, K3, Schwarze Wacht, Wyrmruhtempel
 				["0.72:0.29:0.78:0.38:0.83:0.46:0.73:0.54:0.76:0.67:0.74:0.71"] = 356, -- Dun Niffelem, Zim'Torga, Westfallbrigade, Ammertannhütte, Westwacht, Kamagua
+				["0.72:0.29:0.78:0.38:0.72:0.40:0.64:0.42:0.52:0.38:0.24:0.40"] = 459, -- Dun Nifflelem, Zim'Torga, The Argent Stand, Ebon Watch, Dalaran, River's Heart
 
 				-- Alliance: The Storm Peaks: Frosthold
 				["0.57:0.33:0.56:0.36:0.52:0.34"] = 61, -- Frosthold, The Argent Vanguard, Crusaders' Pinnacle
