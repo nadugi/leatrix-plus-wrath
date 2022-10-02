@@ -2728,6 +2728,7 @@
 				["0.62:0.36:0.52:0.38:0.54:0.52"] = 182, -- K3, Dalaran, Wyrmrest Temple
 				["0.62:0.36:0.52:0.38:0.24:0.40"] = 272, -- K3, Dalaran, River's Heart
 				["0.62:0.36:0.64:0.42:0.54:0.52:0.42:0.53:0.21:0.49"] = 325, -- K3, Ebon Watch, Wyrmrest Temple, Stars' Rest, Fizzcrank Airstrip
+				["0.62:0.36:0.72:0.29:0.78:0.38:0.72:0.40:0.69:0.42"] = 266, -- K3, Dun Nifflelem, Zim'Torga, The Argent Stand, Light's Breach
 
 				-- Alliance: The Storm Peaks: Ulduar
 				["0.64:0.19:0.57:0.33:0.56:0.36:0.52:0.38"] = 167, -- Ulduar, Frosthold, The Argent Vanguard, Dalaran

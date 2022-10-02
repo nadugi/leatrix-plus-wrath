@@ -2441,6 +2441,7 @@
 				["0.18:0.40:0.24:0.40:0.52:0.38:0.62:0.36:0.72:0.29"] = 581, -- Nesingwary Base Camp, River's Heart, Dalaran, K3, Dun Nifflelem
 				["0.18:0.40:0.24:0.40:0.52:0.38:0.64:0.42:0.72:0.40:0.78:0.38:0.64:0.19"] = 850, -- Nesingwary Base Camp, River's Heart, Dalaran, Ebon Watch, The Argent Stand, Zim'Torga, Ulduar
 				["0.18:0.40:0.18:0.47:0.15:0.57"] = 199, -- Nesingwary Base Camp, Bor'gorok Outpost, Warsong Hold
+				["0.18:0.40:0.24:0.40:0.52:0.38:0.64:0.42"] = 464, -- Nesingwary Base Camp, River's Heart, Dalaran, Ebon Watch
 
 				-- Horde: Sholazar Basin: River's Heart
 				["0.24:0.40:0.31:0.43"] = 129, -- River's Heart, Warsong Camp
