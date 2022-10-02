@@ -2276,6 +2276,7 @@
 				["0.74:0.71:0.74:0.62:0.70:0.55:0.69:0.42:0.64:0.42"] = 221, -- Kamagua, Camp des Apothicaires, Bastion de la Conquête, La Brèche de Lumière, Guet d'Ébène
 				["0.74:0.71:0.49:0.58:0.29:0.57:0.29:0.54:0.18:0.47:0.24:0.40"] = 475, -- Kamagua, Moa'ki, Unu'pe, Taunka'le Village, Bor'gorok Outpost, River's Heart
 				["0.74:0.71:0.49:0.58:0.54:0.52"] = 243, -- Kamagua, Moa'ki, Wyrmrest Temple
+				["0.74:0.71:0.74:0.62:0.59:0.55:0.64:0.42"] = 256, -- Kamagua, Apothecary Camp, Venomspite, Ebon Watch
 
 				-- Horde: Howling Fjord: New Agamand
 				["0.85:0.73:0.74:0.62:0.70:0.55:0.69:0.42:0.64:0.42:0.52:0.38"] = 335, -- New Agamand, Apothecary Camp, Conquest Hold, Light's Breach, Ebon Watch, Dalaran
@@ -2524,6 +2525,7 @@
 				["0.72:0.29:0.78:0.38:0.72:0.40:0.69:0.42"] = 165, -- Dun Nifflelem, Zim'Torga, The Argent Stand, Light's Breach
 				["0.72:0.29:0.62:0.36:0.52:0.38:0.48:0.44:0.45:0.51:0.29:0.54:0.17:0.53:0.12:0.53"] = 494, -- Dun Nifflelem, K3, Dalaran, Kor'koron Vanguard, Agmar's Hammer, Taunka'le Village, Amber Ledge, Transitus Shield
 				["0.72:0.29:0.62:0.36"] = 88, -- Dun Niffelem, K3
+				["0.72:0.29:0.62:0.36:0.52:0.38:0.48:0.44:0.45:0.51:0.29:0.54:0.17:0.53"] = 458, -- Dun Nifflelem, K3, Dalaran, Kor'koron Vanguard, Agmar's Hammer, Taunka'le Village, Amber Ledge
 
 				-- Horde: The Storm Peaks: Grom'arsh Crash-Site
 				["0.60:0.25:0.56:0.36:0.52:0.38"] = 111, -- Grom'arsh Crash-Site, The Argent Vanguard, Dalaran
@@ -2634,6 +2636,7 @@
 				["0.72:0.40:0.69:0.42:0.59:0.55:0.49:0.58:0.29:0.57:0.15:0.57"] = 445, -- The Argent Stand, Light's Breach, Venomspite, Moa'ki, Unu'pe, Warsong Hold
 				["0.72:0.40:0.64:0.42:0.60:0.40"] = 79, -- The Argent Stand, Ebon Watch, Sunreaver's Command
 				["0.72:0.40:0.78:0.38:0.72:0.29"] = 127, -- The Argent Stand, Zim'Torga, Dun Nifflelem
+				["0.72:0.40:0.64:0.42:0.48:0.44"] = 160, -- The Argent Stand, Ebon Watch, Kor'koron Vanguard
 
 				-- Horde: Zul'Drak: Ebon Watch
 				["0.64:0.42:0.69:0.42"] = 45, -- Ebon Watch, Light's Breach
@@ -2659,6 +2662,7 @@
 				["0.64:0.42:0.54:0.52:0.49:0.58"] = 143, -- Ebon Watch, Wyrmrest Temple, Moa'ki
 				["0.64:0.42:0.54:0.52:0.45:0.51:0.29:0.54:0.18:0.47"] = 341, -- Schwarze Wacht, Wyrmruhtempel, Agmars Hammer, Taunka'le, Bor'goroks Außenposten
 				["0.64:0.42:0.69:0.42:0.84:0.51"] = 150, -- Черная застава, Разлом Света, Лагерь Уанква
+				["0.64:0.42:0.59:0.55:0.74:0.62"] = 196, -- Ebon Watch, Venomspite, Apothecary Camp
 
 				-- Horde: Zul'Drak: Gundrak
 				["0.82:0.31:0.78:0.38"] = 56, -- Gundrak, Zim'Torga
