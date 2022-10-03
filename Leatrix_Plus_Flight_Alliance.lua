@@ -2274,6 +2274,7 @@
 				["0.60:0.52:0.64:0.42:0.72:0.40"] = 128, -- Feste Wintergarde, Schwarze Wacht, Argentumwache
 				["0.60:0.52:0.46:0.46:0.52:0.38"] = 162, -- Wintergarde Keep, Fordragon Hold, Dalaran
 				["0.60:0.52:0.73:0.54:0.83:0.46"] = 158, -- Wintergarde Keep, Amberpine Lodge, Westfall Brigade
+				["0.60:0.52:0.64:0.42:0.62:0.36:0.72:0.29:0.64:0.19"] = 289, -- Wintergarde Keep, Ebon Watch, K3, Dun Nifflelem, Ulduar
 
 				-- Alliance: Dragonblight: Wyrmrest Temple
 				["0.54:0.52:0.60:0.52"] = 36, -- Wyrmrest Temple, Wintergarde Keep
