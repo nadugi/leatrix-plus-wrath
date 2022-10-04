@@ -2426,6 +2426,7 @@
 				["0.95:0.63:0.84:0.51:0.78:0.38:0.64:0.19:0.57:0.21:0.38:0.21"] = 511, -- Accostage de la Vengeance, Camp Oneqwah, Zim'Torga, Ulduar, Refuge de Rochecombe, Le caveau des Ombres
 				["0.95:0.63:0.84:0.59:0.70:0.55:0.69:0.42:0.64:0.42:0.52:0.38"] = 350, -- Vengeance Landing, Camp Winterhoof, Conquest Hold, Light's Breach, Ebon Watch, Dalaran
 				["0.95:0.63:0.84:0.51:0.78:0.38:0.72:0.29"] = 281, -- Vengeance Landing, Camp Oneqwah, Zim'Torga, Dun Nifflelem
+				["0.95:0.63:0.84:0.51:0.69:0.42:0.64:0.42:0.62:0.36:0.60:0.25:0.57:0.21"] = 388, -- Vengeance Landing, Camp Oneqwah, Light's Breach, Ebon Watch, K3, Grom'arsh Crash-Site, Bouldercrag's Refuge
 
 				----------------------------------------------------------------------
 				-- Horde: Icecrown
@@ -2462,6 +2463,7 @@
 				["0.28:0.28:0.38:0.21:0.57:0.21:0.64:0.19:0.72:0.29"] = 362, -- Death's Rise, The Shadow Vault, Bouldercrag's Refuge, Ulduar, Dun Nifflelem
 				["0.28:0.28:0.52:0.34:0.56:0.36:0.52:0.38:0.64:0.42:0.69:0.42"] = 348, -- Death's Rise, Crusaders' Pinnacle, The Argent Vanguard, Dalaran, Ebon Watch, Light's Breach
 				["0.28:0.28:0.52:0.34:0.52:0.38:0.62:0.36"] = 289, -- Death's Rise, Crusaders' Pinnacle, Dalaran, K3
+				["0.28:0.28:0.24:0.40"] = 117, -- Death's Rise, River's Heart
 
 				-- Horde: Icecrown: The Argent Vanguard
 				["0.56:0.36:0.52:0.38"] = 32, -- The Argent Vanguard, Dalaran
@@ -2489,6 +2491,7 @@
 				["0.56:0.36:0.52:0.38:0.64:0.42:0.69:0.42"] = 142, -- The Argent Vanguard, Dalaran, Ebon Watch, Light's Breach
 				["0.56:0.36:0.52:0.38:0.64:0.42:0.72:0.40:0.78:0.38:0.82:0.31"] = 256, -- The Argent Vanguard, Dalaran, Ebon Watch, The Argent Stand, Zim'Torga, Gundrak
 				["0.56:0.36:0.52:0.38:0.48:0.44:0.59:0.55:0.74:0.62:0.74:0.71"] = 334, -- The Argent Vanguard, Dalaran, Kor'koron Vanguard, Venomspite, Apothecary Camp, Kamagua
+				["0.56:0.36:0.52:0.38:0.48:0.44:0.59:0.55:0.69:0.42"] = 289, -- The Argent Vanguard, Dalaran, Kor'koron Vanguard, Venomspite, Light's Breach
 
 				-- Horde: Icecrown: The Shadow Vault
 				["0.38:0.21:0.56:0.36:0.52:0.38"] = 166, -- The Shadow Vault, The Argent Vanguard, Dalaran
@@ -2693,6 +2696,7 @@
 				["0.64:0.19:0.78:0.38:0.84:0.51:0.84:0.59:0.85:0.73"] = 363, -- Ulduar, Zim'Torga, Camp Oneqwah, Camp Winterhoof, New Agamand
 				["0.64:0.19:0.73:0.25:0.62:0.36"] = 202, -- Ulduar, Camp Tunka'lo, K3
 				["0.64:0.19:0.72:0.29:0.62:0.36:0.52:0.38"] = 262, -- Ulduar, Dun Nifflelem, K3, Dalaran
+				["0.64:0.19:0.60:0.25:0.56:0.36:0.52:0.38:0.48:0.44"] = 215, -- Ulduar, Grom'arsh Crash-Site, The Argent Vanguard, Dalaran, Kor'koron Vanguard
 
 				----------------------------------------------------------------------
 				-- Horde: Wintergrasp
