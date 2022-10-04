@@ -2148,6 +2148,7 @@
 				["0.52:0.38:0.41:0.43:0.42:0.53"] = 195, -- Dalaran, Valiance Landing Camp, Stars' Rest
 				["0.52:0.38:0.41:0.43:0.28:0.28"] = 281, -- Dalaran, Valiance Landing Camp, Death's Rise
 				["0.52:0.38:0.64:0.42:0.60:0.52:0.76:0.67:0.74:0.71"] = 312, -- Dalaran, Schwarze Wacht, Feste Wintergarde, Westwacht, Kamagua
+				["0.52:0.38:0.49:0.58:0.60:0.52:0.73:0.54:0.83:0.46:0.72:0.40"] = 474, -- Dalaran, Moa'ki, Wintergarde Keep, Amberpine Lodge, Westfall Brigade, The Argent Stand
 
 				----------------------------------------------------------------------
 				-- Alliance: Dragonblight
@@ -2929,6 +2930,7 @@
 				["0.82:0.31:0.78:0.38:0.72:0.40:0.64:0.42:0.46:0.46"] = 271, -- Gundrak, Zim'Torga, The Argent Stand, Ebon Watch, Fordragon Hold
 				["0.82:0.31:0.78:0.38:0.72:0.40:0.69:0.42:0.73:0.54:0.76:0.67"] = 297, -- Gundrak, Zim'Torga, Argentumwache, Lichtbresche, Ammertannhütte, Westwacht
 				["0.82:0.31:0.78:0.38:0.83:0.46:0.73:0.54:0.69:0.42"] = 255, -- Gundrak, Zim'Torga, Westfall Brigade, Amberpine Lodge, Light's Breach
+				["0.82:0.31:0.78:0.38:0.72:0.40:0.64:0.42:0.54:0.52:0.42:0.53:0.21:0.49:0.17:0.53"] = 485, -- Gundrak, Zim'Torga, The Argent Stand, Ebon Watch, Wyrmrest Temple, Stars' Rest, Fizzcrank Airstrip, Amber Ledge
 
 				-- Alliance: Zul'Drak: Light's Breach
 				["0.69:0.42:0.72:0.40"] = 44, -- Light's Breach, The Argent Stand
@@ -3001,6 +3003,7 @@
 				["0.72:0.40:0.64:0.42:0.52:0.38:0.52:0.34"] = 146, -- The Argent Stand, Ebon Watch, Dalaran, Crusaders' Pinnacle
 				["0.72:0.40:0.64:0.42:0.54:0.52:0.42:0.53"] = 210, -- The Argent Stand, Ebon Watch, Wyrmrest Temple, Stars' Rest
 				["0.72:0.40:0.64:0.42:0.62:0.36"] = 94, -- The Argent Stand, Ebon Watch, K3
+				["0.72:0.40:0.69:0.42:0.60:0.52:0.42:0.53:0.22:0.61:0.17:0.53"] = 404, -- The Argent Stand, Light's Breach, Wintergarde Keep, Stars' Rest, Valiance Keep, Amber Ledge
 
 				-- Alliance: Zul'Drak: Zim'Torga
 				["0.78:0.38:0.83:0.46"] = 56, -- Zim'Torga, Westfall Brigade
