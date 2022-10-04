@@ -2341,6 +2341,8 @@
 				["0.54:0.52:0.64:0.42:0.62:0.36:0.57:0.33:0.64:0.19"] = 191, -- Wyrmrest Temple, Ebon Watch, K3, Frosthold, Ulduar
 				["0.54:0.52:0.42:0.53:0.21:0.49:0.24:0.40"] = 170, -- Wyrmrest Temple, Stars' Rest, Fizzcrank Airstrip, River's Heart
 				["0.54:0.52:0.52:0.38:0.56:0.36"] = 79, -- Wyrmrest Temple, Dalaran, The Argent Vanguard
+				["0.54:0.52:0.60:0.52:0.73:0.54:0.83:0.46:0.72:0.40"] = 189, -- Wyrmrest Temple, Wintergarde Keep, Amberpine Lodge, Westfall Brigade, The Argent Stand
+				["0.54:0.52:0.64:0.42:0.72:0.40:0.78:0.38:0.82:0.31"] = 176, -- Wyrmrest Temple, Ebon Watch, The Argent Stand, Zim'Torga, Gundrak
 
 				----------------------------------------------------------------------
 				-- Alliance: Grizzly Hills
@@ -2425,6 +2427,7 @@
 				["0.83:0.46:0.73:0.54:0.60:0.52:0.42:0.53:0.21:0.49"] = 393, -- Westfall Brigade, Amberpine Lodge, Wintergarde Keep, Stars' Rest, Fizzcrank Airstrip
 				["0.83:0.46:0.72:0.40:0.64:0.42"] = 134, -- Westfall Brigade, The Argent Stand, Ebon Watch
 				["0.83:0.46:0.73:0.54:0.60:0.52:0.49:0.58"] = 252, -- Westfall Brigade, Amberpine Lodge, Wintergarde Keep, Moa'ki
+				["0.83:0.46:0.72:0.40:0.64:0.42:0.52:0.38:0.24:0.40"] = 399, -- Westfall Brigade, The Argent Stand, Ebon Watch, Dalaran, River's Heart
 
 				----------------------------------------------------------------------
 				-- Alliance: Howling Fjord
@@ -2708,6 +2711,7 @@
 				["0.24:0.40:0.52:0.38:0.56:0.36:0.57:0.33"] = 393, -- River's Heart, Dalaran, The Argent Vanguard, Frosthold
 				["0.24:0.40:0.52:0.38:0.64:0.42:0.69:0.42:0.73:0.54"] = 594, -- Flussnabel, Dalaran, Schwarze Wacht, Lichtbresche, Ammertannhütte
 				["0.24:0.40:0.52:0.38:0.64:0.42:0.69:0.42"] = 469, -- River's Heart, Dalaran, Ebon Watch, Light's Breach
+				["0.24:0.40:0.52:0.38:0.59:0.43"] = 363, -- River's Heart, Dalaran, Windrunner's Overlook
 
 				----------------------------------------------------------------------
 				-- Alliance: The Storm Peaks
@@ -2762,6 +2766,7 @@
 				["0.72:0.29:0.62:0.36:0.52:0.38:0.41:0.43"] = 263, -- Dun Nifflelem, K3, Dalaran, Valiance Landing Camp
 				["0.72:0.29:0.62:0.36:0.52:0.38:0.24:0.40:0.28:0.28"] = 444, -- 丹尼芬雷，风暴峭壁, K3，风暴峭壁, 达拉然, 河流之心，索拉查盆地, 死亡高地，冰冠冰川
 				["0.72:0.29:0.78:0.38:0.72:0.40"] = 142, -- Dun Nifflelem, Zim'Torga, The Argent Stand
+				["0.72:0.29:0.62:0.36:0.64:0.42:0.54:0.52:0.42:0.53:0.21:0.49"] = 413, -- Dun Nifflelem, K3, Ebon Watch, Wyrmrest Temple, Stars' Rest, Fizzcrank Airstrip
 
 				-- Alliance: The Storm Peaks: Frosthold
 				["0.57:0.33:0.56:0.36:0.52:0.34"] = 61, -- Frosthold, The Argent Vanguard, Crusaders' Pinnacle
@@ -2826,6 +2831,7 @@
 				["0.62:0.36:0.72:0.29:0.78:0.38:0.72:0.40:0.69:0.42"] = 266, -- K3, Dun Nifflelem, Zim'Torga, The Argent Stand, Light's Breach
 				["0.62:0.36:0.64:0.42:0.72:0.40:0.78:0.38"] = 148, -- K3, Ebon Watch, The Argent Stand, Zim'Torga
 				["0.62:0.36:0.64:0.42:0.60:0.52:0.76:0.67:0.74:0.71"] = 274, -- K3, Ebon Watch, Wintergarde Keep, Westguard Keep, Kamagua
+				["0.62:0.36:0.57:0.33:0.57:0.21"] = 108, -- K3, Frosthold, Bouldercrag's Refuge
 
 				-- Alliance: The Storm Peaks: Ulduar
 				["0.64:0.19:0.57:0.33:0.56:0.36:0.52:0.38"] = 167, -- Ulduar, Frosthold, The Argent Vanguard, Dalaran
@@ -2941,6 +2947,8 @@
 				["0.82:0.31:0.78:0.38:0.72:0.40:0.64:0.42:0.54:0.52:0.42:0.53:0.21:0.49:0.17:0.53"] = 485, -- Gundrak, Zim'Torga, The Argent Stand, Ebon Watch, Wyrmrest Temple, Stars' Rest, Fizzcrank Airstrip, Amber Ledge
 				["0.82:0.31:0.78:0.38:0.72:0.40:0.64:0.42:0.62:0.36"] = 201, -- Gundrak, Zim'Torga, The Argent Stand, Ebon Watch, K3
 				["0.82:0.31:0.78:0.38:0.72:0.40:0.69:0.42:0.60:0.52:0.42:0.53"] = 322, -- Gundrak, Zim'Torga, Argentumwache, Lichtbresche, Feste Wintergarde, Sternenruh
+				["0.82:0.31:0.78:0.38:0.83:0.46:0.73:0.54:0.76:0.67"] = 273, -- Gundrak, Zim'Torga, Westfall Brigade, Amberpine Lodge, Westguard Keep
+				["0.82:0.31:0.78:0.38:0.72:0.29"] = 141, -- Gundrak, Zim'Torga, Dun Nifflelem
 
 				-- Alliance: Zul'Drak: Light's Breach
 				["0.69:0.42:0.72:0.40"] = 44, -- Light's Breach, The Argent Stand

@@ -2221,6 +2221,7 @@
 				["0.70:0.55:0.59:0.55:0.54:0.52:0.45:0.51:0.29:0.54"] = 318, -- Conquest Hold, Venomspite, Wyrmrest Temple, Agmar's Hammer, Taunka'le Village
 				["0.70:0.55:0.69:0.42:0.64:0.42:0.52:0.38:0.24:0.40:0.18:0.40"] = 419, -- Conquest Hold, Light's Breach, Ebon Watch, Dalaran, River's Heart, Nesingwary Base Camp
 				["0.70:0.55:0.59:0.55:0.49:0.58:0.29:0.57"] = 301, -- Conquest Hold, Venomspite, Moa'ki, Unu'pe
+				["0.70:0.55:0.69:0.42:0.72:0.40:0.78:0.38:0.64:0.19"] = 318, -- Conquest Hold, Light's Breach, The Argent Stand, Zim'Torga, Ulduar
 
 				----------------------------------------------------------------------
 				-- Horde: Howling Fjord
@@ -2509,6 +2510,7 @@
 				["0.38:0.21:0.56:0.36:0.52:0.38:0.62:0.36:0.72:0.29"] = 311, -- The Shadow Vault, The Argent Vanguard, Dalaran, K3, Dun Nifflelem
 				["0.38:0.21:0.56:0.36:0.52:0.38:0.49:0.58:0.29:0.57:0.15:0.57"] = 530, -- The Shadow Vault, The Argent Vanguard, Dalaran, Moa'ki, Unu'pe, Warsong Hold
 				["0.38:0.21:0.56:0.36:0.52:0.38:0.64:0.42:0.69:0.42:0.70:0.55"] = 350, -- The Shadow Vault, The Argent Vanguard, Dalaran, Ebon Watch, Light's Breach, Conquest Hold
+				["0.38:0.21:0.56:0.36:0.52:0.38:0.48:0.44:0.59:0.55"] = 317, -- The Shadow Vault, The Argent Vanguard, Dalaran, Kor'koron Vanguard, Venomspite
 
 				----------------------------------------------------------------------
 				-- Horde: Sholazar Basin
