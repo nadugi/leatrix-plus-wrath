@@ -2826,6 +2826,7 @@
 				["0.64:0.42:0.69:0.42:0.84:0.51:0.84:0.59"] = 198, -- Ebon Watch, Light's Breach, Camp Oneqwah, Camp Winterhoof
 				["0.64:0.42:0.62:0.36:0.72:0.29"] = 141, -- Ebon Watch, K3, Dun Nifflelem
 				["0.64:0.42:0.59:0.55:0.70:0.55"] = 158, -- Schwarze Wacht, Gallgrimm, Burg Siegeswall
+				["0.64:0.42:0.59:0.55:0.45:0.51"] = 232, -- Ebon Watch, Venomspite, Agmar's Hammer
 
 				-- Horde: Zul'Drak: Gundrak
 				["0.82:0.31:0.78:0.38"] = 56, -- Gundrak, Zim'Torga

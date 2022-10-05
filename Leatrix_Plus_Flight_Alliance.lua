@@ -2022,6 +2022,7 @@
 				["0.59:0.43:0.52:0.38:0.24:0.40"] = 248, -- Windrunner's Overlook, Dalaran, River's Heart
 				["0.59:0.43:0.52:0.38:0.52:0.34"] = 75, -- Windrunner's Overlook, Dalaran, Crusaders' Pinnacle
 				["0.59:0.43:0.60:0.52:0.73:0.54:0.88:0.60"] = 262, -- Windrunner's Overlook, Wintergarde Keep, Amberpine Lodge, Fort Wildervar
+				["0.59:0.43:0.52:0.38:0.24:0.40:0.18:0.40"] = 282, -- Windrunner's Overlook, Dalaran, River's Heart, Nesingwary Base Camp
 
 				----------------------------------------------------------------------
 				-- Alliance: Dalaran
@@ -2220,6 +2221,7 @@
 				["0.49:0.58:0.60:0.52:0.69:0.42"] = 168, -- Moa'ki, Feste Wintergarde, Lichtbresche
 				["0.49:0.58:0.60:0.52:0.73:0.54:0.83:0.46"] = 236, -- Moa'ki, Feste Wintergarde, Ammertannhütte, Westfallbrigade
 				["0.49:0.58:0.60:0.52:0.64:0.42"] = 143, -- Moa'ki, Feste Wintergarde, Schwarze Wacht
+				["0.49:0.58:0.42:0.53:0.21:0.49:0.18:0.40"] = 256, -- Moa'ki, Repos des étoiles, Piste d'atterrissage de Spumelevier, Camp de base de Nesingwary
 
 				-- Alliance: Dragonblight: Stars' Rest
 				["0.42:0.53:0.49:0.58"] = 72, -- Stars' Rest, Moa'ki
@@ -2842,6 +2844,7 @@
 				["0.62:0.36:0.64:0.42:0.72:0.40:0.78:0.38"] = 148, -- K3, Ebon Watch, The Argent Stand, Zim'Torga
 				["0.62:0.36:0.64:0.42:0.60:0.52:0.76:0.67:0.74:0.71"] = 274, -- K3, Ebon Watch, Wintergarde Keep, Westguard Keep, Kamagua
 				["0.62:0.36:0.57:0.33:0.57:0.21"] = 108, -- K3, Frosthold, Bouldercrag's Refuge
+				["0.62:0.36:0.57:0.33:0.56:0.36:0.52:0.34"] = 103, -- K3, Frosthold, The Argent Vanguard, Crusaders' Pinnacle
 
 				-- Alliance: The Storm Peaks: Ulduar
 				["0.64:0.19:0.57:0.33:0.56:0.36:0.52:0.38"] = 167, -- Ulduar, Frosthold, The Argent Vanguard, Dalaran

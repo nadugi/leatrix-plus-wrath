@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 3.0.23.alpha.2 (5th October 2022)
+-- 	Leatrix Plus 3.0.23.alpha.3 (5th October 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "3.0.23.alpha.2"
+	LeaPlusLC["AddonVer"] = "3.0.23.alpha.3"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -7932,20 +7932,46 @@
 				-- Left button down
 				if arg1 == "LeftButton" then
 
-					-- Control key does nothing
-					if IsControlKeyDown() and not IsShiftKeyDown() then
-						return
-					end
-
 					-- Shift key toggles music
-					if IsShiftKeyDown() and not IsControlKeyDown() then
-						Sound_ToggleMusic();
+					if IsShiftKeyDown() and not IsControlKeyDown() and not IsAltKeyDown() then
+						Sound_ToggleMusic()
 						return
 					end
 
-					-- Shift key and control key toggles Zygor addon
-					if IsShiftKeyDown() and IsControlKeyDown() then
-						LeaPlusLC:ZygorToggle();
+					-- Control key does nothing (no minimap target tracking in Wrath)
+					if IsControlKeyDown() and not IsShiftKeyDown() and not IsAltKeyDown() then
+						return
+					end
+
+					-- Alt key toggles error messages
+					if IsAltKeyDown() and not IsControlKeyDown() and not IsShiftKeyDown() then
+						if LeaPlusDB["HideErrorMessages"] == "On" then -- Checks global
+							if LeaPlusLC["ShowErrorsFlag"] == 1 then
+								LeaPlusLC["ShowErrorsFlag"] = 0
+								ActionStatus_DisplayMessage(L["Error messages will be shown"], true);
+							else
+								LeaPlusLC["ShowErrorsFlag"] = 1
+								ActionStatus_DisplayMessage(L["Error messages will be hidden"], true);
+							end
+							return
+						end
+						return
+					end
+
+					-- Control key and shift key toggles Zygor addon
+					if IsControlKeyDown() and IsShiftKeyDown() and not IsAltKeyDown() then
+						LeaPlusLC:ZygorToggle()
+						return
+					end
+
+					-- Control key and alt key toggles maximised window mode
+					if IsControlKeyDown() and IsAltKeyDown() and not IsShiftKeyDown() then
+						if LeaPlusLC:PlayerInCombat() then
+							return
+						else
+							SetCVar("gxMaximize", tostring(1 - GetCVar("gxMaximize")));
+							UpdateWindow()
+						end
 						return
 					end
 
@@ -7962,37 +7988,6 @@
 
 				-- Right button down
 				if arg1 == "RightButton" then
-
-					-- Control key toggles error messages
-					if IsControlKeyDown() and not IsShiftKeyDown() then
-						if LeaPlusDB["HideErrorMessages"] == "On" then -- Checks global
-							if LeaPlusLC["ShowErrorsFlag"] == 1 then
-								LeaPlusLC["ShowErrorsFlag"] = 0
-								ActionStatus_DisplayMessage(L["Error messages will be shown"], true);
-							else
-								LeaPlusLC["ShowErrorsFlag"] = 1
-								ActionStatus_DisplayMessage(L["Error messages will be hidden"], true);
-							end
-							return
-						end
-						return
-					end
-
-					-- Shift key does nothing
-					if IsShiftKeyDown() and not IsControlKeyDown() then
-						return
-					end
-
-					-- Shift key and control key toggles maximised window mode
-					if IsShiftKeyDown() and IsControlKeyDown() then
-						if LeaPlusLC:PlayerInCombat() then
-							return
-						else
-							SetCVar("gxMaximize", tostring(1 - GetCVar("gxMaximize")));
-							RestartGx();
-						end
-						return
-					end
 
 					-- No modifier key toggles the options panel
 					if LeaPlusLC:IsPlusShowing() then
@@ -15100,7 +15095,7 @@
 	pg = "Page4";
 
 	LeaPlusLC:MakeTx(LeaPlusLC[pg], "Visibility"				, 	146, -72);
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "HideErrorMessages"			, 	"Hide error messages"			,	146, -92, 	true,	"If checked, most error messages (such as 'Not enough rage') will not be shown.  Some important errors are excluded.|n|nIf you have the minimap button enabled, you can hold down the control key and right-click it to toggle error messages without affecting this setting.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "HideErrorMessages"			, 	"Hide error messages"			,	146, -92, 	true,	"If checked, most error messages (such as 'Not enough rage') will not be shown.  Some important errors are excluded.|n|nIf you have the minimap button enabled, you can hold down the alt key and click it to toggle error messages without affecting this setting.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "NoHitIndicators"			, 	"Hide portrait numbers"			,	146, -112, 	true,	"If checked, damage and healing numbers in the player and pet portrait frames will be hidden.")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "HideZoneText"				,	"Hide zone text"				,	146, -132, 	true,	"If checked, zone text will not be shown (eg. 'Ironforge').")
 	LeaPlusLC:MakeCB(LeaPlusLC[pg], "HideKeybindText"			,	"Hide keybind text"				,	146, -152, 	true,	"If checked, keybind text will not be shown on action buttons.")
@@ -15220,7 +15215,7 @@
 	pg = "Page8";
 
 	LeaPlusLC:MakeTx(LeaPlusLC[pg], "Addon"						, 146, -72);
-	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowMinimapIcon"			, "Show minimap button"				, 146, -92,		false,	"If checked, a minimap button will be available.|n|nClick - Toggle options panel.|n|nSHIFT/Left-click - Toggle music.|n|nCTRL/Right-click - Toggle errors (if enabled).|n|nCTRL/SHIFT/Left-click - Toggle Zygor (if installed).|n|nCTRL/SHIFT/Right-click - Toggle windowed mode.")
+	LeaPlusLC:MakeCB(LeaPlusLC[pg], "ShowMinimapIcon"			, "Show minimap button"				, 146, -92,		false,	"If checked, a minimap button will be available.|n|nClick - Toggle options panel.|n|nSHIFT-click - Toggle music.|n|nALT-click - Toggle errors (if enabled).|n|nCTRL/SHIFT-click - Toggle Zygor (if installed).|n|nCTRL/ALT-click - Toggle windowed mode.")
 
 	LeaPlusLC:MakeTx(LeaPlusLC[pg], "Scale", 340, -72);
 	LeaPlusLC:MakeSL(LeaPlusLC[pg], "PlusPanelScale", "Drag to set the scale of the Leatrix Plus panel.", 1, 2, 0.1, 340, -92, "%.1f")
