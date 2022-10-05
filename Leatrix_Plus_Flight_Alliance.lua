@@ -3035,6 +3035,7 @@
 				["0.72:0.40:0.64:0.42:0.62:0.36"] = 94, -- The Argent Stand, Ebon Watch, K3
 				["0.72:0.40:0.69:0.42:0.60:0.52:0.42:0.53:0.22:0.61:0.17:0.53"] = 404, -- The Argent Stand, Light's Breach, Wintergarde Keep, Stars' Rest, Valiance Keep, Amber Ledge
 				["0.72:0.40:0.64:0.42:0.62:0.36:0.57:0.33:0.57:0.21"] = 201, -- The Argent Stand, Ebon Watch, K3, Frosthold, Bouldercrag's Refuge
+				["0.72:0.40:0.69:0.42:0.60:0.52:0.42:0.53:0.29:0.57"] = 311, -- The Argent Stand, Light's Breach, Wintergarde Keep, Stars' Rest, Unu'pe
 
 				-- Alliance: Zul'Drak: Zim'Torga
 				["0.78:0.38:0.83:0.46"] = 56, -- Zim'Torga, Westfall Brigade

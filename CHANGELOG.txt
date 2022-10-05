@@ -1,5 +1,6 @@
-3.0.23.alpha.1 - 5th October 2022
-- Maintenance update.
+3.0.23.alpha.2 - 5th October 2022
+- For 'Mute game sounds' ('System'), you can now mute travelers, bikes and mechanical guild vaults.
+- Added flight times.
 
 3.0.22 - 5th October 2022
 - Added flight times.
