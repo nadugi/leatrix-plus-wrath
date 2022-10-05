@@ -2869,6 +2869,7 @@
 				["0.62:0.36:0.57:0.33:0.56:0.36:0.52:0.34:0.28:0.28"] = 270, -- K3, Frosthold, The Argent Vanguard, Crusaders' Pinnacle, Death's Rise
 				["0.62:0.36:0.52:0.38:0.54:0.52:0.60:0.52:0.73:0.54"] = 301, -- K3, Dalaran, Wyrmruhtempel, Feste Wintergarde, Ammertannhütte
 				["0.62:0.36:0.64:0.42:0.54:0.52:0.42:0.53:0.29:0.57"] = 297, -- K3, Ebon Watch, Wyrmrest Temple, Stars' Rest, Unu'pe
+				["0.62:0.36:0.64:0.42:0.54:0.52:0.42:0.53:0.21:0.49:0.17:0.53:0.12:0.53"] = 405, -- K3, Ebon Watch, Wyrmrest Temple, Stars' Rest, Fizzcrank Airstrip, Amber Ledge, Transitus Shield
 
 				-- Alliance: The Storm Peaks: Ulduar
 				["0.64:0.19:0.57:0.33:0.56:0.36:0.52:0.38"] = 167, -- Ulduar, Frosthold, The Argent Vanguard, Dalaran
