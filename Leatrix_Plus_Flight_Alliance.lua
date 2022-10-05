@@ -1936,6 +1936,7 @@
 				["0.29:0.57:0.49:0.58:0.60:0.52:0.69:0.42"] = 285, -- Unu'pe, Moa'ki, Wintergarde Keep, Light's Breach
 				["0.29:0.57:0.49:0.58:0.52:0.38:0.62:0.36:0.72:0.29"] = 383, -- Unu'pe, Moa'ki, Dalaran, K3, Dun Nifflelem
 				["0.29:0.57:0.49:0.58:0.52:0.38:0.62:0.36"] = 284, -- Unu'pe, Moa'ki, Dalaran, K3
+				["0.29:0.57:0.42:0.53:0.54:0.52:0.52:0.38"] = 281, -- Unu'pe, Stars' Rest, Wyrmrest Temple, Dalaran
 
 				-- Alliance: Borean Tundra: Valiance Keep
 				["0.22:0.61:0.29:0.57:0.49:0.58:0.74:0.71"] = 365, -- Valiance Keep, Unu'pe, Moa'ki, Kamagua
@@ -2350,6 +2351,7 @@
 				["0.54:0.52:0.52:0.38:0.56:0.36"] = 79, -- Wyrmrest Temple, Dalaran, The Argent Vanguard
 				["0.54:0.52:0.60:0.52:0.73:0.54:0.83:0.46:0.72:0.40"] = 189, -- Wyrmrest Temple, Wintergarde Keep, Amberpine Lodge, Westfall Brigade, The Argent Stand
 				["0.54:0.52:0.64:0.42:0.72:0.40:0.78:0.38:0.82:0.31"] = 176, -- Wyrmrest Temple, Ebon Watch, The Argent Stand, Zim'Torga, Gundrak
+				["0.54:0.52:0.49:0.58:0.74:0.71"] = 158, -- Wyrmruhtempel, Moa'ki, Kamagua
 
 				----------------------------------------------------------------------
 				-- Alliance: Grizzly Hills
@@ -2560,6 +2562,8 @@
 				["0.88:0.72:0.76:0.67:0.60:0.52:0.42:0.53:0.21:0.49:0.18:0.40"] = 530, -- Valgarde Port, Westguard Keep, Wintergarde Keep, Stars' Rest, Fizzcrank Airstrip, Nesingwary Base Camp
 				["0.88:0.72:0.88:0.60:0.83:0.46:0.78:0.38:0.72:0.29"] = 325, -- Valgarde Port, Fort Wildervar, Westfall Brigade, Zim'Torga, Dun Nifflelem
 				["0.88:0.72:0.74:0.71:0.49:0.58:0.42:0.53"] = 344, -- Hafen von Valgarde, Kamagua, Moa'ki, Sternenruh
+				["0.88:0.72:0.76:0.67:0.60:0.52:0.42:0.53:0.22:0.61:0.17:0.53"] = 518, -- Valgarde Port, Westguard Keep, Wintergarde Keep, Stars' Rest, Valiance Keep, Amber Ledge
+				["0.88:0.72:0.76:0.67:0.73:0.54:0.69:0.42:0.64:0.42:0.52:0.38:0.56:0.36"] = 337, -- Valgarde Port, Westguard Keep, Amberpine Lodge, Light's Breach, Ebon Watch, Dalaran, The Argent Vanguard
 
 				-- Alliance: Howling Fjord: Westguard Keep
 				["0.76:0.67:0.74:0.71"] = 52, -- Westguard Keep, Kamagua
@@ -2624,6 +2628,7 @@
 				["0.52:0.34:0.56:0.36:0.52:0.38:0.64:0.42:0.60:0.52:0.76:0.67:0.88:0.72"] = 380, -- Crusaders' Pinnacle, The Argent Vanguard, Dalaran, Ebon Watch, Wintergarde Keep, Westguard Keep, Valgarde Port
 				["0.52:0.34:0.56:0.36:0.52:0.38:0.64:0.42:0.69:0.42:0.73:0.54"] = 258, -- Crusaders' Pinnacle, The Argent Vanguard, Dalaran, Ebon Watch, Light's Breach, Amberpine Lodge
 				["0.52:0.34:0.56:0.36:0.52:0.38:0.49:0.58"] = 212, -- Crusaders' Pinnacle, The Argent Vanguard, Dalaran, Moa'ki
+				["0.52:0.34:0.41:0.43"] = 107, -- Crusaders' Pinnacle, Valiance Landing Camp
 
 				-- Alliance: Icecrown: Death's Rise
 				["0.28:0.28:0.52:0.34:0.56:0.36:0.52:0.38"] = 238, -- Death's Rise, Crusaders' Pinnacle, The Argent Vanguard, Dalaran
@@ -2670,6 +2675,7 @@
 				["0.56:0.36:0.52:0.38:0.46:0.46"] = 121, -- The Argent Vanguard, Dalaran, Fordragon Hold
 				["0.56:0.36:0.52:0.38:0.64:0.42:0.72:0.40:0.78:0.38"] = 202, -- Die Argentumvorhut, Dalaran, Schwarze Wacht, Argentumwache, Zim'Torga
 				["0.56:0.36:0.57:0.33:0.57:0.21"] = 105, -- The Argent Vanguard, Frosthold, Bouldercrag's Refuge
+				["0.56:0.36:0.52:0.38:0.24:0.40:0.21:0.49:0.17:0.53:0.12:0.53"] = 373, -- Оплот Серебряного Авангарда, Даларан, Слияние рек, Взлетная полоса Выкрутеня, Янтарная гряда, Маскировочный щит
 
 				----------------------------------------------------------------------
 				-- Alliance: Sholazar Basin
@@ -2699,6 +2705,7 @@
 				["0.18:0.40:0.21:0.49:0.42:0.53:0.54:0.52"] = 443, -- Nesingwary Base Camp, Fizzcrank Airstrip, Stars' Rest, Wyrmrest Temple
 				["0.18:0.40:0.21:0.49:0.29:0.57:0.49:0.58:0.60:0.52"] = 515, -- Nesingwary Base Camp, Fizzcrank Airstrip, Unu'pe, Moa'ki, Wintergarde Keep
 				["0.18:0.40:0.28:0.28"] = 137, -- Nesingwary Base Camp, Death's Rise
+				["0.18:0.40:0.21:0.49:0.17:0.53"] = 182, -- Nesingwary Base Camp, Fizzcrank Airstrip, Amber Ledge
 
 				-- Alliance: Sholazar Basin: River's Heart
 				["0.24:0.40:0.21:0.49"] = 104, -- River's Heart, Fizzcrank Airstrip
@@ -2734,6 +2741,7 @@
 				["0.24:0.40:0.52:0.38:0.64:0.42:0.69:0.42"] = 469, -- River's Heart, Dalaran, Ebon Watch, Light's Breach
 				["0.24:0.40:0.52:0.38:0.59:0.43"] = 363, -- River's Heart, Dalaran, Windrunner's Overlook
 				["0.24:0.40:0.21:0.49:0.42:0.53:0.46:0.46"] = 417, -- River's Heart, Fizzcrank Airstrip, Stars' Rest, Fordragon Hold
+				["0.24:0.40:0.21:0.49:0.42:0.53:0.60:0.52:0.76:0.67"] = 663, -- River's Heart, Fizzcrank Airstrip, Stars' Rest, Wintergarde Keep, Westguard Keep
 
 				----------------------------------------------------------------------
 				-- Alliance: The Storm Peaks
@@ -2758,6 +2766,7 @@
 				["0.57:0.21:0.57:0.33:0.62:0.36:0.72:0.29"] = 227, -- Bergfels' Zuflucht, Eisfestung, K3, Dun Niffelem
 				["0.57:0.21:0.57:0.33:0.62:0.36:0.64:0.42:0.72:0.40:0.83:0.46:0.88:0.60:0.88:0.72"] = 463, -- Bouldercrag's Refuge, Frosthold, K3, Ebon Watch, The Argent Stand, Westfall Brigade, Fort Wildervar, Valgarde Port
 				["0.57:0.21:0.57:0.33:0.56:0.36:0.52:0.34"] = 139, -- Bergfels' Zuflucht, Eisfestung, Die Argentumvorhut, Kreuzfahrerturm
+				["0.57:0.21:0.57:0.33:0.62:0.36:0.64:0.42:0.54:0.52:0.42:0.53:0.22:0.61"] = 454, -- Bouldercrag's Refuge, Frosthold, K3, Ebon Watch, Wyrmrest Temple, Stars' Rest, Valiance Keep
 
 				-- Alliance: The Storm Peaks: Dun Nifflelem
 				["0.72:0.29:0.64:0.19:0.57:0.21"] = 133, -- Dun Nifflelem, Ulduar, Bouldercrag's Refuge
@@ -2857,6 +2866,9 @@
 				["0.62:0.36:0.64:0.42:0.60:0.52:0.76:0.67:0.74:0.71"] = 274, -- K3, Ebon Watch, Wintergarde Keep, Westguard Keep, Kamagua
 				["0.62:0.36:0.57:0.33:0.57:0.21"] = 108, -- K3, Frosthold, Bouldercrag's Refuge
 				["0.62:0.36:0.57:0.33:0.56:0.36:0.52:0.34"] = 103, -- K3, Frosthold, The Argent Vanguard, Crusaders' Pinnacle
+				["0.62:0.36:0.57:0.33:0.56:0.36:0.52:0.34:0.28:0.28"] = 270, -- K3, Frosthold, The Argent Vanguard, Crusaders' Pinnacle, Death's Rise
+				["0.62:0.36:0.52:0.38:0.54:0.52:0.60:0.52:0.73:0.54"] = 301, -- K3, Dalaran, Wyrmruhtempel, Feste Wintergarde, Ammertannhütte
+				["0.62:0.36:0.64:0.42:0.54:0.52:0.42:0.53:0.29:0.57"] = 297, -- K3, Ebon Watch, Wyrmrest Temple, Stars' Rest, Unu'pe
 
 				-- Alliance: The Storm Peaks: Ulduar
 				["0.64:0.19:0.57:0.33:0.56:0.36:0.52:0.38"] = 167, -- Ulduar, Frosthold, The Argent Vanguard, Dalaran
@@ -2906,6 +2918,7 @@
 				["0.41:0.43:0.46:0.46:0.64:0.42:0.72:0.40:0.78:0.38"] = 272, -- Valiance Landing Camp, Fordragon Hold, Ebon Watch, The Argent Stand, Zim'Torga
 				["0.41:0.43:0.42:0.53:0.49:0.58:0.74:0.71"] = 333, -- Valiance Landing Camp, Stars' Rest, Moa'ki, Kamagua
 				["0.41:0.43:0.52:0.38:0.62:0.36:0.72:0.29"] = 237, -- Valiance Landing Camp, Dalaran, K3, Dun Nifflelem
+				["0.41:0.43:0.42:0.53:0.22:0.61"] = 211, -- Valianzlager, Sternenruh, Valianzfeste
 
 				----------------------------------------------------------------------
 				-- Alliance: Zul'Drak
@@ -2939,6 +2952,7 @@
 				["0.64:0.42:0.72:0.40:0.78:0.38:0.82:0.31"] = 158, -- Ebon Watch, The Argent Stand, Zim'Torga, Gundrak
 				["0.64:0.42:0.52:0.38:0.52:0.34"] = 94, -- Ebon Watch, Dalaran, Crusaders' Pinnacle
 				["0.64:0.42:0.54:0.52:0.42:0.53:0.21:0.49:0.17:0.53:0.12:0.53"] = 362, -- Guet d'Ébène, Temple du Repos du ver, Repos des étoiles, Piste d'atterrissage de Spumelevier, Escarpement d'Ambre, Bouclier Transitus
+				["0.64:0.42:0.52:0.38:0.24:0.40"] = 266, -- Ebon Watch, Dalaran, River's Heart
 
 				-- Alliance: Zul'Drak: Gundrak
 				["0.82:0.31:0.78:0.38"] = 56, -- Gundrak, Zim'Torga
