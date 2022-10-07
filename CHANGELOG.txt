@@ -1,5 +1,6 @@
-3.0.24.alpha.1 - 7th October 2022
+3.0.24 - 7th October 2022
 - Fixed 'Mute travelers' so that it applies to Gnimo too.  Gnimo sounds are shared with mechstrider wound sounds so now enabling either mute travelers or mute mechstriders will mute the mechstrider wound sounds.
+- Added flight times.
 
 3.0.23 - 6th October 2022
 - For 'Mute game sounds' ('System'), you can now mute travelers, bikes and mechanical guild vaults.
