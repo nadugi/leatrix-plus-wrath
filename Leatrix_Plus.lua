@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 3.0.26.alpha.2 (8th October 2022)
+-- 	Leatrix Plus 3.0.26.alpha.3 (9th October 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "3.0.26.alpha.2"
+	LeaPlusLC["AddonVer"] = "3.0.26.alpha.3"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -2264,7 +2264,7 @@
 			end)
 
 			-- Editbox tooltip
-			local tipPrefix = L["Enter item IDs separated by commas."] .. "|n" .. L["Item IDs can be found in item toolips."] .. "|n" .. L["Junk items will not be sold|nNon-junk items will be sold."]
+			local tipPrefix = L["Enter item IDs separated by commas."] .. "|n" .. L["Item IDs can be found in item toolips."] .. "|n" .. L["Junk items will not be sold|nWhite items will be sold."]
 
 			-- Function to make tooltip string
 			local function MakeTooltipString()
@@ -2273,6 +2273,7 @@
 				local sellMsg = ""
 				local dupMsg = ""
 				local novalueMsg = ""
+				local incompatMsg = ""
 
 				local tipString = eb.Text:GetText()
 				if tipString and tipString ~= "" then
@@ -2298,14 +2299,23 @@
 														-- Add junk item to keep list
 														keepMsg = keepMsg .. linkCol .. linkName .. " (" .. tipList[i] .. ")" .. "|r|n"
 													end
-												else
-													-- Non-junk item
+												elseif Rarity == 1 then
+													-- White item
 													if string.find(sellMsg, "%(" .. tipList[i] .. "%)") then
 														-- Duplicate (ID appears more than once in list)
 														dupMsg = dupMsg .. linkCol .. linkName .. " (" .. tipList[i] .. ")" .. "|r|n"
 													else
 														-- Add non-junk item to sell list
 														sellMsg = sellMsg .. linkCol .. linkName .. " (" .. tipList[i] .. ")" .. "|r|n"
+													end
+												else
+													-- Incompatible item (not junk or white)
+													if string.find(incompatMsg, "%(" .. tipList[i] .. "%)") then
+														-- Duplicate (ID appears more than once in list)
+														dupMsg = dupMsg .. linkCol .. linkName .. " (" .. tipList[i] .. ")" .. "|r|n"
+													else
+														-- Add item to incompatible list
+														incompatMsg = incompatMsg .. linkCol .. linkName .. " (" .. tipList[i] .. ")" .. "|r|n"
 													end
 												end
 											else
@@ -2330,10 +2340,11 @@
 				if sellMsg ~= "" then sellMsg = "" .. "|n" .. L["Sell"] .. "|n" .. sellMsg end
 				if dupMsg ~= "" then dupMsg = "" .. "|n" .. L["Duplicates"] .. "|n" .. dupMsg end
 				if novalueMsg ~= "" then novalueMsg = "" .. "|n" .. L["Cannot be sold"] .. "|n" .. novalueMsg end
+				if incompatMsg ~= "" then incompatMsg = "" .. "|n" .. L["Incompatible"] .. "|n" .. incompatMsg end
 
 				eb.tiptext = tipPrefix
-				eb.tiptext = eb.tiptext .. "|n" .. keepMsg .. sellMsg .. dupMsg .. novalueMsg
-				eb.Text.tiptext = keepMsg .. sellMsg .. dupMsg .. novalueMsg
+				eb.tiptext = eb.tiptext .. "|n" .. keepMsg .. sellMsg .. dupMsg .. novalueMsg .. incompatMsg
+				eb.Text.tiptext = keepMsg .. sellMsg .. dupMsg .. novalueMsg .. incompatMsg
 
 				if GameTooltip:IsShown() then
 					if MouseIsOver(eb) or MouseIsOver(eb.Text) then
@@ -2388,11 +2399,11 @@
 							local itemID = GetItemInfoFromHyperlink(CurrentItemLink)
 							if itemID and whiteList[itemID] then
 								if Rarity == 0 then
-									-- Junk item so do not sell
+									-- Junk item to keep
 									Rarity = 3
 									ItemPrice = 0
-								else
-									-- Not a junk item so sell
+								elseif Rarity == 1 then
+									-- White item to sell
 									Rarity = 0
 								end
 							end
