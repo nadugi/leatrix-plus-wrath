@@ -2271,6 +2271,8 @@
 
 				local keepMsg = ""
 				local sellMsg = ""
+				local dupMsg = ""
+				local novalueMsg = ""
 
 				local tipString = eb.Text:GetText()
 				if tipString and tipString ~= "" then
@@ -2285,14 +2287,35 @@
 									local linkCol = string.sub(tLink, 1, 10)
 									if linkCol then
 										local linkName = tLink:match("%[(.-)%]")
-										if linkName and ItemPrice and ItemPrice > 0 then
-											if not string.find(sellMsg, "(" .. tipList[i] .. ")") then -- Do not list duplicates
+										if linkName and ItemPrice then
+											if ItemPrice > 0 then
 												if Rarity == 0 then
-													-- Junk item so add it to keep list
-													keepMsg = keepMsg .. linkCol .. linkName .. " (" .. tipList[i] .. ")" .. "|r|n"
+													-- Junk item
+													if string.find(keepMsg, "%(" .. tipList[i] .. "%)") then
+														-- Duplicate (ID appears more than once in list)
+														dupMsg = dupMsg .. linkCol .. linkName .. " (" .. tipList[i] .. ")" .. "|r|n"
+													else
+														-- Add junk item to keep list
+														keepMsg = keepMsg .. linkCol .. linkName .. " (" .. tipList[i] .. ")" .. "|r|n"
+													end
 												else
-													-- Non-junk item so add it to sell list
-													sellMsg = sellMsg .. linkCol .. linkName .. " (" .. tipList[i] .. ")" .. "|r|n"
+													-- Non-junk item
+													if string.find(sellMsg, "%(" .. tipList[i] .. "%)") then
+														-- Duplicate (ID appears more than once in list)
+														dupMsg = dupMsg .. linkCol .. linkName .. " (" .. tipList[i] .. ")" .. "|r|n"
+													else
+														-- Add non-junk item to sell list
+														sellMsg = sellMsg .. linkCol .. linkName .. " (" .. tipList[i] .. ")" .. "|r|n"
+													end
+												end
+											else
+												-- Item has no sell price so cannot be sold
+												if string.find(novalueMsg, "%(" .. tipList[i] .. "%)") then
+													-- Duplicate (ID appears more than once in list)
+													dupMsg = dupMsg .. linkCol .. linkName .. " (" .. tipList[i] .. ")" .. "|r|n"
+												else
+													-- Add item to cannot be sold list
+													novalueMsg = novalueMsg .. linkCol .. linkName .. " (" .. tipList[i] .. ")" .. "|r|n"
 												end
 											end
 										end
@@ -2305,10 +2328,12 @@
 
 				if keepMsg ~= "" then keepMsg = "" .. "|n" .. L["Keep"] .. "|n" .. keepMsg end
 				if sellMsg ~= "" then sellMsg = "" .. "|n" .. L["Sell"] .. "|n" .. sellMsg end
+				if dupMsg ~= "" then dupMsg = "" .. "|n" .. L["Duplicates"] .. "|n" .. dupMsg end
+				if novalueMsg ~= "" then novalueMsg = "" .. "|n" .. L["Cannot be sold"] .. "|n" .. novalueMsg end
 
 				eb.tiptext = tipPrefix
-				eb.tiptext = eb.tiptext .. "|n" .. keepMsg .. sellMsg
-				eb.Text.tiptext = keepMsg .. sellMsg
+				eb.tiptext = eb.tiptext .. "|n" .. keepMsg .. sellMsg .. dupMsg .. novalueMsg
+				eb.Text.tiptext = keepMsg .. sellMsg .. dupMsg .. novalueMsg
 
 				if GameTooltip:IsShown() then
 					if MouseIsOver(eb) or MouseIsOver(eb.Text) then
