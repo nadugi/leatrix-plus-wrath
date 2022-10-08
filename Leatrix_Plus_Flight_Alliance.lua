@@ -2310,6 +2310,7 @@
 				["0.42:0.53:0.46:0.46:0.52:0.38:0.62:0.36:0.72:0.29"] = 293, -- Stars' Rest, Fordragon Hold, Dalaran, K3, Dun Nifflelem
 				["0.42:0.53:0.21:0.49:0.24:0.40"] = 191, -- Repos des étoiles, Piste d'atterrissage de Spumelevier, Le Cœur du fleuve
 				["0.42:0.53:0.60:0.52:0.64:0.42:0.72:0.40:0.78:0.38:0.64:0.19"] = 439, -- Stars' Rest, Wintergarde Keep, Ebon Watch, The Argent Stand, Zim'Torga, Ulduar
+				["0.42:0.53:0.46:0.46:0.52:0.38:0.56:0.36:0.57:0.33:0.57:0.21"] = 273, -- Sternenruh, Feste Fordragon, Dalaran, Die Argentumvorhut, Eisfestung, Bergfels' Zuflucht
 
 				-- Alliance: Dragonblight: Wintergarde Keep
 				["0.60:0.52:0.54:0.52"] = 55, -- Wintergarde Keep, Wyrmrest Temple
@@ -2524,6 +2525,7 @@
 				["0.88:0.60:0.76:0.67:0.60:0.52:0.42:0.53:0.22:0.61"] = 466, -- Fort Wildervar, Westguard Keep, Wintergarde Keep, Stars' Rest, Valiance Keep
 				["0.88:0.60:0.73:0.54:0.60:0.52:0.54:0.52:0.52:0.38"] = 318, -- Fort Wildervar, Amberpine Lodge, Wintergarde Keep, Wyrmrest Temple, Dalaran
 				["0.88:0.60:0.73:0.54:0.69:0.42:0.72:0.40:0.78:0.38:0.82:0.31"] = 298, -- Fort Wildervar, Amberpine Lodge, Light's Breach, The Argent Stand, Zim'Torga, Gundrak
+				["0.88:0.60:0.83:0.46:0.78:0.38:0.72:0.29"] = 254, -- Fort Wildervar, Westfallbrigade, Zim'Torga, Dun Niffelem
 
 				-- Alliance: Howling Fjord: Kamagua
 				["0.74:0.71:0.76:0.67"] = 37, -- Kamagua, Westguard Keep
@@ -2562,6 +2564,7 @@
 				["0.74:0.71:0.49:0.58:0.52:0.38:0.56:0.36:0.57:0.33"] = 377, -- Kamagua, Moa'ki, Dalaran, The Argent Vanguard, Frosthold
 				["0.74:0.71:0.76:0.67:0.73:0.54:0.69:0.42:0.64:0.42:0.52:0.38:0.52:0.34:0.28:0.28"] = 475, -- Kamagua, Westguard Keep, Amberpine Lodge, Light's Breach, Ebon Watch, Dalaran, Crusaders' Pinnacle, Death's Rise
 				["0.74:0.71:0.76:0.67:0.73:0.54:0.69:0.42:0.64:0.42:0.62:0.36"] = 256, -- Kamagua, Westwacht, Ammertannhütte, Lichtbresche, Schwarze Wacht, K3
+				["0.74:0.71:0.76:0.67:0.60:0.52:0.64:0.42:0.62:0.36:0.57:0.33"] = 328, -- Kamagua, Westguard Keep, Wintergarde Keep, Ebon Watch, K3, Frosthold
 
 				-- Alliance: Howling Fjord: Valgarde Port, Howling Fjord
 				["0.88:0.72:0.88:0.60"] = 71, -- Valgarde Port, Fort Wildervar
@@ -2711,6 +2714,7 @@
 				["0.28:0.28:0.52:0.34:0.56:0.36:0.52:0.38:0.62:0.36"] = 282, -- Death's Rise, Crusaders' Pinnacle, The Argent Vanguard, Dalaran, K3
 				["0.28:0.28:0.24:0.40:0.21:0.49:0.17:0.53"] = 222, -- Death's Rise, River's Heart, Fizzcrank Airstrip, Amber Ledge
 				["0.28:0.28:0.52:0.34"] = 174, -- Death's Rise, Crusaders' Pinnacle
+				["0.28:0.28:0.52:0.34:0.56:0.36"] = 207, -- Todesanhöhe, Kreuzfahrerturm, Die Argentumvorhut
 
 				-- Alliance: Icecrown: The Argent Vanguard
 				["0.56:0.36:0.57:0.33"] = 40, -- The Argent Vanguard, Frosthold
