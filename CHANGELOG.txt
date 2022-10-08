@@ -1,4 +1,5 @@
 3.0.26.alpha.2 - 8th October 2022
+- For 'Sell junk automatically' ('Automation'), non-junk items entered in the exclusions editbox will be sold automatically.  Junk items entered in the editbox will not be sold automatically (as before).
 - Added flight times.
 
 3.0.25 - 8th October 2022
