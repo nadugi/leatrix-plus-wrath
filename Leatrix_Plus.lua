@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 3.0.26.alpha.1 (8th October 2022)
+-- 	Leatrix Plus 3.0.26.alpha.2 (8th October 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "3.0.26.alpha.1"
+	LeaPlusLC["AddonVer"] = "3.0.26.alpha.2"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -2264,12 +2264,14 @@
 			end)
 
 			-- Editbox tooltip
-			local tipPrefix = L["Enter junk item IDs separated by commas."] .. "|n" .. L["Item IDs can be found in item toolips."] .. "|n" .. L["These items will not be sold."]
+			local tipPrefix = L["Enter item IDs separated by commas."] .. "|n" .. L["Item IDs can be found in item toolips."] .. "|n" .. L["Junk items will not be sold|nNon-junk items will be sold."]
 
 			-- Function to make tooltip string
 			local function MakeTooltipString()
 
-				local msg = ""
+				local keepMsg = ""
+				local sellMsg = ""
+
 				local tipString = eb.Text:GetText()
 				if tipString and tipString ~= "" then
 					tipString = tipString:gsub("[^,%d]", "")
@@ -2278,13 +2280,21 @@
 						if tipList[i] then
 							tipList[i] = tonumber(tipList[i])
 							if tipList[i] and tipList[i] > 0 and tipList[i] < 999999999 then
-								local void, tLink = GetItemInfo(tipList[i])
+								local void, tLink, Rarity, void, void, void, void, void, void, void, ItemPrice = GetItemInfo(tipList[i])
 								if tLink and tLink ~= "" then
 									local linkCol = string.sub(tLink, 1, 10)
 									if linkCol then
 										local linkName = tLink:match("%[(.-)%]")
-										if linkName then
-											msg = msg .. linkCol .. linkName .. " (" .. tipList[i] .. ")".. "|r|n"
+										if linkName and ItemPrice and ItemPrice > 0 then
+											if not string.find(sellMsg, "(" .. tipList[i] .. ")") then -- Do not list duplicates
+												if Rarity == 0 then
+													-- Junk item so add it to keep list
+													keepMsg = keepMsg .. linkCol .. linkName .. " (" .. tipList[i] .. ")" .. "|r|n"
+												else
+													-- Non-junk item so add it to sell list
+													sellMsg = sellMsg .. linkCol .. linkName .. " (" .. tipList[i] .. ")" .. "|r|n"
+												end
+											end
 										end
 									end
 								end
@@ -2293,9 +2303,12 @@
 					end
 				end
 
-				if msg ~= "" then msg = tipPrefix .. "|n|n" .. msg else msg = tipPrefix end
-				eb.tiptext = msg
-				eb.Text.tiptext = msg
+				if keepMsg ~= "" then keepMsg = "" .. "|n" .. L["Keep"] .. "|n" .. keepMsg end
+				if sellMsg ~= "" then sellMsg = "" .. "|n" .. L["Sell"] .. "|n" .. sellMsg end
+
+				eb.tiptext = tipPrefix
+				eb.tiptext = eb.tiptext .. "|n" .. keepMsg .. sellMsg
+				eb.Text.tiptext = keepMsg .. sellMsg
 
 				if GameTooltip:IsShown() then
 					if MouseIsOver(eb) or MouseIsOver(eb.Text) then
@@ -2349,8 +2362,14 @@
 							-- Don't sell whitelisted items
 							local itemID = GetItemInfoFromHyperlink(CurrentItemLink)
 							if itemID and whiteList[itemID] then
-								Rarity = 3
-								ItemPrice = 0
+								if Rarity == 0 then
+									-- Junk item so do not sell
+									Rarity = 3
+									ItemPrice = 0
+								else
+									-- Not a junk item so sell
+									Rarity = 0
+								end
 							end
 							-- Continue
 							local void, itemCount = GetContainerItemInfo(BagID, BagSlot)
