@@ -1645,6 +1645,7 @@
 				["0.17:0.53:0.29:0.54:0.45:0.51:0.48:0.44:0.52:0.38:0.56:0.36"] = 202, -- Amber Ledge, Taunka'le Village, Agmar's Hammer, Kor'koron Vanguard, Dalaran, The Argent Vanguard
 				["0.17:0.53:0.29:0.54:0.29:0.57:0.49:0.58:0.74:0.71:0.85:0.73"] = 311, -- Amber Ledge, Taunka'le Village, Unu'pe, Moa'ki, Kamagua, New Agamand
 				["0.17:0.53:0.29:0.54:0.45:0.51:0.59:0.55:0.70:0.55:0.84:0.51:0.95:0.63"] = 341, -- Amber Ledge, Taunka'le Village, Agmar's Hammer, Venomspite, Conquest Hold, Camp Oneqwah, Vengeance Landing
+				["0.17:0.53:0.18:0.47:0.24:0.40:0.52:0.38"] = 190, -- Amber Ledge, Bor'gorok Outpost, River's Heart, Dalaran
 
 				-- Horde: Borean Tundra: Bor'gorok Outpost
 				["0.18:0.47:0.29:0.54"] = 78, -- Bor'gorok Outpost, Taunka'le Village
