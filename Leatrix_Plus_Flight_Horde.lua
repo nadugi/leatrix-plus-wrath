@@ -3144,6 +3144,7 @@
 				["0.78:0.38:0.72:0.40:0.64:0.42:0.52:0.38:0.24:0.40:0.18:0.40"] = 405, -- Zim'Torga, The Argent Stand, Ebon Watch, Dalaran, River's Heart, Nesingwary Base Camp
 				["0.78:0.38:0.72:0.40:0.69:0.42:0.59:0.55:0.74:0.62:0.84:0.59"] = 354, -- Zim'Torga, The Argent Stand, Light's Breach, Venomspite, Apothecary Camp, Camp Winterhoof
 				["0.78:0.38:0.64:0.19"] = 154, -- Zim'Torga, Ulduar
+				["0.78:0.38:0.64:0.19:0.60:0.25:0.62:0.36"] = 285, -- Zim'Torga, Ulduar, Grom'arsh Crash-Site, K3
 
 			},
 
