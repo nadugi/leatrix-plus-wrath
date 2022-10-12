@@ -2044,6 +2044,7 @@
 				["0.22:0.61:0.42:0.53:0.46:0.46:0.52:0.38:0.56:0.36:0.57:0.33"] = 347, -- Valianzfeste, Sternenruh, Feste Fordragon, Dalaran, Die Argentumvorhut, Eisfestung
 				["0.22:0.61:0.42:0.53:0.54:0.52:0.64:0.42"] = 337, -- Valiance Keep, Stars' Rest, Wyrmrest Temple, Ebon Watch
 				["0.22:0.61:0.29:0.57:0.49:0.58:0.60:0.52:0.64:0.42:0.72:0.40:0.78:0.38:0.64:0.19"] = 581, -- Donjon de la Bravoure, Unu'pe, Moa'ki, Donjon de Garde-hiver, Guet d'Ébène, Le séjour d'Argent, Zim'Torga, Ulduar
+				["0.22:0.61:0.42:0.53:0.60:0.52:0.64:0.42"] = 322, -- Valiance Keep, Stars' Rest, Wintergarde Keep, Ebon Watch
 
 				----------------------------------------------------------------------
 				-- Alliance: Crystalsong Forest
