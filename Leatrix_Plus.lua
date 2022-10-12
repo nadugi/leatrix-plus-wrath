@@ -6597,14 +6597,13 @@
 
 			local function ToggleStats(startup)
 
-				-- ElvUI_WrathArmory: Make character model full size and show character stats
+				-- ElvUI_WrathArmory: Make character model full size
 				if LeaPlusLC.ElvUI then
 					local E = LeaPlusLC.ElvUI:GetModule("ElvUI_WrathArmory", true)
 					if E then
 						CharacterModelFrame:ClearAllPoints()
 						CharacterModelFrame:SetPoint("TOPLEFT", PaperDollFrame, 66, -76)
 						CharacterModelFrame:SetPoint("BOTTOMRIGHT", PaperDollFrame, -86, 134)
-						CharacterResistanceFrame:Show()
 						return
 					end
 				end
