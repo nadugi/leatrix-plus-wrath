@@ -5389,7 +5389,7 @@
 								local mt
 								local Seconds600, Seconds540, Seconds480, Seconds420, Seconds360
 								local Seconds300, Seconds240, Seconds180, Seconds120, Seconds060
-								local Seconds030, Seconds010
+								local Seconds030, Seconds020, Seconds010
 
 								local destination = Enum.VoiceTtsDestination.LocalPlayback
 								local speed = -2
