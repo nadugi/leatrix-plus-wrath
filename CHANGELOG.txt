@@ -1,3 +1,6 @@
+3.0.33.alpha.1 - 15th October 2022
+- Maintenance update.
+
 3.0.32 - 15th October 2022
 - Fixed 'Use class colors in chat' ('Chat') for game version 3.4.0.46158.
 - Added a flight time.
