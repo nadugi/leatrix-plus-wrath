@@ -5387,7 +5387,7 @@
 
 								-- Setup sound files
 								local mt, Seconds300, Seconds240, Seconds180, Seconds120, Seconds060
-								local prefile = "Interface\\AddOns\\Leatrix_Plus\\Leatrix_Plus_Flight_"
+								local prefile = "Interface\\AddOns\\Leatrix_Plus\\sounds\\Leatrix_Plus_Flight_"
 
 								mybar:AddUpdateFunction(function(bar)
 									mt = bar.remaining
