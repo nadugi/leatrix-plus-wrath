@@ -7975,7 +7975,9 @@
 				for i = 1, 18 do
 					if _G["ChatConfigChatSettingsLeftCheckBox" .. i .. "Check"] then
 						ToggleChatColorNamesByClassGroup(true, _G["ChatConfigChatSettingsLeftCheckBox" .. i .. "Check"]:GetParent().type)
-						LeaPlusLC:LockItem(_G["ChatConfigChatSettingsLeftCheckBox" .. i .. "ColorClasses"], true)
+						if _G["ChatConfigChatSettingsLeftCheckBox" .. i .. "ColorClasses"] then
+							LeaPlusLC:LockItem(_G["ChatConfigChatSettingsLeftCheckBox" .. i .. "ColorClasses"], true)
+						end
 					end
 				end
 
