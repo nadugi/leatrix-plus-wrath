@@ -5384,6 +5384,41 @@
 								mybar:SetPoint(LeaPlusLC["FlightBarA"], UIParent, LeaPlusLC["FlightBarR"], LeaPlusLC["FlightBarX"], LeaPlusLC["FlightBarY"])
 								mybar:SetScale(LeaPlusLC["FlightBarScale"])
 								mybar:SetWidth(LeaPlusLC["FlightBarWidth"])
+
+								-- Setup sound files
+								local mt, Seconds300, Seconds180, Seconds120, Seconds060, Seconds030, Seconds020, Seconds010
+								local Seconds009, Seconds008, Seconds007, Seconds006, Seconds005, Seconds004, Seconds003, Seconds002, Seconds001, Seconds000
+								local prefile = "Interface\\AddOns\\Leatrix_Plus\\sounds\\Leatrix_Plus_Flight_UT_"
+
+								mybar:AddUpdateFunction(function(bar)
+									mt = bar.remaining
+
+										if mt > 300 and mt < 301 and not Seconds300 then PlaySoundFile(prefile .. "300.mp3", "Master");	Seconds300 = true
+									elseif mt > 180 and mt < 181 and not Seconds180 then PlaySoundFile(prefile .. "180.mp3", "Master");	Seconds180 = true
+									elseif mt > 120 and mt < 121 and not Seconds120 then PlaySoundFile(prefile .. "120.mp3", "Master");	Seconds120 = true
+									elseif mt > 060 and mt < 061 and not Seconds060 then PlaySoundFile(prefile .. "060.mp3", "Master");	Seconds060 = true
+									elseif mt > 030 and mt < 031 and not Seconds030 then PlaySoundFile(prefile .. "030.mp3", "Master");	Seconds030 = true
+									elseif mt > 020 and mt < 021 and not Seconds020 then PlaySoundFile(prefile .. "020.mp3", "Master");	Seconds020 = true
+									elseif mt > 010 and mt < 011 and not Seconds010 then PlaySoundFile(prefile .. "010.mp3", "Master");	Seconds010 = true
+									elseif mt > 009 and mt < 010 and not Seconds009 then PlaySoundFile(prefile .. "009.mp3", "Master");	Seconds009 = true
+									elseif mt > 008 and mt < 009 and not Seconds008 then PlaySoundFile(prefile .. "008.mp3", "Master");	Seconds008 = true
+									elseif mt > 007 and mt < 008 and not Seconds007 then PlaySoundFile(prefile .. "007.mp3", "Master");	Seconds007 = true
+									elseif mt > 006 and mt < 007 and not Seconds006 then PlaySoundFile(prefile .. "006.mp3", "Master");	Seconds006 = true
+									elseif mt > 005 and mt < 006 and not Seconds005 then PlaySoundFile(prefile .. "005.mp3", "Master");	Seconds005 = true
+									elseif mt > 004 and mt < 005 and not Seconds004 then PlaySoundFile(prefile .. "004.mp3", "Master");	Seconds004 = true
+									elseif mt > 003 and mt < 004 and not Seconds003 then PlaySoundFile(prefile .. "003.mp3", "Master");	Seconds003 = true
+									elseif mt > 002 and mt < 003 and not Seconds002 then PlaySoundFile(prefile .. "002.mp3", "Master");	Seconds002 = true
+									elseif mt > 001 and mt < 002 and not Seconds001 then PlaySoundFile(prefile .. "001.mp3", "Master");	Seconds001 = true
+									elseif mt > 000 and mt < 001 and not Seconds000 then
+										if faction == "Alliance" then
+											PlaySoundFile(prefile .. "999_Blue.mp3")
+										else
+											PlaySoundFile(prefile .. "999_Red.mp3")
+										end
+										Seconds000 = true
+									end
+								end)
+
 								if faction == "Alliance" then
 									mybar:SetColor(0, 0.5, 1, 0.5)
 								else
