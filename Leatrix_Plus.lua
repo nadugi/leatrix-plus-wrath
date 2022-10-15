@@ -5386,12 +5386,20 @@
 								mybar:SetWidth(LeaPlusLC["FlightBarWidth"])
 
 								-- Setup sound files
-								local mt, Seconds300, Seconds240, Seconds180, Seconds120, Seconds060
+								local mt
+								local Seconds600, Seconds540, Seconds480, Seconds420, Seconds360
+								local Seconds300, Seconds240, Seconds180, Seconds120, Seconds060
 								local prefile = "Interface\\AddOns\\Leatrix_Plus\\sounds\\Leatrix_Plus_Flight_"
 
 								mybar:AddUpdateFunction(function(bar)
 									mt = bar.remaining
-										if mt > 300 and mt < 301 and not Seconds300 then PlaySoundFile(prefile .. "300.mp3", "Master");	Seconds300 = true
+										if mt > 600 and mt < 601 and not Seconds600 then PlaySoundFile(prefile .. "300.mp3", "Master");	Seconds600 = true
+									elseif mt > 540 and mt < 541 and not Seconds540 then PlaySoundFile(prefile .. "300.mp3", "Master");	Seconds540 = true
+									elseif mt > 480 and mt < 481 and not Seconds480 then PlaySoundFile(prefile .. "300.mp3", "Master");	Seconds480 = true
+									elseif mt > 420 and mt < 421 and not Seconds420 then PlaySoundFile(prefile .. "300.mp3", "Master");	Seconds420 = true
+									elseif mt > 360 and mt < 361 and not Seconds360 then PlaySoundFile(prefile .. "300.mp3", "Master");	Seconds360 = true
+
+									elseif mt > 300 and mt < 301 and not Seconds300 then PlaySoundFile(prefile .. "300.mp3", "Master");	Seconds300 = true
 									elseif mt > 240 and mt < 241 and not Seconds240 then PlaySoundFile(prefile .. "240.mp3", "Master");	Seconds240 = true
 									elseif mt > 180 and mt < 181 and not Seconds180 then PlaySoundFile(prefile .. "180.mp3", "Master");	Seconds180 = true
 									elseif mt > 120 and mt < 121 and not Seconds120 then PlaySoundFile(prefile .. "120.mp3", "Master");	Seconds120 = true
