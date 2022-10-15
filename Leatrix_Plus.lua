@@ -5392,27 +5392,29 @@
 								local Seconds030, Seconds010
 
 								local destination = Enum.VoiceTtsDestination.LocalPlayback
+								local speed = -2
 
-								C_Timer.After(1, function()
-									C_VoiceChat.SpeakText(0, "Flight commenced.", destination, -2, 100)
-								end)
-
-								mybar:AddUpdateFunction(function(bar)
-									mt = bar.remaining
-										if mt > 600 and mt < 601 and not Seconds600 then C_VoiceChat.SpeakText(0, "Ten minutes remain.", destination, -2, 100); Seconds600 = true
-									elseif mt > 540 and mt < 541 and not Seconds540 then C_VoiceChat.SpeakText(0, "Nine minutes remain.", destination, -2, 100); Seconds540 = true
-									elseif mt > 480 and mt < 481 and not Seconds480 then C_VoiceChat.SpeakText(0, "Eight minutes remain.", destination, -2, 100); Seconds480 = true
-									elseif mt > 420 and mt < 421 and not Seconds420 then C_VoiceChat.SpeakText(0, "Seven minutes remain.", destination, -2, 100); Seconds420 = true
-									elseif mt > 360 and mt < 361 and not Seconds360 then C_VoiceChat.SpeakText(0, "Six minutes remain.", destination, -2, 100); Seconds360 = true
-									elseif mt > 300 and mt < 301 and not Seconds300 then C_VoiceChat.SpeakText(0, "Five minutes remain.", destination, -2, 100); Seconds300 = true
-									elseif mt > 240 and mt < 241 and not Seconds240 then C_VoiceChat.SpeakText(0, "Four minutes remain.", destination, -2, 100); Seconds240 = true
-									elseif mt > 180 and mt < 181 and not Seconds180 then C_VoiceChat.SpeakText(0, "Three minutes remain.", destination, -2, 100); Seconds180 = true
-									elseif mt > 120 and mt < 121 and not Seconds120 then C_VoiceChat.SpeakText(0, "Two minutes remain.", destination, -2, 100); Seconds120 = true
-									elseif mt > 060 and mt < 061 and not Seconds060 then C_VoiceChat.SpeakText(0, "One minute remains.", destination, -2, 100); Seconds060 = true
-									elseif mt > 030 and mt < 031 and not Seconds030 then C_VoiceChat.SpeakText(0, "30 seconds.", destination, -2, 100); Seconds030 = true
-									elseif mt > 010 and mt < 011 and not Seconds010 then C_VoiceChat.SpeakText(0, "10 seconds.", destination, -2, 100); Seconds010 = true
-									end
-								end)
+								if LeaPlusLC["FlightBarSpeech"] == "On" then
+									C_Timer.After(1, function()
+										C_VoiceChat.SpeakText(0, "Flight commenced.", destination, speed, 100)
+									end)
+									mybar:AddUpdateFunction(function(bar)
+										mt = bar.remaining
+											if mt > 600 and mt < 601 and not Seconds600 then Seconds600 = true; C_VoiceChat.SpeakText(0, "Ten minutes.", destination, speed, 100)
+										elseif mt > 540 and mt < 541 and not Seconds540 then Seconds540 = true; C_VoiceChat.SpeakText(0, "Nine minutes.", destination, speed, 100)
+										elseif mt > 480 and mt < 481 and not Seconds480 then Seconds480 = true; C_VoiceChat.SpeakText(0, "Eight minutes.", destination, speed, 100)
+										elseif mt > 420 and mt < 421 and not Seconds420 then Seconds420 = true; C_VoiceChat.SpeakText(0, "Seven minutes.", destination, speed, 100)
+										elseif mt > 360 and mt < 361 and not Seconds360 then Seconds360 = true; C_VoiceChat.SpeakText(0, "Six minutes.", destination, speed, 100)
+										elseif mt > 300 and mt < 301 and not Seconds300 then Seconds300 = true; C_VoiceChat.SpeakText(0, "Five minutes.", destination, speed, 100)
+										elseif mt > 240 and mt < 241 and not Seconds240 then Seconds240 = true; C_VoiceChat.SpeakText(0, "Four minutes.", destination, speed, 100)
+										elseif mt > 180 and mt < 181 and not Seconds180 then Seconds180 = true; C_VoiceChat.SpeakText(0, "Three minutes.", destination, speed, 100)
+										elseif mt > 120 and mt < 121 and not Seconds120 then Seconds120 = true; C_VoiceChat.SpeakText(0, "Two minutes.", destination, speed, 100)
+										elseif mt > 060 and mt < 061 and not Seconds060 then Seconds060 = true; C_VoiceChat.SpeakText(0, "One minute.", destination, speed, 100)
+										elseif mt > 030 and mt < 031 and not Seconds030 then Seconds030 = true; C_VoiceChat.SpeakText(0, "30 seconds.", destination, speed, 100)
+										elseif mt > 010 and mt < 011 and not Seconds010 then Seconds010 = true; C_VoiceChat.SpeakText(0, "10 seconds.", destination, speed, 100)
+										end
+									end)
+								end
 
 								if faction == "Alliance" then
 									mybar:SetColor(0, 0.5, 1, 0.5)
@@ -5614,9 +5616,10 @@
 			LeaPlusLC:MakeCB(FlightPanel, "FlightBarBackground", "Show background", 16, -92, false, "If checked, the flight progress bar background texture will be shown.")
 			LeaPlusLC:MakeCB(FlightPanel, "FlightBarDestination", "Show destination", 16, -112, false, "If checked, the flight progress bar destination will be shown.")
 			LeaPlusLC:MakeCB(FlightPanel, "FlightBarFillBar", "Fill instead of drain", 16, -132, false, "If checked, the flight progress bar background will fill instead of drain.")
+			LeaPlusLC:MakeCB(FlightPanel, "FlightBarSpeech", "Speak the remaining time", 16, -152, false, "If checked, the remaining flight time will be spoken using text to speech.")
 
-			LeaPlusLC:MakeTx(FlightPanel, "Contribute", 16, -172)
-			LeaPlusLC:MakeCB(FlightPanel, "FlightBarContribute", "Help contribute flight times", 16, -192, false, "If checked, you will be prompted to submit missing flight times.")
+			LeaPlusLC:MakeTx(FlightPanel, "Contribute", 16, -192)
+			LeaPlusLC:MakeCB(FlightPanel, "FlightBarContribute", "Help contribute flight times", 16, -212, false, "If checked, you will be prompted to submit missing flight times.")
 
 			LeaPlusLC:MakeTx(FlightPanel, "Scale", 356, -72)
 			LeaPlusLC:MakeSL(FlightPanel, "FlightBarScale", "Drag to set the flight progress bar scale.", 1, 5, 0.1, 356, -92, "%.2f")
@@ -5744,6 +5747,7 @@
 				LeaPlusLC["FlightBarBackground"] = "On"
 				LeaPlusLC["FlightBarDestination"] = "On"
 				LeaPlusLC["FlightBarFillBar"] = "Off"; SetProgressBarFillMode()
+				LeaPlusLC["FlightBarSpeech"] = "On"
 				LeaPlusLC["FlightBarContribute"] = "On"
 				-- Reset live progress bar
 				if LeaPlusLC.FlightProgressBar then
@@ -12446,6 +12450,7 @@
 				LeaPlusLC:LoadVarChk("FlightBarBackground", "On")			-- Show flight times bar background
 				LeaPlusLC:LoadVarChk("FlightBarDestination", "On")			-- Show flight times bar destination
 				LeaPlusLC:LoadVarChk("FlightBarFillBar", "Off")				-- Show flight times bar fill mode
+				LeaPlusLC:LoadVarChk("FlightBarSpeech", "On")				-- Show flight times bar speech
 
 				LeaPlusLC:LoadVarChk("FlightBarContribute", "On")			-- Show flight times contribute
 				LeaPlusLC:LoadVarAnc("FlightBarA", "TOP")					-- Show flight times anchor
@@ -12817,6 +12822,7 @@
 			LeaPlusDB["FlightBarBackground"]	= LeaPlusLC["FlightBarBackground"]
 			LeaPlusDB["FlightBarDestination"]	= LeaPlusLC["FlightBarDestination"]
 			LeaPlusDB["FlightBarFillBar"]		= LeaPlusLC["FlightBarFillBar"]
+			LeaPlusDB["FlightBarSpeech"]		= LeaPlusLC["FlightBarSpeech"]
 
 			LeaPlusDB["FlightBarContribute"]	= LeaPlusLC["FlightBarContribute"]
 			LeaPlusDB["FlightBarA"]				= LeaPlusLC["FlightBarA"]
@@ -14929,6 +14935,7 @@
 				LeaPlusDB["FlightBarBackground"] = "Off"		-- Show flight times bar background
 				LeaPlusDB["FlightBarDestination"] = "On"		-- Show flight times bar destination
 				LeaPlusDB["FlightBarFillBar"] = "Off"			-- Show flight times bar fill mode
+				LeaPlusDB["FlightBarSpeech"] = "On"				-- Show flight times bar speech
 				LeaPlusDB["FlightBarContribute"] = "On"			-- Show flight times contribute
 
 				-- Interface: Manage frames

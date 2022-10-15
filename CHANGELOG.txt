@@ -1,5 +1,5 @@
 3.0.33.alpha.1 - 15th October 2022
-- Maintenance update.
+- For 'Show flight times', you can now have the remaining time spoken to you using text to speech.  The time will be announced once a minute and at 30 seconds, 20 seconds and 10 seconds.  This setting is enabled by default.
 
 3.0.32 - 15th October 2022
 - Fixed 'Use class colors in chat' ('Chat') for game version 3.4.0.46158.
