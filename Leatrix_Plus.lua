@@ -5411,6 +5411,7 @@
 										elseif mt > 120 and mt < 121 and not Seconds120 then Seconds120 = true; C_VoiceChat.SpeakText(0, "Two minutes.", destination, speed, 100)
 										elseif mt > 060 and mt < 061 and not Seconds060 then Seconds060 = true; C_VoiceChat.SpeakText(0, "One minute.", destination, speed, 100)
 										elseif mt > 030 and mt < 031 and not Seconds030 then Seconds030 = true; C_VoiceChat.SpeakText(0, "30 seconds.", destination, speed, 100)
+										elseif mt > 020 and mt < 021 and not Seconds020 then Seconds020 = true; C_VoiceChat.SpeakText(0, "20 seconds.", destination, speed, 100)
 										elseif mt > 010 and mt < 011 and not Seconds010 then Seconds010 = true; C_VoiceChat.SpeakText(0, "10 seconds.", destination, speed, 100)
 										end
 									end)
