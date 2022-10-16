@@ -2630,6 +2630,7 @@
 				["0.88:0.60:0.73:0.54:0.69:0.42:0.72:0.40:0.78:0.38"] = 245, -- Fort Wildervar, Amberpine Lodge, Light's Breach, The Argent Stand, Zim'Torga
 				["0.88:0.60:0.73:0.54:0.60:0.52:0.46:0.46"] = 267, -- Fort Wildervar, Amberpine Lodge, Wintergarde Keep, Fordragon Hold
 				["0.88:0.60:0.76:0.67:0.60:0.52:0.42:0.53:0.21:0.49"] = 464, -- Fort Wildervar, Westguard Keep, Wintergarde Keep, Stars' Rest, Fizzcrank Airstrip
+				["0.88:0.60:0.73:0.54:0.60:0.52:0.59:0.43:0.52:0.38"] = 289, -- Fort Wildervar, Amberpine Lodge, Wintergarde Keep, Windrunner's Overlook, Dalaran
 
 				-- Alliance: Howling Fjord: Kamagua
 				["0.74:0.71:0.76:0.67"] = 37, -- Kamagua, Westguard Keep
@@ -2829,6 +2830,7 @@
 				["0.52:0.34:0.38:0.21"] = 124, -- Kreuzfahrerturm, Das Schattengewölbe
 				["0.52:0.34:0.41:0.43:0.42:0.53:0.21:0.49:0.17:0.53:0.12:0.53"] = 394, -- Crusaders' Pinnacle, Valiance Landing Camp, Stars' Rest, Fizzcrank Airstrip, Amber Ledge, Transitus Shield
 				["0.52:0.34:0.41:0.43:0.42:0.53:0.29:0.57"] = 285, -- Crusaders' Pinnacle, Valiance Landing Camp, Stars' Rest, Unu'pe
+				["0.52:0.34:0.56:0.36:0.52:0.38:0.64:0.42:0.60:0.52"] = 191, -- Crusaders' Pinnacle, The Argent Vanguard, Dalaran, Ebon Watch, Wintergarde Keep
 
 				-- Alliance: Icecrown: Death's Rise
 				["0.28:0.28:0.52:0.34:0.56:0.36:0.52:0.38"] = 238, -- Death's Rise, Crusaders' Pinnacle, The Argent Vanguard, Dalaran
