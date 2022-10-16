@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 3.0.34.alpha.1 (16th October 2022)
+-- 	Leatrix Plus 3.0.34.alpha.2 (16th October 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "3.0.34.alpha.1"
+	LeaPlusLC["AddonVer"] = "3.0.34.alpha.2"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -1634,6 +1634,13 @@
 						or npcID == "18253" -- Archmage Leryda (Violet Signet, Karazhan)
 						then
 							return true
+						end
+						-- Same but for specific NPCs with special requirements
+						if npcID == "32540" then -- Lillehoff (The Sons of Hodir Quartermaster, The Storm Peaks)
+							local name, description, standingID = GetFactionInfoByID(1119)
+							if standingID and standingID >= 8 then -- Dont automate quests if exalted
+								return true
+							end
 						end
 						-- Ignore specific NPCs for accepting quests only
 						if actionType == "Accept" then
