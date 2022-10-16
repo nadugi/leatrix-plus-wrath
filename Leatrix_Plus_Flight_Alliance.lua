@@ -2960,6 +2960,7 @@
 				["0.18:0.40:0.21:0.49:0.42:0.53:0.60:0.52:0.73:0.54:0.88:0.60"] = 772, -- Nesingwary Base Camp, Fizzcrank Airstrip, Stars' Rest, Wintergarde Keep, Amberpine Lodge, Fort Wildervar
 				["0.18:0.40:0.24:0.40:0.52:0.38:0.62:0.36:0.57:0.33"] = 495, -- Nesingwary Base Camp, River's Heart, Dalaran, K3, Frosthold
 				["0.18:0.40:0.24:0.40:0.52:0.38:0.56:0.36"] = 397, -- Nesingwary Base Camp, River's Heart, Dalaran, The Argent Vanguard
+				["0.18:0.40:0.24:0.40:0.52:0.38:0.49:0.58"] = 587, -- Nesingwary Base Camp, River's Heart, Dalaran, Moa'ki
 
 				-- Alliance: Sholazar Basin: River's Heart
 				["0.24:0.40:0.21:0.49"] = 104, -- River's Heart, Fizzcrank Airstrip
@@ -3045,6 +3046,7 @@
 				["0.57:0.21:0.56:0.36:0.52:0.38"] = 278, -- Bergfels' Zuflucht, Die Argentumvorhut, Dalaran
 				["0.57:0.21:0.28:0.28:0.24:0.40"] = 307, -- Bouldercrag's Refuge, Death's Rise, River's Heart
 				["0.57:0.21:0.64:0.19:0.78:0.38"] = 198, -- Bouldercrag's Refuge, Ulduar, Zim'Torga
+				["0.57:0.21:0.64:0.19:0.78:0.38:0.72:0.40:0.64:0.42:0.62:0.36"] = 342, -- Bouldercrag's Refuge, Ulduar, Zim'Torga, The Argent Stand, Ebon Watch, K3
 
 				-- Alliance: The Storm Peaks: Dun Nifflelem
 				["0.72:0.29:0.64:0.19:0.57:0.21"] = 133, -- Dun Nifflelem, Ulduar, Bouldercrag's Refuge
@@ -3094,6 +3096,7 @@
 				["0.72:0.29:0.62:0.36:0.64:0.42:0.60:0.52:0.76:0.67"] = 312, -- Dun Nifflelem, K3, Ebon Watch, Wintergarde Keep, Westguard Keep
 				["0.72:0.29:0.62:0.36:0.52:0.38:0.24:0.40:0.21:0.49:0.17:0.53:0.12:0.53"] = 501, -- Dun Nifflelem, K3, Dalaran, River's Heart, Fizzcrank Airstrip, Amber Ledge, Transitus Shield
 				["0.72:0.29:0.78:0.38:0.72:0.40:0.69:0.42"] = 165, -- Dun Nifflelem, Zim'Torga, The Argent Stand, Light's Breach
+				["0.72:0.29:0.64:0.19:0.57:0.33:0.56:0.36:0.52:0.38"] = 251, -- Dun Nifflelem, Ulduar, Frosthold, The Argent Vanguard, Dalaran
 
 				-- Alliance: The Storm Peaks: Frosthold
 				["0.57:0.33:0.56:0.36:0.52:0.34"] = 61, -- Frosthold, The Argent Vanguard, Crusaders' Pinnacle
