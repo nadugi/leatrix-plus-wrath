@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 3.0.34.alpha.3 (16th October 2022)
+-- 	Leatrix Plus 3.0.34 (17th October 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "3.0.34.alpha.3"
+	LeaPlusLC["AddonVer"] = "3.0.34"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -5755,7 +5755,7 @@
 				LeaPlusLC["FlightBarBackground"] = "On"
 				LeaPlusLC["FlightBarDestination"] = "On"
 				LeaPlusLC["FlightBarFillBar"] = "Off"; SetProgressBarFillMode()
-				LeaPlusLC["FlightBarSpeech"] = "On"
+				LeaPlusLC["FlightBarSpeech"] = "Off"
 				LeaPlusLC["FlightBarContribute"] = "On"
 				-- Reset live progress bar
 				if LeaPlusLC.FlightProgressBar then
@@ -12458,7 +12458,7 @@
 				LeaPlusLC:LoadVarChk("FlightBarBackground", "On")			-- Show flight times bar background
 				LeaPlusLC:LoadVarChk("FlightBarDestination", "On")			-- Show flight times bar destination
 				LeaPlusLC:LoadVarChk("FlightBarFillBar", "Off")				-- Show flight times bar fill mode
-				LeaPlusLC:LoadVarChk("FlightBarSpeech", "On")				-- Show flight times bar speech
+				LeaPlusLC:LoadVarChk("FlightBarSpeech", "Off")				-- Show flight times bar speech
 
 				LeaPlusLC:LoadVarChk("FlightBarContribute", "On")			-- Show flight times contribute
 				LeaPlusLC:LoadVarAnc("FlightBarA", "TOP")					-- Show flight times anchor

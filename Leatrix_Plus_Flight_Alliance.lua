@@ -2536,6 +2536,7 @@
 				["0.73:0.54:0.60:0.52:0.42:0.53:0.21:0.49:0.18:0.40"] = 391, -- Amberpine Lodge, Wintergarde Keep, Stars' Rest, Fizzcrank Airstrip, Nesingwary Base Camp
 				["0.73:0.54:0.60:0.52:0.49:0.58:0.29:0.57:0.22:0.61"] = 365, -- Amberpine Lodge, Wintergarde Keep, Moa'ki, Unu'pe, Valiance Keep
 				["0.73:0.54:0.60:0.52:0.46:0.46:0.52:0.38"] = 237, -- Amberpine Lodge, Wintergarde Keep, Fordragon Hold, Dalaran
+				["0.73:0.54:0.60:0.52:0.46:0.46:0.41:0.43:0.24:0.40"] = 368, -- Amberpine Lodge, Wintergarde Keep, Fordragon Hold, Valiance Landing Camp, River's Heart
 
 				-- Alliance: Grizzly Hills: Westfall Brigade
 				["0.83:0.46:0.73:0.54"] = 79, -- Westfall Brigade, Amberpine Lodge
@@ -2915,9 +2916,10 @@
 				["0.56:0.36:0.52:0.38:0.46:0.46:0.42:0.53:0.21:0.49:0.17:0.53:0.12:0.53"] = 399, -- The Argent Vanguard, Dalaran, Fordragon Hold, Stars' Rest, Fizzcrank Airstrip, Amber Ledge, Transitus Shield
 				["0.56:0.36:0.28:0.28"] = 225, -- The Argent Vanguard, Death's Rise
 				["0.56:0.36:0.52:0.38:0.49:0.58:0.42:0.53:0.22:0.61:0.17:0.53"] = 422, -- Die Argentumvorhut, Dalaran, Moa'ki, Sternenruh, Valianzfeste, Bernsteinflöz
+				["0.56:0.36:0.52:0.38:0.54:0.52:0.42:0.53:0.29:0.57"] = 303, -- The Argent Vanguard, Dalaran, Wyrmrest Temple, Stars' Rest, Unu'pe
 
 				-- Alliance: Icecrown: The Shadow Vault
-				["0.38:0.21:0.52:0.38"] = 191, -- The Shadow Vault, Dalaran (changed to 191 by Jamie Erving and Jeff S Higgins, was 166)
+				["0.38:0.21:0.52:0.38"] = 166, -- The Shadow Vault, Dalaran (Jamie Erving and Jeff S Higgins repored 191 while Darrin Pearson, Toby Harris, James Rhee and Leatrix reported 166)
 				["0.38:0.21:0.46:0.46:0.60:0.52"] = 277, -- The Shadow Vault, Fordragon Hold, Wintergarde Keep
 				["0.38:0.21:0.52:0.38:0.64:0.42:0.72:0.40"] = 295, -- Das Schattengewölbe, Dalaran, Schwarze Wacht, Argentumwache
 				["0.38:0.21:0.28:0.28"] = 78, -- The Shadow Vault, Death's Rise
@@ -3445,6 +3447,7 @@
 				["0.69:0.42:0.60:0.52:0.54:0.52:0.52:0.38:0.62:0.36"] = 268, -- Light's Breach, Wintergarde Keep, Wyrmrest Temple, Dalaran, K3
 				["0.69:0.42:0.64:0.42:0.52:0.38:0.52:0.34:0.28:0.28"] = 300, -- Light's Breach, Ebon Watch, Dalaran, Crusaders' Pinnacle, Death's Rise
 				["0.69:0.42:0.64:0.42:0.62:0.36"] = 80, -- Light's Breach, Ebon Watch, K3
+				["0.69:0.42:0.64:0.42:0.52:0.38:0.52:0.34:0.38:0.21"] = 255, -- Light's Breach, Ebon Watch, Dalaran, Crusaders' Pinnacle, The Shadow Vault
 
 				-- Alliance: Zul'Drak: The Argent Stand
 				["0.72:0.40:0.78:0.38"] = 42, -- The Argent Stand, Zim'Torga
