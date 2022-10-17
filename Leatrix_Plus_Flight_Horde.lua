@@ -2091,6 +2091,7 @@
 				["0.52:0.38:0.24:0.40:0.18:0.47:0.29:0.54:0.45:0.51"] = 432, -- Dalaran, Flussnabel, Bor'goroks Außenposten, Taunka'le, Agmars Hammer
 				["0.52:0.38:0.62:0.36:0.60:0.25:0.64:0.19:0.78:0.38:0.82:0.31"] = 388, -- Dalaran, K3, Grom'arsh Crash-Site, Ulduar, Zim'Torga, Gundrak
 				["0.52:0.38:0.31:0.43:0.28:0.28"] = 273, -- Dalaran, Warsong Camp, Death's Rise
+				["0.52:0.38:0.49:0.58:0.59:0.55:0.70:0.55:0.84:0.51:0.72:0.40"] = 477, -- Dalaran, Moa'ki, Venomspite, Conquest Hold, Camp Oneqwah, The Argent Stand
 
 				----------------------------------------------------------------------
 				-- Horde: Dragonblight
@@ -2286,6 +2287,7 @@
 				["0.59:0.55:0.64:0.42:0.62:0.36"] = 124, -- Venomspite, Ebon Watch, K3
 				["0.59:0.55:0.49:0.58:0.74:0.71"] = 266, -- Venomspite, Moa'ki, Kamagua
 				["0.59:0.55:0.48:0.44:0.52:0.38"] = 176, -- Venomspite, Kor'koron Vanguard, Dalaran
+				["0.59:0.55:0.54:0.52:0.45:0.51:0.31:0.43:0.24:0.40"] = 311, -- Venomspite, Wyrmrest Temple, Agmar's Hammer, Warsong Camp, River's Heart
 
 				-- Horde: Dragonblight: Wyrmrest Temple
 				["0.54:0.52:0.52:0.38"] = 65, -- Wyrmrest Temple, Dalaran
@@ -2916,6 +2918,7 @@
 				["0.24:0.40:0.31:0.43:0.45:0.51:0.48:0.44"] = 370, -- River's Heart, Warsong Camp, Agmar's Hammer, Kor'koron Vanguard
 				["0.24:0.40:0.31:0.43:0.45:0.51:0.49:0.58:0.29:0.57"] = 565, -- River's Heart, Warsong Camp, Agmar's Hammer, Moa'ki, Unu'pe
 				["0.24:0.40:0.31:0.43:0.29:0.54:0.29:0.57"] = 291, -- River's Heart, Warsong Camp, Taunka'le Village, Unu'pe
+				["0.24:0.40:0.31:0.43:0.29:0.54:0.17:0.53"] = 359, -- River's Heart, Warsong Camp, Taunka'le Village, Amber Ledge
 
 				----------------------------------------------------------------------
 				-- Horde: The Storm Peaks
