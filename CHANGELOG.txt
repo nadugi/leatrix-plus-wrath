@@ -1,3 +1,6 @@
+3.0.36 - 19th October 2022
+- Added flight times.
+
 3.0.35 - 18th October 2022
 - Added flight times.
 
