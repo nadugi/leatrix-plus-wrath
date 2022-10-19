@@ -2486,6 +2486,7 @@
 				["0.74:0.62:0.59:0.55:0.54:0.52:0.48:0.44"] = 235, -- Apothecary Camp, Venomspite, Wyrmrest Temple, Kor'koron Vanguard
 				["0.74:0.62:0.70:0.55:0.69:0.42:0.72:0.40"] = 170, -- Apothekerlager, Burg Siegeswall, Lichtbresche, Argentumwache
 				["0.74:0.62:0.59:0.55:0.54:0.52:0.45:0.51:0.29:0.54:0.17:0.53"] = 424, -- Apothecary Camp, Venomspite, Wyrmrest Temple, Agmar's Hammer, Taunka'le Village, Amber Ledge
+				["0.74:0.62:0.59:0.55:0.54:0.52:0.45:0.51:0.31:0.43:0.24:0.40"] = 429, -- Apothecary Camp, Venomspite, Wyrmrest Temple, Agmar's Hammer, Warsong Camp, River's Heart
 
 				-- Horde: Howling Fjord: Camp Oneqwah
 				["0.84:0.51:0.84:0.59"] = 49, -- Camp Oneqwah, Camp Winterhoof
@@ -2782,6 +2783,7 @@
 				["0.28:0.28:0.18:0.40:0.18:0.47:0.17:0.53:0.12:0.53"] = 270, -- Death's Rise, Nesingwary Base Camp, Bor'gorok Outpost, Amber Ledge, Transitus Shield
 				["0.28:0.28:0.38:0.21:0.56:0.36:0.52:0.38:0.64:0.42:0.69:0.42:0.70:0.55"] = 443, -- Ascenso de la Muerte, La Cámara de las Sombras, La Vanguardia Argenta, Dalaran, Puesto de Vigilancia de Ébano, Brecha de la Luz, Bastión de la Conquista
 				["0.28:0.28:0.38:0.21:0.56:0.36:0.52:0.38"] = 258, -- Death's Rise, The Shadow Vault, The Argent Vanguard, Dalaran
+				["0.28:0.28:0.52:0.34:0.56:0.36:0.52:0.38:0.64:0.42:0.69:0.42:0.84:0.51:0.84:0.59"] = 501, -- Death's Rise, Crusaders' Pinnacle, The Argent Vanguard, Dalaran, Ebon Watch, Light's Breach, Camp Oneqwah, Camp Winterhoof
 
 				-- Horde: Icecrown: The Argent Vanguard
 				["0.56:0.36:0.52:0.38"] = 32, -- The Argent Vanguard, Dalaran
