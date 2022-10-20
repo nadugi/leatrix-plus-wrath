@@ -2373,6 +2373,7 @@
 				["0.54:0.52:0.52:0.38:0.62:0.36:0.72:0.29"] = 161, -- Wyrmrest Temple, Dalaran, K3, Dun Nifflelem
 				["0.54:0.52:0.52:0.38:0.56:0.36:0.38:0.21"] = 178, -- Wyrmrest Temple, Dalaran, The Argent Vanguard, The Shadow Vault
 				["0.54:0.52:0.49:0.58:0.29:0.57:0.29:0.54:0.17:0.53:0.12:0.53"] = 211, -- Templo del Reposo del Dragón, Moa'ki, Unu'pe, Poblado Taunka'le, El Saliente Ámbar, Escudo de Tránsito
+				["0.54:0.52:0.52:0.38:0.56:0.36:0.60:0.25"] = 148, -- Wyrmrest Temple, Dalaran, The Argent Vanguard, Grom'arsh Crash-Site, Grom'arsh Crash-Site
 
 				----------------------------------------------------------------------
 				-- Horde: Grizzly Hills
