@@ -248,6 +248,7 @@
 				["0.50:0.75:0.41:0.73:0.47:0.65:0.53:0.61"] = 311, -- Lakeshire, Stormwind, Thorium Point, Thelsamar
 				["0.50:0.75:0.41:0.73:0.47:0.59:0.51:0.47:0.50:0.42"] = 547, -- Lakeshire, Stormwind, Ironforge, Refuge Pointe, Aerie Peak
 				["0.50:0.75:0.41:0.73:0.47:0.59:0.48:0.39:0.51:0.36"] = 581, -- Lakeshire, Stormwind, Ironforge, Chillwind Camp, Thondoril River
+				["0.50:0.75:0.41:0.73:0.41:0.93"] = 297, -- Lakeshire, Stormwind, Booty Bay
 
 				-- Alliance: Light's Hope Chapel (Eastern Plaguelands)
 				["0.61:0.35:0.47:0.59:0.47:0.65:0.41:0.73:0.41:0.93"] = 712, -- Light's Hope Chapel, Ironforge, Thorium Point, Stormwind, Booty Bay
@@ -1676,6 +1677,7 @@
 				["0.27:0.74:0.38:0.50:0.32:0.34:0.58:0.27"] = 336, -- Telaar, Telredor, Sylvanaar, Area 52
 				["0.27:0.74:0.44:0.67:0.65:0.58:0.52:0.51"] = 273, -- Telaar, Shattrath, Honor Hold, Temple of Telhamat
 				["0.27:0.74:0.38:0.50:0.32:0.34:0.58:0.27:0.72:0.28"] = 402, -- Telaar, Telredor, Sylvanaar, Area 52, Cosmowrench
+				["0.27:0.74:0.38:0.50:0.52:0.51:0.65:0.58"] = 295, -- Telaar, Telredor, Temple of Telhamat, Honor Hold
 
 				-- Alliance: Telredor (Zangarmarsh)
 				["0.38:0.50:0.27:0.74"] = 125, -- Telredor, Telaar
@@ -2264,6 +2266,7 @@
 				["0.52:0.38:0.62:0.36:0.57:0.33:0.57:0.21:0.38:0.21"] = 276, -- Dalaran, K3, Frosthold, Bouldercrag's Refuge, The Shadow Vault
 				["0.52:0.38:0.54:0.52:0.60:0.52:0.73:0.54:0.88:0.60:0.88:0.72"] = 428, -- Dalaran, Wyrmrest Temple, Wintergarde Keep, Amberpine Lodge, Fort Wildervar, Valgarde Port
 				["0.52:0.38:0.62:0.36:0.72:0.29:0.78:0.38:0.83:0.46"] = 299, -- Dalaran, K3, Dun Nifflelem, Zim'Torga, Westfall Brigade
+				["0.52:0.38:0.64:0.42:0.72:0.40:0.78:0.38:0.64:0.19:0.57:0.21"] = 387, -- Dalaran, Schwarze Wacht, Argentumwache, Zim'Torga, Ulduar, Bergfels' Zuflucht
 
 				----------------------------------------------------------------------
 				-- Alliance: Dragonblight
@@ -2698,6 +2701,7 @@
 				["0.74:0.71:0.49:0.58:0.42:0.53:0.41:0.43:0.28:0.28"] = 477, -- Kamagua, Moa'ki, Stars' Rest, Valiance Landing Camp, Death's Rise
 				["0.74:0.71:0.76:0.67:0.73:0.54:0.69:0.42:0.64:0.42:0.52:0.38:0.52:0.34:0.38:0.21"] = 431, -- Kamagua, Westguard Keep, Amberpine Lodge, Light's Breach, Ebon Watch, Dalaran, Crusaders' Pinnacle, The Shadow Vault
 				["0.74:0.71:0.76:0.67:0.73:0.54:0.69:0.42:0.64:0.42:0.62:0.36:0.57:0.33:0.64:0.19"] = 396, -- Kamagua, Westguard Keep, Amberpine Lodge, Light's Breach, Ebon Watch, K3, Frosthold, Ulduar
+				["0.74:0.71:0.49:0.58:0.29:0.57:0.22:0.61:0.17:0.53"] = 448, -- Kamagua, Moa'ki, Unu'pe, Valiance Keep, Amber Ledge
 
 				-- Alliance: Howling Fjord: Valgarde Port, Howling Fjord
 				["0.88:0.72:0.88:0.60"] = 71, -- Valgarde Port, Fort Wildervar
@@ -3104,6 +3108,7 @@
 				["0.57:0.21:0.64:0.19:0.78:0.38:0.72:0.40:0.64:0.42:0.62:0.36"] = 342, -- Bouldercrag's Refuge, Ulduar, Zim'Torga, The Argent Stand, Ebon Watch, K3
 				["0.57:0.21:0.57:0.33:0.56:0.36:0.52:0.38:0.24:0.40:0.18:0.40"] = 377, -- Bouldercrag's Refuge, Frosthold, The Argent Vanguard, Dalaran, River's Heart, Nesingwary Base Camp
 				["0.57:0.21:0.57:0.33:0.62:0.36:0.64:0.42"] = 171, -- Bouldercrag's Refuge, Frosthold, K3, Ebon Watch
+				["0.57:0.21:0.64:0.19:0.78:0.38:0.72:0.40:0.64:0.42:0.52:0.38:0.24:0.40:0.18:0.40"] = 601, -- Bergfels' Zuflucht, Ulduar, Zim'Torga, Argentumwache, Schwarze Wacht, Dalaran, Flussnabel, Nesingwarys Basislager
 
 				-- Alliance: The Storm Peaks: Dun Nifflelem
 				["0.72:0.29:0.64:0.19:0.57:0.21"] = 133, -- Dun Nifflelem, Ulduar, Bouldercrag's Refuge

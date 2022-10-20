@@ -1,5 +1,5 @@
 ﻿----------------------------------------------------------------------
--- 	Leatrix Plus 3.0.37.alpha.2 (20th October 2022)
+-- 	Leatrix Plus 3.0.37 (20th October 2022)
 ----------------------------------------------------------------------
 
 --	01:Functns, 02:Locks, 03:Restart, 20:Live, 30:Isolated, 40:Player
@@ -19,7 +19,7 @@
 	local void
 
 	-- Version
-	LeaPlusLC["AddonVer"] = "3.0.37.alpha.2"
+	LeaPlusLC["AddonVer"] = "3.0.37"
 
 	-- Get locale table
 	local void, Leatrix_Plus = ...
@@ -956,6 +956,20 @@
 
 				},
 
+				-- Brooms
+				["MuteBrooms"] = {
+
+					-- sound/creature/broomstickmount/
+					"broomstickmountland.ogg#545651",
+					"broomstickmounttakeoff.ogg#545652",
+
+					-- sound/spells/
+					"summonbroomstick1.ogg#567986",
+					"summonbroomstick3.ogg#569547",
+					"summonbroomstick2.ogg#568335",
+
+				},
+
 			}
 
 			-- Give table file level scope (its used during logout and for wipe and admin commands)
@@ -991,6 +1005,7 @@
 			LeaPlusLC:MakeCB(SoundPanel, "MuteStriders", "Mechstriders", 150, -152, false, "If checked, mechanostriders will be quieter.")
 			LeaPlusLC:MakeCB(SoundPanel, "MuteMechSteps", "Mechsteps", 150, -172, false, "If checked, footsteps for mechanical mounts will be muted.")
 			LeaPlusLC:MakeCB(SoundPanel, "MuteNetherdrakes", "Netherdrakes", 150, -192, false, "If checked, netherdrakes will be quieter.")
+			LeaPlusLC:MakeCB(SoundPanel, "MuteBrooms", "Brooms", 150, -212, false, "If checked, broom mounts will be muted.")
 
 			LeaPlusLC:MakeTx(SoundPanel, "Pets", 284, -72)
 			LeaPlusLC:MakeCB(SoundPanel, "MuteYawns", "Yawns", 284, -92, false, "If checked, yawns from hunter pet cats will be muted.")
