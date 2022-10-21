@@ -2186,6 +2186,7 @@
 				["0.45:0.51:0.59:0.55:0.70:0.55:0.84:0.51:0.95:0.63"] = 351, -- Agmar's Hammer, Venomspite, Conquest Hold, Camp Oneqwah, Vengeance Landing
 				["0.45:0.51:0.48:0.44:0.52:0.38:0.56:0.36"] = 143, -- Agmar's Hammer, Kor'koron Vanguard, Dalaran, The Argent Vanguard
 				["0.45:0.51:0.59:0.55:0.69:0.42:0.72:0.40:0.78:0.38:0.82:0.31"] = 330, -- Agmar's Hammer, Venomspite, Light's Breach, The Argent Stand, Zim'Torga, Gundrak
+				["0.45:0.51:0.48:0.44:0.52:0.38:0.52:0.34"] = 150, -- Agmar's Hammer, Kor'koron Vanguard, Dalaran, Crusaders' Pinnacle
 
 				-- Horde: Dragonblight: Kor'koron Vanguard
 				["0.48:0.44:0.52:0.38"] = 56, -- Kor'koron Vanguard, Dalaran
@@ -2378,6 +2379,7 @@
 				["0.54:0.52:0.52:0.38:0.56:0.36:0.38:0.21"] = 178, -- Wyrmrest Temple, Dalaran, The Argent Vanguard, The Shadow Vault
 				["0.54:0.52:0.49:0.58:0.29:0.57:0.29:0.54:0.17:0.53:0.12:0.53"] = 211, -- Templo del Reposo del Dragón, Moa'ki, Unu'pe, Poblado Taunka'le, El Saliente Ámbar, Escudo de Tránsito
 				["0.54:0.52:0.52:0.38:0.56:0.36:0.60:0.25"] = 148, -- Wyrmrest Temple, Dalaran, The Argent Vanguard, Grom'arsh Crash-Site, Grom'arsh Crash-Site
+				["0.54:0.52:0.64:0.42:0.62:0.36:0.60:0.25:0.64:0.19"] = 182, -- Wyrmrest Temple, Ebon Watch, K3, Grom'arsh Crash-Site, Ulduar
 
 				----------------------------------------------------------------------
 				-- Horde: Grizzly Hills
