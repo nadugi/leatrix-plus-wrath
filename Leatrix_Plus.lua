@@ -5876,19 +5876,31 @@
 			end)
 
 			-- Set progress bar background
-			local function SetProgressBarBackground()
-				if LeaPlusLC.FlightProgressBar then
-					if LeaPlusLC["FlightBarBackground"] == "On" then
-						LeaPlusLC.FlightProgressBar:SetTexture(texture)
-					else
-						LeaPlusLC.FlightProgressBar:SetTexture("")
+			if LeaPlusLC.ElvUI then
+
+				-- Progress bar background is always enabled and cannot be disabled with ElvUI
+				LeaPlusLC:LockItem(LeaPlusCB["FlightBarBackground"], true)
+				LeaPlusLC["FlightBarBackground"] = "On"
+				LeaPlusCB["FlightBarBackground"].tiptext = LeaPlusCB["FlightBarBackground"].tiptext .. "|n|n|cff00AAFF" .. L["The background is always shown with ElvUI."]
+
+			else
+
+				-- Set progress bar background
+				local function SetProgressBarBackground()
+					if LeaPlusLC.FlightProgressBar then
+						if LeaPlusLC["FlightBarBackground"] == "On" then
+							LeaPlusLC.FlightProgressBar:SetTexture(texture)
+						else
+							LeaPlusLC.FlightProgressBar:SetTexture("")
+						end
 					end
 				end
-			end
 
-			-- Set progress bar background when option is clicked and on startup
-			LeaPlusCB["FlightBarBackground"]:HookScript("OnClick", SetProgressBarBackground)
-			SetProgressBarBackground()
+				-- Set progress bar background when option is clicked and on startup
+				LeaPlusCB["FlightBarBackground"]:HookScript("OnClick", SetProgressBarBackground)
+				SetProgressBarBackground()
+
+			end
 
 			-- Set progress bar fill mode
 			local function SetProgressBarFillMode()
