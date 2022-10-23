@@ -411,6 +411,7 @@
 				["0.37:0.41:0.42:0.37:0.45:0.37"] = 130, -- The Sepulcher, Undercity, The Bulwark
 				["0.37:0.41:0.46:0.43:0.51:0.36:0.61:0.35"] = 292, -- The Sepulcher, Tarren Mill, Thondoril River, Light's Hope Chapel
 				["0.37:0.41:0.46:0.43:0.51:0.36:0.61:0.35:0.61:0.28"] = 386, -- The Sepulcher, Tarren Mill, Thondoril River, Light's Hope Chapel, Zul'Aman
+				["0.37:0.41:0.46:0.43:0.51:0.36:0.61:0.35:0.58:0.25"] = 407, -- Le Sépulcre, Moulin-de-Tarren, La Thondroril, Chapelle de l'Espoir de Lumière, Tranquillien
 
 				-- Horde: Thondroril River (Western Plaguelands)
 				["0.51:0.36:0.61:0.35:0.58:0.25:0.59:0.19"] = 280, -- Thondroril River, Light's Hope Chapel, Tranquillien, Silvermoon City
@@ -2124,6 +2125,7 @@
 				["0.52:0.38:0.48:0.44:0.59:0.55:0.74:0.62:0.84:0.59:0.84:0.51"] = 377, -- Dalaran, Kor'koron Vanguard, Venomspite, Apothecary Camp, Camp Winterhoof, Camp Oneqwah
 				["0.52:0.38:0.62:0.36:0.72:0.29:0.78:0.38:0.82:0.31"] = 297, -- Dalaran, K3, Dun Niffelem, Zim'Torga, Gundrak
 				["0.52:0.38:0.64:0.42:0.59:0.55:0.70:0.55:0.84:0.59:0.95:0.63"] = 396, -- Даларан, Черная застава, Ядозлобь, Крепость Завоевателей, Лагерь Заиндевевшего Копыта, Лагерь Возмездия
+				["0.52:0.38:0.64:0.42:0.59:0.55:0.85:0.73"] = 366, -- Даларан, Черная застава, Ядозлобь, Новый Агамонд
 
 				----------------------------------------------------------------------
 				-- Horde: Dragonblight
@@ -3126,6 +3128,7 @@
 				["0.72:0.29:0.64:0.19:0.57:0.21:0.38:0.21:0.28:0.28"] = 323, -- Dun Nifflelem, Ulduar, Bouldercrag's Refuge, The Shadow Vault, Death's Rise
 				["0.72:0.29:0.62:0.36:0.52:0.38:0.52:0.34:0.28:0.28"] = 354, -- Dun Nifflelem, K3, Dalaran, Crusaders' Pinnacle, Death's Rise
 				["0.72:0.29:0.64:0.19:0.60:0.25:0.56:0.36:0.52:0.34"] = 234, -- Dun Nifflelem, Ulduar, Grom'arsh Crash-Site, The Argent Vanguard, Crusaders' Pinnacle
+				["0.72:0.29:0.78:0.38:0.72:0.40:0.69:0.42:0.70:0.55:0.74:0.62"] = 295, -- Dun Nifflelem, Zim'Torga, The Argent Stand, Light's Breach, Conquest Hold, Apothecary Camp
 
 				-- Horde: The Storm Peaks: Grom'arsh Crash-Site
 				["0.60:0.25:0.56:0.36:0.52:0.38"] = 111, -- Grom'arsh Crash-Site, The Argent Vanguard, Dalaran
@@ -3199,6 +3202,7 @@
 				["0.62:0.36:0.52:0.38:0.52:0.34:0.38:0.21"] = 223, -- K3, Dalaran, Crusaders' Pinnacle, The Shadow Vault
 				["0.62:0.36:0.52:0.38:0.48:0.44"] = 134, -- K3, Dalaran, Kor'koron Vanguard
 				["0.62:0.36:0.52:0.38:0.24:0.40:0.18:0.40"] = 307, -- K3, Dalaran, River's Heart, Nesingwary Base Camp
+				["0.62:0.36:0.64:0.42:0.72:0.40:0.78:0.38:0.82:0.31"] = 201, -- K3, Ebon Watch, The Argent Stand, Zim'Torga, Gundrak
 
 				-- Horde: The Storm Peaks: Ulduar
 				["0.64:0.19:0.73:0.25"] = 88, -- Ulduar, Camp Tunka'lo
@@ -3375,6 +3379,7 @@
 				["0.64:0.42:0.54:0.52:0.45:0.51:0.29:0.54"] = 270, -- Ebon Watch, Wyrmrest Temple, Agmar's Hammer, Taunka'le Village
 				["0.64:0.42:0.62:0.36:0.60:0.25:0.64:0.19"] = 167, -- Черная застава, К-3, Место крушения Гром'арша, Ульдуар
 				["0.64:0.42:0.59:0.55:0.85:0.73"] = 285, -- Ebon Watch, Venomspite, New Agamand
+				["0.64:0.42:0.72:0.40:0.78:0.38:0.82:0.31"] = 158, -- Ebon Watch, The Argent Stand, Zim'Torga, Gundrak
 
 				-- Horde: Zul'Drak: Gundrak
 				["0.82:0.31:0.78:0.38"] = 56, -- Gundrak, Zim'Torga
