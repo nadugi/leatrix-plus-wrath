@@ -1,3 +1,6 @@
+3.0.40 - 23rd October 2022
+- Added flight times.
+
 3.0.39 - 22nd October 2022
 - If you use 'Show flight times' ('Interface') with ElvUI, the flight progress bar will now use ElvUI style.
 - Added flight times.
